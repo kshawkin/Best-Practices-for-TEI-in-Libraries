@@ -56,7 +56,7 @@
         target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
         Practices for TEI in Libraries</ref>. This document is not
         intended to stand alone, but rather to be considered in
-        concert with the entire TEI in Libraries guidelines.</p>
+        concert with the entire TEI in Libraries recommendations.</p>
       </div>
       <divGen type="toc"/>
     </front>
@@ -131,7 +131,7 @@
         typically require extensive review of each page of each
         text.</p>
       </div>
-      <div type="elrec">
+      <div type="elrecs">
         <head>Element Recommendations for Level 1</head>
         <table>
           <row><cell><gi>div</gi> or <gi>div1</gi></cell><cell>There should be only one child of <gi>body</gi>: a single <gi>div</gi> (or <gi>div1</gi>).</cell></row>
@@ -311,7 +311,7 @@
               </egXML>
             </exemplum>
             <remarks>
-              <p>This element is required.</p>
+	      <p>This element is required. The TEI namespace should be specified on this element.</p>
             </remarks>
             <listRef>
               <ptr target="#DS"/>
