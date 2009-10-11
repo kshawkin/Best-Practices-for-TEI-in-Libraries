@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" 
-     xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:s="http://purl.oclc.org/dsdl/schematron"
+     xmlns:rng="http://relaxng.org/ns/structure/1.0"
+     xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-	<title>TEI in Libraries level 3</title>
+	<title>TEI in Libraries level 4</title>
 	<author>
 	  <name type="organization">TEI in Libraries SIG</name>
 	  <name type="organization">DLF TEI Task Force</name>
@@ -38,22 +41,22 @@
 	target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
       </bibl>
       written in a wiki language into the TEI ODD language. This
-	verssion started <date when="2009-10-05"/>.</p>
+      verssion started <date when="2009-10-10"/>.</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change who="#sbauman.emt" when="2009-10-05">
-	Begun, based on level 2.
+      <change who="#sbauman.emt" when="2009-10-10">
+	Begun, based on level 3.
       </change>
     </revisionDesc>
   </teiHeader>
   <text>
     <front>
       <head>Best Practices for TEI in Libraries</head>
-      <head>Level 3: Simple Analysis</head>
+      <head>Level 4: Basic Content Analysis</head>
       <div type="setting">
-	<p>This is the <name>level 3</name> portion of the <ref
-	target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_3:_Simple_Analysis">Best
+	<p>This is the <name>level 4</name> portion of the <ref
+	target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_4:_Basic_Content_Analysis">Best
 	Practices for TEI in Libraries</ref>. This document is not
 	intended to stand alone, but rather to be considered in
 	concert with the entire TEI in Libraries recommendations.</p>
@@ -64,18 +67,21 @@
       <div type="reference">
 	<head>Reference</head>
 	<list>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">Chapter 4, Default Text Structure, P5 Guidelines</ref>
-	  </item>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">Chapter 6, Verse, P5 Guidelines</ref>
-	  </item>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html">Chapter 14, Tables, Formulæ, and Graphics, P5 Guidelines</ref>
-	  </item>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html">Chapter 16, Linking, Segmentation, and Alignment, P5 Guidelines</ref> (for handling notes)
-	  </item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">Chapter 3.3  Highlighting and Quotation, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">Chapter 3.4 Simple Editorial Changes, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONA">Chapter 3.5 Names, Numbers, Dates, Abbreviations, and Addresses, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COVE">Chapter 3.12.1 Core Tags for Verse, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODR">Chapter 3.12.2 Core Tags for Drama, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">Chapter 4, Default Text Structure, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">Chapter 6, Verse, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRCAST">Chapter 7.1.4 Performance Texts: castLists and castItems, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRDIV">Chapter 7.2.1 Performance Texts: Major Structural Divisions, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRSP">Chapter 7.2.2 Performance Texts: Speeches and Speakers, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRSTA">Chapter 7.2.3 Performance Texts: Stage Directions, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html">Chapter 13, Names, Dates, People, and Places, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html">Chapter 14, Tables, Formulæ, and Graphics, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/html/FT.html#FTGRA">Chapter 14.3 Specific Elements for Graphic Images, P5 Guidelines</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html">Chapter 16, Linking, Segmentation, and Alignment, P5 Guidelines</ref></item>
 	</list>
 	<p>Note that this is intended to be a <soCalled>TEI
 	conformant</soCalled> customization, per <ref
@@ -84,397 +90,702 @@
       </div>
       <div type="purpose">
 	<head>Purpose</head>
-	<p>To create a stand-alone electronic text and identify
-	hierarchy (logical structure) and typography without content
-	analysis being of primary importance.</p>
+	<p>To create text that can stand alone as electronic text,
+	identifies hierarchy and typography, specifies function of
+	textual and structural elements, and describes the nature of
+	the content and not merely its appearance. This level is not
+	meant to encode or identify all structural, semantic, or
+	bibliographic features of the text.</p>
       </div>
       <div type="rationale">
 	<head>Rationale</head>
-	<p>Encoding at this level offers provides the foundation for
-	upgrading to higher levels of encoding. Level 3 generally
-	requires some human editing, but the features to be encoded
-	are determined by the logical structure and appearance of the
-	text and not specialized content analysis.</p>
-	<p>Level 3 texts identify front and back matter, divisions
-	within the text, and all paragraph breaks. Floating texts, or
-	sub-texts like a poem or letter embedded in the greater text,
-	are supported in this level. The finer granularity of encoding
-	these features, as well as figures, notes, and all changes of
-	typography, allows a range of options for display, delivery,
-	and searching. For example, one has the option of identifying,
-	and therefore specifying, the display characteristics of
-	different typographic styles, and regularizing the display and
-	placement of note text.</p>
-	<p>Level 3 texts can stand alone as text without page images,
-	and therefore can be uploaded, downloaded, and delivered
-	quickly, and require less storage space than digital
-	collections with page images. However, the simple level of
-	structural analysis and absence of specialized content
-	analysis reflected in Level 3 encoding may make it desirable
-	for some, depending on project priorities, to include page
-	images in order to provide users with a fuller set of
-	resources.</p>
+	<p>Greater description of function and content allows for
 	<list>
-	  <head>Level 3 is most suitable for projects with the
+	  <item>flexibility of display and delivery</item>
+	  <item>sophisticated searching within specified textual and structural elements</item>
+	  <item>combining the broadest range of uses and audiences</item>
+	</list>
+	Texts encoded at Level 4 are able to stand alone without page
+	images in order for them to be read by students, scholars, and
+	general readers. This level of TEI encoding allows them to be
+	displayed or printed in a variety of ways suitable for
+	classroom or scholarly use.</p>
+	<p>Level 4 texts contain elements and attributes that describe
+	content. Features of the text that may contribute to meaning,
+	such as indentation of verse lines and typographic change, are
+	preserved. These are textual features that are not encoded at
+	lower levels and that allow the text to be used and understood
+	fully independent of images. The ability to stand alone as
+	text means that Level 4 texts are more nimble and robust for
+	exercises such as format repurposing and textual analysis.</p>
+	<p>Finally, functionally accurate encoding in Level 4 texts
+	allows them to be searched or displayed in sophisticated ways.
+	For example, a searcher could limit his or her search in a
+	dramatic text to stage directions or in a verse text to only
+	first lines. In a political tract published by subscription, a
+	search could be confined to names that appear in lists, thus
+	limiting a search to names of people who subscribed to a
+	particular volume. This ability to limit searches becomes more
+	significant as textbases become larger, and thus is of great
+	importance to the library community as it attempts to build
+	into the initial design and implementation of textbases the
+	features needed to enhance interoperability.</p>
+	<list>
+	  <head>Level 4 is most suitable for projects with the
 	  following characteristics</head>
-	  <item>the material is of interest to a large community of
-	  users who wish to read texts that allow for keyword
-	  searching</item>
-	  <item>some sophistication of display, delivery, and
-	  searching based on structure of the text is desired</item>
-	  <item>each text will undergo quality control to ensure that
-	  encoding decisions have been made appropriately</item>
-	  <item>the users of the texts may have limited storage or
-	  display capabilities</item>
-	  <item>the creator of the texts has limited or no ability to
-	  provide content expertise to analyze, tag, or review
-	  texts</item>
+	  <item>sophisticated search and retrieval capabilities are
+	  desired</item>
+	  <item>the texts will be used for textual analysis</item>
 	  <item>extensibility is desired; that is, one desires to keep
 	  open the option for a higher level of encoding to be added
-	  at a later date</item>
+	  by the scholarly community at a later date</item>
+	  <item>the users of the texts may have limited storage or
+	  display capabilities</item>
 	</list>
       </div>
       <div type="workflow">
 	<head>Workflow</head>
-	<p>Level 3 texts can be created by conversion from an
-	electronic source such as an HTML file or word-processor
-	document or from a print source, either through OCR or
-	keyboarding. They can be generated trivially by converting
-	from outsourced double-keyboarded texts conforming to <ref
-	target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html">TEI
-	Tite</ref>, though some granularity of encoding will be lost
-	in the translation.</p>
+	<p>Text is generated by keyboarding (likely outsourced double
+	keyboarding from page images using TEI Tite) or possibly by
+	correcting OCR text using software that identifies spelling
+	mistakes and consults a log from the OCR software to find
+	regions of uncertainty in the OCR text. If converting from TEI
+	Tite, minimal additional markup must be added, as discussed in
+	<ref
+	target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html#tei-in-lib-bpg">Appendix
+	A of TEI Tite</ref>.</p>
       </div>
       <div type="elrecs">
-	<head>Element Recommendations for Level 2</head>
-	<p>Use all elements specified in Levels 1 and 2 <emph>except
-	<gi>ab</gi></emph>, plus the following:
+	<head>Element Recommendations for Level 4</head>
+	<p>Use all elements specified in Levels 1, 2, and 3 except ab,
+	plus elements in the following table. Note that some of these
+	elements are defined in Level 3 as well, but their use in
+	Level 4 is more strict.
 	<table>
-	  <row><cell><gi>front</gi>, <gi>back</gi> </cell><cell>Required if present.</cell></row>
-	  <row><cell><gi>div</gi></cell> <cell>Required if present; <att>type</att> attribute is recommended.</cell></row>
-	  <row><cell><gi>floatingText</gi></cell> <cell>Recommended if present.</cell></row>
-	  <row><cell><gi>p</gi></cell> <cell>Required for paragraph breaks in prose.</cell></row>
-	  <row><cell><gi>lg</gi> and <gi>l</gi></cell> <cell>Required for identifying groups of lines and lines, respectively.</cell></row>
-	  <row><cell><gi>list</gi> and <gi>item</gi></cell> <cell>May be used in this level to indicate ordered and unordered list structures.</cell></row>
-	  <row><cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell> <cell>May be used to indicate table structures.</cell></row>
-	  <row><cell><gi>figure</gi></cell> <cell>Required to indicate figures other than page images.</cell></row>
-	  <row><cell><gi>hi</gi></cell> <cell>Required to indicate changes in typeface; <att>rend</att> attribute is optional.</cell></row>
-	  <row><cell><gi>note</gi></cell> <cell>All notes must be
-	  encoded. It is also recommended that notes that extend
-	  beyond one page be combined into one <gi>note</gi> element.
-	  Marginal notes, without reference, should occur at the
-	  beginning of the paragraph to which they refer, with the
-	  value of the <att>place</att> attribute as
-	  <val>margin</val>.</cell></row>
-	  <row><cell><gi>lb</gi></cell> <cell>May be used to indicate line breaks.</cell></row>
+	  <row>
+	    <cell><gi>titlePage</gi> and appropriate child elements</cell>
+	    <cell>Required.</cell>
+	  </row>
+	  <row>
+	    <cell><gi>group</gi></cell>
+	    <cell>Required to encode a collection of independent texts that are regarded as a single group for processing or other purposes.</cell>
+	  </row>
+	  <row>
+	    <cell><gi>list</gi> and <gi>item</gi></cell>
+	    <cell>Required to indicate ordered and unordered list structures.</cell>
+	  </row>
+	  <row>
+	    <cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell>
+	    <cell>Required to indicate table structures.</cell>
+	  </row>
+	  <row>
+	    <cell><gi>hi</gi></cell>
+	    <cell>Required to indicate change in rendition when a more specific element is not being used; <att>rend</att> attribute is optional.</cell>
+	  </row>
+	  <row>
+	    <cell><gi>emph</gi>, <gi>foreign</gi>, <gi>gloss</gi>, or <gi>term</gi></cell>
+	    <cell>Recommended to identify typographically distinct text.</cell>
+	  </row>
+	  <row>
+	    <cell><gi>title</gi></cell>
+	    <cell>Recommended to identify typographically distinct
+	    text. For <gi>title</gi> elements within the body of a
+	    document, use the <att>type</att> attribute with a value
+	    <ref
+	    target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
+	    given in the full TEI guidelines</ref> except for main
+	    titles. (The <val>main</val> attribute should be used,
+	    when appropriate, for <gi>title</gi>s within a TEI Header,
+	    but is not needed for <gi>title</gi>s elsewhere in a
+	    document.)</cell>
+	  </row>
+	  <row>
+	    <cell><gi>epigraph</gi>, <gi>quote</gi>, <gi>said</gi>, <gi>mentioned</gi>, or <gi>soCalled</gi></cell>
+	    <cell>Recommended to represent speech, thought, quotation, etc.</cell>
+	  </row>
+	  <row>
+	    <cell><gi>sic</gi>, <gi>corr</gi>, or <gi>choice</gi></cell>
+	    <cell>Recommended to encode errors or typos.</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>opener</gi>, <gi>dateline</gi>, <gi>salute</gi> <gi>closer</gi>, <gi>signed</gi>, <gi>postscript</gi></cell>
+	    <cell>Required to indicate specific parts of letters.</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>argument</gi></cell>
+	    <cell>Recommended to encode a “list of topics sometimes found at the start of a chapter or other division.”</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>trailer</gi></cell>
+	    <cell>Recommended to encode a “closing title or footer” at the end of a division.</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>add</gi>, <gi>del</gi>, <gi>gap</gi>, and <gi>unclear</gi></cell>
+	    <cell>Recommended to encode material that is omitted, added, marked for deletion, or is illegible, invisible, or inaudible. </cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>figure</gi>, <gi>head</gi>, <gi>figDesc</gi>, and <gi>graphic</gi></cell>
+	    <cell>Used to refer to illustrative images and descriptive information about those images.</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>castList</gi>, <gi>castItem</gi>, <gi>sp</gi>, <gi>speaker</gi>, and <gi>stage</gi></cell>
+	    <cell>Required to encode different structures in performance texts (i.e. drama).</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>sp</gi> and <gi>speaker</gi></cell>
+	    <cell>Required to encode oral history interviews.</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>persName</gi>, <gi>placeName</gi>, <gi>geogName</gi>, and <gi>orgName</gi> </cell>
+	    <cell>Recommended to encode personal, place, and organizational names used in a text.</cell>
+	  </row> 
+	  <row>        
+	    <cell><gi>listPerson</gi>, <gi>listPlace</gi>, and <gi>listOrg</gi> </cell>
+	    <cell>Recommended in support of personal, place, and
+	    organizational names normalization and to capture
+	    additional information about the names. Should be captured
+	    in an external TEI file or database for easier maintenance
+	    of names.</cell>
+	  </row> 
 	</table>
 	</p>
       </div>
       <div type="grecs">
-	<head>General Level 3 Recommendations</head>
-	<div type="grec">
-	  <head>Forme Work</head>
-	  <p>Running heads, catch words, page numbers, signatures, and
-	  other artifacts derived from printing should not be included
-	  in Level 3, with the exception of page numbers, which are
-	  recorded using <gi>pb</gi>. If upgrading a text from Level 1
-	  or Level 2 that was generated using OCR, discard the forme
-	  work information.</p>
-	</div>
-	<div type="grec">
-	  <head>Tables of Contents</head>
+	<head>General Level 4 Recommendations and Examples</head>
+	<list>
+
+	  <item>The use of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html"><gi>group</gi></ref> is required when you need to encode a body of distinct texts that are grouped together and are regarded as a unit. Most typical examples of such composite texts would be anthologies, collected works of an author, etc. Section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1 Grouped Texts</ref> states, <quote>The presence of common front matter referring to the whole collection, possibly in addition to front matter relating to each individual text, is a good indication that a given text might usefully be encoded in this way.</quote></item>
+
+	  <item>Typographically distinct text may be encoded using the following elements:<list>
+	  <item>to represent speech, thought, quotation, etc.:<list>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-epigraph.html">epigraph</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html">quote</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-said.html">said</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-mentioned.html">mentioned</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-soCalled.html">soCalled</ref></item></list></item>
+	  <item>to represent foreign words or phrases, linguistically emphatic or stressed words or phrases, words regarded as technical terms, etc.:<list>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-emph.html">emph</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-foreign.html">foreign</ref> (e.g. <tag>foreign xml:lang="fr"</tag>)</item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gloss.html">gloss</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-term.html">term</ref></item>
+	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">title</ref></item></list></item></list></item>
+
+	  <item>Any ambiguous typographically distinct text should be encoded as <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html">hi</ref> (e.g. <tag>hi rend="font-weight: bold"</tag>). This element may also be used if the more specific elements above are not used.</item>
+
+	  <item>Any of the following three methods may be used to encode errors or typos in original texts:<list>
+	  <item> the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element used alone is recommended to indicate errors without correcting them</item>
+	  <item> the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element used alone is recommended to provide corrections without indicating the initial error</item>
+	  <item> the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html">choice</ref> element allows both the apparent error and its editorial correction to be recorded, as in the following examples:
+
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-TBSoS">
+	    <p>He has no Scruple about Fish; but won't touch a bit of Pork, it being 
+	    <choice>
+	      <sic>expresly</sic>
+	      <corr>expressly</corr>
+	    </choice> forbidden by their Law.</p>
+	  </egXML>
+	  <bibl xml:id="BIB-TBSoS"><author>Thomas Bluett</author> <title>Some Memoirs of the Life of Job, the Son of Solomon,
+	  the High Priest of Boonda in Africa; Who was a Slave About Two Years in Maryland; and Afterwards Being Brought to England, was Set Free, and Sent to His Native Land in the Year 1734.</title> London: Printed for R. Ford, 1734.</bibl>
+
+	  or
+
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-AMBS">
+	    <p>4. The art of writing she obtained by her own industry and curiosity, and in so
+	    short a time that in the year 1765, when she was not more than twelve years of
+	    <choice>
+	      <sic>age,she</sic>
+	      <corr>age, she</corr>
+	    </choice>
+	    was capable of writing letters to her friends <pb xml:id="p11" n="11"/> on various
+	    subjects. She also wrote to several persons in high stations.</p>
+	  </egXML>
+	  <bibl xml:id="BIB-AMBS"><author><name type="perason">Abigail Mott</name>, 1766-1851</author> <title>Biographical Sketches and Interesting Anecdotes of Persons of Colour. To Which is Added, a Selection of Pieces in Poetry.</title> New-York: M. Day, 1826. </bibl>
+	  </item>
+	  </list></item>
+	  <item>Use <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-argument.html"><gi>argument</gi></ref> to encode a prefatory list or prose description of the topics usually discovered at the beginning of a chapter. The content within the <gi>argument</gi> element can be presented as a list or as a paragraph: 
+
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-OVRAHoB">
+	    <div type="chapter" n="1">
+	      <pb xml:id="albert14" n="14"/>
+	      <head>CHAPTER I.<lb/>CHARLOTTE BROOKS.</head>
+	      <argument>
+		<p>Causes of immorality among colored people - Charlotte Brooks - She is sold South -
+		Sunday work.</p>
+	      </argument>
+	      <p> ... </p>
+	    </div>
+	  </egXML>
+	  <bibl xml:id="BIB-OVRAHoB"><author>Octavia V. Rogers Albert</author> <title>The House of Bondage, or, Charlotte Brooks and Other Slaves, Original and Life Like, As They Appeared in Their Old Plantation and City Slave Life; Together with Pen-Pictures of the Peculiar Institution, with Sights and Insights into Their New Relations as Freedmen, Freemen, and Citizens.</title> New York: Hunt &amp; Eaton, 1890.</bibl>
+	  </item>
+
+	  <item>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-trailer.html"><gi>trailer</gi></ref> element is recommended to encode a heading- or title-like content at the end of a division (i.e. chapter, book, etc.):
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+	    <body>
+	      <head><ref target="book">title</ref></head>
+	      <div type="chapter" n="1">
+		<head><ref target="chapter">title</ref></head>
+		<p>[text]</p>
+		<trailer>Here ends the Chapter 1.</trailer>
+	      </div>
+	      <div type="chapter" n="2">
+		<head><ref target="chapter">title</ref></head>
+		<p>[text]</p>
+		<trailer>Here ends the Chapter 2.</trailer>
+	      </div>
+	      <trailer>FINIS.</trailer>
+	    </body>
+	  </egXML>
+	  </item>
+	  <item>The elements <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><gi>add</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><gi>del</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><gi>unclear</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html"><gi>gap</gi></ref> may be used to indicate instances when a text (i.e. word or part of it, phrase or part of it) has been added, marked for deletion, or to indicate cases where transcription is difficult (<gi>unclear</gi>) or impossible (<gi>gap</gi>) because the material is illegible, invisible, or inaudible (i.e. while transcribing oral history interviews):
+
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-JHLCC">
+	    <p>But it is well authenticated by the observation of every one, that <del
+	    rend="text-decoration: line-through" hand="#JHL">their manner</del> 
+	    <add rend="vertical-align: super" hand="#JHL">this way—i.e.
+	    the above</add> of writing influences the style of compos. of those who practise it
+	    considerably, when they grow up to years of manhood; for their productions, <del
+	    hand="#JHL" rend="text-decoration: line-through">instead</del> far from being terse, argumentative,
+	    convincing, are without head or tail &amp;amp; are generally an incongruous mass mixed up in the
+	    most disgusting manner, without divisions or heads &amp;amp; in short without a subject (so to
+	    speak).</p>
+	  </egXML>
+	  <bibl xml:id="BIB-JHLCC"><title>Class Composition of J. Horace Lacy</title> [January 1851] 1. <author><name type="person">Lacy, James Horace</name> 1834-1852</author></bibl>
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-KFPC01">
+	    <p>But I still hope for &amp;amp; trust in God and I believe he will animate our brave
+	    defenders with a superhuman power and we will yet drive from our soil the hated invaders
+	    whose tread <gap reason="ink blot"/> profanation, but this is an hour to try
+	    men's souls—Fort Donelson has been taken by the enemy.  Frank was there and covered
+	    himself with honor but his bravery cost him a wound; he was wounded in the leg slightly—a
+	    flesh wound only, you must not be uneasy.</p>
+	  </egXML>
+	  <bibl xml:id="BIB-KFPC01">Kimberly Family Personal Correspondence, 1862-1864. Transcript of the manuscript, UNC-Chapel Hill, Southern Historical Collection.</bibl>
+	</item></list>
+	<div type="subsection">
+	  <head>Level 4 Front and Back Matter</head>
 	  <list>
-	    <item>
-	      <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSFRONT">Chapter 4.5, Front Matter</ref>
-	    </item>
-	  </list>
-	  <p>You may wish not to include front matter content such as
-	  table of contents or lists of illustrations, especially if
-	  you plan to automatically generate the contents or lists of
-	  illustrations. If you do, however, plan to manually encode
-	  the table of contents (or lists of illustrations and similar
-	  content), use a <gi>div</gi> element with an appropriate
-	  <att>type</att> attribute (e.g., <tag>div
-	  type="contents"</tag>). Within this division, use the
-	  <gi>list</gi> element to mark up the table of contents, list
-	  of illustrations, etc. Each list <gi>item</gi> should have a
-	  <gi>ptr</gi> or <gi>ref</gi> element with a
-	  <att>target</att> attribute referencing an <att>xml:id</att>
-	  attribute on the <gi>pb</gi> or <gi>div</gi> element of the
-	  referenced page or section. Use <gi>ref</gi> if you wish to
-	  transcribe page numbers in the table of contents; use
-	  <gi>ptr</gi> if you do not.</p>
+<item>The use of the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePage.html"><gi>titlePage</gi></ref> element with appropriate child elements describing the major features of most title pages is required.  The child elements are listed in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">Section 4.6 "Title Pages"</ref>.</item>
+
+<item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePage.html"><gi>titlePage</gi></ref> should include the verso if present, divided by <tag>pb n="verso"/</tag>. </item>
+
+<item>Frontispieces should be encoded as a <gi>figure</gi>, within a separate division (numbered or unnumbered, depending on the general editorial decision for a specific encoding project) and <gi>p</gi>.</item>
+
+<item>Tables of contents, errata, subscription lists, “other titles by the same author” should be included in a separate division (numbered or unnumbered, depending on the general editorial decision for a specific encoding project), as a <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html"><gi>list</gi></ref> with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-item.html"><gi>item</gi></ref>s. </item>
+
+<item>It is recommended that all prefaces, tables of contents, afterwords, appendices, endnotes, and apparatus be encoded with phrase-level elements.</item>
+
+<item>For publishers’ advertisements, indexes, and glossaries, or other front or back matter that are not considered of primary importance to the text, there are three options:<list>
+  <item>Fully transcribe and encode. For an index, use <tag>type="index"</tag> on the <gi>div</gi>, with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONOIX"><gi>list</gi>s</ref> to mark up index entries. Use <tag>ref target="____"</tag> to mark up page numbers given in the index, with the value of <att>target</att> referring to the <att>xml:id</att> attribute of the <gi>pb</gi> of the referenced page.</item>
+  <item>Link to page images (may omit encoded transcription)</item>
+  <item>Fully omit and note the omission in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-samplingDecl.html"><gi>samplingDecl</gi></ref></item>
+  </list></item></list>
 	</div>
-	<div type="grec">
-	  <head>Notes</head>
-	  <p>Use the <gi>note</gi> element to encode the text of a
-	  marginal note, footnote, endnote, or other note found in the
-	  source document. This element may be used for encoding notes
-	  <soCalled>inline</soCalled> at the point of reference (such
-	  as where a superscript number appears), as in the Alger Hiss
-	  example below. In the case of conversion from OCR and from
-	  some born-digital source documents, this will require manual
-	  intervention to move the text of the note to the place of
-	  reference.</p>
-	  <p>Alternatively, the <gi>note</gi> element may encode the
-	  text of the note at the point it occurs on the page or at
-	  another point convenient when converting from a born-digital
-	  source document, such as at the end of a text division or in
-	  a special <gi>div</gi> element within <gi>back</gi>. The
-	  point of reference should be encoded using a <gi>ref</gi> or
-	  <gi>ptr</gi> element, as in <ref
-	  target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6
-	  Simple Links and Cross-References</ref>. According to this
-	  model, the first footnote reference in the Alger Hiss
-	  example would be encoded as:
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <ref xml:id="n68">68</ref>
-	  </egXML>
-	  and the note itself as:
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <note place="bottom" anchored="true" target="#n68" n="68">Also before 1947, [. . .]</note>
-	  </egXML>
-	  </p>
+	<div type="subsection">
+	  <head>Level 4 Name Tagging</head>
+<list>
+<item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDATTSnr">Chapter 13.1.1, Linking Names and Their Referents</ref></item>
+</list>
+<p>Names should be encoded using <gi>persName</gi>, <gi>placeName</gi>, <gi>geogName</gi>, and <gi>orgName</gi> elements with the <att>ref</att> or <att>key</att> attribute providing a reference to a <gi>person</gi>, <gi>place</gi>, or <gi>org</gi> element in an external file or database for managing name normalization and compilation of additional information such as biographical or geospatial information. See the <ref target="[#key_and_ref|discussion">of <att>ref</att> and <att>key</att></ref>] above for how to choose between them.</p>
+
+<p>If using <att>key</att>, provide a unique internal identifier, such as in a local database.</p>
+
+<p>If using <att>ref</att>, an external TEI file may contain an entry for each name, grouped accordingly under <gi>listPerson</gi>, <gi>listPlace</gi>, and <gi>listOrg</gi>, which is uniquely identified with an <att>xml:id</att> attribute. In such a case the value of the <att>ref</att> attribute in the main TEI document (the transcription of the source document) references the value of the <att>xml:id</att> attribute in the external file. (In the examples below, the external file is named <att>context.xml</att> for “contextual information” and is in the same directory as the source file, but it may be named anything and placed anywhere that can be referenced by a URI.)</p>
+
+<p>When referencing external files or databases, it is strongly recommended to provide an explanation in the <gi>editorialDecl</gi> section of the TEI header. References to controlled vocabularies and national or local authority files may be signified by a prefix in the <att>xml:id</att> attribute (e.g., <att>tgn_0000000</att> for the <title>Getty Thesaurus of Geographic Names</title>). When referencing a controlled vocabulary be sure to specify this information in the <gi>classDecl</gi> section of the TEI header.</p>
+
+<list>
+<item>Place-name tagging example in main TEI document (the transcription of the source document):
+<egXML xmlns="http://www.tei-c.org/ns/Examples">     
+<p>The first Jews arrived in <placeName ref="context.xml#tgn_7012924">Indianapolis</placeName> in
+  the middle of the 19th century. Primarily immigrants from <placeName ref="context.xml#tgn_7000084"
+    > Germany</placeName> and other points in central Europe (though many had lived elsewhere in the
+    <placeName ref="context.xml#tgn_7012149">United States</placeName> before they arrived in the
+  city), they were drawn from throughout the Midwest by the growth of commerce and rail lines in
+    <placeName ref="context.xml#tgn_7012924">Indianapolis</placeName>. </p>
+</egXML></item>
+
+<item>In the external file <name type="file">context.xml</name>, for maintaining place name normalization and additional information:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<listPlace>
+  <place xml:id="tgn_7012924">
+    <placeName>
+      <settlement type="city">Indianapolis</settlement>
+      <region type="state">Indiana</region>
+    </placeName>
+  </place>
+  <place xml:id="tgn_7000084">
+    <placeName>
+      <country xml:lang="de">Deutschland</country>
+    </placeName>
+  </place>
+  <place xml:id="tgn_7012149">
+    <placeName>
+      <country>United States</country>
+    </placeName>
+  </place>
+</listPlace>
+</egXML></item>
+
+<item>Personal and organizational name tagging example in main TEI document (the transcription of the source document):
+<egXML xmlns="http://www.tei-c.org/ns/Examples">    
+  <p>PRIZE LIBRARY GIFT-Indiana University President <persName ref="context.xml#lcnaf_82134365"
+      >Elvis J. Stahr</persName> (right), a former law dean and practicing attorney, reminisces with
+    Professor of Law <persName ref="context.xml#lcnaf_00113347">W. Howard Mann</persName> as the two
+    inspect some of the nearly 3,000 volumes of <orgName ref="context.xml#lcnaf_79006848">U.S.
+      Supreme Court</orgName> records recently transferred to I.U. from the <orgName
+      ref="context.xml#lcnaf_79109178">Indiana Supreme Court Library</orgName>. The collection,
+    dating back to 1925, is one of the oldest and most complete sets in existence.</p>
+</egXML></item>
+
+<item>In the external file <name type="file">context.xml</name>, for maintaining personal and organization name normalization and additional information:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <listPerson>
+    <person xml:id="lcnaf_82134365">
+      <persName>
+        <surname>Stahr</surname>
+        <forename type="first">Elvis</forename>
+        <forename type="middle">J.</forename>
+      </persName>
+      <birth when="1916"/>
+    </person>
+    <person xml:id="lcnaf_00113347">
+      <persName>
+        <surname>Mann</surname>
+        <forename type="first">W.</forename>
+        <forename type="middle">Howard</forename>
+      </persName>
+    </person>
+  </listPerson>
+  
+  <listOrg>
+    <org xml:id="lcnaf_79006848">
+      <orgName>United States. Supreme Court</orgName>
+    </org>
+    <org xml:id="lcnaf_79109178">
+      <orgName>Indiana. Supreme Court</orgName>
+    </org>
+  </listOrg>
+</egXML></item>
+
+<item>Alternatively, instead of using an external file for the authority data, use the <att>key</att> attribute to point to a unique key in a MySQL table that stores information like county name, FIPS county code, and latitude/longitude values:
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<p>When Harry Byrd "retired" to his orchards and Rosemont, his new house outside 
+<placeName key="1498453">Berryville</placeName> in 1930, he was still an energetic 
+young man with a long political career ahead of him.</p>
+</egXML></item>
+</list>
 	</div>
-      </div>
-      <div type="examples">
-	<head>Level 3 Examples</head>
-        <p>Note that for technical reasons the namespace is not shown
-        in these examples, but it should always be supplied on the root
-        <gi>TEI</gi> element, e.g.: <tag>TEI
-        xmlns="http://www.tei-c.org/ns/1.0" xml:id="MBFG0236"</tag>.</p>
-	<div type="example">
-	  <head>Level 3 Basic Structure: Prose</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <TEI xml:id="MBFG0236">
-	      <teiHeader xml:lang="en"> 
-		<!-- header goes here -->
-	      </teiHeader>
-	      <text xml:lang="en">
-		<front>
-		  <div type="frontispiece">[figure]</div>
-		  <titlePage>[text]</titlePage>
-		  <div type="dedication">[text]</div>
-		  <div type="contents">[text]</div>
-		</front>
-		<body>
-		  <div type="book">
-		    <head>[book title]</head>
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>     
-		  </div> 
-		</body>
-		<back>
-		  <div type="appendix">[text]</div>
-		  <div type="index">[text]</div>
-		</back> 
-	      </text>
-	    </TEI>    
-	  </egXML>
+	<div>
+	  <head>Level 4 Figures</head>
+<p>
+<gi>figure</gi> groups elements representing or containing graphic information such as an illustration or figure; in this context <gi>figure</gi> typically contains the following elements:
+<list>
+<item><gi>head</gi>, containing a literal transcription of a caption on a figurative image.</item>
+
+<item><gi>figDesc</gi>, containing a free text description of the image used, potentially, for searching the images themselves.</item>
+
+<item><gi>graphic</gi>, pointing to the URI of the image itself using a <att>url</att> attribute and containing other presentation instructions such as dimension at which the graphic should be displayed, etc.</item>
+</list>
+</p>
+<p>An example of frontispiece encoding: 
+<egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-NoST">
+<front>
+    <div type="frontispiece">
+       <figure>
+          <head>Sojourner Truth.</head>          
+          <figDesc>Woodcut of Sojourner Truth.</figDesc>
+          <graphic url="http://docsouth.unc.edu/neh/truth50/frontis.html" scale="0.5"/>
+       </figure>
+    </div>
+    <ref target="Etc">...</ref>
+</front>
+</egXML>
+<bibl xml:id="BIB-NoST"><title>Narrative of Sojourner Truth, a Northern Slave, Emancipated from Bodily Servitude by the State of New York, in 1828</title></bibl>
+</p>
 	</div>
-	<div type="example">
-	  <head>Level 3 Basic Structure: Verse</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <TEI xml:id="VAA2383">
-	      <teiHeader xml:lang="en">
-		<!-- header goes here -->
-	      </teiHeader>
-	      <text xml:lang="en">
-		<front>
-		  <titlePage>[text]</titlePage>
-		  <div type="dedication">[text]</div>
-		  <div type="contents">[text]</div>
-		</front>
-		<body>
-		  <div type="book">
-		    <head>[book title]</head>
-		    <div type="part">
-		      <head>[section title]</head>
-		      <div type="poem">
-			<head>THE DAYS GONE BY.</head>
-			<lg>
-			  <l>O the days gone by! O the days gone by!</l>
-			  <l>The apples in the orchard, and the pathway through the rye;</l>
-			  <l>The chirrup of the robin, and the whistle of the quail</l>
-			  <l>As he piped across the meadows sweet as any nightingale;</l>
-			  <l>When the bloom was on the clover, and the blue was in the sky,</l>
-			  <l>And my happy heart brimmed overin the happy days gone by.</l>
-			</lg>
-			<lg>[lines of poetry]</lg>
-			<lg>[lines of poetry]</lg>
-			<lg>[lines of poetry]</lg>
-		      </div>
-		    </div>  
-		  </div> 
-		</body>
-	      </text>
-	    </TEI>
-	  </egXML>
-	</div>
-	<div type="example">
-	  <head>Level 3 Table of Contents</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <!--target attribute references page break identifier-->
-	    <div type="contents">
-	      <head>CONTENTS</head>
-	      <list type="simple">
-		<item>I. A Boy and His Dog 
-		<ref target="#VAA2383_011" rend="text-align: right">3</ref>
-		</item>
-		<item>II. Romance 
-		<ref target="#VAA2383_020" rend="text-align: right">12</ref>
-		</item>
-		<item>III. The Costume 
-		<ref target="#VAA2383_029" rend="text-align: right">21</ref>
-		</item>
-		<item>IV. Desperation 
-		<ref target="#VAA2383_038" rend="text-align: right">30</ref>
-		</item>
-		<item>V. The Pageant of the Table Round 
-		<ref target="#VAA2383_046" rend="text-align: right">38</ref>
-		</item>
-	      </list>
-	    </div>
-	  </egXML>
-	</div>
-	<div type="example">
-	  <head>Level 3 Chapter with Letter</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <div type="chapter">
-	      <pb xml:id="VAA2383_126" n="118"/>
-	      <head type="main">CHAPTER XIV</head>
-	      <head type="subtitle">MAURICE LEVY'S CONSTITUTION</head>
-	      <p><hi rend="font-weight: bold">L</hi>O, SAM!" said Maurice cautiously. "What you doin'?"</p>
-	      <p>Penrod at that instant had a singular experiencean intellectual shock like a flash of fire in the
-	      brain. Sitting in darkness, a great light flooded him with wild brilliance. He gasped!</p>
-	      <!--Text removed from example-->        
-	      <p>"What you doin'?" asked Maurice for the third time, Sam Williams not having decided upon a reply.</p>
-	      <pb xml:id="VAA2383_127" n="119"/>
-	      <p>It was Penrod who answered.</p>
-	      <p>"Drinkin' lickrish water," he said simply, and wiped his mouth with such delicious enjoyment that
-	      Sam's jaded thirst was instantly stimulated. He took the bottle eagerly from Penrod.</p>
-	      <p>"A-a-h!" exclaimed Penrod, smacking his lips. "That was a good un!"</p>
-	      <!--Text removed from example-->
-	      <p>Penrod uttered some muffled words and then waved both armseither in response or as an expression
-	      of his condition of mind; it may have been a gesture of despair. How much intention there was in
-	      this actobviously so rash, considering the position he occupiedit is impossible to say.
-	      Undeniably there must remain a suspicion of deliberate purpose.</p>
-	      <!--Text removed from example-->
-	      <pb xml:id="VAA2383_138" n="130"/>
-	      <p>The damsel curtsied again and handed him the following communication, addressed to herself: </p>
-	      <floatingText>
-		<body>
-		  <div type="letter">
-		    <p>"Dear madam Please excuse me from dancing the cotilo with you
-		    this afternoon as I have fell off the barn</p>
-		    <p>"Sincerly yours<lb/>
-		    "<hi rend="font-variant: small-caps">Penrod Schofield</hi>."
-		    </p>
-		  </div>
-		</body>
-	      </floatingText>
-	    </div>
-	  </egXML>
-	</div>	
-	<div type="example">
-	  <head>Level 3 Alger Hiss document</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <TEI xml:id="someid">
-	      <teiHeader xml:lang="en">
-		<!-- header goes here -->
-	      </teiHeader>
-	      <text xml:lang="en">
-		<body>
-		  <div1>
-		    <pb n="113" facs="00000001.tif"/>
-		    <head>POINT VIII. BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S CONVICTION SHOULD BE VACATED;
-		    ALTERNATIVELY, DISCOVERY AND A HEARING SHOULD BE ORDERED.</head>
-		    <p>The nature and extent of surveillance of Hiss, his
-		    family and associates was not known at the time of trial by
-		    the defense. Even now, with the release of some of the govern&#xAD;
-		    ment documents concerning FBI investigative techniques regarding
-		    Hiss, the full extent of surveillance -- wiretapping, mail open&#xAD;
-		    ings, mail covers, physical surveillance, and other intrusive
-		    techniques -- is still not 'clear. Nevertheless, it is apparent
-		    that information gathered through the exploitation of unlawful
-		    wiretaps and other illegal surveillance was used at trial and
-		    consequently the conviction must be reversed. Alternatively,
-		    further discovery and a hearing is essential to a fair deter&#xAD;
-		    mination regarding these issues.</p>
+<div type="subsection">
 
-		    <p>FBI surveillance of Hiss began in earnest in 1941 with 
-		    the institution of a mail cover on his incoming correspondence
-		    at his home in connection with an FBI investigation of possible
-		    Hatch Act violations. CN Ex. 98A. Another mail cover was placed
+<head>Level 4 Embedded Texts </head>
 
-		    <pb n="114" facs="00000002.tif"/>
-		    on the Hiss mail in 1945, and at the same time the FBI obtained
-		    toll call records from the Hiss residence Telephone for the
-		    years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
-		    the FBI intercepted telegrams to Hiss as well. CN Ex. 100.</p>
+<p>At Level 4, texts embedded within other texts must be marked as such.</p>
 
-		    <p>In late November, 1945, FBI surveillance of the Hiss
-		    residence in Washington, D.C., escalated. For the third time,
-		    a mail cover was instituted beginning on November 28, 1945,
-		    which was continued at least until 1946. CN Ex. 101 at p. 70;
-		    CN Ex. 102. Continuous physical surveillance of Hiss was begun
-		    as well. CN Ex. 101 at p. 72. Although this twenty-four-hour
-		    surveillance was discontinued on December 14, 1945, physical
-		    surveillance was conducted frequently at various times until
-		    September, 1947.
+<p>In the case of a quotation from another text, use <gi>quote</gi>, and do not include quotation marks in the content of this element or just outside the opening and closing tags. If the rendering of this quotation needs to be recorded, use the <att>rend</att> attribute to describe how this quotation is set off from the rest of the text.</p>
 
-		    <note place="bottom" anchored="true" n="68">Also before 1947, 
-		    a letter from Priscilla Hiss addressed
-		    to her son, Timothy Hobson, was intercepted and its contents
-		    read. CN Ex. 100A at p. 167. In approximately March, 1947,
-		    a letter from a Michael Greenberg addressed to petitioner re&#xAD;
-		    garding an application for employment with the United Nations
-		    was also intercepted, in a manner not revealed by the docu&#xAD;
-		    ments. CN Ex. 100B</note>
+<p>If the embedded text is more than a short quotation, use <gi>floatingText</gi> even if only an excerpt of the embedded texts is provided.  If your project uses <gi>quote</gi> to identify quotations, surround instances of floating texts which are quotations with <gi>quote</gi> tags.</p>
 
-		    CN Ex. 102; CN Ex. 103.</p>
+<p>Personal letters are a common example of an embedded text. While a collection of letters would use a <gi>div</gi> element for each letter, if a letter is quoted as part of a larger text, use <gi>floatingText</gi> <gi>body</gi> <tag>div1 type="letter"</tag> with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-opener.html"><gi>opener</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-dateline.html"><gi>dateline</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-salute.html"><gi>salute</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-signed.html"><gi>signed</gi></ref>,  <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-closer.html"><gi>closer</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-postscript.html"><gi>postscript</gi></ref> included as appropriate.  For example:
 
-		    <p>The most intrusive invasion of petitioner's rights
+<egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-ABLMWW">
+<p>She opened and read as follows:</p>
+          <floatingText>
+              <body>
+                <div1 type="letter">
+                  <opener>
+                    <dateline>AUGUSTA, March 4th, 18—</dateline>
+                    <salute>
+                      <hi rend="font-style: italic">Mrs. A. Mitten:</hi>
+                    </salute>
+                  </opener>
+                  <p>"Having recently understood that you have procured a private teacher, we have
+ventured to stop your advertisement, <hi rend="font-style: italic">though ordered to continue it
+until forbid,</hi> under the impression that you have probably forgotten to have it
+stopped. If, however, we have been misinformed, we will promptly resume the
+publication of it. You will find our account below; which as we are much in want of
+funds, you will oblige us by settling as soon as convenient. Hoping your teacher is
+all that you could desire in one,</p>
+                  <closer>
+                    <salute>"We remain, your ob't. serv'ts,</salute>
+                    <signed>"H—&amp;amp; B—&amp;#x201D;</signed>
+                  </closer>
+                </div1>
+              </body>       
+         </floatingText>
+</egXML>
+<bibl xml:id="BIB-ABLMWW"><author><name>Augustus Baldwin Longstreet</name>, 1790-1870</author> <title>Master William Mitten: or, A Youth of Brilliant Talents, Who Was Ruined by Bad Luck.</title> Macon, Ga.: Burke, Boykin, 1864.</bibl>
+</p>
+</div>
 
-		    <pb n="115" facs="00000003.tif"/>
-		    occurred from December 13, 1945 until the Hisses moved from
-		    Washington, D.C. to New York City on September 13, 1947. A
-		    "technical surveillance," -- a wiretap -- was placed on the Hiss
-		    telephone at their residence on P Street-in Washington, D.C.
-		    The logs of this surveillance constitute twenty-nine volumes
-		    of FBI serials and are roughly 2,500 pages in length, in which
-		    an enormous amount of information concerning the Hisses' per&#xAD;
-		    sonal lives, relationships with friends and associates, and
-		    habits is recorded.</p>
+<div type="subsection">
+<head>Level 4 Drama</head>
+<list>
+<item>Within the front matter (<gi>front</gi>) of a performance text, cast lists should be encoded as <gi>castList</gi>s, with each item in that list encoded as <gi>castItem</gi>s. If desired, each <gi>castItem</gi> may be uniquely identified with the <att>xml:id</att> attribute.
 
-		    <p>The wiretap was installed following FBI Director Hoover's
-		    application to the Attorney General for authorization,
+For example,
 
-		    <note place="bottom" anchored="true" n="69">Hoover's initial request was answered by a note reques&#xAD;
-		    ting information on Hiss. CN Ex. 104. Additional information
-		    was furnished by letter dated November 30, 1945. CN Ex. 105.</note>
+<egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-SKL">
+<front>
+    <castList><head>Dramatis Personae</head>
+        <castItem xml:id="kllear">LEAR king of Britain</castItem>
+        <castItem xml:id="klfrance">KING OF FRANCE</castItem>        
+        <castItem xml:id="klburgundy">DUKE OF BURGUNDY</castItem>
+        <castItem xml:id="klcornwall">DUKE OF CORNWALL</castItem>
+        <castItem xml:id="klalbany">DUKE OF ALBANY</castItem>
+        <castItem xml:id="klkent">EARL OF KENT</castItem>
+        <castItem xml:id="klgloucester">EARL OF GLOUCESTER</castItem>
+        <castItem xml:id="kledgar">EDGAR son to Gloucester.</castItem>
+        <castItem xml:id="kledmund">EDMUND bastard son to Gloucester.</castItem> 
+        <!-- ... -->
+    </castList>
+</front>
+</egXML>
+<bibl xml:id="BIB-SKL">Shakespeare’s <title>King Lear</title></bibl>
+</item>
 
-		    although no written authorization appears in the documents released to
-		    Hiss. The purpose of the application was to gather information
-		    regarding Hiss' alleged contacts with Soviet espionage agents and
-		    communists in government service, general allegations which had
-		    been made by Elizabeth Bentley and Chambers.</p>
+<item>Within the body of performative texts, speeches are encoded as <gi>sp</gi> and speakers identified by the <gi>speaker</gi> element, which is a child of <gi>sp</gi>.</item>
+<item>Stage directions are encoded as <gi>stage</gi> and enclose content describing scenery, stage directions, etc.</item>
+<item>When encoding the actual speech content itself, utilize elements and attributes that correspond to the type of dramatic speech presented (e.g. <gi>p</gi> for prose speech with <gi>lb</gi> to designate a new line in a particular edition of the text or <gi>lg</gi> and <gi>l</gi> to describe dramatic verse structures).</item>
+<item>If referencing the <att>xml:id</att> defined in the <gi>castList</gi> is desired, use the <att>who</att> attribute for the IDREF datatype.
 
-		    <p>As one would expect, the interception of every telephone</p>
-		  </div1>
-		</body>
-	      </text>
-	    </TEI>
-	  </egXML>
-	</div>
-      </div>
+<egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-SKL">
+<div type="act" n="1">
+    <head>Act 1</head>
+    <div type="scene" n="1">
+        <head>Scene 1</head>
+           <stage>King Lear's palace.</stage>
+           <stage>Enter KENT, GLOUCESTER, and EDMUND</stage>
+
+           <sp n="1">
+               <speaker who="klkent">KENT</speaker>
+               <p>I thought the king had more affected the Duke of<lb/>
+               Albany than Cornwall.</p>
+           </sp>
+           <sp n="2">
+               <speaker who="klgloucester">GLOUCESTER</speaker>
+               <p>It did always seem so to us: but now, in the<lb/>
+               division of the kingdom, it appears not which of<lb/>
+               the dukes he values most; for equalities are so<lb/>
+               weighed, that curiosity in neither can make choice<lb/>
+               of either's moiety.</p>
+           </sp>
+           <sp n="3">
+                <speaker who="klkent">KENT</speaker>
+                <p>Is not this your son, my lord?</p>
+           </sp>
+          <!-- ... -->
+     </div>
+</div>
+</egXML>
+</item></list>
+</div>
+<div type="subsection">
+<head>Level 4 Oral History</head>
+
+<p>Speakers in oral history interviews, i.e. interviewee(s) and interviewer(s), may be identified in the <gi>teiHeader</gi> in several ways: <list>
+
+<item>In the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-profileDesc.html"><gi>profileDesc</gi></ref>, in the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-particDesc.html"><gi>particDesc</gi></ref>, using the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html"><gi>list</gi></ref> element, with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-name.html"><gi>name</gi></ref> inside of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-item.html"><gi>item</gi></ref>s</item>
+<item>As a list of author <gi>name</gi>s within <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD2"><gi>fileDesc</gi></ref> / <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21"> <gi>titleStmt</gi></ref></item>
+</list>
+</p>
+<p>In either method, use an <att>xml:id</att> on the <gi>name</gi> element to uniquely identify the individual participant:<list>
+
+<item>The list of an interview’s participants can be also listed within the body of the interview (see example below). </item>
+<item>Questions and answers from interviewees and interviewers are encoded as <gi>sp</gi>, with speakers identified within <gi>speaker</gi> elements with a <att>who</att> attribute the value of which corresponds to the <att>xml:id</att> in the list of interview participants.</item></list></p>
+     
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<list type="simple">
+<head>Interview Participants</head>
+   <item>
+   <name xml:id="spk1" key="wf" reg="Friday, William C." type="interviewee">WILLIAM C. FRIDAY
+   </name>, interviewee
+   </item>
+   <item>
+   <name xml:id="spk2" key="wl" reg="Link, William" type="interviewer">WILLIAM LINK</name>, interviewer
+   </item>
+</list>
+
+<!-- ... -->
+
+<sp who="spk2">
+  <speaker n="2">WILLIAM LINK:</speaker>
+     <p>Last time we were talking about Frank Porter Graham. And I have a couple of questions
+about Graham, and I wonder if you could clear them up for me. You have mentioned that you
+had worked with him as a student at North Carolina State, had you met him before?
+     </p>
+</sp>
+<sp who="spk1">
+   <speaker n="1">WILLIAM C. FRIDAY: </speaker>
+     <p>No. That budget hearing was the first that I knew of him, of course, but the first time 
+that I ever encountered him. I was president of class at N.C. State, and that through me into 
+this kind of public adventure. And so I went merrily on downtown and sat there in the budget 
+hearing, along with the president of the student body, and some others. 
+     </p>
+</sp>
+</egXML>
+<p>One possible way to synchronize audio and transcript has been introduced in <ref target="http://docsouth.unc.edu/sohp/">Oral Histories of the American South</ref>, using <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-milestone.html"><gi>milestone</gi></ref> with a timestamp attribute:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<milestone n="7248" unit="empty" type="stop" timestamp="00:08:54"/>
+</egXML>
+</p>
+</div>
+<div type="subsection">
+<head>Level 4 Verse</head>
+<p>Use <gi>lg</gi> and <gi>l</gi> as in Level 3. In addition, use the <att>rend</att> attribute to indicate lines that are indented.</p>
+
+<p>For example,
+<egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-LCHoS">
+<div type="fit" n="1">
+<head>Fit the First: THE LANDING</head>
+
+    <lg type="stanza" n="1">
+        <l n="1.1">"Just the place for a Snark!" the Bellman cried,</l>
+        <l rend="margin-left: 0.5in" n="1.2">As he landed his crew with care;</l>
+        <l n="1.3">Supporting each man on the top of the tide</l>
+        <l rend="margin-left: 0.5in" n="1.4">By a finger entwined in his hair.</l>
+    </lg>
+
+    <lg type="stanza" n="2">
+        <l n="2.1">"Just the place for a Snark! I have said it twice:</l>
+        <l rend="margin-left: 0.5in" n="2.2">That alone should encourage the crew.</l>
+        <l n="2.3">Just the place for a Snark! I have said it thrice:</l>
+        <l rend="margin-left: 0.5in" n="2.4">What I tell you three times is true."</l>
+    </lg>
+
+    <!-- ... -->
+
+</div> 
+</egXML>
+<bibl xml:id="BIB-LCHoS">Lewis Carroll’s <title>The Hunting of the Snark</title></bibl>
+</p>
+</div>
+<div type="subsection">
+<head> Level 4 Milestones </head>
+
+<p>Instead of using the <gi>milestone</gi> element available in TEI, use <tag>ab type="typography"</tag>.  The content of this element is the character(s) or device used to mark the milestone in the source document.  For example:
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<ab type="typography">*****</ab>
+</egXML>
+</p>
+</div>
+<div type="subsection">
+<head> Level 4 Alger Hiss document </head>
+
+<p>Note that the soft hyphen character is displayed as an entity reference because this character will not display in many web browsers.</p>
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples"><TEI xml:id="project_document_identifier">
+  <teiHeader xml:lang="en">
+    <!-- header goes here -->
+  </teiHeader>
+    <text xml:lang="en">
+      <body>
+        <div1>
+          <pb n="113" facs="./pageImages/AH4_0113.jpg" ed="typed"/>
+          <pb n="118" ed="subsequent"/>
+          <head>POINT VIII.</head>
+          <head>BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
+            <lb/>CONVICTION SHOULD BE VACATED; ALTERNATIVELY,
+            <lb/>DISCOVERY AND A HEARING SHOULD BE ORDERED.</head>
+          <p>The nature and extent of surveillance of Hiss, his
+            <lb/>family and associates was not known at the time of trial by
+            <lb/>the defense.  Even now, with the release of some of the govern&amp;#xAD;
+            <lb/>ment documents concerning FBI investigative techniques regarding
+            <lb/>Hiss, the full extent of surveillance -- wiretapping, mail open&amp;#xAD; 
+            <lb/>ings, mail covers, physical surveillance, and other intrusive
+            <lb/>techniques -- is still not 'clear.  Nevertheless, it is apparent
+            <lb/>that information gathered through the exploitation of unlawful
+            <lb/>wiretaps and other illegal surveillance was used at trial and
+            <lb/>consequently the conviction must be reversed.  Alternatively,
+            <lb/>further discovery and a hearing is essential to a fair deter&amp;#xAD; 
+            <lb/>mination regarding these issues.</p>
+          <p>FBI surveillance of Hiss began in earnest in 1941 with 
+            <lb/>the institution of a mail cover on his incoming correspondence
+            <lb/>at his home in connection with an FBI investigation of possible
+            <lb/>Hatch Act violations.  CN Ex. 98A. Another mail cover was placed
+            <pb n="114" facs="./pageImages/AH_0114.jpg"/>
+            <pb n="119" ed="subsequent"/>
+            on the Hiss mail in 1945, and at the same time the FBI obtained
+            <lb/>toll call records from the Hiss residence Telephone for the
+            <lb/>years 1943 and 1944 as well.  CN Ex. 99.  In September, 1945,
+            <lb/>the FBI intercepted telegrams to Hiss as well.  CN Ex. 100.</p>
+          <p>In late November, 1945, FBI surveillance of the Hiss
+            <lb/>residence in Washington, D.C., escalated.  For the third time,
+            <lb/>a mail cover was instituted beginning on November 28, 1945,
+            <lb/>which was continued at least until 1946.  CN Ex. 101 at p. 70;
+            <lb/>CN Ex. 102.  Continuous physical surveillance of Hiss was begun
+            <lb/>as well.  CN Ex. 101 at p. 72.  Although this twenty-four-hour
+            <lb/>surveillance was discontinued on December 14, 1945, physical
+            <lb/>surveillance was conducted frequently at various times until
+            <lb/>September, 1947.<note place="foot" anchored="true" n="68">Also
+              before 1947, a letter from Priscilla Hiss addressed
+              <lb/>to her son, Timothy Hobson, was intercepted and its contents
+              <lb/>read.  CN Ex. 100A at p. 167.  In approximately March, 1947,
+              <lb/>a letter from a Michael Greenberg addressed to petitioner re&amp;#xAD; 
+              <lb/>garding an application for employment with the United Nations
+              <lb/>was also intercepted, in a manner not revealed by the docu&amp;#xAD; 
+              <lb/>ments.  CN Ex. 100B</note>  CN Ex. 102; CN Ex. 103.</p>
+          <p>The most intrusive invasion of petitioner's rights
+            <pb n="115" facs="./pageImages/AH_0115.jpg"/>
+            <pb n="120" ed="subsequent"/>
+            <lb/>occurred from December 13, 1945 until the Hisses moved from
+            <lb/>Washington, D.C. to New York City on September 13, 1947.  A
+            <soCalled>technical surveillance</soCalled>, -- a wiretap -- was placed on the Hiss
+            <lb/>telephone at their residence on P Street-in Washington, D.C.
+            <lb/>The logs of this surveillance constitute twenty-nine volumes
+            <lb/>of FBI serials and are roughly 2,500 pages in length, in which
+            <lb/>an enormous amount of information concerning the Hisses' per&amp;#xAD;
+            <lb/>sonal lives, relationships with friends and associates, and
+            <lb/>habits is recorded.</p>          
+          <p>The wiretap was installed following FBI Director Hoover's
+            <lb/>application to the Attorney General for authorization,
+              <note place="bottom" anchored="true" n="69">Hoover's
+              initial request was answered by a note reques&amp;#xAD; 
+              <lb/>ting information on Hiss.  CN Ex. 104<sic> </sic>.  Additional information
+              <lb/>was furnished by letter dated November 30, 1945.  CN Ex. 105<sic> </sic>.</note>
+            <lb/>although no written authorization appears in the documents released to
+            <lb/>Hiss.  The purpose of the application was to gather information
+            <lb/>regarding Hiss' alleged contacts with Soviet espionage agents and
+            <lb/>communists in government service, general allegations which had
+            <lb/>been made by Elizabeth Bentley and Chambers.</p>
+          <p>As one would expect, the interception of every telephone</p>
+        </div1>
+      </body>
+    </text>
+  </TEI></egXML>
+</div>      </div>
       <!-- ********************************************* -->
       <div type="specification">
 	<head>Specification</head>
-	<schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_">
+	<schemaSpec ident="lib4" docLang="en" xml:lang="en" prefix="lib4_">
 	  <moduleRef key="core"/>
 	  <moduleRef key="tei"/>
 	  <moduleRef key="header"/>
@@ -482,6 +793,7 @@
 	  <moduleRef key="figures"/>     <!-- for <table>, <row>, <cell>, and <figure> -->
 	  <moduleRef key="transcr"/>     <!-- for facs= -->
 	  <moduleRef key="namesdates"/>  <!-- for <orgName> and <persName> -->
+	  <moduleRef key="drama"/>
           <!-- ****************************************** -->
           <!-- Changes to elements, in alphabetical order -->
           <!-- ****************************************** -->
@@ -1850,22 +2162,13 @@
 	  <!-- Element deletion, in module order -->
 	  <!-- ********************************* -->
 	  <elementSpec module="core" ident="abbr" mode="delete"/>
-	  <elementSpec module="core" ident="add" mode="delete"/>
 	  <elementSpec module="core" ident="binaryObject" mode="delete"/>
 	  <elementSpec module="core" ident="cb" mode="delete"/>
-	  <elementSpec module="core" ident="choice" mode="delete"/>
 	  <elementSpec module="core" ident="cit" mode="delete"/>
-	  <elementSpec module="core" ident="corr" mode="delete"/>
-	  <elementSpec module="core" ident="del" mode="delete"/>
 	  <elementSpec module="core" ident="desc" mode="delete"/>
 	  <elementSpec module="core" ident="distinct" mode="delete"/>
 	  <elementSpec module="core" ident="divGen" mode="delete"/>
-	  <elementSpec module="core" ident="emph" mode="delete"/>
 	  <elementSpec module="core" ident="expan" mode="delete"/>
-	  <elementSpec module="core" ident="foreign" mode="delete"/>
-	  <elementSpec module="core" ident="gap" mode="delete"/>
-	  <elementSpec module="core" ident="gloss" mode="delete"/>
-	  <elementSpec module="core" ident="graphic" mode="delete"/>
 	  <elementSpec module="core" ident="headItem" mode="delete"/>
 	  <elementSpec module="core" ident="headLabel" mode="delete"/>
 	  <elementSpec module="core" ident="index" mode="delete"/>
@@ -1873,43 +2176,17 @@
 	  <elementSpec module="core" ident="listBibl" mode="delete"/>
 	  <elementSpec module="core" ident="measure" mode="delete"/>
 	  <elementSpec module="core" ident="measureGrp" mode="delete"/>
-	  <elementSpec module="core" ident="mentioned" mode="delete"/>
 	  <elementSpec module="core" ident="milestone" mode="delete"/>
 	  <elementSpec module="core" ident="num" mode="delete"/>
 	  <elementSpec module="core" ident="orig" mode="delete"/>
 	  <elementSpec module="core" ident="q" mode="delete"/>
-	  <elementSpec module="core" ident="quote" mode="delete"/>
 	  <elementSpec module="core" ident="reg" mode="delete"/>
 	  <elementSpec module="core" ident="rs" mode="delete"/>
-	  <elementSpec module="core" ident="said" mode="delete"/>
-	  <elementSpec module="core" ident="sic" mode="delete"/>
-	  <elementSpec module="core" ident="soCalled" mode="delete"/>
-	  <elementSpec module="core" ident="sp" mode="delete"/>
-	  <elementSpec module="core" ident="speaker" mode="delete"/>
-	  <elementSpec module="core" ident="stage" mode="delete"/>
 	  <elementSpec module="core" ident="teiCorpus" mode="delete"/>
-	  <elementSpec module="core" ident="term" mode="delete"/>
 	  <elementSpec module="core" ident="time" mode="delete"/>
-	  <elementSpec module="core" ident="unclear" mode="delete"/>
-	  <elementSpec module="textstructure" ident="argument" mode="delete"/>
 	  <elementSpec module="textstructure" ident="byline" mode="delete"/>
-	  <elementSpec module="textstructure" ident="closer" mode="delete"/>
-	  <elementSpec module="textstructure" ident="dateline" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docAuthor" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docDate" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docEdition" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docImprint" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docTitle" mode="delete"/>
-	  <elementSpec module="textstructure" ident="epigraph" mode="delete"/>
-	  <elementSpec module="textstructure" ident="group" mode="delete"/>
 	  <elementSpec module="textstructure" ident="imprimatur" mode="delete"/>
-	  <elementSpec module="textstructure" ident="opener" mode="delete"/>
-	  <elementSpec module="textstructure" ident="postscript" mode="delete"/>
-	  <elementSpec module="textstructure" ident="salute" mode="delete"/>
-	  <elementSpec module="textstructure" ident="signed" mode="delete"/>
-	  <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
-	  <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
-	  <elementSpec module="textstructure" ident="trailer" mode="delete"/>
+          <elementSpec module="header" ident="biblFull" mode="delete"/>
 	  <elementSpec module="header" ident="cRefPattern" mode="delete"/>
 	  <elementSpec module="header" ident="catDesc" mode="delete"/>
 	  <elementSpec module="header" ident="catRef" mode="delete"/>
@@ -1936,7 +2213,6 @@
 	  <elementSpec module="header" ident="textClass" mode="delete"/>
 	  <elementSpec module="header" ident="typeNote" mode="delete"/>
 	  <elementSpec module="figures" ident="formula" mode="delete"/>
-	  <elementSpec module="figures" ident="figDesc" mode="delete"/>
 	  <elementSpec module="transcr" ident="zone" mode="delete"/>
 	  <elementSpec module="transcr" ident="addSpan" mode="delete"/>
 	  <elementSpec module="transcr" ident="damage" mode="delete"/>
@@ -1959,14 +2235,12 @@
 	  <elementSpec module="namesdates" ident="nameLink" mode="delete"/>
 	  <elementSpec module="namesdates" ident="addName" mode="delete"/>
 	  <elementSpec module="namesdates" ident="roleName" mode="delete"/>
-	  <elementSpec module="namesdates" ident="placeName" mode="delete"/>
 	  <elementSpec module="namesdates" ident="bloc" mode="delete"/>
 	  <elementSpec module="namesdates" ident="country" mode="delete"/>
 	  <elementSpec module="namesdates" ident="region" mode="delete"/>
 	  <elementSpec module="namesdates" ident="district" mode="delete"/>
 	  <elementSpec module="namesdates" ident="settlement" mode="delete"/>
 	  <elementSpec module="namesdates" ident="offset" mode="delete"/>
-	  <elementSpec module="namesdates" ident="geogName" mode="delete"/>
 	  <elementSpec module="namesdates" ident="geogFeat" mode="delete"/>
 	  <elementSpec module="namesdates" ident="affiliation" mode="delete"/>
 	  <elementSpec module="namesdates" ident="age" mode="delete"/>
@@ -1980,10 +2254,7 @@
 	  <elementSpec module="namesdates" ident="geo" mode="delete"/>
 	  <elementSpec module="namesdates" ident="langKnowledge" mode="delete"/>
 	  <elementSpec module="namesdates" ident="langKnown" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listOrg" mode="delete"/>
 	  <elementSpec module="namesdates" ident="listEvent" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listPerson" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listPlace" mode="delete"/>
 	  <elementSpec module="namesdates" ident="location" mode="delete"/>
 	  <elementSpec module="namesdates" ident="nationality" mode="delete"/>
 	  <elementSpec module="namesdates" ident="occupation" mode="delete"/>
@@ -2002,6 +2273,20 @@
 	  <elementSpec module="namesdates" ident="trait" mode="delete"/>
 	  <elementSpec module="namesdates" ident="nym" mode="delete"/>
 	  <elementSpec module="namesdates" ident="listNym" mode="delete"/>
+	  <elementSpec module="drama" ident="actor" mode="delete"/>
+	  <elementSpec module="drama" ident="camera" mode="delete"/>
+	  <elementSpec module="drama" ident="caption" mode="delete"/>
+	  <elementSpec module="drama" ident="castGroup" mode="delete"/>
+	  <elementSpec module="drama" ident="epilogue" mode="delete"/>
+	  <elementSpec module="drama" ident="move" mode="delete"/>
+	  <elementSpec module="drama" ident="performance" mode="delete"/>
+	  <elementSpec module="drama" ident="prologue" mode="delete"/>
+	  <elementSpec module="drama" ident="role" mode="delete"/>
+	  <elementSpec module="drama" ident="roleDesc" mode="delete"/>
+	  <elementSpec module="drama" ident="set" mode="delete"/>
+	  <elementSpec module="drama" ident="sound" mode="delete"/>
+	  <elementSpec module="drama" ident="tech" mode="delete"/>
+	  <elementSpec module="drama" ident="view" mode="delete"/>
 	  <!-- ****************************************************** -->
 	  <!-- Class deletions (both deletion of classes and deletion -->
 	  <!-- of attributes from classes) in no particiular order    -->
@@ -2027,7 +2312,7 @@
 	  <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>        
 	  <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
 	  <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>      
-          <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>      
+	  <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>      
 	  <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
 	  <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
 	  <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>

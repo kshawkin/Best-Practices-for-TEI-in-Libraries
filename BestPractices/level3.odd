@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" 
-     xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:s="http://purl.oclc.org/dsdl/schematron"
+     xmlns:rng="http://relaxng.org/ns/structure/1.0"
+     xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -146,7 +149,7 @@
 	in the translation.</p>
       </div>
       <div type="elrecs">
-	<head>Element Recommendations for Level 2</head>
+	<head>Element Recommendations for Level 3</head>
 	<p>Use all elements specified in Levels 1 and 2 <emph>except
 	<gi>ab</gi></emph>, plus the following:
 	<table>
@@ -487,13 +490,19 @@
           <!-- ****************************************** -->
 	  <elementSpec module="textstructure" ident="TEI" mode="replace">
 	    <gloss>TEI document</gloss>
-	    <desc>contains a single TEI-in-Libraries level 3 document,
-	    comprising a TEI header and a text, either in isolation or as part of a
-	    <gi>teiCorpus</gi> element.</desc>
-	    <content>
+            <desc>contains a single TEI-in-Libraries level 3 document,
+            comprising a TEI header and a text, the latter represented
+            as either a transcription (in <gi>text</gi>) or a
+            transcription and page images (in <gi>facsimile</gi>),
+            either in isolation or as part of a <gi>teiCorpus</gi>
+            element.</desc>
+            <content>
 	      <rng:ref name="teiHeader"/>
+	      <rng:zeroOrMore>
+		<rng:ref name="model.resourceLike"/>
+	      </rng:zeroOrMore>
 	      <rng:ref name="text"/>
-	    </content>
+            </content>
 	    <attList>
 	      <attDef ident="version" usage="opt">
 		<desc>The version of the TEI scheme</desc>
@@ -1639,25 +1648,25 @@
 	    </attList>
 	  </elementSpec>
 	  <elementSpec module="namesdates" ident="orgName" mode="change">
-	    <classes>
+	    <classes mode="change">
 	      <memberOf mode="delete" key="att.datable"/>
 	    </classes>
 	  </elementSpec>
           <elementSpec module="core" ident="pb" mode="change">
-            <classes mode="change">
-	      <memberOf mode="delete" key="att.sourced"/>
-	    </classes>
+            <attList>
+              <attDef ident="ed" mode="delete"/>
+            </attList>
           </elementSpec>
 	  <elementSpec module="namesdates" ident="persName" mode="change">
-	    <classes>
+	    <classes mode="change">
 	      <memberOf mode="delete" key="att.datable"/>
 	    </classes>
 	  </elementSpec>
-	  <elementSpec module="core" ident="ptr" mode="change">
-	    <attList>
-	      <attDef ident="cRef" mode="delete"/>
-	    </attList>
-	  </elementSpec>
+          <elementSpec module="core" ident="ptr" mode="change">
+            <attList>
+              <attDef ident="cRef" mode="delete"/>
+            </attList>
+          </elementSpec>
 	  <elementSpec module="header" ident="publicationStmt" mode="change">
 	    <content>
 	      <rng:choice>
@@ -1863,7 +1872,7 @@
 	  <elementSpec module="core" ident="headItem" mode="delete"/>
 	  <elementSpec module="core" ident="headLabel" mode="delete"/>
 	  <elementSpec module="core" ident="index" mode="delete"/>
-	  <elementSpec module="core" ident="label" mode="delete"/>
+	  <!-- elementSpec module="core" ident="label" mode="delete"/  needed for <application> -->
 	  <elementSpec module="core" ident="listBibl" mode="delete"/>
 	  <elementSpec module="core" ident="measure" mode="delete"/>
 	  <elementSpec module="core" ident="measureGrp" mode="delete"/>
@@ -1904,6 +1913,7 @@
 	  <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
 	  <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
 	  <elementSpec module="textstructure" ident="trailer" mode="delete"/>
+          <elementSpec module="header" ident="biblFull" mode="delete"/>
 	  <elementSpec module="header" ident="cRefPattern" mode="delete"/>
 	  <elementSpec module="header" ident="catDesc" mode="delete"/>
 	  <elementSpec module="header" ident="catRef" mode="delete"/>

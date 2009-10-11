@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" 
-     xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:s="http://purl.oclc.org/dsdl/schematron"
+     xmlns:rng="http://relaxng.org/ns/structure/1.0"
+     xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -262,6 +265,11 @@
           <moduleRef key="linking"/>     <!-- for <ab> -->
           <moduleRef key="transcr"/>     <!-- for facs= -->
           <moduleRef key="namesdates"/>  <!-- for <orgName> and <persName> -->
+	  <xi:include href="./lib-header.odd">
+	    <xi:fallback>
+	      <div><head>ERROR</head><ab>Unable to find header specification sub-file.</ab></div>
+	    </xi:fallback>
+	  </xi:include>
           <!-- ****************************************** -->
           <!-- Changes to elements, in alphabetical order -->
           <!-- ****************************************** -->
@@ -599,7 +607,7 @@
             </attList>
           </elementSpec>
 	  <elementSpec module="namesdates" ident="orgName" mode="change">
-	    <classes>
+	    <classes mode="change">
 	      <memberOf mode="delete" key="att.datable"/>
 	    </classes>
 	  </elementSpec>
@@ -609,7 +617,7 @@
             </attList>
           </elementSpec>
 	  <elementSpec module="namesdates" ident="persName" mode="change">
-	    <classes>
+	    <classes mode="change">
 	      <memberOf mode="delete" key="att.datable"/>
 	    </classes>
 	  </elementSpec>
@@ -695,16 +703,62 @@
             </attList>
           </elementSpec>
           <elementSpec module="textstructure" ident="title" mode="change">
-            <constraintSpec scheme="isoschematron" ident="titleLevel">
-	      <constraint>	      
-		<s:rule context="parent::seriesStmt">
-		  <s:assert test="@level='s'">When a child of
-		  &lt;seriesStmt>, the level of a title must be
-		  specified as 's'.</s:assert>
-              </s:rule>
-	      </constraint>
-            </constraintSpec>
+	    <constraintSpec scheme="isoschematron" ident="titleLevel">
+	      <s:rule context="parent::seriesStmt">
+		<s:assert test="@level='s'">When a child of &lt;seriesStmt>, the level of a title must be
+		specified as 's'.</s:assert>
+	      </s:rule>
+	      <s:rule context="parent::analytic">
+		<s:assert test="@level='a'">When a child of &lt;analytic>, the level of a title must be
+		specified as 'a'.</s:assert>
+	      </s:rule>
+	    </constraintSpec>
             <attList>
+	      <attDef ident="level" usage="opt">
+		<desc>indicates the bibliographic level for a title,
+		that is, whether it identifies an article, book,
+		journal, series, or unpublished material.</desc>
+		<valList type="closed">
+		  <valItem ident="a">
+		    <gloss>analytic</gloss>
+		    <desc>analytic title (article, poem, or other item
+		    published as part of a larger item) </desc>
+		  </valItem>
+		  <valItem ident="m">
+		    <gloss>monographic</gloss>
+		    <desc>monographic title (book, collection, or
+		    other item published as a distinct item,
+		    including single volumes of multi-volume
+		    works) </desc>
+		  </valItem>
+		  <valItem ident="j">
+		    <gloss>journal</gloss>
+		    <desc>journal title </desc>
+		  </valItem>
+		  <valItem ident="s">
+		    <gloss>series</gloss>
+		    <desc>series title </desc>
+		  </valItem>
+		  <valItem ident="u">
+		    <gloss>unpublished</gloss>
+		    <desc>title of unpublished material (including
+		    theses and dissertations unless
+		    published by a commercial press)</desc>
+		  </valItem>
+		</valList>
+		<remarks>
+		  <p>The level of a title is sometimes implied by its
+		  context: for example, a title appearing directly
+		  within an <gi>analytic</gi> element is <foreign>ipso
+		  facto</foreign> of level <val>a</val>, and one
+		  appearing within a <gi>series</gi> element of level
+		  <val>s</val>. For this reason, the <att>level</att>
+		  attribute is not required in contexts where its
+		  value can be unambiguously inferred. Where it is
+		  supplied in such contexts, its value should not
+		  contradict the value implied by its parent element.</p>
+		</remarks>
+	      </attDef>
               <attDef ident="type" usage="rec" mode="replace">
                 <valList type="semi">
                   <valItem ident="main">
@@ -774,7 +828,7 @@
           <elementSpec module="core" ident="index" mode="delete"/>
           <elementSpec module="core" ident="item" mode="delete"/>
           <elementSpec module="core" ident="l" mode="delete"/>
-          <elementSpec module="core" ident="label" mode="delete"/>
+	  <!-- elementSpec module="core" ident="label" mode="delete"/  needed for <application> -->
           <elementSpec module="core" ident="lb" mode="delete"/>
           <elementSpec module="core" ident="lg" mode="delete"/>
           <elementSpec module="core" ident="list" mode="delete"/>
@@ -827,6 +881,7 @@
           <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
           <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
           <elementSpec module="textstructure" ident="trailer" mode="delete"/>
+          <elementSpec module="header" ident="biblFull" mode="delete"/>
           <elementSpec module="header" ident="cRefPattern" mode="delete"/>
           <elementSpec module="header" ident="catDesc" mode="delete"/>
           <elementSpec module="header" ident="catRef" mode="delete"/>
