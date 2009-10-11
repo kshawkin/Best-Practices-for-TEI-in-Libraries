@@ -7,4 +7,4 @@ Libraries_ ODDs.
 
 To check out an initial copy of this repository to your local system
 to work on it, use:
-   git clone git@github.com:sydb/TEI-in-Libraries.git
+   git clone git://github.com/sydb/TEI-in-Libraries.git

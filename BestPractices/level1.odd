@@ -839,8 +839,6 @@
           <elementSpec module="header" ident="hyphenation" mode="delete"/>
           <elementSpec module="header" ident="interpretation" mode="delete"/>
           <elementSpec module="header" ident="keywords" mode="delete"/>
-          <elementSpec module="header" ident="langUsage" mode="delete"/>
-          <elementSpec module="header" ident="language" mode="delete"/>
           <elementSpec module="header" ident="namespace" mode="delete"/>
           <elementSpec module="header" ident="normalization" mode="delete"/>
           <elementSpec module="header" ident="quotation" mode="delete"/>

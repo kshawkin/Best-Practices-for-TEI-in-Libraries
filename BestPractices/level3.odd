@@ -53,7 +53,7 @@
       <head>Level 3: Simple Analysis</head>
       <div type="setting">
 	<p>This is the <name>level 3</name> portion of the <ref
-	target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
+	target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_3:_Simple_Analysis">Best
 	Practices for TEI in Libraries</ref>. This document is not
 	intended to stand alone, but rather to be considered in
 	concert with the entire TEI in Libraries recommendations.</p>
@@ -1615,6 +1615,22 @@
 	      </attDef>
 	    </attList>
 	  </elementSpec>
+	  <elementSpec module="header" ident="language" mode="change">
+	    <content>
+	      <rng:empty/>
+	    </content>
+	    <remarks>
+	      <p>In the librarary context, a series of one or more
+	      <gi>language</gi> elements is used to record the
+	      language(s) of the original source document when the
+	      shifts in language are not being recorded in the
+	      transcription itself but the information is readily
+	      available (as is often the case when importing metadata
+	      from a catalog source). Further description of the
+	      language in the content of <gi>language</gi> is
+	      <emph>not</emph> used.</p>
+	    </remarks>
+	  </elementSpec>
 	  <elementSpec module="core" ident="note" mode="change">
 	    <attList>
 	      <attDef ident="anchored" mode="delete"/>
@@ -1900,8 +1916,6 @@
 	  <elementSpec module="header" ident="hyphenation" mode="delete"/>
 	  <elementSpec module="header" ident="interpretation" mode="delete"/>
 	  <elementSpec module="header" ident="keywords" mode="delete"/>
-	  <elementSpec module="header" ident="langUsage" mode="delete"/>
-	  <elementSpec module="header" ident="language" mode="delete"/>
 	  <elementSpec module="header" ident="namespace" mode="delete"/>
 	  <elementSpec module="header" ident="normalization" mode="delete"/>
 	  <elementSpec module="header" ident="quotation" mode="delete"/>
