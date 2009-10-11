@@ -3,7 +3,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en">
+     xml:lang="en" >
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -23,8 +23,7 @@
         <availability status="restricted">
 	  <ab>Copyleft 2009 DLF</ab>
 	  <p>Permission is granted to copy, distribute and/or modify
-	  this document under the terms of the <ref
-	  target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
+	  this document under the terms of the <ref target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
 	  Documentation License, Version 1.2</ref> or any later
 	  version published by the Free Software Foundation; with no
 	  Invariant Sections, no Front-Cover Texts, and no Back-Cover
@@ -37,8 +36,7 @@
 	is a planned re-implementation of <bibl><title>TEI in
 	Libraries: Guidelines for Best Practices</title> <author>TEI
 	in Libraries SIG</author> <author>Digital Libraries Federation
-	TEI task force</author> <ptr
-	target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
+	TEI task force</author> <ptr target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
       </bibl>
       written in a wiki language into the TEI ODD language. This
 	verssion started <date when="2009-10-05"/>.</p>
@@ -55,8 +53,7 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>Level 3: Simple Analysis</head>
       <div type="setting">
-	<p>This is the <name>level 3</name> portion of the <ref
-	target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_3:_Simple_Analysis">Best
+	<p>This is the <name>level 3</name> portion of the <ref target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_3:_Simple_Analysis">Best
 	Practices for TEI in Libraries</ref>. This document is not
 	intended to stand alone, but rather to be considered in
 	concert with the entire TEI in Libraries recommendations.</p>
@@ -81,8 +78,7 @@
 	  </item>
 	</list>
 	<p>Note that this is intended to be a <soCalled>TEI
-	conformant</soCalled> customization, per <ref
-	target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
+	conformant</soCalled> customization, per <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
 	section 23.3</ref>.</p>
       </div>
       <div type="purpose">
@@ -143,8 +139,7 @@
 	electronic source such as an HTML file or word-processor
 	document or from a print source, either through OCR or
 	keyboarding. They can be generated trivially by converting
-	from outsourced double-keyboarded texts conforming to <ref
-	target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html">TEI
+	from outsourced double-keyboarded texts conforming to <ref target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html">TEI
 	Tite</ref>, though some granularity of encoding will be lost
 	in the translation.</p>
       </div>
@@ -225,8 +220,7 @@
 	  source document, such as at the end of a text division or in
 	  a special <gi>div</gi> element within <gi>back</gi>. The
 	  point of reference should be encoded using a <gi>ref</gi> or
-	  <gi>ptr</gi> element, as in <ref
-	  target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6
+	  <gi>ptr</gi> element, as in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6
 	  Simple Links and Cross-References</ref>. According to this
 	  model, the first footnote reference in the Alger Hiss
 	  example would be encoded as:
@@ -397,15 +391,15 @@
 		    ALTERNATIVELY, DISCOVERY AND A HEARING SHOULD BE ORDERED.</head>
 		    <p>The nature and extent of surveillance of Hiss, his
 		    family and associates was not known at the time of trial by
-		    the defense. Even now, with the release of some of the govern&#xAD;
+		    the defense. Even now, with the release of some of the govern­
 		    ment documents concerning FBI investigative techniques regarding
-		    Hiss, the full extent of surveillance -- wiretapping, mail open&#xAD;
+		    Hiss, the full extent of surveillance -- wiretapping, mail open­
 		    ings, mail covers, physical surveillance, and other intrusive
 		    techniques -- is still not 'clear. Nevertheless, it is apparent
 		    that information gathered through the exploitation of unlawful
 		    wiretaps and other illegal surveillance was used at trial and
 		    consequently the conviction must be reversed. Alternatively,
-		    further discovery and a hearing is essential to a fair deter&#xAD;
+		    further discovery and a hearing is essential to a fair deter­
 		    mination regarding these issues.</p>
 
 		    <p>FBI surveillance of Hiss began in earnest in 1941 with 
@@ -433,9 +427,9 @@
 		    a letter from Priscilla Hiss addressed
 		    to her son, Timothy Hobson, was intercepted and its contents
 		    read. CN Ex. 100A at p. 167. In approximately March, 1947,
-		    a letter from a Michael Greenberg addressed to petitioner re&#xAD;
+		    a letter from a Michael Greenberg addressed to petitioner re­
 		    garding an application for employment with the United Nations
-		    was also intercepted, in a manner not revealed by the docu&#xAD;
+		    was also intercepted, in a manner not revealed by the docu­
 		    ments. CN Ex. 100B</note>
 
 		    CN Ex. 102; CN Ex. 103.</p>
@@ -449,14 +443,14 @@
 		    telephone at their residence on P Street-in Washington, D.C.
 		    The logs of this surveillance constitute twenty-nine volumes
 		    of FBI serials and are roughly 2,500 pages in length, in which
-		    an enormous amount of information concerning the Hisses' per&#xAD;
+		    an enormous amount of information concerning the Hisses' per­
 		    sonal lives, relationships with friends and associates, and
 		    habits is recorded.</p>
 
 		    <p>The wiretap was installed following FBI Director Hoover's
 		    application to the Attorney General for authorization,
 
-		    <note place="bottom" anchored="true" n="69">Hoover's initial request was answered by a note reques&#xAD;
+		    <note place="bottom" anchored="true" n="69">Hoover's initial request was answered by a note reques­
 		    ting information on Hiss. CN Ex. 104. Additional information
 		    was furnished by letter dated November 30, 1945. CN Ex. 105.</note>
 
@@ -507,7 +501,7 @@
 	      <attDef ident="version" usage="opt">
 		<desc>The version of the TEI scheme</desc>
 		<datatype>
-		  <rng:data xmlns:rng="http://relaxng.org/ns/structure/1.0" type="decimal"/>
+		  <rng:data type="decimal"/>
 		</datatype>
 		<defaultVal>5.0</defaultVal>
 		<valDesc>A number identifying the version of the TEI guidelines</valDesc>
@@ -534,14 +528,14 @@
 		      <div type="chapter" n="1">
 			<head>The Bride</head>
 			<p>The year that Buttercup was born, the most beautiful woman
-			<lb/>in the world &#x2026;</p>
+			<lb/>in the world …</p>
 			<!-- rest of chapter 1 -->
 		      </div>
 		      <div type="chapter" n="2">
 			<head>The Groom</head>
 			<note>
 			  <p>This is my first major excision. Chapter One, The Bride, is almost
-			  <lb/>in its entirety about the bride. &#x2026;</p>
+			  <lb/>in its entirety about the bride. …</p>
 			</note>
 			<!-- rest of chapter 2 -->
 		      </div>
@@ -570,7 +564,7 @@
 	      <memberOf key="model.respLike"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+	      <rng:ref name="macro.phraseSeq"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -629,7 +623,7 @@
 	    <classes>
 	      <memberOf key="att.declaring"/>
 	    </classes>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:group>
 		<rng:zeroOrMore>
 		  <rng:choice>
@@ -733,7 +727,7 @@
 	  <elementSpec module="textstructure" ident="body" mode="replace">
 	    <desc>contains the body of a single unitary text,
 	    excluding any front or back matter.</desc>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <!-- globals as usual -->
 	      <rng:zeroOrMore>
 		<rng:ref name="model.global"/>
@@ -868,19 +862,12 @@
 	      <ptr target="#DS"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="change" mode="change">
-	    <!-- constraintSpec scheme="isoschematron" ident="revChronOrder">
-		 </constraintSpec -->
-	    <attList>
-	      <attDef mode="change" ident="when" usage="req"/>
-	    </attList>
-	  </elementSpec>
 	  <elementSpec module="core" ident="date" mode="change">
 	    <constraintSpec scheme="isoschematron" ident="whenNotContent">
 	      <s:rule context="date[parent::publicationStmt]">
 		<s:assert test="@when">Dates inside the publication statement must have @when (and should not
 		have content)</s:assert>
-		<s:report test="string-length( normalize-space(.) ) > 0">Dates inside the publication statement
+		<s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the publication statement
 		should not have content (and must have @when)</s:report>
 	      </s:rule>
 	    </constraintSpec>
@@ -1390,7 +1377,7 @@
 	      <memberOf key="model.respLike"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+	      <rng:ref name="macro.phraseSeq"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1401,70 +1388,6 @@
 	      <ptr target="#COBICOR"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="editorialDecl" mode="replace">
-	    <gloss>editorial practice declaration</gloss>
-	    <desc>provides details of editorial principles and
-	    practices applied during the encoding of a text.!!!</desc>
-	    <classes>
-	      <memberOf key="model.encodingPart"/>
-	      <memberOf key="att.declarable"/>
-	    </classes>
-	    <content>
-	      <rng:zeroOrMore>
-		<rng:ref name="model.pLike"/>
-	      </rng:zeroOrMore>
-	      <rng:element name="p">
-		<rng:choice>
-		  <rng:value>All hyphens in source document encoded as U+2010.</rng:value>
-		  <rng:value>Soft hyphens encoded as U+00AD; hard hyphens as U+2010.</rng:value>
-		</rng:choice>
-	      </rng:element>
-	    </content>
-	    <attList>
-	      <attDef ident="n" mode="replace" usage="req">
-		<gloss>number</gloss>
-		<desc>Used to indicate which encoding level described
-		by <title>TEI in Libraries: Guidelines for Best
-		Practices</title> is in use.</desc>
-		<datatype>
-		  <rng:value>2</rng:value>
-		</datatype>
-		<remarks>
-		  <p>For level 2, this attribute must be specified, and its value must be <val>2</val>.</p>
-		</remarks>
-	      </attDef>
-	    </attList>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<editorialDecl n="2">
-		  <p>Metadata in the TEI header comes from an AACR2-conformant record, translated to TEI via
-		  the <name type="software">catRec2tei.perl</name> program.</p>
-		  <p>Content originally generated by <name type="software">c-n-rite</name> OCR software, then
-		  the needed TEI encoding put in place with <name type="software">cnr2tei.xslt</name>.</p>
-		  <p>All hyphens in source document encoded as U+2010.</p>
-		</editorialDecl>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>The TEI provides a set of useful special-purpose
-	      elements that can be used inside of
-	      <gi>editorialDecl</gi> instead of paragraphs:
-	      <gi>correction</gi>, <gi>hyphenation</gi>,
-	      <gi>interpretation</gi>, <gi>normalization</gi>,
-	      <gi>quotation</gi>, <gi>segmentation</gi>, and
-	      <gi>stdVals</gi>. But since one cannot use any of these
-	      special-purpose elements <emph>and</emph> a paragraph,
-	      and there are some editorial practices likely to be of
-	      interest that are not covered by these elements, our
-	      current requirement is to use only paragraphs. If and
-	      when the TEI fixes this bug (e.g., by allowing zero or
-	      more paragraphs to follow the special-purpose elements),
-	      this recommendation will likely change accordingly.</p>
-	      <p>It is required that a paragraph explaining
-	      hyphenation practices, with particular wording as above,
-	      be present.</p>
-	    </remarks>
-	  </elementSpec>
 	  <elementSpec module="textstructure" ident="front" mode="replace">
 	    <gloss>front matter</gloss>
 	    <desc>contains any prefatory matter (headers, title page,
@@ -1473,7 +1396,7 @@
 	    <classes>
 	      <memberOf key="att.declaring"/>
 	    </classes>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:group>
 		<rng:zeroOrMore>
 		  <rng:choice>
@@ -1558,7 +1481,7 @@
 	      <memberOf key="model.pLike.front"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+	      <rng:ref name="macro.paraContent"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <p>The most common use for the <gi>head</gi> element is
@@ -1604,42 +1527,6 @@
 	      <ptr target="#DSHD" type="div2"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="idno" mode="change">
-	    <attList>
-	      <attDef mode="replace" ident="type">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<valList type="semi">
-		  <valItem ident="LC_call_number">
-		    <gloss>U.S. Library of Congress call number</gloss>
-		  </valItem>
-		  <valItem ident="isbn-13">
-		    <gloss>intnerational serial book number, 13-digit</gloss>
-		  </valItem>
-		  <valItem ident="isbn-10">
-		    <gloss>intnerational serial book number, 10-digit</gloss>
-		  </valItem>
-		</valList>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="header" ident="language" mode="change">
-	    <content>
-	      <rng:empty/>
-	    </content>
-	    <remarks>
-	      <p>In the librarary context, a series of one or more
-	      <gi>language</gi> elements is used to record the
-	      language(s) of the original source document when the
-	      shifts in language are not being recorded in the
-	      transcription itself but the information is readily
-	      available (as is often the case when importing metadata
-	      from a catalog source). Further description of the
-	      language in the content of <gi>language</gi> is
-	      <emph>not</emph> used.</p>
-	    </remarks>
-	  </elementSpec>
 	  <elementSpec module="core" ident="note" mode="change">
 	    <attList>
 	      <attDef ident="anchored" mode="delete"/>
@@ -1667,53 +1554,13 @@
               <attDef ident="cRef" mode="delete"/>
             </attList>
           </elementSpec>
-	  <elementSpec module="header" ident="publicationStmt" mode="change">
-	    <content>
-	      <rng:choice>
-		<rng:oneOrMore>
-		  <rng:ref name="model.pLike"/>
-		</rng:oneOrMore>
-		<rng:oneOrMore>
-		  <rng:choice>
-		    <rng:ref name="publisher"/>
-		    <rng:ref name="distributor"/>
-		    <rng:ref name="authority"/>
-		  </rng:choice>
-		  <rng:group>
-		    <rng:optional>
-		      <rng:ref name="pubPlace"/>
-		    </rng:optional>
-		    <rng:optional>
-		      <rng:ref name="address"/>
-		    </rng:optional>
-		    <rng:zeroOrMore>
-		      <rng:ref name="idno"/>
-		    </rng:zeroOrMore>
-		    <rng:optional>
-		      <rng:ref name="availability"/>
-		    </rng:optional>
-		    <rng:optional>
-		      <rng:ref name="date"/>
-		    </rng:optional>
-		  </rng:group>
-		</rng:oneOrMore>
-	      </rng:choice>
-	    </content>
-	    <constraintSpec scheme="isoschematron" ident="specialPubStmtOnly">
-	      <s:rule>
-		<s:report test="./p">Use of specialized child elements
-		of the publication statement (rather than paragraphs)
-		is recommended</s:report>
-	      </s:rule>
-	    </constraintSpec>
-    	  </elementSpec>
 	  <elementSpec module="core" ident="ref" mode="change">
 	    <attList>
 	      <attDef ident="cRef" mode="delete"/>
 	    </attList>
 	  </elementSpec>
 	  <elementSpec module="core" ident="respStmt" mode="change">
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:choice>
 		<rng:group>
 		  <rng:ref name="resp"/>
@@ -1728,11 +1575,6 @@
 		  <rng:ref name="resp"/>
 		</rng:group>
 	      </rng:choice>
-	    </content>
-	  </elementSpec>
-	  <elementSpec module="header" ident="sourceDesc" mode="change">
-	    <content>
-	      <rng:ref name="biblStruct"/>
 	    </content>
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="teiHeader" mode="change">
@@ -1749,15 +1591,15 @@
 	      <memberOf key="att.canonical"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+	      <rng:ref name="macro.paraContent"/>
 	    </content>
 	    <constraintSpec scheme="isoschematron" ident="titleLevel">
 	      <s:rule context="parent::seriesStmt">
-		<s:assert test="@level='s'">When a child of &lt;seriesStmt>, the level of a title must be
+		<s:assert test="@level='s'">When a child of &lt;seriesStmt&gt;, the level of a title must be
 		specified as 's'.</s:assert>
 	      </s:rule>
 	      <s:rule context="parent::analytic">
-		<s:assert test="@level='a'">When a child of &lt;analytic>, the level of a title must be
+		<s:assert test="@level='a'">When a child of &lt;analytic&gt;, the level of a title must be
 		specified as 'a'.</s:assert>
 	      </s:rule>
 	    </constraintSpec>
@@ -1837,8 +1679,8 @@
 		  </valItem>
 		  <valItem ident="marc245b">
 		    <desc>used for the the remainder of the title
-		    information &#x2014; parallel titles, titles subsequent
-		    to the first, and other title information &#x2014;
+		    information — parallel titles, titles subsequent
+		    to the first, and other title information —
 		    according to the national cataloging code)</desc>
 		  </valItem>
                   <valItem ident="uniform">
@@ -1913,32 +1755,6 @@
 	  <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
 	  <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
 	  <elementSpec module="textstructure" ident="trailer" mode="delete"/>
-          <elementSpec module="header" ident="biblFull" mode="delete"/>
-	  <elementSpec module="header" ident="cRefPattern" mode="delete"/>
-	  <elementSpec module="header" ident="catDesc" mode="delete"/>
-	  <elementSpec module="header" ident="catRef" mode="delete"/>
-	  <elementSpec module="header" ident="category" mode="delete"/>
-	  <elementSpec module="header" ident="classCode" mode="delete"/>
-	  <elementSpec module="header" ident="classDecl" mode="delete"/>
-	  <elementSpec module="header" ident="correction" mode="delete"/>
-	  <elementSpec module="header" ident="geoDecl" mode="delete"/>
-	  <elementSpec module="header" ident="handNote" mode="delete"/>
-	  <elementSpec module="header" ident="hyphenation" mode="delete"/>
-	  <elementSpec module="header" ident="interpretation" mode="delete"/>
-	  <elementSpec module="header" ident="keywords" mode="delete"/>
-	  <elementSpec module="header" ident="namespace" mode="delete"/>
-	  <elementSpec module="header" ident="normalization" mode="delete"/>
-	  <elementSpec module="header" ident="quotation" mode="delete"/>
-	  <elementSpec module="header" ident="refState" mode="delete"/>
-	  <elementSpec module="header" ident="refsDecl" mode="delete"/>
-	  <elementSpec module="header" ident="rendition" mode="delete"/>
-	  <elementSpec module="header" ident="segmentation" mode="delete"/>
-	  <elementSpec module="header" ident="stdVals" mode="delete"/>
-	  <elementSpec module="header" ident="tagUsage" mode="delete"/>
-	  <elementSpec module="header" ident="tagsDecl" mode="delete"/>
-	  <elementSpec module="header" ident="taxonomy" mode="delete"/>
-	  <elementSpec module="header" ident="textClass" mode="delete"/>
-	  <elementSpec module="header" ident="typeNote" mode="delete"/>
 	  <elementSpec module="figures" ident="formula" mode="delete"/>
 	  <elementSpec module="figures" ident="figDesc" mode="delete"/>
 	  <elementSpec module="transcr" ident="zone" mode="delete"/>
@@ -2044,7 +1860,6 @@
 	      <attDef ident="subtype" mode="delete"/>
 	    </attList>
 	  </classSpec>
-	  <classSpec module="header" ident="model.editorialDeclPart" mode="delete" type="model"/>
 	  <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
 	  <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
 	  <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>

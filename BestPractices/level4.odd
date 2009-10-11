@@ -3,7 +3,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en">
+     xml:lang="en" >
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -23,8 +23,7 @@
         <availability status="restricted">
 	  <ab>Copyleft 2009 DLF</ab>
 	  <p>Permission is granted to copy, distribute and/or modify
-	  this document under the terms of the <ref
-	  target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
+	  this document under the terms of the <ref target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
 	  Documentation License, Version 1.2</ref> or any later
 	  version published by the Free Software Foundation; with no
 	  Invariant Sections, no Front-Cover Texts, and no Back-Cover
@@ -37,8 +36,7 @@
 	is a planned re-implementation of <bibl><title>TEI in
 	Libraries: Guidelines for Best Practices</title> <author>TEI
 	in Libraries SIG</author> <author>Digital Libraries Federation
-	TEI task force</author> <ptr
-	target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
+	TEI task force</author> <ptr target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
       </bibl>
       written in a wiki language into the TEI ODD language. This
       verssion started <date when="2009-10-10"/>.</p>
@@ -55,8 +53,7 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>Level 4: Basic Content Analysis</head>
       <div type="setting">
-	<p>This is the <name>level 4</name> portion of the <ref
-	target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_4:_Basic_Content_Analysis">Best
+	<p>This is the <name>level 4</name> portion of the <ref target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_4:_Basic_Content_Analysis">Best
 	Practices for TEI in Libraries</ref>. This document is not
 	intended to stand alone, but rather to be considered in
 	concert with the entire TEI in Libraries recommendations.</p>
@@ -84,8 +81,7 @@
 	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html">Chapter 16, Linking, Segmentation, and Alignment, P5 Guidelines</ref></item>
 	</list>
 	<p>Note that this is intended to be a <soCalled>TEI
-	conformant</soCalled> customization, per <ref
-	target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
+	conformant</soCalled> customization, per <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
 	section 23.3</ref>.</p>
       </div>
       <div type="purpose">
@@ -151,8 +147,7 @@
 	mistakes and consults a log from the OCR software to find
 	regions of uncertainty in the OCR text. If converting from TEI
 	Tite, minimal additional markup must be added, as discussed in
-	<ref
-	target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html#tei-in-lib-bpg">Appendix
+	<ref target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html#tei-in-lib-bpg">Appendix
 	A of TEI Tite</ref>.</p>
       </div>
       <div type="elrecs">
@@ -191,8 +186,7 @@
 	    <cell>Recommended to identify typographically distinct
 	    text. For <gi>title</gi> elements within the body of a
 	    document, use the <att>type</att> attribute with a value
-	    <ref
-	    target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
+	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
 	    given in the full TEI guidelines</ref> except for main
 	    titles. (The <val>main</val> attribute should be used,
 	    when appropriate, for <gi>title</gi>s within a TEI Header,
@@ -253,9 +247,7 @@
       <div type="grecs">
 	<head>General Level 4 Recommendations and Examples</head>
 	<list>
-
 	  <item>The use of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html"><gi>group</gi></ref> is required when you need to encode a body of distinct texts that are grouped together and are regarded as a unit. Most typical examples of such composite texts would be anthologies, collected works of an author, etc. Section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1 Grouped Texts</ref> states, <quote>The presence of common front matter referring to the whole collection, possibly in addition to front matter relating to each individual text, is a good indication that a given text might usefully be encoded in this way.</quote></item>
-
 	  <item>Typographically distinct text may be encoded using the following elements:<list>
 	  <item>to represent speech, thought, quotation, etc.:<list>
 	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-epigraph.html">epigraph</ref></item>
@@ -269,14 +261,11 @@
 	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gloss.html">gloss</ref></item>
 	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-term.html">term</ref></item>
 	  <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">title</ref></item></list></item></list></item>
-
 	  <item>Any ambiguous typographically distinct text should be encoded as <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html">hi</ref> (e.g. <tag>hi rend="font-weight: bold"</tag>). This element may also be used if the more specific elements above are not used.</item>
-
 	  <item>Any of the following three methods may be used to encode errors or typos in original texts:<list>
 	  <item> the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element used alone is recommended to indicate errors without correcting them</item>
 	  <item> the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element used alone is recommended to provide corrections without indicating the initial error</item>
 	  <item> the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html">choice</ref> element allows both the apparent error and its editorial correction to be recorded, as in the following examples:
-
 	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-TBSoS">
 	    <p>He has no Scruple about Fish; but won't touch a bit of Pork, it being 
 	    <choice>
@@ -286,9 +275,7 @@
 	  </egXML>
 	  <bibl xml:id="BIB-TBSoS"><author>Thomas Bluett</author> <title>Some Memoirs of the Life of Job, the Son of Solomon,
 	  the High Priest of Boonda in Africa; Who was a Slave About Two Years in Maryland; and Afterwards Being Brought to England, was Set Free, and Sent to His Native Land in the Year 1734.</title> London: Printed for R. Ford, 1734.</bibl>
-
 	  or
-
 	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-AMBS">
 	    <p>4. The art of writing she obtained by her own industry and curiosity, and in so
 	    short a time that in the year 1765, when she was not more than twelve years of
@@ -303,7 +290,6 @@
 	  </item>
 	  </list></item>
 	  <item>Use <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-argument.html"><gi>argument</gi></ref> to encode a prefatory list or prose description of the topics usually discovered at the beginning of a chapter. The content within the <gi>argument</gi> element can be presented as a list or as a paragraph: 
-
 	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-OVRAHoB">
 	    <div type="chapter" n="1">
 	      <pb xml:id="albert14" n="14"/>
@@ -317,7 +303,6 @@
 	  </egXML>
 	  <bibl xml:id="BIB-OVRAHoB"><author>Octavia V. Rogers Albert</author> <title>The House of Bondage, or, Charlotte Brooks and Other Slaves, Original and Life Like, As They Appeared in Their Old Plantation and City Slave Life; Together with Pen-Pictures of the Peculiar Institution, with Sights and Insights into Their New Relations as Freedmen, Freemen, and Citizens.</title> New York: Hunt &amp; Eaton, 1890.</bibl>
 	  </item>
-
 	  <item>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-trailer.html"><gi>trailer</gi></ref> element is recommended to encode a heading- or title-like content at the end of a division (i.e. chapter, book, etc.):
 	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
 	    <body>
@@ -337,14 +322,11 @@
 	  </egXML>
 	  </item>
 	  <item>The elements <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><gi>add</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><gi>del</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><gi>unclear</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html"><gi>gap</gi></ref> may be used to indicate instances when a text (i.e. word or part of it, phrase or part of it) has been added, marked for deletion, or to indicate cases where transcription is difficult (<gi>unclear</gi>) or impossible (<gi>gap</gi>) because the material is illegible, invisible, or inaudible (i.e. while transcribing oral history interviews):
-
 	  <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-JHLCC">
-	    <p>But it is well authenticated by the observation of every one, that <del
-	    rend="text-decoration: line-through" hand="#JHL">their manner</del> 
+	    <p>But it is well authenticated by the observation of every one, that <del rend="text-decoration: line-through" hand="#JHL">their manner</del> 
 	    <add rend="vertical-align: super" hand="#JHL">this way—i.e.
 	    the above</add> of writing influences the style of compos. of those who practise it
-	    considerably, when they grow up to years of manhood; for their productions, <del
-	    hand="#JHL" rend="text-decoration: line-through">instead</del> far from being terse, argumentative,
+	    considerably, when they grow up to years of manhood; for their productions, <del hand="#JHL" rend="text-decoration: line-through">instead</del> far from being terse, argumentative,
 	    convincing, are without head or tail &amp;amp; are generally an incongruous mass mixed up in the
 	    most disgusting manner, without divisions or heads &amp;amp; in short without a subject (so to
 	    speak).</p>
@@ -364,15 +346,10 @@
 	  <head>Level 4 Front and Back Matter</head>
 	  <list>
 <item>The use of the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePage.html"><gi>titlePage</gi></ref> element with appropriate child elements describing the major features of most title pages is required.  The child elements are listed in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">Section 4.6 "Title Pages"</ref>.</item>
-
 <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePage.html"><gi>titlePage</gi></ref> should include the verso if present, divided by <tag>pb n="verso"/</tag>. </item>
-
 <item>Frontispieces should be encoded as a <gi>figure</gi>, within a separate division (numbered or unnumbered, depending on the general editorial decision for a specific encoding project) and <gi>p</gi>.</item>
-
 <item>Tables of contents, errata, subscription lists, “other titles by the same author” should be included in a separate division (numbered or unnumbered, depending on the general editorial decision for a specific encoding project), as a <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html"><gi>list</gi></ref> with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-item.html"><gi>item</gi></ref>s. </item>
-
 <item>It is recommended that all prefaces, tables of contents, afterwords, appendices, endnotes, and apparatus be encoded with phrase-level elements.</item>
-
 <item>For publishers’ advertisements, indexes, and glossaries, or other front or back matter that are not considered of primary importance to the text, there are three options:<list>
   <item>Fully transcribe and encode. For an index, use <tag>type="index"</tag> on the <gi>div</gi>, with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONOIX"><gi>list</gi>s</ref> to mark up index entries. Use <tag>ref target="____"</tag> to mark up page numbers given in the index, with the value of <att>target</att> referring to the <att>xml:id</att> attribute of the <gi>pb</gi> of the referenced page.</item>
   <item>Link to page images (may omit encoded transcription)</item>
@@ -385,24 +362,18 @@
 <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDATTSnr">Chapter 13.1.1, Linking Names and Their Referents</ref></item>
 </list>
 <p>Names should be encoded using <gi>persName</gi>, <gi>placeName</gi>, <gi>geogName</gi>, and <gi>orgName</gi> elements with the <att>ref</att> or <att>key</att> attribute providing a reference to a <gi>person</gi>, <gi>place</gi>, or <gi>org</gi> element in an external file or database for managing name normalization and compilation of additional information such as biographical or geospatial information. See the <ref target="[#key_and_ref|discussion">of <att>ref</att> and <att>key</att></ref>] above for how to choose between them.</p>
-
 <p>If using <att>key</att>, provide a unique internal identifier, such as in a local database.</p>
-
 <p>If using <att>ref</att>, an external TEI file may contain an entry for each name, grouped accordingly under <gi>listPerson</gi>, <gi>listPlace</gi>, and <gi>listOrg</gi>, which is uniquely identified with an <att>xml:id</att> attribute. In such a case the value of the <att>ref</att> attribute in the main TEI document (the transcription of the source document) references the value of the <att>xml:id</att> attribute in the external file. (In the examples below, the external file is named <att>context.xml</att> for “contextual information” and is in the same directory as the source file, but it may be named anything and placed anywhere that can be referenced by a URI.)</p>
-
 <p>When referencing external files or databases, it is strongly recommended to provide an explanation in the <gi>editorialDecl</gi> section of the TEI header. References to controlled vocabularies and national or local authority files may be signified by a prefix in the <att>xml:id</att> attribute (e.g., <att>tgn_0000000</att> for the <title>Getty Thesaurus of Geographic Names</title>). When referencing a controlled vocabulary be sure to specify this information in the <gi>classDecl</gi> section of the TEI header.</p>
-
 <list>
 <item>Place-name tagging example in main TEI document (the transcription of the source document):
 <egXML xmlns="http://www.tei-c.org/ns/Examples">     
 <p>The first Jews arrived in <placeName ref="context.xml#tgn_7012924">Indianapolis</placeName> in
-  the middle of the 19th century. Primarily immigrants from <placeName ref="context.xml#tgn_7000084"
-    > Germany</placeName> and other points in central Europe (though many had lived elsewhere in the
+  the middle of the 19th century. Primarily immigrants from <placeName ref="context.xml#tgn_7000084"> Germany</placeName> and other points in central Europe (though many had lived elsewhere in the
     <placeName ref="context.xml#tgn_7012149">United States</placeName> before they arrived in the
   city), they were drawn from throughout the Midwest by the growth of commerce and rail lines in
     <placeName ref="context.xml#tgn_7012924">Indianapolis</placeName>. </p>
 </egXML></item>
-
 <item>In the external file <name type="file">context.xml</name>, for maintaining place name normalization and additional information:
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listPlace>
@@ -424,18 +395,14 @@
   </place>
 </listPlace>
 </egXML></item>
-
 <item>Personal and organizational name tagging example in main TEI document (the transcription of the source document):
 <egXML xmlns="http://www.tei-c.org/ns/Examples">    
-  <p>PRIZE LIBRARY GIFT-Indiana University President <persName ref="context.xml#lcnaf_82134365"
-      >Elvis J. Stahr</persName> (right), a former law dean and practicing attorney, reminisces with
+  <p>PRIZE LIBRARY GIFT-Indiana University President <persName ref="context.xml#lcnaf_82134365">Elvis J. Stahr</persName> (right), a former law dean and practicing attorney, reminisces with
     Professor of Law <persName ref="context.xml#lcnaf_00113347">W. Howard Mann</persName> as the two
     inspect some of the nearly 3,000 volumes of <orgName ref="context.xml#lcnaf_79006848">U.S.
-      Supreme Court</orgName> records recently transferred to I.U. from the <orgName
-      ref="context.xml#lcnaf_79109178">Indiana Supreme Court Library</orgName>. The collection,
+      Supreme Court</orgName> records recently transferred to I.U. from the <orgName ref="context.xml#lcnaf_79109178">Indiana Supreme Court Library</orgName>. The collection,
     dating back to 1925, is one of the oldest and most complete sets in existence.</p>
 </egXML></item>
-
 <item>In the external file <name type="file">context.xml</name>, for maintaining personal and organization name normalization and additional information:
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <listPerson>
@@ -455,8 +422,7 @@
       </persName>
     </person>
   </listPerson>
-  
-  <listOrg>
+    <listOrg>
     <org xml:id="lcnaf_79006848">
       <orgName>United States. Supreme Court</orgName>
     </org>
@@ -465,9 +431,7 @@
     </org>
   </listOrg>
 </egXML></item>
-
 <item>Alternatively, instead of using an external file for the authority data, use the <att>key</att> attribute to point to a unique key in a MySQL table that stores information like county name, FIPS county code, and latitude/longitude values:
-
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <p>When Harry Byrd "retired" to his orchards and Rosemont, his new house outside 
 <placeName key="1498453">Berryville</placeName> in 1930, he was still an energetic 
@@ -481,9 +445,7 @@ young man with a long political career ahead of him.</p>
 <gi>figure</gi> groups elements representing or containing graphic information such as an illustration or figure; in this context <gi>figure</gi> typically contains the following elements:
 <list>
 <item><gi>head</gi>, containing a literal transcription of a caption on a figurative image.</item>
-
 <item><gi>figDesc</gi>, containing a free text description of the image used, potentially, for searching the images themselves.</item>
-
 <item><gi>graphic</gi>, pointing to the URI of the image itself using a <att>url</att> attribute and containing other presentation instructions such as dimension at which the graphic should be displayed, etc.</item>
 </list>
 </p>
@@ -504,17 +466,11 @@ young man with a long political career ahead of him.</p>
 </p>
 	</div>
 <div type="subsection">
-
 <head>Level 4 Embedded Texts </head>
-
 <p>At Level 4, texts embedded within other texts must be marked as such.</p>
-
 <p>In the case of a quotation from another text, use <gi>quote</gi>, and do not include quotation marks in the content of this element or just outside the opening and closing tags. If the rendering of this quotation needs to be recorded, use the <att>rend</att> attribute to describe how this quotation is set off from the rest of the text.</p>
-
 <p>If the embedded text is more than a short quotation, use <gi>floatingText</gi> even if only an excerpt of the embedded texts is provided.  If your project uses <gi>quote</gi> to identify quotations, surround instances of floating texts which are quotations with <gi>quote</gi> tags.</p>
-
 <p>Personal letters are a common example of an embedded text. While a collection of letters would use a <gi>div</gi> element for each letter, if a letter is quoted as part of a larger text, use <gi>floatingText</gi> <gi>body</gi> <tag>div1 type="letter"</tag> with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-opener.html"><gi>opener</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-dateline.html"><gi>dateline</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-salute.html"><gi>salute</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-signed.html"><gi>signed</gi></ref>,  <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-closer.html"><gi>closer</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-postscript.html"><gi>postscript</gi></ref> included as appropriate.  For example:
-
 <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-ABLMWW">
 <p>She opened and read as follows:</p>
           <floatingText>
@@ -544,14 +500,11 @@ all that you could desire in one,</p>
 <bibl xml:id="BIB-ABLMWW"><author><name>Augustus Baldwin Longstreet</name>, 1790-1870</author> <title>Master William Mitten: or, A Youth of Brilliant Talents, Who Was Ruined by Bad Luck.</title> Macon, Ga.: Burke, Boykin, 1864.</bibl>
 </p>
 </div>
-
 <div type="subsection">
 <head>Level 4 Drama</head>
 <list>
 <item>Within the front matter (<gi>front</gi>) of a performance text, cast lists should be encoded as <gi>castList</gi>s, with each item in that list encoded as <gi>castItem</gi>s. If desired, each <gi>castItem</gi> may be uniquely identified with the <att>xml:id</att> attribute.
-
 For example,
-
 <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-SKL">
 <front>
     <castList><head>Dramatis Personae</head>
@@ -570,12 +523,10 @@ For example,
 </egXML>
 <bibl xml:id="BIB-SKL">Shakespeare’s <title>King Lear</title></bibl>
 </item>
-
 <item>Within the body of performative texts, speeches are encoded as <gi>sp</gi> and speakers identified by the <gi>speaker</gi> element, which is a child of <gi>sp</gi>.</item>
 <item>Stage directions are encoded as <gi>stage</gi> and enclose content describing scenery, stage directions, etc.</item>
 <item>When encoding the actual speech content itself, utilize elements and attributes that correspond to the type of dramatic speech presented (e.g. <gi>p</gi> for prose speech with <gi>lb</gi> to designate a new line in a particular edition of the text or <gi>lg</gi> and <gi>l</gi> to describe dramatic verse structures).</item>
 <item>If referencing the <att>xml:id</att> defined in the <gi>castList</gi> is desired, use the <att>who</att> attribute for the IDREF datatype.
-
 <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-SKL">
 <div type="act" n="1">
     <head>Act 1</head>
@@ -609,18 +560,14 @@ For example,
 </div>
 <div type="subsection">
 <head>Level 4 Oral History</head>
-
 <p>Speakers in oral history interviews, i.e. interviewee(s) and interviewer(s), may be identified in the <gi>teiHeader</gi> in several ways: <list>
-
 <item>In the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-profileDesc.html"><gi>profileDesc</gi></ref>, in the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-particDesc.html"><gi>particDesc</gi></ref>, using the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html"><gi>list</gi></ref> element, with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-name.html"><gi>name</gi></ref> inside of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-item.html"><gi>item</gi></ref>s</item>
 <item>As a list of author <gi>name</gi>s within <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD2"><gi>fileDesc</gi></ref> / <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21"> <gi>titleStmt</gi></ref></item>
 </list>
 </p>
 <p>In either method, use an <att>xml:id</att> on the <gi>name</gi> element to uniquely identify the individual participant:<list>
-
 <item>The list of an interview’s participants can be also listed within the body of the interview (see example below). </item>
 <item>Questions and answers from interviewees and interviewers are encoded as <gi>sp</gi>, with speakers identified within <gi>speaker</gi> elements with a <att>who</att> attribute the value of which corresponds to the <att>xml:id</att> in the list of interview participants.</item></list></p>
-     
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <list type="simple">
 <head>Interview Participants</head>
@@ -660,7 +607,6 @@ hearing, along with the president of the student body, and some others.
 <div type="subsection">
 <head>Level 4 Verse</head>
 <p>Use <gi>lg</gi> and <gi>l</gi> as in Level 3. In addition, use the <att>rend</att> attribute to indicate lines that are indented.</p>
-
 <p>For example,
 <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-LCHoS">
 <div type="fit" n="1">
@@ -689,9 +635,7 @@ hearing, along with the president of the student body, and some others.
 </div>
 <div type="subsection">
 <head> Level 4 Milestones </head>
-
 <p>Instead of using the <gi>milestone</gi> element available in TEI, use <tag>ab type="typography"</tag>.  The content of this element is the character(s) or device used to mark the milestone in the source document.  For example:
-
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <ab type="typography">*****</ab>
 </egXML>
@@ -699,9 +643,7 @@ hearing, along with the president of the student body, and some others.
 </div>
 <div type="subsection">
 <head> Level 4 Alger Hiss document </head>
-
 <p>Note that the soft hyphen character is displayed as an entity reference because this character will not display in many web browsers.</p>
-
 <egXML xmlns="http://www.tei-c.org/ns/Examples"><TEI xml:id="project_document_identifier">
   <teiHeader xml:lang="en">
     <!-- header goes here -->
@@ -816,7 +758,7 @@ hearing, along with the president of the student body, and some others.
 	      <attDef ident="version" usage="opt">
 		<desc>The version of the TEI scheme</desc>
 		<datatype>
-		  <rng:data xmlns:rng="http://relaxng.org/ns/structure/1.0" type="decimal"/>
+		  <rng:data type="decimal"/>
 		</datatype>
 		<defaultVal>5.0</defaultVal>
 		<valDesc>A number identifying the version of the TEI guidelines</valDesc>
@@ -843,14 +785,14 @@ hearing, along with the president of the student body, and some others.
 		      <div type="chapter" n="1">
 			<head>The Bride</head>
 			<p>The year that Buttercup was born, the most beautiful woman
-			<lb/>in the world &#x2026;</p>
+			<lb/>in the world …</p>
 			<!-- rest of chapter 1 -->
 		      </div>
 		      <div type="chapter" n="2">
 			<head>The Groom</head>
 			<note>
 			  <p>This is my first major excision. Chapter One, The Bride, is almost
-			  <lb/>in its entirety about the bride. &#x2026;</p>
+			  <lb/>in its entirety about the bride. …</p>
 			</note>
 			<!-- rest of chapter 2 -->
 		      </div>
@@ -879,7 +821,7 @@ hearing, along with the president of the student body, and some others.
 	      <memberOf key="model.respLike"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+	      <rng:ref name="macro.phraseSeq"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -938,7 +880,7 @@ hearing, along with the president of the student body, and some others.
 	    <classes>
 	      <memberOf key="att.declaring"/>
 	    </classes>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:group>
 		<rng:zeroOrMore>
 		  <rng:choice>
@@ -1042,7 +984,7 @@ hearing, along with the president of the student body, and some others.
 	  <elementSpec module="textstructure" ident="body" mode="replace">
 	    <desc>contains the body of a single unitary text,
 	    excluding any front or back matter.</desc>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <!-- globals as usual -->
 	      <rng:zeroOrMore>
 		<rng:ref name="model.global"/>
@@ -1177,19 +1119,12 @@ hearing, along with the president of the student body, and some others.
 	      <ptr target="#DS"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="change" mode="change">
-	    <!-- constraintSpec scheme="isoschematron" ident="revChronOrder">
-		 </constraintSpec -->
-	    <attList>
-	      <attDef mode="change" ident="when" usage="req"/>
-	    </attList>
-	  </elementSpec>
 	  <elementSpec module="core" ident="date" mode="change">
 	    <constraintSpec scheme="isoschematron" ident="whenNotContent">
 	      <s:rule context="date[parent::publicationStmt]">
 		<s:assert test="@when">Dates inside the publication statement must have @when (and should not
 		have content)</s:assert>
-		<s:report test="string-length( normalize-space(.) ) > 0">Dates inside the publication statement
+		<s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the publication statement
 		should not have content (and must have @when)</s:report>
 	      </s:rule>
 	    </constraintSpec>
@@ -1699,7 +1634,7 @@ hearing, along with the president of the student body, and some others.
 	      <memberOf key="model.respLike"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+	      <rng:ref name="macro.phraseSeq"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1710,70 +1645,6 @@ hearing, along with the president of the student body, and some others.
 	      <ptr target="#COBICOR"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="editorialDecl" mode="replace">
-	    <gloss>editorial practice declaration</gloss>
-	    <desc>provides details of editorial principles and
-	    practices applied during the encoding of a text.!!!</desc>
-	    <classes>
-	      <memberOf key="model.encodingPart"/>
-	      <memberOf key="att.declarable"/>
-	    </classes>
-	    <content>
-	      <rng:zeroOrMore>
-		<rng:ref name="model.pLike"/>
-	      </rng:zeroOrMore>
-	      <rng:element name="p">
-		<rng:choice>
-		  <rng:value>All hyphens in source document encoded as U+2010.</rng:value>
-		  <rng:value>Soft hyphens encoded as U+00AD; hard hyphens as U+2010.</rng:value>
-		</rng:choice>
-	      </rng:element>
-	    </content>
-	    <attList>
-	      <attDef ident="n" mode="replace" usage="req">
-		<gloss>number</gloss>
-		<desc>Used to indicate which encoding level described
-		by <title>TEI in Libraries: Guidelines for Best
-		Practices</title> is in use.</desc>
-		<datatype>
-		  <rng:value>2</rng:value>
-		</datatype>
-		<remarks>
-		  <p>For level 2, this attribute must be specified, and its value must be <val>2</val>.</p>
-		</remarks>
-	      </attDef>
-	    </attList>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<editorialDecl n="2">
-		  <p>Metadata in the TEI header comes from an AACR2-conformant record, translated to TEI via
-		  the <name type="software">catRec2tei.perl</name> program.</p>
-		  <p>Content originally generated by <name type="software">c-n-rite</name> OCR software, then
-		  the needed TEI encoding put in place with <name type="software">cnr2tei.xslt</name>.</p>
-		  <p>All hyphens in source document encoded as U+2010.</p>
-		</editorialDecl>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>The TEI provides a set of useful special-purpose
-	      elements that can be used inside of
-	      <gi>editorialDecl</gi> instead of paragraphs:
-	      <gi>correction</gi>, <gi>hyphenation</gi>,
-	      <gi>interpretation</gi>, <gi>normalization</gi>,
-	      <gi>quotation</gi>, <gi>segmentation</gi>, and
-	      <gi>stdVals</gi>. But since one cannot use any of these
-	      special-purpose elements <emph>and</emph> a paragraph,
-	      and there are some editorial practices likely to be of
-	      interest that are not covered by these elements, our
-	      current requirement is to use only paragraphs. If and
-	      when the TEI fixes this bug (e.g., by allowing zero or
-	      more paragraphs to follow the special-purpose elements),
-	      this recommendation will likely change accordingly.</p>
-	      <p>It is required that a paragraph explaining
-	      hyphenation practices, with particular wording as above,
-	      be present.</p>
-	    </remarks>
-	  </elementSpec>
 	  <elementSpec module="textstructure" ident="front" mode="replace">
 	    <gloss>front matter</gloss>
 	    <desc>contains any prefatory matter (headers, title page,
@@ -1782,7 +1653,7 @@ hearing, along with the president of the student body, and some others.
 	    <classes>
 	      <memberOf key="att.declaring"/>
 	    </classes>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:group>
 		<rng:zeroOrMore>
 		  <rng:choice>
@@ -1867,7 +1738,7 @@ hearing, along with the president of the student body, and some others.
 	      <memberOf key="model.pLike.front"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+	      <rng:ref name="macro.paraContent"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <p>The most common use for the <gi>head</gi> element is
@@ -1913,42 +1784,6 @@ hearing, along with the president of the student body, and some others.
 	      <ptr target="#DSHD" type="div2"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="idno" mode="change">
-	    <attList>
-	      <attDef mode="replace" ident="type">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<valList type="semi">
-		  <valItem ident="LC_call_number">
-		    <gloss>U.S. Library of Congress call number</gloss>
-		  </valItem>
-		  <valItem ident="isbn-13">
-		    <gloss>intnerational serial book number, 13-digit</gloss>
-		  </valItem>
-		  <valItem ident="isbn-10">
-		    <gloss>intnerational serial book number, 10-digit</gloss>
-		  </valItem>
-		</valList>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="header" ident="language" mode="change">
-	    <content>
-	      <rng:empty/>
-	    </content>
-	    <remarks>
-	      <p>In the librarary context, a series of one or more
-	      <gi>language</gi> elements is used to record the
-	      language(s) of the original source document when the
-	      shifts in language are not being recorded in the
-	      transcription itself but the information is readily
-	      available (as is often the case when importing metadata
-	      from a catalog source). Further description of the
-	      language in the content of <gi>language</gi> is
-	      <emph>not</emph> used.</p>
-	    </remarks>
-	  </elementSpec>
 	  <elementSpec module="core" ident="note" mode="change">
 	    <attList>
 	      <attDef ident="anchored" mode="delete"/>
@@ -1976,53 +1811,13 @@ hearing, along with the president of the student body, and some others.
               <attDef ident="cRef" mode="delete"/>
             </attList>
           </elementSpec>
-	  <elementSpec module="header" ident="publicationStmt" mode="change">
-	    <content>
-	      <rng:choice>
-		<rng:oneOrMore>
-		  <rng:ref name="model.pLike"/>
-		</rng:oneOrMore>
-		<rng:oneOrMore>
-		  <rng:choice>
-		    <rng:ref name="publisher"/>
-		    <rng:ref name="distributor"/>
-		    <rng:ref name="authority"/>
-		  </rng:choice>
-		  <rng:group>
-		    <rng:optional>
-		      <rng:ref name="pubPlace"/>
-		    </rng:optional>
-		    <rng:optional>
-		      <rng:ref name="address"/>
-		    </rng:optional>
-		    <rng:zeroOrMore>
-		      <rng:ref name="idno"/>
-		    </rng:zeroOrMore>
-		    <rng:optional>
-		      <rng:ref name="availability"/>
-		    </rng:optional>
-		    <rng:optional>
-		      <rng:ref name="date"/>
-		    </rng:optional>
-		  </rng:group>
-		</rng:oneOrMore>
-	      </rng:choice>
-	    </content>
-	    <constraintSpec scheme="isoschematron" ident="specialPubStmtOnly">
-	      <s:rule>
-		<s:report test="./p">Use of specialized child elements
-		of the publication statement (rather than paragraphs)
-		is recommended</s:report>
-	      </s:rule>
-	    </constraintSpec>
-    	  </elementSpec>
 	  <elementSpec module="core" ident="ref" mode="change">
 	    <attList>
 	      <attDef ident="cRef" mode="delete"/>
 	    </attList>
 	  </elementSpec>
 	  <elementSpec module="core" ident="respStmt" mode="change">
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:choice>
 		<rng:group>
 		  <rng:ref name="resp"/>
@@ -2037,11 +1832,6 @@ hearing, along with the president of the student body, and some others.
 		  <rng:ref name="resp"/>
 		</rng:group>
 	      </rng:choice>
-	    </content>
-	  </elementSpec>
-	  <elementSpec module="header" ident="sourceDesc" mode="change">
-	    <content>
-	      <rng:ref name="biblStruct"/>
 	    </content>
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="teiHeader" mode="change">
@@ -2058,15 +1848,15 @@ hearing, along with the president of the student body, and some others.
 	      <memberOf key="att.canonical"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+	      <rng:ref name="macro.paraContent"/>
 	    </content>
 	    <constraintSpec scheme="isoschematron" ident="titleLevel">
 	      <s:rule context="parent::seriesStmt">
-		<s:assert test="@level='s'">When a child of &lt;seriesStmt>, the level of a title must be
+		<s:assert test="@level='s'">When a child of &lt;seriesStmt&gt;, the level of a title must be
 		specified as 's'.</s:assert>
 	      </s:rule>
 	      <s:rule context="parent::analytic">
-		<s:assert test="@level='a'">When a child of &lt;analytic>, the level of a title must be
+		<s:assert test="@level='a'">When a child of &lt;analytic&gt;, the level of a title must be
 		specified as 'a'.</s:assert>
 	      </s:rule>
 	    </constraintSpec>
@@ -2146,8 +1936,8 @@ hearing, along with the president of the student body, and some others.
 		  </valItem>
 		  <valItem ident="marc245b">
 		    <desc>used for the the remainder of the title
-		    information &#x2014; parallel titles, titles subsequent
-		    to the first, and other title information &#x2014;
+		    information — parallel titles, titles subsequent
+		    to the first, and other title information —
 		    according to the national cataloging code)</desc>
 		  </valItem>
                   <valItem ident="uniform">
@@ -2186,32 +1976,6 @@ hearing, along with the president of the student body, and some others.
 	  <elementSpec module="core" ident="time" mode="delete"/>
 	  <elementSpec module="textstructure" ident="byline" mode="delete"/>
 	  <elementSpec module="textstructure" ident="imprimatur" mode="delete"/>
-          <elementSpec module="header" ident="biblFull" mode="delete"/>
-	  <elementSpec module="header" ident="cRefPattern" mode="delete"/>
-	  <elementSpec module="header" ident="catDesc" mode="delete"/>
-	  <elementSpec module="header" ident="catRef" mode="delete"/>
-	  <elementSpec module="header" ident="category" mode="delete"/>
-	  <elementSpec module="header" ident="classCode" mode="delete"/>
-	  <elementSpec module="header" ident="classDecl" mode="delete"/>
-	  <elementSpec module="header" ident="correction" mode="delete"/>
-	  <elementSpec module="header" ident="geoDecl" mode="delete"/>
-	  <elementSpec module="header" ident="handNote" mode="delete"/>
-	  <elementSpec module="header" ident="hyphenation" mode="delete"/>
-	  <elementSpec module="header" ident="interpretation" mode="delete"/>
-	  <elementSpec module="header" ident="keywords" mode="delete"/>
-	  <elementSpec module="header" ident="namespace" mode="delete"/>
-	  <elementSpec module="header" ident="normalization" mode="delete"/>
-	  <elementSpec module="header" ident="quotation" mode="delete"/>
-	  <elementSpec module="header" ident="refState" mode="delete"/>
-	  <elementSpec module="header" ident="refsDecl" mode="delete"/>
-	  <elementSpec module="header" ident="rendition" mode="delete"/>
-	  <elementSpec module="header" ident="segmentation" mode="delete"/>
-	  <elementSpec module="header" ident="stdVals" mode="delete"/>
-	  <elementSpec module="header" ident="tagUsage" mode="delete"/>
-	  <elementSpec module="header" ident="tagsDecl" mode="delete"/>
-	  <elementSpec module="header" ident="taxonomy" mode="delete"/>
-	  <elementSpec module="header" ident="textClass" mode="delete"/>
-	  <elementSpec module="header" ident="typeNote" mode="delete"/>
 	  <elementSpec module="figures" ident="formula" mode="delete"/>
 	  <elementSpec module="transcr" ident="zone" mode="delete"/>
 	  <elementSpec module="transcr" ident="addSpan" mode="delete"/>
@@ -2325,7 +2089,6 @@ hearing, along with the president of the student body, and some others.
 	      <attDef ident="subtype" mode="delete"/>
 	    </attList>
 	  </classSpec>
-	  <classSpec module="header" ident="model.editorialDeclPart" mode="delete" type="model"/>
 	  <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
 	  <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
 	  <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>

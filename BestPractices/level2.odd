@@ -3,7 +3,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en">
+     xml:lang="en" >
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -23,8 +23,7 @@
         <availability status="restricted">
 	  <ab>Copyleft 2009 DLF</ab>
 	  <p>Permission is granted to copy, distribute and/or modify
-	  this document under the terms of the <ref
-	  target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
+	  this document under the terms of the <ref target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
 	  Documentation License, Version 1.2</ref> or any later
 	  version published by the Free Software Foundation; with no
 	  Invariant Sections, no Front-Cover Texts, and no Back-Cover
@@ -37,8 +36,7 @@
 	of <bibl><title>TEI in Libraries: Guidelines for Best
 	Practices</title> <author>TEI in Libraries SIG</author>
 	<author>Digital Libraries Federation TEI task force</author>
-	<ptr
-	    target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
+	<ptr target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
       </bibl>
       written in a wiki language into the TEI ODD language. This
 	verssion started <date when="2009-08-01"/>.</p>
@@ -55,8 +53,7 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>Level 2: Minimal Encoding</head>
       <div type="setting">
-	<p>This is the <name>level 2</name> portion of the <ref
-	target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_2:_Minimal_Encoding">Best
+	<p>This is the <name>level 2</name> portion of the <ref target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_2:_Minimal_Encoding">Best
 	Practices for TEI in Libraries</ref>. This document is not
 	intended to stand alone, but rather to be considered in
 	concert with the entire TEI in Libraries recommendations.</p>
@@ -332,7 +329,7 @@
 	      <attDef ident="version" usage="opt">
 		<desc>The version of the TEI scheme</desc>
 		<datatype>
-		  <rng:data xmlns:rng="http://relaxng.org/ns/structure/1.0" type="decimal"/>
+		  <rng:data type="decimal"/>
 		</datatype>
 		<defaultVal>5.0</defaultVal>
 		<valDesc>A number identifying the version of the TEI guidelines</valDesc>
@@ -418,7 +415,7 @@
 	    <remarks>
 	      <p>At level 2, entire sections of the document (be they
 	      parts, chapters, etc.) are each encoded as a single
-	      <gi>ab</gi> &#x2014; each division (whether
+	      <gi>ab</gi> — each division (whether
 	      <gi>div</gi>, <gi>div1</gi>, <gi>div2</gi>, etc.) should
 	      have one and only one <gi>ab</gi> child. Further,
 	      <gi>ab</gi> <emph>may</emph> be used in a variety of
@@ -439,7 +436,7 @@
 	      <memberOf key="model.respLike"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+	      <rng:ref name="macro.phraseSeq"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -498,7 +495,7 @@
 	    <classes>
 	      <memberOf key="att.declaring"/>
 	    </classes>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:group>
 		<rng:zeroOrMore>
 		  <rng:choice>
@@ -602,7 +599,7 @@
 	  <elementSpec module="textstructure" ident="body" mode="replace">
 	    <desc>contains the body of a single unitary text,
 	    excluding any front or back matter.</desc>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <!-- globals as usual -->
 	      <rng:zeroOrMore>
 		<rng:ref name="model.global"/>
@@ -737,19 +734,12 @@
 	      <ptr target="#DS"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="change" mode="change">
-	    <!-- constraintSpec scheme="isoschematron" ident="revChronOrder">
-		 </constraintSpec -->
-	    <attList>
-	      <attDef mode="change" ident="when" usage="req"/>
-	    </attList>
-	  </elementSpec>
 	  <elementSpec module="core" ident="date" mode="change">
 	    <constraintSpec scheme="isoschematron" ident="whenNotContent">
 	      <s:rule context="date[parent::publicationStmt]">
 		<s:assert test="@when">Dates inside the publication statement must have @when (and should not
 		have content)</s:assert>
-		<s:report test="string-length( normalize-space(.) ) > 0">Dates inside the publication statement
+		<s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the publication statement
 		should not have content (and must have @when)</s:report>
 	      </s:rule>
 	    </constraintSpec>
@@ -1253,7 +1243,7 @@
 	      <memberOf key="model.respLike"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+	      <rng:ref name="macro.phraseSeq"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1264,70 +1254,6 @@
 	      <ptr target="#COBICOR"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="editorialDecl" mode="replace">
-	    <gloss>editorial practice declaration</gloss>
-	    <desc>provides details of editorial principles and
-	    practices applied during the encoding of a text.!!!</desc>
-	    <classes>
-	      <memberOf key="model.encodingPart"/>
-	      <memberOf key="att.declarable"/>
-	    </classes>
-	    <content>
-	      <rng:zeroOrMore>
-		<rng:ref name="model.pLike"/>
-	      </rng:zeroOrMore>
-	      <rng:element name="p">
-		<rng:choice>
-		  <rng:value>All hyphens in source document encoded as U+2010.</rng:value>
-		  <rng:value>Soft hyphens encoded as U+00AD; hard hyphens as U+2010.</rng:value>
-		</rng:choice>
-	      </rng:element>
-	    </content>
-	    <attList>
-	      <attDef ident="n" mode="replace" usage="req">
-		<gloss>number</gloss>
-		<desc>Used to indicate which encoding level described
-		by <title>TEI in Libraries: Guidelines for Best
-		Practices</title> is in use.</desc>
-		<datatype>
-		  <rng:value>2</rng:value>
-		</datatype>
-		<remarks>
-		  <p>For level 2, this attribute must be specified, and its value must be <val>2</val>.</p>
-		</remarks>
-	      </attDef>
-	    </attList>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<editorialDecl n="2">
-		  <p>Metadata in the TEI header comes from an AACR2-conformant record, translated to TEI via
-		  the <name type="software">catRec2tei.perl</name> program.</p>
-		  <p>Content originally generated by <name type="software">c-n-rite</name> OCR software, then
-		  the needed TEI encoding put in place with <name type="software">cnr2tei.xslt</name>.</p>
-		  <p>All hyphens in source document encoded as U+2010.</p>
-		</editorialDecl>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>The TEI provides a set of useful special-purpose
-	      elements that can be used inside of
-	      <gi>editorialDecl</gi> instead of paragraphs:
-	      <gi>correction</gi>, <gi>hyphenation</gi>,
-	      <gi>interpretation</gi>, <gi>normalization</gi>,
-	      <gi>quotation</gi>, <gi>segmentation</gi>, and
-	      <gi>stdVals</gi>. But since one cannot use any of these
-	      special-purpose elements <emph>and</emph> a paragraph,
-	      and there are some editorial practices likely to be of
-	      interest that are not covered by these elements, our
-	      current requirement is to use only paragraphs. If and
-	      when the TEI fixes this bug (e.g., by allowing zero or
-	      more paragraphs to follow the special-purpose elements),
-	      this recommendation will likely change accordingly.</p>
-	      <p>It is required that a paragraph explaining
-	      hyphenation practices, with particular wording as above,
-	      be present.</p>
-	    </remarks>
-	  </elementSpec>
 	  <elementSpec module="textstructure" ident="front" mode="replace">
 	    <gloss>front matter</gloss>
 	    <desc>contains any prefatory matter (headers, title page,
@@ -1336,7 +1262,7 @@
 	    <classes>
 	      <memberOf key="att.declaring"/>
 	    </classes>
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:group>
 		<rng:zeroOrMore>
 		  <rng:choice>
@@ -1421,7 +1347,7 @@
 	      <memberOf key="model.pLike.front"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+	      <rng:ref name="macro.paraContent"/>
 	    </content>
 	    <exemplum xml:lang="en">
 	      <p>The most common use for the <gi>head</gi> element is
@@ -1467,26 +1393,6 @@
 	      <ptr target="#DSHD" type="div2"/>
 	    </listRef>
 	  </elementSpec>
-	  <elementSpec module="header" ident="idno" mode="change">
-	    <attList>
-	      <attDef mode="replace" ident="type">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<valList type="semi">
-		  <valItem ident="LC_call_number">
-		    <gloss>U.S. Library of Congress call number</gloss>
-		  </valItem>
-		  <valItem ident="isbn-13">
-		    <gloss>intnerational serial book number, 13-digit</gloss>
-		  </valItem>
-		  <valItem ident="isbn-10">
-		    <gloss>intnerational serial book number, 10-digit</gloss>
-		  </valItem>
-		</valList>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
 	  <elementSpec module="core" ident="note" mode="change">
 	    <attList>
 	      <attDef ident="anchored" mode="delete"/>
@@ -1514,53 +1420,13 @@
               <attDef ident="cRef" mode="delete"/>
             </attList>
           </elementSpec>
-	  <elementSpec module="header" ident="publicationStmt" mode="change">
-	    <content>
-	      <rng:choice>
-		<rng:oneOrMore>
-		  <rng:ref name="model.pLike"/>
-		</rng:oneOrMore>
-		<rng:oneOrMore>
-		  <rng:choice>
-		    <rng:ref name="publisher"/>
-		    <rng:ref name="distributor"/>
-		    <rng:ref name="authority"/>
-		  </rng:choice>
-		  <rng:group>
-		    <rng:optional>
-		      <rng:ref name="pubPlace"/>
-		    </rng:optional>
-		    <rng:optional>
-		      <rng:ref name="address"/>
-		    </rng:optional>
-		    <rng:zeroOrMore>
-		      <rng:ref name="idno"/>
-		    </rng:zeroOrMore>
-		    <rng:optional>
-		      <rng:ref name="availability"/>
-		    </rng:optional>
-		    <rng:optional>
-		      <rng:ref name="date"/>
-		    </rng:optional>
-		  </rng:group>
-		</rng:oneOrMore>
-	      </rng:choice>
-	    </content>
-	    <constraintSpec scheme="isoschematron" ident="specialPubStmtOnly">
-	      <s:rule>
-		<s:report test="./p">Use of specialized child elements
-		of the publication statement (rather than paragraphs)
-		is recommended</s:report>
-	      </s:rule>
-	    </constraintSpec>
-	  </elementSpec>
 	  <elementSpec module="core" ident="ref" mode="change">
 	    <attList>
 	      <attDef ident="cRef" mode="delete"/>
 	    </attList>
 	  </elementSpec>
 	  <elementSpec module="core" ident="respStmt" mode="change">
-	    <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+	    <content>
 	      <rng:choice>
 		<rng:group>
 		  <rng:ref name="resp"/>
@@ -1575,11 +1441,6 @@
 		  <rng:ref name="resp"/>
 		</rng:group>
 	      </rng:choice>
-	    </content>
-	  </elementSpec>
-	  <elementSpec module="header" ident="sourceDesc" mode="change">
-	    <content>
-	      <rng:ref name="biblStruct"/>
 	    </content>
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="teiHeader" mode="change">
@@ -1596,15 +1457,15 @@
 	      <memberOf key="att.canonical"/>
 	    </classes>
 	    <content>
-	      <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+	      <rng:ref name="macro.paraContent"/>
 	    </content>
 	    <constraintSpec scheme="isoschematron" ident="titleLevel">
 	      <s:rule context="parent::seriesStmt">
-		<s:assert test="@level='s'">When a child of &lt;seriesStmt>, the level of a title must be
+		<s:assert test="@level='s'">When a child of &lt;seriesStmt&gt;, the level of a title must be
 		specified as 's'.</s:assert>
 	      </s:rule>
 	      <s:rule context="parent::analytic">
-		<s:assert test="@level='a'">When a child of &lt;analytic>, the level of a title must be
+		<s:assert test="@level='a'">When a child of &lt;analytic&gt;, the level of a title must be
 		specified as 'a'.</s:assert>
 	      </s:rule>
 	    </constraintSpec>
@@ -1684,8 +1545,8 @@
 		  </valItem>
 		  <valItem ident="marc245b">
 		    <desc>used for the the remainder of the title
-		    information &#x2014; parallel titles, titles subsequent
-		    to the first, and other title information &#x2014;
+		    information — parallel titles, titles subsequent
+		    to the first, and other title information —
 		    according to the national cataloging code)</desc>
 		  </valItem>
                   <valItem ident="uniform">
@@ -1767,32 +1628,6 @@
 	  <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
 	  <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
 	  <elementSpec module="textstructure" ident="trailer" mode="delete"/>
-          <elementSpec module="header" ident="biblFull" mode="delete"/>
-	  <elementSpec module="header" ident="cRefPattern" mode="delete"/>
-	  <elementSpec module="header" ident="catDesc" mode="delete"/>
-	  <elementSpec module="header" ident="catRef" mode="delete"/>
-	  <elementSpec module="header" ident="category" mode="delete"/>
-	  <elementSpec module="header" ident="classCode" mode="delete"/>
-	  <elementSpec module="header" ident="classDecl" mode="delete"/>
-	  <elementSpec module="header" ident="correction" mode="delete"/>
-	  <elementSpec module="header" ident="geoDecl" mode="delete"/>
-	  <elementSpec module="header" ident="handNote" mode="delete"/>
-	  <elementSpec module="header" ident="hyphenation" mode="delete"/>
-	  <elementSpec module="header" ident="interpretation" mode="delete"/>
-	  <elementSpec module="header" ident="keywords" mode="delete"/>
-	  <elementSpec module="header" ident="namespace" mode="delete"/>
-	  <elementSpec module="header" ident="normalization" mode="delete"/>
-	  <elementSpec module="header" ident="quotation" mode="delete"/>
-	  <elementSpec module="header" ident="refState" mode="delete"/>
-	  <elementSpec module="header" ident="refsDecl" mode="delete"/>
-	  <elementSpec module="header" ident="rendition" mode="delete"/>
-	  <elementSpec module="header" ident="segmentation" mode="delete"/>
-	  <elementSpec module="header" ident="stdVals" mode="delete"/>
-	  <elementSpec module="header" ident="tagUsage" mode="delete"/>
-	  <elementSpec module="header" ident="tagsDecl" mode="delete"/>
-	  <elementSpec module="header" ident="taxonomy" mode="delete"/>
-	  <elementSpec module="header" ident="textClass" mode="delete"/>
-	  <elementSpec module="header" ident="typeNote" mode="delete"/>
 	  <elementSpec module="linking" ident="link" mode="delete"/>
 	  <elementSpec module="linking" ident="linkGrp" mode="delete"/>
 	  <elementSpec module="linking" ident="anchor" mode="delete"/>
@@ -1906,7 +1741,6 @@
 	      <attDef ident="subtype" mode="delete"/>
 	    </attList>
 	  </classSpec>
-	  <classSpec module="header" ident="model.editorialDeclPart" mode="delete" type="model"/>
 	  <classSpec module="linking" ident="att.global.linking" mode="delete" type="atts"/>
 	  <classSpec module="linking" ident="att.pointing" mode="delete" type="atts"/>
 	  <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
