@@ -564,7 +564,7 @@
 	      </s:rule>
 	    </constraintSpec>
             <attList>
-	      <attDef ident="level" usage="opt">
+	      <attDef ident="level" usage="opt" mode="replace">
 		<desc>indicates the bibliographic level for a title,
 		that is, whether it identifies an article, book,
 		journal, series, or unpublished material.</desc>

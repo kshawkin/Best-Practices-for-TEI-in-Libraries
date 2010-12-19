@@ -1,51 +1,48 @@
 <?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns:s="http://purl.oclc.org/dsdl/schematron"
-     xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en" >
+<?oxygen RNGSchema="../../../P5/Exemplars/tei_odds.rnc" type="compact"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:s="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-	<title>TEI in Libraries level 3</title>
-	<author>
-	  <name type="organization">TEI in Libraries SIG</name>
-	  <name type="organization">DLF TEI Task Force</name>
-	</author>
-	<editor>
-	  <name type="person">Kevin Hawkins</name>
-	</editor>
-	<editor>
-	  <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
-	</editor>
+        <title>TEI in Libraries level 3</title>
+        <author>
+          <name type="organization">TEI in Libraries SIG</name>
+          <name type="organization">DLF TEI Task Force</name>
+        </author>
+        <editor>
+          <name type="person">Kevin Hawkins</name>
+        </editor>
+        <editor>
+          <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
+        </editor>
       </titleStmt>
       <publicationStmt>
         <availability status="restricted">
-	  <ab>Copyleft 2009 DLF</ab>
-	  <p>Permission is granted to copy, distribute and/or modify
-	  this document under the terms of the <ref target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
-	  Documentation License, Version 1.2</ref> or any later
-	  version published by the Free Software Foundation; with no
-	  Invariant Sections, no Front-Cover Texts, and no Back-Cover
-	  Texts. A copy of the license is included in the document
-	  entitled <name type="file">COPYING.txt</name>.</p>
-	</availability>
+          <ab>Copyleft 2009 DLF</ab>
+          <p>Permission is granted to copy, distribute and/or modify this document under the terms
+            of the <ref target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free Documentation
+              License, Version 1.2</ref> or any later version published by the Free Software
+            Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A
+            copy of the license is included in the document entitled <name type="file"
+              >COPYING.txt</name>.</p>
+        </availability>
       </publicationStmt>
       <sourceDesc>
-	<p>No source in the transcriptional sense, but this document
-	is a planned re-implementation of <bibl><title>TEI in
-	Libraries: Guidelines for Best Practices</title> <author>TEI
-	in Libraries SIG</author> <author>Digital Libraries Federation
-	TEI task force</author> <ptr target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
-      </bibl>
-      written in a wiki language into the TEI ODD language. This
-	verssion started <date when="2009-10-05"/>.</p>
+        <p>No source in the transcriptional sense, but this document is a planned re-implementation
+          of <bibl><title>TEI in Libraries: Guidelines for Best Practices</title>
+            <author>TEI in Libraries SIG</author>
+            <author>Digital Libraries Federation TEI task force</author>
+            <ptr
+              target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"
+            />
+          </bibl> written in a wiki language into the TEI ODD language. This verssion started <date
+            when="2009-10-05"/>.</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change who="#sbauman.emt" when="2009-10-05">
-	Begun, based on level 2.
-      </change>
+      <change who="#sbauman.emt" when="2009-10-05"> Begun, based on level 2. </change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -53,701 +50,675 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>Level 3: Simple Analysis</head>
       <div type="setting">
-	<p>This is the <name>level 3</name> portion of the <ref target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_3:_Simple_Analysis">Best
-	Practices for TEI in Libraries</ref>. This document is not
-	intended to stand alone, but rather to be considered in
-	concert with the entire TEI in Libraries recommendations.</p>
+        <p>This is the <name>level 3</name> portion of the <ref
+            target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_3:_Simple_Analysis"
+            >Best Practices for TEI in Libraries</ref>. This document is not intended to stand
+          alone, but rather to be considered in concert with the entire TEI in Libraries
+          recommendations.</p>
       </div>
       <divGen type="toc"/>
     </front>
     <body>
       <div type="reference">
-	<head>Reference</head>
-	<list>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">Chapter 4, Default Text Structure, P5 Guidelines</ref>
-	  </item>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">Chapter 6, Verse, P5 Guidelines</ref>
-	  </item>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html">Chapter 14, Tables, Formulæ, and Graphics, P5 Guidelines</ref>
-	  </item>
-	  <item>
-	    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html">Chapter 16, Linking, Segmentation, and Alignment, P5 Guidelines</ref> (for handling notes)
-	  </item>
-	</list>
-	<p>Note that this is intended to be a <soCalled>TEI
-	conformant</soCalled> customization, per <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
-	section 23.3</ref>.</p>
+        <head>Reference</head>
+        <list>
+          <item>
+            <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">Chapter 4,
+              Default Text Structure, P5 Guidelines</ref>
+          </item>
+          <item>
+            <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">Chapter 6,
+              Verse, P5 Guidelines</ref>
+          </item>
+          <item>
+            <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html">Chapter 14,
+              Tables, Formulæ, and Graphics, P5 Guidelines</ref>
+          </item>
+          <item>
+            <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html">Chapter 16,
+              Linking, Segmentation, and Alignment, P5 Guidelines</ref> (for handling notes) </item>
+        </list>
+        <p>Note that this is intended to be a <soCalled>TEI conformant</soCalled> customization, per
+            <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
+            section 23.3</ref>.</p>
       </div>
       <div type="purpose">
-	<head>Purpose</head>
-	<p>To create a stand-alone electronic text and identify
-	hierarchy (logical structure) and typography without content
-	analysis being of primary importance.</p>
+        <head>Purpose</head>
+        <p>To create a stand-alone electronic text and identify hierarchy (logical structure) and
+          typography without content analysis being of primary importance.</p>
       </div>
       <div type="rationale">
-	<head>Rationale</head>
-	<p>Encoding at this level offers provides the foundation for
-	upgrading to higher levels of encoding. Level 3 generally
-	requires some human editing, but the features to be encoded
-	are determined by the logical structure and appearance of the
-	text and not specialized content analysis.</p>
-	<p>Level 3 texts identify front and back matter, divisions
-	within the text, and all paragraph breaks. Floating texts, or
-	sub-texts like a poem or letter embedded in the greater text,
-	are supported in this level. The finer granularity of encoding
-	these features, as well as figures, notes, and all changes of
-	typography, allows a range of options for display, delivery,
-	and searching. For example, one has the option of identifying,
-	and therefore specifying, the display characteristics of
-	different typographic styles, and regularizing the display and
-	placement of note text.</p>
-	<p>Level 3 texts can stand alone as text without page images,
-	and therefore can be uploaded, downloaded, and delivered
-	quickly, and require less storage space than digital
-	collections with page images. However, the simple level of
-	structural analysis and absence of specialized content
-	analysis reflected in Level 3 encoding may make it desirable
-	for some, depending on project priorities, to include page
-	images in order to provide users with a fuller set of
-	resources.</p>
-	<list>
-	  <head>Level 3 is most suitable for projects with the
-	  following characteristics</head>
-	  <item>the material is of interest to a large community of
-	  users who wish to read texts that allow for keyword
-	  searching</item>
-	  <item>some sophistication of display, delivery, and
-	  searching based on structure of the text is desired</item>
-	  <item>each text will undergo quality control to ensure that
-	  encoding decisions have been made appropriately</item>
-	  <item>the users of the texts may have limited storage or
-	  display capabilities</item>
-	  <item>the creator of the texts has limited or no ability to
-	  provide content expertise to analyze, tag, or review
-	  texts</item>
-	  <item>extensibility is desired; that is, one desires to keep
-	  open the option for a higher level of encoding to be added
-	  at a later date</item>
-	</list>
+        <head>Rationale</head>
+        <p>Encoding at this level offers provides the foundation for upgrading to higher levels of
+          encoding. Level 3 generally requires some human editing, but the features to be encoded
+          are determined by the logical structure and appearance of the text and not specialized
+          content analysis.</p>
+        <p>Level 3 texts identify front and back matter, divisions within the text, and all
+          paragraph breaks. Floating texts, or sub-texts like a poem or letter embedded in the
+          greater text, are supported in this level. The finer granularity of encoding these
+          features, as well as figures, notes, and all changes of typography, allows a range of
+          options for display, delivery, and searching. For example, one has the option of
+          identifying, and therefore specifying, the display characteristics of different
+          typographic styles, and regularizing the display and placement of note text.</p>
+        <p>Level 3 texts can stand alone as text without page images, and therefore can be uploaded,
+          downloaded, and delivered quickly, and require less storage space than digital collections
+          with page images. However, the simple level of structural analysis and absence of
+          specialized content analysis reflected in Level 3 encoding may make it desirable for some,
+          depending on project priorities, to include page images in order to provide users with a
+          fuller set of resources.</p>
+        <list>
+          <head>Level 3 is most suitable for projects with the following characteristics</head>
+          <item>the material is of interest to a large community of users who wish to read texts
+            that allow for keyword searching</item>
+          <item>some sophistication of display, delivery, and searching based on structure of the
+            text is desired</item>
+          <item>each text will undergo quality control to ensure that encoding decisions have been
+            made appropriately</item>
+          <item>the users of the texts may have limited storage or display capabilities</item>
+          <item>the creator of the texts has limited or no ability to provide content expertise to
+            analyze, tag, or review texts</item>
+          <item>extensibility is desired; that is, one desires to keep open the option for a higher
+            level of encoding to be added at a later date</item>
+        </list>
       </div>
       <div type="workflow">
-	<head>Workflow</head>
-	<p>Level 3 texts can be created by conversion from an
-	electronic source such as an HTML file or word-processor
-	document or from a print source, either through OCR or
-	keyboarding. They can be generated trivially by converting
-	from outsourced double-keyboarded texts conforming to <ref target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html">TEI
-	Tite</ref>, though some granularity of encoding will be lost
-	in the translation.</p>
+        <head>Workflow</head>
+        <p>Level 3 texts can be created by conversion from an electronic source such as an HTML file
+          or word-processor document or from a print source, either through OCR or keyboarding. They
+          can be generated trivially by converting from outsourced double-keyboarded texts
+          conforming to <ref
+            target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html">TEI
+            Tite</ref>, though some granularity of encoding will be lost in the translation.</p>
       </div>
       <div type="elrecs">
-	<head>Element Recommendations for Level 3</head>
-	<p>Use all elements specified in Levels 1 and 2 <emph>except
-	<gi>ab</gi></emph>, plus the following:
-	<table>
-	  <row><cell><gi>front</gi>, <gi>back</gi> </cell><cell>Required if present.</cell></row>
-	  <row><cell><gi>div</gi></cell> <cell>Required if present; <att>type</att> attribute is recommended.</cell></row>
-	  <row><cell><gi>floatingText</gi></cell> <cell>Recommended if present.</cell></row>
-	  <row><cell><gi>p</gi></cell> <cell>Required for paragraph breaks in prose.</cell></row>
-	  <row><cell><gi>lg</gi> and <gi>l</gi></cell> <cell>Required for identifying groups of lines and lines, respectively.</cell></row>
-	  <row><cell><gi>list</gi> and <gi>item</gi></cell> <cell>May be used in this level to indicate ordered and unordered list structures.</cell></row>
-	  <row><cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell> <cell>May be used to indicate table structures.</cell></row>
-	  <row><cell><gi>figure</gi></cell> <cell>Required to indicate figures other than page images.</cell></row>
-	  <row><cell><gi>hi</gi></cell> <cell>Required to indicate changes in typeface; <att>rend</att> attribute is optional.</cell></row>
-	  <row><cell><gi>note</gi></cell> <cell>All notes must be
-	  encoded. It is also recommended that notes that extend
-	  beyond one page be combined into one <gi>note</gi> element.
-	  Marginal notes, without reference, should occur at the
-	  beginning of the paragraph to which they refer, with the
-	  value of the <att>place</att> attribute as
-	  <val>margin</val>.</cell></row>
-	  <row><cell><gi>lb</gi></cell> <cell>May be used to indicate line breaks.</cell></row>
-	</table>
-	</p>
+        <head>Element Recommendations for Level 3</head>
+        <p>Use all elements specified in Levels 1 and 2 <emph>except <gi>ab</gi></emph>, plus the
+          following: <table>
+            <row>
+              <cell><gi>front</gi>, <gi>back</gi>
+              </cell>
+              <cell>Required if present.</cell>
+            </row>
+            <row>
+              <cell><gi>div</gi></cell>
+              <cell>Required if present; <att>type</att> attribute is recommended.</cell>
+            </row>
+            <row>
+              <cell><gi>floatingText</gi></cell>
+              <cell>Recommended if present.</cell>
+            </row>
+            <row>
+              <cell><gi>p</gi></cell>
+              <cell>Required for paragraph breaks in prose.</cell>
+            </row>
+            <row>
+              <cell><gi>lg</gi> and <gi>l</gi></cell>
+              <cell>Required for identifying groups of lines and lines, respectively.</cell>
+            </row>
+            <row>
+              <cell><gi>list</gi> and <gi>item</gi></cell>
+              <cell>May be used in this level to indicate ordered and unordered list
+                structures.</cell>
+            </row>
+            <row>
+              <cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell>
+              <cell>May be used to indicate table structures.</cell>
+            </row>
+            <row>
+              <cell><gi>figure</gi></cell>
+              <cell>Required to indicate figures other than page images.</cell>
+            </row>
+            <row>
+              <cell><gi>hi</gi></cell>
+              <cell>Required to indicate changes in typeface; <att>rend</att> attribute is
+                optional.</cell>
+            </row>
+            <row>
+              <cell><gi>note</gi></cell>
+              <cell>All notes must be encoded. It is also recommended that notes that extend beyond
+                one page be combined into one <gi>note</gi> element. Marginal notes, without
+                reference, should occur at the beginning of the paragraph to which they refer, with
+                the value of the <att>place</att> attribute as <val>margin</val>.</cell>
+            </row>
+            <row>
+              <cell><gi>lb</gi></cell>
+              <cell>May be used to indicate line breaks.</cell>
+            </row>
+          </table>
+        </p>
       </div>
       <div type="grecs">
-	<head>General Level 3 Recommendations</head>
-	<div type="grec">
-	  <head>Forme Work</head>
-	  <p>Running heads, catch words, page numbers, signatures, and
-	  other artifacts derived from printing should not be included
-	  in Level 3, with the exception of page numbers, which are
-	  recorded using <gi>pb</gi>. If upgrading a text from Level 1
-	  or Level 2 that was generated using OCR, discard the forme
-	  work information.</p>
-	</div>
-	<div type="grec">
-	  <head>Tables of Contents</head>
-	  <list>
-	    <item>
-	      <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSFRONT">Chapter 4.5, Front Matter</ref>
-	    </item>
-	  </list>
-	  <p>You may wish not to include front matter content such as
-	  table of contents or lists of illustrations, especially if
-	  you plan to automatically generate the contents or lists of
-	  illustrations. If you do, however, plan to manually encode
-	  the table of contents (or lists of illustrations and similar
-	  content), use a <gi>div</gi> element with an appropriate
-	  <att>type</att> attribute (e.g., <tag>div
-	  type="contents"</tag>). Within this division, use the
-	  <gi>list</gi> element to mark up the table of contents, list
-	  of illustrations, etc. Each list <gi>item</gi> should have a
-	  <gi>ptr</gi> or <gi>ref</gi> element with a
-	  <att>target</att> attribute referencing an <att>xml:id</att>
-	  attribute on the <gi>pb</gi> or <gi>div</gi> element of the
-	  referenced page or section. Use <gi>ref</gi> if you wish to
-	  transcribe page numbers in the table of contents; use
-	  <gi>ptr</gi> if you do not.</p>
-	</div>
-	<div type="grec">
-	  <head>Notes</head>
-	  <p>Use the <gi>note</gi> element to encode the text of a
-	  marginal note, footnote, endnote, or other note found in the
-	  source document. This element may be used for encoding notes
-	  <soCalled>inline</soCalled> at the point of reference (such
-	  as where a superscript number appears), as in the Alger Hiss
-	  example below. In the case of conversion from OCR and from
-	  some born-digital source documents, this will require manual
-	  intervention to move the text of the note to the place of
-	  reference.</p>
-	  <p>Alternatively, the <gi>note</gi> element may encode the
-	  text of the note at the point it occurs on the page or at
-	  another point convenient when converting from a born-digital
-	  source document, such as at the end of a text division or in
-	  a special <gi>div</gi> element within <gi>back</gi>. The
-	  point of reference should be encoded using a <gi>ref</gi> or
-	  <gi>ptr</gi> element, as in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6
-	  Simple Links and Cross-References</ref>. According to this
-	  model, the first footnote reference in the Alger Hiss
-	  example would be encoded as:
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <ref xml:id="n68">68</ref>
-	  </egXML>
-	  and the note itself as:
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <note place="bottom" anchored="true" target="#n68" n="68">Also before 1947, [. . .]</note>
-	  </egXML>
-	  </p>
-	</div>
+        <head>General Level 3 Recommendations</head>
+        <div type="grec">
+          <head>Forme Work</head>
+          <p>Running heads, catch words, page numbers, signatures, and other artifacts derived from
+            printing should not be included in Level 3, with the exception of page numbers, which
+            are recorded using <gi>pb</gi>. If upgrading a text from Level 1 or Level 2 that was
+            generated using OCR, discard the forme work information.</p>
+        </div>
+        <div type="grec">
+          <head>Tables of Contents</head>
+          <list>
+            <item>
+              <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSFRONT"
+                >Chapter 4.5, Front Matter</ref>
+            </item>
+          </list>
+          <p>You may wish not to include front matter content such as table of contents or lists of
+            illustrations, especially if you plan to automatically generate the contents or lists of
+            illustrations. If you do, however, plan to manually encode the table of contents (or
+            lists of illustrations and similar content), use a <gi>div</gi> element with an
+            appropriate <att>type</att> attribute (e.g., <tag>div type="contents"</tag>). Within
+            this division, use the <gi>list</gi> element to mark up the table of contents, list of
+            illustrations, etc. Each list <gi>item</gi> should have a <gi>ptr</gi> or <gi>ref</gi>
+            element with a <att>target</att> attribute referencing an <att>xml:id</att> attribute on
+            the <gi>pb</gi> or <gi>div</gi> element of the referenced page or section. Use
+              <gi>ref</gi> if you wish to transcribe page numbers in the table of contents; use
+              <gi>ptr</gi> if you do not.</p>
+        </div>
+        <div type="grec">
+          <head>Notes</head>
+          <p>Use the <gi>note</gi> element to encode the text of a marginal note, footnote, endnote,
+            or other note found in the source document. This element may be used for encoding notes
+              <soCalled>inline</soCalled> at the point of reference (such as where a superscript
+            number appears), as in the Alger Hiss example below. In the case of conversion from OCR
+            and from some born-digital source documents, this will require manual intervention to
+            move the text of the note to the place of reference.</p>
+          <p>Alternatively, the <gi>note</gi> element may encode the text of the note at the point
+            it occurs on the page or at another point convenient when converting from a born-digital
+            source document, such as at the end of a text division or in a special <gi>div</gi>
+            element within <gi>back</gi>. The point of reference should be encoded using a
+              <gi>ref</gi> or <gi>ptr</gi> element, as in <ref
+              target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6 Simple
+              Links and Cross-References</ref>. According to this model, the first footnote
+            reference in the Alger Hiss example would be encoded as: <egXML
+              xmlns="http://www.tei-c.org/ns/Examples">
+              <ref xml:id="n68">68</ref>
+            </egXML> and the note itself as: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <note place="bottom" anchored="true" target="#n68" n="68">Also before 1947, [. .
+                .]</note>
+            </egXML>
+          </p>
+        </div>
       </div>
       <div type="examples">
-	<head>Level 3 Examples</head>
-        <p>Note that for technical reasons the namespace is not shown
-        in these examples, but it should always be supplied on the root
-        <gi>TEI</gi> element, e.g.: <tag>TEI
-        xmlns="http://www.tei-c.org/ns/1.0" xml:id="MBFG0236"</tag>.</p>
-	<div type="example">
-	  <head>Level 3 Basic Structure: Prose</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <TEI xml:id="MBFG0236">
-	      <teiHeader xml:lang="en"> 
-		<!-- header goes here -->
-	      </teiHeader>
-	      <text xml:lang="en">
-		<front>
-		  <div type="frontispiece">[figure]</div>
-		  <titlePage>[text]</titlePage>
-		  <div type="dedication">[text]</div>
-		  <div type="contents">[text]</div>
-		</front>
-		<body>
-		  <div type="book">
-		    <head>[book title]</head>
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>  
-		    <div type="chapter">[text]</div>     
-		  </div> 
-		</body>
-		<back>
-		  <div type="appendix">[text]</div>
-		  <div type="index">[text]</div>
-		</back> 
-	      </text>
-	    </TEI>    
-	  </egXML>
-	</div>
-	<div type="example">
-	  <head>Level 3 Basic Structure: Verse</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <TEI xml:id="VAA2383">
-	      <teiHeader xml:lang="en">
-		<!-- header goes here -->
-	      </teiHeader>
-	      <text xml:lang="en">
-		<front>
-		  <titlePage>[text]</titlePage>
-		  <div type="dedication">[text]</div>
-		  <div type="contents">[text]</div>
-		</front>
-		<body>
-		  <div type="book">
-		    <head>[book title]</head>
-		    <div type="part">
-		      <head>[section title]</head>
-		      <div type="poem">
-			<head>THE DAYS GONE BY.</head>
-			<lg>
-			  <l>O the days gone by! O the days gone by!</l>
-			  <l>The apples in the orchard, and the pathway through the rye;</l>
-			  <l>The chirrup of the robin, and the whistle of the quail</l>
-			  <l>As he piped across the meadows sweet as any nightingale;</l>
-			  <l>When the bloom was on the clover, and the blue was in the sky,</l>
-			  <l>And my happy heart brimmed overin the happy days gone by.</l>
-			</lg>
-			<lg>[lines of poetry]</lg>
-			<lg>[lines of poetry]</lg>
-			<lg>[lines of poetry]</lg>
-		      </div>
-		    </div>  
-		  </div> 
-		</body>
-	      </text>
-	    </TEI>
-	  </egXML>
-	</div>
-	<div type="example">
-	  <head>Level 3 Table of Contents</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <!--target attribute references page break identifier-->
-	    <div type="contents">
-	      <head>CONTENTS</head>
-	      <list type="simple">
-		<item>I. A Boy and His Dog 
-		<ref target="#VAA2383_011" rend="text-align: right">3</ref>
-		</item>
-		<item>II. Romance 
-		<ref target="#VAA2383_020" rend="text-align: right">12</ref>
-		</item>
-		<item>III. The Costume 
-		<ref target="#VAA2383_029" rend="text-align: right">21</ref>
-		</item>
-		<item>IV. Desperation 
-		<ref target="#VAA2383_038" rend="text-align: right">30</ref>
-		</item>
-		<item>V. The Pageant of the Table Round 
-		<ref target="#VAA2383_046" rend="text-align: right">38</ref>
-		</item>
-	      </list>
-	    </div>
-	  </egXML>
-	</div>
-	<div type="example">
-	  <head>Level 3 Chapter with Letter</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <div type="chapter">
-	      <pb xml:id="VAA2383_126" n="118"/>
-	      <head type="main">CHAPTER XIV</head>
-	      <head type="subtitle">MAURICE LEVY'S CONSTITUTION</head>
-	      <p><hi rend="font-weight: bold">L</hi>O, SAM!" said Maurice cautiously. "What you doin'?"</p>
-	      <p>Penrod at that instant had a singular experiencean intellectual shock like a flash of fire in the
-	      brain. Sitting in darkness, a great light flooded him with wild brilliance. He gasped!</p>
-	      <!--Text removed from example-->        
-	      <p>"What you doin'?" asked Maurice for the third time, Sam Williams not having decided upon a reply.</p>
-	      <pb xml:id="VAA2383_127" n="119"/>
-	      <p>It was Penrod who answered.</p>
-	      <p>"Drinkin' lickrish water," he said simply, and wiped his mouth with such delicious enjoyment that
-	      Sam's jaded thirst was instantly stimulated. He took the bottle eagerly from Penrod.</p>
-	      <p>"A-a-h!" exclaimed Penrod, smacking his lips. "That was a good un!"</p>
-	      <!--Text removed from example-->
-	      <p>Penrod uttered some muffled words and then waved both armseither in response or as an expression
-	      of his condition of mind; it may have been a gesture of despair. How much intention there was in
-	      this actobviously so rash, considering the position he occupiedit is impossible to say.
-	      Undeniably there must remain a suspicion of deliberate purpose.</p>
-	      <!--Text removed from example-->
-	      <pb xml:id="VAA2383_138" n="130"/>
-	      <p>The damsel curtsied again and handed him the following communication, addressed to herself: </p>
-	      <floatingText>
-		<body>
-		  <div type="letter">
-		    <p>"Dear madam Please excuse me from dancing the cotilo with you
-		    this afternoon as I have fell off the barn</p>
-		    <p>"Sincerly yours<lb/>
-		    "<hi rend="font-variant: small-caps">Penrod Schofield</hi>."
-		    </p>
-		  </div>
-		</body>
-	      </floatingText>
-	    </div>
-	  </egXML>
-	</div>	
-	<div type="example">
-	  <head>Level 3 Alger Hiss document</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <TEI xml:id="someid">
-	      <teiHeader xml:lang="en">
-		<!-- header goes here -->
-	      </teiHeader>
-	      <text xml:lang="en">
-		<body>
-		  <div1>
-		    <pb n="113" facs="00000001.tif"/>
-		    <head>POINT VIII. BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S CONVICTION SHOULD BE VACATED;
-		    ALTERNATIVELY, DISCOVERY AND A HEARING SHOULD BE ORDERED.</head>
-		    <p>The nature and extent of surveillance of Hiss, his
-		    family and associates was not known at the time of trial by
-		    the defense. Even now, with the release of some of the govern­
-		    ment documents concerning FBI investigative techniques regarding
-		    Hiss, the full extent of surveillance -- wiretapping, mail open­
-		    ings, mail covers, physical surveillance, and other intrusive
-		    techniques -- is still not 'clear. Nevertheless, it is apparent
-		    that information gathered through the exploitation of unlawful
-		    wiretaps and other illegal surveillance was used at trial and
-		    consequently the conviction must be reversed. Alternatively,
-		    further discovery and a hearing is essential to a fair deter­
-		    mination regarding these issues.</p>
-
-		    <p>FBI surveillance of Hiss began in earnest in 1941 with 
-		    the institution of a mail cover on his incoming correspondence
-		    at his home in connection with an FBI investigation of possible
-		    Hatch Act violations. CN Ex. 98A. Another mail cover was placed
-
-		    <pb n="114" facs="00000002.tif"/>
-		    on the Hiss mail in 1945, and at the same time the FBI obtained
-		    toll call records from the Hiss residence Telephone for the
-		    years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
-		    the FBI intercepted telegrams to Hiss as well. CN Ex. 100.</p>
-
-		    <p>In late November, 1945, FBI surveillance of the Hiss
-		    residence in Washington, D.C., escalated. For the third time,
-		    a mail cover was instituted beginning on November 28, 1945,
-		    which was continued at least until 1946. CN Ex. 101 at p. 70;
-		    CN Ex. 102. Continuous physical surveillance of Hiss was begun
-		    as well. CN Ex. 101 at p. 72. Although this twenty-four-hour
-		    surveillance was discontinued on December 14, 1945, physical
-		    surveillance was conducted frequently at various times until
-		    September, 1947.
-
-		    <note place="bottom" anchored="true" n="68">Also before 1947, 
-		    a letter from Priscilla Hiss addressed
-		    to her son, Timothy Hobson, was intercepted and its contents
-		    read. CN Ex. 100A at p. 167. In approximately March, 1947,
-		    a letter from a Michael Greenberg addressed to petitioner re­
-		    garding an application for employment with the United Nations
-		    was also intercepted, in a manner not revealed by the docu­
-		    ments. CN Ex. 100B</note>
-
-		    CN Ex. 102; CN Ex. 103.</p>
-
-		    <p>The most intrusive invasion of petitioner's rights
-
-		    <pb n="115" facs="00000003.tif"/>
-		    occurred from December 13, 1945 until the Hisses moved from
-		    Washington, D.C. to New York City on September 13, 1947. A
-		    "technical surveillance," -- a wiretap -- was placed on the Hiss
-		    telephone at their residence on P Street-in Washington, D.C.
-		    The logs of this surveillance constitute twenty-nine volumes
-		    of FBI serials and are roughly 2,500 pages in length, in which
-		    an enormous amount of information concerning the Hisses' per­
-		    sonal lives, relationships with friends and associates, and
-		    habits is recorded.</p>
-
-		    <p>The wiretap was installed following FBI Director Hoover's
-		    application to the Attorney General for authorization,
-
-		    <note place="bottom" anchored="true" n="69">Hoover's initial request was answered by a note reques­
-		    ting information on Hiss. CN Ex. 104. Additional information
-		    was furnished by letter dated November 30, 1945. CN Ex. 105.</note>
-
-		    although no written authorization appears in the documents released to
-		    Hiss. The purpose of the application was to gather information
-		    regarding Hiss' alleged contacts with Soviet espionage agents and
-		    communists in government service, general allegations which had
-		    been made by Elizabeth Bentley and Chambers.</p>
-
-		    <p>As one would expect, the interception of every telephone</p>
-		  </div1>
-		</body>
-	      </text>
-	    </TEI>
-	  </egXML>
-	</div>
+        <head>Level 3 Examples</head>
+        <p>Note that for technical reasons the namespace is not shown in these examples, but it
+          should always be supplied on the root <gi>TEI</gi> element, e.g.: <tag>TEI
+            xmlns="http://www.tei-c.org/ns/1.0" xml:id="MBFG0236"</tag>.</p>
+        <div type="example">
+          <head>Level 3 Basic Structure: Prose</head>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <TEI xml:id="MBFG0236">
+              <teiHeader xml:lang="en">
+                <!-- header goes here -->
+              </teiHeader>
+              <text xml:lang="en">
+                <front>
+                  <div type="frontispiece">[figure]</div>
+                  <titlePage>[text]</titlePage>
+                  <div type="dedication">[text]</div>
+                  <div type="contents">[text]</div>
+                </front>
+                <body>
+                  <div type="book">
+                    <head>[book title]</head>
+                    <div type="chapter">[text]</div>
+                    <div type="chapter">[text]</div>
+                    <div type="chapter">[text]</div>
+                    <div type="chapter">[text]</div>
+                    <div type="chapter">[text]</div>
+                  </div>
+                </body>
+                <back>
+                  <div type="appendix">[text]</div>
+                  <div type="index">[text]</div>
+                </back>
+              </text>
+            </TEI>
+          </egXML>
+        </div>
+        <div type="example">
+          <head>Level 3 Basic Structure: Verse</head>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <TEI xml:id="VAA2383">
+              <teiHeader xml:lang="en">
+                <!-- header goes here -->
+              </teiHeader>
+              <text xml:lang="en">
+                <front>
+                  <titlePage>[text]</titlePage>
+                  <div type="dedication">[text]</div>
+                  <div type="contents">[text]</div>
+                </front>
+                <body>
+                  <div type="book">
+                    <head>[book title]</head>
+                    <div type="part">
+                      <head>[section title]</head>
+                      <div type="poem">
+                        <head>THE DAYS GONE BY.</head>
+                        <lg>
+                          <l>O the days gone by! O the days gone by!</l>
+                          <l>The apples in the orchard, and the pathway through the rye;</l>
+                          <l>The chirrup of the robin, and the whistle of the quail</l>
+                          <l>As he piped across the meadows sweet as any nightingale;</l>
+                          <l>When the bloom was on the clover, and the blue was in the sky,</l>
+                          <l>And my happy heart brimmed overin the happy days gone by.</l>
+                        </lg>
+                        <lg>[lines of poetry]</lg>
+                        <lg>[lines of poetry]</lg>
+                        <lg>[lines of poetry]</lg>
+                      </div>
+                    </div>
+                  </div>
+                </body>
+              </text>
+            </TEI>
+          </egXML>
+        </div>
+        <div type="example">
+          <head>Level 3 Table of Contents</head>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <!--target attribute references page break identifier-->
+            <div type="contents">
+              <head>CONTENTS</head>
+              <list type="simple">
+                <item>I. A Boy and His Dog <ref target="#VAA2383_011" rend="text-align: right"
+                    >3</ref>
+                </item>
+                <item>II. Romance <ref target="#VAA2383_020" rend="text-align: right">12</ref>
+                </item>
+                <item>III. The Costume <ref target="#VAA2383_029" rend="text-align: right">21</ref>
+                </item>
+                <item>IV. Desperation <ref target="#VAA2383_038" rend="text-align: right">30</ref>
+                </item>
+                <item>V. The Pageant of the Table Round <ref target="#VAA2383_046"
+                    rend="text-align: right">38</ref>
+                </item>
+              </list>
+            </div>
+          </egXML>
+        </div>
+        <div type="example">
+          <head>Level 3 Chapter with Letter</head>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div type="chapter">
+              <pb xml:id="VAA2383_126" n="118"/>
+              <head type="main">CHAPTER XIV</head>
+              <head type="subtitle">MAURICE LEVY'S CONSTITUTION</head>
+              <p><hi rend="font-weight: bold">L</hi>O, SAM!" said Maurice cautiously. "What you
+                doin'?"</p>
+              <p>Penrod at that instant had a singular experiencean intellectual shock like a flash
+                of fire in the brain. Sitting in darkness, a great light flooded him with wild
+                brilliance. He gasped!</p>
+              <!--Text removed from example-->
+              <p>"What you doin'?" asked Maurice for the third time, Sam Williams not having decided
+                upon a reply.</p>
+              <pb xml:id="VAA2383_127" n="119"/>
+              <p>It was Penrod who answered.</p>
+              <p>"Drinkin' lickrish water," he said simply, and wiped his mouth with such delicious
+                enjoyment that Sam's jaded thirst was instantly stimulated. He took the bottle
+                eagerly from Penrod.</p>
+              <p>"A-a-h!" exclaimed Penrod, smacking his lips. "That was a good un!"</p>
+              <!--Text removed from example-->
+              <p>Penrod uttered some muffled words and then waved both armseither in response or as
+                an expression of his condition of mind; it may have been a gesture of despair. How
+                much intention there was in this actobviously so rash, considering the position he
+                occupiedit is impossible to say. Undeniably there must remain a suspicion of
+                deliberate purpose.</p>
+              <!--Text removed from example-->
+              <pb xml:id="VAA2383_138" n="130"/>
+              <p>The damsel curtsied again and handed him the following communication, addressed to
+                herself: </p>
+              <floatingText>
+                <body>
+                  <div type="letter">
+                    <p>"Dear madam Please excuse me from dancing the cotilo with you this afternoon
+                      as I have fell off the barn</p>
+                    <p>"Sincerly yours<lb/> "<hi rend="font-variant: small-caps">Penrod
+                        Schofield</hi>." </p>
+                  </div>
+                </body>
+              </floatingText>
+            </div>
+          </egXML>
+        </div>
+        <div type="example">
+          <head>Level 3 Alger Hiss document</head>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <TEI xml:id="someid">
+              <teiHeader xml:lang="en">
+                <!-- header goes here -->
+              </teiHeader>
+              <text xml:lang="en">
+                <body>
+                  <div1>
+                    <pb n="113" facs="00000001.tif"/>
+                    <head>POINT VIII. BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S CONVICTION
+                      SHOULD BE VACATED; ALTERNATIVELY, DISCOVERY AND A HEARING SHOULD BE
+                      ORDERED.</head>
+                    <p>The nature and extent of surveillance of Hiss, his family and associates was
+                      not known at the time of trial by the defense. Even now, with the release of
+                      some of the govern­ ment documents concerning FBI investigative techniques
+                      regarding Hiss, the full extent of surveillance -- wiretapping, mail open­
+                      ings, mail covers, physical surveillance, and other intrusive techniques -- is
+                      still not 'clear. Nevertheless, it is apparent that information gathered
+                      through the exploitation of unlawful wiretaps and other illegal surveillance
+                      was used at trial and consequently the conviction must be reversed.
+                      Alternatively, further discovery and a hearing is essential to a fair deter­
+                      mination regarding these issues.</p>
+                    <p>FBI surveillance of Hiss began in earnest in 1941 with the institution of a
+                      mail cover on his incoming correspondence at his home in connection with an
+                      FBI investigation of possible Hatch Act violations. CN Ex. 98A. Another mail
+                      cover was placed <pb n="114" facs="00000002.tif"/> on the Hiss mail in 1945,
+                      and at the same time the FBI obtained toll call records from the Hiss
+                      residence Telephone for the years 1943 and 1944 as well. CN Ex. 99. In
+                      September, 1945, the FBI intercepted telegrams to Hiss as well. CN Ex.
+                      100.</p>
+                    <p>In late November, 1945, FBI surveillance of the Hiss residence in Washington,
+                      D.C., escalated. For the third time, a mail cover was instituted beginning on
+                      November 28, 1945, which was continued at least until 1946. CN Ex. 101 at p.
+                      70; CN Ex. 102. Continuous physical surveillance of Hiss was begun as well. CN
+                      Ex. 101 at p. 72. Although this twenty-four-hour surveillance was discontinued
+                      on December 14, 1945, physical surveillance was conducted frequently at
+                      various times until September, 1947. <note place="bottom" anchored="true"
+                        n="68">Also before 1947, a letter from Priscilla Hiss addressed to her son,
+                        Timothy Hobson, was intercepted and its contents read. CN Ex. 100A at p.
+                        167. In approximately March, 1947, a letter from a Michael Greenberg
+                        addressed to petitioner re­ garding an application for employment with the
+                        United Nations was also intercepted, in a manner not revealed by the docu­
+                        ments. CN Ex. 100B</note> CN Ex. 102; CN Ex. 103.</p>
+                    <p>The most intrusive invasion of petitioner's rights <pb n="115"
+                        facs="00000003.tif"/> occurred from December 13, 1945 until the Hisses moved
+                      from Washington, D.C. to New York City on September 13, 1947. A "technical
+                      surveillance," -- a wiretap -- was placed on the Hiss telephone at their
+                      residence on P Street-in Washington, D.C. The logs of this surveillance
+                      constitute twenty-nine volumes of FBI serials and are roughly 2,500 pages in
+                      length, in which an enormous amount of information concerning the Hisses' per­
+                      sonal lives, relationships with friends and associates, and habits is
+                      recorded.</p>
+                    <p>The wiretap was installed following FBI Director Hoover's application to the
+                      Attorney General for authorization, <note place="bottom" anchored="true"
+                        n="69">Hoover's initial request was answered by a note reques­ ting
+                        information on Hiss. CN Ex. 104. Additional information was furnished by
+                        letter dated November 30, 1945. CN Ex. 105.</note> although no written
+                      authorization appears in the documents released to Hiss. The purpose of the
+                      application was to gather information regarding Hiss' alleged contacts with
+                      Soviet espionage agents and communists in government service, general
+                      allegations which had been made by Elizabeth Bentley and Chambers.</p>
+                    <p>As one would expect, the interception of every telephone</p>
+                  </div1>
+                </body>
+              </text>
+            </TEI>
+          </egXML>
+        </div>
       </div>
       <!-- ********************************************* -->
       <div type="specification">
-	<head>Specification</head>
-	<schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_">
-	  <moduleRef key="core"/>
-	  <moduleRef key="tei"/>
-	  <moduleRef key="header"/>
-	  <moduleRef key="textstructure"/>
-	  <moduleRef key="figures"/>     <!-- for <table>, <row>, <cell>, and <figure> -->
-	  <moduleRef key="transcr"/>     <!-- for facs= -->
-	  <moduleRef key="namesdates"/>  <!-- for <orgName> and <persName> -->
+        <head>Specification</head>
+        <schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_">
+          <moduleRef key="core"/>
+          <moduleRef key="tei"/>
+          <moduleRef key="header"/>
+          <moduleRef key="textstructure"/>
+          <moduleRef key="figures"/>
+          <!-- for <table>, <row>, <cell>, and <figure> -->
+          <moduleRef key="transcr"/>
+          <!-- for facs= -->
+          <moduleRef key="namesdates"/>
+          <!-- for <orgName> and <persName> -->
           <!-- ****************************************** -->
           <!-- Changes to elements, in alphabetical order -->
           <!-- ****************************************** -->
-	  <elementSpec module="textstructure" ident="TEI" mode="replace">
-	    <gloss>TEI document</gloss>
-            <desc>contains a single TEI-in-Libraries level 3 document,
-            comprising a TEI header and a text, the latter represented
-            as either a transcription (in <gi>text</gi>) or a
-            transcription and page images (in <gi>facsimile</gi>),
-            either in isolation or as part of a <gi>teiCorpus</gi>
-            element.</desc>
+          <elementSpec module="textstructure" ident="TEI" mode="replace">
+            <gloss>TEI document</gloss>
+            <desc>contains a single TEI-in-Libraries level 3 document, comprising a TEI header and a
+              text, the latter represented as either a transcription (in <gi>text</gi>) or a
+              transcription and page images (in <gi>facsimile</gi>), either in isolation or as part
+              of a <gi>teiCorpus</gi> element.</desc>
             <content>
-	      <rng:ref name="teiHeader"/>
-	      <rng:zeroOrMore>
-		<rng:ref name="model.resourceLike"/>
-	      </rng:zeroOrMore>
-	      <rng:ref name="text"/>
+              <rng:ref name="teiHeader"/>
+              <rng:zeroOrMore>
+                <rng:ref name="model.resourceLike"/>
+              </rng:zeroOrMore>
+              <rng:ref name="text"/>
             </content>
-	    <attList>
-	      <attDef ident="version" usage="opt">
-		<desc>The version of the TEI scheme</desc>
-		<datatype>
-		  <rng:data type="decimal"/>
-		</datatype>
-		<defaultVal>5.0</defaultVal>
-		<valDesc>A number identifying the version of the TEI guidelines</valDesc>
-	      </attDef>
-	    </attList>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<TEI>
-		  <teiHeader>
-		    <fileDesc>
-		      <titleStmt>
-			<title>A Short Level 3 Document</title>
-		      </titleStmt>
-		      <publicationStmt>
-			<p>Only published as an example.</p>
-		      </publicationStmt>
-		      <sourceDesc>
-			<p>Since this is an example, it doesn't really have a source</p>
-		      </sourceDesc>
-		    </fileDesc>
-		  </teiHeader>
-		  <text>
-		    <body>
-		      <div type="chapter" n="1">
-			<head>The Bride</head>
-			<p>The year that Buttercup was born, the most beautiful woman
-			<lb/>in the world …</p>
-			<!-- rest of chapter 1 -->
-		      </div>
-		      <div type="chapter" n="2">
-			<head>The Groom</head>
-			<note>
-			  <p>This is my first major excision. Chapter One, The Bride, is almost
-			  <lb/>in its entirety about the bride. …</p>
-			</note>
-			<!-- rest of chapter 2 -->
-		      </div>
-		      <!-- rest of the book -->
-		    </body>
-		  </text>
-		</TEI>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>This element is required. The TEI namespace should be specified on this element.</p>
-	    </remarks>
-	    <listRef>
-	      <ptr target="#DS"/>
-	      <ptr target="#CCDEF"/>
-	    </listRef>
-	  </elementSpec>
-	  <elementSpec module="core" ident="author" mode="replace">
-	    <desc>in a bibliographic reference, contains the name
-	    (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
-	    <gi>orgName</gi>) of the author, personal or corporate, of
-	    a work; for example in the same form as that provided by a
-	    recognized bibliographic name authority. </desc>
-	    <classes>
-	      <memberOf key="att.canonical"/>
-	      <memberOf key="model.respLike"/>
-	    </classes>
-	    <content>
-	      <rng:ref name="macro.phraseSeq"/>
-	    </content>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author><orgName>British Broadcasting Corporation</orgName></author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author><persName ref="#mdalmau.cny">Michelle Dalmau</persName></author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author><name>Matthew Gibson</name></author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author>anonymous</author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author>unknown</author>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>Particularly where cataloguing is likely to be based
-	      on the content of the header, it is advisable to use a
-	      generally recognized name authority file to supply the
-	      content for this element. The attributes <att>key</att>
-	      or <att>ref</att> may also be used to reference
-	      canonical information about the author(s) intended from
-	      any appropriate authority, such as a library catalogue
-	      or online resource.</p>
-	      <p>In the case of a broadcast, use this element for the
-	      name of the company or network responsible for making
-	      the broadcast.</p>
-	      <p>Where an author is unknown or unspecified, this
-	      element may contain text such as
-	      <mentioned>Unknown</mentioned> or
-	      <mentioned>Anonymous</mentioned>. When the appropriate
-	      TEI modules are in use, it may also contain detailed
-	      tagging of the names used for people, organizations or
-	      places, in particular where multiple names are
-	      given.</p>
-	    </remarks>
-	    <listRef>
-	      <ptr target="#COBICOR"/>
-	      <ptr target="#HD21"/>
-	    </listRef>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="back" mode="replace">
-	    <gloss>back matter</gloss>
-	    <desc>contains any appendixes, etc. following the main part of a text.</desc>
-	    <classes>
-	      <memberOf key="att.declaring"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.frontPart"/>
-		    <rng:ref name="model.pLike.front"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:group>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:group>
-			<rng:group>
-			  <rng:ref name="model.div1Like"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.frontPart"/>
-			    <rng:ref name="model.div1Like"/>
-			    <rng:ref name="model.global"/>
-			  </rng:choice>
-			</rng:zeroOrMore>
-		      </rng:group>
-		      <rng:group>
-			<rng:group>
-			  <rng:ref name="model.divLike"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.frontPart"/>
-			    <rng:ref name="model.divLike"/>
-			    <rng:ref name="model.global"/>
-			  </rng:choice>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		  </rng:optional>
-		</rng:group>
-		<rng:group>
-		  <rng:optional>
-		    <rng:group>
-		      <rng:ref name="model.divBottomPart"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:choice>
-			<rng:ref name="model.divBottomPart"/>
-			<rng:ref name="model.global"/>
-		      </rng:choice>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </rng:group>
-	    </content>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<back>
-		  <div1 type="appendix">
-		    <head>The Golden Dream or, the Ingenuous Confession</head>
-		    <ab>To shew the Depravity of human Nature </ab>
-		  </div1>
-		  <div1 type="epistle">
-		    <head>A letter from the Printer, which he desires may be inserted</head>
-		    <ab>Sir.
-		    I have done with your Copy, so you may return it to the Vatican, if you please</ab>
-		  </div1>
-		  <div1 type="advert">
-		    <head>The Books usually read by the Scholars of
-		    Mrs Two-Shoes are these and are sold at Mr
-		    Newbery's at the Bible and Sun in St Paul's
-		    Church-yard.</head>
-		    <ab>
-		      The Christmas Box, Price 1d.
-		      The History of Giles Gingerbread, 1d.
-		      A Curious Collection of Travels, selected from the Writers of all Nations,
-		      10 Vol, Pr. bound 1l.
-		    </ab>
-		  </div1>
-		  <div1 type="advert">
-		    <head>By the KING's Royal Patent,
-		    Are sold by J. NEWBERY, at the
-		    Bible and Sun in St. Paul's Church-Yard.</head>
-		    <ab>
-		      Dr. James's Powders for Fevers, the Small-Pox, Measles, Colds, &amp;c.
-		      2s. 6d
-		      Dr. Hooper's Female Pills, 1s.
-		    </ab>
-		  </div1>
-		</back>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>The content model of back matter is identical to that
-	      of front matter, reflecting the facts of cultural
-	      history.</p>
-	    </remarks>
-	    <listRef>
-	      <ptr target="#DSBACK"/>
-	      <ptr target="#DS"/>
-	    </listRef>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="body" mode="replace">
-	    <desc>contains the body of a single unitary text,
-	    excluding any front or back matter.</desc>
-	    <content>
-	      <!-- globals as usual -->
-	      <rng:zeroOrMore>
-		<rng:ref name="model.global"/>
-	      </rng:zeroOrMore>
-	      <!--possibly some divTops, interspersed with globals -->
-	      <rng:optional>
-		<rng:group>
-		  <rng:group>
-		    <rng:ref name="model.divTop"/>
-		  </rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.global"/>
-		      <rng:ref name="model.divTop"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		</rng:group>
-	      </rng:optional>
-	      <rng:group>
-		<!-- 
+            <attList>
+              <attDef ident="version" usage="opt">
+                <desc>The version of the TEI scheme</desc>
+                <datatype>
+                  <rng:data type="decimal"/>
+                </datatype>
+                <defaultVal>5.0</defaultVal>
+                <valDesc>A number identifying the version of the TEI guidelines</valDesc>
+              </attDef>
+            </attList>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <TEI>
+                  <teiHeader>
+                    <fileDesc>
+                      <titleStmt>
+                        <title>A Short Level 3 Document</title>
+                      </titleStmt>
+                      <publicationStmt>
+                        <p>Only published as an example.</p>
+                      </publicationStmt>
+                      <sourceDesc>
+                        <p>Since this is an example, it doesn't really have a source</p>
+                      </sourceDesc>
+                    </fileDesc>
+                  </teiHeader>
+                  <text>
+                    <body>
+                      <div type="chapter" n="1">
+                        <head>The Bride</head>
+                        <p>The year that Buttercup was born, the most beautiful woman <lb/>in the
+                          world …</p>
+                        <!-- rest of chapter 1 -->
+                      </div>
+                      <div type="chapter" n="2">
+                        <head>The Groom</head>
+                        <note>
+                          <p>This is my first major excision. Chapter One, The Bride, is almost
+                            <lb/>in its entirety about the bride. …</p>
+                        </note>
+                        <!-- rest of chapter 2 -->
+                      </div>
+                      <!-- rest of the book -->
+                    </body>
+                  </text>
+                </TEI>
+              </egXML>
+            </exemplum>
+            <remarks>
+              <p>This element is required. The TEI namespace should be specified on this
+                element.</p>
+            </remarks>
+            <listRef>
+              <ptr target="#DS"/>
+              <ptr target="#CCDEF"/>
+            </listRef>
+          </elementSpec>
+          <elementSpec module="core" ident="author" mode="replace">
+            <desc>in a bibliographic reference, contains the name (typically encoded as
+                <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of the author, personal or
+              corporate, of a work; for example in the same form as that provided by a recognized
+              bibliographic name authority. </desc>
+            <classes>
+              <memberOf key="att.canonical"/>
+              <memberOf key="model.respLike"/>
+            </classes>
+            <content>
+              <rng:ref name="macro.phraseSeq"/>
+            </content>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <author><orgName>British Broadcasting Corporation</orgName></author>
+              </egXML>
+            </exemplum>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <author><persName ref="#mdalmau.cny">Michelle Dalmau</persName></author>
+              </egXML>
+            </exemplum>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <author><name>Matthew Gibson</name></author>
+              </egXML>
+            </exemplum>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <author>anonymous</author>
+              </egXML>
+            </exemplum>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <author>unknown</author>
+              </egXML>
+            </exemplum>
+            <remarks>
+              <p>Particularly where cataloguing is likely to be based on the content of the header,
+                it is advisable to use a generally recognized name authority file to supply the
+                content for this element. The attributes <att>key</att> or <att>ref</att> may also
+                be used to reference canonical information about the author(s) intended from any
+                appropriate authority, such as a library catalogue or online resource.</p>
+              <p>In the case of a broadcast, use this element for the name of the company or network
+                responsible for making the broadcast.</p>
+              <p>Where an author is unknown or unspecified, this element may contain text such as
+                  <mentioned>Unknown</mentioned> or <mentioned>Anonymous</mentioned>. When the
+                appropriate TEI modules are in use, it may also contain detailed tagging of the
+                names used for people, organizations or places, in particular where multiple names
+                are given.</p>
+            </remarks>
+            <listRef>
+              <ptr target="#COBICOR"/>
+              <ptr target="#HD21"/>
+            </listRef>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="back" mode="replace">
+            <gloss>back matter</gloss>
+            <desc>contains any appendixes, etc. following the main part of a text.</desc>
+            <classes>
+              <memberOf key="att.declaring"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.frontPart"/>
+                    <rng:ref name="model.pLike.front"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:group>
+                  <rng:optional>
+                    <rng:choice>
+                      <rng:group>
+                        <rng:group>
+                          <rng:ref name="model.div1Like"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:choice>
+                            <rng:ref name="model.frontPart"/>
+                            <rng:ref name="model.div1Like"/>
+                            <rng:ref name="model.global"/>
+                          </rng:choice>
+                        </rng:zeroOrMore>
+                      </rng:group>
+                      <rng:group>
+                        <rng:group>
+                          <rng:ref name="model.divLike"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:choice>
+                            <rng:ref name="model.frontPart"/>
+                            <rng:ref name="model.divLike"/>
+                            <rng:ref name="model.global"/>
+                          </rng:choice>
+                        </rng:zeroOrMore>
+                      </rng:group>
+                    </rng:choice>
+                  </rng:optional>
+                </rng:group>
+                <rng:group>
+                  <rng:optional>
+                    <rng:group>
+                      <rng:ref name="model.divBottomPart"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.divBottomPart"/>
+                        <rng:ref name="model.global"/>
+                      </rng:choice>
+                    </rng:zeroOrMore>
+                  </rng:optional>
+                </rng:group>
+              </rng:group>
+            </content>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <back>
+                  <div1 type="appendix">
+                    <head>The Golden Dream or, the Ingenuous Confession</head>
+                    <ab>To shew the Depravity of human Nature </ab>
+                  </div1>
+                  <div1 type="epistle">
+                    <head>A letter from the Printer, which he desires may be inserted</head>
+                    <ab>Sir. I have done with your Copy, so you may return it to the Vatican, if you
+                      please</ab>
+                  </div1>
+                  <div1 type="advert">
+                    <head>The Books usually read by the Scholars of Mrs Two-Shoes are these and are
+                      sold at Mr Newbery's at the Bible and Sun in St Paul's Church-yard.</head>
+                    <ab> The Christmas Box, Price 1d. The History of Giles Gingerbread, 1d. A
+                      Curious Collection of Travels, selected from the Writers of all Nations, 10
+                      Vol, Pr. bound 1l. </ab>
+                  </div1>
+                  <div1 type="advert">
+                    <head>By the KING's Royal Patent, Are sold by J. NEWBERY, at the Bible and Sun
+                      in St. Paul's Church-Yard.</head>
+                    <ab> Dr. James's Powders for Fevers, the Small-Pox, Measles, Colds, &amp;c. 2s.
+                      6d Dr. Hooper's Female Pills, 1s. </ab>
+                  </div1>
+                </back>
+              </egXML>
+            </exemplum>
+            <remarks>
+              <p>The content model of back matter is identical to that of front matter, reflecting
+                the facts of cultural history.</p>
+            </remarks>
+            <listRef>
+              <ptr target="#DSBACK"/>
+              <ptr target="#DS"/>
+            </listRef>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="body" mode="replace">
+            <desc>contains the body of a single unitary text, excluding any front or back
+              matter.</desc>
+            <content>
+              <!-- globals as usual -->
+              <rng:zeroOrMore>
+                <rng:ref name="model.global"/>
+              </rng:zeroOrMore>
+              <!--possibly some divTops, interspersed with globals -->
+              <rng:optional>
+                <rng:group>
+                  <rng:group>
+                    <rng:ref name="model.divTop"/>
+                  </rng:group>
+                  <rng:zeroOrMore>
+                    <rng:choice>
+                      <rng:ref name="model.global"/>
+                      <rng:ref name="model.divTop"/>
+                    </rng:choice>
+                  </rng:zeroOrMore>
+                </rng:group>
+              </rng:optional>
+              <rng:group>
+                <!-- 
 		     now a choice between
 		     a) some divLike things, with globals
 		     after them if needed 
@@ -755,1116 +726,1100 @@
 		     after them if needed 
 		     c) same again, preceded by model.common
 		-->
-		<rng:choice>
-		  <!-- a -->
-		  <rng:oneOrMore>
-		    <rng:group>
-		      <rng:group>
-			<rng:ref name="model.divLike"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:oneOrMore>
-		  <!-- b -->
-		  <rng:oneOrMore>
-		    <rng:group>
-		      <rng:group>
-			<rng:ref name="model.div1Like"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:oneOrMore>
-		  <!-- c -->
-		  <rng:group>
-		    <rng:oneOrMore>
-		      <rng:group>
-			<rng:ref name="model.common"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:optional>
-		      <rng:choice>
-			<!-- a -->
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:group>
-			      <rng:ref name="model.divLike"/>
-			    </rng:group>
-			    <rng:zeroOrMore>
-			      <rng:ref name="model.global"/>
-			    </rng:zeroOrMore>
-			  </rng:group>
-			</rng:oneOrMore>
-			<!-- b -->
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:group>
-			      <rng:ref name="model.div1Like"/>
-			    </rng:group>
-			    <rng:zeroOrMore>
-			      <rng:ref name="model.global"/>
-			    </rng:zeroOrMore>
-			  </rng:group>
-			</rng:oneOrMore>
-		      </rng:choice>
-		    </rng:optional>
-		  </rng:group>
-		</rng:choice>
-		<!-- end of choice -->
-	      </rng:group>
-	    </content>
-	    <exemplum xml:lang="fr">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<body>
-		  <head>LA FOREST
-		  NVPTIALE,</head>
-		  <ab>Où e∫t repre∫entee vne varieté bigarree, 
-		  non mois e∫merveillable que plai∫an‐
-		  te, de diuers mariages, ∫elon qu’ils ∫ont
-		  ob∫erueZ &amp; pratiqueZ par plu∫ieurs
-		  peuples &amp; nations e∫tranges. Auec
-		  la maniere de policier, regir, gouuer‐
-		  ner &amp; admini∫trer leur famille.</ab>
-		  <div type="chapter">
-		    <head>Les Romains. CHAPITRE I.</head>
-		    <ab>Encores que ie ne 
-		    veuille me formali‐
-		    ∫er contre le droict
-		    Romain, neãtmoins
-		    puis que le forma‐
-		    litez, qui e∫toient an‐
-		    ciennement gardees au nopces
-		    Romaines, ∫ont maintenant mi∫es
-		    hors d’v∫ages &amp; pratique, ie ne ∫e‐
-		    A
-		    <pb/>
-		    ray point de difficulté d’emprunter
-		    des anciens autheurs ce qui appar‐
-		    <!-- ... -->
-		    </ab>
-		  </div>
-		</body>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>At level 2, the content of <gi>body</gi> may contain
-	      only <gi>head</gi>, <gi>ab</gi>, <gi>pb</gi>,
-	      <gi>note</gi>, and either <gi>div</gi> or <gi>div1</gi>
-	      elements.</p>
-	    </remarks>
-	    <listRef>
-	      <ptr target="#DS"/>
-	    </listRef>
-	  </elementSpec>
-	  <elementSpec module="core" ident="date" mode="change">
-	    <constraintSpec scheme="isoschematron" ident="whenNotContent">
-	      <s:rule context="date[parent::publicationStmt]">
-		<s:assert test="@when">Dates inside the publication statement must have @when (and should not
-		have content)</s:assert>
-		<s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the publication statement
-		should not have content (and must have @when)</s:report>
-	      </s:rule>
-	    </constraintSpec>
-	    <constraintSpec scheme="isoschematron" ident="whenMaybeContent">
-	      <s:rule context="date[ancestor::biblStruct]">
-		<s:assert test="@when">Dates within a TEI header or
-		structured bibliography should have a @when
-		attribute.</s:assert>
-	      </s:rule>
-	    </constraintSpec>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.divLike"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:choice>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:ref name="model.divLike"/>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		    </rng:group>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:group>
-			  <rng:ref name="model.common"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.divLike"/>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:choice>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <constraintSpec scheme="isoschematron" ident="recommendType">
-	      <s:rule>
-		<s:report test="./not[@type]">Use of the
-		<att>type</att> attribute of <gi>div</gi> is
-		recommended</s:report>
-	      </s:rule>
-	    </constraintSpec>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-	      </attDef>
-	    </attList>
-	    <remarks>
-	      <p>At level 2, <gi>div</gi> may only contain
-	      <gi>head</gi>, <gi>ab</gi>, <gi>pb</gi>, <gi>note</gi>,
-	      and more <gi>div</gi> elements.</p>
-	    </remarks>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div1" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.div1Like"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:choice>
-		    <rng:oneOrMore>
-		      <rng:choice>
-			<rng:ref name="model.div2Like"/>
-			<rng:ref name="model.divGenLike"/>
-		      </rng:choice>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:group>
-			  <rng:ref name="model.common"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:zeroOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div2Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:choice>
-		  <rng:zeroOrMore>
-		    <rng:group>
-		      <rng:ref name="model.divBottom"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:zeroOrMore>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<defaultVal>section</defaultVal>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div2" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.div2Like"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:choice>
-		    <rng:oneOrMore>
-		      <rng:choice>
-			<rng:ref name="model.div3Like"/>
-			<rng:ref name="model.divGenLike"/>
-		      </rng:choice>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:group>
-			  <rng:ref name="model.common"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:zeroOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div3Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:choice>
-		  <rng:zeroOrMore>
-		    <rng:group>
-		      <rng:ref name="model.divBottom"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:zeroOrMore>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<defaultVal>section</defaultVal>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div3" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.div3Like"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:choice>
-		    <rng:oneOrMore>
-		      <rng:choice>
-			<rng:ref name="model.div4Like"/>
-			<rng:ref name="model.divGenLike"/>
-		      </rng:choice>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:group>
-			  <rng:ref name="model.common"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:zeroOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div4Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:choice>
-		  <rng:zeroOrMore>
-		    <rng:group>
-		      <rng:ref name="model.divBottom"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:zeroOrMore>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<defaultVal>section</defaultVal>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div4" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.div4Like"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:choice>
-		    <rng:oneOrMore>
-		      <rng:choice>
-			<rng:ref name="model.div5Like"/>
-			<rng:ref name="model.divGenLike"/>
-		      </rng:choice>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:group>
-			  <rng:ref name="model.common"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:zeroOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div5Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:choice>
-		  <rng:zeroOrMore>
-		    <rng:group>
-		      <rng:ref name="model.divBottom"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:zeroOrMore>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<defaultVal>section</defaultVal>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div5" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.div5Like"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:choice>
-		    <rng:oneOrMore>
-		      <rng:choice>
-			<rng:ref name="model.div6Like"/>
-			<rng:ref name="model.divGenLike"/>
-		      </rng:choice>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:group>
-			  <rng:ref name="model.common"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:zeroOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div6Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:choice>
-		  <rng:zeroOrMore>
-		    <rng:group>
-		      <rng:ref name="model.divBottom"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:zeroOrMore>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<defaultVal>section</defaultVal>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div6" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.div6Like"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:choice>
-		    <rng:oneOrMore>
-		      <rng:choice>
-			<rng:ref name="model.div7Like"/>
-			<rng:ref name="model.divGenLike"/>
-		      </rng:choice>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:group>
-		      <rng:oneOrMore>
-			<rng:group>
-			  <rng:ref name="model.common"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:zeroOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div7Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:choice>
-		  <rng:zeroOrMore>
-		    <rng:group>
-		      <rng:ref name="model.divBottom"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:zeroOrMore>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<defaultVal>section</defaultVal>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="div7" mode="replace">
-	    <classes mode="change">
-	      <memberOf key="att.typed" mode="delete"/>
-	      <memberOf key="model.div7Like"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.divTop"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:optional>
-		  <rng:oneOrMore>
-		    <rng:group>
-		      <rng:ref name="model.common"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:oneOrMore>
-		  <rng:zeroOrMore>
-		    <rng:group>
-		      <rng:ref name="model.divBottom"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:ref name="model.global"/>
-		    </rng:zeroOrMore>
-		  </rng:zeroOrMore>
-		</rng:optional>
-	      </rng:group>
-	    </content>
-	    <attList>
-	      <attDef ident="type" mode="change">
-		<datatype>
-		  <rng:ref name="data.enumerated"/>
-		</datatype>
-		<defaultVal>section</defaultVal>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="core" ident="editor" mode="replace">
-	    <desc>contains the name (typically encoded as
-	    <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
-	    an individual, institution, or organization acting as
-	    editor</desc>
-	    <classes>
-	      <memberOf key="model.respLike"/>
-	    </classes>
-	    <content>
-	      <rng:ref name="macro.phraseSeq"/>
-	    </content>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<editor><persName ref="names.xml#khawkins.tvt">Kevin Hawkins</persName></editor>
-	      </egXML>
-	    </exemplum>
-	    <listRef>
-	      <ptr target="#COBICOR"/>
-	    </listRef>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="front" mode="replace">
-	    <gloss>front matter</gloss>
-	    <desc>contains any prefatory matter (headers, title page,
-	    prefaces, dedications, etc.) found at the start of a
-	    document, before the main body.</desc>
-	    <classes>
-	      <memberOf key="att.declaring"/>
-	    </classes>
-	    <content>
-	      <rng:group>
-		<rng:zeroOrMore>
-		  <rng:choice>
-		    <rng:ref name="model.frontPart"/>
-		    <rng:ref name="model.pLike.front"/>
-		    <rng:ref name="model.global"/>
-		  </rng:choice>
-		</rng:zeroOrMore>
-		<rng:group>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:group>
-			<rng:group>
-			  <rng:ref name="model.div1Like"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.frontPart"/>
-			    <rng:ref name="model.div1Like"/>
-			    <rng:ref name="model.global"/>
-			  </rng:choice>
-			</rng:zeroOrMore>
-		      </rng:group>
-		      <rng:group>
-			<rng:group>
-			  <rng:ref name="model.divLike"/>
-			</rng:group>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.frontPart"/>
-			    <rng:ref name="model.divLike"/>
-			    <rng:ref name="model.global"/>
-			  </rng:choice>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		  </rng:optional>
-		</rng:group>
-		<rng:group>
-		  <rng:optional>
-		    <rng:group>
-		      <rng:ref name="model.divBottomPart"/>
-		    </rng:group>
-		    <rng:zeroOrMore>
-		      <rng:choice>
-			<rng:ref name="model.divBottomPart"/>
-			<rng:ref name="model.global"/>
-		      </rng:choice>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </rng:group>
-	    </content>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<front>
-		  <div type="dedication">
-		    <ab>To our three selves</ab>
-		  </div>
-		  <div type="preface">
-		    <head>Author's Note</head>
-		    <ab>All the characters in this book are purely
-		    imaginary, and if the author has used names that
-		    may suggest a reference to living persons she has
-		    done so inadvertently. ...</ab>
-		  </div>
-		</front>
-	      </egXML>
-	    </exemplum>
-	    <listRef>
-	      <ptr target="#DSTITL"/>
-	      <ptr target="#DS"/>
-	    </listRef>
-	  </elementSpec>
-	  <elementSpec module="core" ident="head" mode="replace">
-	    <gloss>heading</gloss>
-	    <desc>contains the heading of a division, for example the
-	    title of a section.</desc>
-	    <classes>
-	      <memberOf key="att.typed"/>
-	      <memberOf key="model.headLike"/>
-	      <memberOf key="model.pLike.front"/>
-	    </classes>
-	    <content>
-	      <rng:ref name="macro.paraContent"/>
-	    </content>
-	    <exemplum xml:lang="en">
-	      <p>The most common use for the <gi>head</gi> element is
-	      to mark the headings of sections. In older writings, the
-	      headings or <term>incipits</term> may be rather longer
-	      than usual in modern works.</p>
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<div1 n="I" type="book">
-		  <head>In the name of Christ here begins the first
-		  book of the ecclesiastical history of Georgius
-		  Florentinus, known as Gregory, Bishop of
-		  Tours.</head>
-		  <ab>
-		    ...
-		  </ab>
-		  <div2 type="section">
-		    <head>In the name of Christ here begins
-		    Book I of the history.</head>
-		    <ab>Proposing as I do ...
-		    ...
-		    From the Passion of our Lord until the death of
-		    Saint Martin four hundred and twelve years
-		    passed.
-		    Here ends the first Book, which covers five
-		    thousand, five hundred and ninety-six years from
-		    the beginning of the world down to the death of
-		    Saint Martin.</ab>
-		  </div2>
-		</div1>
-	      </egXML>
-	    </exemplum>
-	    <remarks>
-	      <p>The <gi>head</gi> element is used for headings at all
-	      levels; software which treats (e.g.) chapter headings,
-	      section headings, and list titles differently must
-	      determine the proper processing of a <gi>head</gi>
-	      element based on its structural position.</p>
-	      <p>A <gi>head</gi> occurring as the first element of a
-	      <gi>div1</gi> is the title of that chapter or
-	      section.</p>
-	    </remarks>
-	    <listRef>
-	      <ptr target="#DSHD" type="div2"/>
-	    </listRef>
-	  </elementSpec>
-	  <elementSpec module="core" ident="note" mode="change">
-	    <attList>
-	      <attDef ident="anchored" mode="delete"/>
-	      <attDef ident="target" mode="delete"/>
-	      <attDef ident="targetEnd" mode="delete"/>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="namesdates" ident="orgName" mode="change">
-	    <classes mode="change">
-	      <memberOf mode="delete" key="att.datable"/>
-	    </classes>
-	  </elementSpec>
+                <rng:choice>
+                  <!-- a -->
+                  <rng:oneOrMore>
+                    <rng:group>
+                      <rng:group>
+                        <rng:ref name="model.divLike"/>
+                      </rng:group>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:oneOrMore>
+                  <!-- b -->
+                  <rng:oneOrMore>
+                    <rng:group>
+                      <rng:group>
+                        <rng:ref name="model.div1Like"/>
+                      </rng:group>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:oneOrMore>
+                  <!-- c -->
+                  <rng:group>
+                    <rng:oneOrMore>
+                      <rng:group>
+                        <rng:ref name="model.common"/>
+                      </rng:group>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:oneOrMore>
+                    <rng:optional>
+                      <rng:choice>
+                        <!-- a -->
+                        <rng:oneOrMore>
+                          <rng:group>
+                            <rng:group>
+                              <rng:ref name="model.divLike"/>
+                            </rng:group>
+                            <rng:zeroOrMore>
+                              <rng:ref name="model.global"/>
+                            </rng:zeroOrMore>
+                          </rng:group>
+                        </rng:oneOrMore>
+                        <!-- b -->
+                        <rng:oneOrMore>
+                          <rng:group>
+                            <rng:group>
+                              <rng:ref name="model.div1Like"/>
+                            </rng:group>
+                            <rng:zeroOrMore>
+                              <rng:ref name="model.global"/>
+                            </rng:zeroOrMore>
+                          </rng:group>
+                        </rng:oneOrMore>
+                      </rng:choice>
+                    </rng:optional>
+                  </rng:group>
+                </rng:choice>
+                <!-- end of choice -->
+              </rng:group>
+            </content>
+            <exemplum xml:lang="fr">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <body>
+                  <head>LA FOREST NVPTIALE,</head>
+                  <ab>Où e∫t repre∫entee vne varieté bigarree, non mois e∫merveillable que plai∫an‐
+                    te, de diuers mariages, ∫elon qu’ils ∫ont ob∫erueZ &amp; pratiqueZ par plu∫ieurs
+                    peuples &amp; nations e∫tranges. Auec la maniere de policier, regir, gouuer‐ ner
+                    &amp; admini∫trer leur famille.</ab>
+                  <div type="chapter">
+                    <head>Les Romains. CHAPITRE I.</head>
+                    <ab>Encores que ie ne veuille me formali‐ ∫er contre le droict Romain, neãtmoins
+                      puis que le forma‐ litez, qui e∫toient an‐ ciennement gardees au nopces
+                      Romaines, ∫ont maintenant mi∫es hors d’v∫ages &amp; pratique, ie ne ∫e‐ A
+                      <pb/> ray point de difficulté d’emprunter des anciens autheurs ce qui appar‐
+                      <!-- ... -->
+                    </ab>
+                  </div>
+                </body>
+              </egXML>
+            </exemplum>
+            <remarks>
+              <p>At level 3, the content of <gi>body</gi> may contain
+	      only the <gi>head</gi>,
+	      <gi>l</gi>,
+	      <gi>lg</gi>,
+	      <gi>p</gi>,
+	      <gi>figure</gi>,
+	      <gi>floatingText</gi>,
+	      <gi>pb</gi>,
+	      <gi>lb</gi>,
+	      <gi>note</gi>,
+	      and
+              either <gi>div</gi> or <gi>div1</gi> elements.</p>
+            </remarks>
+            <listRef>
+              <ptr target="#DS"/>
+            </listRef>
+          </elementSpec>
+          <elementSpec module="core" ident="date" mode="change">
+            <constraintSpec scheme="isoschematron" ident="whenNotContent">
+              <constraint>
+                <s:rule context="date[parent::publicationStmt]">
+                  <s:assert test="@when">Dates inside the publication statement must have @when (and
+                    should not have content)</s:assert>
+                  <s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the
+                    publication statement should not have content (and must have @when)</s:report>
+                </s:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec scheme="isoschematron" ident="whenMaybeContent">
+              <constraint>
+                <s:rule context="date[ancestor::biblStruct]">
+                  <s:assert test="@when">Dates within a TEI header or structured bibliography should
+                    have a @when attribute.</s:assert>
+                </s:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.divLike"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:choice>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:ref name="model.divLike"/>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                    </rng:group>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:group>
+                          <rng:ref name="model.common"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.divLike"/>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:choice>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <constraintSpec scheme="isoschematron" ident="recommendType">
+              <constraint>
+                <s:rule>
+                  <s:report test="./not[@type]">Use of the <att>type</att> attribute of <gi>div</gi>
+                    is recommended</s:report>
+                </s:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="type" mode="add">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+              </attDef>
+            </attList>
+            <remarks>
+              <p>At level 3, <gi>div</gi> may only contain
+	      the <gi>head</gi>,
+	      <gi>l</gi>,
+	      <gi>lg</gi>,
+	      <gi>p</gi>,
+	      <gi>figure</gi>,
+	      <gi>floatingText</gi>,
+	      <gi>pb</gi>,
+	      <gi>lb</gi>,
+	      <gi>note</gi>,
+	      and
+              <gi>div</gi> elements.</p>
+            </remarks>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div1" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.div1Like"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:choice>
+                    <rng:oneOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.div2Like"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:oneOrMore>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:group>
+                          <rng:ref name="model.common"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                      <rng:zeroOrMore>
+                        <rng:choice>
+                          <rng:ref name="model.div2Like"/>
+                          <rng:ref name="model.divGenLike"/>
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:choice>
+                  <rng:zeroOrMore>
+                    <rng:group>
+                      <rng:ref name="model.divBottom"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type" mode="change">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+                <defaultVal>section</defaultVal>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div2" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.div2Like"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:choice>
+                    <rng:oneOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.div3Like"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:oneOrMore>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:group>
+                          <rng:ref name="model.common"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                      <rng:zeroOrMore>
+                        <rng:choice>
+                          <rng:ref name="model.div3Like"/>
+                          <rng:ref name="model.divGenLike"/>
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:choice>
+                  <rng:zeroOrMore>
+                    <rng:group>
+                      <rng:ref name="model.divBottom"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type" mode="change">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+                <defaultVal>section</defaultVal>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div3" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.div3Like"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:choice>
+                    <rng:oneOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.div4Like"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:oneOrMore>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:group>
+                          <rng:ref name="model.common"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                      <rng:zeroOrMore>
+                        <rng:choice>
+                          <rng:ref name="model.div4Like"/>
+                          <rng:ref name="model.divGenLike"/>
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:choice>
+                  <rng:zeroOrMore>
+                    <rng:group>
+                      <rng:ref name="model.divBottom"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type" mode="change">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+                <defaultVal>section</defaultVal>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div4" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.div4Like"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:choice>
+                    <rng:oneOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.div5Like"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:oneOrMore>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:group>
+                          <rng:ref name="model.common"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                      <rng:zeroOrMore>
+                        <rng:choice>
+                          <rng:ref name="model.div5Like"/>
+                          <rng:ref name="model.divGenLike"/>
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:choice>
+                  <rng:zeroOrMore>
+                    <rng:group>
+                      <rng:ref name="model.divBottom"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type" mode="change">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+                <defaultVal>section</defaultVal>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div5" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.div5Like"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:choice>
+                    <rng:oneOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.div6Like"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:oneOrMore>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:group>
+                          <rng:ref name="model.common"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                      <rng:zeroOrMore>
+                        <rng:choice>
+                          <rng:ref name="model.div6Like"/>
+                          <rng:ref name="model.divGenLike"/>
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:choice>
+                  <rng:zeroOrMore>
+                    <rng:group>
+                      <rng:ref name="model.divBottom"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type" mode="change">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+                <defaultVal>section</defaultVal>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div6" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.div6Like"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:choice>
+                    <rng:oneOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.div7Like"/>
+                        <rng:ref name="model.divGenLike"/>
+                      </rng:choice>
+                      <rng:zeroOrMore>
+                        <rng:ref name="model.global"/>
+                      </rng:zeroOrMore>
+                    </rng:oneOrMore>
+                    <rng:group>
+                      <rng:oneOrMore>
+                        <rng:group>
+                          <rng:ref name="model.common"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:oneOrMore>
+                      <rng:zeroOrMore>
+                        <rng:choice>
+                          <rng:ref name="model.div7Like"/>
+                          <rng:ref name="model.divGenLike"/>
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                          <rng:ref name="model.global"/>
+                        </rng:zeroOrMore>
+                      </rng:zeroOrMore>
+                    </rng:group>
+                  </rng:choice>
+                  <rng:zeroOrMore>
+                    <rng:group>
+                      <rng:ref name="model.divBottom"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type" mode="change">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+                <defaultVal>section</defaultVal>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="div7" mode="replace">
+            <classes mode="change">
+              <memberOf key="att.typed" mode="delete"/>
+              <memberOf key="model.div7Like"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.divTop"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:optional>
+                  <rng:oneOrMore>
+                    <rng:group>
+                      <rng:ref name="model.common"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:oneOrMore>
+                  <rng:zeroOrMore>
+                    <rng:group>
+                      <rng:ref name="model.divBottom"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:ref name="model.global"/>
+                    </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                </rng:optional>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type" mode="change">
+                <datatype>
+                  <rng:ref name="data.enumerated"/>
+                </datatype>
+                <defaultVal>section</defaultVal>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec module="core" ident="editor" mode="replace">
+            <desc>contains the name (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
+                <gi>orgName</gi>) of an individual, institution, or organization acting as
+              editor</desc>
+            <classes>
+              <memberOf key="model.respLike"/>
+            </classes>
+            <content>
+              <rng:ref name="macro.phraseSeq"/>
+            </content>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <editor><persName ref="names.xml#khawkins.tvt">Kevin Hawkins</persName></editor>
+              </egXML>
+            </exemplum>
+            <listRef>
+              <ptr target="#COBICOR"/>
+            </listRef>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="front" mode="replace">
+            <gloss>front matter</gloss>
+            <desc>contains any prefatory matter (headers, title page, prefaces, dedications, etc.)
+              found at the start of a document, before the main body.</desc>
+            <classes>
+              <memberOf key="att.declaring"/>
+            </classes>
+            <content>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="model.frontPart"/>
+                    <rng:ref name="model.pLike.front"/>
+                    <rng:ref name="model.global"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+                <rng:group>
+                  <rng:optional>
+                    <rng:choice>
+                      <rng:group>
+                        <rng:group>
+                          <rng:ref name="model.div1Like"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:choice>
+                            <rng:ref name="model.frontPart"/>
+                            <rng:ref name="model.div1Like"/>
+                            <rng:ref name="model.global"/>
+                          </rng:choice>
+                        </rng:zeroOrMore>
+                      </rng:group>
+                      <rng:group>
+                        <rng:group>
+                          <rng:ref name="model.divLike"/>
+                        </rng:group>
+                        <rng:zeroOrMore>
+                          <rng:choice>
+                            <rng:ref name="model.frontPart"/>
+                            <rng:ref name="model.divLike"/>
+                            <rng:ref name="model.global"/>
+                          </rng:choice>
+                        </rng:zeroOrMore>
+                      </rng:group>
+                    </rng:choice>
+                  </rng:optional>
+                </rng:group>
+                <rng:group>
+                  <rng:optional>
+                    <rng:group>
+                      <rng:ref name="model.divBottomPart"/>
+                    </rng:group>
+                    <rng:zeroOrMore>
+                      <rng:choice>
+                        <rng:ref name="model.divBottomPart"/>
+                        <rng:ref name="model.global"/>
+                      </rng:choice>
+                    </rng:zeroOrMore>
+                  </rng:optional>
+                </rng:group>
+              </rng:group>
+            </content>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <front>
+                  <div type="dedication">
+                    <ab>To our three selves</ab>
+                  </div>
+                  <div type="preface">
+                    <head>Author's Note</head>
+                    <ab>All the characters in this book are purely imaginary, and if the author has
+                      used names that may suggest a reference to living persons she has done so
+                      inadvertently. ...</ab>
+                  </div>
+                </front>
+              </egXML>
+            </exemplum>
+            <listRef>
+              <ptr target="#DSTITL"/>
+              <ptr target="#DS"/>
+            </listRef>
+          </elementSpec>
+          <elementSpec module="core" ident="head" mode="replace">
+            <gloss>heading</gloss>
+            <desc>contains the heading of a division, for example the title of a section.</desc>
+            <classes>
+              <memberOf key="att.typed"/>
+              <memberOf key="model.headLike"/>
+              <memberOf key="model.pLike.front"/>
+            </classes>
+            <content>
+              <rng:ref name="macro.paraContent"/>
+            </content>
+            <exemplum xml:lang="en">
+              <p>The most common use for the <gi>head</gi> element is to mark the headings of
+                sections. In older writings, the headings or <term>incipits</term> may be rather
+                longer than usual in modern works.</p>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <div1 n="I" type="book">
+                  <head>In the name of Christ here begins the first book of the ecclesiastical
+                    history of Georgius Florentinus, known as Gregory, Bishop of Tours.</head>
+                  <ab> ... </ab>
+                  <div2 type="section">
+                    <head>In the name of Christ here begins Book I of the history.</head>
+                    <ab>Proposing as I do ... ... From the Passion of our Lord until the death of
+                      Saint Martin four hundred and twelve years passed. Here ends the first Book,
+                      which covers five thousand, five hundred and ninety-six years from the
+                      beginning of the world down to the death of Saint Martin.</ab>
+                  </div2>
+                </div1>
+              </egXML>
+            </exemplum>
+            <remarks>
+              <p>The <gi>head</gi> element is used for headings at all levels; software which treats
+                (e.g.) chapter headings, section headings, and list titles differently must
+                determine the proper processing of a <gi>head</gi> element based on its structural
+                position.</p>
+              <p>A <gi>head</gi> occurring as the first element of a <gi>div1</gi> is the title of
+                that chapter or section.</p>
+            </remarks>
+            <listRef>
+              <ptr target="#DSHD" type="div2"/>
+            </listRef>
+          </elementSpec>
+          <elementSpec module="core" ident="note" mode="change">
+            <attList>
+              <attDef ident="anchored" mode="delete"/>
+              <attDef ident="target" mode="delete"/>
+              <attDef ident="targetEnd" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec module="namesdates" ident="orgName" mode="change">
+            <classes mode="change">
+              <memberOf mode="delete" key="att.datable"/>
+            </classes>
+          </elementSpec>
           <elementSpec module="core" ident="pb" mode="change">
             <attList>
               <attDef ident="ed" mode="delete"/>
             </attList>
           </elementSpec>
-	  <elementSpec module="namesdates" ident="persName" mode="change">
-	    <classes mode="change">
-	      <memberOf mode="delete" key="att.datable"/>
-	    </classes>
-	  </elementSpec>
+          <elementSpec module="namesdates" ident="persName" mode="change">
+            <classes mode="change">
+              <memberOf mode="delete" key="att.datable"/>
+            </classes>
+          </elementSpec>
           <elementSpec module="core" ident="ptr" mode="change">
             <attList>
               <attDef ident="cRef" mode="delete"/>
             </attList>
           </elementSpec>
-	  <elementSpec module="core" ident="ref" mode="change">
-	    <attList>
-	      <attDef ident="cRef" mode="delete"/>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="core" ident="respStmt" mode="change">
-	    <content>
-	      <rng:choice>
-		<rng:group>
-		  <rng:ref name="resp"/>
-		  <rng:oneOrMore>
-		    <rng:ref name="model.nameLike.agent"/>
-		  </rng:oneOrMore>
-		</rng:group>
-		<rng:group>
-		  <rng:oneOrMore>
-		    <rng:ref name="model.nameLike.agent"/>
-		  </rng:oneOrMore>
-		  <rng:ref name="resp"/>
-		</rng:group>
-	      </rng:choice>
-	    </content>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="teiHeader" mode="change">
-	    <attList>
-	      <attDef mode="change" ident="xml:lang" usage="req"/>
-	      <attDef mode="delete" ident="type"/>
-	    </attList>
-	  </elementSpec>
-	  <elementSpec module="textstructure" ident="title" mode="replace">
-	    <desc>contains a title for any kind of work.</desc>
-	    <classes>
-	      <memberOf key="model.emphLike"/>
-	      <memberOf key="model.msQuoteLike"/>
-	      <memberOf key="att.canonical"/>
-	    </classes>
-	    <content>
-	      <rng:ref name="macro.paraContent"/>
-	    </content>
-	    <constraintSpec scheme="isoschematron" ident="titleLevel">
-	      <s:rule context="parent::seriesStmt">
-		<s:assert test="@level='s'">When a child of &lt;seriesStmt&gt;, the level of a title must be
-		specified as 's'.</s:assert>
-	      </s:rule>
-	      <s:rule context="parent::analytic">
-		<s:assert test="@level='a'">When a child of &lt;analytic&gt;, the level of a title must be
-		specified as 'a'.</s:assert>
-	      </s:rule>
-	    </constraintSpec>
-	    <attList>
-	      <attDef ident="level" usage="opt">
-		<desc>indicates the bibliographic level for a title,
-		that is, whether it identifies an article, book,
-		journal, series, or unpublished material.</desc>
-		<valList type="closed">
-		  <valItem ident="a">
-		    <gloss>analytic</gloss>
-		    <desc>analytic title (article, poem, or other item
-		    published as part of a larger item) </desc>
-		  </valItem>
-		  <valItem ident="m">
-		    <gloss>monographic</gloss>
-		    <desc>monographic title (book, collection, or
-		    other item published as a distinct item,
-		    including single volumes of multi-volume
-		    works) </desc>
-		  </valItem>
-		  <valItem ident="j">
-		    <gloss>journal</gloss>
-		    <desc>journal title </desc>
-		  </valItem>
-		  <valItem ident="s">
-		    <gloss>series</gloss>
-		    <desc>series title </desc>
-		  </valItem>
-		  <valItem ident="u">
-		    <gloss>unpublished</gloss>
-		    <desc>title of unpublished material (including
-		    theses and dissertations unless
-		    published by a commercial press)</desc>
-		  </valItem>
-		</valList>
-		<remarks>
-		  <p>The level of a title is sometimes implied by its
-		  context: for example, a title appearing directly
-		  within an <gi>analytic</gi> element is <foreign>ipso
-		  facto</foreign> of level <val>a</val>, and one
-		  appearing within a <gi>series</gi> element of level
-		  <val>s</val>. For this reason, the <att>level</att>
-		  attribute is not required in contexts where its
-		  value can be unambiguously inferred. Where it is
-		  supplied in such contexts, its value should not
-		  contradict the value implied by its parent element.</p>
-		</remarks>
-	      </attDef>
-	      <attDef ident="type" usage="rec">
-		<valList type="semi">
-		  <valItem ident="main">
-		    <desc>main title </desc>
-		  </valItem>
-		  <valItem ident="sub">
-		    <gloss>subordinate</gloss>
-		    <desc>subtitle, title of part </desc>
-		  </valItem>
-		  <valItem ident="alt">
-		    <gloss>alternate</gloss>
-		    <desc>alternate title, often in another language,
-		    by which the work is also known </desc>
-		  </valItem>
-		  <valItem ident="short">
-		    <desc>abbreviated form of title</desc>
-		  </valItem>
-		  <valItem ident="desc">
-		    <gloss>descriptive</gloss>
-		  </valItem>
-		  <valItem ident="translated">
-		    <desc>a translation of a title</desc>
-		  </valItem>
-		  <valItem ident="marc245a">
-		    <desc>used for the title proper and alternative
-		    title according to the national cataloging
-		    code</desc>
-		  </valItem>
-		  <valItem ident="marc245b">
-		    <desc>used for the the remainder of the title
-		    information — parallel titles, titles subsequent
-		    to the first, and other title information —
-		    according to the national cataloging code)</desc>
-		  </valItem>
-                  <valItem ident="uniform">
-                    <desc>used for a uniform title according to the
-                    national cataloging code</desc>
+          <elementSpec module="core" ident="ref" mode="change">
+            <attList>
+              <attDef ident="cRef" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec module="core" ident="respStmt" mode="change">
+            <content>
+              <rng:choice>
+                <rng:group>
+                  <rng:ref name="resp"/>
+                  <rng:oneOrMore>
+                    <rng:ref name="model.nameLike.agent"/>
+                  </rng:oneOrMore>
+                </rng:group>
+                <rng:group>
+                  <rng:oneOrMore>
+                    <rng:ref name="model.nameLike.agent"/>
+                  </rng:oneOrMore>
+                  <rng:ref name="resp"/>
+                </rng:group>
+              </rng:choice>
+            </content>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="teiHeader" mode="change">
+            <attList>
+              <attDef mode="change" ident="xml:lang" usage="req"/>
+              <attDef mode="delete" ident="type"/>
+            </attList>
+          </elementSpec>
+          <elementSpec module="textstructure" ident="title" mode="replace">
+            <desc>contains a title for any kind of work.</desc>
+            <classes>
+              <memberOf key="model.emphLike"/>
+              <memberOf key="model.msQuoteLike"/>
+              <memberOf key="att.canonical"/>
+            </classes>
+            <content>
+              <rng:ref name="macro.paraContent"/>
+            </content>
+            <constraintSpec scheme="isoschematron" ident="titleLevel">
+              <constraint>
+                <s:pattern>
+                  <s:rule context="seriesStmt/title">
+                    <s:assert test="@level='s'">When a child of &lt;seriesStmt&gt;, the level of a
+                      title must be specified as 's'.</s:assert>
+                  </s:rule>
+                  <s:rule context="analytic/title">
+                    <s:assert test="@level='a'">When a child of &lt;analytic&gt;, the level of a
+                      title must be specified as 'a'.</s:assert>
+                  </s:rule>
+                </s:pattern>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="level" usage="opt">
+                <desc>indicates the bibliographic level for a title, that is, whether it identifies
+                  an article, book, journal, series, or unpublished material.</desc>
+                <valList type="closed">
+                  <valItem ident="a">
+                    <gloss>analytic</gloss>
+                    <desc>analytic title (article, poem, or other item published as part of a larger
+                      item) </desc>
                   </valItem>
-		</valList>
-	      </attDef>
-	    </attList>
-	  </elementSpec>
-	  <!-- ********************************* -->
-	  <!-- Element deletion, in module order -->
-	  <!-- ********************************* -->
-	  <elementSpec module="core" ident="abbr" mode="delete"/>
-	  <elementSpec module="core" ident="add" mode="delete"/>
-	  <elementSpec module="core" ident="binaryObject" mode="delete"/>
-	  <elementSpec module="core" ident="cb" mode="delete"/>
-	  <elementSpec module="core" ident="choice" mode="delete"/>
-	  <elementSpec module="core" ident="cit" mode="delete"/>
-	  <elementSpec module="core" ident="corr" mode="delete"/>
-	  <elementSpec module="core" ident="del" mode="delete"/>
-	  <elementSpec module="core" ident="desc" mode="delete"/>
-	  <elementSpec module="core" ident="distinct" mode="delete"/>
-	  <elementSpec module="core" ident="divGen" mode="delete"/>
-	  <elementSpec module="core" ident="emph" mode="delete"/>
-	  <elementSpec module="core" ident="expan" mode="delete"/>
-	  <elementSpec module="core" ident="foreign" mode="delete"/>
-	  <elementSpec module="core" ident="gap" mode="delete"/>
-	  <elementSpec module="core" ident="gloss" mode="delete"/>
-	  <elementSpec module="core" ident="graphic" mode="delete"/>
-	  <elementSpec module="core" ident="headItem" mode="delete"/>
-	  <elementSpec module="core" ident="headLabel" mode="delete"/>
-	  <elementSpec module="core" ident="index" mode="delete"/>
-	  <!-- elementSpec module="core" ident="label" mode="delete"/  needed for <application> -->
-	  <elementSpec module="core" ident="listBibl" mode="delete"/>
-	  <elementSpec module="core" ident="measure" mode="delete"/>
-	  <elementSpec module="core" ident="measureGrp" mode="delete"/>
-	  <elementSpec module="core" ident="mentioned" mode="delete"/>
-	  <elementSpec module="core" ident="milestone" mode="delete"/>
-	  <elementSpec module="core" ident="num" mode="delete"/>
-	  <elementSpec module="core" ident="orig" mode="delete"/>
-	  <elementSpec module="core" ident="q" mode="delete"/>
-	  <elementSpec module="core" ident="quote" mode="delete"/>
-	  <elementSpec module="core" ident="reg" mode="delete"/>
-	  <elementSpec module="core" ident="rs" mode="delete"/>
-	  <elementSpec module="core" ident="said" mode="delete"/>
-	  <elementSpec module="core" ident="sic" mode="delete"/>
-	  <elementSpec module="core" ident="soCalled" mode="delete"/>
-	  <elementSpec module="core" ident="sp" mode="delete"/>
-	  <elementSpec module="core" ident="speaker" mode="delete"/>
-	  <elementSpec module="core" ident="stage" mode="delete"/>
-	  <elementSpec module="core" ident="teiCorpus" mode="delete"/>
-	  <elementSpec module="core" ident="term" mode="delete"/>
-	  <elementSpec module="core" ident="time" mode="delete"/>
-	  <elementSpec module="core" ident="unclear" mode="delete"/>
-	  <elementSpec module="textstructure" ident="argument" mode="delete"/>
-	  <elementSpec module="textstructure" ident="byline" mode="delete"/>
-	  <elementSpec module="textstructure" ident="closer" mode="delete"/>
-	  <elementSpec module="textstructure" ident="dateline" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docAuthor" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docDate" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docEdition" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docImprint" mode="delete"/>
-	  <elementSpec module="textstructure" ident="docTitle" mode="delete"/>
-	  <elementSpec module="textstructure" ident="epigraph" mode="delete"/>
-	  <elementSpec module="textstructure" ident="group" mode="delete"/>
-	  <elementSpec module="textstructure" ident="imprimatur" mode="delete"/>
-	  <elementSpec module="textstructure" ident="opener" mode="delete"/>
-	  <elementSpec module="textstructure" ident="postscript" mode="delete"/>
-	  <elementSpec module="textstructure" ident="salute" mode="delete"/>
-	  <elementSpec module="textstructure" ident="signed" mode="delete"/>
-	  <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
-	  <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
-	  <elementSpec module="textstructure" ident="trailer" mode="delete"/>
-	  <elementSpec module="figures" ident="formula" mode="delete"/>
-	  <elementSpec module="figures" ident="figDesc" mode="delete"/>
-	  <elementSpec module="transcr" ident="zone" mode="delete"/>
-	  <elementSpec module="transcr" ident="addSpan" mode="delete"/>
-	  <elementSpec module="transcr" ident="damage" mode="delete"/>
-	  <elementSpec module="transcr" ident="damageSpan" mode="delete"/>
-	  <elementSpec module="transcr" ident="delSpan" mode="delete"/>
-	  <elementSpec module="transcr" ident="ex" mode="delete"/>
-	  <elementSpec module="transcr" ident="facsimile" mode="delete"/>
-	  <elementSpec module="transcr" ident="fw" mode="delete"/>
-	  <elementSpec module="transcr" ident="handNotes" mode="delete"/>
-	  <elementSpec module="transcr" ident="handShift" mode="delete"/>
-	  <elementSpec module="transcr" ident="am" mode="delete"/>
-	  <elementSpec module="transcr" ident="restore" mode="delete"/>
-	  <elementSpec module="transcr" ident="space" mode="delete"/>
-	  <elementSpec module="transcr" ident="subst" mode="delete"/>
-	  <elementSpec module="transcr" ident="supplied" mode="delete"/>
-	  <elementSpec module="transcr" ident="surface" mode="delete"/>
-	  <elementSpec module="namesdates" ident="surname" mode="delete"/>
-	  <elementSpec module="namesdates" ident="forename" mode="delete"/>
-	  <elementSpec module="namesdates" ident="genName" mode="delete"/>
-	  <elementSpec module="namesdates" ident="nameLink" mode="delete"/>
-	  <elementSpec module="namesdates" ident="addName" mode="delete"/>
-	  <elementSpec module="namesdates" ident="roleName" mode="delete"/>
-	  <elementSpec module="namesdates" ident="placeName" mode="delete"/>
-	  <elementSpec module="namesdates" ident="bloc" mode="delete"/>
-	  <elementSpec module="namesdates" ident="country" mode="delete"/>
-	  <elementSpec module="namesdates" ident="region" mode="delete"/>
-	  <elementSpec module="namesdates" ident="district" mode="delete"/>
-	  <elementSpec module="namesdates" ident="settlement" mode="delete"/>
-	  <elementSpec module="namesdates" ident="offset" mode="delete"/>
-	  <elementSpec module="namesdates" ident="geogName" mode="delete"/>
-	  <elementSpec module="namesdates" ident="geogFeat" mode="delete"/>
-	  <elementSpec module="namesdates" ident="affiliation" mode="delete"/>
-	  <elementSpec module="namesdates" ident="age" mode="delete"/>
-	  <elementSpec module="namesdates" ident="birth" mode="delete"/>
-	  <elementSpec module="namesdates" ident="climate" mode="delete"/>
-	  <elementSpec module="namesdates" ident="death" mode="delete"/>
-	  <elementSpec module="namesdates" ident="education" mode="delete"/>
-	  <elementSpec module="namesdates" ident="event" mode="delete"/>
-	  <elementSpec module="namesdates" ident="faith" mode="delete"/>
-	  <elementSpec module="namesdates" ident="floruit" mode="delete"/>
-	  <elementSpec module="namesdates" ident="geo" mode="delete"/>
-	  <elementSpec module="namesdates" ident="langKnowledge" mode="delete"/>
-	  <elementSpec module="namesdates" ident="langKnown" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listOrg" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listEvent" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listPerson" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listPlace" mode="delete"/>
-	  <elementSpec module="namesdates" ident="location" mode="delete"/>
-	  <elementSpec module="namesdates" ident="nationality" mode="delete"/>
-	  <elementSpec module="namesdates" ident="occupation" mode="delete"/>
-	  <elementSpec module="namesdates" ident="org" mode="delete"/>
-	  <elementSpec module="namesdates" ident="relationGrp" mode="delete"/>
-	  <elementSpec module="namesdates" ident="person" mode="delete"/>
-	  <elementSpec module="namesdates" ident="personGrp" mode="delete"/>
-	  <elementSpec module="namesdates" ident="place" mode="delete"/>
-	  <elementSpec module="namesdates" ident="population" mode="delete"/>
-	  <elementSpec module="namesdates" ident="relation" mode="delete"/>
-	  <elementSpec module="namesdates" ident="residence" mode="delete"/>
-	  <elementSpec module="namesdates" ident="sex" mode="delete"/>
-	  <elementSpec module="namesdates" ident="socecStatus" mode="delete"/>
-	  <elementSpec module="namesdates" ident="state" mode="delete"/>
-	  <elementSpec module="namesdates" ident="terrain" mode="delete"/>
-	  <elementSpec module="namesdates" ident="trait" mode="delete"/>
-	  <elementSpec module="namesdates" ident="nym" mode="delete"/>
-	  <elementSpec module="namesdates" ident="listNym" mode="delete"/>
-	  <!-- ****************************************************** -->
-	  <!-- Class deletions (both deletion of classes and deletion -->
-	  <!-- of attributes from classes) in no particiular order    -->
-	  <!-- ****************************************************** -->
-	  <classSpec module="tei" type="atts" ident="att.global" mode="change">
-	    <attList>
-	      <attDef ident="rend" mode="delete"/>
-	      <attDef ident="rendition" mode="delete"/>
-	      <attDef ident="xml:base" mode="delete"/>
-	    </attList>
-	  </classSpec>
-	  <classSpec module="tei" type="model" ident="model.inter" mode="change">
-	    <classes mode="change">
-	      <memberOf key="model.common" mode="delete"/>
-	    </classes>
-	  </classSpec>
-	  <classSpec module="tei" ident="model.resourceLike" mode="delete" type="model"/>
-	  <classSpec module="tei" ident="model.common" mode="delete" type="model"/>
-	  <classSpec module="tei" ident="model.divBottom" mode="delete" type="model"/> 
-	  <classSpec module="tei" ident="model.divBottomPart" mode="delete" type="model"/> 
-	  <classSpec module="tei" ident="model.frontPart" mode="delete" type="model"/> 
-	  <classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/> 
-	  <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>        
-	  <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
-	  <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>      
-          <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>      
-	  <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
-	  <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
-	  <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
-	  <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
-	  <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
-	  <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
-	  <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
-	  <classSpec module="tei" ident="att.typed" mode="change" type="atts">
-	    <attList>
-	      <attDef ident="subtype" mode="delete"/>
-	    </attList>
-	  </classSpec>
-	  <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
-	  <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
-	  <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
-	  <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
-	</schemaSpec>
+                  <valItem ident="m">
+                    <gloss>monographic</gloss>
+                    <desc>monographic title (book, collection, or other item published as a distinct
+                      item, including single volumes of multi-volume works) </desc>
+                  </valItem>
+                  <valItem ident="j">
+                    <gloss>journal</gloss>
+                    <desc>journal title </desc>
+                  </valItem>
+                  <valItem ident="s">
+                    <gloss>series</gloss>
+                    <desc>series title </desc>
+                  </valItem>
+                  <valItem ident="u">
+                    <gloss>unpublished</gloss>
+                    <desc>title of unpublished material (including theses and dissertations unless
+                      published by a commercial press)</desc>
+                  </valItem>
+                </valList>
+                <remarks>
+                  <p>The level of a title is sometimes implied by its context: for example, a title
+                    appearing directly within an <gi>analytic</gi> element is <foreign>ipso
+                      facto</foreign> of level <val>a</val>, and one appearing within a
+                      <gi>series</gi> element of level <val>s</val>. For this reason, the
+                      <att>level</att> attribute is not required in contexts where its value can be
+                    unambiguously inferred. Where it is supplied in such contexts, its value should
+                    not contradict the value implied by its parent element.</p>
+                </remarks>
+              </attDef>
+              <attDef ident="type" usage="rec">
+                <valList type="semi">
+                  <valItem ident="main">
+                    <desc>main title </desc>
+                  </valItem>
+                  <valItem ident="sub">
+                    <gloss>subordinate</gloss>
+                    <desc>subtitle, title of part </desc>
+                  </valItem>
+                  <valItem ident="alt">
+                    <gloss>alternate</gloss>
+                    <desc>alternate title, often in another language, by which the work is also
+                      known </desc>
+                  </valItem>
+                  <valItem ident="short">
+                    <desc>abbreviated form of title</desc>
+                  </valItem>
+                  <valItem ident="desc">
+                    <gloss>descriptive</gloss>
+                  </valItem>
+                  <valItem ident="translated">
+                    <desc>a translation of a title</desc>
+                  </valItem>
+                  <valItem ident="marc245a">
+                    <desc>used for the title proper and alternative title according to the national
+                      cataloging code</desc>
+                  </valItem>
+                  <valItem ident="marc245b">
+                    <desc>used for the the remainder of the title information — parallel titles,
+                      titles subsequent to the first, and other title information — according to the
+                      national cataloging code)</desc>
+                  </valItem>
+                  <valItem ident="uniform">
+                    <desc>used for a uniform title according to the national cataloging code</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <!-- ********************************* -->
+          <!-- Element deletion, in module order -->
+          <!-- ********************************* -->
+          <elementSpec module="core" ident="abbr" mode="delete"/>
+          <elementSpec module="core" ident="add" mode="delete"/>
+          <elementSpec module="core" ident="binaryObject" mode="delete"/>
+          <elementSpec module="core" ident="cb" mode="delete"/>
+          <elementSpec module="core" ident="choice" mode="delete"/>
+          <elementSpec module="core" ident="cit" mode="delete"/>
+          <elementSpec module="core" ident="corr" mode="delete"/>
+          <elementSpec module="core" ident="del" mode="delete"/>
+          <elementSpec module="core" ident="desc" mode="delete"/>
+          <elementSpec module="core" ident="distinct" mode="delete"/>
+          <elementSpec module="core" ident="divGen" mode="delete"/>
+          <elementSpec module="core" ident="emph" mode="delete"/>
+          <elementSpec module="core" ident="expan" mode="delete"/>
+          <elementSpec module="core" ident="foreign" mode="delete"/>
+          <elementSpec module="core" ident="gap" mode="delete"/>
+          <elementSpec module="core" ident="gloss" mode="delete"/>
+          <elementSpec module="core" ident="graphic" mode="delete"/>
+          <elementSpec module="core" ident="headItem" mode="delete"/>
+          <elementSpec module="core" ident="headLabel" mode="delete"/>
+          <elementSpec module="core" ident="index" mode="delete"/>
+          <!-- elementSpec module="core" ident="label" mode="delete"/  needed for <application> -->
+          <elementSpec module="core" ident="listBibl" mode="delete"/>
+          <elementSpec module="core" ident="measure" mode="delete"/>
+          <elementSpec module="core" ident="measureGrp" mode="delete"/>
+          <elementSpec module="core" ident="mentioned" mode="delete"/>
+          <elementSpec module="core" ident="milestone" mode="delete"/>
+          <elementSpec module="core" ident="num" mode="delete"/>
+          <elementSpec module="core" ident="orig" mode="delete"/>
+          <elementSpec module="core" ident="q" mode="delete"/>
+          <elementSpec module="core" ident="quote" mode="delete"/>
+          <elementSpec module="core" ident="reg" mode="delete"/>
+          <elementSpec module="core" ident="rs" mode="delete"/>
+          <elementSpec module="core" ident="said" mode="delete"/>
+          <elementSpec module="core" ident="sic" mode="delete"/>
+          <elementSpec module="core" ident="soCalled" mode="delete"/>
+          <elementSpec module="core" ident="sp" mode="delete"/>
+          <elementSpec module="core" ident="speaker" mode="delete"/>
+          <elementSpec module="core" ident="stage" mode="delete"/>
+          <elementSpec module="core" ident="teiCorpus" mode="delete"/>
+          <elementSpec module="core" ident="term" mode="delete"/>
+          <elementSpec module="core" ident="time" mode="delete"/>
+          <elementSpec module="core" ident="unclear" mode="delete"/>
+          <elementSpec module="textstructure" ident="argument" mode="delete"/>
+          <elementSpec module="textstructure" ident="byline" mode="delete"/>
+          <elementSpec module="textstructure" ident="closer" mode="delete"/>
+          <elementSpec module="textstructure" ident="dateline" mode="delete"/>
+          <elementSpec module="textstructure" ident="docAuthor" mode="delete"/>
+          <elementSpec module="textstructure" ident="docDate" mode="delete"/>
+          <elementSpec module="textstructure" ident="docEdition" mode="delete"/>
+          <elementSpec module="textstructure" ident="docImprint" mode="delete"/>
+          <elementSpec module="textstructure" ident="docTitle" mode="delete"/>
+          <elementSpec module="textstructure" ident="epigraph" mode="delete"/>
+          <elementSpec module="textstructure" ident="group" mode="delete"/>
+          <elementSpec module="textstructure" ident="imprimatur" mode="delete"/>
+          <elementSpec module="textstructure" ident="opener" mode="delete"/>
+          <elementSpec module="textstructure" ident="postscript" mode="delete"/>
+          <elementSpec module="textstructure" ident="salute" mode="delete"/>
+          <elementSpec module="textstructure" ident="signed" mode="delete"/>
+          <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
+          <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
+          <elementSpec module="textstructure" ident="trailer" mode="delete"/>
+          <elementSpec module="figures" ident="formula" mode="delete"/>
+          <elementSpec module="figures" ident="figDesc" mode="delete"/>
+          <elementSpec module="transcr" ident="zone" mode="delete"/>
+          <elementSpec module="transcr" ident="addSpan" mode="delete"/>
+          <elementSpec module="transcr" ident="damage" mode="delete"/>
+          <elementSpec module="transcr" ident="damageSpan" mode="delete"/>
+          <elementSpec module="transcr" ident="delSpan" mode="delete"/>
+          <elementSpec module="transcr" ident="ex" mode="delete"/>
+          <elementSpec module="transcr" ident="facsimile" mode="delete"/>
+          <elementSpec module="transcr" ident="fw" mode="delete"/>
+          <elementSpec module="transcr" ident="handNotes" mode="delete"/>
+          <elementSpec module="transcr" ident="handShift" mode="delete"/>
+          <elementSpec module="transcr" ident="am" mode="delete"/>
+          <elementSpec module="transcr" ident="restore" mode="delete"/>
+          <elementSpec module="transcr" ident="space" mode="delete"/>
+          <elementSpec module="transcr" ident="subst" mode="delete"/>
+          <elementSpec module="transcr" ident="supplied" mode="delete"/>
+          <elementSpec module="transcr" ident="surface" mode="delete"/>
+          <elementSpec module="namesdates" ident="surname" mode="delete"/>
+          <elementSpec module="namesdates" ident="forename" mode="delete"/>
+          <elementSpec module="namesdates" ident="genName" mode="delete"/>
+          <elementSpec module="namesdates" ident="nameLink" mode="delete"/>
+          <elementSpec module="namesdates" ident="addName" mode="delete"/>
+          <elementSpec module="namesdates" ident="roleName" mode="delete"/>
+          <elementSpec module="namesdates" ident="placeName" mode="delete"/>
+          <elementSpec module="namesdates" ident="bloc" mode="delete"/>
+          <elementSpec module="namesdates" ident="country" mode="delete"/>
+          <elementSpec module="namesdates" ident="region" mode="delete"/>
+          <elementSpec module="namesdates" ident="district" mode="delete"/>
+          <elementSpec module="namesdates" ident="settlement" mode="delete"/>
+          <elementSpec module="namesdates" ident="offset" mode="delete"/>
+          <elementSpec module="namesdates" ident="geogName" mode="delete"/>
+          <elementSpec module="namesdates" ident="geogFeat" mode="delete"/>
+          <elementSpec module="namesdates" ident="affiliation" mode="delete"/>
+          <elementSpec module="namesdates" ident="age" mode="delete"/>
+          <elementSpec module="namesdates" ident="birth" mode="delete"/>
+          <elementSpec module="namesdates" ident="climate" mode="delete"/>
+          <elementSpec module="namesdates" ident="death" mode="delete"/>
+          <elementSpec module="namesdates" ident="education" mode="delete"/>
+          <elementSpec module="namesdates" ident="event" mode="delete"/>
+          <elementSpec module="namesdates" ident="faith" mode="delete"/>
+          <elementSpec module="namesdates" ident="floruit" mode="delete"/>
+          <elementSpec module="namesdates" ident="geo" mode="delete"/>
+          <elementSpec module="namesdates" ident="langKnowledge" mode="delete"/>
+          <elementSpec module="namesdates" ident="langKnown" mode="delete"/>
+          <elementSpec module="namesdates" ident="listOrg" mode="delete"/>
+          <elementSpec module="namesdates" ident="listEvent" mode="delete"/>
+          <elementSpec module="namesdates" ident="listPerson" mode="delete"/>
+          <elementSpec module="namesdates" ident="listPlace" mode="delete"/>
+          <elementSpec module="namesdates" ident="location" mode="delete"/>
+          <elementSpec module="namesdates" ident="nationality" mode="delete"/>
+          <elementSpec module="namesdates" ident="occupation" mode="delete"/>
+          <elementSpec module="namesdates" ident="org" mode="delete"/>
+          <elementSpec module="namesdates" ident="relationGrp" mode="delete"/>
+          <elementSpec module="namesdates" ident="person" mode="delete"/>
+          <elementSpec module="namesdates" ident="personGrp" mode="delete"/>
+          <elementSpec module="namesdates" ident="place" mode="delete"/>
+          <elementSpec module="namesdates" ident="population" mode="delete"/>
+          <elementSpec module="namesdates" ident="relation" mode="delete"/>
+          <elementSpec module="namesdates" ident="residence" mode="delete"/>
+          <elementSpec module="namesdates" ident="sex" mode="delete"/>
+          <elementSpec module="namesdates" ident="socecStatus" mode="delete"/>
+          <elementSpec module="namesdates" ident="state" mode="delete"/>
+          <elementSpec module="namesdates" ident="terrain" mode="delete"/>
+          <elementSpec module="namesdates" ident="trait" mode="delete"/>
+          <elementSpec module="namesdates" ident="nym" mode="delete"/>
+          <elementSpec module="namesdates" ident="listNym" mode="delete"/>
+          <!-- ****************************************************** -->
+          <!-- Class deletions (both deletion of classes and deletion -->
+          <!-- of attributes from classes) in no particiular order    -->
+          <!-- ****************************************************** -->
+          <classSpec module="tei" type="atts" ident="att.global" mode="change">
+            <attList>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="rendition" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec module="tei" type="model" ident="model.inter" mode="change">
+            <classes mode="change">
+              <memberOf key="model.common" mode="delete"/>
+            </classes>
+          </classSpec>
+          <classSpec module="tei" ident="model.resourceLike" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.divBottom" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.divBottomPart" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.frontPart" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>
+          <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>
+          <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
+          <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
+          <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
+          <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
+          <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
+          <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
+          <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
+          <classSpec module="tei" ident="att.typed" mode="change" type="atts">
+            <attList>
+              <attDef ident="subtype" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
+          <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
+          <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
+          <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
+        </schemaSpec>
       </div>
     </body>
   </text>
