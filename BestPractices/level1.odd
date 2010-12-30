@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:s="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+<TEI xml:lang="en"
+     xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:s="http://purl.oclc.org/dsdl/schematron"
+     xmlns:rng="http://relaxng.org/ns/structure/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -39,6 +43,22 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change who="#sbauman.emt" when="2010-12-19">
+	Updated to match current wiki document and (partially) take
+	advantage of new ODD features:
+	<list>
+	  <item>wrap main content in a <gi>div</gi> so driver document
+	  can include the contents of this document as a division of
+	  its own</item>
+	  <item>use <att>include</att> on <gi>moduleRef</gi> where we
+	  only want certain elements</item>
+	  <item>link to only the <gi>specGrp</gi> of interest in the
+	  header ODD (which is now a complete <gi>TEI</gi>
+	  document)</item>
+	  <item>Add <code>tei</code> prefix to element selectors in
+	  Schematron <att>context</att>s</item>
+	</list>
+      </change>
       <change who="#sbauman.emt" when="2009-07-30">
         Begun, based on lib1.odd
       </change>
@@ -49,7 +69,8 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>Level 1: Fully Automated Conversion and Encoding</head>
       <div type="setting">
-        <p>This is the <name>level 1</name> portion of the <ref target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
+        <p>This is the <name>level 1</name> portion of the <ref
+        target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
         Practices for TEI in Libraries</ref>. This document is not
         intended to stand alone, but rather to be considered in
         concert with the entire TEI in Libraries recommendations.</p>
@@ -57,800 +78,618 @@
       <divGen type="toc"/>
     </front>
     <body>
-      <div type="reference">
-        <head>Reference</head>
-        <list>
-          <item>
-            <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">Chapter
-            3, Elements Available in All TEI Documents</ref>
-          </item>
-        </list>
-        <p>Note that this is not a <soCalled>TEI conformant</soCalled>
-        customization, because it does not follow the TEI abstract
-        model. However, this is a <soCalled>syntactically
-        conformant</soCalled> customization, in that documents that
-        are valid against this scheme will also be valid against the
-        <name>TEI_all</name> schema.</p>
-      </div>
-      <div type="purpose">
-        <head>Purpose</head>
-        <p>To create electronic text with the primary purpose of
-        keyword searching and linking to page images. The primary
-        advantage in using the TEI at this very strictly limited level
-        of encoding is that a TEI header is attached to the text
-        file.</p>
-      </div>
-      <div type="rationale">
-        <head>Rationale</head>
-        <p>The text is subordinate to the page image, and is not
-        intended to stand alone as an electronic text (without page
-        images). Level 1 texts are not intended to be adequate for
-        textual analysis; they are more likely to be suited to the
-        goals of a preservation unit or mass digitization initiative.
-        Though their encoding is minimal, Level 1 texts are fully
-        valid XML texts. In addition to taking advantage of the TEI
-        header, these texts, while lightly encoded, can be easily
-        combined with more richly encoded texts (that also follow
-        these guidelines) for searching. Further encoding based on
-        document structures or content analysis can be added to a
-        Level 1 text at any time.</p>
-        <list>
-          <head>Level 1 is most suitable for projects with the following characteristics</head>
-          <item>a large volume of material is to be made available
-          online quickly</item>
-          <item>a digital image of each page is desired</item>
-          <item>no manual intervention will be performed in the text
-          creation process</item>
-          <item>the material is of interest to a large community of
-          users who wish to read texts that allow keyword
-          searching</item>
-          <item>sophisticated search and display capabilities based on
-          the structure of the text are not necessary</item>
-          <item>extensibility is desired; that is, one desires to keep
-          open the option for a higher level of encoding to be added at
-          a later da</item>
-        </list>
-      </div>
-      <div type="workflow">
-        <head>Workflow</head>
-        <p>Texts at Level 1 can be created and encoded by fully
-        automated means. Page images are scanned and processed using
-        OCR, but the text is left uncorrected ("dirty OCR"). Page
-        images are tagged using software that assigns a page-level
-        metadata (page number and possibly tags for page features)
-        to each page image for display in the user interface in a
-        list of pages. Encoding is performed automatically: markup
-        with page-level metadata is inserted at selected points into
-        the dirty OCR text, generating a valid XML document. This
-        encoding is both minimal and reliable, and does not
-        typically require extensive review of each page of each
-        text.</p>
-      </div>
-      <div type="elrecs">
-        <head>Element Recommendations for Level 1</head>
-        <table>
-          <row><cell><gi>div</gi> or <gi>div1</gi></cell><cell>There should be only one child of <gi>body</gi>: a single <gi>div</gi> (or <gi>div1</gi>).</cell></row>
-          <row><cell><gi>ab</gi> </cell><cell>There should be only one child of the <gi>div</gi> (or <gi>div1</gi>): a single <gi>ab</gi> wrapping all of the OCR text. If the text is ever “upgraded” to Level 3 or higher, the <gi>ab</gi> element will be replaced by structural elements like <gi>p</gi> and <gi>table</gi>.</cell></row>
-          <row><cell><gi>pb</gi> </cell><cell>Required in Level 1. See the explanation for <ref>how to link between the encoded text and images of source documents</ref>.</cell></row>
-        </table>
-      </div>
-      <div type="example">
-        <head>Level 1 Example: Alger Hiss document</head>
-        <p>XML comments (such as <tag>!-- uncorrected OCR for first
-        page image begins here --</tag>) in this and other examples
-        are illustrative but are not meant to be included in encoded
-        documents.</p>
-        <p>Note that for technical reasons the namespace is not shown
-        in these examples, but it should always be supplied on the root
-        <gi>TEI</gi> element, e.g.: <tag>TEI
-        xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          <TEI xml:id="someid">
-            <teiHeader xml:lang="en">
-              <!-- header goes here -->
-            </teiHeader>
-            <text xml:lang="en">
-              <body>
-                <div1>
-                  <ab>
-                    <pb n="113" facs="00000001.tif"/>
-                    <!-- uncorrected OCR for first page image begins here -->
-                    POINT VIII.
-                    BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
-                    CONVICTION SHOULD BE VACATED; ALTERNATIVELY,
-                    DISCOVERY AND A HEARING SHOULD BE ORDERED.
-                    The nature and extent of surveillance of Hiss, his
-                    family and associates was not known at the time of trial by
-                    the defense. Even now, with the release of some of the govern‐
-                    ment documents concerning FBI investigative techniques regarding
-                    Hiss, the full extent of surveillance -- wiretapping, mail open‐
-                    ings, mail covers, physical surveillance, and other intrusive
-                    techniques -- is still not 'clear. Nevertheless, it is apparent
-                    that information gathered through the exploitation of unlawful
-                    wiretaps and other illegal surveillance was used at trial and
-                    consequently the conviction must be reversed. Alternatively,
-                    further discovery and a hearing is essential to a fair deter‐
-                    mination regarding these issues.
-                    FBI surveillance of Hiss began in earnest in 1941 with
-                    the institution of a mail cover on his incoming correspondence
-                    at his home in connection with an FBI investigation of possible
-                    Hatch Act violations. CN Ex. 98A. Another mail cover was placed
+      <!-- This document is encoded with a single <div> as the one and only child of <body>, -->
+      <!-- which on the face of it seems silly. This is on purpose, though, so that the-->
+      <!-- driver document can XInclude to suck in a <div> for all of the body of level 1,-->
+      <!-- but have it be a <div> element so that it is valid in the driver.-->
+      <div xml:id="level-1-content">
+	<div type="reference">
+	  <head>Reference</head>
+	  <list>
+	    <item>
+	      <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">Chapter
+	      3, Elements Available in All TEI Documents</ref>
+	    </item>
+	  </list>
+	  <p>Note that this is not a <soCalled>TEI conformant</soCalled>
+	  customization, because it does not follow the TEI abstract
+	  model. However, this is a <soCalled>syntactically
+	  conformant</soCalled> customization, in that documents that
+	  are valid against this scheme will also be valid against the
+	  <name>TEI_all</name> schema.</p>
+	</div>
+	<div type="purpose">
+	  <head>Purpose</head>
+	  <p>To create electronic text with the primary purpose of
+	  keyword searching and linking to page images. The primary
+	  advantage in using the TEI at this very strictly limited
+	  level of encoding is that a TEI header is attached to the
+	  text file.</p>
+	</div>
+	<div type="rationale">
+	  <head>Rationale</head>
+	  <p>The text is subordinate to the page image, and is not
+	  intended to stand alone as an electronic text (without page
+	  images). Level 1 texts are not intended to be adequate for
+	  textual analysis; they are more likely to be suited to the
+	  goals of a preservation unit or mass digitization
+	  initiative. Though their encoding is minimal, Level 1 texts
+	  are fully valid XML texts. In addition to taking advantage
+	  of the TEI header, these texts, while lightly encoded, can
+	  be easily combined with more richly encoded texts (that also
+	  follow these guidelines) for searching. Further encoding
+	  based on document structures or content analysis can be
+	  added to a Level 1 text at any time.</p>
+	  <list>
+	    <head>Level 1 is most suitable for projects with the following characteristics</head>
+	    <item>a large volume of material is to be made available
+	    online quickly</item>
+	    <item>a digital image of each page is desired</item>
+	    <item>no manual intervention will be performed in the text
+	    creation process</item>
+	    <item>the material is of interest to a large community of
+	    users who wish to read texts that allow keyword
+	    searching</item>
+	    <item>sophisticated search and display capabilities based on
+	    the structure of the text are not necessary</item>
+	    <item>extensibility is desired; that is, one desires to keep
+	    open the option for a higher level of encoding to be added at
+	    a later da</item>
+	  </list>
+	</div>
+	<div type="workflow">
+	  <head>Workflow</head>
+	  <p>Texts at Level 1 can be created and encoded by fully
+	  automated means. Page images are scanned and processed using
+	  OCR, but the text is left uncorrected ("dirty OCR"). Page
+	  images are tagged using software that assigns a page-level
+	  metadata (page number and possibly tags for page features)
+	  to each page image for display in the user interface in a
+	  list of pages. Encoding is performed automatically: markup
+	  with page-level metadata is inserted at selected points into
+	  the dirty OCR text, generating a valid XML document. This
+	  encoding is both minimal and reliable, and does not
+	  typically require extensive review of each page of each
+	  text.</p>
+	</div>
+	<div type="elrecs">
+	  <head>Element Recommendations for Level 1</head>
+	  <table>
+	    <row>
+	      <cell><gi>div</gi> or <gi>div1</gi></cell>
+	      <cell>There should be only one child of <gi>body</gi>: a single <gi>div</gi> (or <gi>div1</gi>).</cell>
+	    </row>
+	    <row>
+	      <cell><gi>ab</gi></cell>
+	      <cell>There should be only one child of the <gi>div</gi>
+	      (or <gi>div1</gi>): a single <gi>ab</gi> wrapping all of
+	      the OCR text. If the text is ever “upgraded” to Level 3
+	      or higher, the <gi>ab</gi> element will be replaced by
+	      structural elements like <gi>p</gi> and
+	      <gi>table</gi>.</cell>
+	    </row>
+	    <row>
+	      <cell><gi>pb</gi> or <gi>facsimile</gi></cell>
+	      <cell>See the explanation above for <ref>how to link
+	      between the encoded text and images of source
+	      documents</ref>. If using <gi>pb</gi>, always put the
+	      element within an <gi>ab</gi> element.</cell>
+	    </row>
+	  </table>
+	</div>
+	<div type="example">
+	  <head>Level 1 Example: Alger Hiss document</head>
+	  <p>XML comments (such as <tag>!-- uncorrected OCR for first
+	  page image begins here --</tag>) in this and other examples
+	  are illustrative but are not meant to be included in encoded
+	  documents.</p>
+	  <p>Note that for technical reasons the namespace is not shown
+	  in these examples, but it should always be supplied on the root
+	  <gi>TEI</gi> element, e.g.: <tag>TEI
+	  xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+	    <TEI xml:id="someid">
+	      <teiHeader xml:lang="en">
+		<!-- header goes here -->
+	      </teiHeader>
+	      <text xml:lang="en">
+		<body>
+		  <div1>
+		    <ab>
+		      <pb n="113" facs="00000001.tif"/>
+		      <!-- uncorrected OCR for first page image begins here -->
+		      POINT VIII.
+		      BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
+		      CONVICTION SHOULD BE VACATED; ALTERNATIVELY,
+		      DISCOVERY AND A HEARING SHOULD BE ORDERED.
+		      The nature and extent of surveillance of Hiss, his
+		      family and associates was not known at the time of trial by
+		      the defense. Even now, with the release of some of the govern‐
+		      ment documents concerning FBI investigative techniques regarding
+		      Hiss, the full extent of surveillance -- wiretapping, mail open‐
+		      ings, mail covers, physical surveillance, and other intrusive
+		      techniques -- is still not 'clear. Nevertheless, it is apparent
+		      that information gathered through the exploitation of unlawful
+		      wiretaps and other illegal surveillance was used at trial and
+		      consequently the conviction must be reversed. Alternatively,
+		      further discovery and a hearing is essential to a fair deter‐
+		      mination regarding these issues.
+		      FBI surveillance of Hiss began in earnest in 1941 with
+		      the institution of a mail cover on his incoming correspondence
+		      at his home in connection with an FBI investigation of possible
+		      Hatch Act violations. CN Ex. 98A. Another mail cover was placed
 
 
-                    -113 -
+		      -113 -
 
 
-                    <!-- uncorrected OCR for first page image ends here -->
-                    <pb n="114" facs="00000002.tif"/>
-                    <!-- uncorrected OCR for second page image begins here -->
-                    on the Hiss mail in 1945, and at the same time the FBI obtained
-                    toll call records from the Hiss residence Telephone for the
-                    years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
-                    the FBI intercepted telegrams to Hiss as well. CN Ex. 100.
-                    In late November, 1945, FBI surveillance of the Hiss
-                    residence in Washington, D.C., escalated. For the third time,
-                    a mail cover was instituted beginning on November 28, 1945,
-                    which was continued at least until 1946. CN Ex. 101 at p. 70;
-                    CN Ex. 102. Continuous physical surveillance of Hiss was begun
-                    as well. CN Ex. 101 at p. 72. Although this twenty-four-hour
-                    surveillance was discontinued on December 14, 1945, physical
-                    surveillance was conducted frequently at various times until
-                    September, 1947. CN Ex. 102; CN Ex. 103.
-                    The most intrusive invasion of petitioner's rights
-                    68/ Also before 1947, a letter from Priscilla Hiss addressed
-                    to her son, Timothy Hobson, was intercepted and its contents
-                    read. CN Ex. 100A at p. 167. In approximately March, 1947,
-                    a letter from a Michael Greenberg addressed to petitioner re‐
-                    garding an application for employment with the United Nations
-                    was also intercepted, in a manner not revealed by the docu‐
-                    ments. CN Ex. 100B
+		      <!-- uncorrected OCR for first page image ends here -->
+		      <pb n="114" facs="00000002.tif"/>
+		      <!-- uncorrected OCR for second page image begins here -->
+		      on the Hiss mail in 1945, and at the same time the FBI obtained
+		      toll call records from the Hiss residence Telephone for the
+		      years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
+		      the FBI intercepted telegrams to Hiss as well. CN Ex. 100.
+		      In late November, 1945, FBI surveillance of the Hiss
+		      residence in Washington, D.C., escalated. For the third time,
+		      a mail cover was instituted beginning on November 28, 1945,
+		      which was continued at least until 1946. CN Ex. 101 at p. 70;
+		      CN Ex. 102. Continuous physical surveillance of Hiss was begun
+		      as well. CN Ex. 101 at p. 72. Although this twenty-four-hour
+		      surveillance was discontinued on December 14, 1945, physical
+		      surveillance was conducted frequently at various times until
+		      September, 1947. CN Ex. 102; CN Ex. 103.
+		      The most intrusive invasion of petitioner's rights
+		      68/ Also before 1947, a letter from Priscilla Hiss addressed
+		      to her son, Timothy Hobson, was intercepted and its contents
+		      read. CN Ex. 100A at p. 167. In approximately March, 1947,
+		      a letter from a Michael Greenberg addressed to petitioner re‐
+		      garding an application for employment with the United Nations
+		      was also intercepted, in a manner not revealed by the docu‐
+		      ments. CN Ex. 100B
 
 
-                    -114 -
+		      -114 -
 
 
 
-                    <!-- uncorrected OCR for second page image ends here -->
-                    <pb n="115" facs="00000003.tif"/>
-                    <!-- uncorrected OCR for third page image begins here -->
-                    occurred from December 13, 1945 until the Hisses moved from
-                    Washington, D.C. to New York City on September 13, 1947. A
-                    "technical surveillance," -- a wiretap -- was placed on the Hiss
-                    telephone at their residence on P Street-in Washington, D.C.
-                    The logs of this surveillance constitute twenty-nine volumes
-                    of FBI serials and are roughly 2,500 pages in length, in which
-                    an enormous amount of information concerning the Hisses' per‐
-                    sonal lives, relationships with friends and associates, and
-                    habits is recorded.
-                    The wiretap was installed following FBI Director Hoover's
-                    application to the Attorney General for authorization,  although
-                    no written authorization appears in the documents released to
-                    Hiss. The purpose of the application was to gather information
-                    regarding Hiss' alleged contacts with Soviet espionage agents and
-                    communists in government service, general allegations which had
-                    been made by Elizabeth Bentley and Chambers.
-                    As one would expect, the interception of every telephone
-                    h9/       Hoover's initial request was answered by a note reques‐
-                    ting information on Hiss. CN Ex. 104. Additional information
-                    was furnished by letter dated November 30, 1945. CN Ex. 105.
+		      <!-- uncorrected OCR for second page image ends here -->
+		      <pb n="115" facs="00000003.tif"/>
+		      <!-- uncorrected OCR for third page image begins here -->
+		      occurred from December 13, 1945 until the Hisses moved from
+		      Washington, D.C. to New York City on September 13, 1947. A
+		      "technical surveillance," -- a wiretap -- was placed on the Hiss
+		      telephone at their residence on P Street-in Washington, D.C.
+		      The logs of this surveillance constitute twenty-nine volumes
+		      of FBI serials and are roughly 2,500 pages in length, in which
+		      an enormous amount of information concerning the Hisses' per‐
+		      sonal lives, relationships with friends and associates, and
+		      habits is recorded.
+		      The wiretap was installed following FBI Director Hoover's
+		      application to the Attorney General for authorization,  although
+		      no written authorization appears in the documents released to
+		      Hiss. The purpose of the application was to gather information
+		      regarding Hiss' alleged contacts with Soviet espionage agents and
+		      communists in government service, general allegations which had
+		      been made by Elizabeth Bentley and Chambers.
+		      As one would expect, the interception of every telephone
+		      h9/       Hoover's initial request was answered by a note reques‐
+		      ting information on Hiss. CN Ex. 104. Additional information
+		      was furnished by letter dated November 30, 1945. CN Ex. 105.
 
 
-                    -115 -
+		      -115 -
 
 
-                    <!-- uncorrected OCR for third page image ends here -->
-                  </ab>
-                </div1>
-              </body>
-            </text>
-          </TEI>
-        </egXML>
-      </div>
-      <!-- ********************************************* -->
-      <div type="specification">
-        <head>Specification</head>
-        <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_">
-          <moduleRef key="core"/>
-          <moduleRef key="tei"/>
-          <moduleRef key="textstructure"/>
-          <moduleRef key="linking"/>     <!-- for <ab> -->
-          <moduleRef key="transcr"/>     <!-- for facs= -->
-          <moduleRef key="namesdates"/>  <!-- for <orgName> and <persName> -->
-	  <specGrpRef target="./lib-header.odd"/>
-          <!-- ****************************************** -->
-          <!-- Changes to elements, in alphabetical order -->
-          <!-- ****************************************** -->
-          <elementSpec module="textstructure" ident="TEI" mode="replace">
-            <gloss>TEI document</gloss>
-            <desc>contains a single TEI-in-Libraries level 1 document,
-            comprising a TEI header and a text, either in isolation or as part of a
-            <gi>teiCorpus</gi> element.</desc>
-            <content>
-              <rng:ref name="teiHeader"/>
-              <rng:ref name="text"/>
-            </content>
-            <attList>
-              <attDef ident="version" usage="opt">
-                <desc>The version of the TEI scheme</desc>
-                <datatype>
-                  <rng:data type="decimal"/>
-                </datatype>
-                <defaultVal>5.0</defaultVal>
-                <valDesc>A number identifying the version of the TEI guidelines</valDesc>
-              </attDef>
-            </attList>
-            <exemplum xml:lang="en">
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <TEI>
-                  <teiHeader>
-                    <fileDesc>
-                      <titleStmt>
-                        <title>A Short Level 1 Document</title>
-                      </titleStmt>
-                      <publicationStmt>
-                        <p>Only published as an example.</p>
-                      </publicationStmt>
-                      <sourceDesc>
-                        <p>Since this is an example, it doesn't really have a source</p>
-                      </sourceDesc>
-                    </fileDesc>
-                  </teiHeader>
-                  <text>
-                    <body>
-                      <div>
-                        <ab>This is about the shortest TEI document imaginable.</ab>
-                      </div>
-                    </body>
-                  </text>
-                </TEI>
-              </egXML>
-            </exemplum>
-            <remarks>
-	      <p>This element is required. The TEI namespace should be specified on this element.</p>
-            </remarks>
-            <listRef>
-              <ptr target="#DS"/>
-              <ptr target="#CCDEF"/>
-            </listRef>
-          </elementSpec>
-          <elementSpec module="linking" ident="ab" mode="change">
-            <desc>contains the entire content of the document; or,
-            when used within the <gi>teiHeader</gi>, contains any
-            arbitrary component-level unit of text, acting as an
-            anonymous container for phrase or inter level elements
-            analogous to, but without the semantic baggage of, a
-            paragraph.</desc>
-            <content>
-              <rng:oneOrMore>
-                <rng:choice>
-                  <rng:text/>
-                  <rng:ref name="model.global"/>
-                </rng:choice>
-              </rng:oneOrMore>
-            </content>
-            <exemplum xml:lang="en">
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <publicationStmt>
-                  <availability><ab>Copyleft 2009 Syd Bauman</ab></availability>
-                </publicationStmt>
-              </egXML>
-            </exemplum>
-            <exemplum xml:lang="en">
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <body>
-                  <div>
-                    <ab>
-                      In the beginning God created the heaven and the earth.
-                      And the earth was without form, and void; and darkness was upon
-                      the face of the deep. And the spirit of God moved upon the face 
-                      of the waters.
-                      And God said, Let there be light: and there was light.
-                    </ab>
-                  </div>
-                </body>      
-              </egXML>
-            </exemplum>
-            <remarks>
-              <p>At level 1, the entire document is encoded as a
-              single <gi>ab</gi> — one and only one <gi>ab</gi>
-              must be present within <gi>text</gi>. Further,
-              <gi>ab</gi> <emph>may</emph> be used in a variety of
-              places within the <gi>teiHeader</gi>.</p>
-            </remarks>
-          </elementSpec>
-	  <elementSpec module="core" ident="author" mode="change">
-	    <desc>in a bibliographic reference, contains the name
-	    (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
-	    <gi>orgName</gi>) of the author, personal or corporate, of
-	    a work; for example in the same form as that provided by a
-	    recognized bibliographic name authority. </desc>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author><orgName>British Broadcasting Corporation</orgName></author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author><persName ref="#mdalmau.cny">Michelle Dalmau</persName></author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author><name>Matthew Gibson</name></author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author>anonymous</author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author>unknown</author>
-	      </egXML>
-	    </exemplum>
-	  </elementSpec>
-          <elementSpec module="textstructure" ident="body" mode="replace">
-            <desc>contains the entirety of a single unitary text,
-            including any front or back matter.</desc>
-            <content>
-              <rng:choice>
-                <rng:ref name="model.divLike"/>
-                <rng:ref name="model.div1Like"/>
-              </rng:choice>
-            </content>
-            <exemplum xml:lang="mul">
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <body>
-                  <div>
-                    <ab>
-                      Nu scylun hergan hefaenricaes uard
-                      metudæs maecti end his modgidanc
-                      uerc uuldurfadur sue he uundra gihuaes
-                      eci dryctin or astelidæ
-                      he aerist scop aelda barnum
-                      heben til hrofe haleg scepen.
-                      tha middungeard moncynnæs uard
-                      eci dryctin æfter tiadæ
-                      firum foldu frea allmectig
-                      primo cantauit Cædmon istud carmen.
-                    </ab>
-                  </div>
-                </body>
-              </egXML>
-            </exemplum>
-            <remarks>
-              <p>At level 1, the content of <gi>body</gi> must be a
-              single <gi>div</gi> or <gi>div1</gi> element.</p>
-            </remarks>
-            <listRef>
-              <ptr target="#DS"/>
-            </listRef>
-          </elementSpec>
-          <elementSpec module="core" ident="date" mode="change">
-            <constraintSpec scheme="isoschematron" ident="whenNotContent">
-	      <constraint>
-		<s:rule context="date[parent::publicationStmt]">
-		  <s:assert test="@when">Dates inside the publication statement must have @when (and should not
-		  have content)</s:assert>
-		  <s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the publication statement
-		  should not have content (and must have @when)</s:report>
-		</s:rule>
-	      </constraint>
-            </constraintSpec>
-            <constraintSpec scheme="isoschematron" ident="whenMaybeContent">
-	      <constraint>
-		<s:rule context="date[ancestor::biblStruct]">
-		  <s:assert test="@when">Dates within a TEI header or
-		  structured bibliography should have a @when
-		  attribute.</s:assert>
-		</s:rule>
-	      </constraint>
-            </constraintSpec>
-          </elementSpec>
-          <elementSpec module="textstructure" ident="div" mode="change">
-            <classes mode="change">
-              <memberOf key="att.typed" mode="delete"/>
-            </classes>
-            <content>
-              <rng:ref name="ab"/>
-            </content>
-            <attList>
-              <attDef ident="type" mode="change">
-                <datatype>
-                  <rng:ref name="data.enumerated"/>
-                </datatype>
-                <defaultVal>section</defaultVal>
-              </attDef>
-            </attList>
-            <remarks>
-              <p>At level 1, the content of <gi>div</gi> must be a
-              single <gi>ab</gi> element.</p>
-            </remarks>
-          </elementSpec>
-          <elementSpec module="textstructure" ident="div1" mode="change">
-            <classes mode="change">
-              <memberOf key="att.typed" mode="delete"/>
-            </classes>
-            <content>
-              <rng:ref name="ab"/>
-            </content>
-            <attList>
-              <attDef ident="type" mode="change">
-                <datatype>
-                  <rng:ref name="data.enumerated"/>
-                </datatype>
-                <defaultVal>section</defaultVal>
-              </attDef>
-            </attList>
-            <remarks>
-              <p>At level 1, the content of <gi>div1</gi> must be a
-              single <gi>ab</gi> element.</p>
-            </remarks>
-          </elementSpec>
-          <elementSpec module="core" ident="editor" mode="change">
-            <desc>contains the name (typically encoded as
-            <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
-            an individual, institution, or organization acting as
-            editor</desc>
-	    <attList>
-	      <attDef ident="role" mode="delete"/>
-	    </attList>
-            <exemplum xml:lang="en">
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <editor><persName ref="names.xml#khawkins.tvt">Kevin Hawkins</persName></editor>
-              </egXML>
-            </exemplum>
-          </elementSpec>
-          <elementSpec module="core" ident="note" mode="change">
-            <attList>
-              <attDef ident="anchored" mode="delete"/>
-              <attDef ident="target" mode="delete"/>
-              <attDef ident="targetEnd" mode="delete"/>
-            </attList>
-          </elementSpec>
-	  <elementSpec module="namesdates" ident="orgName" mode="change">
-	    <classes mode="change">
-	      <memberOf mode="delete" key="att.datable"/>
-	    </classes>
-	  </elementSpec>
-          <elementSpec module="core" ident="pb" mode="change">
-            <attList>
-              <attDef ident="ed" mode="delete"/>
-            </attList>
-          </elementSpec>
-	  <elementSpec module="namesdates" ident="persName" mode="change">
-	    <classes mode="change">
-	      <memberOf mode="delete" key="att.datable"/>
-	    </classes>
-	  </elementSpec>
-          <elementSpec module="core" ident="ptr" mode="change">
-            <attList>
-              <attDef ident="cRef" mode="delete"/>
-            </attList>
-          </elementSpec>
-          <elementSpec module="core" ident="ref" mode="change">
-            <attList>
-              <attDef ident="cRef" mode="delete"/>
-            </attList>
-          </elementSpec>
-          <elementSpec module="core" ident="respStmt" mode="change">
-            <content>
-              <rng:choice>
-                <rng:group>
-                  <rng:ref name="resp"/>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.nameLike.agent"/>
-                  </rng:oneOrMore>
-                </rng:group>
-                <rng:group>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.nameLike.agent"/>
-                  </rng:oneOrMore>
-                  <rng:ref name="resp"/>
-                </rng:group>
-              </rng:choice>
-            </content>
-          </elementSpec>
-          <elementSpec module="textstructure" ident="title" mode="change">
-	    <constraintSpec scheme="isoschematron" ident="titleLevel">
-	      <s:rule context="parent::seriesStmt">
-		<s:assert test="@level='s'">When a child of &lt;seriesStmt&gt;, the level of a title must be
-		specified as 's'.</s:assert>
-	      </s:rule>
-	      <s:rule context="parent::analytic">
-		<s:assert test="@level='a'">When a child of &lt;analytic&gt;, the level of a title must be
-		specified as 'a'.</s:assert>
-	      </s:rule>
-	    </constraintSpec>
-            <attList>
-	      <attDef ident="level" usage="opt" mode="replace">
-		<desc>indicates the bibliographic level for a title,
-		that is, whether it identifies an article, book,
-		journal, series, or unpublished material.</desc>
-		<valList type="closed">
-		  <valItem ident="a">
-		    <gloss>analytic</gloss>
-		    <desc>analytic title (article, poem, or other item
-		    published as part of a larger item) </desc>
-		  </valItem>
-		  <valItem ident="m">
-		    <gloss>monographic</gloss>
-		    <desc>monographic title (book, collection, or
-		    other item published as a distinct item,
-		    including single volumes of multi-volume
-		    works) </desc>
-		  </valItem>
-		  <valItem ident="j">
-		    <gloss>journal</gloss>
-		    <desc>journal title </desc>
-		  </valItem>
-		  <valItem ident="s">
-		    <gloss>series</gloss>
-		    <desc>series title </desc>
-		  </valItem>
-		  <valItem ident="u">
-		    <gloss>unpublished</gloss>
-		    <desc>title of unpublished material (including
-		    theses and dissertations unless
-		    published by a commercial press)</desc>
-		  </valItem>
-		</valList>
-		<remarks>
-		  <p>The level of a title is sometimes implied by its
-		  context: for example, a title appearing directly
-		  within an <gi>analytic</gi> element is <foreign>ipso
-		  facto</foreign> of level <val>a</val>, and one
-		  appearing within a <gi>series</gi> element of level
-		  <val>s</val>. For this reason, the <att>level</att>
-		  attribute is not required in contexts where its
-		  value can be unambiguously inferred. Where it is
-		  supplied in such contexts, its value should not
-		  contradict the value implied by its parent element.</p>
-		</remarks>
-	      </attDef>
-              <attDef ident="type" usage="rec" mode="replace">
-                <valList type="semi">
-                  <valItem ident="main">
-                    <desc>main title </desc>
-                  </valItem>
-                  <valItem ident="sub">
-                    <gloss>subordinate</gloss>
-                    <desc>subtitle, title of part </desc>
-                  </valItem>
-                  <valItem ident="alt">
-                    <gloss>alternate</gloss>
-                    <desc>alternate title, often in another language,
-                    by which the work is also known </desc>
-                  </valItem>
-                  <valItem ident="short">
-                    <desc>abbreviated form of title</desc>
-                  </valItem>
-                  <valItem ident="desc">
-                    <gloss>descriptive</gloss>
-                  </valItem>
-                  <valItem ident="translated">
-                    <desc>a translation of a title</desc>
-                  </valItem>
-                  <valItem ident="marc245a">
-                    <desc>used for the title proper and alternative
-                    title according to the national cataloging
-                    code</desc>
-                  </valItem>
-                  <valItem ident="marc245b">
-                    <desc>used for the the remainder of the title
-                    information — parallel titles, titles subsequent
-                    to the first, and other title information —
-                    according to the national cataloging code)</desc>
-                  </valItem>
-                  <valItem ident="uniform">
-                    <desc>used for a uniform title according to the
-                    national cataloging code</desc>
-                  </valItem>
-                </valList>
-              </attDef>
-            </attList>
-          </elementSpec>
-          <!-- ********************************* -->
-          <!-- Element deletion, in module order -->
-          <!-- ********************************* -->
-          <elementSpec module="core" ident="abbr" mode="delete"/>
-          <elementSpec module="core" ident="add" mode="delete"/>
-          <elementSpec module="core" ident="binaryObject" mode="delete"/>
-          <elementSpec module="core" ident="cb" mode="delete"/>
-          <elementSpec module="core" ident="choice" mode="delete"/>
-          <elementSpec module="core" ident="cit" mode="delete"/>
-          <elementSpec module="core" ident="corr" mode="delete"/>
-          <elementSpec module="core" ident="del" mode="delete"/>
-          <elementSpec module="core" ident="desc" mode="delete"/>
-          <elementSpec module="core" ident="distinct" mode="delete"/>
-          <elementSpec module="core" ident="divGen" mode="delete"/>
-          <elementSpec module="core" ident="emph" mode="delete"/>
-          <elementSpec module="core" ident="expan" mode="delete"/>
-          <elementSpec module="core" ident="foreign" mode="delete"/>
-          <elementSpec module="core" ident="gap" mode="delete"/>
-          <elementSpec module="core" ident="gloss" mode="delete"/>
-          <elementSpec module="core" ident="graphic" mode="delete"/>
-          <elementSpec module="core" ident="head" mode="delete"/>
-          <elementSpec module="core" ident="headItem" mode="delete"/>
-          <elementSpec module="core" ident="headLabel" mode="delete"/>
-          <elementSpec module="core" ident="hi" mode="delete"/>
-          <elementSpec module="core" ident="index" mode="delete"/>
-          <elementSpec module="core" ident="item" mode="delete"/>
-          <elementSpec module="core" ident="l" mode="delete"/>
-	  <!-- elementSpec module="core" ident="label" mode="delete"/  needed for <application> -->
-          <elementSpec module="core" ident="lb" mode="delete"/>
-          <elementSpec module="core" ident="lg" mode="delete"/>
-          <elementSpec module="core" ident="list" mode="delete"/>
-          <elementSpec module="core" ident="listBibl" mode="delete"/>
-          <elementSpec module="core" ident="measure" mode="delete"/>
-          <elementSpec module="core" ident="measureGrp" mode="delete"/>
-          <elementSpec module="core" ident="mentioned" mode="delete"/>
-          <elementSpec module="core" ident="milestone" mode="delete"/>
-          <elementSpec module="core" ident="num" mode="delete"/>
-          <elementSpec module="core" ident="orig" mode="delete"/>
-          <elementSpec module="core" ident="q" mode="delete"/>
-          <elementSpec module="core" ident="quote" mode="delete"/>
-          <elementSpec module="core" ident="reg" mode="delete"/>
-          <elementSpec module="core" ident="rs" mode="delete"/>
-          <elementSpec module="core" ident="said" mode="delete"/>
-          <elementSpec module="core" ident="sic" mode="delete"/>
-          <elementSpec module="core" ident="soCalled" mode="delete"/>
-          <elementSpec module="core" ident="sp" mode="delete"/>
-          <elementSpec module="core" ident="speaker" mode="delete"/>
-          <elementSpec module="core" ident="stage" mode="delete"/>
-          <elementSpec module="core" ident="teiCorpus" mode="delete"/>
-          <elementSpec module="core" ident="term" mode="delete"/>
-          <elementSpec module="core" ident="time" mode="delete"/>
-          <elementSpec module="core" ident="unclear" mode="delete"/>
-          <elementSpec module="textstructure" ident="argument" mode="delete"/>
-          <elementSpec module="textstructure" ident="back" mode="delete"/>
-          <elementSpec module="textstructure" ident="byline" mode="delete"/>
-          <elementSpec module="textstructure" ident="closer" mode="delete"/>
-          <elementSpec module="textstructure" ident="dateline" mode="delete"/>
-          <elementSpec module="textstructure" ident="div2" mode="delete"/>
-          <elementSpec module="textstructure" ident="div3" mode="delete"/>
-          <elementSpec module="textstructure" ident="div4" mode="delete"/>
-          <elementSpec module="textstructure" ident="div5" mode="delete"/>
-          <elementSpec module="textstructure" ident="div6" mode="delete"/>
-          <elementSpec module="textstructure" ident="div7" mode="delete"/>
-          <elementSpec module="textstructure" ident="docAuthor" mode="delete"/>
-          <elementSpec module="textstructure" ident="docDate" mode="delete"/>
-          <elementSpec module="textstructure" ident="docEdition" mode="delete"/>
-          <elementSpec module="textstructure" ident="docImprint" mode="delete"/>
-          <elementSpec module="textstructure" ident="docTitle" mode="delete"/>
-          <elementSpec module="textstructure" ident="epigraph" mode="delete"/>
-          <elementSpec module="textstructure" ident="floatingText" mode="delete"/>
-          <elementSpec module="textstructure" ident="front" mode="delete"/>
-          <elementSpec module="textstructure" ident="group" mode="delete"/>
-          <elementSpec module="textstructure" ident="imprimatur" mode="delete"/>
-          <elementSpec module="textstructure" ident="opener" mode="delete"/>
-          <elementSpec module="textstructure" ident="postscript" mode="delete"/>
-          <elementSpec module="textstructure" ident="salute" mode="delete"/>
-          <elementSpec module="textstructure" ident="signed" mode="delete"/>
-          <elementSpec module="textstructure" ident="titlePage" mode="delete"/>
-          <elementSpec module="textstructure" ident="titlePart" mode="delete"/>
-          <elementSpec module="textstructure" ident="trailer" mode="delete"/>
-          <elementSpec module="linking" ident="link" mode="delete"/>
-          <elementSpec module="linking" ident="linkGrp" mode="delete"/>
-          <elementSpec module="linking" ident="anchor" mode="delete"/>
-          <elementSpec module="linking" ident="seg" mode="delete"/>
-          <elementSpec module="linking" ident="when" mode="delete"/>
-          <elementSpec module="linking" ident="timeline" mode="delete"/>
-          <elementSpec module="linking" ident="join" mode="delete"/>
-          <elementSpec module="linking" ident="joinGrp" mode="delete"/>
-          <elementSpec module="linking" ident="alt" mode="delete"/>
-          <elementSpec module="linking" ident="altGrp" mode="delete"/>
-          <elementSpec module="transcr" ident="zone" mode="delete"/>
-          <elementSpec module="transcr" ident="addSpan" mode="delete"/>
-          <elementSpec module="transcr" ident="damage" mode="delete"/>
-          <elementSpec module="transcr" ident="damageSpan" mode="delete"/>
-          <elementSpec module="transcr" ident="delSpan" mode="delete"/>
-          <elementSpec module="transcr" ident="ex" mode="delete"/>
-          <elementSpec module="transcr" ident="facsimile" mode="delete"/>
-          <elementSpec module="transcr" ident="fw" mode="delete"/>
-          <elementSpec module="transcr" ident="handNotes" mode="delete"/>
-          <elementSpec module="transcr" ident="handShift" mode="delete"/>
-          <elementSpec module="transcr" ident="am" mode="delete"/>
-          <elementSpec module="transcr" ident="restore" mode="delete"/>
-          <elementSpec module="transcr" ident="space" mode="delete"/>
-          <elementSpec module="transcr" ident="subst" mode="delete"/>
-          <elementSpec module="transcr" ident="supplied" mode="delete"/>
-          <elementSpec module="transcr" ident="surface" mode="delete"/>
-          <elementSpec module="namesdates" ident="surname" mode="delete"/>
-          <elementSpec module="namesdates" ident="forename" mode="delete"/>
-          <elementSpec module="namesdates" ident="genName" mode="delete"/>
-          <elementSpec module="namesdates" ident="nameLink" mode="delete"/>
-          <elementSpec module="namesdates" ident="addName" mode="delete"/>
-          <elementSpec module="namesdates" ident="roleName" mode="delete"/>
-          <elementSpec module="namesdates" ident="placeName" mode="delete"/>
-          <elementSpec module="namesdates" ident="bloc" mode="delete"/>
-          <elementSpec module="namesdates" ident="country" mode="delete"/>
-          <elementSpec module="namesdates" ident="region" mode="delete"/>
-          <elementSpec module="namesdates" ident="district" mode="delete"/>
-          <elementSpec module="namesdates" ident="settlement" mode="delete"/>
-          <elementSpec module="namesdates" ident="offset" mode="delete"/>
-          <elementSpec module="namesdates" ident="geogName" mode="delete"/>
-          <elementSpec module="namesdates" ident="geogFeat" mode="delete"/>
-          <elementSpec module="namesdates" ident="affiliation" mode="delete"/>
-          <elementSpec module="namesdates" ident="age" mode="delete"/>
-          <elementSpec module="namesdates" ident="birth" mode="delete"/>
-          <elementSpec module="namesdates" ident="climate" mode="delete"/>
-          <elementSpec module="namesdates" ident="death" mode="delete"/>
-          <elementSpec module="namesdates" ident="education" mode="delete"/>
-          <elementSpec module="namesdates" ident="event" mode="delete"/>
-          <elementSpec module="namesdates" ident="faith" mode="delete"/>
-          <elementSpec module="namesdates" ident="floruit" mode="delete"/>
-          <elementSpec module="namesdates" ident="geo" mode="delete"/>
-          <elementSpec module="namesdates" ident="langKnowledge" mode="delete"/>
-          <elementSpec module="namesdates" ident="langKnown" mode="delete"/>
-          <elementSpec module="namesdates" ident="listOrg" mode="delete"/>
-          <elementSpec module="namesdates" ident="listEvent" mode="delete"/>
-          <elementSpec module="namesdates" ident="listPerson" mode="delete"/>
-          <elementSpec module="namesdates" ident="listPlace" mode="delete"/>
-          <elementSpec module="namesdates" ident="location" mode="delete"/>
-          <elementSpec module="namesdates" ident="nationality" mode="delete"/>
-          <elementSpec module="namesdates" ident="occupation" mode="delete"/>
-          <elementSpec module="namesdates" ident="org" mode="delete"/>
-          <elementSpec module="namesdates" ident="relationGrp" mode="delete"/>
-          <elementSpec module="namesdates" ident="person" mode="delete"/>
-          <elementSpec module="namesdates" ident="personGrp" mode="delete"/>
-          <elementSpec module="namesdates" ident="place" mode="delete"/>
-          <elementSpec module="namesdates" ident="population" mode="delete"/>
-          <elementSpec module="namesdates" ident="relation" mode="delete"/>
-          <elementSpec module="namesdates" ident="residence" mode="delete"/>
-          <elementSpec module="namesdates" ident="sex" mode="delete"/>
-          <elementSpec module="namesdates" ident="socecStatus" mode="delete"/>
-          <elementSpec module="namesdates" ident="state" mode="delete"/>
-          <elementSpec module="namesdates" ident="terrain" mode="delete"/>
-          <elementSpec module="namesdates" ident="trait" mode="delete"/>
-          <elementSpec module="namesdates" ident="nym" mode="delete"/>
-          <elementSpec module="namesdates" ident="listNym" mode="delete"/>
-          <!-- ****************************************************** -->
-          <!-- Class deletions (both deletion of classes and deletion -->
-          <!-- of attributes from classes) in no particiular order    -->
-          <!-- ****************************************************** -->
-          <classSpec module="tei" type="atts" ident="att.global" mode="change">
-            <attList>
-              <attDef ident="rend" mode="delete"/>
-              <attDef ident="rendition" mode="delete"/>
-              <attDef ident="xml:base" mode="delete"/>
-            </attList>
-          </classSpec>
-          <classSpec module="tei" type="model" ident="model.inter" mode="change">
-            <classes mode="change">
-              <memberOf key="model.common" mode="delete"/>
-            </classes>
-          </classSpec>
-          <classSpec module="tei" ident="model.resourceLike" mode="delete" type="model"/>
-          <classSpec module="tei" ident="model.common" mode="delete" type="model"/>
-          <classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/> 
-          <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>        
-          <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
-          <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>      
-          <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>      
-          <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
-          <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
-          <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
-          <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
-          <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
-          <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
-          <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
-          <classSpec module="tei" ident="att.typed" mode="change" type="atts">
-            <attList>
-              <attDef ident="subtype" mode="delete"/>
-            </attList>
-          </classSpec>
-          <classSpec module="linking" ident="att.global.linking" mode="delete" type="atts"/>
-          <classSpec module="linking" ident="att.pointing" mode="delete" type="atts"/>
-          <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
-          <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
-          <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
-          <classSpec module="textstructure" ident="model.divTop" mode="delete" type="model"/>
-          <classSpec module="textstructure" ident="model.divTopPart" mode="delete" type="model"/>
-          <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
-          <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
-        </schemaSpec>
+		      <!-- uncorrected OCR for third page image ends here -->
+		    </ab>
+		  </div1>
+		</body>
+	      </text>
+	    </TEI>
+	  </egXML>
+	</div>
+	<!-- ********************************************* -->
+	<div type="specification">
+	  <head>Specification</head>
+	  <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_">
+	    <moduleRef key="core"/>
+	    <moduleRef key="tei"/>
+	    <moduleRef key="textstructure" include="TEI text body div div1"/>
+	    <moduleRef key="linking" include="ab"/>
+	    <moduleRef key="transcr"/>     <!-- only for facs=; rest should be deleted -->
+	    <moduleRef key="namesdates" include="orgName persName"/>
+	    <specGrpRef target="./lib-header.odd#libHeadSpec"/>
+	    <!-- ****************************************** -->
+	    <!-- Changes to elements, in alphabetical order -->
+	    <!-- ****************************************** -->
+	    <elementSpec module="textstructure" ident="TEI" mode="replace">
+	      <gloss>TEI document</gloss>
+	      <desc>contains a single TEI-in-Libraries level 1
+	      document, comprising a TEI header and a text, either in
+	      isolation or as part of a <gi>teiCorpus</gi>
+	      element.</desc>
+	      <content>
+		<rng:ref name="teiHeader"/>
+		<rng:ref name="text"/>
+	      </content>
+	      <attList>
+		<attDef ident="version" usage="opt">
+		  <desc>The version of the TEI scheme</desc>
+		  <datatype>
+		    <rng:data type="decimal"/>
+		  </datatype>
+		  <defaultVal>5.0</defaultVal>
+		  <valDesc>A number identifying the version of the TEI guidelines</valDesc>
+		</attDef>
+	      </attList>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <TEI>
+		    <teiHeader>
+		      <fileDesc>
+			<titleStmt>
+			  <title>A Short Level 1 Document</title>
+			</titleStmt>
+			<publicationStmt>
+			  <p>Only published as an example.</p>
+			</publicationStmt>
+			<sourceDesc>
+			  <p>Since this is an example, it doesn't really have a source</p>
+			</sourceDesc>
+		      </fileDesc>
+		    </teiHeader>
+		    <text>
+		      <body>
+			<div>
+			  <ab>This is about the shortest TEI document imaginable.</ab>
+			</div>
+		      </body>
+		    </text>
+		  </TEI>
+		</egXML>
+	      </exemplum>
+	      <remarks>
+		<p>This element is required. The TEI namespace should
+		be specified on this element.</p>
+	      </remarks>
+	      <listRef>
+		<ptr target="#DS"/>
+		<ptr target="#CCDEF"/>
+	      </listRef>
+	    </elementSpec>
+	    <elementSpec module="linking" ident="ab" mode="change">
+	      <desc>contains the entire content of the document; or,
+	      when used within the <gi>teiHeader</gi>, contains any
+	      arbitrary component-level unit of text, acting as an
+	      anonymous container for phrase or inter level elements
+	      analogous to, but without the semantic baggage of, a
+	      paragraph.</desc>
+	      <content>
+		<rng:oneOrMore>
+		  <rng:choice>
+		    <rng:text/>
+		    <rng:ref name="model.global"/>
+		  </rng:choice>
+		</rng:oneOrMore>
+	      </content>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <publicationStmt>
+		    <availability><ab>Copyleft 2009 Syd Bauman</ab></availability>
+		  </publicationStmt>
+		</egXML>
+	      </exemplum>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <body>
+		    <div>
+		      <ab>
+			In the beginning God created the heaven and the earth.
+			And the earth was without form, and void; and darkness was upon
+			the face of the deep. And the spirit of God moved upon the face 
+			of the waters.
+			And God said, Let there be light: and there was light.
+		      </ab>
+		    </div>
+		  </body>      
+		</egXML>
+	      </exemplum>
+	      <remarks>
+		<p>At level 1, the entire document is encoded as a
+		single <gi>ab</gi> — one and only one <gi>ab</gi>
+		must be present within <gi>text</gi>. Further,
+		<gi>ab</gi> <emph>may</emph> be used in a variety of
+		places within the <gi>teiHeader</gi>.</p>
+	      </remarks>
+	    </elementSpec>
+	    <elementSpec module="core" ident="author" mode="change">
+	      <desc>in a bibliographic reference, contains the name
+	      (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
+	      <gi>orgName</gi>) of the author, personal or corporate, of
+	      a work; for example in the same form as that provided by a
+	      recognized bibliographic name authority. </desc>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <author><orgName>British Broadcasting Corporation</orgName></author>
+		</egXML>
+	      </exemplum>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <author><persName ref="#mdalmau.cny">Michelle Dalmau</persName></author>
+		</egXML>
+	      </exemplum>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <author><name>Matthew Gibson</name></author>
+		</egXML>
+	      </exemplum>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <author>anonymous</author>
+		</egXML>
+	      </exemplum>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <author>unknown</author>
+		</egXML>
+	      </exemplum>
+	    </elementSpec>
+	    <elementSpec module="textstructure" ident="body" mode="replace">
+	      <desc>contains the entirety of a single unitary text,
+	      including any front or back matter.</desc>
+	      <content>
+		<rng:choice>
+		  <rng:ref name="model.divLike"/>
+		  <rng:ref name="model.div1Like"/>
+		</rng:choice>
+	      </content>
+	      <exemplum xml:lang="mul">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <body>
+		    <div>
+		      <ab>
+			Nu scylun hergan hefaenricaes uard
+			metudæs maecti end his modgidanc
+			uerc uuldurfadur sue he uundra gihuaes
+			eci dryctin or astelidæ
+			he aerist scop aelda barnum
+			heben til hrofe haleg scepen.
+			tha middungeard moncynnæs uard
+			eci dryctin æfter tiadæ
+			firum foldu frea allmectig
+			primo cantauit Cædmon istud carmen.
+		      </ab>
+		    </div>
+		  </body>
+		</egXML>
+	      </exemplum>
+	      <remarks>
+		<p>At level 1, the content of <gi>body</gi> must be a
+		single <gi>div</gi> or <gi>div1</gi> element.</p>
+	      </remarks>
+	      <listRef>
+		<ptr target="#DS"/>
+	      </listRef>
+	    </elementSpec>
+	    <elementSpec module="textstructure" ident="div" mode="change">
+	      <classes mode="change">
+		<memberOf key="att.typed" mode="delete"/>
+	      </classes>
+	      <content>
+		<rng:ref name="ab"/>
+	      </content>
+	      <attList>
+		<attDef ident="type" mode="change">
+		  <datatype>
+		    <rng:ref name="data.enumerated"/>
+		  </datatype>
+		  <defaultVal>section</defaultVal>
+		</attDef>
+	      </attList>
+	      <remarks>
+		<p>At level 1, the content of <gi>div</gi> must be a
+		single <gi>ab</gi> element.</p>
+	      </remarks>
+	    </elementSpec>
+	    <elementSpec module="textstructure" ident="div1" mode="change">
+	      <classes mode="change">
+		<memberOf key="att.typed" mode="delete"/>
+	      </classes>
+	      <content>
+		<rng:ref name="ab"/>
+	      </content>
+	      <attList>
+		<attDef ident="type" mode="change">
+		  <datatype>
+		    <rng:ref name="data.enumerated"/>
+		  </datatype>
+		  <defaultVal>section</defaultVal>
+		</attDef>
+	      </attList>
+	      <remarks>
+		<p>At level 1, the content of <gi>div1</gi> must be a
+		single <gi>ab</gi> element.</p>
+	      </remarks>
+	    </elementSpec>
+	    <elementSpec module="core" ident="editor" mode="change">
+	      <desc>contains the name (typically encoded as
+	      <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
+	      an individual, institution, or organization acting as
+	      editor</desc>
+	      <attList>
+		<attDef ident="role" mode="delete"/>
+	      </attList>
+	      <exemplum xml:lang="en">
+		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+		  <editor><persName ref="names.xml#khawkins.tvt">Kevin Hawkins</persName></editor>
+		</egXML>
+	      </exemplum>
+	    </elementSpec>
+	    <elementSpec module="core" ident="note" mode="change">
+	      <attList>
+		<attDef ident="anchored" mode="delete"/>
+		<attDef ident="target" mode="delete"/>
+		<attDef ident="targetEnd" mode="delete"/>
+	      </attList>
+	    </elementSpec>
+	    <elementSpec module="namesdates" ident="orgName" mode="change">
+	      <classes mode="change">
+		<memberOf mode="delete" key="att.datable"/>
+	      </classes>
+	    </elementSpec>
+	    <elementSpec module="core" ident="pb" mode="change">
+	      <attList>
+		<attDef ident="ed" mode="delete"/>
+	      </attList>
+	    </elementSpec>
+	    <elementSpec module="namesdates" ident="persName" mode="change">
+	      <classes mode="change">
+		<memberOf mode="delete" key="att.datable"/>
+	      </classes>
+	    </elementSpec>
+	    <elementSpec module="core" ident="ptr" mode="change">
+	      <attList>
+		<attDef ident="cRef" mode="delete"/>
+	      </attList>
+	    </elementSpec>
+	    <elementSpec module="core" ident="ref" mode="change">
+	      <attList>
+		<attDef ident="cRef" mode="delete"/>
+	      </attList>
+	    </elementSpec>
+	    <elementSpec module="core" ident="respStmt" mode="change">
+	      <content>
+		<rng:choice>
+		  <rng:group>
+		    <rng:ref name="resp"/>
+		    <rng:oneOrMore>
+		      <rng:ref name="model.nameLike.agent"/>
+		    </rng:oneOrMore>
+		  </rng:group>
+		  <rng:group>
+		    <rng:oneOrMore>
+		      <rng:ref name="model.nameLike.agent"/>
+		    </rng:oneOrMore>
+		    <rng:ref name="resp"/>
+		  </rng:group>
+		</rng:choice>
+	      </content>
+	    </elementSpec>
+	    <!-- ********************************* -->
+	    <!-- Element deletion, in module order -->
+	    <!-- ********************************* -->
+	    <elementSpec module="core" ident="abbr" mode="delete"/>
+	    <elementSpec module="core" ident="add" mode="delete"/>
+	    <elementSpec module="core" ident="binaryObject" mode="delete"/>
+	    <elementSpec module="core" ident="cb" mode="delete"/>
+	    <elementSpec module="core" ident="choice" mode="delete"/>
+	    <elementSpec module="core" ident="cit" mode="delete"/>
+	    <elementSpec module="core" ident="corr" mode="delete"/>
+	    <elementSpec module="core" ident="del" mode="delete"/>
+	    <elementSpec module="core" ident="desc" mode="delete"/>
+	    <elementSpec module="core" ident="distinct" mode="delete"/>
+	    <elementSpec module="core" ident="divGen" mode="delete"/>
+	    <elementSpec module="core" ident="emph" mode="delete"/>
+	    <elementSpec module="core" ident="expan" mode="delete"/>
+	    <elementSpec module="core" ident="foreign" mode="delete"/>
+	    <elementSpec module="core" ident="gap" mode="delete"/>
+	    <elementSpec module="core" ident="gloss" mode="delete"/>
+	    <elementSpec module="core" ident="graphic" mode="delete"/>
+	    <elementSpec module="core" ident="head" mode="delete"/>
+	    <elementSpec module="core" ident="headItem" mode="delete"/>
+	    <elementSpec module="core" ident="headLabel" mode="delete"/>
+	    <elementSpec module="core" ident="hi" mode="delete"/>
+	    <elementSpec module="core" ident="index" mode="delete"/>
+	    <elementSpec module="core" ident="item" mode="delete"/>
+	    <elementSpec module="core" ident="l" mode="delete"/>
+	    <!-- elementSpec module="core" ident="label" mode="delete"/  needed for <application> -->
+	    <elementSpec module="core" ident="lb" mode="delete"/>
+	    <elementSpec module="core" ident="lg" mode="delete"/>
+	    <elementSpec module="core" ident="list" mode="delete"/>
+	    <elementSpec module="core" ident="listBibl" mode="delete"/>
+	    <elementSpec module="core" ident="measure" mode="delete"/>
+	    <elementSpec module="core" ident="measureGrp" mode="delete"/>
+	    <elementSpec module="core" ident="mentioned" mode="delete"/>
+	    <elementSpec module="core" ident="milestone" mode="delete"/>
+	    <elementSpec module="core" ident="num" mode="delete"/>
+	    <elementSpec module="core" ident="orig" mode="delete"/>
+	    <elementSpec module="core" ident="q" mode="delete"/>
+	    <elementSpec module="core" ident="quote" mode="delete"/>
+	    <elementSpec module="core" ident="reg" mode="delete"/>
+	    <elementSpec module="core" ident="rs" mode="delete"/>
+	    <elementSpec module="core" ident="said" mode="delete"/>
+	    <elementSpec module="core" ident="sic" mode="delete"/>
+	    <elementSpec module="core" ident="soCalled" mode="delete"/>
+	    <elementSpec module="core" ident="sp" mode="delete"/>
+	    <elementSpec module="core" ident="speaker" mode="delete"/>
+	    <elementSpec module="core" ident="stage" mode="delete"/>
+	    <elementSpec module="core" ident="teiCorpus" mode="delete"/>
+	    <elementSpec module="core" ident="term" mode="delete"/>
+	    <elementSpec module="core" ident="time" mode="delete"/>
+	    <elementSpec module="core" ident="unclear" mode="delete"/>
+	    <elementSpec module="transcr" ident="zone" mode="delete"/>
+	    <elementSpec module="transcr" ident="addSpan" mode="delete"/>
+	    <elementSpec module="transcr" ident="damage" mode="delete"/>
+	    <elementSpec module="transcr" ident="damageSpan" mode="delete"/>
+	    <elementSpec module="transcr" ident="delSpan" mode="delete"/>
+	    <elementSpec module="transcr" ident="ex" mode="delete"/>
+	    <elementSpec module="transcr" ident="facsimile" mode="delete"/>
+	    <elementSpec module="transcr" ident="fw" mode="delete"/>
+	    <elementSpec module="transcr" ident="handNotes" mode="delete"/>
+	    <elementSpec module="transcr" ident="handShift" mode="delete"/>
+	    <elementSpec module="transcr" ident="am" mode="delete"/>
+	    <elementSpec module="transcr" ident="restore" mode="delete"/>
+	    <elementSpec module="transcr" ident="space" mode="delete"/>
+	    <elementSpec module="transcr" ident="subst" mode="delete"/>
+	    <elementSpec module="transcr" ident="supplied" mode="delete"/>
+	    <elementSpec module="transcr" ident="surface" mode="delete"/>
+	    <!-- ****************************************************** -->
+	    <!-- Class deletions (both deletion of classes and deletion -->
+	    <!-- of attributes from classes) in no particiular order    -->
+	    <!-- ****************************************************** -->
+	    <classSpec module="tei" type="atts" ident="att.global" mode="change">
+	      <attList>
+		<attDef ident="rend" mode="delete"/>
+		<attDef ident="rendition" mode="delete"/>
+		<attDef ident="xml:base" mode="delete"/>
+	      </attList>
+	    </classSpec>
+	    <classSpec module="tei" type="model" ident="model.inter" mode="change">
+	      <classes mode="change">
+		<memberOf key="model.common" mode="delete"/>
+	      </classes>
+	    </classSpec>
+	    <classSpec module="tei" ident="model.resourceLike" mode="delete" type="model"/>
+	    <classSpec module="tei" ident="model.common" mode="delete" type="model"/>
+	    <classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/> 
+	    <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>        
+	    <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
+	    <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>      
+	    <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>      
+	    <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.typed" mode="change" type="atts">
+	      <attList>
+		<attDef ident="subtype" mode="delete"/>
+	      </attList>
+	    </classSpec>
+	    <classSpec module="linking" ident="att.global.linking" mode="delete" type="atts"/>
+	    <classSpec module="linking" ident="att.pointing" mode="delete" type="atts"/>
+	    <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
+	    <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
+	    <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
+	    <classSpec module="textstructure" ident="model.divTop" mode="delete" type="model"/>
+	    <classSpec module="textstructure" ident="model.divTopPart" mode="delete" type="model"/>
+	    <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
+	    <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
+	  </schemaSpec>
+	</div>
       </div>
     </body>
   </text>

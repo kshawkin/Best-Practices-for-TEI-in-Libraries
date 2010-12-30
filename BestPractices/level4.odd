@@ -985,96 +985,14 @@ hearing, along with the president of the student body, and some others.
 	    <desc>contains the body of a single unitary text,
 	    excluding any front or back matter.</desc>
 	    <content>
-	      <!-- globals as usual -->
-	      <rng:zeroOrMore>
-		<rng:ref name="model.global"/>
-	      </rng:zeroOrMore>
-	      <!--possibly some divTops, interspersed with globals -->
-	      <rng:optional>
-		<rng:group>
-		  <rng:group>
-		    <rng:ref name="model.divTop"/>
-		  </rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.global"/>
-		      <rng:ref name="model.divTop"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		</rng:group>
-	      </rng:optional>
-	      <rng:group>
-		<!-- 
-		     now a choice between
-		     a) some divLike things, with globals
-		     after them if needed 
-		     b) some div1Like things, with globals
-		     after them if needed 
-		     c) same again, preceded by model.common
-		-->
-		<rng:choice>
-		  <!-- a -->
-		  <rng:oneOrMore>
-		    <rng:group>
-		      <rng:group>
-			<rng:ref name="model.divLike"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:oneOrMore>
-		  <!-- b -->
-		  <rng:oneOrMore>
-		    <rng:group>
-		      <rng:group>
-			<rng:ref name="model.div1Like"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:group>
-		  </rng:oneOrMore>
-		  <!-- c -->
-		  <rng:group>
-		    <rng:oneOrMore>
-		      <rng:group>
-			<rng:ref name="model.common"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:optional>
-		      <rng:choice>
-			<!-- a -->
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:group>
-			      <rng:ref name="model.divLike"/>
-			    </rng:group>
-			    <rng:zeroOrMore>
-			      <rng:ref name="model.global"/>
-			    </rng:zeroOrMore>
-			  </rng:group>
-			</rng:oneOrMore>
-			<!-- b -->
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:group>
-			      <rng:ref name="model.div1Like"/>
-			    </rng:group>
-			    <rng:zeroOrMore>
-			      <rng:ref name="model.global"/>
-			    </rng:zeroOrMore>
-			  </rng:group>
-			</rng:oneOrMore>
-		      </rng:choice>
-		    </rng:optional>
-		  </rng:group>
-		</rng:choice>
-		<!-- end of choice -->
-	      </rng:group>
+	      <rng:choice>
+		<rng:oneOrMore>
+		  <rng:ref name="model.divLike"/>
+		</rng:oneOrMore>
+		<rng:oneOrMore>
+		  <rng:ref name="model.div1Like"/>
+		</rng:oneOrMore>
+	      </rng:choice>
 	    </content>
 	    <exemplum xml:lang="fr">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1644,6 +1562,21 @@ hearing, along with the president of the student body, and some others.
 	    <listRef>
 	      <ptr target="#COBICOR"/>
 	    </listRef>
+	  </elementSpec>
+	  <elementSpec module="core" ident="floatingText" mode="change">
+	    <content>
+	      <rng:optional>
+		<rng:ref name="front"/>
+	      </rng:optional>
+	      <rng:choice>
+		<rng:ref name="body"/>
+		<rng:ref name="group"/>
+	      </rng:choice>
+	      <rng:optional>
+		<rng:ref name="back"/>
+	      </rng:optional>
+	    </rng:group>
+	  </content>
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="front" mode="replace">
 	    <gloss>front matter</gloss>
