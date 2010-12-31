@@ -579,34 +579,24 @@
 	    <!-- ********************************* -->
 	    <!-- Element deletion, in module order -->
 	    <!-- ********************************* -->
-	    <elementSpec module="core" ident="abbr" mode="delete"/>
 	    <elementSpec module="core" ident="add" mode="delete"/>
 	    <elementSpec module="core" ident="binaryObject" mode="delete"/>
 	    <elementSpec module="core" ident="cb" mode="delete"/>
-	    <elementSpec module="core" ident="choice" mode="delete"/>
-	    <elementSpec module="core" ident="cit" mode="delete"/>
 	    <elementSpec module="core" ident="corr" mode="delete"/>
 	    <elementSpec module="core" ident="del" mode="delete"/>
 	    <elementSpec module="core" ident="desc" mode="delete"/>
 	    <elementSpec module="core" ident="distinct" mode="delete"/>
 	    <elementSpec module="core" ident="divGen" mode="delete"/>
-	    <elementSpec module="core" ident="emph" mode="delete"/>
-	    <elementSpec module="core" ident="expan" mode="delete"/>
-	    <elementSpec module="core" ident="foreign" mode="delete"/>
 	    <elementSpec module="core" ident="gap" mode="delete"/>
-	    <elementSpec module="core" ident="gloss" mode="delete"/>
 	    <elementSpec module="core" ident="graphic" mode="delete"/>
 	    <elementSpec module="core" ident="head" mode="delete"/>
 	    <elementSpec module="core" ident="headItem" mode="delete"/>
 	    <elementSpec module="core" ident="headLabel" mode="delete"/>
 	    <elementSpec module="core" ident="hi" mode="delete"/>
 	    <elementSpec module="core" ident="index" mode="delete"/>
-	    <elementSpec module="core" ident="item" mode="delete"/>
 	    <elementSpec module="core" ident="l" mode="delete"/>
-	    <!-- elementSpec module="core" ident="label" mode="delete"/  needed for <application> -->
 	    <elementSpec module="core" ident="lb" mode="delete"/>
 	    <elementSpec module="core" ident="lg" mode="delete"/>
-	    <elementSpec module="core" ident="list" mode="delete"/>
 	    <elementSpec module="core" ident="listBibl" mode="delete"/>
 	    <elementSpec module="core" ident="measure" mode="delete"/>
 	    <elementSpec module="core" ident="measureGrp" mode="delete"/>
@@ -614,8 +604,6 @@
 	    <elementSpec module="core" ident="milestone" mode="delete"/>
 	    <elementSpec module="core" ident="num" mode="delete"/>
 	    <elementSpec module="core" ident="orig" mode="delete"/>
-	    <elementSpec module="core" ident="q" mode="delete"/>
-	    <elementSpec module="core" ident="quote" mode="delete"/>
 	    <elementSpec module="core" ident="reg" mode="delete"/>
 	    <elementSpec module="core" ident="rs" mode="delete"/>
 	    <elementSpec module="core" ident="said" mode="delete"/>
@@ -625,7 +613,6 @@
 	    <elementSpec module="core" ident="speaker" mode="delete"/>
 	    <elementSpec module="core" ident="stage" mode="delete"/>
 	    <elementSpec module="core" ident="teiCorpus" mode="delete"/>
-	    <elementSpec module="core" ident="term" mode="delete"/>
 	    <elementSpec module="core" ident="time" mode="delete"/>
 	    <elementSpec module="core" ident="unclear" mode="delete"/>
 	    <elementSpec module="transcr" ident="zone" mode="delete"/>

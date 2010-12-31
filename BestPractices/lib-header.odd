@@ -79,48 +79,48 @@
         </div>
         <div type="introduction">
           <head>Introduction</head>
-	  <p>The TEI header is a metadata record for an encoded text.
-	  It includes bibliographic information related to the
-	  electronic document and, if appropriate, the bibliographic
-	  data for the original analog source document from which the
-	  electronic edition was created. The TEI header often
-	  includes a description of the encoding decisions or
-	  practices used to create the electronic document. While <ref
-	  target="http://www.tei-c.org/Lite/">TEI Lite</ref> calls the
-	  header <quote>the electronic title page</quote>, it actually
-	  more closely resembles a catalog record with additional data
-	  not routinely stored in MARC records.</p>
-	  <p>As with any descriptive metadata, the metadata in the TEI
-	  header can serve multiple audiences. In the local context, a
-	  TEI header provides metadata about the TEI document, its
-	  source, and its provenance. The TEI header may be used for
-	  metadata exchange, to automatically create indexes (author
-	  lists, title lists) for a collection of TEI documents, and
-	  to aid in browsing heterogeneous TEI documents. TEI headers
-	  may also be used as a basis for other metadata records (such
-	  as MARC or Dublin Core), though generation of other formats
-	  may require human intervention because they often are more
-	  granular, or have different granularity, than TEI
-	  headers.</p>
+          <p>The TEI header is a metadata record for an encoded text.
+          It includes bibliographic information related to the
+          electronic document and, if appropriate, the bibliographic
+          data for the original analog source document from which the
+          electronic edition was created. The TEI header often
+          includes a description of the encoding decisions or
+          practices used to create the electronic document. While <ref
+          target="http://www.tei-c.org/Lite/">TEI Lite</ref> calls the
+          header <quote>the electronic title page</quote>, it actually
+          more closely resembles a catalog record with additional data
+          not routinely stored in MARC records.</p>
+          <p>As with any descriptive metadata, the metadata in the TEI
+          header can serve multiple audiences. In the local context, a
+          TEI header provides metadata about the TEI document, its
+          source, and its provenance. The TEI header may be used for
+          metadata exchange, to automatically create indexes (author
+          lists, title lists) for a collection of TEI documents, and
+          to aid in browsing heterogeneous TEI documents. TEI headers
+          may also be used as a basis for other metadata records (such
+          as MARC or Dublin Core), though generation of other formats
+          may require human intervention because they often are more
+          granular, or have different granularity, than TEI
+          headers.</p>
         </div>
-	<div type="section">
-	  <head>The TEI Header and MARC</head>
-	  <p>While a TEI header is often perceived as similar to or at least related to a MARC record, a TEI header does not typically have a one-to-one correspondence with a MARC record. One TEI header may be described by multiple MARC analytic records, or one MARC record may be used to describe a collection of TEI documents with individual headers. Furthermore, while a MARC record captures metadata about a bibliographic entity in a library’s collection, a TEI header records information both about an encoded text and about the source document for that encoded text.
+        <div type="section">
+          <head>The TEI Header and MARC</head>
+          <p>While a TEI header is often perceived as similar to or at least related to a MARC record, a TEI header does not typically have a one-to-one correspondence with a MARC record. One TEI header may be described by multiple MARC analytic records, or one MARC record may be used to describe a collection of TEI documents with individual headers. Furthermore, while a MARC record captures metadata about a bibliographic entity in a library’s collection, a TEI header records information both about an encoded text and about the source document for that encoded text.
 
 Each institution and even each project may have a different approach to the way electronic texts are created in TEI and then represented in a larger public catalog through MARC.  At one institution, the same unit (e.g., a cataloging department) may be responsible for creating both TEI headers and MARC records, while at other institutions the work may be distributed among different units. Within the library domain, metadata or cataloging experts are usually required for at least review and standardization of both the TEI header and the MARC record.
 
 In order to allow automatic generation of TEI headers from MARC records and MARC records from TEI headers, some elements (like <gi>author</gi>) contain content not typical for TEI practice but necessary due to a lack of granularity in the MARC format.</p>
-	</div>
-	<div type="section">
-	  <head>The TEI Header and Other Metadata Schemas</head>
-	  <p>Several other descriptive metadata schemas are prevalent within the library domain, including Dublin Core (DC), Dublin Core Qualified (DCQ), and the Metadata Object Description Schema (MODS).  Each of these schemas contains elements that capture the same data as many of the elements in the TEI header. As with MARC, a variety of automated or manual workflows can be implemented to crosswalk metadata from one standard to another and provide for increased sharing of metadata about electronic texts in larger contexts. In particular, DC and MODS are common schemas used by the Open Archives Initiative (OAI) and may be particularly valuable for sharing metadata across institutions.
+        </div>
+        <div type="section">
+          <head>The TEI Header and Other Metadata Schemas</head>
+          <p>Several other descriptive metadata schemas are prevalent within the library domain, including Dublin Core (DC), Dublin Core Qualified (DCQ), and the Metadata Object Description Schema (MODS).  Each of these schemas contains elements that capture the same data as many of the elements in the TEI header. As with MARC, a variety of automated or manual workflows can be implemented to crosswalk metadata from one standard to another and provide for increased sharing of metadata about electronic texts in larger contexts. In particular, DC and MODS are common schemas used by the Open Archives Initiative (OAI) and may be particularly valuable for sharing metadata across institutions.
 
 Unfortunately, there is currently no mechanism for specifying that the content of an element should be drawn from an outside metadata source or that this outside metadata source should supplement the content of the element. In the absence of such mechanisms, users of these <title>Best Practices</title> may use the <gi>idno</gi> element to supply identifiers for outside metadata records and may supply identifiers for certain authority records using the <att>key</att> or <att>ref</att> attributes, allowed on certain elements.
-	  </p>
-	</div>
-	<div type="section">
-	  <head>Determining Data Values for the TEI Header</head>
-	  <p>Within the library domain, there are several authoritative publications on how to create bibliographic and descriptive metadata for objects.  These are usually called “content standards”; two prominent examples are the <title>Anglo-American Cataloging Rules Second Edition</title> (AACR2) and the <title>International Standard Bibliographic Description for Electronic Resources</title> (ISBD(ER)). These standards are extensive and outline a set of rules that enforce consistency across a voluminous amount of metadata.
+          </p>
+        </div>
+        <div type="section">
+          <head>Determining Data Values for the TEI Header</head>
+          <p>Within the library domain, there are several authoritative publications on how to create bibliographic and descriptive metadata for objects.  These are usually called “content standards”; two prominent examples are the <title>Anglo-American Cataloging Rules Second Edition</title> (AACR2) and the <title>International Standard Bibliographic Description for Electronic Resources</title> (ISBD(ER)). These standards are extensive and outline a set of rules that enforce consistency across a voluminous amount of metadata.
 
 It is recommended that metadata about the source document included in the header be taken from the catalog record for the source document. However, there may be cases when this information is incomplete or insufficient.  Furthermore, creation of other TEI header elements may require more context than is available simply from the encoded text. But the analog object may not be available, so the TEI header creator will need access to digitized images or other verifiable information to create accurate metadata.
 
@@ -134,10 +134,10 @@ The following sources of information are recommended in creating the TEI header:
       <item>If no title page is present and there is no evidence from a source document, the header creator may assign a title and author, if appropriate, enclosing the information in square brackets (the standard English-language convention for editorial interjections).</item>
    </list>
 </p>
-	</div>
-	<div type="elrecs">
-	  <head>Element and Attribute Recommendations for the TEI Header</head>
-	  <p>Below is documentation on use of elements and attributes within the <gi>teiHeader</gi> element.  These recommendations apply to all levels of encoding.
+        </div>
+        <div type="elrecs">
+          <head>Element and Attribute Recommendations for the TEI Header</head>
+          <p>Below is documentation on use of elements and attributes within the <gi>teiHeader</gi> element.  These recommendations apply to all levels of encoding.
 
 Gray boxes in the source document column indicate that while the corresponding TEI element describes the TEI document, the value of this field is often derived from metadata about the source document, to be found in the MARC fields listed.
 
@@ -1155,736 +1155,765 @@ The person who is responsible for making the change must be indicated by the <at
 <cell>n/a</cell>
 </row>
 </table>
-	  </p>
-	  <p>* Use only if TEI header metadata is based on the source document, not the encoded text.</p>
-	</div>
-	<div type="example">
-	  <head>Sample TEI Header</head>
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <teiHeader xml:lang="en">
-	      <fileDesc>
-		<titleStmt>
-		  <title type="main">Lincoln and Seward.</title>
-		  <author>
-		    <persName>Welles, Gideon, 1802-1878.</persName>
-		  </author>
-		</titleStmt>
-		<publicationStmt>
-		  <publisher>University of Michigan, Digital Library Initiatives</publisher>
-		  <availability>
-		    <p>These pages may be freely searched and displayed. Permission must be received for
-		    subsequent distribution in print or electronically. Please go to
-		    http://www.umdl.umich.edu/ for more information.</p>
-		  </availability>
-		  <date when="1996"/>
-		</publicationStmt>
-		<seriesStmt>
-		  <title level="s" type="main">Making of America</title>
-		</seriesStmt>
-		<sourceDesc>
-		  <biblStruct>
-		    <monogr>
-		      <author>
-			<persName>Welles, Gideon, 1802-1878.</persName>
-		      </author>
-		      <title level="m" type="marc245a">Lincoln and Seward.</title>
-		      <title level="m" type="marc245b">Remarks upon the memorial address of Chas. Francis
-		      Adams, on the late William H. Seward, with incidents and comments illustrative of the
-		      measures and policy of the administration of Abraham Lincoln. And views as to the
-		      relative positions of the late President and secretary of state.</title>
-		      <title type="marc245c">By Gideon Welles</title>
-		      <imprint>
-			<pubPlace>New York</pubPlace>
-			<publisher>Sheldon &amp;amp; company</publisher>
-			<date when="1874">1874</date>
-		      </imprint>
-		      <extent>viii, [7]-215 p</extent>
-		      <extent>20 cm.</extent>
-		    </monogr>
-		    <note>First published in condensed form in the Galaxy, v. 16, 1873, p. [518]-530,
-		    [687]-700, [793]-804.</note>
-		    <idno type="isbn-10">1-4255-1817-6</idno>
-		    <idno type="LC_call_number">E456 .W44</idno>
-		  </biblStruct>
-		</sourceDesc>
-	      </fileDesc>
-	      <encodingDesc>
-		<projectDesc>
-		  <p>XML created for the Making of America collection.</p>
-		</projectDesc>
-		<editorialDecl n="1">
-		  <p>Data in the <gi>sourceDesc</gi> of the header comes from a pre-AACR2 record. Other data 
-		  follows AACR2 when applicable.</p>
-		  <p><gi>sourceDesc</gi> created by exporting from catalog on 2008-06-15.</p>
-		  <p>This electronic text file was created by optical character recognition (OCR). No
-		  corrections have been made to the OCR-ed text and no editing has been done to the content
-		  of the original document. Encoding has been done using the recommendations for Level 1 of
-		  the TEI in Libraries Guidelines.</p>
-		  <p>Line breaks and column breaks have not been encoded, but page breaks have.</p>
-		  <p>All hyphens and quotation marks have been retained.</p>
-		</editorialDecl>
-		<tagsDecl>
-		  <namespace name="http://www.tei-c.org/ns/1.0">
-		    <tagUsage gi="div">Unnumbered divs used.</tagUsage>
-		  </namespace>
-		</tagsDecl>
-		<classDecl>
-		  <taxonomy xml:id="LCC">
-		    <bibl>Library of Congress Classification</bibl>
-		  </taxonomy>
-		  <taxonomy xml:id="LCSH">
-		    <bibl>Library of Congress Subject Headings</bibl>
-		  </taxonomy>
-		</classDecl>
-	      </encodingDesc>
-	      <profileDesc>
-		<langUsage>
-		  <language ident="en"/>
-		</langUsage>
-		<textClass>
-		  <classCode scheme="#LCC">E456</classCode>
-		  <keywords scheme="#LCSH">
-		    <list>
-		      <item>Lincoln, Abraham, 1809-1865.</item>
-		      <item>Seward, William Henry, 1801-1872.</item>
-		      <item>Adams, Charles Francis, 1807-1886. Address of Charles Francis Adams ... on the life
-		      ... of William H. Seward.</item>
-		    </list>
-		  </keywords>
-		</textClass>
-	      </profileDesc>
-	      <revisionDesc>
-		<change who="#CKP" when="2005-05-25">Header generated from export of MARC record</change>
-	      </revisionDesc>
-	    </teiHeader>
-	  </egXML>
-	</div>
+          </p>
+          <p>* Use only if TEI header metadata is based on the source document, not the encoded text.</p>
+        </div>
+        <div type="example">
+          <head>Sample TEI Header</head>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <teiHeader xml:lang="en">
+              <fileDesc>
+                <titleStmt>
+                  <title type="main">Lincoln and Seward.</title>
+                  <author>
+                    <persName>Welles, Gideon, 1802-1878.</persName>
+                  </author>
+                </titleStmt>
+                <publicationStmt>
+                  <publisher>University of Michigan, Digital Library Initiatives</publisher>
+                  <availability>
+                    <p>These pages may be freely searched and displayed. Permission must be received for
+                    subsequent distribution in print or electronically. Please go to
+                    http://www.umdl.umich.edu/ for more information.</p>
+                  </availability>
+                  <date when="1996"/>
+                </publicationStmt>
+                <seriesStmt>
+                  <title level="s" type="main">Making of America</title>
+                </seriesStmt>
+                <sourceDesc>
+                  <biblStruct>
+                    <monogr>
+                      <author>
+                        <persName>Welles, Gideon, 1802-1878.</persName>
+                      </author>
+                      <title level="m" type="marc245a">Lincoln and Seward.</title>
+                      <title level="m" type="marc245b">Remarks upon the memorial address of Chas. Francis
+                      Adams, on the late William H. Seward, with incidents and comments illustrative of the
+                      measures and policy of the administration of Abraham Lincoln. And views as to the
+                      relative positions of the late President and secretary of state.</title>
+                      <title type="marc245c">By Gideon Welles</title>
+                      <imprint>
+                        <pubPlace>New York</pubPlace>
+                        <publisher>Sheldon &amp;amp; company</publisher>
+                        <date when="1874">1874</date>
+                      </imprint>
+                      <extent>viii, [7]-215 p</extent>
+                      <extent>20 cm.</extent>
+                    </monogr>
+                    <note>First published in condensed form in the Galaxy, v. 16, 1873, p. [518]-530,
+                    [687]-700, [793]-804.</note>
+                    <idno type="isbn-10">1-4255-1817-6</idno>
+                    <idno type="LC_call_number">E456 .W44</idno>
+                  </biblStruct>
+                </sourceDesc>
+              </fileDesc>
+              <encodingDesc>
+                <projectDesc>
+                  <p>XML created for the Making of America collection.</p>
+                </projectDesc>
+                <editorialDecl n="1">
+                  <p>Data in the <gi>sourceDesc</gi> of the header comes from a pre-AACR2 record. Other data 
+                  follows AACR2 when applicable.</p>
+                  <p><gi>sourceDesc</gi> created by exporting from catalog on 2008-06-15.</p>
+                  <p>This electronic text file was created by optical character recognition (OCR). No
+                  corrections have been made to the OCR-ed text and no editing has been done to the content
+                  of the original document. Encoding has been done using the recommendations for Level 1 of
+                  the TEI in Libraries Guidelines.</p>
+                  <p>Line breaks and column breaks have not been encoded, but page breaks have.</p>
+                  <p>All hyphens and quotation marks have been retained.</p>
+                </editorialDecl>
+                <tagsDecl>
+                  <namespace name="http://www.tei-c.org/ns/1.0">
+                    <tagUsage gi="div">Unnumbered divs used.</tagUsage>
+                  </namespace>
+                </tagsDecl>
+                <classDecl>
+                  <taxonomy xml:id="LCC">
+                    <bibl>Library of Congress Classification</bibl>
+                  </taxonomy>
+                  <taxonomy xml:id="LCSH">
+                    <bibl>Library of Congress Subject Headings</bibl>
+                  </taxonomy>
+                </classDecl>
+              </encodingDesc>
+              <profileDesc>
+                <langUsage>
+                  <language ident="en"/>
+                </langUsage>
+                <textClass>
+                  <classCode scheme="#LCC">E456</classCode>
+                  <keywords scheme="#LCSH">
+                    <list>
+                      <item>Lincoln, Abraham, 1809-1865.</item>
+                      <item>Seward, William Henry, 1801-1872.</item>
+                      <item>Adams, Charles Francis, 1807-1886. Address of Charles Francis Adams ... on the life
+                      ... of William H. Seward.</item>
+                    </list>
+                  </keywords>
+                </textClass>
+              </profileDesc>
+              <revisionDesc>
+                <change who="#CKP" when="2005-05-25">Header generated from export of MARC record</change>
+              </revisionDesc>
+            </teiHeader>
+          </egXML>
+        </div>
         <div type="specification">
-      <specGrp xmlns="http://www.tei-c.org/ns/1.0"
-               xmlns:xi="http://www.w3.org/2001/XInclude"
-               xmlns:s="http://purl.oclc.org/dsdl/schematron"
-               xmlns:rng="http://relaxng.org/ns/structure/1.0"
-               xml:id="libHeadSpec"
-               xml:lang="en">
-        <classSpec module="tei" ident="model.encodingDescPart" type="model" mode="delete"/>
-        <classSpec module="tei" ident="model.teiHeaderPart" type="model" mode="delete"/>
-        <moduleRef key="header"
-                   include="extent
-                     teiHeader
-                        fileDesc
-                           titleStmt
-                           editionStmt
-                              edition
-                              idno
-                           publicationStmt
-                              authority
-                              availability
-                              distributor
-                           seriesStmt
-                           notesStmt
-                           sourceDesc
-                        encodingDesc
-                           projectDesc
-                           editorialDecl
-                           tagsDecl
-                              namespace
-                              rendition
-                           classDecl
-                              taxonomy
-                           appInfo
-                              application
-                        profileDesc
-                           langUsage
-                              language
-                        revisionDesc
-                           change"/>
-        <elementSpec module="header" ident="change" mode="change">
-          <!-- constraintSpec scheme="isoschematron" ident="revChronOrder">
-               </constraintSpec -->
-            <!-- The following constraints have nothing to do with the <teiHeader> at all, -->
-            <!-- let alone the <change> element. They are here only so that it is someplace -->
-            <!-- that all 4 spearate level ODD files include. If & when TEI permits -->
-            <!-- <constraintSpec> to be a direct child of <specGrp> we can move them out -->
-            <!-- to somewhere more intelligent. -->
-            <constraintSpec scheme="isoschematron" ident="no-extent-in-fileDesc">
-              <constraint>
-                <s:rule context="tei:fileDesc">
-                  <s:report test="tei:extent">The &lt;extent> element
-                  should not be used as a direct child of
-                  &lt;fileDesc>, but rather only as a descendant of a
-                  bibliographic citation (e.g., of the
-                  source).</s:report>
-                </s:rule>
-              </constraint>
-            </constraintSpec>
-            <constraintSpec scheme="isoschematron" ident="when-or-before-after">
-              <constraint>
-                <s:rule context="tei:imprint/tei:date">
-                  <s:assert test="@when or ( @notBefore and @notAfter
-                  )"> When inside an &lt;imprint>, a &lt;date> element
-                  should have a machine-readable version of the date
-                  specified either on the @when attribute, or, in the
-                  case of not knowing the precise date, on the
-                  @notBefore and @notAfter attributes.</s:assert>
-                </s:rule>
-              </constraint>
-            </constraintSpec>
-            <constraintSpec scheme="isoschematron" ident="onlyAllowedAttrs">
-              <constraint>
-                <s:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
-                <s:rule context="tei:*/@*">
-                  <s:assert test="
-                                  name(.) = 'anchored' or
-                                  name(.) = 'baseForm' or
-                                  name(.) = 'baseTypes' or
-                                  name(.) = 'calendar' or
-                                  name(.) = 'cause' or
-                                  name(.) = 'cert' or
-                                  name(.) = 'class' or
-                                  name(.) = 'cols' or
-                                  name(.) = 'copyOf' or
-                                  name(.) = 'corresp' or
-                                  name(.) = 'degree' or
-                                  name(.) = 'dur' or
-                                  name(.) = 'dur-iso' or
-                                  name(.) = 'ed' or
-                                  name(.) = 'end' or
-                                  name(.) = 'eol' or
-                                  name(.) = 'evaluate' or
-                                  name(.) = 'exclude' or
-                                  name(.) = 'facs' or
-                                  name(.) = 'from' or
-                                  name(.) = 'from-iso' or
-                                  name(.) = 'full' or
-                                  name(.) = 'gi' or
-                                  name(.) = 'given' or
-                                  name(.) = 'group' or
-                                  name(.) = 'hand' or
-                                  name(.) = 'height' or
-                                  name(.) = 'ident' or
-                                  name(.) = 'key' or
-                                  name(.) = 'level' or
-                                  name(.) = 'locus' or
-                                  name(.) = 'marks' or
-                                  name(.) = 'met' or
-                                  name(.) = 'min' or
-                                  name(.) = 'n' or
-                                  name(.) = 'next' or
-                                  name(.) = 'notAfter' or
-                                  name(.) = 'notBefore' or
-                                  name(.) = 'org' or
-                                  name(.) = 'part' or
-                                  name(.) = 'period' or
-                                  name(.) = 'place' or
-                                  name(.) = 'precision' or
-                                  name(.) = 'prev' or
-                                  name(.) = 'quantity' or
-                                  name(.) = 'reason' or
-                                  name(.) = 'ref' or
-                                  name(.) = 'rend' or
-                                  name(.) = 'render' or
-                                  name(.) = 'rendition' or
-                                  name(.) = 'resp' or
-                                  name(.) = 'rhyme' or
-                                  name(.) = 'role' or
-                                  name(.) = 'rows' or
-                                  name(.) = 'sex' or
-                                  name(.) = 'scale' or
-                                  name(.) = 'scheme' or
-                                  name(.) = 'scope' or
-                                  name(.) = 'select' or
-                                  name(.) = 'sort' or
-                                  name(.) = 'subtype' or
-                                  name(.) = 'synch' or
-                                  name(.) = 'target' or
-                                  name(.) = 'targetEnd' or
-                                  name(.) = 'targets' or
-                                  name(.) = 'targFunc' or
-                                  name(.) = 'to' or
-                                  name(.) = 'to-iso' or
-                                  name(.) = 'type' or
-                                  name(.) = 'unit' or
-                                  name(.) = 'uri' or
-                                  name(.) = 'url' or
-                                  name(.) = 'usage' or
-                                  name(.) = 'version' or
-                                  name(.) = 'when' or
-                                  name(.) = 'who' or
-                                  name(.) = 'width' or
-                                  name(.) = 'xml:base' or
-                                  name(.) = 'xml:id' or
-                                  name(.) = 'xml:lang' or
-                                  name(.) = 'xml:space'
-                                  ">The use of the <s:name/>= attribute (found here on the &lt;<s:value-of select="local-name(..)"/>> element) is not recommended by the Best Practices for TEI in Libraries</s:assert>
-                </s:rule>
-              </constraint>
-            </constraintSpec>
-          <attList>
-            <attDef mode="change" ident="when" usage="req"/>
-            <attDef mode="change" ident="who" usage="req"/>
-          </attList>
-        </elementSpec>
-        <elementSpec module="header" ident="editorialDecl" mode="change">
-          <content>
-            <rng:zeroOrMore>
-              <rng:ref name="model.pLike"/>
-            </rng:zeroOrMore>
-            <rng:element name="p">
-              <rng:choice>
-                <rng:value type="token">All hyphens in source document encoded as U+2010.</rng:value>
-                <rng:value type="token">All hyphens in source document encoded as U+002D.</rng:value>
-                <rng:value type="token">Hyphens in source document
-                encoded as U+2010. Line-ending hyphens
-                differentiated with @type of immediately following
-                &lt;lb> element.</rng:value>
-                <rng:value type="token">Hyphens in source document
-                encoded as U+002D. Line-ending hyphens
-                differentiated with @type of immediately following
-                &lt;lb> element.</rng:value>
-              </rng:choice>
-            </rng:element>
-          </content>
-          <constraintSpec scheme="isoschematron" ident="hyphen-match">
-            <constraint>
-              <s:assert test="( @n = 1 or @n = 2)  and  
-                              (
-                              normalize-space(child::tei:p[position()=last()])='All hyphens in source document encoded as U+2010.'
-                              or
-                              normalize-space(child::tei:p[position()=last()])='All hyphens in source document encoded as U+002D.'
-                              ) ">At level 1 or 2, hyphenation encoding must be declared as all U+2010 or all U+002D.</s:assert>
-              <s:assert test="@n = 3  and  
-                              ( normalize-space(child::tei:p[position()=last()])='All hyphens in source document encoded as U+2010.'
-                              or
-                              normalize-space(child::tei:p[position()=last()])='All hyphens in source document encoded as U+002D.' )
-                              or
-                              (
-                              starts-with( normalize-space(child::tei:p[position()=last()]), 'Hyphens in source document encoded as U+')
-                              and
-                              ends-with( normalize-space(child::tei:p[position()=last()]), '. Line-ending hyphens differentiated with @type of immediately following &lt;lb> element.')
-                              ) ">At level 3, hyphenation encoding must be declared in the last paragraph of <s:name/>.</s:assert>
-              <s:assert test="@n = 4  and
-                              starts-with( normalize-space(child::tei:p[position()=last()]), 'Hyphens in source document encoded as U+')
-                              and
-                              ends-with( normalize-space(child::tei:p[position()=last()]), '. Line-ending hyphens differentiated with @type of immediately following &lt;lb> element.')
-                              ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb></s:assert>
-            </constraint>
-          </constraintSpec>
-          <attList>
-            <attDef ident="n" mode="replace" usage="req">
-              <gloss>number</gloss>
-              <desc>Used to indicate which encoding level described
-              by <title>TEI in Libraries: Guidelines for Best
-              Practices</title> is in use.</desc>
-              <datatype>
-                <rng:choice>
-                  <rng:value>1</rng:value>
-                  <rng:value>2</rng:value>
-                  <rng:value>3</rng:value>
-                  <rng:value>4</rng:value>
-                  <rng:value>5</rng:value>
-                </rng:choice>
-              </datatype>
-            </attDef>
-          </attList>
-          <exemplum xml:lang="en">
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <editorialDecl n="1">
-                <p>Metadata in the TEI header comes from an AACR2-conformant
-                record, translated to TEI via the <name
-                type="software">Thutmose I</name> program.</p>
-                <p>Content originally generated by <name
-                type="software">c-n-rite</name> OCR software, then the
-                needed TEI encoding put in place with <name
-                type="software">cnr2tei.xslt</name>.</p>
-                <p>All hyphens in source document encoded as U+2010.</p>
-              </editorialDecl>
-            </egXML>
-          </exemplum>
-          <remarks>
-            <p>The TEI provides a set of useful special-purpose
-            elements that can be used inside of <gi>editorialDecl</gi>
-            instead of paragraphs: <gi>correction</gi>,
-            <gi>hyphenation</gi>, <gi>interpretation</gi>,
-            <gi>normalization</gi>, <gi>quotation</gi>,
-            <gi>segmentation</gi>, and <gi>stdVals</gi>. But since at
-            the time these <title>Best Practices</title> were
-            developed one could not use any of these special-purpose
-            elements <emph>and</emph> a paragraph, and there are some
-            editorial practices likely to be of interest that are not
-            covered by these elements, our current requirement is to
-            use only paragraphs. The TEI has since fixed this bug (by
-            allowing a mix of paragraphs and the special-purpose
-            elements in any order), this recommendation will likely
-            change accordingly in the near future.</p>
-            <p>It is required that a paragraph explaining
-            hyphenation practices, with particular wording as above,
-            be present.</p>
-          </remarks>
-        </elementSpec>
-        <elementSpec module="header" ident="encodingDesc" mode="change">
-          <content>
-            <rng:group>
-              <rng:optional>
-                <rng:ref name="projectDesc"/>
-              </rng:optional>
-              <rng:ref name="editorialDecl"/>
-              <rng:ref name="tagsDecl"/>
-              <rng:optional>
-                <rng:ref name="classDecl"/>
-              </rng:optional>
-              <rng:optional>
-                <rng:ref name="appInfo"/>
-              </rng:optional>
-            </rng:group>
-          </content>
-        </elementSpec>
-        <elementSpec module="header" ident="idno" mode="change">
-          <attList>
-            <attDef mode="replace" ident="type">
-              <datatype>
-                <rng:ref name="data.enumerated"/>
-              </datatype>
-              <valList type="semi">
-                <valItem ident="LC_call_number">
-                  <gloss>U.S. Library of Congress call number</gloss>
-                </valItem>
-                <valItem ident="isbn-13">
-                  <gloss>intnerational serial book number, 13-digit</gloss>
-                </valItem>
-                <valItem ident="isbn-10">
-                  <gloss>intnerational serial book number, 10-digit</gloss>
-                </valItem>
-              </valList>
-            </attDef>
-          </attList>
-        </elementSpec>
-        <elementSpec module="header" ident="namespace" mode="change">
-          <content>
-            <rng:ref name="tagUsage"/>
-          </content>
-          <attList>
-            <attDef ident="name" mode="change">
-              <datatype>
-                <rng:value>http://www.tei-c.org/ns/1.0</rng:value>
-              </datatype>
-            </attDef>
-          </attList>
-        </elementSpec>
-        <elementSpec module="header" ident="publicationStmt" mode="change">
-          <content>
-            <rng:choice>
-              <rng:oneOrMore>
-                <rng:ref name="model.pLike"/>
-              </rng:oneOrMore>
-              <rng:oneOrMore>
-                <rng:choice>
-                  <rng:ref name="publisher"/>
-                  <rng:ref name="distributor"/>
-                  <rng:ref name="authority"/>
-                </rng:choice>
+          <specGrp xmlns="http://www.tei-c.org/ns/1.0"
+                   xmlns:xi="http://www.w3.org/2001/XInclude"
+                   xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                   xml:id="libHeadSpec"
+                   xml:lang="en">
+            <classSpec module="tei" ident="model.encodingDescPart" type="model" mode="delete"/>
+            <classSpec module="tei" ident="model.teiHeaderPart" type="model" mode="delete"/>
+	    <moduleRef key="tagdocs" include="att val gi tag"/>
+            <moduleRef key="header"
+                       include="extent
+                         teiHeader
+                            fileDesc
+                               titleStmt
+                               editionStmt
+                                  edition
+                                  idno
+                               publicationStmt
+                                  authority
+                                  availability
+                                  distributor
+                               seriesStmt
+                               notesStmt
+                               sourceDesc
+                            encodingDesc
+                               projectDesc
+                               editorialDecl
+                               tagsDecl
+                                  namespace
+                                tagUsage
+                                  rendition
+                               classDecl
+                                  taxonomy
+                               appInfo
+                                  application
+                            profileDesc
+                               langUsage
+                                  language
+			       textClass
+			          classCode
+			          keywords
+                            revisionDesc
+                               change"/>
+            <elementSpec module="header" ident="change" mode="change">
+              <!-- constraintSpec scheme="isoschematron" ident="revChronOrder">
+                   </constraintSpec -->
+                <!-- The following constraints have nothing to do with the <teiHeader> at all, -->
+                <!-- let alone the <change> element. They are here only so that it is someplace -->
+                <!-- that all 4 spearate level ODD files include. If & when TEI permits -->
+                <!-- <constraintSpec> to be a direct child of <specGrp> we can move them out -->
+                <!-- to somewhere more intelligent. -->
+                <constraintSpec scheme="isoschematron" ident="no-extent-in-fileDesc">
+                  <constraint>
+                    <s:rule context="tei:fileDesc">
+                      <s:report test="tei:extent">The &lt;extent> element
+                      should not be used as a direct child of
+                      &lt;fileDesc>, but rather only as a descendant of a
+                      bibliographic citation (e.g., of the
+                      source).</s:report>
+                    </s:rule>
+                  </constraint>
+                </constraintSpec>
+                <constraintSpec scheme="isoschematron" ident="when-or-before-after">
+                  <constraint>
+                    <s:rule context="tei:imprint/tei:date">
+                      <s:assert test="@when or ( @notBefore and @notAfter
+                      )"> When inside an &lt;imprint>, a &lt;date> element
+                      should have a machine-readable version of the date
+                      specified either on the @when attribute, or, in the
+                      case of not knowing the precise date, on the
+                      @notBefore and @notAfter attributes.</s:assert>
+                    </s:rule>
+                  </constraint>
+                </constraintSpec>
+                <constraintSpec scheme="isoschematron" ident="onlyAllowedAttrs">
+                  <constraint>
+                    <s:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
+                    <s:rule context="tei:*/@*">
+                      <s:assert test="
+                                      name(.) = 'anchored' or
+                                      name(.) = 'baseForm' or
+                                      name(.) = 'baseTypes' or
+                                      name(.) = 'calendar' or
+                                      name(.) = 'cause' or
+                                      name(.) = 'cert' or
+                                      name(.) = 'class' or
+                                      name(.) = 'cols' or
+                                      name(.) = 'copyOf' or
+                                      name(.) = 'corresp' or
+                                      name(.) = 'degree' or
+                                      name(.) = 'dur' or
+                                      name(.) = 'dur-iso' or
+                                      name(.) = 'ed' or
+                                      name(.) = 'end' or
+                                      name(.) = 'eol' or
+                                      name(.) = 'evaluate' or
+                                      name(.) = 'exclude' or
+                                      name(.) = 'facs' or
+                                      name(.) = 'from' or
+                                      name(.) = 'from-iso' or
+                                      name(.) = 'full' or
+                                      name(.) = 'gi' or
+                                      name(.) = 'given' or
+                                      name(.) = 'group' or
+                                      name(.) = 'hand' or
+                                      name(.) = 'height' or
+                                      name(.) = 'ident' or
+                                      name(.) = 'key' or
+                                      name(.) = 'level' or
+                                      name(.) = 'locus' or
+                                      name(.) = 'marks' or
+                                      name(.) = 'met' or
+                                      name(.) = 'min' or
+                                      name(.) = 'n' or
+                                      name(.) = 'name' or
+                                      name(.) = 'next' or
+                                      name(.) = 'notAfter' or
+                                      name(.) = 'notBefore' or
+                                      name(.) = 'org' or
+                                      name(.) = 'part' or
+                                      name(.) = 'period' or
+                                      name(.) = 'place' or
+                                      name(.) = 'precision' or
+                                      name(.) = 'prev' or
+                                      name(.) = 'quantity' or
+                                      name(.) = 'reason' or
+                                      name(.) = 'ref' or
+                                      name(.) = 'rend' or
+                                      name(.) = 'render' or
+                                      name(.) = 'rendition' or
+                                      name(.) = 'resp' or
+                                      name(.) = 'rhyme' or
+                                      name(.) = 'role' or
+                                      name(.) = 'rows' or
+                                      name(.) = 'sex' or
+                                      name(.) = 'scale' or
+                                      name(.) = 'scheme' or
+                                      name(.) = 'scope' or
+                                      name(.) = 'select' or
+                                      name(.) = 'sort' or
+                                      name(.) = 'subtype' or
+                                      name(.) = 'synch' or
+                                      name(.) = 'target' or
+                                      name(.) = 'targetEnd' or
+                                      name(.) = 'targets' or
+                                      name(.) = 'targFunc' or
+                                      name(.) = 'to' or
+                                      name(.) = 'to-iso' or
+                                      name(.) = 'type' or
+                                      name(.) = 'unit' or
+                                      name(.) = 'uri' or
+                                      name(.) = 'url' or
+                                      name(.) = 'usage' or
+                                      name(.) = 'version' or
+                                      name(.) = 'when' or
+                                      name(.) = 'who' or
+                                      name(.) = 'width' or
+                                      name(.) = 'xml:base' or
+                                      name(.) = 'xml:id' or
+                                      name(.) = 'xml:lang' or
+                                      name(.) = 'xml:space'
+                                      ">The use of the <s:name/>= attribute (found here on the &lt;<s:value-of select="local-name(..)"/>> element) is not recommended by the Best Practices for TEI in Libraries</s:assert>
+                    </s:rule>
+                  </constraint>
+                </constraintSpec>
+                <attList>
+                  <attDef mode="change" ident="when" usage="req"/>
+                  <attDef mode="change" ident="who" usage="req"/>
+                </attList>
+              </elementSpec>
+              <elementSpec module="header" ident="editorialDecl" mode="change">
+                <content>
+                  <rng:zeroOrMore>
+                    <rng:ref name="model.pLike"/>
+                  </rng:zeroOrMore>
+                  <rng:element name="p">
+                    <rng:choice>
+                      <rng:value type="token">All hyphens in source document encoded as U+2010.</rng:value>
+                      <rng:value type="token">All hyphens in source document encoded as U+002D.</rng:value>
+                      <rng:value type="token">Hyphens in source document
+                      encoded as U+2010. Line-ending hyphens
+                      differentiated with @type of immediately following
+                      &lt;lb> element.</rng:value>
+                      <rng:value type="token">Hyphens in source document
+                      encoded as U+002D. Line-ending hyphens
+                      differentiated with @type of immediately following
+                      &lt;lb> element.</rng:value>
+                    </rng:choice>
+                  </rng:element>
+                </content>
+                <constraintSpec scheme="isoschematron" ident="hyphen-match">
+                  <constraint>
+                    <s:rule context="tei:editorialDecl[@n='1' or @n='2']">
+                    <s:assert test="normalize-space(child::tei:p[position()=last()])=
+                                    'All hyphens in source document encoded as U+2010.'
+                                    or
+                                    normalize-space(child::tei:p[position()=last()])=
+                                    'All hyphens in source document encoded as U+002D.'
+                                    ">At level 1 or 2, hyphenation encoding must be declared as all U+2010 or all U+002D.</s:assert>
+                    </s:rule>
+                    <s:rule context="tei:editorialDecl[@n='3']">
+                      <s:assert test="( normalize-space(child::tei:p[position()=last()])=
+                                        'All hyphens in source document encoded as U+2010.'
+                                        or
+                                        normalize-space(child::tei:p[position()=last()])=
+                                        'All hyphens in source document encoded as U+002D.' )
+                                      or
+                                        (
+                                          starts-with(
+                                            normalize-space(child::tei:p[position()=last()]),
+                                            'Hyphens in source document encoded as U+'
+                                            )
+                                          and
+                                          ends-with(
+                                            normalize-space(child::tei:p[position()=last()]),
+                                            '. Line-ending hyphens differentiated with @type of immediately following &lt;lb> element.'
+                                            )
+                                        ) ">At level 3, hyphenation encoding must be declared in the last paragraph of <s:name/>.</s:assert>
+                      </s:rule>
+                      <s:rule context="tei:editorialDecl[@n='4']">
+                        <s:assert test="
+                                        starts-with(
+                                          normalize-space(child::tei:p[position()=last()]),
+                                          'Hyphens in source document encoded as U+'
+                                          )
+                                        and
+                                        ends-with(
+                                          normalize-space(child::tei:p[position()=last()]),
+                                          '. Line-ending hyphens differentiated with @type of immediately following &lt;lb> element.'
+                                        )
+                                  ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb></s:assert>
+                      </s:rule>
+                </constraint>
+              </constraintSpec>
+              <attList>
+                <attDef ident="n" mode="replace" usage="req">
+                  <gloss>number</gloss>
+                  <desc>Used to indicate which encoding level described
+                  by <title>TEI in Libraries: Guidelines for Best
+                  Practices</title> is in use.</desc>
+                  <datatype>
+                    <rng:choice>
+                      <rng:value>1</rng:value>
+                      <rng:value>2</rng:value>
+                      <rng:value>3</rng:value>
+                      <rng:value>4</rng:value>
+                      <rng:value>5</rng:value>
+                    </rng:choice>
+                  </datatype>
+                </attDef>
+              </attList>
+              <exemplum xml:lang="en">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <editorialDecl n="1">
+                    <p>Metadata in the TEI header comes from an AACR2-conformant
+                    record, translated to TEI via the <name
+                    type="software">Thutmose I</name> program.</p>
+                    <p>Content originally generated by <name
+                    type="software">c-n-rite</name> OCR software, then the
+                    needed TEI encoding put in place with <name
+                    type="software">cnr2tei.xslt</name>.</p>
+                    <p>All hyphens in source document encoded as U+2010.</p>
+                  </editorialDecl>
+                </egXML>
+              </exemplum>
+              <remarks>
+                <p>The TEI provides a set of useful special-purpose
+                elements that can be used inside of <gi>editorialDecl</gi>
+                instead of paragraphs: <gi>correction</gi>,
+                <gi>hyphenation</gi>, <gi>interpretation</gi>,
+                <gi>normalization</gi>, <gi>quotation</gi>,
+                <gi>segmentation</gi>, and <gi>stdVals</gi>. But since at
+                the time these <title>Best Practices</title> were
+                developed one could not use any of these special-purpose
+                elements <emph>and</emph> a paragraph, and there are some
+                editorial practices likely to be of interest that are not
+                covered by these elements, our current requirement is to
+                use only paragraphs. The TEI has since fixed this bug (by
+                allowing a mix of paragraphs and the special-purpose
+                elements in any order), this recommendation will likely
+                change accordingly in the near future.</p>
+                <p>It is required that a paragraph explaining
+                hyphenation practices, with particular wording as above,
+                be present.</p>
+              </remarks>
+            </elementSpec>
+            <elementSpec module="header" ident="encodingDesc" mode="change">
+              <content>
                 <rng:group>
                   <rng:optional>
-                    <rng:ref name="pubPlace"/>
+                    <rng:ref name="projectDesc"/>
+                  </rng:optional>
+                  <rng:ref name="editorialDecl"/>
+                  <rng:ref name="tagsDecl"/>
+                  <rng:optional>
+                    <rng:ref name="classDecl"/>
                   </rng:optional>
                   <rng:optional>
-                    <rng:ref name="address"/>
-                  </rng:optional>
-                  <rng:zeroOrMore>
-                    <rng:ref name="idno"/>
-                  </rng:zeroOrMore>
-                  <rng:optional>
-                    <rng:ref name="availability"/>
-                  </rng:optional>
-                  <rng:optional>
-                    <rng:ref name="date"/>
+                    <rng:ref name="appInfo"/>
                   </rng:optional>
                 </rng:group>
-              </rng:oneOrMore>
-            </rng:choice>
-          </content>
-          <constraintSpec scheme="isoschematron" ident="PubStmt-specialPreferred">
-            <constraint>
-              <s:rule>
-                <s:report test="child::tei:p">Use of specialized child elements
-                of the publication statement (rather than paragraphs)
-                is recommended whenever possible</s:report>
-              </s:rule>
-            </constraint>
-          </constraintSpec>
-          <constraintSpec scheme="isoschematron" ident="whenNotContent">
-            <constraint>
-              <s:rule context="tei:publicationStmt/tei:date">
-                <s:assert test="@when">Dates inside the publication statement must have @when (and should not
-                have content)</s:assert>
-                <s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the publication statement
-                should not have content (and must have @when)</s:report>
-              </s:rule>
-            </constraint>
-          </constraintSpec>
-          <remarks>
-            <p>For normally published items, the specialized children
-            elements (e.g. <gi>publisher</gi>) should be used.
-            Paragraphs are permitted as an alternative for unusual
-            cases like unpublished works.</p>
-          </remarks>
-        </elementSpec>
-        <elementSpec module="header" ident="rendition" mode="change">
-          <attList>
-            <attDef ident="xml:id" mode="change" usage="req"/>
-            <attDef ident="scheme" mode="change" usage="req">
-              <valList type="closed" mode="replace">
-                <valItem ident="css">
-                  <desc>Cascading Stylesheet Language</desc>
-                </valItem>
-              </valList>
-            </attDef>
-          </attList>
-        </elementSpec>
-        <elementSpec module="header" ident="sourceDesc" mode="change">
-          <content>
-            <rng:ref name="biblStruct"/>
-          </content>
-        </elementSpec>
-        <elementSpec module="header" ident="tagsDecl" mode="change">
-          <content>
-            <rng:group>
-              <rng:zeroOrMore>
-                <rng:ref name="rendition"/>
-              </rng:zeroOrMore>
-              <rng:ref name="namespace"/>
-            </rng:group>
-          </content>
-        </elementSpec>
-        <elementSpec module="header" ident="tagUsage" mode="change">
-          <content>
-            <rng:choice>
-              <rng:value>Unnumbered divs used.</rng:value>
-              <rng:value>Numbered divs used.</rng:value>
-            </rng:choice>
-          </content>
-          <attList>
-            <attDef ident="gi" mode="replace" usage="req">
-              <gloss>element name</gloss>
-              <desc>the name (generic identifier) of the element indicated by the tag.</desc>
-              <datatype>
-                <rng:ref name="data.enumerated"/>
-              </datatype>
-              <constraintSpec scheme="isoschematron" ident="numbered-vs-unnumbered">
+              </content>
+            </elementSpec>
+            <elementSpec module="header" ident="idno" mode="change">
+              <attList>
+                <attDef mode="replace" ident="type">
+                  <datatype>
+                    <rng:ref name="data.enumerated"/>
+                  </datatype>
+                  <valList type="semi">
+                    <valItem ident="LC_call_number">
+                      <gloss>U.S. Library of Congress call number</gloss>
+                    </valItem>
+                    <valItem ident="isbn-13">
+                      <gloss>intnerational serial book number, 13-digit</gloss>
+                    </valItem>
+                    <valItem ident="isbn-10">
+                      <gloss>intnerational serial book number, 10-digit</gloss>
+                    </valItem>
+                  </valList>
+                </attDef>
+              </attList>
+            </elementSpec>
+            <elementSpec module="header" ident="namespace" mode="change">
+              <content>
+                <rng:ref name="tagUsage"/>
+              </content>
+              <attList>
+                <attDef ident="name" mode="change">
+                  <datatype>
+                    <rng:value>http://www.tei-c.org/ns/1.0</rng:value>
+                  </datatype>
+                </attDef>
+              </attList>
+            </elementSpec>
+            <elementSpec module="header" ident="publicationStmt" mode="change">
+              <content>
+                <rng:choice>
+                  <rng:oneOrMore>
+                    <rng:ref name="model.pLike"/>
+                  </rng:oneOrMore>
+                  <rng:oneOrMore>
+                    <rng:choice>
+                      <rng:ref name="publisher"/>
+                      <rng:ref name="distributor"/>
+                      <rng:ref name="authority"/>
+                    </rng:choice>
+                    <rng:group>
+                      <rng:optional>
+                        <rng:ref name="pubPlace"/>
+                      </rng:optional>
+                      <rng:optional>
+                        <rng:ref name="address"/>
+                      </rng:optional>
+                      <rng:zeroOrMore>
+                        <rng:ref name="idno"/>
+                      </rng:zeroOrMore>
+                      <rng:optional>
+                        <rng:ref name="availability"/>
+                      </rng:optional>
+                      <rng:optional>
+                        <rng:ref name="date"/>
+                      </rng:optional>
+                    </rng:group>
+                  </rng:oneOrMore>
+                </rng:choice>
+              </content>
+              <constraintSpec scheme="isoschematron" ident="PubStmt-specialPreferred">
                 <constraint>
-                  <s:rule context="tei:text">
-                    <s:report test=".//tei:div and .//tei:div1">
-                      A single TEI in Libraries document should not mix numbered and unnumbered divisions.
-                    </s:report>
-                  </s:rule>
-                  <s:rule context="tei:TEI">
-                    <s:assert test="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace/tei:tagUsage/@gi">
-                      The use of divisions (i.e., whether numbered or
-                      unnumbered divisions are used) must be
-                      documented in a &lt;tagUsage> element (inside a
-                      &lt;namespace> element ... </s:assert>
-                  </s:rule>
-                  <s:rule context="tei:tagUsage">
-                    <s:assert test="
-                      ( @gi='div' and normalize-space(.)='Unnumbered divs used.' and ( /tei:TEI/tei:text//tei:div or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )
-                      or
-                      ( @gi='div1' and normalize-space(.)='Numbered divs used.' and ( /tei:TEI/tei:text//tei:div1 or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )">
-                      A document that uses un-numbered divisions
-                      should specify so by using &lt;tagUsage
-                      gi="div">Unnumbered divs used.&lt;/tagUsage>; a
-                      document that uses numbered divisions should
-                      specify so by using &lt;tagUsage
-                      gi="div1">Numbered divs
-                      used.&lt;/tagUsage>.</s:assert>
+                  <s:rule>
+                    <s:report test="child::tei:p">Use of specialized child elements
+                    of the publication statement (rather than paragraphs)
+                    is recommended whenever possible</s:report>
                   </s:rule>
                 </constraint>
               </constraintSpec>
-              <valList type="closed">
-                <valItem ident="div">
-                  <gloss>divisions are un-numbered</gloss>
-                  <desc>The document uses <gi>div</gi>, not
-                  <gi>div1</gi>, <gi>div2</gi>, etc. The content of
-                  this <gi>tagUsage</gi> should be <quote>Unnumbered
-                  divs used.</quote>.</desc>
-                </valItem>
-                <valItem ident="div1">
-                  <gloss>divisions are numbered</gloss>
-                  <desc>The document uses <gi>div1</gi> (and perhaps
-                  <gi>div2</gi>, etc.), not <gi>div</gi> elements. The content of
-                  this <gi>tagUsage</gi> should be <quote>Numbered
-                  divs used.</quote>.</desc>
-                </valItem>
-              </valList>
-            </attDef>
-          </attList>
-        </elementSpec>
-        <elementSpec module="header" ident="taxonomy" mode="change">
-          <attList>
-            <attDef ident="xml:id" mode="change" usage="req"/>
-          </attList>
-        </elementSpec>
-        <elementSpec module="textstructure" ident="teiHeader" mode="change">
-          <content>
-            <rng:group xmlns="http://relaxng.org/ns/structure/1.0">
-              <rng:ref name="fileDesc"/>
-              <rng:ref name="encodingDesc"/>
-              <rng:optional>
-                <rng:ref name="profileDesc"/>
-              </rng:optional>
-              <rng:optional>
-                <rng:ref name="revisionDesc"/>
-              </rng:optional>
-            </rng:group>
-          </content>
-          <attList>
-            <attDef mode="change" ident="xml:lang" usage="req"/>
-            <attDef mode="delete" ident="type"/>
-          </attList>
-        </elementSpec>
-        <elementSpec module="textstructure" ident="title" mode="change">
-          <attList>
-            <attDef ident="level" usage="opt" mode="replace">
-              <desc>indicates the bibliographic level for a title,
-              that is, whether it identifies an article, book,
-              journal, series, or unpublished material.</desc>
-              <constraintSpec scheme="isoschematron" ident="titleLevel">
+              <constraintSpec scheme="isoschematron" ident="whenNotContent">
                 <constraint>
-                  <s:rule context="tei:fileDesc/tei:titleStmt/tei:title">
-                    <s:report test="@level">The @level attribute
-                    should not be specified on a &lt;title> within the
-                    &lt;titleStmt>.</s:report>
-                  </s:rule>
-                  <s:rule context="tei:title[parent::tei:seriesStmt]">
-                    <s:assert test="@level='s'">When a child of
-                    &lt;seriesStmt&gt;, the level of a title must be
-                    specified as 's'.</s:assert>
-                  </s:rule>
-                  <s:rule context="tei:title[ancestor::tei:series]">
-                    <s:assert test="@level='s'">When inside the
-                    series-level portion of a structured bibliographic
-                    citation, the level of a title must be specified
-                    as 's'.</s:assert>
-                  </s:rule>
-                  <s:rule context="tei:title[parent::tei:analytic]">
-                    <s:assert test="@level='a'">When a child of
-                    &lt;analytic&gt;, the level of a title must be
-                    specified as 'a'.</s:assert>
-                  </s:rule>
-                  <s:rule context="tei:title[parent::tei:monogr]">
-                    <s:report test="@level='a'">When a child of
-                    &lt;monogr&gt;, the level of a title must not be
-                    specified as 'a'.</s:report>
+                  <s:rule context="tei:publicationStmt/tei:date">
+                    <s:assert test="@when">Dates inside the publication statement must have @when (and should not
+                    have content)</s:assert>
+                    <s:report test="string-length( normalize-space(.) ) &gt; 0">Dates inside the publication statement
+                    should not have content (and must have @when)</s:report>
                   </s:rule>
                 </constraint>
               </constraintSpec>
-              <valList type="closed">
-                <valItem ident="a">
-                  <gloss>analytic</gloss>
-                  <desc>analytic title (article, poem, or other item
-                  published as part of a larger item) </desc>
-                </valItem>
-                <valItem ident="m">
-                  <gloss>monographic</gloss>
-                  <desc>monographic title (book, collection, or
-                  other item published as a distinct item,
-                  including single volumes of multi-volume
-                  works) </desc>
-                </valItem>
-                <valItem ident="j">
-                  <gloss>journal</gloss>
-                  <desc>journal title </desc>
-                </valItem>
-                <valItem ident="s">
-                  <gloss>series</gloss>
-                  <desc>series title </desc>
-                </valItem>
-                <valItem ident="u">
-                  <gloss>unpublished</gloss>
-                  <desc>title of unpublished material (including
-                  theses and dissertations unless
-                  published by a commercial press)</desc>
-                </valItem>
-              </valList>
               <remarks>
-                <p>The level of a title is sometimes implied by its
-                context: for example, a title appearing directly
-                within an <gi>analytic</gi> element is <foreign>ipso
-                facto</foreign> of level <val>a</val>, and one
-                appearing within a <gi>series</gi> element of level
-                <val>s</val>. For this reason, the <att>level</att>
-                attribute is not required in contexts where its
-                value can be unambiguously inferred. Where it is
-                supplied in such contexts, its value should not
-                contradict the value implied by its parent element.</p>
+                <p>For normally published items, the specialized children
+                elements (e.g. <gi>publisher</gi>) should be used.
+                Paragraphs are permitted as an alternative for unusual
+                cases like unpublished works.</p>
               </remarks>
-            </attDef>
-            <attDef ident="type" usage="rec" mode="replace">
-              <constraintSpec scheme="isoschematron" ident="titleType">
-                <constraint>
-                  <s:rule context="tei:titleStmt/tei:title">
-                    <s:assert test="@type">Inside the title statment the
-                    @type of a &lt;title> should be specified</s:assert>
-                  </s:rule>
-                  <s:rule context="tei:monogr/tei:title">
-                    <s:assert test="@type">Inside a structured
-                    bibliographic citation of a mongraphic-level item,
-                    @type of a &lt;title> should be specified</s:assert>
-                  </s:rule>
-                  <s:rule context="tei:analytic/tei:title">
-                    <s:assert test="@type">Inside the analytic portion
-                    of a structured bibliographic citation, @type of a
-                    &lt;title> should be specified</s:assert>
-                  </s:rule>
-                  <s:rule context="tei:relatedItem/tei:bibl/tei:title">
-                    <s:assert test="@type">Inside a bibliographic citation
-                    of a related item, the @type of a &lt;title> should be
-                    specified</s:assert>
-                  </s:rule>
-                </constraint>
-              </constraintSpec>
-              <valList type="semi">
-                <valItem ident="main">
-                  <desc>main title </desc>
-                </valItem>
-                <valItem ident="sub">
-                  <gloss>subordinate</gloss>
-                  <desc>subtitle, title of part </desc>
-                </valItem>
-                <valItem ident="alt">
-                  <gloss>alternate</gloss>
-                  <desc>alternate title, often in another language,
-                  by which the work is also known </desc>
-                </valItem>
-                <valItem ident="short">
-                  <desc>abbreviated form of title</desc>
-                </valItem>
-                <valItem ident="desc">
-                  <gloss>descriptive</gloss>
-                </valItem>
-                <valItem ident="translated">
-                  <desc>a translation of a title</desc>
-                </valItem>
-                <valItem ident="marc245a">
-                  <desc>used for the title proper and alternative
-                  title according to the national cataloging
-                  code</desc>
-                </valItem>
-                <valItem ident="marc245b">
-                  <desc>used for the the remainder of the title
-                  information — parallel titles, titles subsequent
-                  to the first, and other title information —
-                  according to the national cataloging code)</desc>
-                </valItem>
-                <valItem ident="uniform">
-                  <desc>used for a uniform title according to the
-                  national cataloging code</desc>
-                </valItem>
-              </valList>
-            </attDef>
-          </attList>
-        </elementSpec>
-        <!-- class deletions, in alphabetical order: -->
-        <classSpec module="header" ident="model.editorialDeclPart" type="model" mode="delete"/>
-      </specGrp>
+            </elementSpec>
+            <elementSpec module="header" ident="rendition" mode="change">
+              <attList>
+                <attDef ident="xml:id" mode="change" usage="req"/>
+                <attDef ident="scheme" mode="change" usage="req">
+                  <valList type="closed" mode="replace">
+                    <valItem ident="css">
+                      <desc>Cascading Stylesheet Language</desc>
+                    </valItem>
+                  </valList>
+                </attDef>
+              </attList>
+            </elementSpec>
+            <elementSpec module="header" ident="sourceDesc" mode="change">
+              <content>
+                <rng:ref name="biblStruct"/>
+              </content>
+            </elementSpec>
+            <elementSpec module="header" ident="tagsDecl" mode="change">
+              <content>
+                <rng:group>
+                  <rng:zeroOrMore>
+                    <rng:ref name="rendition"/>
+                  </rng:zeroOrMore>
+                  <rng:ref name="namespace"/>
+                </rng:group>
+              </content>
+            </elementSpec>
+            <elementSpec module="header" ident="tagUsage" mode="change">
+              <content>
+                <rng:choice>
+                  <rng:value>Unnumbered divs used.</rng:value>
+                  <rng:value>Numbered divs used.</rng:value>
+                </rng:choice>
+              </content>
+              <attList>
+                <attDef ident="gi" mode="replace" usage="req">
+                  <gloss>element name</gloss>
+                  <desc>the name (generic identifier) of the element indicated by the tag.</desc>
+                  <datatype>
+                    <rng:ref name="data.enumerated"/>
+                  </datatype>
+                  <constraintSpec scheme="isoschematron" ident="numbered-vs-unnumbered">
+                    <constraint>
+                      <s:rule context="tei:text">
+                        <s:report test=".//tei:div and .//tei:div1">
+                          A single TEI in Libraries document should not mix numbered and unnumbered divisions.
+                        </s:report>
+                      </s:rule>
+                      <s:rule context="tei:TEI">
+                        <s:assert test="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace/tei:tagUsage/@gi">
+                          The use of divisions (i.e., whether numbered or
+                          unnumbered divisions are used) must be
+                          documented in a &lt;tagUsage> element (inside a
+                        &lt;namespace> element ... </s:assert>
+                      </s:rule>
+                      <s:rule context="tei:tagUsage">
+                        <s:assert test="
+                          ( @gi='div' and normalize-space(.)='Unnumbered divs used.' and ( /tei:TEI/tei:text//tei:div or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )
+                          or
+                          ( @gi='div1' and normalize-space(.)='Numbered divs used.' and ( /tei:TEI/tei:text//tei:div1 or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )">
+                          A document that uses un-numbered divisions
+                          should specify so by using &lt;tagUsage
+                          gi="div">Unnumbered divs used.&lt;/tagUsage>; a
+                          document that uses numbered divisions should
+                          specify so by using &lt;tagUsage
+                          gi="div1">Numbered divs
+                          used.&lt;/tagUsage>.</s:assert>
+                      </s:rule>
+                    </constraint>
+                  </constraintSpec>
+                  <valList type="closed">
+                    <valItem ident="div">
+                      <gloss>divisions are un-numbered</gloss>
+                      <desc>The document uses <gi>div</gi>, not
+                      <gi>div1</gi>, <gi>div2</gi>, etc. The content of
+                      this <gi>tagUsage</gi> should be <quote>Unnumbered
+                      divs used.</quote>.</desc>
+                    </valItem>
+                    <valItem ident="div1">
+                      <gloss>divisions are numbered</gloss>
+                      <desc>The document uses <gi>div1</gi> (and perhaps
+                      <gi>div2</gi>, etc.), not <gi>div</gi> elements. The content of
+                      this <gi>tagUsage</gi> should be <quote>Numbered
+                      divs used.</quote>.</desc>
+                    </valItem>
+                  </valList>
+                </attDef>
+              </attList>
+            </elementSpec>
+            <elementSpec module="header" ident="taxonomy" mode="change">
+              <attList>
+                <attDef ident="xml:id" mode="change" usage="req"/>
+              </attList>
+            </elementSpec>
+            <elementSpec module="textstructure" ident="teiHeader" mode="change">
+              <content>
+                <rng:group xmlns="http://relaxng.org/ns/structure/1.0">
+                  <rng:ref name="fileDesc"/>
+                  <rng:ref name="encodingDesc"/>
+                  <rng:optional>
+                    <rng:ref name="profileDesc"/>
+                  </rng:optional>
+                  <rng:optional>
+                    <rng:ref name="revisionDesc"/>
+                  </rng:optional>
+                </rng:group>
+              </content>
+              <attList>
+                <attDef mode="change" ident="xml:lang" usage="req"/>
+                <attDef mode="delete" ident="type"/>
+              </attList>
+            </elementSpec>
+            <elementSpec module="textstructure" ident="title" mode="change">
+              <attList>
+                <attDef ident="level" usage="opt" mode="replace">
+                  <desc>indicates the bibliographic level for a title,
+                  that is, whether it identifies an article, book,
+                  journal, series, or unpublished material.</desc>
+                  <constraintSpec scheme="isoschematron" ident="titleLevel">
+                    <constraint>
+                      <s:rule context="tei:fileDesc/tei:titleStmt/tei:title">
+                        <s:report test="@level">The @level attribute
+                        should not be specified on a &lt;title> within the
+                        &lt;titleStmt>.</s:report>
+                      </s:rule>
+                      <s:rule context="tei:title[parent::tei:seriesStmt]">
+                        <s:assert test="@level='s'">When a child of
+                        &lt;seriesStmt&gt;, the level of a title must be
+                        specified as 's'.</s:assert>
+                      </s:rule>
+                      <s:rule context="tei:title[ancestor::tei:series]">
+                        <s:assert test="@level='s'">When inside the
+                        series-level portion of a structured bibliographic
+                        citation, the level of a title must be specified
+                        as 's'.</s:assert>
+                      </s:rule>
+                      <s:rule context="tei:title[parent::tei:analytic]">
+                        <s:assert test="@level='a'">When a child of
+                        &lt;analytic&gt;, the level of a title must be
+                        specified as 'a'.</s:assert>
+                      </s:rule>
+                      <s:rule context="tei:title[parent::tei:monogr]">
+                        <s:report test="@level='a'">When a child of
+                        &lt;monogr&gt;, the level of a title must not be
+                        specified as 'a'.</s:report>
+                      </s:rule>
+                    </constraint>
+                  </constraintSpec>
+                  <valList type="closed">
+                    <valItem ident="a">
+                      <gloss>analytic</gloss>
+                      <desc>analytic title (article, poem, or other item
+                      published as part of a larger item) </desc>
+                    </valItem>
+                    <valItem ident="m">
+                      <gloss>monographic</gloss>
+                      <desc>monographic title (book, collection, or
+                      other item published as a distinct item,
+                      including single volumes of multi-volume
+                      works) </desc>
+                    </valItem>
+                    <valItem ident="j">
+                      <gloss>journal</gloss>
+                      <desc>journal title </desc>
+                    </valItem>
+                    <valItem ident="s">
+                      <gloss>series</gloss>
+                      <desc>series title </desc>
+                    </valItem>
+                    <valItem ident="u">
+                      <gloss>unpublished</gloss>
+                      <desc>title of unpublished material (including
+                      theses and dissertations unless
+                      published by a commercial press)</desc>
+                    </valItem>
+                  </valList>
+                  <remarks>
+                    <p>The level of a title is sometimes implied by its
+                    context: for example, a title appearing directly
+                    within an <gi>analytic</gi> element is <foreign>ipso
+                    facto</foreign> of level <val>a</val>, and one
+                    appearing within a <gi>series</gi> element of level
+                    <val>s</val>. For this reason, the <att>level</att>
+                    attribute is not required in contexts where its
+                    value can be unambiguously inferred. Where it is
+                    supplied in such contexts, its value should not
+                    contradict the value implied by its parent element.</p>
+                  </remarks>
+                </attDef>
+                <attDef ident="type" usage="rec" mode="replace">
+                  <constraintSpec scheme="isoschematron" ident="titleType">
+                    <constraint>
+                      <s:rule context="tei:titleStmt/tei:title">
+                        <s:assert test="@type">Inside the title statment the
+                        @type of a &lt;title> should be specified</s:assert>
+                      </s:rule>
+                      <s:rule context="tei:monogr/tei:title">
+                        <s:assert test="@type">Inside a structured
+                        bibliographic citation of a mongraphic-level item,
+                        @type of a &lt;title> should be specified</s:assert>
+                      </s:rule>
+                      <s:rule context="tei:analytic/tei:title">
+                        <s:assert test="@type">Inside the analytic portion
+                        of a structured bibliographic citation, @type of a
+                        &lt;title> should be specified</s:assert>
+                      </s:rule>
+                      <s:rule context="tei:relatedItem/tei:bibl/tei:title">
+                        <s:assert test="@type">Inside a bibliographic citation
+                        of a related item, the @type of a &lt;title> should be
+                        specified</s:assert>
+                      </s:rule>
+                    </constraint>
+                  </constraintSpec>
+                  <valList type="semi">
+                    <valItem ident="main">
+                      <desc>main title </desc>
+                    </valItem>
+                    <valItem ident="sub">
+                      <gloss>subordinate</gloss>
+                      <desc>subtitle, title of part </desc>
+                    </valItem>
+                    <valItem ident="alt">
+                      <gloss>alternate</gloss>
+                      <desc>alternate title, often in another language,
+                      by which the work is also known </desc>
+                    </valItem>
+                    <valItem ident="short">
+                      <desc>abbreviated form of title</desc>
+                    </valItem>
+                    <valItem ident="desc">
+                      <gloss>descriptive</gloss>
+                    </valItem>
+                    <valItem ident="translated">
+                      <desc>a translation of a title</desc>
+                    </valItem>
+                    <valItem ident="marc245a">
+                      <desc>used for the title proper and alternative
+                      title according to the national cataloging
+                      code</desc>
+                    </valItem>
+                    <valItem ident="marc245b">
+                      <desc>used for the the remainder of the title
+                      information — parallel titles, titles subsequent
+                      to the first, and other title information —
+                      according to the national cataloging code)</desc>
+                    </valItem>
+                    <valItem ident="marc245c">
+                      <desc>used for the statement of responsibility
+                      according to the national cataloging code</desc>
+                    </valItem>
+                    <valItem ident="uniform">
+                      <desc>used for a uniform title according to the
+                      national cataloging code</desc>
+                    </valItem>
+                  </valList>
+                </attDef>
+              </attList>
+            </elementSpec>
+            <!-- class deletions, in alphabetical order: -->
+            <classSpec module="header" ident="model.editorialDeclPart" type="model" mode="delete"/>
+          </specGrp>
         </div>
       </div>
     </body>
