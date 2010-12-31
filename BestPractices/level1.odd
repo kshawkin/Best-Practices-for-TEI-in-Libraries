@@ -297,7 +297,7 @@
 	    <moduleRef key="tei"/>
 	    <moduleRef key="textstructure" include="TEI text body div div1"/>
 	    <moduleRef key="linking" include="ab"/>
-	    <moduleRef key="transcr"/>     <!-- only for facs=; rest should be deleted -->
+	    <moduleRef key="transcr" include="facsimile surface"/>
 	    <moduleRef key="namesdates" include="orgName persName"/>
 	    <specGrpRef target="./lib-header.odd#libHeadSpec"/>
 	    <!-- ****************************************** -->
@@ -311,6 +311,9 @@
 	      element.</desc>
 	      <content>
 		<rng:ref name="teiHeader"/>
+		<rng:optional>
+		  <rng:ref name="model.resourceLike"/>
+		</rng:optional>
 		<rng:ref name="text"/>
 	      </content>
 	      <attList>
@@ -526,6 +529,18 @@
 		</egXML>
 	      </exemplum>
 	    </elementSpec>
+	    <elementSpec module="transcr" ident="facsimile" mode="change">
+	      <content>
+		<rng:oneOrMore>
+		  <rng:ref name="surface"/>
+		</rng:oneOrMore>
+	      </content>
+	    </elementSpec>
+	    <elementSpec module="core" ident="graphic" mode="change">
+	      <content>
+		<rng:empty/>
+	      </content>
+	    </elementSpec>
 	    <elementSpec module="core" ident="note" mode="change">
 	      <attList>
 		<attDef ident="anchored" mode="delete"/>
@@ -576,6 +591,11 @@
 		</rng:choice>
 	      </content>
 	    </elementSpec>
+	    <elementSpec module="transcr" ident="surface" mode="change">
+	      <content>
+		<rng:ref name="graphc"/>
+	      </content>
+	    </elementSpec>
 	    <!-- ********************************* -->
 	    <!-- Element deletion, in module order -->
 	    <!-- ********************************* -->
@@ -615,22 +635,6 @@
 	    <elementSpec module="core" ident="teiCorpus" mode="delete"/>
 	    <elementSpec module="core" ident="time" mode="delete"/>
 	    <elementSpec module="core" ident="unclear" mode="delete"/>
-	    <elementSpec module="transcr" ident="zone" mode="delete"/>
-	    <elementSpec module="transcr" ident="addSpan" mode="delete"/>
-	    <elementSpec module="transcr" ident="damage" mode="delete"/>
-	    <elementSpec module="transcr" ident="damageSpan" mode="delete"/>
-	    <elementSpec module="transcr" ident="delSpan" mode="delete"/>
-	    <elementSpec module="transcr" ident="ex" mode="delete"/>
-	    <elementSpec module="transcr" ident="facsimile" mode="delete"/>
-	    <elementSpec module="transcr" ident="fw" mode="delete"/>
-	    <elementSpec module="transcr" ident="handNotes" mode="delete"/>
-	    <elementSpec module="transcr" ident="handShift" mode="delete"/>
-	    <elementSpec module="transcr" ident="am" mode="delete"/>
-	    <elementSpec module="transcr" ident="restore" mode="delete"/>
-	    <elementSpec module="transcr" ident="space" mode="delete"/>
-	    <elementSpec module="transcr" ident="subst" mode="delete"/>
-	    <elementSpec module="transcr" ident="supplied" mode="delete"/>
-	    <elementSpec module="transcr" ident="surface" mode="delete"/>
 	    <!-- ****************************************************** -->
 	    <!-- Class deletions (both deletion of classes and deletion -->
 	    <!-- of attributes from classes) in no particiular order    -->
