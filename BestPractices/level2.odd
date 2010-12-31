@@ -514,9 +514,6 @@
             <elementSpec module="textstructure" ident="back" mode="replace">
               <gloss>back matter</gloss>
               <desc>contains any appendixes, etc. following the main part of a text.</desc>
-              <classes>
-                <memberOf key="att.declaring"/>
-              </classes>
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -712,9 +709,6 @@
               <desc>contains any prefatory matter (headers, title page,
               prefaces, dedications, etc.) found at the start of a
               document, before the main body.</desc>
-              <classes>
-                <memberOf key="att.declaring"/>
-              </classes>
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -837,24 +831,6 @@
               <attList>
                 <attDef ident="cRef" mode="delete"/>
               </attList>
-            </elementSpec>
-            <elementSpec module="core" ident="respStmt" mode="change">
-              <content>
-                <rng:choice>
-                  <rng:group>
-                    <rng:ref name="resp"/>
-                    <rng:oneOrMore>
-                      <rng:ref name="model.nameLike.agent"/>
-                    </rng:oneOrMore>
-                  </rng:group>
-                  <rng:group>
-                    <rng:oneOrMore>
-                      <rng:ref name="model.nameLike.agent"/>
-                    </rng:oneOrMore>
-                    <rng:ref name="resp"/>
-                  </rng:group>
-                </rng:choice>
-              </content>
             </elementSpec>
             <elementSpec module="transcr" ident="surface" mode="change">
               <content>

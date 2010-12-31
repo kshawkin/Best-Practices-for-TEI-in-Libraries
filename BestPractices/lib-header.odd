@@ -1268,6 +1268,24 @@ The person who is responsible for making the change must be indicated by the <at
                    xml:lang="en">
             <classSpec module="tei" ident="model.encodingDescPart" type="model" mode="delete"/>
             <classSpec module="tei" ident="model.teiHeaderPart" type="model" mode="delete"/>
+	    <elementSpec module="core" ident="respStmt" mode="change">
+	      <content>
+		<rng:choice>
+		  <rng:group>
+		    <rng:ref name="resp"/>
+		    <rng:oneOrMore>
+		      <rng:ref name="model.nameLike.agent"/>
+		    </rng:oneOrMore>
+		  </rng:group>
+		  <rng:group>
+		    <rng:oneOrMore>
+		      <rng:ref name="model.nameLike.agent"/>
+		    </rng:oneOrMore>
+		    <rng:ref name="resp"/>
+		  </rng:group>
+		</rng:choice>
+	      </content>
+	    </elementSpec>
 	    <moduleRef key="tagdocs" include="att val gi tag"/>
             <moduleRef key="header"
                        include="extent

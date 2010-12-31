@@ -573,24 +573,6 @@
 		<attDef ident="cRef" mode="delete"/>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="core" ident="respStmt" mode="change">
-	      <content>
-		<rng:choice>
-		  <rng:group>
-		    <rng:ref name="resp"/>
-		    <rng:oneOrMore>
-		      <rng:ref name="model.nameLike.agent"/>
-		    </rng:oneOrMore>
-		  </rng:group>
-		  <rng:group>
-		    <rng:oneOrMore>
-		      <rng:ref name="model.nameLike.agent"/>
-		    </rng:oneOrMore>
-		    <rng:ref name="resp"/>
-		  </rng:group>
-		</rng:choice>
-	      </content>
-	    </elementSpec>
 	    <elementSpec module="transcr" ident="surface" mode="change">
 	      <content>
 		<rng:ref name="graphc"/>
