@@ -683,18 +683,18 @@
 		<egXML xmlns="http://www.tei-c.org/ns/Examples">
 		  <body>
 		    <head>LA FOREST NVPTIALE,</head>
-		    <ab>Où e∫t repre∫entee vne varieté bigarree, non mois e∫merveillable que plai∫an‐
+		    <p>Où e∫t repre∫entee vne varieté bigarree, non mois e∫merveillable que plai∫an‐
                     te, de diuers mariages, ∫elon qu’ils ∫ont ob∫erueZ &amp; pratiqueZ par plu∫ieurs
                     peuples &amp; nations e∫tranges. Auec la maniere de policier, regir, gouuer‐ ner
-                    &amp; admini∫trer leur famille.</ab>
+                    &amp; admini∫trer leur famille.</p>
 		    <div type="chapter">
 		      <head>Les Romains. CHAPITRE I.</head>
-		      <ab>Encores que ie ne veuille me formali‐ ∫er contre le droict Romain, neãtmoins
+		      <p>Encores que ie ne veuille me formali‐ ∫er contre le droict Romain, neãtmoins
                       puis que le forma‐ litez, qui e∫toient an‐ ciennement gardees au nopces
                       Romaines, ∫ont maintenant mi∫es hors d’v∫ages &amp; pratique, ie ne ∫e‐ A
                       <pb/> ray point de difficulté d’emprunter des anciens autheurs ce qui appar‐
                       <!-- ... -->
-		      </ab>
+		      </p>
 		    </div>
 		  </body>
 		</egXML>
@@ -1235,6 +1235,13 @@
 		<ptr target="#COBICOR"/>
 	      </listRef>
 	    </elementSpec>
+            <elementSpec module="transcr" ident="facsimile" mode="change">
+              <content>
+                <rng:oneOrMore>
+                  <rng:ref name="surface"/>
+                </rng:oneOrMore>
+              </content>
+            </elementSpec>
 	    <elementSpec module="textstructure" ident="front" mode="replace">
 	      <gloss>front matter</gloss>
 	      <desc>contains any prefatory matter (headers, title page, prefaces, dedications, etc.)
@@ -1253,13 +1260,13 @@
 		<egXML xmlns="http://www.tei-c.org/ns/Examples">
 		  <front>
 		    <div type="dedication">
-		      <ab>To our three selves</ab>
+		      <p>To our three selves</p>
 		    </div>
 		    <div type="preface">
 		      <head>Author's Note</head>
-		      <ab>All the characters in this book are purely imaginary, and if the author has
+		      <p>All the characters in this book are purely imaginary, and if the author has
                       used names that may suggest a reference to living persons she has done so
-                      inadvertently. ...</ab>
+                      inadvertently. ...</p>
 		    </div>
 		  </front>
 		</egXML>
@@ -1288,13 +1295,13 @@
 		  <div1 n="I" type="book">
 		    <head>In the name of Christ here begins the first book of the ecclesiastical
                     history of Georgius Florentinus, known as Gregory, Bishop of Tours.</head>
-		    <ab> ... </ab>
+		    <p> ... </p>
 		    <div2 type="section">
 		      <head>In the name of Christ here begins Book I of the history.</head>
-		      <ab>Proposing as I do ... ... From the Passion of our Lord until the death of
+		      <p>Proposing as I do ... ... From the Passion of our Lord until the death of
                       Saint Martin four hundred and twelve years passed. Here ends the first Book,
                       which covers five thousand, five hundred and ninety-six years from the
-                      beginning of the world down to the death of Saint Martin.</ab>
+                      beginning of the world down to the death of Saint Martin.</p>
 		    </div2>
 		  </div1>
 		</egXML>
