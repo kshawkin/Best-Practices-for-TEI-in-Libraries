@@ -77,9 +77,10 @@
     <body>
       <!-- This document is encoded with a single <div> as the one and only child of <body>, -->
       <!-- which on the face of it seems silly. This is on purpose, though, so that the-->
-      <!-- driver document can XInclude to suck in a <div> for all of the body of level 1,-->
+      <!-- driver document can XInclude to suck in a <div> for all of the body of level 3,-->
       <!-- but have it be a <div> element so that it is valid in the driver.-->
       <div xml:id="level-3-content">
+	<head>Level 3: Simple Analysis</head>
 	<div type="reference">
 	  <head>Reference</head>
 	  <list>
