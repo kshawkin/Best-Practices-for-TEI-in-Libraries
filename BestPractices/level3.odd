@@ -1349,6 +1349,11 @@
 		<attDef ident="cRef" mode="delete"/>
 	      </attList>
 	    </elementSpec>
+            <elementSpec module="transcr" ident="surface" mode="change">
+              <content>
+                <rng:ref name="graphc"/>
+              </content>
+            </elementSpec>
 	    <!-- ********************************* -->
 	    <!-- Element deletion, in module order -->
 	    <!-- ********************************* -->

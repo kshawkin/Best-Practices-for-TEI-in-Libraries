@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:s="http://purl.oclc.org/dsdl/schematron"
+     xmlns:rng="http://relaxng.org/ns/structure/1.0"
+     xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Best Practices for TEI in Libraries</title>
+        <author>
+          <name type="organization">TEI in Libraries SIG</name>
+        </author>
+        <editor>
+          <name type="person">Kevin Hawkins</name>
+        </editor>
+        <editor role="ODDs">
+          <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
+        </editor>
+        <sponsor>
+          <name type="organization">DLF TEI Task Force</name>
+        </sponsor>
+        <sponsor>
+          <name type="organization">Text Encoding Initiative Consortium</name>
+        </sponsor>
+      </titleStmt>
+      <publicationStmt>
+        <availability status="restricted">
+          <ab>Copyleft 2009 DLF</ab>
+          <p>Permission is granted to copy, distribute and/or modify
+          this document under the terms of the <ref target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
+          Documentation License, Version 1.2</ref> or any later
+          version published by the Free Software Foundation; with no
+          Invariant Sections, no Front-Cover Texts, and no Back-Cover
+          Texts. A copy of the license is included in the document
+          entitled <name type="file">COPYING.txt</name>.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>No source in the transcriptional sense, but this document
+        is a planned re-implementation of
+        <bibl>
+          <title>TEI in Libraries: Guidelines for Best Practices</title>
+          <author>TEI in Libraries SIG</author>
+          <author>Digital Libraries Federation TEI task force</author>
+          <ptr
+              target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
+        </bibl>
+        written in a wiki language into the TEI ODD language. This
+        driver file started <date when="2011-01-01"/>.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+    <div type="==">
+      <head>Introduction</head>
+      <p>This document is the third version of a document formerly
+      known as <title>TEI Text Encoding in Libraries: Guidelines for
+      Best Encoding Practices</title>, which has been updated to comply
+      with the <ref target="http://www.tei-c.org/">Text Encoding Initiative</ref>’s
+      <ref target="http://www.tei-c.org/Guidelines/P5/">Guidelines for Text
+      Encoding and Interchange (P5)</ref>. These guidelines are intended
+      for use in large, library-based digitization projects, but may
+      be useful in other scenarios as well. This version of the
+      <title>Best Practices for TEI in Libraries</title> was created and
+      is maintained by the <title>TEI in Libraries: Guidelines for Best
+      Practices</title> Working Group.</p>
+      <p>There are many different library text digitization projects,
+      serving a variety of purposes. With this in mind, these
+      <title>Best Practices</title> are meant to be as inclusive as
+      possible by specifying five encoding levels. These levels are
+      meant to allow for a range of practice, from wholly automated
+      text creation and encoding, to encoding that requires expert
+      content knowledge, analysis, and editing. The encoding levels
+      are not strictly cumulative: while higher levels tend to build
+      upon lower levels by including more elements, higher levels are
+      not supersets because some elements used at lower levels are not
+      used at higher levels&#x2014;often because more specific
+      elements replace generic elements.</p>
+      <p>In brief, the encoding levels (with approximate examples) are as follows:
+      <table rend="border: thin solid black;">
+        <row role="label">
+          <cell>Level</cell>
+          <cell>Description</cell>
+          <cell>Example of encoding of <ref target="http://hdl.handle.net/2027/spo.hiss1111.0127.005">Alger Hiss document</ref></cell>
+          <cell>Display example</cell>
+        </row>
+        <row>
+          <cell>Level 1</cell>
+          <cell>The text is generated through OCR, is subordinate to the page image, and is not intended to stand alone as an electronic text (without page images). Encoding is done to assist in full text searching.</cell>
+          <cell><ref target="#Level_1_Example:_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="http://name.umdl.umich.edu/AGB8710.0001.001">example</ref></cell>
+        </row>
+        <row>
+          <cell>Level 2</cell>
+          <cell>The text is generated through OCR and is mainly subordinate to the page image, though navigational markers (textual divisions, headings) are captured.</cell>
+          <cell><ref target="#Level_2_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="http://hdl.handle.net/2027/spo.5099288.0001.001">example</ref></cell>
+        </row>
+        <row>
+          <cell>Level 3 (example)</cell>
+          <cell>The text is created by conversion, either by way of OCR or keyboarding. Some structural elements of the text are encoded. The text may be used with or without page images.</cell>
+          <cell><ref target="#Level_3_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="http://www.dlib.indiana.edu/collections/vwwp/">example</ref></cell>
+        </row>
+        <row>
+          <cell>Level 4 (example)</cell>
+          <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images in order for them to be read by students, scholars, and general readers.</cell>
+          <cell><ref target="#Level_4_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="http://docsouth.unc.edu/sohp/">example</ref></cell>
+        </row>
+        <row>
+          <cell>Level 5 (example)</cell>
+          <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images, as in Level 4.  In addition, the tagging requires substantial human intervention by encoders with subject knowledge.</cell>
+          <cell>(none)</cell>
+          <cell><ref target="http://www.dlib.indiana.edu/collections/newton/">example</ref></cell>
+        </row>
+      </table></p>
+      <p>In these <title>Best Practices</title>, use of elements and
+      attributes tends toward explicitness for ease of processing even
+      though a human or possibly machine reader might be able to make
+      inferences based on context. Only those elements and attributes
+      mentioned below are recommended for use in encoding based on
+      these <title>Best Practices</title>; use of other TEI elements
+      and attributes is not recommended. Consult the <ref
+      target="http://www.tei-c.org/Guidelines/P5/">full TEI
+      Guidelines</ref> for guidance on use of elements and attributes
+      beyond what is described below.</p>
+      <p>These <title>Best Practices</title> specify a recommended
+      archival storage format. Local system needs may require
+      transformation of documents in this archival format to another
+      XML format for use by a local indexing or delivery software.</p>
+    </div>
+    <div type="==">
+      <head>Relationship to TEI Tite</head>
+      <p>The TEI Tite customization of the TEI Guidelines was
+      developed as a subset of the TEI to be used as a vendor
+      specification for outsourced encoding of the type often
+      initiated by libraries, archives and other cultural heritage
+      organization. This <title>Best Practices</title> document was
+      created to support in-house encoding that adheres as closely as
+      possible to common TEI practice and library standards yet still
+      leaves room for variation in local practice.</p>
+      <p>If a library uses TEI Tite for outsourced encoding, it should
+      find that converting files from the TEI Tite format to a format
+      conforming to these <title>Best Practices</title> is not
+      difficult. TEI Tite files may be converted to <title>Best
+      Practices</title> Level 3 with some loss of granularity; or to
+      Level 4 with some additional markup with minimal human
+      intervention. (The reason Level 3 does not contain as many
+      elements as TEI Tite is to allow for use of this encoding level,
+      whether for mass digitization of born-digital source documents
+      or for upgrading Level 1 or Level 2 texts, with less human
+      intervention than would be required by TEI Tite.)</p>
+      <p>These <title>Best Practices</title> are meant to complement
+      the TEI Tite customization of the TEI Guidelines. Whereas TEI
+      Tite is meant for vendors who need exact specifications for
+      encoding, these <title>Best Practices</title> document how a
+      library or other large-scale encoding project might create
+      conformant TEI documents out of vendor-generated or
+      locally-created TEI documents. TEI Tite lacks header metadata
+      and elements for encoding textual structures of possible
+      interest to libraries; however, once Tite documents are
+      transformed to a TEI-conformant encoding used by an institution,
+      these <title>Best Practices</title> can serve as a point of
+      reference for developing the TEI header and applying richer
+      markup as reflected in Level 4 or 5 of these <title>Best
+      Practices</title>.</p>
+      <p>For a comparison of the TEI Tite schema to these <title>Best
+      Practices</title>, see <ref
+      target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html#tei-in-lib-bpg">TEI
+      Tite's Appendix A</ref>.</p>
+    </div>
+    <div type="==">
+      <head>General Recommendations</head>
+      <div type="===">
+        <head>Standards and Local Practice</head>
+        <p>The goal of the TEI is interchange, not interoperability.
+        While seamless interoperability of texts created by different
+        organizations is an unobtainable goal, use of a common markup
+        vocabulary and syntax greatly aids interchange. Nevertheless,
+        keep in mind that others—even within your organization—may use
+        your texts in the future for other uses than you intended in
+        your encoding.</p>
+        <p>An encoding project should strive for internal consistency
+        and for use of standards so that the data can be modified or
+        enhanced in the future with ease. In cases where local
+        practice deviates from standards, there should at least be
+        internal consistency in the local practice.</p>
+      </div>
+      <div type="===">
+        <head>Transcription</head>
+        <p>When reformatting to digital media using any level of
+        encoding, the electronic text should begin with the
+        transcription of the first word on the first leaf of the
+        original work. At lower levels of encoding, it may be
+        impractical or undesirable to transcribe and encode certain
+        features of the text, such as publisher’s advertisements or
+        indexes; at Level 4 and above, the transcription must be
+        complete. Any omissions of material found in the original work
+        should be noted in the <gi>editorialDecl</gi> in the
+        TEI header.</p>
+        <div type="====">
+          <head>Punctuation</head>
+          <p>While the TEI gives the option of removing punctuation
+          marks that could be encoded using XML tags, such as
+          quotation marks or end-of-line hyphens, from the transcribed
+          text, it is recommended to leave these as XML character data
+          in order to simplify rendering of the encoded text as it
+          appears in the source document. For example:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <p>She said, <said>“Nobody uses the term 
+            <soCalled>‘electronic text’</soCalled> anymore”</said>!</p>
+          </egXML>
+          Use <gi>editorialDecl</gi> in the TEI header to record
+          whether such punctuation has been removed.</p>
+          <p>When removing punctuation marks whose rendering in the
+          source document is worth preserving, use the <att>rend</att>
+          attribute on the appropriate element to describe the
+          punctuation marks that were removed. For example:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <p>She said, <said rend="quotes: '“' '”'">Nobody uses the term 
+            <soCalled rend="quotes: '‘' '’'">electronic text</soCalled> anymore</said>!</p>
+          </egXML>
+          </p>
+        </div>
+        <div type="====">
+          <head>Hyphenation</head>
+          <p>Encoding end-of-line, end-of-column, and end-of-page
+          hyphenation varies considerably in the TEI community. Some
+          capture all hyphens found on the printed page, while others
+          remove those in the middle of words not normally hyphenated
+          for easier implementation of full-text retrieval. If
+          preserving hyphens, some will capture all hyphens using the
+          same character, while others will distinguish hyphens that
+          must be present in any case (often called <term>hard
+          hyphens</term>) and those that are only present by virtue of
+          being at the end of a line, column, or page (often called
+          <term>soft hyphens</term>).</p>
+          <p>This issue is complicated by the fact that Unicode
+          prescribes use of a soft hyphen not for a <emph>visible
+          hyphen that might have been absent</emph> but instead for a
+          place where a hyphen <emph>might occur</emph>. Furthermore,
+          it includes a <name>non-breaking hyphen</name>, used in
+          cases like <soCalled>re-creation</soCalled> (meaning
+          <gloss>to create again</gloss>, as opposed to recreation,
+          meaning <gloss>relaxation</gloss>), in addition to a regular
+          hyphen, which would normally count as a word boundary. In
+          short, Unicode is oriented toward electronic text that may
+          be processed with a computer in various ways, not toward
+          capturing source documents.</p>
+          <p>Since OCR software relies on dictionaries to determine
+          the probability not simply of characters but of whole words,
+          it is often able to capture hyphenation in different ways,
+          per the needs of a specific project.</p>
+          <p>At Levels 1 and 2, do not attempt to disambiguate
+          different uses of hyphens. Encode all hyphens appearing in
+          the source document using character U+2010 if possible;
+          alternatively, use the semantically ambiguous U+002D.</p>
+          <p>At Level 3, optionally distinguish uses of the hyphen
+          with the <att>type</att> attribute on <gi>lb</gi>,
+          <gi>cb</gi>, and <gi>pb</gi> elements as appropriate. At
+          Level 4, the use of the <att>type</att> attribute on these
+          elements is mandatory.</p>
+          <p>Here are some examples of the <att>type</att> attribute
+          used on the <gi>lb</gi> element. (If these hyphens occur at
+          a column or page break instead of a line break, use
+          <gi>cb</gi> or <gi>pb</gi> instead.)
+          <table>
+            <row role="label">
+              <cell>Colloquial name</cell>
+              <cell>Appearance in source document</cell>
+              <cell>Encoding</cell>
+            </row>
+            <row>
+              <cell>
+                Hard hyphen
+              </cell>
+              <cell>
+                <eg>
+                  This is not a run-
+                  on sentence.
+                </eg>
+              </cell>
+              <cell>
+                <code>
+                  This is not a run-<lb type="betweenWords"/>on sentence.
+                </code>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                Soft hyphen
+              </cell>
+              <cell>
+                <eg>
+                  UTF-8 is a char-
+                  acter encoding for Unicode.
+                </eg>
+              </cell>
+              <cell>
+                <code>
+                  UTF-8 is a char-<lb type="inWord"/>acter encoding for Unicode.
+                </code>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                Unclear case
+              </cell>
+              <cell>
+                <eg>
+                  Some people say TEI is a mark-
+                  up language.
+                </eg>
+              </cell>
+              <cell>
+                <code>
+                  Some people say TEI is a mark-<lb type="wordBreakStatusUnknown"/>up language.
+                </code>
+              </cell>
+            </row>
+          </table>
+          </p>
+          <p>Do not confuse the following characters with hyphens:
+          <list>
+            <item>en dash (U+2013)</item>
+            <item>em dash (U+2014)</item>
+            <item>minus sign (U+2212)</item>
+          </list>
+          </p>
+        </div>
+      </div>
+      <div type="===">
+        <head>Filenames</head>
+        <p>A filename scheme that is internally consistent should be
+        established for the project.</p>
+        <p>If it is likely that the files will need to be used on more
+        primitive devices (MS-DOS computers or unextended ISO 9660
+        CDs) it may be useful to limit names to 8 characters (limited
+        to the 26 lower case letters of ASCII, digits, hyphens, and
+        underscore), a dot, and an extension of 3 alphanumeric
+        characters. Likewise, if you will access files using a version
+        of Apple Filing Protocol (AFP) before 3.0, filenames longer
+        than 31 bytes are likely to be corrupted, so you may wish to
+        limit filenames to 31 single-byte (e.g., ASCII)
+        characters.</p>
+        <p>Otherwise, consider the following best practices when
+        determining the file name scheme for your project:
+        <list>
+          <item>Each filename should contain an identifier that
+          uniquely specifies a single digital object within the parent
+          collection (e.g., a parent collection of text, images and
+          other related materials)</item>
+          <item>Each filename should be fully specified. It should not
+          just be a sequence number that is dependent on location
+          within a directory structure for context</item>
+          <item>Filenames should not include spaces</item>
+          <item>Filenames should follow predictable case constructions
+          (e.g., all lowercase, camelCase, etc.)</item>
+          <item>The first character of the filename should be an ASCII
+          letter ('a' through 'z' or 'A' through 'Z') to comply with
+          current restrictions on identifiers by many programming and
+          XML-based metadata languages</item>
+          <item>The <term>base</term> filename may include only ASCII
+          letters ('a' through 'z' and 'A' through 'Z'), ASCII digits
+          ('0' through '9'), hyphens, underscores, and periods.
+          Refrain from using other characters and limit period usage
+          to only once (to separate base name from file
+          extensions).</item>
+        </list>
+        </p>
+      </div>
+      <div type="===">
+        <head>URIs</head>
+        <p>A number of attributes take a <ref
+        target="http://tools.ietf.org/html/rfc3986">URI</ref> (Uniform
+        Resource Identifier) as their value. Note that in addition to
+        the full form of reference defined by URI syntax, these
+        attributes can take a relative reference (e.g.,
+        <code>filename.ext</code>) or a fragment identifier (e.g.,
+        <code>#foo</code>).</p>
+      </div>
+      <div type="===">
+        <head>Textual Divisions</head>
+        <p>An encoding project should use only numbered divisions
+        (i.e., <gi>div1</gi>, <gi>div2</gi>, etc.) or unnumbered
+        divisions (i.e., <gi>div</gi>) but not both. This applies both
+        within a TEI document (i.e., within <gi>front</gi>,
+        <gi>body</gi>, <gi>back</gi>, even if nested within
+        <gi>group</gi> or <gi>floatingText</gi>) and across TEI
+        documents in any given collection. Keep in mind that numbering
+        of textual subdivisions starts over (at <gi>div1</gi>) within
+        <gi>floatingText</gi> nested inside a subdivision, so any
+        software that expects to process nested numbered divisions
+        within a document will need to account for this.</p>
+        <p>The choice of numbered or unnumbered divisions must be
+        documented with the <gi>tagUsage</gi> element in the header.
+        See <ref><?tei winita: fix ref?>4.6, Element Recommendations
+        for the TEI Header</ref>, below.</p>
+        <p>Whether numbered or unnumbered divisions are used, the
+        <att>type</att> attribute of the division element is not
+        recommended at Level 1 (because only one encoded division in
+        the text exists), is optional at Level 2 (because the
+        division-level metadata need not classify these divisions), is
+        recommended at Level 3 (for broad yet useful analysis of text
+        divisions), and required at Levels 4 and 5 (for full analysis
+        of the text structure).</p>
+      </div>
+      <div type="===">
+        <head>Page Breaks</head>
+        <p>Page breaks should be encoded using the <gi>pb</gi>
+        element, with the value of the <att>n</att> attribute denoting
+        the number of the page whose text <emph>follows</emph> this
+        element. The <gi>pb</gi> element should always be contained
+        within a text division for ease of retrieval with indexing
+        software. For example, a page break that occurs between
+        chapters 2 and 3 should be encoded right after the opening tag
+        of the textual division that opens chapter 3 rather than
+        before the closing tag of the division that ends chapter
+        2.</p>
+      </div>
+      <div type="===">
+        <head>Linking Between Encoded Text and Images of Source Documents</head>
+        <p>There are three recommended mechanisms for linking between
+        the encoded text and facsimile page images of source
+        documents. Projects may use any of the following methods:
+        <list>
+          <item>Use the <ref
+          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><att>facs</att></ref>
+          attribute on a <gi>pb</gi> element to point to the
+          corresponding page image using a URI.</item>
+          <item>Use the <ref
+          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><gi>facsimile</gi></ref>
+          element to define a set of images that corresponds to the
+          text, in conjunction with the <ref
+          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><att>facs</att></ref>
+          attribute on a <gi>pb</gi> element to point to the
+          corresponding page image using a URI.</item>
+          <item>Use the <att>xml:id</att> attribute on each
+          <gi>pb</gi> element and a METS document to provide
+          correspondence between <gi>pb</gi> elements and one or more
+          facsimile page images (e.g., master, web derivatives,
+          etc.).</item>
+        </list>
+        </p>
+        <p>For those projects relying on the <ref
+        target="http://www.loc.gov/standards/mets/">Metadata Encoding
+        and Transmission Standard</ref> (METS), the <att>xml:id</att>
+        attribute is used as a conceptual identifier for content as
+        opposed to an explicit pointer (i.e., <att>facs</att>
+        attribute) to a specific representation of that content. These
+        identifiers are then used to generate a METS document that
+        bundles the various content types (e.g., master image files,
+        derivative image files for Web delivery, PDFs, etc.),
+        explicitly lists all versions of the content, and defines the
+        relationships between the constituent parts. This is achieved
+        through the use of the <gi>mets:fileSec</gi> and
+        <gi>mets:structMap</gi> sections of the METS document (see
+        <ref
+        target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
+        METS document</ref> for a TEI project).</p>
+      </div>
+      <div type="===">
+        <head>General Guidelines for Attribute Usage</head>
+        <p>These <title>Best Practices</title> provide required and
+        recommended usage of <ref
+        target="#Element_and_Attributes_Recommendations_for_the_TEI_Header">attributes
+        as used in the TEI header</ref> and within the body of the TEI
+        document (within the <gi>text</gi> element), as evidenced by
+        attributes used in encoding example snippets and the prose
+        description of this document.</p>
+        <p>Scores of attributes are available for use within
+        <gi>text</gi>, and a list of those recommended for use in Tite
+        documents is included in <ref
+        target="#Appendix_A:_Recommended_Attributes">Appendix
+        A</ref>.</p>
+        <p>In this section is general advice on the use of particular
+        attributes commonly needed for library encoding projects. (All
+        of the attributes below are commonly used on various elements,
+        but not every element requires or even allows these
+        attributes.)</p>
+        <div type="====">
+          <head><att>type</att></head>
+          <p>Constructing a list of acceptable attribute values for
+          the <att>type</att> attribute for each element, on which
+          everyone could agree, is impossible. Instead, it is
+          recommended that projects describe the <att>type</att>
+          attribute values used in their texts in the project <ref
+          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#IM">ODD</ref>
+          file and that this list be made available to people using
+          the texts. It is worth noting that, at present, <ref
+          target="http://www.tei-c.org/Roma/">Roma</ref>, the web
+          front-end editor for ODD files, does not have a mechanism
+          for providing this documentation — it should be added to the
+          ODD file directly. For a list of standard names and
+          definitions of bibliographic features of printed books, see
+          <title>ABC for Book Collectors</title> by John Carter (8th
+          edition, New Castle, Del. and London: Oak Knoll Books and
+          the British Library, 2004, available online at
+          <ptr target="http://www.ilab.org/images/abcforbookcollectors.pdf"/>).</p>
+        </div>
+        <div type="====">
+          <head><att>n</att></head>
+          <p>This attribute is sometimes used to number elements for
+          machine processing, but it often includes data represented
+          in the source document, such as page numbers or footnote
+          numbers. Example: <tag>pb n="456"/</tag></p>
+        </div>
+        <div type="====">
+          <head>key and ref</head>
+          <p>These attributes are both available on a variety of
+          elements including <gi>name</gi>, <gi>persName</gi>,
+          <gi>author</gi>, and <gi>title</gi>. They are used to
+          reference external metadata about the content of the
+          element. The <att>key</att> attribute may contain any string
+          of Unicode characters, whereas the <att>ref</att> attribute
+          must contain a URI (including a relative one, as discussed
+          above). While <att>key</att> may supply any identifier,
+          there is no mechanism internal to XML for checking that the
+          value of this attribute is valid.</p>
+          <p>For example,
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <author><persName type="marc100" key="lccn-n78-95332">Shakespeare, William, 1564-1616</persName></author>
+          </egXML>
+          gives a project-specific key (in this case
+          <val>lccn-n78-95332</val>) for this name in the Library of
+          Congress Name Authority File. Values of <att>key</att>
+          attributes may be partially explained in a
+          non-machine-readable way through the use of a
+          <gi>taxonomy</gi> element:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <taxonomy xml:id="lccn"><bibl>Library of Congress Control Number</bibl></taxonomy>
+          </egXML>
+          </p>
+          <p>Alternatively, use <att>ref</att> with a URI fragment
+          identifier, corresponding to the value of <att>xml:id</att>
+          given elsewhere. For example, in the transcription of the
+          text, use
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <placeName ref="#tgn_7012924">Indianapolis</placeName>
+          </egXML>
+          which would be defined in a controlled vocabulary elsewhere:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <listPlace>
+              <place xml:id="tgn_7012924">
+                <placeName>
+                  <settlement type="city">Indianapolis</settlement>
+                  <region type="state">Indiana</region>
+                </placeName>
+              </place>
+            </listPlace>
+          </egXML>
+          </p>
+          <p>Readily available software can then check when it
+          encounters <code>ref="#tgn_7012924"</code> that
+          <code>xml:id="tgn_7012924"</code> exists elsewhere in the
+          document.</p>
+          <p>In general it is recommended to use <att>ref</att> when
+          the metadata object being referenced is accessible via a URI
+          (e.g., is on the web), and <att>key</att> when it is not. To
+          avoid ambiguity in referencing external data sources, it is
+          recommended not to use both attributes on the same instance
+          of an element.</p>
+        </div>
+        <div type="====">
+          <head><att>rend</att> and <att>rendition</att></head>
+          <p>The <att>rend</att> and <att>rendition</att> attributes
+          may be used when it is desirable to record information about
+          how the textual feature was displayed in the source
+          document.</p>
+          <p>Never use these attributes on header elements: metadata
+          is transcribed and possibly regularized, as in a catalog
+          record, but its exact appearance is not meant to be
+          captured.</p>
+          <p>If a project is normalizing the rendering of text objects
+          (for example, such that all titles should be italicized,
+          regardless of how they appeared in the source document),
+          there is no need to use these attributes; instead, a
+          stylesheet will determine that all titles are displayed in
+          italics.</p>
+          <p>However, if a project is faithfully recording the
+          rendering in the source document, one of these attributes
+          should be used to indicate this rendering, either on all
+          elements to be rendered differently from the surrounding
+          text or on all elements whose rendering does not follow the
+          default stylesheet.</p>
+          <p>For the value of the <att>rend</att> attribute, use only
+          valid CSS properties and values as in a declaration-block
+          but without curly braces. For example:
+          <eg>&lt;foreign rend="font-style: italic"></eg>
+          <eg>&lt;title rend="text-decoration: underline; font-size: x-large"></eg></p>
+          <p>Alternatively, use the <att>rendition</att> <emph
+          rend="font-weight: bold;">attribute</emph> to give an
+          internal scheme:
+          <eg>&lt;foreign rendition="#i"></eg>
+          documented with the <gi>rendition</gi> <emph
+          rend="font-weight: bold;">element</emph> in the header:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <rendition xml:id="i" scheme="css">font-style: italic</rendition>
+          </egXML>
+          Use of the <att>rendition</att> attribute and element offers
+          an additional level of indirection, decreasing the total
+          number of keystrokes and possibly reducing the chance of
+          typos being introduced in the encoding.</p>
+        </div>
+        <div type="====">
+          <head><att>xml:lang</att></head>
+          <p>Used to indicate the natural language of the content of
+          an element. It is generally not used for children of the
+          <gi>text</gi> element at Level 1 or Level 2 but is common at
+          Level 3 and above. See <ref
+          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-data.language.html">the
+          data.language datatype in the TEI Guidelines</ref>.</p>
+        </div>
+      </div>
+    </div>
+    <div type="==">
+      <head>Structure of a TEI Document</head>
+      <table rend="border: thin solid black;">
+        <row role="label">
+          <cell cols="2">Element</cell>
+          <cell>Description</cell>
+        </row>
+        <row>
+          <cell cols="2"><tag>TEI xml:id="___"</tag></cell>
+          <cell>The root element of a TEI document. Use of the <att>xml:id</att> attribute is recommended, giving a unique identifier for the TEI document. This unique identifier must be given in <code>teiHeader/fileDesc/publicationStmt/idno</code> .</cell>
+        </row>
+        <row>
+          <cell>├</cell>
+          <cell><tag>teiHeader xml:lang="___"</tag></cell>
+          <cell>The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> is required; it indicates the language used for the metadata describing the document.</cell>
+        </row>
+        <row>
+          <cell>├</cell>
+          <cell><gi>facsimile</gi></cell>
+          <cell>The <gi>facsimile</gi> defines sets of images that correspond with the text. This element should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#Linking">between encoded text and images of source documents|Linking between encoded text and images of source documents</ref>.</cell>
+        </row>
+        <row>
+          <cell>└</cell>
+          <cell>The <tag>text xml:lang="___"</tag></cell>
+          <cell>The <gi>text</gi> element contains the encoded transcription of the source document. The <att>xml:lang</att> attribute is recommended; it indicates the primary language of the source document.</cell>
+        </row>
+      </table>
+      <p>The child elements of the <gi>teiHeader</gi> and
+      <gi>text</gi> elements are described below.</p>
+
+      <xi:include href="./lib-header.odd" xpointer="element(header-content)">
+        <xi:fallback>
+          <div>
+            <head>ERROR</head>
+            <p>Unable to XInclude the header section!</p>
+          </div>
+        </xi:fallback>
+      </xi:include>
+
+      <div n="6">
+        <head>Encoding Levels</head>
+
+        <xi:include href="./level1.odd" xpointer="element(level-1-content)">
+          <xi:fallback>
+            <div>
+              <head>ERROR</head>
+              <p>Unable to XInclude the Level 1 section!</p>
+            </div>
+          </xi:fallback>
+        </xi:include>
+
+        <xi:include href="./level2.odd" xpointer="element(level-2-content)">
+          <xi:fallback>
+            <div>
+              <head>ERROR</head>
+              <p>Unable to XInclude the Level 2 section!</p>
+            </div>
+          </xi:fallback>
+        </xi:include>
+
+        <xi:include href="./level3.odd" xpointer="element(level-3-content)">
+          <xi:fallback>
+            <div>
+              <head>ERROR</head>
+              <p>Unable to XInclude the Level 3 section!</p>
+            </div>
+          </xi:fallback>
+        </xi:include>
+
+        <xi:include href="./level4.odd" xpointer="element(level-4-content)">
+          <xi:fallback>
+            <div>
+              <head>ERROR</head>
+              <p>Unable to XInclude the Level 4 section!</p>
+            </div>
+          </xi:fallback>
+        </xi:include>
+
+        <div type="===">
+          <head>LEVEL 5: Scholarly Encoding Projects</head>
+          <p>Level 5 texts are those that require substantial human
+          intervention by encoders with subject knowledge. These texts
+          might include encodings of semantic, linguistic, prosodic,
+          or other features well beyond the basic structural elements
+          discussed in Levels 1-4 above. They might also include
+          elements for editorial, critical, or analytical additions;
+          manuscript descriptions; translations; or other textual
+          apparatus. It is impossible to make concrete recommendations
+          for encoding at this level since the scholarly analysis
+          required is usually specific to each project; instead, Level
+          5 offers the full set of P5 elements as needed.</p>
+          <div type="====">
+            <head>Reference</head>
+            <list>
+              <item><ref target="http://www.tei-c.org/Guidelines/P5">Complete P5 Guidelines</ref></item>
+            </list>
+          </div>
+          <div type="====">
+            <head>Purpose</head>
+            <p>To create deeply analytical encoded texts that might be
+            appropriate for specific research purposes, as part of a
+            scholarly publishing project, or for any other encoding
+            practices in library-based text encoding.</p>
+          </div>
+          <div type="====">
+            <head>Rationale</head>
+            <p>A significant number of library-based projects engage
+            in high-level analytical text encoding as part of their
+            efforts in digitization, scholarly editing, academic
+            support, or other research. Level 5 is intended to
+            represent that work, which can take advantage of the full
+            richness of the complete TEI Guidelines, while still
+            acknowledging the impact of library-specific practices on
+            encoded text that is created under the auspices of a
+            library.</p>
+            <p>The specific influences of library practice on a
+            Level-5 encoded text are expressed primarily in adherence
+            to the <ref target="#General_Recommendations">General
+            Recommendations</ref> and <ref
+            target="#The_TEI_Header">TEI Header</ref> sections
+            above.</p>
+          </div>
+          <div type="====">
+            <head>Element Recommendations and Examples</head>
+            <p>Because of the vast range of possibilities for Level-5
+            encoding, these <title>Best Practices</title> have chosen
+            to provide neither a list of recommended elements nor any
+            specific examples for this Level.</p>
+            <p>Please refer to the <ref target="#The_TEI_Header">TEI
+            Header</ref> section above for recommendations for the
+            <gi>teiHeader</gi>, and to the <ref
+            target="#General_Recommendations">General
+            Recommendations</ref> section and the <ref
+            target="http://www.tei-c.org/Guidelines/P5">Complete TEI
+            P5 Guidelines</ref> for element recommendations and usage
+            examples within the <gi>text</gi>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div type="==">
+      <head>Acknowledgments</head>
+      <p>This document is the result of a group of individuals with a
+      range of experience with TEI text encoding, which formed
+      together under the TEI Special Interest Group on Libraries and
+      Digital Library Federation umbrellas. We would like to thank and
+      acknowledge all of those who have given their time and expertise
+      to develop these <title>Best Practices</title>.</p>
+      <p>The individuals who served as editors of this document are:
+      <list>
+        <item>Kevin Hawkins, University of Michigan</item>
+        <item>Michelle Dalmau, Indiana University</item>
+      </list></p>
+      <p>The individuals who have contributed to the writing of this
+      document are:
+      <list>
+        <item>Syd Bauman, Brown University</item>
+        <item>Michelle Dalmau, Indiana University</item>
+        <item>Matthew Gibson, University of Virginia</item>
+        <item>Kevin Hawkins, University of Michigan</item>
+        <item>Lisa McAulay, University of California, Los Angeles</item>
+        <item>Renee McBride, University of North Carolina, Chapel Hill</item>
+        <item>Melanie Schlosser, Ohio State University</item>
+        <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
+        <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC</item>
+        <item>Vitus Tang, Stanford University</item>
+        <item>Richard Wisneski, Case Western University</item>
+        <item>Glen Worthey, Stanford University</item>
+      </list></p>
+      <p>The individuals who have contributed to the planning of this
+      document are:
+      <list>
+        <item>Syd Bauman, Brown University</item>
+        <item>Michelle Dalmau, Indiana University</item>
+        <item>Matthew Gibson, University of Virginia</item>
+        <item>Kevin Hawkins, University of Michigan</item>
+        <item>Lisa McAulay, University of California, Los Angeles</item>
+        <item>Chris Powell, University of Michigan</item>
+        <item>Andrew Rouner, Washington University in St. Louis</item>
+        <item>Melanie Schlosser, Ohio State University</item>
+        <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
+        <item>Perry Willett, California Digital Library</item>
+        <item>Richard Wisneski, Case Western University</item>
+        <item>Glen Worthey, Stanford University</item>
+      </list></p>
+      <p>The individuals who have contributed complementary tools to
+      this document are:
+      <list>
+        <item>Syd Bauman, Brown University: schema specifications and
+        translation to a set of TEI ODD customizations</item>
+        <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC:
+        Thutmose stylesheets for MARC-to-TEI header mappings</item>
+      </list></p>
+      <p>The individuals who have contributed to copyediting of this
+      document are:
+      <list>
+        <item>Susan Lorand, University of Michigan</item>
+        <item>Becky Welzenbach, University of Michigan</item>
+      </list></p>
+      <p>Lastly, we would like to thank the Digital Library Federation
+      (DLF) for sponsoring two in-person meetings as part of the
+      Spring 2008 Forum in Minneapolis, Minnesota, and the Spring 2009
+      Forum in Raleigh, North Carolina, in support of our revision
+      work. The DLF also provided teleconferencing support for our
+      regularly scheduled meetings.</p>
+    </div>
+    <div type="==">
+      <head>Appendix A: Recommended Attributes</head>
+      <p>The following is a list of attributes recommended for use in
+      TEI documents created according to these <title>Best
+      Practices</title>. It includes both attributes explicitly
+      mentioned in these <title>Best Practices</title> as well as
+      those that the contributors to these <title>Best
+      Practices</title> find likely to be used with the elements
+      mentioned.</p>
+      <list>
+        <item><att>anchored</att></item>
+        <item><att>baseForm</att></item>
+        <item><att>baseTypes</att></item>
+        <item><att>calendar</att></item>
+        <item><att>cause</att></item>
+        <item><att>cert</att></item>
+        <item><att>class</att></item>
+        <item><att>cols</att></item>
+        <item><att>copyOf</att></item>
+        <item><att>corresp</att></item>
+        <item><att>degree</att></item>
+        <item><att>dur</att></item>
+        <item><att>dur-iso</att></item>
+        <item><att>ed</att></item>
+        <item><att>end</att></item>
+        <item><att>evaluate</att></item>
+        <item><att>exclude</att></item>
+        <item><att>facs</att></item>
+        <item><att>from</att></item>
+        <item><att>from-iso</att></item>
+        <item><att>full</att></item>
+        <item><att>gi</att></item>
+        <item><att>given</att></item>
+        <item><att>group</att></item>
+        <item><att>hand</att></item>
+        <item><att>height</att></item>
+        <item><att>ident</att></item>
+        <item><att>key</att></item>
+        <item><att>level</att></item>
+        <item><att>locus</att></item>
+        <item><att>marks</att></item>
+        <item><att>met</att></item>
+        <item><att>min</att></item>
+        <item><att>n</att></item>
+        <item><att>name</att></item>
+        <item><att>next</att></item>
+        <item><att>notAfter</att></item>
+        <item><att>notBefore</att></item>
+        <item><att>org</att></item>
+        <item><att>part</att></item>
+        <item><att>period</att></item>
+        <item><att>place</att></item>
+        <item><att>precision</att></item>
+        <item><att>prev</att></item>
+        <item><att>quantity</att></item>
+        <item><att>reason</att></item>
+        <item><att>ref</att></item>
+        <item><att>rend</att></item>
+        <item><att>render</att></item>
+        <item><att>rendition</att></item>
+        <item><att>resp</att></item>
+        <item><att>rhyme</att></item>
+        <item><att>role</att></item>
+        <item><att>rows</att></item>
+        <item><att>s-e-x</att></item>
+        <item><att>scale</att></item>
+        <item><att>scheme</att></item>
+        <item><att>scope</att></item>
+        <item><att>select</att></item>
+        <item><att>sort</att></item>
+        <item><att>subtype</att></item>
+        <item><att>synch</att></item>
+        <item><att>target</att></item>
+        <item><att>targetEnd</att></item>
+        <item><att>targets</att></item>
+        <item><att>targFunc</att></item>
+        <item><att>to</att></item>
+        <item><att>to-iso</att></item>
+        <item><att>type</att></item>
+        <item><att>unit</att></item>
+        <item><att>uri</att></item>
+        <item><att>url</att></item>
+        <item><att>usage</att></item>
+        <item><att>version</att></item>
+        <item><att>when</att></item>
+        <item><att>who</att></item>
+        <item><att>width</att></item>
+        <item><att>xml:base</att></item>
+        <item><att>xml:id</att></item>
+        <item><att>xml:lang</att></item>
+        <item><att>xml:space</att></item>
+        </list>
+      </div>
+      <div type="==">
+        <head>Appendix B: History of This Document</head>
+        <p>This document was formerly known as <title>TEI Text
+        Encoding in Libraries Guidelines for Best Encoding
+        Practices</title>.</p>
+        <p>The Text Encoding Initiative Guidelines for Electronic Text
+        Encoding and Interchange (referred to as the <title>TEI
+        Guidelines</title>) were first published in 1994 and represent
+        a tremendous achievement in electronic text standards by
+        providing a highly sophisticated structure for encoding
+        electronic text. Digital librarians have benefited greatly
+        from the standardization provided by these guidelines, and the
+        potential for interoperability and long-term preservation of
+        digital collections facilitated by their wide adoption.</p>
+        <p>In 1998, the Digital Library Federation (DLF) sponsored the
+        <ref
+        target="http://www.lib.umich.edu/lit/dlps/history/teidlf/index.html">TEI
+        and XML in Digital Libraries Workshop</ref> at the Library of
+        Congress to discuss the use of the <title>TEI Guidelines</title> in
+        libraries for electronic text, and to create a set of best
+        practices for librarians implementing them. From this
+        workshop, three working groups were formed, the members of
+        which represented some of the largest and most mature digital
+        library programs in the U.S.</p>
+        <p>Group 1 was charged to recommend some best practices for
+        TEI header content and to review the relationship between the
+        Text Encoding Initiative header and MARC. To this end,
+        representatives of the University of Virginia Library and the
+        University of Michigan Library gathered in Ann Arbor in early
+        October 1998 to develop a recommended practice guide. This
+        work was assisted by similar efforts that had taken place in
+        the United Kingdom under the auspices of the Oxford Text
+        Archive the previous year. The section on the header is based
+        on a draft of those recommended practices. It was submitted to
+        various constituencies for comment. In 2008 and 2009, it was
+        heavily revised by Melanie Schlosser, Kevin Hawkins, and other
+        members of the TEI SIG on Libraries.</p>
+        <p>Group 2 was charged with developing a set of
+        recommendations for libraries using the TEI Guidelines in
+        electronic text encoding. This group included the following
+        representatives from six libraries:
+        <list>
+          <item>LeeEllen Friedland, Library of Congress</item>
+          <item>Nancy Kushigian, University of California, Davis</item>
+          <item>Chris Powell, University of Michigan</item>
+          <item>David Seaman, University of Virginia</item>
+          <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
+          <item>Perry Willett, Indiana University (chair)</item>
+        </list>
+        </p>
+        <p>At the ALA Midwinter Meeting (January 1999), the DLF task
+        force revised a draft set of best practices, called <title>TEI
+        Text Encoding in Libraries: Guidelines for Best
+        Practices</title> (often referred to as <title>TEI in
+        Libraries Guidelines</title>). The revised recommendations
+        were circulated to the conference working group in May 1999
+        and presented at the joint annual meeting of the Association
+        of Computers and the Humanities and Association of Literary
+        and Linguistic Computing in June 1999. <ref
+        target="http://www.diglib.org/standards/tei-old.htm">Version
+        1.0</ref> was circulated for comments in August 1999. These
+        guidelines were endorsed by the DLF, and have been used by
+        many digital libraries, including those of the task force
+        members, as a model for their own local best practices.
+        Libraries, museums, and end-users have benefitted from a set
+        of best practices for electronic text in a number of ways,
+        including better interoperability between electronic text
+        collections, better documented practices among digital
+        libraries, and a starting point for discussion of best
+        practices with commercial publishers regarding electronic text
+        creation.</p>
+        <p>Written in 1998, this first iteration of <title>TEI in
+        Libraries Guidelines</title> made no mention of XML, XSLT, or
+        any of the other powerful tools that have now become common
+        parlance and practice in creating digital documents and
+        collections. Based on these important changes in markup
+        technology, it came to the attention of the DLF and members of
+        the original Task Force that the <title>TEI in Libraries
+        Guidelines</title> required substantial revision. In 2002, the
+        TEI Consortium published a new edition of the complete
+        <title>TEI Guidelines</title> that conformed to XML
+        specifications. In order to remain useful, the <title>TEI in
+        Libraries Guidelines</title> had to be updated to reflect
+        these developments.</p>
+        <p>Furthermore, librarians need more guidance than the
+        original <title>TEI in Libraries Guidelines</title> provided.
+        There are many library-specific encoding issues which need to
+        be addressed and documented to ensure consistency. The
+        intention of this document is to provide recommended paths of
+        encoding for these issues.</p>
+        <p>In addition, these library guidelines have the potential to
+        be much more useful if they can serve as a training document
+        from which librarians can learn about text encoding and
+        addressing particular encoding challenges. To fulfill this
+        role, the guidelines require more examples and detailed
+        explanations, giving documentation of the use of TEI in a
+        library context. Librarians also need a set of standards and
+        best practices for vendors and publishers who create
+        electronic text for digital libraries, so that these
+        collections adhere to the same archival standards as
+        locally-created electronic text collections. With detailed
+        guidelines that could serve as an encoding specification,
+        librarians might encourage vendors to follow the principles in
+        these standards, to facilitate the long-term preservation of
+        commercially published electronic text collections, and more
+        readily allow for cross-collection searching.</p>
+        <p>In order to facilitate the evolution of this document,
+        another DLF-sponsored Task Force—some of the representatives
+        of which were on the original Task Force—met on October 24-25,
+        2003 at the Cosmos Club in Washington, D.C.:
+        <list>
+          <item>Richard Gartner, Oxford University Library</item>
+          <item>Matthew Gibson, University of Virginia Library</item>
+          <item>Kirk Hastings, California Digital Library</item>
+          <item>Chris Powell, University of Michigan</item>
+          <item>Merrilee Proffitt, RLG</item>
+          <item>David Seaman, Digital Library Federation</item>
+          <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
+          <item>Perry Willett, Indiana University (chair)</item>
+        </list></p>
+     <p>These representatives met to revise the original <title>TEI in
+     Libraries Guidelines</title> in order that they:
+     <list>
+      <item>reflect changes occuring within the text encoding world generally and within the TEI
+       community specifically</item>
+      <item>further illuminate the different levels of encoding by offering clearer and more robust
+       examples.</item>
+     </list></p>
+     <p>After producing <ref
+     target="http://www.diglib.org/standards/tei2/tei20.htm">Version
+     2.0</ref> of the Guidelines, this group (with some changes in
+     membership) met again at the Cosmos Club on February 13-14, 2006.
+     Those in attendance were:
+     <list>
+       <item>Syd Bauman, The TEI Consortium</item>
+       <item>Richard Gartner, Oxford University Library (by phone)</item>
+       <item>Matthew Gibson, University of Virginia (chair)</item>
+       <item>Chris Powell, University of Michigan</item>
+       <item>Merrilee Proffitt, RLG</item>
+       <item>David Seaman, Digital Library Federation</item>
+       <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
+       <item>Perry Willett, University of Michigan</item>
+     </list></p>
+     <p>The group then released <ref
+     target="http://www.diglib.org/standards/tei.htm">Version
+     2.1</ref> in March 2006.</p>
+     <p>In April 2008, select members from the TEI Consortium
+     Libraries Special Interest Group (SIG) and the DLF-sponsored TEI
+     Task Force partnered to update the <title>Best Practices</title>.
+     The revision was prompted by the release of P5, the newest
+     version of the TEI, and the desire to create a true
+     library-centric customization of the TEI. The group convened for
+     a DLF-sponsored meeting at the Spring Forum in Minneapolis,
+     Minnesota to tackle the revision work. Those in attendance were
+     <list>
+       <item>Syd Bauman (Brown University)</item>
+       <item>Michelle Dalmau (Indiana University)</item>
+       <item>Matthew Gibson (University of Virginia)</item>
+       <item>Kevin Hawkins (University of Michigan)</item>
+       <item>Lisa McAulay (University of California, Los Angeles)</item>
+       <item>Chris Powell (University of Michigan)</item>
+       <item>Jenn Riley (Indiana University)</item>
+       <item>Andrew Rouner (Washington University in St. Louis)</item>
+       <item>Melanie Schlosser (Ohio State University)</item>
+       <item>Natasha Smith (University of North Carolina, Chapel Hill)</item>
+       <item>Perry Trolard (Washington University in St. Louis)</item>
+       <item>Perry Willett (then University of Michigan, now California Digital Library)</item>
+       <item>Glen Worthey (Stanford University)</item>
+     </list></p>
+     <p>Work continued through conference calls, in which Renee
+     McBride (University of North Carolina, Chapel Hill) and Richard
+     Wisneski (Case Western University) also participated, and at a
+     DLF-sponsored meeting that took place as part of the DLF Spring
+     Forum in Raleigh, North Carolina on May 6, 2009.</p>
+     <p>In April 2009, a year after the revision work began, the
+     significantly revamped <title>Best Practices</title> soon to be
+     known as <title>Best Practices for TEI in Libraries</title>
+     (version 3) were disseminated for public comment. At DLF that
+     year, a <ref
+     target="http://www.diglib.org/forums/spring2009/2009springprogram.htm">Birds-of-a-Feather
+     session entitled <title>TEI Text Encoding in
+     Libraries</title></ref> was held to gather in-person public
+     feedback. Comments received at the in-person meeting, from the
+     <ref
+     target="http://www.lsoft.com/scripts/wl.exe?SL1=TEILIB-L&amp;H=LISTSERV.INDIANA.EDU">TEILIB-L
+     listserv</ref>, through a survey, and by direct email were
+     gathered and prioritized at the DLF meeting. Renee McBride
+     (University of North Carolina, Chapel Hill) agreed to map header
+     elements to MARC elements, and Vitus Tang (Stanford University)
+     provided valuable comments. In addition to addressing most of the
+     comments received, it was resolved that Syd Bauman will generate
+     an ODD specification (One Document Does it All; schema, prose
+     documentation, etc.) for levels 1-4, further ensuring
+     interoperability of texts encoded according to these <title>Best
+     Practices</title>.</p>
+     <p>The revised <title>Best Practices</title> contain updated
+     versions of the widely adopted encoding
+     <soCalled>levels</soCalled> &#x2014; from fully automated conversion to
+     content analysis and scholarly encoding. They also contain a
+     substantially revised section on the TEI header, designed to
+     support interoperability between text collections and the use of
+     complementary metadata schemas such as MARC. They also explore
+     the relationship between METS and TEI and the relationship
+     between these <title>Best Practices</title> and the new vendor
+     specification, TEI Tite.</p>
+     <p>The new <title>Best Practices</title> also reflect an
+     organizational shift. Originally authored by the DLF-sponsored
+     TEI Task Force, the current revision work is a partnership
+     between members of the Task Force and the TEI SIG on Libraries.
+     As a result of this partnership, responsibility for the
+     <title>Best Practices</title> will migrate to the SIG, allowing
+     closer work with the TEI Consortium as a whole, and a stronger
+     basis for advocating for the needs of libraries in future TEI
+     releases.</p>
+   </div>
+ </body>
+</text>
+</TEI>
