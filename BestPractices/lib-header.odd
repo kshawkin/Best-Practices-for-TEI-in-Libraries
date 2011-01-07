@@ -552,12 +552,6 @@ At least one <gi>title</gi> element is required for the title of the source docu
 Use of the <att>level</att> attribute is recommended.  If used, it must be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].
 
 Use of the <att>type</att> attribute is required. It must have one of the following values as suitable in local practice:
-* <val>main</val>
-* <val>sub</val>
-* <val>alt</val>
-* <val>short</val>
-* <val>desc</val>
-* <val>translated</val>
 * <val>marc245a</val> (used for the title proper and alternative title according to the national cataloging code)
 * <val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)
 * <val>marc245b</val> (used for the the remainder of the title information -- parallel titles, titles subsequent to the first, and other title information -- according to the national cataloging code)
@@ -635,7 +629,7 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>edition</gi></cell>
-<cell>Edition statement (if present).</cell>
+<cell>Edition statement (if present) according to the national cataloging code.</cell>
 <cell>
 <table>
 <row role="label">
@@ -675,7 +669,7 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="1"><gi>pubPlace</gi></cell>
-<cell>Place of publication from the source document bibliographic item (if present). It is recommended but not required to remove ISBD punctuation for separating areas of the bibliographic description (such as a colon) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "S.l." (for no place of publication).</cell>
+<cell>Place of publication from the source document bibliographic item according to the national cataloging code. It is recommended but not required to remove ISBD punctuation for separating areas of the bibliographic description (such as a colon) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "S.l." (for no place of publication).</cell>
 <cell>
 <table>
 <row role="label">
@@ -703,7 +697,7 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="1"><gi>publisher</gi></cell>
-<cell>Name of publisher, distributor, etc. from the source document bibliographic item (if present). It is recommended but not required to remove ISBD punctuation for separating areas of the bibliographic description (such as a comma) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "s.n." (for no publisher).</cell>
+<cell>Name of publisher, distributor, etc. from the source document bibliographic item according to the national cataloging code. It is recommended but not required to remove ISBD punctuation for separating areas of the bibliographic description (such as a comma) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "s.n." (for no publisher).</cell>
 <cell>
 <table>
 <row role="label">
@@ -741,11 +735,13 @@ Whenever possible, establish or use the form of the name from a national name au
 <lb/><emph>or</emph>
 <lb/><tag>date from="___" to="____"</tag>
 </cell>
-<cell>Date of publication, distribution, etc. from the source document bibliographic item (if present). The content of the element is the statement of this data according to the national cataloging code.
+<cell>Date of publication, distribution, etc. from the source document bibliographic item. The content of the element is the statement of this data according to the national cataloging code.
 
-Since the content of the element according to the national cataloging code is not easily processed by machine, also include the following attribute(s) with valid values: ''either'' <att>when</att>, ''or'' both <att>notBefore</att> and <att>notAfter</att>, ''or'' one or both of <att>from</att> and <att>to</att>.
+Since the content of the element according to the national cataloging code is not easily processed by machine, when possible include the following attribute(s) with valid values: ''either'' <att>when</att>, ''or'' both <att>notBefore</att> and <att>notAfter</att>, ''or'' one or both of <att>from</att> and <att>to</att>.
 
 National cataloging codes may distinguish between a possible range of dates for publication (such as "186-" for something certainly published during the 1860s) and an uncertain date of publication (such as "1864?" or "186-?" for a date or range of dates assumed by the cataloger).  In the case of uncertainty, use <code>cert="low"</code>.
+
+If the date is unknown (for example, recorded according to the national cataloging code as "[n.d.]", use <code>cert="unknown"</code>.
 </cell>
 <cell>
 <table>
@@ -801,7 +797,7 @@ Dates fixed fields (value of attribute(s))
 <cell></cell>
 <cell>├</cell>
 <cell cols="3"><gi>series</gi></cell>
-<cell>Name of the series to which the source document bibliographic item belongs. If generating this data from a catalog record, it is likely that you will have only one child element: a <tag>title level="s"</tag>. Use of the <att>type</att> attribute ''on the <gi>title</gi> element'' is optional, but if it is used, it must follow [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html instructions for use of this element in the full TEI Guidelines].</cell>
+<cell>Information about the series to which the source document bibliographic item belongs, given according to the national cataloging code. If generating this data from a catalog record, it is likely that you will have only one child element: a <tag>title level="s"</tag>. Use of the <att>type</att> attribute ''on the <gi>title</gi> element'' is optional, but if it is used, it must follow [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html instructions for use of this element in the full TEI Guidelines].</cell>
 <cell>
 <table>
 <row role="label">
@@ -831,7 +827,7 @@ Dates fixed fields (value of attribute(s))
 <cell></cell>
 <cell>├</cell>
 <cell cols="3"><gi>note</gi></cell>
-<cell>Optionally, use for notes about the source document bibliographic item, according to a national cataloging code.</cell>
+<cell>Optionally, use for notes about the source document bibliographic item, given according to a national cataloging code.</cell>
 <cell>
 <table>
 <row role="label">
@@ -945,7 +941,7 @@ At least one <gi>title</gi> element is required for the title of the related wor
 
 Use of the <att>level</att> attribute is recommended.  If used, it must be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].
 
-Use of the <att>type</att> attribute is required. It must have one of the following values as suitable in local practice:
+Use of the <att>type</att> attribute is optional. It must have one of the following values as suitable in local practice:
 * <val>main</val>
 * <val>sub</val>
 * <val>alt</val>
