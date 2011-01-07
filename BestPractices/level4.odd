@@ -791,11 +791,17 @@
 	      listed within the body of the interview (see example
 	      below).</item>
 	      <item>Questions and answers from interviewees and
-	      interviewers are encoded as <gi>sp</gi>, with speakers
-	      identified within <gi>speaker</gi> elements with a
-	      <att>who</att> attribute the value of which corresponds to
-	      the <att>xml:id</att> in the list of interview
-	      participants.</item>
+	      interviewers are encoded as <gi>sp</gi>, with each
+	      speaker identified either
+	      <list>
+		<item>within <gi>speaker</gi> elements, which are the
+		first child of <gi>sp</gi>, or</item>
+		<item>with a <att>who</att> attribute on <gi>sp</gi>,
+		the value of which poiints to the the <gi>item</gi>
+		for the given speaker in the list of interview
+		participants (by its <att>xml:id</att>), or</item>
+		<item>both.</item>
+	      </list></item>
 	    </list>
 	    </p>
 	    <egXML xmlns="http://www.tei-c.org/ns/Examples">
