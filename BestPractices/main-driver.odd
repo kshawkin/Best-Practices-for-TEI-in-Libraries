@@ -625,7 +625,7 @@
         </row>
         <row>
           <cell cols="2"><tag>TEI xml:id="___"</tag></cell>
-          <cell>The root element of a TEI document. Use of the <att>xml:id</att> attribute is recommended, giving a unique identifier for the TEI document. This unique identifier must be given in <code>teiHeader/fileDesc/publicationStmt/idno</code> .</cell>
+          <cell>The root element of a TEI document. Use of the <att>xml:id</att> attribute is recommended, giving the same unique identifier for the TEI document as in <code>teiHeader/fileDesc/publicationStmt/idno</code> .</cell>
         </row>
         <row>
           <cell>├</cell>
