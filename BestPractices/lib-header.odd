@@ -1,9 +1,8 @@
-<?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns:s="http://purl.oclc.org/dsdl/schematron"
-     xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en">
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:s="http://purl.oclc.org/dsdl/schematron"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -54,8 +53,7 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>The TEI Header</head>
       <div type="setting">
-        <p>This is the <name>TEI Header</name> portion of the <ref
-        target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
+        <p>This is the <name>TEI Header</name> portion of the <ref target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
         Practices for TEI in Libraries</ref>. This document is not
         intended to stand alone, but rather to be considered in
         concert with the entire TEI in Libraries recommendations.</p>
@@ -68,14 +66,13 @@
           <head>Reference</head>
           <list>
             <item>
-              <ref
-              target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">Chapter
+              <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">Chapter
               2, TEI Header, P5 Guidelines</ref>
             </item>
           </list>
           <p>Note that this is not a complete customization. It is
           just one specification group that is used be each of the
-          customizations for levels 1&#x2013;4.</p>
+          customizations for levels 1–4.</p>
         </div>
         <div type="introduction">
           <head>Introduction</head>
@@ -85,8 +82,7 @@
           data for the original analog source document from which the
           electronic edition was created. The TEI header often
           includes a description of the encoding decisions or
-          practices used to create the electronic document. While <ref
-          target="http://www.tei-c.org/Lite/">TEI Lite</ref> calls the
+          practices used to create the electronic document. While <ref target="http://www.tei-c.org/Lite/">TEI Lite</ref> calls the
           header <quote>the electronic title page</quote>, it actually
           more closely resembles a catalog record with additional data
           not routinely stored in MARC records.</p>
@@ -168,7 +164,7 @@ Gray boxes in the source document column indicate that while the corresponding T
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="5"><gi>titleStmt</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
@@ -185,28 +181,34 @@ Use of the <att>level</att> attribute is not recommended since it does not apply
 
 Use of the <att>type</att> attribute is required.  It must have one of the following values as suitable in local practice:
 
-* <val>main</val>
-* <val>sub</val>
-* <val>alt</val>
-* <val>short</val>
-* <val>desc</val>
-* <val>translated</val>
-* <val>marc245a</val> (used for the title proper and alternative title according to the national cataloging code)
-* <val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)
-* <val>marc245b</val> (used for the the remainder of the title information -- parallel titles, titles subsequent to the first, and other title information -- according to the national cataloging code)
-* <val>uniform</val> (used for a uniform title according to the national cataloging code)
+<list>
+  <item><val>main</val></item>
+  <item><val>sub</val></item>
+  <item><val>alt</val></item>
+  <item><val>short</val></item>
+  <item><val>desc</val></item>
+  <item><val>translated</val></item>
+  <item><val>marc245a</val> (used for the title proper and alternative title according to the national cataloging code)</item>
+  <item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetical</item><item>ly but not for display)
+    <val>marc245b</val> (used for the the remainder of the title information — parallel titles, titles subsequent to the first, and other title information — according to the national cataloging code)</item>
+  <item><val>uniform</val> (used for a uniform title according to the national cataloging code)</item>
+</list>
 </cell>
 <cell>
-* 130
-* 240
-* 245 $a,$b
-* 246
+  <list>
+    <item>130</item>
+    <item>240</item>
+    <item>245 $a,$b</item>
+    <item>246</item>
+  </list>
 </cell>
 <cell rend="background-color: silver">
-* 130
-* 240
-* 245 $a,$b
-* 246
+  <list>
+    <item>130</item>
+    <item>240</item>
+    <item>245 $a,$b</item>
+    <item>246</item>
+  </list>
 </cell>
 </row>
 
@@ -216,32 +218,34 @@ Use of the <att>type</att> attribute is required.  It must have one of the follo
 <cell>├</cell>
 <cell cols="4"><gi>author</gi></cell>
 <cell>
-One or more <gi>author</gi> elements (one name per element) are used to encode the names of entities primarily responsible for the content of the TEI document&#x2014;usually, the author(s) of the source document. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file. Examples:
-
-* <eg>&lt;author&gt;&lt;persName&gt;Shakespeare, William, 1564-1616&lt;/persName&gt;&lt;/author&gt;</eg>
-* <eg>&lt;author&gt;&lt;orgName&gt;National Organization for Women&lt;/orgName&gt;&lt;/author&gt;</eg>
-* <eg>&lt;author&gt;&lt;persName&gt;X, Malcolm&lt;/persName&gt;&lt;/author&gt;</eg>
-* <eg>&lt;author&gt;&lt;persName&gt;Thomas (Anglo-Norman poet)&lt;/persName&gt;&lt;/author&gt;</eg>
-* <eg>&lt;author&gt;&lt;persName&gt;Catherine II, Empress of Russia&lt;/persName&gt;&lt;/author&gt;</eg>
-* <eg>&lt;author&gt;&lt;persName&gt;Joannes, Actuarius, 13th/14th cent.&lt;/persName&gt;&lt;/author&gt;</eg>
+One or more <gi>author</gi> elements (one name per element) are used to encode the names of entities primarily responsible for the content of the TEI document—usually, the author(s) of the source document. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file. Examples:
+  <list>
+    <item><eg>&lt;author&gt;&lt;persName&gt;Shakespeare, William, 1564-1616&lt;/persName&gt;&lt;/author&gt;</eg></item>
+    <item><eg>&lt;author&gt;&lt;orgName&gt;National Organization for Women&lt;/orgName&gt;&lt;/author&gt;</eg></item>
+    <item><eg>&lt;author&gt;&lt;persName&gt;X, Malcolm&lt;/persName&gt;&lt;/author&gt;</eg></item>
+    <item><eg>&lt;author&gt;&lt;persName&gt;Thomas (Anglo-Norman poet)&lt;/persName&gt;&lt;/author&gt;</eg></item>
+    <item><eg>&lt;author&gt;&lt;persName&gt;Catherine II, Empress of Russia&lt;/persName&gt;&lt;/author&gt;</eg></item>
+    <item><eg>&lt;author&gt;&lt;persName&gt;Joannes, Actuarius, 13th/14th cent.&lt;/persName&gt;&lt;/author&gt;</eg></item>
+  </list>
 </cell>
-<cell>
-* 100
-* 110
-
-* 534 $a = 1st author
-
-* 700
-* 710
-* 711
-</cell>
-<cell rend="background-color: silver">
-* 100
-* 110
-
-* 700
-* 710
-</cell>
+  <cell>
+    <list>
+      <item>100</item>
+      <item>110</item>
+      <item>534 $a = 1st author</item>
+      <item>700</item>
+      <item>710</item>
+      <item>711</item>
+    </list>
+  </cell>
+  <cell rend="background-color: silver">
+    <list>
+      <item>100</item>
+      <item>110</item>
+      <item>700</item>
+      <item>710</item>
+    </list>
+  </cell>
 </row>
 
 <row>
@@ -250,17 +254,21 @@ One or more <gi>author</gi> elements (one name per element) are used to encode t
 <cell>├</cell>
 <cell cols="4"><gi>editor</gi></cell>
 <cell>
-If applicable, use one or more <gi>editor</gi> elements (one name per element) to encode the names of entities besides those in <gi>author</gi> elements that acted as editors of the TEI document&#x2014;usually, the editor(s) of the source document. If considered appropriate by the encoding project, the editor of the TEI document should be entered here. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.
+If applicable, use one or more <gi>editor</gi> elements (one name per element) to encode the names of entities besides those in <gi>author</gi> elements that acted as editors of the TEI document—usually, the editor(s) of the source document. If considered appropriate by the encoding project, the editor of the TEI document should be entered here. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.
 
 Unlike in the TEI Guidelines, do not use this element for translators, illustrators, compilers, or other roles not generally considered an editor. Therefore, do not use the <att>role</att> attribute.
 </cell>
 <cell>
-* 700
-* 710
+  <list>
+    <item>700</item>
+    <item>710</item>
+  </list>
 </cell>
 <cell rend="background-color: silver">
-* 700
-* 710
+  <list>
+    <item>700</item>
+    <item>710</item>
+  </list>
 </cell>
 </row>
 
@@ -269,23 +277,25 @@ Unlike in the TEI Guidelines, do not use this element for translators, illustrat
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="4"><gi>respStmt</gi></cell>
-<cell>Record the names of other persons or organizations, one responsibility or party per <gi>respStmt</gi>, that have responsibility for the intellectual or artistic content of the TEI document&#x2014;often by transitivity from the source document&#x2014;not covered by <gi>author</gi> and <gi>editor</gi>. This includes translators, illustrators, compilers, proofreaders, encoders, and those who wrote a preface or introduction. Each <gi>respStmt</gi> must contain either:
+<cell>Record the names of other persons or organizations, one responsibility or party per <gi>respStmt</gi>, that have responsibility for the intellectual or artistic content of the TEI document—often by transitivity from the source document—not covered by <gi>author</gi> and <gi>editor</gi>. This includes translators, illustrators, compilers, proofreaders, encoders, and those who wrote a preface or introduction. Each <gi>respStmt</gi> must contain either:
 <list type="simple">
 <item>one <gi>resp</gi> followed by one or more <gi>name</gi> (or <gi>persName</gi> or <gi>orgName</gi>)</item>
 <item>one or more <gi>name</gi> (or <gi>persName</gi> or <gi>orgName</gi>) followed by one <gi>resp</gi></item>
 </list>
 Whenever possible, establish or use the form of the name from a national name authority file.</cell>
 <cell>
-* 500
-
-* 700
-* 710
+  <list>
+    <item>500</item>
+    <item>700</item>
+    <item>710</item>
+  </list>
 </cell>
 <cell rend="background-color: silver">
-* 500
-
-* 700
-* 710
+  <list>
+    <item>500</item>
+    <item>700</item>
+    <item>710</item>
+  </list>
 </cell>
 </row>
 
@@ -296,12 +306,16 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell cols="4"><gi>meeting</gi></cell>
 <cell>Optionally, record the name of a meeting or conference when this name is not clear from information in other parts of the <gi>fileDesc</gi>. Whenever possible, establish or use the form of the name from a national name authority file.</cell>
 <cell>
-* 111
-* 711
+  <list>
+    <item>111</item>
+    <item>711</item>
+  </list>
 </cell>
 <cell>
-* 111
-* 711
+  <list>
+    <item>111</item>
+    <item>711</item>
+  </list>
 </cell>
 </row>
 
@@ -330,8 +344,10 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell cols="4"><gi>publisher</gi></cell>
 <cell>The publisher is the party responsible for making the file (the TEI document, not the source document) public.</cell>
 <cell>
-* 260 $b
-* 533 $c*
+<list>
+  <item>260 $b</item>
+  <item>533 $c*</item>
+</list>
 </cell>
 <cell>n/a</cell>
 </row>
@@ -363,8 +379,10 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell cols="4"><gi>idno</gi></cell>
 <cell>Any unique identifier for the TEI document as determined by the publisher of the TEI document. Use of this element is required.</cell>
 <cell>
-* 028 5_
-* 099
+<list>
+  <item>028 5_</item>
+  <item>099</item>
+</list>
 </cell>
 <cell>n/a</cell>
 </row>
@@ -386,8 +404,10 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell cols="4"><tag>date when="____"/</tag></cell>
 <cell>Refers to the date of the first publication of the TEI document. Use the <att>when</att> attribute (see [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.datable.w3c.html att.datable.w3c class]) to aid machine processing. This element has no content.</cell>
 <cell>
-* 260 $c
-* 533 $d*
+  <list>
+    <item>260 $c</item>
+    <item>533 $d*</item>
+  </list>
 </cell>
 <cell>n/a</cell>
 </row>
@@ -406,12 +426,13 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell>│</cell>
 <cell>└</cell>
 <cell cols="4"><tag>title level="s" type="_"</tag></cell>
-<cell>Whenever possible, establish or use the form of the name from a national name authority file for the electronic series being created. Use of the <att>type</att> attribute is optional, but if it is used, it must follow [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html instructions for use of this element in the full TEI Guidelines].
-</cell>
+<cell>Whenever possible, establish or use the form of the name from a national name authority file for the electronic series being created. Use of the <att>type</att> attribute is optional, but if it is used, it must follow [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html instructions for use of this element in the full TEI Guidelines].</cell>
 <cell>
-* 4xx
-* 8xx
-* 533 $f*
+  <list>
+    <item>4xx</item>
+    <item>8xx</item>
+    <item>533 $f*</item>
+  </list>
 </cell>
 <cell>n/a</cell>
 </row>
@@ -436,7 +457,7 @@ Whenever possible, establish or use the form of the name from a national name au
 
 <row>
 <cell>│</cell>
-<cell></cell>
+<cell/>
 <cell>└</cell>
 <cell cols="4"><gi>biblStruct</gi></cell>
 <cell>Use <gi>biblStruct</gi> with child elements arranged in the order below for ease of display according to ISBD. (This element is used instead of <gi>bibl</gi> to enforce structure, but <gi>biblFull</gi> is not used because it requires more elements than are typically available in library metadata sources.</cell>
@@ -446,8 +467,8 @@ Whenever possible, establish or use the form of the name from a national name au
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>├</cell>
 <cell cols="3"><gi>analytic</gi></cell>
 <cell>Use this element to group together elements describing the object of encoding when it would not have a corresponding catalog record—for example, an article in a journal issue, a chapter in a book, or a poem in a collection. '''If the object of encoding would have a corresponding catalog record, omit this element and its children.'''</cell>
@@ -457,8 +478,8 @@ Whenever possible, establish or use the form of the name from a national name au
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>author</gi></cell>
@@ -469,8 +490,8 @@ Whenever possible, establish or use the form of the name from a national name au
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>└</cell>
 <cell cols="2"><tag>title level="a" type="_"</tag></cell>
@@ -478,13 +499,15 @@ Whenever possible, establish or use the form of the name from a national name au
 At least one <gi>title</gi> element is required for the title of the object of encoding. Transcribe the title according to the national cataloging code.
 
 Use of the <att>type</att> attribute is required. It must have one of the following values as suitable in local practice:
-* <val>main</val>
-* <val>sub</val>
-* <val>alt</val>
-* <val>short</val>
-* <val>desc</val>
-* <val>translated</val>
-* <val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)
+  <list>
+    <item><val>main</val></item>
+    <item><val>sub</val></item>
+    <item><val>alt</val></item>
+    <item><val>short</val></item>
+    <item><val>desc</val></item>
+    <item><val>translated</val></item>
+    <item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)</item>
+  </list>
 </cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
@@ -492,8 +515,8 @@ Use of the <att>type</att> attribute is required. It must have one of the follow
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>├</cell>
 <cell cols="3"><gi>monogr</gi></cell>
 <cell>Use this element to group together the elements describing the bibliographic item that has (or would have) a corresponding catalog record. The TEI definition of this element specifies that it is used even for works that might not otherwise be considered “monographs,” so bibliographic data about a journal title would be included in this element.</cell>
@@ -503,13 +526,12 @@ Use of the <att>type</att> attribute is required. It must have one of the follow
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>author</gi></cell>
-<cell>One or more <gi>author</gi> elements (one name per element) are used to encode the name for the personal author or corporate body responsible for the creation of the intellectual or artistic content of the source document bibliographic item, even if this creator is not the main entry in the catalog record. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.
-</cell>
+<cell>One or more <gi>author</gi> elements (one name per element) are used to encode the name for the personal author or corporate body responsible for the creation of the intellectual or artistic content of the source document bibliographic item, even if this creator is not the main entry in the catalog record. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.</cell>
 <cell>
 <table>
 <row role="label">
@@ -518,31 +540,34 @@ Use of the <att>type</att> attribute is required. It must have one of the follow
 </row>
 <row>
 <cell>
-534 $a = 1st author
+<list>
+<item>534 $a = 1st author</item></list>
 </cell>
 <cell>
-* 100
-* 110
-
-* 700
-* 710
+  <list>
+    <item>100</item>
+    <item>110</item>
+    <item>700</item>
+    <item>710</item>
+  </list>
 </cell>
 </row>
 </table>
 </cell>
 <cell>
-* 100
-* 110
-
-* 700
-* 710
+  <list>
+    <item>100</item>
+    <item>110</item>
+    <item>700</item>
+    <item>710</item>
+  </list>
 </cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><tag>title level="_" type="_"</tag></cell>
@@ -552,11 +577,13 @@ At least one <gi>title</gi> element is required for the title of the source docu
 Use of the <att>level</att> attribute is recommended.  If used, it must be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].
 
 Use of the <att>type</att> attribute is required. It must have one of the following values as suitable in local practice:
-* <val>marc245a</val> (used for the title proper and alternative title according to the national cataloging code)
-* <val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)
-* <val>marc245b</val> (used for the the remainder of the title information -- parallel titles, titles subsequent to the first, and other title information -- according to the national cataloging code)
-* <val>marc245c</val> (used for the statement of responsibility according to the national cataloging code)
-* <val>uniform</val> (used for a uniform title according to the national cataloging code)
+<list>
+<item><val>marc245a</val> (used for the title proper and alternative title according to the national cataloging code)</item>
+<item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)</item>
+<item><val>marc245b</val> (used for the the remainder of the title information — parallel titles, titles subsequent to the first, and other title information — according to the national cataloging code)</item>
+<item><val>marc245c</val> (used for the statement of responsibility according to the national cataloging code)</item>
+<item><val>uniform</val> (used for a uniform title according to the national cataloging code)</item>
+</list>
 </cell>
 <cell>
 <table>
@@ -566,29 +593,34 @@ Use of the <att>type</att> attribute is required. It must have one of the follow
 </row>
 <row>
 <cell>
-534 $t
+<list>
+<item>534 $t</item></list>
 </cell>
 <cell>
-* 130
-* 240
-* 245 $a,$b
-* 246 
+  <list>
+    <item>130</item>
+    <item>240</item>
+    <item>245 $a,$b</item>
+    <item>246</item>
+  </list>
 </cell>
 </row>
 </table>
 </cell>
 <cell>
-* 130
-* 240
-* 245 $a,$b
-* 246
+  <list>
+    <item>130</item>
+    <item>240</item>
+    <item>245 $a,$b</item>
+    <item>246</item>
+  </list>
 </cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>respStmt</gi></cell>
@@ -606,26 +638,30 @@ Whenever possible, establish or use the form of the name from a national name au
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>meeting</gi></cell>
 <cell>Optionally, record the name of a meeting or conference when this name is not clear from information in other parts of the <gi>sourceDesc</gi>. Whenever possible, establish or use the form of the name from a national name authority file.</cell>
 <cell>
-* 111
-* 711
+<list>
+<item>111</item>
+<item>711</item>
+</list>
 </cell>
 <cell>
-* 111
-* 711
+<list>
+<item>111</item>
+<item>711</item>
+</list>
 </cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>edition</gi></cell>
@@ -638,33 +674,33 @@ Whenever possible, establish or use the form of the name from a national name au
 </row>
 <row>
 <cell>
-534 $b
+<list><item>534 $b</item></list>
 </cell>
 <cell>
-250
+<list><item>250</item></list>
 </cell>
 </row>
 </table>
 </cell>
-<cell>250</cell>
+<cell><list><item>250</item></list></cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>imprint</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>│</cell>
 <cell>├</cell>
@@ -678,21 +714,21 @@ Whenever possible, establish or use the form of the name from a national name au
 </row>
 <row>
 <cell>
-534 $c
+<list><item>534 $c</item></list>
 </cell>
 <cell>
-260 $a
+<list><item>260 $a</item></list>
 </cell>
 </row>
 </table>
 </cell>
-<cell>260 $a</cell>
+<cell><list><item>260 $a</item></list></cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>│</cell>
 <cell>├</cell>
@@ -706,21 +742,21 @@ Whenever possible, establish or use the form of the name from a national name au
 </row>
 <row>
 <cell>
-534 $c
+<list><item>534 $c</item></list>
 </cell>
 <cell>
-260 $b
+<list><item>260 $b</item></list>
 </cell>
 </row>
 </table>
 </cell>
-<cell>260 $b</cell>
+<cell><list><item>260 $b</item></list></cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>│</cell>
 <cell>└</cell>
@@ -751,12 +787,16 @@ If the date is unknown (for example, recorded according to the national catalogi
 </row>
 <row>
 <cell>
-534 $c (content of element)
-Dates fixed fields (value of attribute(s))
+<list>
+  <item>534 $c (content of element)</item>
+  <item>Dates fixed fields (value of attribute(s))</item>
+</list>
 </cell>
 <cell>
-260 $c (content of element)
-Dates fixed fields (value of attribute(s))
+<list>
+  <item>260 $c (content of element)</item>
+  <item>Dates fixed fields (value of attribute(s))</item>
+</list>
 </cell>
 </row>
 </table>
@@ -766,8 +806,8 @@ Dates fixed fields (value of attribute(s))
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>│</cell>
 <cell>└</cell>
 <cell cols="2"><gi>extent</gi></cell>
@@ -780,51 +820,53 @@ Dates fixed fields (value of attribute(s))
 </row>
 <row>
 <cell>
-534 $e
+<list><item>534 $e</item></list>
 </cell>
 <cell>
-300
+<list><item>300</item></list>
 </cell>
 </row>
 </table>
 </cell>
-<cell>300</cell>
+<cell><list><item>300</item></list></cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>├</cell>
 <cell cols="3"><gi>series</gi></cell>
 <cell>Information about the series to which the source document bibliographic item belongs, given according to the national cataloging code. If generating this data from a catalog record, it is likely that you will have only one child element: a <tag>title level="s"</tag>. Use of the <att>type</att> attribute ''on the <gi>title</gi> element'' is optional, but if it is used, it must follow [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html instructions for use of this element in the full TEI Guidelines].</cell>
-<cell>
-<table>
+<cell><table>
 <row role="label">
 <cell>MARC record based on encoded text</cell>
 <cell>MARC record based on source document</cell>
 </row>
 <row>
 <cell>
-534 $f
+<list><item>534 $f</item></list>
 </cell>
 <cell>
-* 4xx
-* 8xx 
+<list>
+<item>4xx</item>
+<item>8xx </item>
+</list>
 </cell>
 </row>
-</table>
-</cell>
+</table></cell>
 <cell>
-* 4xx
-* 8xx
+<list>
+<item>4xx</item>
+<item>8xx</item>
+</list>
 </cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>├</cell>
 <cell cols="3"><gi>note</gi></cell>
 <cell>Optionally, use for notes about the source document bibliographic item, given according to a national cataloging code.</cell>
@@ -836,10 +878,10 @@ Dates fixed fields (value of attribute(s))
 </row>
 <row>
 <cell>
-534 $n
+<list><item>534 $n</item></list>
 </cell>
 <cell>
-5xx 
+<list><item>5xx</item></list>
 </cell>
 </row>
 </table>
@@ -849,53 +891,59 @@ Dates fixed fields (value of attribute(s))
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>├</cell>
 <cell cols="3"><gi>idno</gi></cell>
 <cell>
 Optionally use one or more <gi>idno</gi> elements to give identifiers for the source document, text, or work of the bibliographic item, whether assigned by the holding library (such as a call number), the publisher of the original document (such as an ISBN), or a standard bibliography (such as an identifier from the <title>Short Title Catalogue</title> or <title>Books in Maori</title>).  Use the following values for the <att>type</att> attribute if applicable, and create other values if appropriate:
 
-* <val>LC_call_number</val>
-* <val>isbn-13</val>
-* <val>isbn-10</val>
+<list>
+<item><val>LC_call_number</val></item>
+<item><val>isbn-13</val></item>
+<item><val>isbn-10</val></item>
+</list>
 </cell>
-<cell>
-<table>
+<cell><table>
 <row role="label">
 <cell>MARC record based on encoded text</cell>
 <cell>MARC record based on source document</cell>
 </row>
 <row>
 <cell>
-* 534 $z for ISBN
+<list>
+<item>534 $z for ISBN</item>
+</list>
 </cell>
 <cell>
 (possibly n/a)
-* 500 
-* 776 $w
+<list>
+<item>500 </item>
+<item>776 $w</item>
+</list>
 </cell>
 </row>
-</table>
-</cell>
+</table></cell>
 <cell>
-* 015
-* 016
-* 020
-* 024
-* 025
-* 027
-* 028
-* 029
-* 035
-* 050-099
+<list>
+<item>015</item>
+<item>016</item>
+<item>020</item>
+<item>024</item>
+<item>025</item>
+<item>027</item>
+<item>028</item>
+<item>029</item>
+<item>035</item>
+<item>050-099</item>
+</list>
 </cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>└</cell>
 <cell cols="3"><gi>relatedItem</gi></cell>
 <cell>Use this element and its children to reference a related work, if applicable.</cell>
@@ -905,22 +953,22 @@ Optionally use one or more <gi>idno</gi> elements to give identifiers for the so
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
+<cell/>
 <cell>└</cell>
 <cell cols="2"><gi>bibl</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
+<cell/>
+<cell/>
 <cell>├</cell>
 <cell><gi>author</gi></cell>
 <cell>Optionally use one or more <gi>author</gi> elements (one name per element) to encode the name for the personal author or corporate body responsible for the creation of the intellectual or artistic content of the related work. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.</cell>
@@ -930,10 +978,10 @@ Optionally use one or more <gi>idno</gi> elements to give identifiers for the so
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
+<cell/>
+<cell/>
 <cell>└</cell>
 <cell><tag>title type="_"</tag></cell>
 <cell>
@@ -942,13 +990,15 @@ At least one <gi>title</gi> element is required for the title of the related wor
 Use of the <att>level</att> attribute is recommended.  If used, it must be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].
 
 Use of the <att>type</att> attribute is optional. It must have one of the following values as suitable in local practice:
-* <val>main</val>
-* <val>sub</val>
-* <val>alt</val>
-* <val>short</val>
-* <val>desc</val>
-* <val>translated</val>
-* <val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)
+<list>
+<item><val>main</val></item>
+<item><val>sub</val></item>
+<item><val>alt</val></item>
+<item><val>short</val></item>
+<item><val>desc</val></item>
+<item><val>translated</val></item>
+<item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)</item>
+</list>
 </cell>
 <cell>740</cell>
 <cell>740</cell>
@@ -957,7 +1007,7 @@ Use of the <att>type</att> attribute is optional. It must have one of the follow
 <row>
 <cell>├</cell>
 <cell cols="6"><gi>encodingDesc</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
@@ -980,18 +1030,22 @@ Use of the <att>n</att> attribute is required to record the encoding level: <val
 
 Include one or more <gi>p</gi> elements as children with information on:
 
-* editorial decisions made during encoding
-* notes about omissions of material found in the original work
-* the format of the data in the header: Does the data in the <gi>sourceDesc</gi> follow AACR rules? How about in the <gi>fileDesc</gi>?  Is ISBD punctuation included?
-* automated processes used to generate the markup or content
-* external files or databases (such as those containing authority data) referenced in the TEI document
-* whether line breaks, column breaks, and/or page breaks are encoded
-* whether hyphens and quotation marks have been retained as character data or removed and indicated by the presence of an element such as <gi>lb</gi>, <gi>cb</gi>, <gi>pb</gi>, <gi>quote</gi>, or <gi>floatingText</gi>
-* whether types of hyphens have been distinguished (applies to Level 3 only)
+<list>
+<item>editorial decisions made during encoding</item>
+<item>notes about omissions of material found in the original work</item>
+<item>the format of the data in the header: Does the data in the <gi>sourceDesc</gi> follow AACR rules? How about in the <gi>fileDesc</gi>?  Is ISBD punctuation included?</item>
+<item>automated processes used to generate the markup or content</item>
+<item>external files or databases (such as those containing authority data) referenced in the TEI document</item>
+<item>whether line breaks, column breaks, and/or page breaks are encoded</item>
+<item>whether hyphens and quotation marks have been retained as character data or removed and indicated by the presence of an element such as <gi>lb</gi>, <gi>cb</gi>, <gi>pb</gi>, <gi>quote</gi>, or <gi>floatingText</gi></item>
+<item>whether types of hyphens have been distinguished (applies to Level 3 only)</item>
+</list>
 </cell>
 <cell>
-* 500 for content of p element
-* 856 $z, which includes boilerplate text depending on encoding level and how the TEI document is presented to the user (as page images, text, or both)
+<list>
+<item>500 for content of p element</item>
+<item>856 $z, which includes boilerplate text depending on encoding level and how the TEI document is presented to the user (as page images, text, or both)</item>
+</list>
 </cell>
 <cell>n/a</cell>
 </row>
@@ -1000,7 +1054,7 @@ Include one or more <gi>p</gi> elements as children with information on:
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="5"><gi>tagsDecl</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
@@ -1020,10 +1074,11 @@ Include one or more <gi>p</gi> elements as children with information on:
 <cell>│</cell>
 <cell>└</cell>
 <cell cols="4"><tag>namespace name="http://www.tei-c.org/ns/1.0"</tag><gi>tagUsage</gi></cell>
-<cell>
-<gi>tagUsage</gi> must be one of the following:
-* <code>&lt;tagUsage gi="div1">Numbered divs used.&lt;/tagUsage></code>
-* <code>&lt;tagUsage gi="div">Unnumbered divs used.&lt;/tagUsage></code>
+<cell><gi>tagUsage</gi> must be one of the following:
+<list>
+<item><code>&lt;tagUsage gi="div1"&gt;Numbered divs used.&lt;/tagUsage&gt;</code></item>
+<item><code>&lt;tagUsage gi="div"&gt;Unnumbered divs used.&lt;/tagUsage&gt;</code></item>
+</list>
 </cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
@@ -1035,9 +1090,10 @@ Include one or more <gi>p</gi> elements as children with information on:
 <cell cols="5"><gi>classDecl</gi><tag>taxonomy xml:id="____"</tag><gi>bibl</gi></cell>
 <cell>
 Use to document classification schemes used in the header or body of the TEI document.  For example:
-* <code>&lt;taxonomy xml:id="LCC">&lt;bibl>Library of Congress Classification&lt;/bibl>&lt;/taxonomy></code>
-* <code>&lt;taxonomy xml:id="LCSH">&lt;bibl>Library of Congress Subject Headings&lt;/bibl>&lt;/taxonomy></code>
-* <code>&lt;taxonomy xml:id="AAT">&lt;bibl>Art &amp;amp; Architecture Theasaurus&lt;/bibl>&lt;/taxonomy></code>
+<list>
+<item><code>&lt;taxonomy xml:id="LCC"&gt;&lt;bibl&gt;Library of Congress Classification&lt;/bibl&gt;&lt;/taxonomy&gt;</code></item>
+<item><code>&lt;taxonomy xml:id="LCSH"&gt;&lt;bibl&gt;Library of Congress Subject Headings&lt;/bibl&gt;&lt;/taxonomy&gt;</code></item>
+<item><code>&lt;taxonomy xml:id="AAT"&gt;&lt;bibl&gt;Art &amp;amp; Architecture Theasaurus&lt;/bibl&gt;&lt;/taxonomy&gt;</code></item></list>
 
 The <att>xml:id</att> attribute is required in order to provide an identifier to which <att>scheme</att> attributes in elsewhere in the header refer.
 </cell>
@@ -1056,7 +1112,7 @@ The <att>xml:id</att> attribute is required in order to provide an identifier to
 <row>
 <cell>├</cell>
 <cell cols="6"><gi>profileDesc</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
@@ -1077,12 +1133,16 @@ The <att>xml:id</att> attribute is required in order to provide an identifier to
 <cell cols="4"><tag>language ident="___"</tag></cell>
 <cell>Use one or more <gi>language</gi> elements to indicate language(s) used in the source document. Use of the <att>ident</att> attribute is required [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-language.html as in the full TEI guidelines]. Since the value of this attribute is usually sufficient to indicate the language, the <gi>language</gi> element should normally have no content. In the unusual case where <att>ident</att> is insufficient, provide additional information about the language as content of the element.</cell>
 <cell>
-* 041
-* 546
+<list>
+<item>041</item>
+<item>546</item>
+</list>
 </cell>
 <cell>
-* 041
-* 546
+<list>
+<item>041</item>
+<item>546</item>
+</list>
 </cell>
 </row>
 
@@ -1090,37 +1150,37 @@ The <att>xml:id</att> attribute is required in order to provide an identifier to
 <cell>│</cell>
 <cell>└</cell>
 <cell cols="5"><gi>textClass</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
+<cell/>
 <cell>├</cell>
 <cell cols="4"><tag>classCode scheme="___"</tag></cell>
 <cell>True classification numbers as opposed to call numbers may be entered here. The value of the scheme attribute corresponds to a classification scheme defined previously in <gi>classDecl</gi>. 
-Example: <code>scheme="#LCC"</code></cell>
+<lb/>Example: <code>scheme="#LCC"</code></cell>
 <cell>050-099</cell>
 <cell rend="background-color: silver">050-099</cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
+<cell/>
 <cell>└</cell>
 <cell cols="4"><tag>keywords scheme="____"</tag></cell>
 <cell>Repeat this element as many times as there are keyword schemes. If the child <gi>term</gi> elements contain terms from a controlled vocabulary, indicate that controlled vocabulary through the scheme attribute. The value of the scheme attribute corresponds to a classification scheme defined previously in <gi>classDecl</gi>. 
-Example: <code>scheme="#LCSH"</code></cell>
+<lb/>Example: <code>scheme="#LCSH"</code></cell>
 <cell>6xx 2nd indicator or 6xx $2 when 2nd indicator = 7</cell>
 <cell>6xx 2nd indicator or 6xx $2 when 2nd indicator = 7</cell>
 </row>
 
 <row>
 <cell>│</cell>
-<cell></cell>
-<cell></cell>
+<cell/>
+<cell/>
 <cell>└</cell>
 <cell cols="3"><gi>term</gi></cell>
 <cell>Use for terms from controlled or uncontrolled vocabularies as defined according to the containing <gi>keywords</gi> element.</cell>
@@ -1131,13 +1191,13 @@ Example: <code>scheme="#LCSH"</code></cell>
 <row>
 <cell>└</cell>
 <cell cols="6"><gi>revisionDesc</gi></cell>
-<cell></cell>
+<cell/>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
 
 <row>
-<cell></cell>
+<cell/>
 <cell>└</cell>
 <cell cols="5"><tag>change when="''YYYY-MM-DD''" who="''URI''"</tag></cell>
 <cell>
@@ -1256,12 +1316,7 @@ The person who is responsible for making the change must be indicated by the <at
           </egXML>
         </div>
         <div type="specification">
-          <specGrp xmlns="http://www.tei-c.org/ns/1.0"
-                   xmlns:xi="http://www.w3.org/2001/XInclude"
-                   xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                   xml:id="libHeadSpec"
-                   xml:lang="en">
+          <specGrp xml:id="libHeadSpec" xml:lang="en">
             <classSpec module="tei" ident="model.encodingDescPart" type="model" mode="delete"/>
             <classSpec module="tei" ident="model.teiHeaderPart" type="model" mode="delete"/>
 	    <elementSpec module="core" ident="respStmt" mode="change">
@@ -1283,40 +1338,7 @@ The person who is responsible for making the change must be indicated by the <at
 	      </content>
 	    </elementSpec>
 	    <moduleRef key="tagdocs" include="att val gi tag"/>
-            <moduleRef key="header"
-                       include="extent
-                         teiHeader
-                            fileDesc
-                               titleStmt
-                               editionStmt
-                                  edition
-                                  idno
-                               publicationStmt
-                                  authority
-                                  availability
-                                  distributor
-                               seriesStmt
-                               notesStmt
-                               sourceDesc
-                            encodingDesc
-                               projectDesc
-                               editorialDecl
-                               tagsDecl
-                                  namespace
-                                tagUsage
-                                  rendition
-                               classDecl
-                                  taxonomy
-                               appInfo
-                                  application
-                            profileDesc
-                               langUsage
-                                  language
-			       textClass
-			          classCode
-			          keywords
-                            revisionDesc
-                               change"/>
+            <moduleRef key="header" include="extent                          teiHeader                             fileDesc                                titleStmt                                editionStmt                                   edition                                   idno                                publicationStmt                                   authority                                   availability                                   distributor                                seriesStmt                                notesStmt                                sourceDesc                             encodingDesc                                projectDesc                                editorialDecl                                tagsDecl                                   namespace                                 tagUsage                                   rendition                                classDecl                                   taxonomy                                appInfo                                   application                             profileDesc                                langUsage                                   language           textClass              classCode              keywords                             revisionDesc                                change"/>
             <elementSpec module="header" ident="change" mode="change">
               <!-- constraintSpec scheme="isoschematron" ident="revChronOrder">
                    </constraintSpec -->
@@ -1328,9 +1350,9 @@ The person who is responsible for making the change must be indicated by the <at
                 <constraintSpec scheme="isoschematron" ident="no-extent-in-fileDesc">
                   <constraint>
                     <s:rule context="tei:fileDesc">
-                      <s:report test="tei:extent">The &lt;extent> element
+                      <s:report test="tei:extent">The &lt;extent&gt; element
                       should not be used as a direct child of
-                      &lt;fileDesc>, but rather only as a descendant of a
+                      &lt;fileDesc&gt;, but rather only as a descendant of a
                       bibliographic citation (e.g., of the
                       source).</s:report>
                     </s:rule>
@@ -1339,8 +1361,7 @@ The person who is responsible for making the change must be indicated by the <at
                 <constraintSpec scheme="isoschematron" ident="when-or-before-after">
                   <constraint>
                     <s:rule context="tei:imprint/tei:date">
-                      <s:assert test="@when or ( @notBefore and @notAfter
-                      )"> When inside an &lt;imprint>, a &lt;date> element
+                      <s:assert test="@when or ( @notBefore and @notAfter                       )"> When inside an &lt;imprint&gt;, a &lt;date&gt; element
                       should have a machine-readable version of the date
                       specified either on the @when attribute, or, in the
                       case of not knowing the precise date, on the
@@ -1352,90 +1373,7 @@ The person who is responsible for making the change must be indicated by the <at
                   <constraint>
                     <s:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
                     <s:rule context="tei:*/@*">
-                      <s:assert test="
-                                      name(.) = 'anchored' or
-                                      name(.) = 'baseForm' or
-                                      name(.) = 'baseTypes' or
-                                      name(.) = 'calendar' or
-                                      name(.) = 'cause' or
-                                      name(.) = 'cert' or
-                                      name(.) = 'class' or
-                                      name(.) = 'cols' or
-                                      name(.) = 'copyOf' or
-                                      name(.) = 'corresp' or
-                                      name(.) = 'degree' or
-                                      name(.) = 'dur' or
-                                      name(.) = 'dur-iso' or
-                                      name(.) = 'ed' or
-                                      name(.) = 'end' or
-                                      name(.) = 'eol' or
-                                      name(.) = 'evaluate' or
-                                      name(.) = 'exclude' or
-                                      name(.) = 'facs' or
-                                      name(.) = 'from' or
-                                      name(.) = 'from-iso' or
-                                      name(.) = 'full' or
-                                      name(.) = 'gi' or
-                                      name(.) = 'given' or
-                                      name(.) = 'group' or
-                                      name(.) = 'hand' or
-                                      name(.) = 'height' or
-                                      name(.) = 'ident' or
-                                      name(.) = 'key' or
-                                      name(.) = 'level' or
-                                      name(.) = 'locus' or
-                                      name(.) = 'marks' or
-                                      name(.) = 'met' or
-                                      name(.) = 'min' or
-                                      name(.) = 'n' or
-                                      name(.) = 'name' or
-                                      name(.) = 'next' or
-                                      name(.) = 'notAfter' or
-                                      name(.) = 'notBefore' or
-                                      name(.) = 'org' or
-                                      name(.) = 'part' or
-                                      name(.) = 'period' or
-                                      name(.) = 'place' or
-                                      name(.) = 'precision' or
-                                      name(.) = 'prev' or
-                                      name(.) = 'quantity' or
-                                      name(.) = 'reason' or
-                                      name(.) = 'ref' or
-                                      name(.) = 'rend' or
-                                      name(.) = 'render' or
-                                      name(.) = 'rendition' or
-                                      name(.) = 'resp' or
-                                      name(.) = 'rhyme' or
-                                      name(.) = 'role' or
-                                      name(.) = 'rows' or
-                                      name(.) = 'sex' or
-                                      name(.) = 'scale' or
-                                      name(.) = 'scheme' or
-                                      name(.) = 'scope' or
-                                      name(.) = 'select' or
-                                      name(.) = 'sort' or
-                                      name(.) = 'subtype' or
-                                      name(.) = 'synch' or
-                                      name(.) = 'target' or
-                                      name(.) = 'targetEnd' or
-                                      name(.) = 'targets' or
-                                      name(.) = 'targFunc' or
-                                      name(.) = 'to' or
-                                      name(.) = 'to-iso' or
-                                      name(.) = 'type' or
-                                      name(.) = 'unit' or
-                                      name(.) = 'uri' or
-                                      name(.) = 'url' or
-                                      name(.) = 'usage' or
-                                      name(.) = 'version' or
-                                      name(.) = 'when' or
-                                      name(.) = 'who' or
-                                      name(.) = 'width' or
-                                      name(.) = 'xml:base' or
-                                      name(.) = 'xml:id' or
-                                      name(.) = 'xml:lang' or
-                                      name(.) = 'xml:space'
-                                      ">The use of the <s:name/>= attribute (found here on the &lt;<s:value-of select="local-name(..)"/>> element) is not recommended by the Best Practices for TEI in Libraries</s:assert>
+                      <s:assert test="                                       name(.) = 'anchored' or                                       name(.) = 'baseForm' or                                       name(.) = 'baseTypes' or                                       name(.) = 'calendar' or                                       name(.) = 'cause' or                                       name(.) = 'cert' or                                       name(.) = 'class' or                                       name(.) = 'cols' or                                       name(.) = 'copyOf' or                                       name(.) = 'corresp' or                                       name(.) = 'degree' or                                       name(.) = 'dur' or                                       name(.) = 'dur-iso' or                                       name(.) = 'ed' or                                       name(.) = 'end' or                                       name(.) = 'eol' or                                       name(.) = 'evaluate' or                                       name(.) = 'exclude' or                                       name(.) = 'facs' or                                       name(.) = 'from' or                                       name(.) = 'from-iso' or                                       name(.) = 'full' or                                       name(.) = 'gi' or                                       name(.) = 'given' or                                       name(.) = 'group' or                                       name(.) = 'hand' or                                       name(.) = 'height' or                                       name(.) = 'ident' or                                       name(.) = 'key' or                                       name(.) = 'level' or                                       name(.) = 'locus' or                                       name(.) = 'marks' or                                       name(.) = 'met' or                                       name(.) = 'min' or                                       name(.) = 'n' or                                       name(.) = 'name' or                                       name(.) = 'next' or                                       name(.) = 'notAfter' or                                       name(.) = 'notBefore' or                                       name(.) = 'org' or                                       name(.) = 'part' or                                       name(.) = 'period' or                                       name(.) = 'place' or                                       name(.) = 'precision' or                                       name(.) = 'prev' or                                       name(.) = 'quantity' or                                       name(.) = 'reason' or                                       name(.) = 'ref' or                                       name(.) = 'rend' or                                       name(.) = 'render' or                                       name(.) = 'rendition' or                                       name(.) = 'resp' or                                       name(.) = 'rhyme' or                                       name(.) = 'role' or                                       name(.) = 'rows' or                                       name(.) = 'sex' or                                       name(.) = 'scale' or                                       name(.) = 'scheme' or                                       name(.) = 'scope' or                                       name(.) = 'select' or                                       name(.) = 'sort' or                                       name(.) = 'subtype' or                                       name(.) = 'synch' or                                       name(.) = 'target' or                                       name(.) = 'targetEnd' or                                       name(.) = 'targets' or                                       name(.) = 'targFunc' or                                       name(.) = 'to' or                                       name(.) = 'to-iso' or                                       name(.) = 'type' or                                       name(.) = 'unit' or                                       name(.) = 'uri' or                                       name(.) = 'url' or                                       name(.) = 'usage' or                                       name(.) = 'version' or                                       name(.) = 'when' or                                       name(.) = 'who' or                                       name(.) = 'width' or                                       name(.) = 'xml:base' or                                       name(.) = 'xml:id' or                                       name(.) = 'xml:lang' or                                       name(.) = 'xml:space'                                       ">The use of the <s:name/>= attribute (found here on the &lt;<s:value-of select="local-name(..)"/>&gt; element) is not recommended by the Best Practices for TEI in Libraries</s:assert>
                     </s:rule>
                   </constraint>
                 </constraintSpec>
@@ -1456,55 +1394,24 @@ The person who is responsible for making the change must be indicated by the <at
                       <rng:value type="token">Hyphens in source document
                       encoded as U+2010. Line-ending hyphens
                       differentiated with @type of immediately following
-                      &lt;lb> element.</rng:value>
+                      &lt;lb&gt; element.</rng:value>
                       <rng:value type="token">Hyphens in source document
                       encoded as U+002D. Line-ending hyphens
                       differentiated with @type of immediately following
-                      &lt;lb> element.</rng:value>
+                      &lt;lb&gt; element.</rng:value>
                     </rng:choice>
                   </rng:element>
                 </content>
                 <constraintSpec scheme="isoschematron" ident="hyphen-match">
                   <constraint>
                     <s:rule context="tei:editorialDecl[@n='1' or @n='2']">
-                    <s:assert test="normalize-space(child::tei:p[position()=last()])=
-                                    'All hyphens in source document encoded as U+2010.'
-                                    or
-                                    normalize-space(child::tei:p[position()=last()])=
-                                    'All hyphens in source document encoded as U+002D.'
-                                    ">At level 1 or 2, hyphenation encoding must be declared as all U+2010 or all U+002D.</s:assert>
+                    <s:assert test="normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+2010.'                                     or                                     normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+002D.'                                     ">At level 1 or 2, hyphenation encoding must be declared as all U+2010 or all U+002D.</s:assert>
                     </s:rule>
                     <s:rule context="tei:editorialDecl[@n='3']">
-                      <s:assert test="( normalize-space(child::tei:p[position()=last()])=
-                                        'All hyphens in source document encoded as U+2010.'
-                                        or
-                                        normalize-space(child::tei:p[position()=last()])=
-                                        'All hyphens in source document encoded as U+002D.' )
-                                      or
-                                        (
-                                          starts-with(
-                                            normalize-space(child::tei:p[position()=last()]),
-                                            'Hyphens in source document encoded as U+'
-                                            )
-                                          and
-                                          ends-with(
-                                            normalize-space(child::tei:p[position()=last()]),
-                                            '. Line-ending hyphens differentiated with @type of immediately following &lt;lb> element.'
-                                            )
-                                        ) ">At level 3, hyphenation encoding must be declared in the last paragraph of <s:name/>.</s:assert>
+                      <s:assert test="( normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+2010.'                                         or                                         normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+002D.' )                                       or                                         (                                           starts-with(                                             normalize-space(child::tei:p[position()=last()]),                                             'Hyphens in source document encoded as U+'                                             )                                           and                                           ends-with(                                             normalize-space(child::tei:p[position()=last()]),                                             '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                             )                                         ) ">At level 3, hyphenation encoding must be declared in the last paragraph of <s:name/>.</s:assert>
                       </s:rule>
                       <s:rule context="tei:editorialDecl[@n='4']">
-                        <s:assert test="
-                                        starts-with(
-                                          normalize-space(child::tei:p[position()=last()]),
-                                          'Hyphens in source document encoded as U+'
-                                          )
-                                        and
-                                        ends-with(
-                                          normalize-space(child::tei:p[position()=last()]),
-                                          '. Line-ending hyphens differentiated with @type of immediately following &lt;lb> element.'
-                                        )
-                                  ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb></s:assert>
+                        <s:assert test="                                         starts-with(                                           normalize-space(child::tei:p[position()=last()]),                                           'Hyphens in source document encoded as U+'                                           )                                         and                                         ends-with(                                           normalize-space(child::tei:p[position()=last()]),                                           '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                         )                                   ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb&gt;</s:assert>
                       </s:rule>
                 </constraint>
               </constraintSpec>
@@ -1529,12 +1436,9 @@ The person who is responsible for making the change must be indicated by the <at
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <editorialDecl n="1">
                     <p>Metadata in the TEI header comes from an AACR2-conformant
-                    record, translated to TEI via the <name
-                    type="software">Thutmose I</name> program.</p>
-                    <p>Content originally generated by <name
-                    type="software">c-n-rite</name> OCR software, then the
-                    needed TEI encoding put in place with <name
-                    type="software">cnr2tei.xslt</name>.</p>
+                    record, translated to TEI via the <name type="software">Thutmose I</name> program.</p>
+                    <p>Content originally generated by <name type="software">c-n-rite</name> OCR software, then the
+                    needed TEI encoding put in place with <name type="software">cnr2tei.xslt</name>.</p>
                     <p>All hyphens in source document encoded as U+2010.</p>
                   </editorialDecl>
                 </egXML>
@@ -1719,21 +1623,18 @@ The person who is responsible for making the change must be indicated by the <at
                         <s:assert test="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace/tei:tagUsage/@gi">
                           The use of divisions (i.e., whether numbered or
                           unnumbered divisions are used) must be
-                          documented in a &lt;tagUsage> element (inside a
-                        &lt;namespace> element ... </s:assert>
+                          documented in a &lt;tagUsage&gt; element (inside a
+                        &lt;namespace&gt; element ... </s:assert>
                       </s:rule>
                       <s:rule context="tei:tagUsage">
-                        <s:assert test="
-                          ( @gi='div' and normalize-space(.)='Unnumbered divs used.' and ( /tei:TEI/tei:text//tei:div or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )
-                          or
-                          ( @gi='div1' and normalize-space(.)='Numbered divs used.' and ( /tei:TEI/tei:text//tei:div1 or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )">
+                        <s:assert test="                           ( @gi='div' and normalize-space(.)='Unnumbered divs used.' and ( /tei:TEI/tei:text//tei:div or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )                           or                           ( @gi='div1' and normalize-space(.)='Numbered divs used.' and ( /tei:TEI/tei:text//tei:div1 or not( /tei:TEI/tei:text//tei:div or /tei:TEI/tei:text//tei:div1 ) ) )">
                           A document that uses un-numbered divisions
                           should specify so by using &lt;tagUsage
-                          gi="div">Unnumbered divs used.&lt;/tagUsage>; a
+                          gi="div"&gt;Unnumbered divs used.&lt;/tagUsage&gt;; a
                           document that uses numbered divisions should
                           specify so by using &lt;tagUsage
-                          gi="div1">Numbered divs
-                          used.&lt;/tagUsage>.</s:assert>
+                          gi="div1"&gt;Numbered divs
+                          used.&lt;/tagUsage&gt;.</s:assert>
                       </s:rule>
                     </constraint>
                   </constraintSpec>
@@ -1789,8 +1690,8 @@ The person who is responsible for making the change must be indicated by the <at
                     <constraint>
                       <s:rule context="tei:fileDesc/tei:titleStmt/tei:title">
                         <s:report test="@level">The @level attribute
-                        should not be specified on a &lt;title> within the
-                        &lt;titleStmt>.</s:report>
+                        should not be specified on a &lt;title&gt; within the
+                        &lt;titleStmt&gt;.</s:report>
                       </s:rule>
                       <s:rule context="tei:title[parent::tei:seriesStmt]">
                         <s:assert test="@level='s'">When a child of
@@ -1861,21 +1762,21 @@ The person who is responsible for making the change must be indicated by the <at
                     <constraint>
                       <s:rule context="tei:titleStmt/tei:title">
                         <s:assert test="@type">Inside the title statment the
-                        @type of a &lt;title> should be specified</s:assert>
+                        @type of a &lt;title&gt; should be specified</s:assert>
                       </s:rule>
                       <s:rule context="tei:monogr/tei:title">
                         <s:assert test="@type">Inside a structured
                         bibliographic citation of a mongraphic-level item,
-                        @type of a &lt;title> should be specified</s:assert>
+                        @type of a &lt;title&gt; should be specified</s:assert>
                       </s:rule>
                       <s:rule context="tei:analytic/tei:title">
                         <s:assert test="@type">Inside the analytic portion
                         of a structured bibliographic citation, @type of a
-                        &lt;title> should be specified</s:assert>
+                        &lt;title&gt; should be specified</s:assert>
                       </s:rule>
                       <s:rule context="tei:relatedItem/tei:bibl/tei:title">
                         <s:assert test="@type">Inside a bibliographic citation
-                        of a related item, the @type of a &lt;title> should be
+                        of a related item, the @type of a &lt;title&gt; should be
                         specified</s:assert>
                       </s:rule>
                     </constraint>
