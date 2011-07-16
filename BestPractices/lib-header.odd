@@ -1337,6 +1337,7 @@ The person who is responsible for making the change must be indicated by the <at
           </egXML>
         </div>
         <div type="specification">
+          <head>Specification</head>
           <specGrp xml:id="libHeadSpec" xml:lang="en">
             <classSpec module="tei" ident="model.encodingDescPart" type="model" mode="delete"/>
             <classSpec module="tei" ident="model.teiHeaderPart" type="model" mode="delete"/>
