@@ -5,6 +5,15 @@ special interest group on TEI in libraries.
 Initially established for joint work on the _Best Practices for TEI in
 Libraries_ ODDs.
 
-To check out an initial copy of this repository to your local system
-to work on it, use:
+To check out a copy of this repository to your local system so you can
+look at and play with the files (i.e., read-only) use:
    git clone git://github.com/sydb/TEI-in-Libraries.git
+
+To check out an initial copy of this repository to your local system
+to work on it (i.e., read-write), use either:
+   git clone git@github.com:sydb/TEI-in-Libraries.git
+or
+   git clone https://sydb@github.com/sydb/TEI-in-Libraries.git
+(I'm not sure of the difference.)-:
+
+   

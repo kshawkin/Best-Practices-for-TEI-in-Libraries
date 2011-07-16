@@ -135,7 +135,7 @@
             the structure of the text are not necessary</item>
             <item>extensibility is desired; that is, one desires to keep
             open the option for a higher level of encoding to be added at
-            a later da</item>
+            a later date</item>
           </list>
         </div>
         <div type="workflow">
@@ -143,7 +143,7 @@
           <p>Texts at Level 1 can be created and encoded by fully
           automated means. Page images are scanned and processed using
           OCR, but the text is left uncorrected ("dirty OCR"). Page
-          images are tagged using software that assigns a page-level
+          images are tagged using software that assigns page-level
           metadata (page number and possibly tags for page features)
           to each page image for display in the user interface in a
           list of pages. Encoding is performed automatically: markup
@@ -171,14 +171,15 @@
             </row>
             <row>
               <cell><gi>pb</gi> or <gi>facsimile</gi></cell>
-              <cell>See the explanation above for <ref>how to link
-              between the encoded text and images of source
-              documents</ref>. If using <gi>pb</gi>, always put the
-              element within an <gi>ab</gi> element.</cell>
+              <cell>See the explanation above for <ref
+              target="#txtimglnk">how to link between the encoded text
+              and images of source documents</ref>. If using
+              <gi>pb</gi>, always put the element within an
+              <gi>ab</gi> element.</cell>
             </row>
           </table>
         </div>
-        <div type="example">
+        <div type="example" xml:id="L1AHex">
           <head>Level 1 Example: Alger Hiss document</head>
           <p>XML comments (such as <tag>!-- uncorrected OCR for first
           page image begins here --</tag>) in this and other examples
@@ -191,14 +192,14 @@
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <TEI xml:id="someid">
               <teiHeader xml:lang="en">
-                <!-- header goes here -->
+                &lt;!-- header goes here -->
               </teiHeader>
               <text xml:lang="en">
                 <body>
                   <div1>
                     <ab>
                       <pb n="113" facs="00000001.tif"/>
-                      <!-- uncorrected OCR for first page image begins here -->
+                      &lt;!-- uncorrected OCR for first page image begins here -->
                       POINT VIII.
                       BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
                       CONVICTION SHOULD BE VACATED; ALTERNATIVELY,
@@ -224,9 +225,9 @@
                       -113 -
 
 
-                      <!-- uncorrected OCR for first page image ends here -->
+                      &lt;!-- uncorrected OCR for first page image ends here -->
                       <pb n="114" facs="00000002.tif"/>
-                      <!-- uncorrected OCR for second page image begins here -->
+                      &lt;!-- uncorrected OCR for second page image begins here -->
                       on the Hiss mail in 1945, and at the same time the FBI obtained
                       toll call records from the Hiss residence Telephone for the
                       years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
@@ -254,9 +255,9 @@
 
 
 
-                      <!-- uncorrected OCR for second page image ends here -->
+                      &lt;!-- uncorrected OCR for second page image ends here -->
                       <pb n="115" facs="00000003.tif"/>
-                      <!-- uncorrected OCR for third page image begins here -->
+                      &lt;!-- uncorrected OCR for third page image begins here -->
                       occurred from December 13, 1945 until the Hisses moved from
                       Washington, D.C. to New York City on September 13, 1947. A
                       "technical surveillance," -- a wiretap -- was placed on the Hiss
@@ -282,7 +283,7 @@
                       -115 -
 
 
-                      <!-- uncorrected OCR for third page image ends here -->
+                      &lt;!-- uncorrected OCR for third page image ends here -->
                     </ab>
                   </div1>
                 </body>
@@ -310,6 +311,9 @@
               document, comprising a TEI header and a text, either in
               isolation or as part of a <gi>teiCorpus</gi>
               element.</desc>
+	      <classes>
+		<memberOf key="att.global"/>
+	      </classes>
               <content>
                 <rng:ref name="teiHeader"/>
                 <rng:optional>
@@ -442,6 +446,9 @@
             <elementSpec module="textstructure" ident="body" mode="replace">
               <desc>contains the entirety of a single unitary text,
               including any front or back matter.</desc>
+	      <classes>
+		<memberOf key="att.global"/>
+	      </classes>
               <content>
                 <rng:choice>
                   <rng:ref name="model.divLike"/>
@@ -483,14 +490,6 @@
               <content>
                 <rng:ref name="ab"/>
               </content>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <rng:ref name="data.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
               <remarks>
                 <p>At level 1, the content of <gi>div</gi> must be a
                 single <gi>ab</gi> element.</p>

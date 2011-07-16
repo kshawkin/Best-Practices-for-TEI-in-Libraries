@@ -260,7 +260,7 @@
 	      distinct.</cell>
 	    </row>
 	    <row>
-	      <cell><gi>title</gi></cell>
+	      <cell><tag>title type="_"</tag></cell>
 	      <cell>Recommended, especially when text is identify
 	      typographically distinct. For <gi>title</gi> elements
 	      within the body of a document, use the <att>type</att>
@@ -303,6 +303,13 @@
 	      in an external TEI file or database for easier maintenance
 	      of names.</cell>
 	    </row> 
+	    <row>
+	      <cell><gi>listBibl</gi></cell>
+	      <cell>Recommended in support of bibliographies. Should
+	      contain a series of <gi>bibl</gi> elements, which may be
+	      further encoded using elements such as <gi>author</gi>,
+	      <gi>title</gi>, <gi>publisher</gi>, <gi>biblScope</gi>.</cell>
+	    </row>
 	  </table>
 	</div>
 	<div type="grecs">
@@ -593,53 +600,6 @@
 	      </item>
 	    </list>
 	  </div>
-	  <div>
-	    <head>Level 4 Figures</head>
-	    <p><gi>figure</gi> groups elements representing or
-	    containing graphic information such as an illustration or
-	    figure; in this context <gi>figure</gi> contains the
-	    following elements:
-	    <list>
-	      <label><gi>head</gi></label>
-	      <item>for a caption label (e.g., <quote>Figure 1</quote>)
-	      and/or a literal transcription of a caption. Use when this
-	      feature is present in the source document.</item>
-	      <label><gi>p</gi></label>
-	      <item>for a literal transcription of a caption (could be
-	      used in conjunction with the <gi>head</gi> tag if a
-	      caption label is present). Use when this feature is
-	      present in the source document.</item>
-	      <label><gi>figDesc</gi></label>
-	      <item>for free text description of the image for use when
-	      documenting an image without displaying it. This is
-	      <emph>mandatory</emph> in order to create digital texts
-	      that will be accessible to the visually impaired.</item>
-	      <label><gi>graphic</gi></label>
-	      <item>for pointing to the URI of the image itself using a
-	      <att>url</att> attribute and containing other presentation
-	      instructions such as dimension at which the graphic should
-	      be displayed, etc. This is <emph>mandatory</emph> in order
-	      to point to the corresponding image file.</item>
-	    </list>
-	    </p>
-	    <p>An example of frontispiece encoding: 
-	    <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-NoST">
-	      <front>
-		<div type="frontispiece">
-		  <figure>
-		    <head>Sojourner Truth.</head>          
-		    <figDesc>Woodcut of Sojourner Truth.</figDesc>
-		    <graphic url="http://docsouth.unc.edu/neh/truth50/frontis.html" scale="0.5"/>
-		  </figure>
-		</div>
-		<ref target="Etc">...</ref>
-	      </front>
-	    </egXML>
-	    <bibl xml:id="BIB-NoST"><title>Narrative of Sojourner Truth,
-	    a Northern Slave, Emancipated from Bodily Servitude by the
-	    State of New York, in 1828</title></bibl>
-	    </p>
-	  </div>
 	  <div type="subsection">
 	    <head>Level 4 Embedded Texts</head>
 	    <p>If the embedded text is more than a short quotation, use
@@ -717,7 +677,7 @@
 		<castItem xml:id="klgloucester">EARL OF GLOUCESTER</castItem>
 		<castItem xml:id="kledgar">EDGAR son to Gloucester.</castItem>
 		<castItem xml:id="kledmund">EDMUND bastard son to Gloucester.</castItem> 
-		<!-- ... -->
+		&lt;!-- ... -->
 		</castList>
 	      </front>
 	    </egXML>
@@ -765,7 +725,7 @@
 		      <speaker>KENT</speaker>
 		      <p>Is not this your son, my lord?</p>
 		    </sp>
-		    <!-- ... -->
+		    &lt;!-- ... -->
 		  </div>
 		</div>
 	      </egXML>
@@ -775,16 +735,17 @@
 	  </div>
 	  <div type="subsection">
 	    <head>Level 4 Oral History</head>
-	    <p>Speakers in oral history interviews, i.e. interviewee(s)
-	    and interviewer(s), may be identified in the
-	    <gi>teiHeader</gi> in several ways:
-	    <list>
-	      <item>In the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-profileDesc.html"><gi>profileDesc</gi></ref>, in the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-particDesc.html"><gi>particDesc</gi></ref>, using the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html"><gi>list</gi></ref> element, with <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-name.html"><gi>name</gi></ref> inside of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-item.html"><gi>item</gi></ref>s</item>
-	      <item>As a list of author <gi>name</gi>s within <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD2"><gi>fileDesc</gi></ref> / <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21"><gi>titleStmt</gi></ref></item>
-	    </list>
+	    <p>Speakers in oral history interviews, i.e.
+	    interviewee(s) and interviewer(s), may be identified in
+	    the <gi>teiHeader</gi> as a list of <gi>author</gi>
+	    elements (typically each with a single <gi>persName</gi>)
+	    within <ref
+	    target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD2"><gi>fileDesc</gi></ref>
+	    / <ref
+	    target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21"><gi>titleStmt</gi></ref>.
 	    </p>
 	    <p>In either method, use an <att>xml:id</att> on the
-	    <gi>name</gi> element to uniquely identify the individual
+	    <gi>persName</gi> element to uniquely identify the individual
 	    participant:
 	    <list>
 	      <item>The list of an interview’s participants can be also
@@ -808,13 +769,13 @@
 	      <list type="simple">
 		<head>Interview Participants</head>
 		<item>
-		  <name xml:id="spk1" key="wf" type="interviewee">WILLIAM C. FRIDAY</name>, interviewee
+		  <persName xml:id="spk1" key="wf" type="interviewee">WILLIAM C. FRIDAY</persName>, interviewee
 		</item>
 		<item>
-		  <name xml:id="spk2" key="wl" type="interviewer">WILLIAM LINK</name>, interviewer
+		  <persName xml:id="spk2" key="wl" type="interviewer">WILLIAM LINK</persName>, interviewer
 		</item>
 	      </list>
-	      <!-- ... -->
+	      &lt;!-- ... -->
 	      <sp who="#spk2">
 		<speaker n="2">WILLIAM LINK:</speaker>
 		<p>Last time we were talking about Frank Porter Graham. And I have a couple of questions
@@ -861,7 +822,7 @@
 		  <l n="2.3">Just the place for a Snark! I have said it thrice:</l>
 		  <l n="2.4" rend="margin-left: 0.5in">What I tell you three times is true."</l>
 		</lg>
-		<!-- ... -->
+		&lt;!-- ... -->
 	      </div> 
 	    </egXML>
 	    <bibl xml:id="BIB-LCHoS">Lewis Carroll’s <title>The Hunting of the Snark</title></bibl>
@@ -878,11 +839,11 @@
 	    </egXML>
 	    </p>
 	  </div>
-	  <div type="subsection">
+	  <div type="subsection" xml:id="L4AHex">
 	    <head>Level 4 Alger Hiss document</head>
 	    <egXML xmlns="http://www.tei-c.org/ns/Examples"><TEI xml:id="project_document_identifier">
 	      <teiHeader xml:lang="en">
-		<!-- header goes here -->
+		&lt;!-- header goes here -->
 	      </teiHeader>
 	      <text xml:lang="en">
 		<body>
@@ -923,7 +884,7 @@
 		    <lb/>as well.  CN Ex. 101 at p. 72.  Although this twenty-four-hour
 		    <lb/>surveillance was discontinued on December 14, 1945, physical
 		    <lb/>surveillance was conducted frequently at various times until
-		    <lb/>September, 1947.<note place="foot" anchored="true" n="68">Also
+		    <lb/>September, 1947.<note place="bottom" anchored="true" n="68">Also
 		    before 1947, a letter from Priscilla Hiss addressed
 		    <lb/>to her son, Timothy Hobson, was intercepted and its contents
 		    <lb/>read.  CN Ex. 100A at p. 167.  In approximately March, 1947,
@@ -993,6 +954,16 @@
 	      </rng:zeroOrMore>
 	      <rng:ref name="text"/>
 	    </content>
+	    <constraintSpec scheme="isoschematron" ident="no-rend-in-header">
+	      <constraint>
+		<s:rule context="tei:TEI | tei:Header | tei:teiHeader//*">
+		  <s:report test="@rend or @rendition or
+		  @xml:space">The @rend, @rendition, and @xml:space
+		  attributes are not permitted on the root TEI element
+		  or within the teiHeader element</s:report>
+		</s:rule>
+	      </constraint>
+	    </constraintSpec>
 	    <attList>
 	      <attDef ident="version" usage="opt">
 		<desc>The version of the TEI scheme</desc>
@@ -1030,7 +1001,7 @@
 			<head>The Bride</head>
 			<p>The year that Buttercup was born, the most beautiful woman
 			<lb/>in the world …</p>
-			<!-- rest of chapter 1 -->
+			&lt;!-- rest of chapter 1 -->
 		      </div>
 		      <div type="chapter" n="2">
 			<head>The Groom</head>
@@ -1038,9 +1009,9 @@
 			  <p>This is my first major excision. Chapter One, The Bride, is almost
 			  <lb/>in its entirety about the bride. …</p>
 			</note>
-			<!-- rest of chapter 2 -->
+			&lt;!-- rest of chapter 2 -->
 		      </div>
-		      <!-- rest of the book -->
+		      &lt;!-- rest of the book -->
 		    </body>
 		  </text>
 		</TEI>
@@ -1056,11 +1027,12 @@
 	  </elementSpec>
 	  <elementSpec module="core" ident="author" mode="replace">
 	    <desc>in a bibliographic reference, contains the name
-	    (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
+	    (typically encoded as <gi>persName</gi> or
 	    <gi>orgName</gi>) of the author, personal or corporate, of
 	    a work; for example in the same form as that provided by a
 	    recognized bibliographic name authority. </desc>
 	    <classes>
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.canonical"/>
 	      <memberOf key="model.respLike"/>
 	    </classes>
@@ -1075,11 +1047,6 @@
 	    <exemplum xml:lang="en">
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 		<author><persName ref="persons.xml#mdalmau.cny">Michelle Dalmau</persName></author>
-	      </egXML>
-	    </exemplum>
-	    <exemplum xml:lang="en">
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<author><name>Matthew Gibson</name></author>
 	      </egXML>
 	    </exemplum>
 	    <exemplum xml:lang="en">
@@ -1121,6 +1088,9 @@
 	  <elementSpec module="textstructure" ident="back" mode="replace">
 	    <gloss>back matter</gloss>
 	    <desc>contains any appendixes, etc. following the main part of a text.</desc>
+	    <classes>
+	      <memberOf key="att.global"/>
+	    </classes>
 	    <content>
 	      <rng:choice>
 		<rng:oneOrMore>
@@ -1181,6 +1151,9 @@
 	  <elementSpec module="textstructure" ident="body" mode="replace">
 	    <desc>contains the body of a single unitary text,
 	    excluding any front or back matter.</desc>
+	    <classes>
+	      <memberOf key="att.global"/>
+	    </classes>
 	    <content>
 	      <rng:choice>
 		<rng:oneOrMore>
@@ -1218,7 +1191,7 @@
 		    <pb/>
 		    ray point de difficulté d’emprunter
 		    des anciens autheurs ce qui appar‐
-		    <!-- ... -->
+		    &lt;!-- ... -->
 		    </p>
 		  </div>
 		</body>
@@ -1234,6 +1207,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global" mode="add"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.divLike"/>
 	    </classes>
@@ -1285,7 +1259,7 @@
 	      </constraint>
 	    </constraintSpec>
 	    <attList>
-	      <attDef ident="type" mode="change">
+	      <attDef ident="type" mode="add">
 		<datatype>
 		  <rng:ref name="data.enumerated"/>
 		</datatype>
@@ -1300,6 +1274,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div1" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.div1Like"/>
 	    </classes>
@@ -1364,6 +1339,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div2" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.div2Like"/>
 	    </classes>
@@ -1428,6 +1404,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div3" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.div3Like"/>
 	    </classes>
@@ -1491,6 +1468,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div4" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.div4Like"/>
 	    </classes>
@@ -1554,6 +1532,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div5" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.div5Like"/>
 	    </classes>
@@ -1617,6 +1596,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div6" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.div6Like"/>
 	    </classes>
@@ -1680,6 +1660,7 @@
 	  </elementSpec>
 	  <elementSpec module="textstructure" ident="div7" mode="replace">
 	    <classes mode="change">
+	      <memberOf key="att.global"/>
 	      <memberOf key="att.typed" mode="delete"/>
 	      <memberOf key="model.div7Like"/>
 	    </classes>
@@ -1721,10 +1702,11 @@
 	  </elementSpec>
 	  <elementSpec module="core" ident="editor" mode="replace">
 	    <desc>contains the name (typically encoded as
-	    <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
+	    <gi>persName</gi> or <gi>orgName</gi>) of
 	    an individual, institution, or organization acting as
 	    editor</desc>
 	    <classes>
+	      <memberOf key="att.global"/>
 	      <memberOf key="model.respLike"/>
 	    </classes>
 	    <content>
@@ -1760,6 +1742,9 @@
 	  <desc>contains any prefatory matter (headers, title page,
 	  prefaces, dedications, etc.) found at the start of a
 	  document, before the main body.</desc>
+	  <classes>
+	    <memberOf key="att.global"/>
+	  </classes>
 	  <content>
 	    <rng:choice>
 	      <rng:oneOrMore>
@@ -1796,6 +1781,7 @@
 	  <desc>contains the heading of a division, for example the
 	  title of a section.</desc>
 	  <classes>
+	    <memberOf key="att.global"/>
 	    <memberOf key="att.typed"/>
 	    <memberOf key="model.headLike"/>
 	    <memberOf key="model.pLike.front"/>
@@ -1909,8 +1895,6 @@
 	<!-- ****************************************************** -->
 	<classSpec module="tei" type="atts" ident="att.global" mode="change">
 	  <attList>
-	    <attDef ident="rend" mode="delete"/>
-	    <attDef ident="rendition" mode="delete"/>
 	    <attDef ident="xml:base" mode="delete"/>
 	  </attList>
 	</classSpec>
@@ -1920,7 +1904,6 @@
 	  </classes>
 	</classSpec>
 	<classSpec module="tei" ident="model.resourceLike" mode="delete" type="model"/>
-	<classSpec module="tei" ident="model.common" mode="delete" type="model"/>
 	<classSpec module="tei" ident="model.divBottomPart" mode="delete" type="model"/> 
 	<classSpec module="tei" ident="model.frontPart" mode="delete" type="model"/> 
 	<classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/> 
@@ -1934,7 +1917,6 @@
 	<classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
 	<classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
 	<classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
-	<classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
 	<classSpec module="tei" ident="att.typed" mode="change" type="atts">
 	  <attList>
 	    <attDef ident="subtype" mode="delete"/>

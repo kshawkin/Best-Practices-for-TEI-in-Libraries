@@ -89,25 +89,25 @@
         <row>
           <cell>Level 1</cell>
           <cell>The text is generated through OCR, is subordinate to the page image, and is not intended to stand alone as an electronic text (without page images). Encoding is done to assist in full text searching.</cell>
-          <cell><ref target="#Level_1_Example:_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="#L1AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://name.umdl.umich.edu/AGB8710.0001.001">example</ref></cell>
         </row>
         <row>
           <cell>Level 2</cell>
           <cell>The text is generated through OCR and is mainly subordinate to the page image, though navigational markers (textual divisions, headings) are captured.</cell>
-          <cell><ref target="#Level_2_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="#L2AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://hdl.handle.net/2027/spo.5099288.0001.001">example</ref></cell>
         </row>
         <row>
           <cell>Level 3 (example)</cell>
           <cell>The text is created by conversion, either by way of OCR or keyboarding. Some structural elements of the text are encoded. The text may be used with or without page images.</cell>
-          <cell><ref target="#Level_3_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="#L3AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://www.dlib.indiana.edu/collections/vwwp/">example</ref></cell>
         </row>
         <row>
           <cell>Level 4 (example)</cell>
           <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images in order for them to be read by students, scholars, and general readers.</cell>
-          <cell><ref target="#Level_4_Alger_Hiss_document">Alger Hiss document</ref></cell>
+          <cell><ref target="#L4AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://docsouth.unc.edu/sohp/">example</ref></cell>
         </row>
         <row>
@@ -138,7 +138,7 @@
       developed as a subset of the TEI to be used as a vendor
       specification for outsourced encoding of the type often
       initiated by libraries, archives and other cultural heritage
-      organization. This <title>Best Practices</title> document was
+      organizations. This <title>Best Practices</title> document was
       created to support in-house encoding that adheres as closely as
       possible to common TEI practice and library standards yet still
       leaves room for variation in local practice.</p>
@@ -150,7 +150,7 @@
       Level 4 with some additional markup with minimal human
       intervention. (The reason Level 3 does not contain as many
       elements as TEI Tite is to allow for use of this encoding level,
-      whether for mass digitization of born-digital source documents
+      whether for encoding of born-digital source documents
       or for upgrading Level 1 or Level 2 texts, with less human
       intervention than would be required by TEI Tite.)</p>
       <p>These <title>Best Practices</title> are meant to complement
@@ -177,12 +177,12 @@
       <div type="===">
         <head>Standards and Local Practice</head>
         <p>The goal of the TEI is interchange, not interoperability.
-        While seamless interoperability of texts created by different
-        organizations is an unobtainable goal, use of a common markup
-        vocabulary and syntax greatly aids interchange. Nevertheless,
-        keep in mind that others—even within your organization—may use
-        your texts in the future for other uses than you intended in
-        your encoding.</p>
+        While seamless interoperability of texts created for different
+        purposes is an elusive goal, use of a common markup vocabulary
+        and syntax greatly aids interchange. Nevertheless, keep in
+        mind that others—even within your organization—may use your
+        texts in the future for other uses than you intended in your
+        encoding.</p>
         <p>An encoding project should strive for internal consistency
         and for use of standards so that the data can be modified or
         enhanced in the future with ease. In cases where local
@@ -421,7 +421,7 @@
         before the closing tag of the division that ends chapter
         2.</p>
       </div>
-      <div type="===">
+      <div type="===" xml:id="txtimglnk">
         <head>Linking Between Encoded Text and Images of Source Documents</head>
         <p>There are three recommended mechanisms for linking between
         the encoded text and facsimile page images of source
@@ -511,7 +511,7 @@
         <div type="====">
           <head>key and ref</head>
           <p>These attributes are both available on a variety of
-          elements including <gi>name</gi>, <gi>persName</gi>,
+          elements including <gi>persName</gi>, <gi>orgName</gi>
           <gi>author</gi>, and <gi>title</gi>. They are used to
           reference external metadata about the content of the
           element. The <att>key</att> attribute may contain any string
@@ -566,10 +566,10 @@
         </div>
         <div type="====">
           <head><att>rend</att> and <att>rendition</att></head>
-          <p>The <att>rend</att> and <att>rendition</att> attributes
-          may be used when it is desirable to record information about
-          how the textual feature was displayed in the source
-          document.</p>
+          <p>At levels 3 and above, the <att>rend</att> and
+          <att>rendition</att> attributes may be used when it is
+          desirable to record information about how the textual
+          feature was displayed in the source document.</p>
           <p>Never use these attributes on header elements: metadata
           is transcribed and possibly regularized, as in a catalog
           record, but its exact appearance is not meant to be
@@ -624,7 +624,7 @@
           <cell>Description</cell>
         </row>
         <row>
-          <cell cols="2"><tag>TEI xml:id="___"</tag></cell>
+          <cell cols="2"><tag>TEI xml:id="___" xmlns="http://www.tei-c.org/ns/1.0"</tag></cell>
           <cell>The root element of a TEI document. Use of the <att>xml:id</att> attribute is recommended, giving the same unique identifier for the TEI document as in <code>teiHeader/fileDesc/publicationStmt/idno</code> .</cell>
         </row>
         <row>
@@ -886,7 +886,7 @@
         <item><att>rhyme</att></item>
         <item><att>role</att></item>
         <item><att>rows</att></item>
-        <item><att>s-e-x</att></item>
+        <item><att>sex</att></item>
         <item><att>scale</att></item>
         <item><att>scheme</att></item>
         <item><att>scope</att></item>

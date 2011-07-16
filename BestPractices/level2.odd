@@ -160,7 +160,7 @@
         </div>
         <div type="elrecs">
           <head>Element Recommendations for Level 2</head>
-          <p>Use all elements specified in Level 1 plus the following:
+          <p>Use all elements specified in Level 1 <emph>plus the following</emph>:
           <table>
             <row><cell><gi>front</gi>, <gi>back</gi> </cell><cell>Optional. Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
             <row><cell><gi>body</gi></cell><cell>Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
@@ -180,53 +180,69 @@
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <TEI>
                 <teiHeader xml:lang="en">
-                  <!-- header goes here -->
+                  &lt;!-- header goes here -->
                 </teiHeader>
                 <text xml:lang="en">
-                  <front>
-                    [title page information, table of contents, prefaces, etc.]
-                    [optional]
-                  </front>
+		  <front>
+		    &lt;!-- entire &lt;front> is optional, but it might have, for example: -->
+		    <div type="titlePage">
+		      <pb facs="[URI of title page image]"/>
+		      <ab>[ entire title page here ]</ab>
+		    </div>
+		    <div type="TOC">
+		      <pb n="ii" facs="[URI of table of contents]"/>
+		      <head>[ heading of table of contents ]</head>
+		      <ab>[ entire table of contents here ]</ab>
+		    </div>
+		    <div type="preface">
+		      <head>[ heading of preface ]</head>
+		      <ab>[ entire preface, with interspersed <pb/> elements pointing
+		      to page images as needed, here ]</ab>
+		    </div>
+		  </front>
                   <body>
                     <div type="section">
                       <pb n="1" facs="[URI of page 1 image]"/>
-                      <head>[heading of section 1]</head>
-                      <ab>[entire contents of section 1 here, with
+                      <head>[ heading of section 1 ]</head>
+                      <ab>[ entire contents of section 1 here, with
                       interspersed <gi>pb</gi> elements pointing to page
                       images; in this example there are 26 more pages
-                      to section 1]</ab>
+                      to section 1 ]</ab>
                     </div>
                     <div type="section">
                       <pb n="27" facs="[URI of page 27 image]"/>
                       <div type="subsection">
-                        <head>[heading of section 2 subsection 1]</head>
-                        <ab>[all the paragraphs of subsection one go here
-                        with page breaks inserted]</ab>
+                        <head>[ heading of section 2 subsection 1 ]</head>
+                        <ab>[ all the paragraphs of subsection one go here
+                        with page breaks inserted ]</ab>
                       </div>
                     </div>
                   </body>
-                  <back> [optional] </back>
+		  <back>
+		    &lt;!-- optional: organized like &lt;front>, with 1 or more &lt;div> or &lt;div1>,
+			 each with a single &lt;ab> -->
+		  </back>
                 </text>
               </TEI>
             </egXML>
           </div>
-          <div type="example">
+          <div type="example" xml:id="L2AHex">
             <head>Level 2 Alger Hiss document</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <TEI xml:id="someid">
                 <teiHeader xml:lang="en">
-                  <!-- header goes here -->
+                  &lt;!-- header goes here -->
                 </teiHeader>
                 <text xml:lang="en">
                   <body>
                     <div1>
                       <pb n="113" facs="00000001.tif"/>
-                      <!-- content of head element was transcribed from page image -->
+                      &lt;!-- content of head element was transcribed from page image -->
                       <head>POINT VIII. BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
                       CONVICTION SHOULD BE VACATED; ALTERNATIVELY, DISCOVERY AND A HEARING
                       SHOULD BE ORDERED.</head>
                       <ab>
-                        <!-- uncorrected OCR for first page image begins here -->
+                        &lt;!-- uncorrected OCR for first page image begins here -->
                         POINT VIII.
                         BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
                         CONVICTION SHOULD BE VACATED; ALTERNATIVELY,
@@ -252,9 +268,9 @@
                         -113 -
 
 
-                        <!-- uncorrected OCR for first page image ends here -->
+                        &lt;!-- uncorrected OCR for first page image ends here -->
                         <pb n="114" facs="00000002.tif"/>
-                        <!-- uncorrected OCR for second page image begins here -->
+                        &lt;!-- uncorrected OCR for second page image begins here -->
                         on the Hiss mail in 1945, and at the same time the FBI obtained
                         toll call records from the Hiss residence Telephone for the
                         years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
@@ -282,9 +298,9 @@
 
 
 
-                        <!-- uncorrected OCR for second page image ends here -->
+                        &lt;!-- uncorrected OCR for second page image ends here -->
                         <pb n="115" facs="00000003.tif"/>
-                        <!-- uncorrected OCR for third page image begins here -->
+                        &lt;!-- uncorrected OCR for third page image begins here -->
                         occurred from December 13, 1945 until the Hisses moved from
                         Washington, D.C. to New York City on September 13, 1947. A
                         "technical surveillance," -- a wiretap -- was placed on the Hiss
@@ -310,7 +326,7 @@
                         -115 -
 
 
-                        <!-- uncorrected OCR for third page image ends here -->
+                        &lt;!-- uncorrected OCR for third page image ends here -->
                       </ab>
                     </div1>
                   </body>
@@ -341,6 +357,9 @@
               transcription and page images (in <gi>facsimile</gi>),
               either in isolation or as part of a <gi>teiCorpus</gi>
               element.</desc>
+	      <classes>
+		<memberOf key="att.global"/>
+	      </classes>
               <content>
                 <rng:ref name="teiHeader"/>
                 <rng:optional>
@@ -401,6 +420,7 @@
               elements analogous to, but without the semantic baggage
               of, a paragraph.</desc>
               <classes>
+		<memberOf key="att.global"/>
                 <memberOf key="model.pLike"/>
                 <memberOf key="att.typed"/>
               </classes>
@@ -455,6 +475,7 @@
               a work; for example in the same form as that provided by a
               recognized bibliographic name authority.</desc>
               <classes>
+		<memberOf key="att.global"/>
                 <memberOf key="att.canonical"/>
                 <memberOf key="model.respLike"/>
               </classes>
@@ -515,6 +536,9 @@
             <elementSpec module="textstructure" ident="back" mode="replace">
               <gloss>back matter</gloss>
               <desc>contains any appendixes, etc. following the main part of a text.</desc>
+	      <classes>
+		<memberOf key="att.global"/>
+	      </classes>
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -575,6 +599,9 @@
             <elementSpec module="textstructure" ident="body" mode="replace">
               <desc>contains the body of a single unitary text,
               excluding any front or back matter.</desc>
+	      <classes>
+		<memberOf key="att.global"/>
+	      </classes>
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -612,7 +639,7 @@
                       <pb/>
                       ray point de difficulté d’emprunter
                       des anciens autheurs ce qui appar‐
-                      <!-- ... -->
+                      &lt;!-- ... -->
                       </ab>
                     </div>
                   </body>
@@ -630,6 +657,7 @@
             </elementSpec>
             <elementSpec module="textstructure" ident="div" mode="replace">
               <classes mode="change">
+		<memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="model.divLike"/>
               </classes>
@@ -640,7 +668,7 @@
                 <rng:ref name="ab"/>
               </content>
               <attList>
-                <attDef ident="type" mode="change">
+                <attDef ident="type" mode="add">
                   <datatype>
                     <rng:ref name="data.enumerated"/>
                   </datatype>
@@ -655,6 +683,7 @@
             </elementSpec>
             <elementSpec module="textstructure" ident="div1" mode="replace">
               <classes mode="change">
+		<memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="model.divLike"/>
               </classes>
@@ -684,6 +713,7 @@
               an individual, institution, or organization acting as
               editor</desc>
               <classes>
+		<memberOf key="att.global"/>
                 <memberOf key="model.respLike"/>
               </classes>
               <content>
@@ -710,6 +740,9 @@
               <desc>contains any prefatory matter (headers, title page,
               prefaces, dedications, etc.) found at the start of a
               document, before the main body.</desc>
+	      <classes>
+		<memberOf key="att.global"/>
+	      </classes>
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -751,6 +784,7 @@
               <desc>contains the heading of a division, for example the
               title of a section.</desc>
               <classes>
+		<memberOf key="att.global"/>
                 <memberOf key="att.typed"/>
                 <memberOf key="model.headLike"/>
               </classes>
