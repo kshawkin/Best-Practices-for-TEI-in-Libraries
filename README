@@ -21,3 +21,12 @@ to the owner of this project and follow the steps at:
    http://help.github.com/
 in order to generate a keypair.
 
+To generate schemas (RELAX NG; or, if you can't use RELAX NG you can
+also generate DTDs and W3C XML Schema), either submit the ODD files
+the TEI "Roma" website[1] or, having installed `roma`[2] on your
+machine issue
+$ roma2 --patternprefix=lib3_ --noxsd --dochtml --schematron --isoschematron --doc ./lib3.odd .
+
+To generate the main HTML documentation for the entire system, use
+somethign like
+$ xmllint --xinclude main-driver.odd > /tmp/main-driver.odd ; ~/Documents/Stylesheets/teitohtml /tmp/main-driver.odd

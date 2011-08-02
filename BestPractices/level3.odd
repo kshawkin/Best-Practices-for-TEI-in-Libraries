@@ -224,7 +224,7 @@
 	    <p>Running heads, catch words, page numbers, signatures, and other artifacts derived from printing should not be included in Level 3, with the exception of page numbers, which are recorded using the <att>n</att> attribute on <gi>pb</gi>.  If upgrading a text from Level 1 or Level 2 that was generated using OCR, discard the forme work information.</p>
 	  </div>
 	  <div>
-	    <head>Level 4 Figures</head>
+	    <head>Level 3 Figures</head>
 	    <p><gi>figure</gi> groups elements representing or
 	    containing graphic information such as an illustration or
 	    figure; in this context <gi>figure</gi> contains the
@@ -541,11 +541,11 @@
               </content>
 	      <constraintSpec scheme="isoschematron" ident="no-rend-in-header">
 		<constraint>
-		<s:rule context="tei:TEI | tei:Header | tei:teiHeader//*">
+		  <s:rule context="tei:TEI | tei:teiHeader | tei:teiHeader//*">
 		    <s:report test="@rend or @rendition or
-		    @xml:space">The @rend, @rendition, and @xml:space
-		    attributes are not permitted on the root TEI
-		    element or within the teiHeader element</s:report>
+				    @xml:space">The @rend, @rendition, and @xml:space
+		    attributes are not permitted on the root TEI element
+		    or within the teiHeader element</s:report>
 		  </s:rule>
 		</constraint>
 	      </constraintSpec>
@@ -1477,11 +1477,6 @@
 	      <attList>
 		<attDef ident="xml:base" mode="delete"/>
 	      </attList>
-	    </classSpec>
-	    <classSpec module="tei" type="model" ident="model.inter" mode="change">
-	      <classes mode="change">
-		<memberOf key="model.common" mode="delete"/>
-	      </classes>
 	    </classSpec>
 	    <classSpec module="tei" ident="model.resourceLike" mode="delete" type="model"/>
 	    <classSpec module="tei" ident="model.divBottomPart" mode="delete" type="model"/>
