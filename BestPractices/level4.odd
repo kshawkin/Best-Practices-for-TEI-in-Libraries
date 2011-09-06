@@ -164,7 +164,7 @@
 	  Tite</ref>) or possibly by correcting OCR text using software
 	  that identifies spelling mistakes and consults a log from the
 	  OCR software to find regions of uncertainty in the OCR text.
-	  If converting from TEI Tite, minimal additional markup must be
+	  If converting from TEI Tite, minimal additional markup should be
 	  added, as discussed in <ref
 	  target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html#tei-in-lib-bpg">Appendix
 	  A of TEI Tite</ref>.</p>
@@ -178,40 +178,40 @@
 	  <table rend="border: thin solid black; width: 80%;">
 	    <row>
 	      <cell><gi>titlePage</gi> and appropriate child elements</cell>
-	      <cell>Required.</cell>
+	      <cell>Recommended.</cell>
 	    </row> 
 	    <row>
 	      <cell><gi>group</gi></cell>
-	      <cell>Required to encode a collection of independent texts
+	      <cell>Recommended to encode a collection of independent texts
 	      that are regarded as a single group for processing or
 	      other purposes.</cell>
 	    </row> 
 	    <row>
 	      <cell><gi>div</gi> <emph>or</emph> <gi>div1</gi>, <gi>div2</gi>, <gi>div3</gi>, etc.</cell>
-	      <cell>Required for encoding a hierarchy of textual
+	      <cell>Recommended for encoding a hierarchy of textual
 	      divisions. Use as many levels of hierarchy as needed to
 	      represent the source document.</cell>
 	    </row>
             <row>
 	      <cell><gi>head</gi></cell>
-	      <cell>Required if headings are present. This element
+	      <cell>Recommended if headings are present. As in TEI, this element
 	      must be the first child of a textual division.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>floatingText</gi></cell>
-	      <cell>Required when a floating text is identified.</cell>
+	      <cell>Recommended when a floating text is identified.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>list</gi> and <gi>item</gi></cell>
-	      <cell>Required to indicate ordered and unordered list structures.</cell>
+	      <cell>Recommended to indicate ordered and unordered list structures.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell>
-	      <cell>Required to indicate table structures.</cell>
+	      <cell>Recommended to indicate table structures.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>hi</gi></cell>
-	      <cell>Required to indicate change in rendition when a more
+	      <cell>Recommended to indicate change in rendition when a more
 	      specific element is not being used; <att>rend</att>
 	      attribute is optional.</cell>
 	    </row>
@@ -219,56 +219,53 @@
 	      <cell><gi>opener</gi>, <gi>dateline</gi>, <gi>salute</gi>
 	      <gi>closer</gi>, <gi>signed</gi>,
 	      <gi>postscript</gi></cell>
-	      <cell>Required to indicate specific parts of letters.</cell>
+	      <cell>Recommended to indicate specific parts of letters.</cell>
 	    </row>
 	    <row>        
 	      <cell><gi>castList</gi>, <gi>castItem</gi>, <gi>sp</gi>,
 	      <gi>speaker</gi>, and <gi>stage</gi></cell>
-	      <cell>Required to encode different structures in
+	      <cell>Recommended to encode different structures in
 	      performance texts (i.e. drama).</cell>
 	    </row> 
 	    <row>        
 	      <cell><gi>sp</gi> and <gi>speaker</gi></cell>
-	      <cell>Required to encode oral history interviews.</cell>
+	      <cell>Recommended to encode oral history interviews.</cell>
 	    </row> 
 	    <row>
 	      <cell><gi>epigraph</gi></cell>
-	      <cell>Required for encoding epigraphs found as front
+	      <cell>Recommended for encoding epigraphs found as front
 	      matter</cell>
 	    </row>
 	    <row>
 	      <cell><tag>quote rend="___"</tag></cell>
-	      <cell>Required for encoding blockquotes that appear
+	      <cell>Recommended for encoding blockquotes that appear
 	      outside the flow of a paragraph. In the <att>rend</att>
 	      attribute, give a CSS declaration-block (such as
 	      <val>padding-left: 0.5in;</val>)</cell>
 	    </row>
 	    <row>        
 	      <cell><gi>argument</gi></cell>
-	      <cell>Required to encode a list of topics sometimes found
+	      <cell>Recommended to encode a list of topics sometimes found
 	      at the start of a chapter or other textual
 	      division.</cell>
 	    </row> 
 	    <row>        
 	      <cell><gi>trailer</gi></cell>
-	      <cell>Required to encode a closing title or footer at the
+	      <cell>Recommended to encode a closing title or footer at the
 	      end of a division.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>quote</gi>, <gi>said</gi>, <gi>mentioned</gi>, or <gi>soCalled</gi></cell>
-	      <cell>Recommended to represent speech, thought, quotation,
-	      etc. found within paragraphs</cell>
+	      <cell>Optional.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>emph</gi>, <gi>foreign</gi>, <gi>gloss</gi>, or <gi>term</gi></cell>
-	      <cell>Recommended, especially when text is typographically
-	      distinct.</cell>
+	      <cell>Optional.</cell>
 	    </row>
 	    <row>
 	      <cell><tag>title type="_"</tag></cell>
-	      <cell>Recommended, especially when text is identify
-	      typographically distinct. For <gi>title</gi> elements
-	      within the body of a document, use the <att>type</att>
+	      <cell>Optional within the <gi>text</gi> (not the <gi>teiHeader</gi>), especially when text is 
+	      typographically distinct. Optioanlly use the <att>type</att>
 	      attribute with a value <ref
 	      target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
 	      given in the full TEI guidelines</ref> except for main
@@ -280,29 +277,29 @@
 	    <row>
 	      <cell><gi>ptr</gi> and <gi>ref</gi></cell>
 	      <cell>In addition to using to point to notes (as in Level
-	      3), recommended for identifying cross-references within
+	      3), optionally use for identifying cross-references within
 	      the text.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>sic</gi>, <gi>corr</gi>, or <gi>choice</gi></cell>
-	      <cell>Recommended to encode errors or typos.</cell>
+	      <cell>Optionally use to encode errors or typos.</cell>
 	    </row>
 	    <row>        
 	      <cell><gi>add</gi>, <gi>del</gi>, <gi>gap</gi>, and <gi>unclear</gi></cell>
-	      <cell>Recommended to encode material that is added, marked
+	      <cell>Optionally use to encode material that is added, marked
 	      for deletion, or is illegible, invisible, or inaudible.
 	      </cell>
 	    </row> 
 	    <row>        
 	      <cell><gi>persName</gi>, <gi>placeName</gi>,
 	      <gi>geogName</gi>, and <gi>orgName</gi> </cell>
-	      <cell>Recommended to encode personal, place, and
+	      <cell>Optionally use to encode personal, place, and
 	      organizational names used in a text.</cell>
 	    </row> 
 	    <row>        
 	      <cell><gi>listName</gi>, <gi>listPlace</gi>, and
 	      <gi>listOrg</gi> </cell>
-	      <cell>Recommended in support of personal, place, and
+	      <cell>Optionally use in support of personal, place, and
 	      organizational names normalization and to capture
 	      additional information about the names. Should be captured
 	      in an external TEI file or database for easier maintenance
@@ -310,7 +307,7 @@
 	    </row> 
 	    <row>
 	      <cell><gi>listBibl</gi></cell>
-	      <cell>Recommended in support of bibliographies. Should
+	      <cell>Optionally use in support of bibliographies. Should
 	      contain a series of <gi>bibl</gi> elements, which may be
 	      further encoded using elements such as <gi>author</gi>,
 	      <gi>title</gi>, <gi>publisher</gi>, <gi>biblScope</gi>.</cell>
@@ -319,16 +316,16 @@
 	</div>
 	<div type="grecs">
 	  <head>General Level 4 Recommendations and Examples</head>
-	  <p>There are many recommended but not required elements at
+	  <p>There are many optinoal but not recommended elements at
 	  Level 4. While content for many of these elements can be
 	  identified within running prose based on changes in typography
 	  or use of quotation marks in the source document, they are not
 	  always so easily idenitified, or they may occur so often that
 	  identification of each instance is impractical. Use only those
-	  recommended elements that are appropriate for your users'
+	  optional elements that are appropriate for your users'
 	  needs and your encoding budget.</p>
 	  <list>
-	    <item>The use of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html"><gi>group</gi></ref> is required when you need to encode a body of distinct texts that are grouped together and are regarded as a unit. Most typical examples of such composite texts would be anthologies, collected works of an author, etc. Section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1 Grouped Texts</ref> states, <quote>The presence of common front matter referring to the whole collection, possibly in addition to front matter relating to each individual text, is a good indication that a given text might usefully be encoded in this way.</quote></item>
+	    <item>The use of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html"><gi>group</gi></ref> is recommended when you need to encode a body of distinct texts that are grouped together and are regarded as a unit. Most typical examples of such composite texts would be anthologies, collected works of an author, etc. Section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1 Grouped Texts</ref> states, <quote>The presence of common front matter referring to the whole collection, possibly in addition to front matter relating to each individual text, is a good indication that a given text might usefully be encoded in this way.</quote></item>
 	    <item>Use <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-argument.html"><gi>argument</gi></ref> to encode a prefatory list or prose description of the topics usually discovered at the beginning of a chapter. The content within the <gi>argument</gi> element can be presented as a list or as a paragraph: 
 	    <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-OVRAHoB">
 	      <div type="chapter" n="1">
@@ -343,7 +340,7 @@
 	    </egXML>
 	    <bibl xml:id="BIB-OVRAHoB"><author>Octavia V. Rogers Albert</author> <title>The House of Bondage, or, Charlotte Brooks and Other Slaves, Original and Life Like, As They Appeared in Their Old Plantation and City Slave Life; Together with Pen-Pictures of the Peculiar Institution, with Sights and Insights into Their New Relations as Freedmen, Freemen, and Citizens.</title> New York: Hunt &amp; Eaton, 1890.</bibl>
 	    </item>
-	    <item>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-trailer.html"><gi>trailer</gi></ref> element is required to encode a heading- or title-like content at the end of a textual division:
+	    <item>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-trailer.html"><gi>trailer</gi></ref> element is recommended to encode a heading- or title-like content at the end of a textual division:
 	    <egXML xmlns="http://www.tei-c.org/ns/Examples">
 	      <body>
 		<head>[book title]</head>
@@ -382,8 +379,8 @@
 	    <item>Any ambiguous typographically distinct text should be encoded as <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html">hi</ref> (e.g. <tag>hi rend="font-weight: bold"</tag>). This element may also be used if the more specific elements above are not used.</item>
 	    <item>Any of the following three methods may be used to encode errors or typos in original texts:
 	    <list>
-	      <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element used alone is recommended to indicate errors without correcting them</item>
-	      <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element used alone is recommended to provide corrections without indicating the initial error</item>
+	      <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element used alone is optional to indicate errors without correcting them</item>
+	      <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element used alone is optional to provide corrections without indicating the initial error</item>
 	      <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html">choice</ref> element allows both the apparent error and its editorial correction to be recorded, as in the following examples:
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-TBSoS">
 		<p>He has no Scruple about Fish; but won't touch a bit of Pork, it being 
@@ -439,7 +436,7 @@
 	      <item>The use of the <ref
 	      target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePage.html"><gi>titlePage</gi></ref>
 	      element with appropriate child elements describing the
-	      major features of most title pages is required. The child
+	      major features of most title pages is recommended. The child
 	      elements are listed in <ref
 	      target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">Section
 	      4.6 "Title Pages"</ref>. <ref
