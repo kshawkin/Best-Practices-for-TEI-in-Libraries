@@ -174,21 +174,21 @@
               <cell>See the explanation above for <ref
               target="#txtimglnk">how to link between the encoded text
               and images of source documents</ref>. If using
-              <gi>pb</gi>, always put the element within an
+              <gi>pb</gi>, it is recommended to put the element within an
               <gi>ab</gi> element.</cell>
             </row>
           </table>
         </div>
         <div type="example" xml:id="L1AHex">
           <head>Level 1 Example: Alger Hiss document</head>
-          <p>XML comments (such as <tag>!-- uncorrected OCR for first
-          page image begins here --</tag>) in this and other examples
+          <p>XML comments (such as <eg><![CDATA[<!-- uncorrected OCR for first
+          page image begins here -->]]</eg>) in this and other examples
           are illustrative but are not meant to be included in encoded
           documents.</p>
           <p>Note that for technical reasons the namespace is not shown
           in these examples, but it should always be supplied on the root
-          <gi>TEI</gi> element, e.g.: <tag>TEI
-          xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
+          <gi>TEI</gi> element, e.g.: <eg><![CDATA[<TEI
+          xmlns="http://www.tei-c.org/ns/1.0">]]</eg>.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <TEI xml:id="someid">
               <teiHeader xml:lang="en">
