@@ -164,55 +164,55 @@
 	  <table>
 	    <row>
 	      <cell><gi>front</gi>, <gi>back</gi></cell>
-	      <cell>Required if present.</cell>
+	      <cell>Recommended if present.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>div</gi> or <gi>div1</gi></cell>
-	      <cell>At least one is required within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended.</cell>
+	      <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>p</gi></cell>
-	      <cell>Required for paragraph breaks in prose.</cell>
+	      <cell>Recommended for paragraph breaks in prose.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>lg</gi> and <gi>l</gi></cell>
-	      <cell>Required for identifying groups of lines and lines, respectively.</cell>
+	      <cell>Recommended for identifying groups of lines and lines, respectively.</cell>
 	    </row>       
 	    <row>        
 	      <cell><gi>figure</gi> and appropriate child elements</cell>
-	      <cell>Required to refer to illustrative images and descriptive information about those images.</cell>
+	      <cell>Recommended to refer to illustrative images and descriptive information about those images.</cell>
 	    </row> 
 	    <row>
 	      <cell><gi>floatingText</gi></cell>
-	      <cell>Recommended when a floating text is identified.</cell>
+	      <cell>Optionally used to indicate a floating text.</cell>
 	    </row>    
 	    <row>
 	      <cell><gi>note</gi></cell>
-	      <cell>All notes must be encoded.</cell>
+	      <cell>Recommended for notes.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>ptr</gi> and <gi>ref</gi></cell>
-	      <cell>If a table of contents is encoded, required for linking to sections of the document. If notes are encoded at the point they occur in the text or at another point convenient when converting from a born-digital source document, required for encoding the point of reference.</cell>
+	      <cell>If a table of contents is encoded, recommended for linking to sections of the document. If notes are encoded at the point they occur in the text or at another point convenient when converting from a born-digital source document, recommended for encoding the point of reference.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>hi</gi></cell>
-	      <cell>Required to indicate changes in typeface; <att>rend</att> attribute is optional.</cell>
+	      <cell>Recommended to indicate changes in typeface; <att>rend</att> attribute is optional.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>list</gi> and <gi>item</gi></cell>
-	      <cell>May be used in this level to indicate ordered and unordered list structures.</cell>
+	      <cell>Optionally used to indicate ordered and unordered list structures.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell>
-	      <cell>May be used to indicate table structures.</cell>
+	      <cell>Optionally used to indicate table structures.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>lb</gi></cell>
-	      <cell>May be used to indicate line breaks.</cell>
+	      <cell>Optionally used to indicate line breaks.</cell>
 	    </row>
 	    <row>
 	      <cell><gi>cb</gi></cell>
-	      <cell>May be used to indicate column breaks.</cell>
+	      <cell>Optionally used to indicate column breaks.</cell>
 	    </row>
 	  </table>
 	  </p>
@@ -291,7 +291,7 @@
 	      <note place="bottom" anchored="true" xml:id="n68" n="68">Also before 1947, [...]</note>
 	    </egXML>
 	    Marginal notes without reference from the base text should occur at the beginning of the paragraph to which they refer, with <code>place="margin"</code>.</p>
-	    <p>It is recommended that notes that extend beyond one page be combined into one <gi>note</gi>.</p>
+	    <p>Optionally combine notes that extend beyond one page into one <gi>note</gi>.</p>
 	  </div>
 	</div>
 	<div type="examples">
