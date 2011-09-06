@@ -115,11 +115,11 @@
           captured. However, the text could stand alone as electronic
           text (without page images) if the accuracy of its contents is
           suitable to its intended use and it is not necessary to
-          display low-level typographic or structural information. Level
-          2 requires a set of elements more granular than those of Level
-          1, including bibliographic or structural information below the
-          monographic or volume level. One of the motivations for using
-          Level 2 is to avoid expensive analysis of textual elements
+          display low-level typographic or structural information. Use 
+          cases for Level 2 require a set of elements more granular than 
+          those of Level 1, including bibliographic or structural information 
+          below the monographic or volume level. One of the motivations for 
+          using Level 2 is to avoid expensive analysis of textual elements
           and/or the expense of accurate text conversion, e.g.,
           double-keying or detailed proofreading of automatic OCR.</p>
           <p>For the most part, Level 2 texts are <emph>not</emph>
@@ -165,7 +165,7 @@
             <row><cell><gi>front</gi>, <gi>back</gi> </cell><cell>Optional. Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
             <row><cell><gi>body</gi></cell><cell>Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
             <row><cell><gi>div1</gi> or <gi>div</gi> </cell><cell>Unlike in Level 1, in Level 2 one <gi>div</gi> or <gi>div1</gi> is used per section of the text identified with division-level metadata. If no <att>type</att> attribute is specified, a <att>type</att> value of <val>section</val> should be presumed.</cell></row>
-            <row><cell><gi>head</gi> </cell><cell>Required if headings are present. This element must be the first child of a <gi>div</gi> or <gi>div1</gi>.</cell></row>
+            <row><cell><gi>head</gi> </cell><cell>Recommended if headings are present. As in the TEI, this element must be the first child of a <gi>div</gi> or <gi>div1</gi>.</cell></row>
           </table>
           </p>
         </div>
