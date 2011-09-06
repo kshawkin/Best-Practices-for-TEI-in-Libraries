@@ -149,7 +149,7 @@ Gray boxes in the source document column indicate that while the corresponding T
 
 <row>
 <cell cols="7"><tag>teiHeader xml:lang="___"</tag></cell>
-<cell>The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> attribute is required; it indicates the language used for the metadata describing the document.</cell>
+<cell>The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> attribute is recommended; it indicates the language used for the metadata describing the document.</cell>
 <cell>040 $b</cell>
 <cell>n/a</cell>
 </row>
@@ -177,11 +177,11 @@ Gray boxes in the source document column indicate that while the corresponding T
 <cell>├</cell>
 <cell cols="4"><tag>title type="_"</tag></cell>
 <cell>
-One or more <gi>title</gi> elements are used to give the title of the TEI document being created. It is suggested that titles be constructed based on the source document according to a national cataloging code.
+One or more <gi>title</gi> elements are required to give the title of the TEI document being created. It is suggested that titles be constructed based on the source document according to a national cataloging code.
 
 Use of the <att>level</att> attribute is not recommended since it does not apply to a TEI document in a collection.
 
-Use of the <att>type</att> attribute is required.  It must have one of the following values as suitable in local practice:
+Use of the <att>type</att> attribute is recommended.  It should have one of the following values as suitable in local practice:
 
 <list>
   <item><val>main</val></item>
@@ -279,7 +279,7 @@ Unlike in the TEI Guidelines, do not use this element for translators, illustrat
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="4"><gi>respStmt</gi></cell>
-<cell>Record the names of other persons or organizations, one responsibility or party per <gi>respStmt</gi>, that have responsibility for the intellectual or artistic content of the TEI document—often by transitivity from the source document—not covered by <gi>author</gi> and <gi>editor</gi>. This includes translators, illustrators, compilers, proofreaders, encoders, and those who wrote a preface or introduction. Each <gi>respStmt</gi> must contain either:
+<cell>Record the names of other persons or organizations, one responsibility or party per <gi>respStmt</gi>, that have responsibility for the intellectual or artistic content of the TEI document—often by transitivity from the source document—not covered by <gi>author</gi> and <gi>editor</gi>. This includes translators, illustrators, compilers, proofreaders, encoders, and those who wrote a preface or introduction. Each <gi>respStmt</gi> should contain either:
 <list type="simple">
 <item>one <gi>resp</gi> followed by one or more of <gi>persName</gi> or <gi>orgName</gi></item>
 <item>one or more of <gi>persName</gi> or <gi>orgName</gi> followed by one <gi>resp</gi></item>
@@ -380,7 +380,7 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell>├</cell>
 <cell cols="4"><gi>idno</gi></cell>
 <cell>Any unique identifier for the TEI document as determined by the
-publisher of the TEI document. Use of this element is required.
+publisher of the TEI document. Use of this element is recommended.
 Optionally use a <att>type</att> attribute to indicate the type of
 identifier.</cell>
 <cell>
@@ -421,7 +421,7 @@ identifier.</cell>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="5"><gi>seriesStmt</gi></cell>
-<cell>This element contains information about the electronic series being created. It has one required element (<gi>title</gi>) and other optional elements.</cell>
+<cell>This element contains information about the electronic series being created. It has one recommended element (<gi>title</gi>) and other optional elements.</cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
@@ -431,7 +431,7 @@ identifier.</cell>
 <cell>│</cell>
 <cell>└</cell>
 <cell cols="4"><tag>title level="s" type="_"</tag></cell>
-<cell>Whenever possible, establish or use the form of the name from a national name authority file for the electronic series being created. Use of the <att>type</att> attribute is optional, but if it is used, it must follow [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html instructions for use of this element in the full TEI Guidelines].</cell>
+<cell>Required for the title of the series. Whenever possible, establish or use the form of the name from a national name authority file for the electronic series being created. Use of the <att>type</att> attribute is optional, but if it is used, it should follow [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html instructions for use of this element in the full TEI Guidelines].</cell>
 <cell>
   <list>
     <item>4xx</item>
@@ -503,7 +503,7 @@ identifier.</cell>
 <cell>
 At least one <gi>title</gi> element is required for the title of the object of encoding. Transcribe the title according to the national cataloging code.
 
-Use of the <att>type</att> attribute is required. It must have one of the following values as suitable in local practice:
+Use of the <att>type</att> attribute is recommended. It should have one of the following values as suitable in local practice:
   <list>
     <item><val>main</val></item>
     <item><val>sub</val></item>
@@ -577,11 +577,11 @@ Use of the <att>type</att> attribute is required. It must have one of the follow
 <cell>├</cell>
 <cell cols="2"><tag>title level="_" type="_"</tag></cell>
 <cell>
-At least one <gi>title</gi> element is required for the title of the source document bibliographic item. Transcribe the title according to the national cataloging code.
+At least one <gi>title</gi> element is recommended for the title of the source document bibliographic item. Transcribe the title according to the national cataloging code.
 
-Use of the <att>level</att> attribute is recommended.  If used, it must be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].
+Use of the <att>level</att> attribute is optional.  If used, it should be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].
 
-Use of the <att>type</att> attribute is required. It must have one of the following values as suitable in local practice:
+Use of the <att>type</att> attribute is recommended. It should have one of the following values as suitable in local practice:
 <list>
 <item><val>marc245a</val> (used for the title proper and alternative title according to the national cataloging code)</item>
 <item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)</item>
@@ -630,7 +630,7 @@ Use of the <att>type</att> attribute is required. It must have one of the follow
 <cell>├</cell>
 <cell cols="2"><gi>respStmt</gi></cell>
 <cell>Statement of responsibility on the source document bibliographic item, according to the national cataloging code. Record
-one responsibility or party per <gi>respStmt</gi>. Each <gi>respStmt</gi> must contain either:
+one responsibility or party per <gi>respStmt</gi>. Each <gi>respStmt</gi> should contain either:
 <list type="simple">
 <item>one <gi>resp</gi> followed by one or more of <gi>persName</gi> or <gi>orgName</gi></item>
 <item>one or more of <gi>persName</gi> or <gi>orgName</gi> followed by one <gi>resp</gi></item>
@@ -710,7 +710,7 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="1"><gi>pubPlace</gi></cell>
-<cell>Place of publication from the source document bibliographic item according to the national cataloging code. It is recommended but not required to remove ISBD punctuation for separating areas of the bibliographic description (such as a colon) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "S.l." (for no place of publication).</cell>
+<cell>Place of publication from the source document bibliographic item according to the national cataloging code. Optionally remove ISBD punctuation for separating areas of the bibliographic description (such as a colon) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "S.l." (for no place of publication).</cell>
 <cell>
 <table>
 <row role="label">
@@ -738,7 +738,7 @@ Whenever possible, establish or use the form of the name from a national name au
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="1"><gi>publisher</gi></cell>
-<cell>Name of publisher, distributor, etc. from the source document bibliographic item according to the national cataloging code. It is recommended but not required to remove ISBD punctuation for separating areas of the bibliographic description (such as a comma) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "s.n." (for no publisher).</cell>
+<cell>Name of publisher, distributor, etc. from the source document bibliographic item according to the national cataloging code. Optionally remove ISBD punctuation for separating areas of the bibliographic description (such as a comma) when deriving from a MARC record. However, leave brackets that indicate supplied information or an abbreviation like "s.n." (for no publisher).</cell>
 <cell>
 <table>
 <row role="label">
@@ -847,7 +847,7 @@ bibliographic item belongs, given according to the national cataloging
 code. If generating this data from a catalog record, it is likely that
 you will have only one child element: a <tag>title level="s"</tag>.
 Use of the <att>type</att> attribute <emph>on the <gi>title</gi>
-element</emph> is optional, but if it is used, it must follow <ref
+element</emph> is optional, but if it is used, it should follow <ref
 target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">instructions
 for use of this element in the full TEI Guidelines</ref>.</cell>
 <cell><table>
@@ -997,12 +997,12 @@ Optionally use one or more <gi>idno</gi> elements to give identifiers for the so
 <cell>└</cell>
 <cell><tag>title type="_"</tag></cell>
 <cell>
-At least one <gi>title</gi> element is required for the title of the related work. Transcribe the title according to the national cataloging code.
+At least one <gi>title</gi> element is recommended for the title of the related work. Transcribe the title according to the national cataloging code.
 
-Use of the <att>level</att> attribute is recommended. If used, it must
+Use of the <att>level</att> attribute is recommended. If used, it should
 be used <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as in the main TEI Guidelines</ref>.
 
-Use of the <att>type</att> attribute is optional. It must have one of the following values as suitable in local practice:
+Use of the <att>type</att> attribute is optional. It should have one of the following values as suitable in local practice:
 <list>
 <item><val>main</val></item>
 <item><val>sub</val></item>
@@ -1039,7 +1039,7 @@ Use of the <att>type</att> attribute is optional. It must have one of the follow
 <cell>├</cell>
 <cell cols="5"><tag>editorialDecl n="_"</tag></cell>
 <cell>
-Use of the <att>n</att> attribute is required to record the encoding level: <val>1</val> for Level 1, <val>2</val> for Level 2, etc.
+Use of the <att>n</att> attribute is recommended to record the encoding level: <val>1</val> for Level 1, <val>2</val> for Level 2, etc.
 
 Include one or more <gi>p</gi> elements as children with information on:
 
@@ -1087,7 +1087,7 @@ Include one or more <gi>p</gi> elements as children with information on:
 <cell>│</cell>
 <cell>└</cell>
 <cell cols="4"><tag>namespace name="http://www.tei-c.org/ns/1.0"</tag><gi>tagUsage</gi></cell>
-<cell><gi>tagUsage</gi> must be one of the following:
+<cell><gi>tagUsage</gi> should be one of the following:
 <list>
 <item><code>&lt;tagUsage gi="div1"&gt;Numbered divs used.&lt;/tagUsage&gt;</code></item>
 <item><code>&lt;tagUsage gi="div"&gt;Unnumbered divs used.&lt;/tagUsage&gt;</code></item>
@@ -1223,10 +1223,10 @@ online or to one defined previously in <gi>classDecl</gi>.
 <cell>
 Create a <gi>change</gi> element to record each significant change to the TEI document, in reverse chronological order (i.e., most recent first). A prose description of the change is recorded as the content of each <gi>change</gi> element. This prose may contain lists for organization, and phrase-level markup (like <gi>gi</gi>, <gi>ptr</gi>, or <gi>date</gi>), but not paragraphs.
 
-The date of the change must be recorded using the <att>when</att>
+The date of the change should be recorded using the <att>when</att>
 attribute (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.datable.w3c.html">att.datable.w3c class</ref>).
 
-The person who is responsible for making the change must be indicated by the <att>who</att> attribute of <gi>change</gi>. Its value is a URI that points to a <gi>respStmt</gi> or <gi>person</gi> that encodes information about the responsible party. Note that this reference is a URI reference and not an ID/IDREF reference, and thus is not checked by validation software. Small projects sometimes take advantage of this by putting information into the URI itself, and not having a <gi>respStmt</gi> or <gi>person</gi> element. For example, the document might simply give <code>who="#Jane_Smith"</code>, relying on human readers to understand this reference.
+The person who is responsible for making the change should be indicated by the <att>who</att> attribute of <gi>change</gi>. Its value is a URI that points to a <gi>respStmt</gi> or <gi>person</gi> that encodes information about the responsible party. Note that this reference is a URI reference and not an ID/IDREF reference, and thus is not checked by validation software. Small projects sometimes take advantage of this by putting information into the URI itself, and not having a <gi>respStmt</gi> or <gi>person</gi> element. For example, the document might simply give <code>who="#Jane_Smith"</code>, relying on human readers to understand this reference.
 </cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
