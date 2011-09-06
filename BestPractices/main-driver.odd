@@ -123,10 +123,18 @@
       inferences based on context. Only those elements and attributes
       mentioned below are recommended for use in encoding based on
       these <title>Best Practices</title>; use of other TEI elements
-      and attributes is not recommended. Consult the <ref
+      and attributes is not recommended.  Consult the <ref
       target="http://www.tei-c.org/Guidelines/P5/">full TEI
       Guidelines</ref> for guidance on use of elements and attributes
       beyond what is described below.</p>
+      <p>As guidelines rather than a specification, these <title>Best 
+      Practices</title> use <mentioned>should</mentioned> instead of 
+      <mentioned>must</mentioned> in nearly all cases (except where a 
+      practice is required by P5), with optional practices indicated 
+      by <mentioned>may</mentioned>. However, to encourage conformance 
+      to these <title>Best Practices</title>, the ODD files will generate 
+      schemas that <emph>require</emph> use of recommended elements 
+      (indicated by <mentioned>should</mentioned>).</p>
       <p>These <title>Best Practices</title> specify a recommended
       archival storage format. Local system needs may require
       transformation of documents in this archival format to another
@@ -197,7 +205,7 @@
         original work. At lower levels of encoding, it may be
         impractical or undesirable to transcribe and encode certain
         features of the text, such as publisher’s advertisements or
-        indexes; at Level 4 and above, the transcription must be
+        indexes; at Level 4 and above, the transcription should be
         complete. Any omissions of material found in the original work
         should be noted in the <gi>editorialDecl</gi> in the
         TEI header.</p>
@@ -395,7 +403,7 @@
         <gi>floatingText</gi> nested inside a subdivision, so any
         software that expects to process nested numbered divisions
         within a document will need to account for this.</p>
-        <p>The choice of numbered or unnumbered divisions must be
+        <p>The choice of numbered or unnumbered divisions should be
         documented with the <gi>tagUsage</gi> element in the header.
         See <ref><?tei winita: fix ref?>4.6, Element Recommendations
         for the TEI Header</ref>, below.</p>
@@ -405,8 +413,8 @@
         the text exists), is optional at Level 2 (because the
         division-level metadata need not classify these divisions), is
         recommended at Level 3 (for broad yet useful analysis of text
-        divisions), and required at Levels 4 and 5 (for full analysis
-        of the text structure).</p>
+        divisions), and is strongly recommended at Levels 4 and 5 
+        (for full analysis of the text structure).</p>
       </div>
       <div type="===">
         <head>Page Breaks</head>
@@ -464,8 +472,7 @@
       </div>
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>
-        <p>These <title>Best Practices</title> provide required and
-        recommended usage of <ref
+        <p>These <title>Best Practices</title> provide recommended usage of <ref
         target="#Element_and_Attributes_Recommendations_for_the_TEI_Header">attributes
         as used in the TEI header</ref> and within the body of the TEI
         document (within the <gi>text</gi> element), as evidenced by
@@ -516,7 +523,7 @@
           reference external metadata about the content of the
           element. The <att>key</att> attribute may contain any string
           of Unicode characters, whereas the <att>ref</att> attribute
-          must contain a URI (including a relative one, as discussed
+          contains a URI (including a relative one, as discussed
           above). While <att>key</att> may supply any identifier,
           there is no mechanism internal to XML for checking that the
           value of this attribute is valid.</p>
@@ -630,7 +637,7 @@
         <row>
           <cell>├</cell>
           <cell><tag>teiHeader xml:lang="___"</tag></cell>
-          <cell>The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> is required; it indicates the language used for the metadata describing the document.</cell>
+          <cell>The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> is recommended; it indicates the language used for the metadata describing the document.</cell>
         </row>
         <row>
           <cell>├</cell>
