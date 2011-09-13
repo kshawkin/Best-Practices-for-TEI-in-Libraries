@@ -267,12 +267,12 @@
           the source document using character U+2010 if possible;
           alternatively, use the semantically ambiguous U+002D.</p>
           <p>At Level 3, optionally distinguish uses of the hyphen
-          with the <att>type</att> attribute on <gi>lb</gi>,
+          with the <att>break</att> and <att>rend</att> attributes on <gi>lb</gi>,
           <gi>cb</gi>, and <gi>pb</gi> elements as appropriate. At
-          Level 4, the use of the <att>type</att> attribute on these
+          Level 4, the use of the <att>break</att> and <att>rend</att> attributes on these
           elements is mandatory.</p>
-          <p>Here are some examples of the <att>type</att> attribute
-          used on the <gi>lb</gi> element. (If these hyphens occur at
+          <p>Here are some examples of use of these attribute
+          on the <gi>lb</gi> element. (If these hyphens occur at
           a column or page break instead of a line break, use
           <gi>cb</gi> or <gi>pb</gi> instead.)
           <table>
@@ -293,7 +293,7 @@
               </cell>
               <cell>
                 <code>
-                  This is not a run-&lt;lb type="betweenWords"/>on sentence.
+                  This is not a run-&lt;lb break="no" rend="keep-hyphen"/>on sentence.
                 </code>
               </cell>
             </row>
@@ -309,7 +309,7 @@
               </cell>
               <cell>
                 <code>
-                  UTF-8 is a char-&lt;lb type="inWord"/>acter encoding for Unicode.
+                  UTF-8 is a char-&lt;lb break="no"/>acter encoding for Unicode.
                 </code>
               </cell>
             </row>
@@ -325,7 +325,7 @@
               </cell>
               <cell>
                 <code>
-                  Some people say TEI is a mark-&lt;lb type="wordBreakStatusUnknown"/>up language.
+                  Some people say TEI is a mark-&lt;lb break="maybe"/>up language.
                 </code>
               </cell>
             </row>
