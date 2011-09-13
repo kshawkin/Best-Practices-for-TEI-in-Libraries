@@ -826,7 +826,7 @@
         <item>Syd Bauman, Brown University: schema specifications and
         translation to a set of TEI ODD customizations</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC:
-        Thutmose stylesheets for MARC-to-TEI header mappings</item>
+        <ref target="http://wiki.tei-c.org/index.php/Thutmose">Thutmose stylesheets for MARC-to-TEI header mappings</ref></item>
       </list></p>
       <p>The individuals who have contributed to copyediting of this
       document are:
