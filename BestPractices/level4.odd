@@ -330,7 +330,8 @@
 	    <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-OVRAHoB">
 	      <div type="chapter" n="1">
 		<pb xml:id="albert14" n="14"/>
-		<head>CHAPTER I.<lb/>CHARLOTTE BROOKS.</head>
+		<head>CHAPTER I.</head>
+                <head>CHARLOTTE BROOKS.</head>
 		<argument>
 		  <p>Causes of immorality among colored people - Charlotte Brooks - She is sold South -
 		  Sunday work.</p>
@@ -859,15 +860,15 @@
 		    <p>The nature and extent of surveillance of Hiss, his
 		    <lb/>family and associates was not known at the time of trial by
 		    <lb/>the defense.  Even now, with the release of some of the govern-
-		    <lb type="inWord"/>ment documents concerning FBI investigative techniques regarding
+		    <lb break="no"/>ment documents concerning FBI investigative techniques regarding
 		    <lb/>Hiss, the full extent of surveillance -- wiretapping, mail open- 
-		    <lb type="inWord"/>ings, mail covers, physical surveillance, and other intrusive
+		    <lb break="no"/>ings, mail covers, physical surveillance, and other intrusive
 		    <lb/>techniques -- is still not 'clear.  Nevertheless, it is apparent
 		    <lb/>that information gathered through the exploitation of unlawful
 		    <lb/>wiretaps and other illegal surveillance was used at trial and
 		    <lb/>consequently the conviction must be reversed.  Alternatively,
 		    <lb/>further discovery and a hearing is essential to a fair deter- 
-		    <lb type="inWord"/>mination regarding these issues.</p>
+		    <lb break="no"/>mination regarding these issues.</p>
 		    <p>FBI surveillance of Hiss began in earnest in 1941 with 
 		    <lb/>the institution of a mail cover on his incoming correspondence
 		    <lb/>at his home in connection with an FBI investigation of possible
@@ -891,9 +892,9 @@
 		    <lb/>to her son, Timothy Hobson, was intercepted and its contents
 		    <lb/>read.  CN Ex. 100A at p. 167.  In approximately March, 1947,
 		    <lb/>a letter from a Michael Greenberg addressed to petitioner re- 
-		    <lb type="inWord"/>garding an application for employment with the United Nations
+		    <lb break="no"/>garding an application for employment with the United Nations
 		    <lb/>was also intercepted, in a manner not revealed by the docu- 
-		    <lb type="inWord"/>ments.  CN Ex. 100B</note>  CN Ex. 102; CN Ex. 103.</p>
+		    <lb break="no"/>ments.  CN Ex. 100B</note>  CN Ex. 102; CN Ex. 103.</p>
 		    <p>The most intrusive invasion of petitioner's rights
 		    <pb n="115" facs="./pageImages/AH_0115.jpg"/>
 		    <pb n="120" ed="subsequent"/>
@@ -904,13 +905,13 @@
 		    <lb/>The logs of this surveillance constitute twenty-nine volumes
 		    <lb/>of FBI serials and are roughly 2,500 pages in length, in which
 		    <lb/>an enormous amount of information concerning the Hisses' per-
-		    <lb type="inWord"/>sonal lives, relationships with friends and associates, and
+		    <lb break="no"/>sonal lives, relationships with friends and associates, and
 		    <lb/>habits is recorded.</p>          
 		    <p>The wiretap was installed following FBI Director Hoover's
 		    <lb/>application to the Attorney General for authorization,
 		    <note place="bottom" anchored="true" n="69">Hoover's
 		    initial request was answered by a note reques- 
-		    <lb type="inWord"/>ting information on Hiss.  CN Ex. 104<sic> </sic>.  Additional information
+		    <lb break="no"/>ting information on Hiss.  CN Ex. 104<sic> </sic>.  Additional information
 		    <lb/>was furnished by letter dated November 30, 1945.  CN Ex. 105<sic> </sic>.</note>
 		    <lb/>although no written authorization appears in the documents released to
 		    <lb/>Hiss.  The purpose of the application was to gather information
