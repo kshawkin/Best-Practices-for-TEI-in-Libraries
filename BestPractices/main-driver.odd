@@ -9,10 +9,13 @@
       <titleStmt>
         <title>Best Practices for TEI in Libraries</title>
         <author>
-          <name type="organization">TEI in Libraries SIG</name>
+          <name type="organization">TEI SIG on Libraries</name>
         </author>
         <editor>
           <name type="person">Kevin Hawkins</name>
+        </editor>
+        <editor>
+          <name type="person">Michelle Dalmau</name>
         </editor>
         <editor role="ODDs">
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
