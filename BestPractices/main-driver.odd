@@ -283,6 +283,7 @@
               <cell>Colloquial name</cell>
               <cell>Appearance in source document</cell>
               <cell>Encoding</cell>
+              <cell>Note</cell>
             </row>
             <row>
               <cell>
@@ -298,6 +299,32 @@
                 <code>
                   This is not a run-&lt;lb break="no" rend="keep-hyphen"/>on sentence.
                 </code>
+              </cell>
+              <cell>
+                The use of <val>no</val> as the value of  the <att>break</att> 
+                attribute indicates that the encoder considers "run-on" to be a single
+                orthographic token (loosely speaking, a single word).
+              </cell>
+            </row>
+            <row>
+              <cell>
+                Hard hyphen
+              </cell>
+              <cell>
+                <eg>
+                  This is not a run-
+                  on sentence.
+                </eg>
+              </cell>
+              <cell>
+                <code>
+                  This is not a run-&lt;lb break="yes" rend="keep-hyphen"/>on sentence.
+                </code>
+              </cell>
+              <cell>
+                The use of <val>yes</val> as the value of  the <att>break</att> 
+                attribute indicates that the encoder considers "run-on" to consist of 
+                two separate orthographic tokens.
               </cell>
             </row>
             <row>
@@ -315,6 +342,11 @@
                   UTF-8 is a char-&lt;lb break="no"/>acter encoding for Unicode.
                 </code>
               </cell>
+              <cell>
+                The use of <val>no</val> as the value of  the <att>break</att> 
+                attribute indicates that the encoder considers "character" to be a single
+                orthographic token.
+              </cell>
             </row>
             <row>
               <cell>
@@ -330,6 +362,11 @@
                 <code>
                   Some people say TEI is a mark-&lt;lb break="maybe"/>up language.
                 </code>
+              </cell>
+              <cell>
+                The use of <val>maybe</val> as the value of  the <att>break</att> 
+                attribute indicates that the encoder is unsure whether "mark-up" 
+                is a single orthographic token.
               </cell>
             </row>
           </table>
