@@ -24,9 +24,21 @@ in order to generate a keypair.
 To generate schemas (RELAX NG; or, if you can't use RELAX NG you can
 also generate DTDs and W3C XML Schema), either submit the ODD files
 the TEI "Roma" website[1] or, having installed `roma`[2] on your
-machine issue
-$ roma2 --patternprefix=lib3_ --noxsd --dochtml --schematron --isoschematron --doc ./lib3.odd .
+machine[3] issue something like
+$ roma2 --patternprefix=lib3_ --noxsd --dochtml --nodtd --isoschematron lib3.odd .
 
 To generate the main HTML documentation for the entire system, use
-somethign like
+something like
 $ xmllint --xinclude main-driver.odd > /tmp/main-driver.odd ; ~/Documents/Stylesheets/teitohtml /tmp/main-driver.odd
+
+Notes
+-----
+[1] http://www.tei-c.org/Roma/
+
+[2] Available form the TEI project at Sourceforge; this is the program
+    that combines customization ODDs with the TEI Guidelines and
+    produces schemas and reference documentation.
+
+[3] Unofficial instructions for installing `roma` on a Mac OS X system
+    or likely a GNU/Linux system can be found at
+    http://www.wwp.brown.edu/outreach/seminars/_current/handouts/roma_CLI_MacOS_X.html
