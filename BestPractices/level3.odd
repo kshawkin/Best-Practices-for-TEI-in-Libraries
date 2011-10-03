@@ -516,7 +516,7 @@
 	    <moduleRef key="tei"/>
 	    <moduleRef key="textstructure" include="TEI text front body back floatingText div div1 div2 div3 div4 div5 div6 div7"/>
 	    <moduleRef key="linking" include="ab"/>
-	    <moduleRef key="transcr" include="facsimile surface"/>
+            <moduleRef key="transcr" include="facsimile surface att.global.facs"/>
 	    <moduleRef key="namesdates" include="orgName persName"/>
 	    <specGrpRef target="./lib-header.odd#libHeadSpec"/>
 	    <moduleRef key="figures" include="table row cell figure"/>
@@ -1432,7 +1432,7 @@
 	    </elementSpec>
             <elementSpec module="transcr" ident="surface" mode="change">
               <content>
-                <rng:ref name="graphc"/>
+                <rng:ref name="graphic"/>
               </content>
             </elementSpec>
 	    <!-- ********************************* -->

@@ -934,7 +934,7 @@
 	  <moduleRef key="tei"/>
 	  <moduleRef key="textstructure" except="byline imprimatur"/>
 	  <moduleRef key="linking" include="ab"/>
-	  <moduleRef key="transcr" include="facsimile surface zone"/>
+	  <moduleRef key="transcr" include="facsimile surface zone att.global.facs"/>
 	  <moduleRef key="namesdates" include="orgName persName placeName geogName"/>
 	  <specGrpRef target="./lib-header.odd#libHeadSpec"/>
 	  <moduleRef key="figures" include="table row cell figure figDesc"/>
@@ -1255,7 +1255,7 @@
 	    <constraintSpec scheme="isoschematron" ident="recommendType">
 	      <constraint>
 		<s:rule>
-		  <s:report test="./not[@type]">Use of the
+		  <s:report test="not(@type)">Use of the
 		  <att>type</att> attribute of <gi>div</gi> is
 		  recommended</s:report>
 		</s:rule>
@@ -1838,7 +1838,6 @@
 	</elementSpec>
 	<elementSpec module="core" ident="note" mode="change">
 	  <attList>
-	    <attDef ident="anchored" mode="delete"/>
 	    <attDef ident="target" mode="delete"/>
 	    <attDef ident="targetEnd" mode="delete"/>
 	  </attList>
@@ -1847,11 +1846,6 @@
 	  <classes mode="change">
 	    <memberOf mode="delete" key="att.datable"/>
 	  </classes>
-	</elementSpec>
-	<elementSpec module="core" ident="pb" mode="change">
-	  <attList>
-	    <attDef ident="ed" mode="delete"/>
-	  </attList>
 	</elementSpec>
 	<elementSpec module="namesdates" ident="persName" mode="change">
 	  <classes mode="change">
@@ -1868,6 +1862,16 @@
 	    <attDef ident="cRef" mode="delete"/>
 	  </attList>
 	</elementSpec>
+	<!-- ***************** -->
+	<!-- Class alterations -->
+	<!-- ***************** -->
+	<classSpec module="tei" ident="att.breaking" mode="change" type="atts">
+	  <attList>
+	    <attDef mode="change" ident="break">
+	      <valList mode="change" type="closed"/>
+	    </attDef>
+	  </attList>
+	</classSpec>
 	<!-- ********************************* -->
 	<!-- Element deletion, in module order -->
 	<!-- ********************************* -->
@@ -1881,7 +1885,6 @@
 	<elementSpec module="core" ident="headItem" mode="delete"/>
 	<elementSpec module="core" ident="headLabel" mode="delete"/>
 	<elementSpec module="core" ident="index" mode="delete"/>
-	<elementSpec module="core" ident="listBibl" mode="delete"/>
 	<elementSpec module="core" ident="measure" mode="delete"/>
 	<elementSpec module="core" ident="measureGrp" mode="delete"/>
 	<elementSpec module="core" ident="milestone" mode="delete"/>

@@ -708,13 +708,13 @@
             <head>Caveats About Examples</head>
             <p>In the examples given in the description of each encoding
             level below, XML comments (such as <eg><![CDATA[<!-- uncorrected OCR for first
-            page image begins here -->]]</eg>) in this and other examples
+            page image begins here -->]]></eg>) in this and other examples
             are illustrative but are not meant to be included in encoded
             documents.</p>
             <p>Note that for technical reasons the namespace is not shown
             in these examples, but it should always be supplied on the root
             <gi>TEI</gi> element, e.g.: <eg><![CDATA[<TEI
-            xmlns="http://www.tei-c.org/ns/1.0">]]</eg>.</p>
+            xmlns="http://www.tei-c.org/ns/1.0">]]></eg>.</p>
           </div>
 
         <xi:include href="./level1.odd" xpointer="element(level-1-content)">

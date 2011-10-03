@@ -343,7 +343,7 @@
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text front body back div div1"/>
             <moduleRef key="linking" include="ab"/>
-            <moduleRef key="transcr" include="facsimile surface"/>
+             <moduleRef key="transcr" include="facsimile surface att.global.facs"/>
             <moduleRef key="namesdates" include="orgName persName"/>
             <specGrpRef target="./lib-header.odd#libHeadSpec"/>
             <!-- ****************************************** -->
@@ -357,7 +357,7 @@
               transcription and page images (in <gi>facsimile</gi>),
               either in isolation or as part of a <gi>teiCorpus</gi>
               element.</desc>
-	      <classes>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -419,7 +419,7 @@
               acting as an anonymous container for phrase or inter level
               elements analogous to, but without the semantic baggage
               of, a paragraph.</desc>
-              <classes>
+              <classes mode="replace">
 		<memberOf key="att.global"/>
                 <memberOf key="model.pLike"/>
                 <memberOf key="att.typed"/>
@@ -474,7 +474,7 @@
               <gi>orgName</gi>) of the author, personal or corporate, of
               a work; for example in the same form as that provided by a
               recognized bibliographic name authority.</desc>
-              <classes>
+              <classes mode="replace">
 		<memberOf key="att.global"/>
                 <memberOf key="att.canonical"/>
                 <memberOf key="model.respLike"/>
@@ -536,7 +536,7 @@
             <elementSpec module="textstructure" ident="back" mode="replace">
               <gloss>back matter</gloss>
               <desc>contains any appendixes, etc. following the main part of a text.</desc>
-	      <classes>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -599,7 +599,7 @@
             <elementSpec module="textstructure" ident="body" mode="replace">
               <desc>contains the body of a single unitary text,
               excluding any front or back matter.</desc>
-	      <classes>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -662,10 +662,19 @@
                 <memberOf key="model.divLike"/>
               </classes>
               <content>
+		<rng:optional>
+		  <rng:ref name="model.global"/>
+		</rng:optional>
                 <rng:optional>
                   <rng:ref name="model.divTop"/>
                 </rng:optional>
+		<rng:optional>
+		  <rng:ref name="model.global"/>
+		</rng:optional>
                 <rng:ref name="ab"/>
+		<rng:optional>
+		  <rng:ref name="model.global"/>
+		</rng:optional>
               </content>
               <attList>
                 <attDef ident="type" mode="add">
@@ -688,10 +697,19 @@
                 <memberOf key="model.divLike"/>
               </classes>
               <content>
+		<rng:optional>
+		  <rng:ref name="model.global"/>
+		</rng:optional>
                 <rng:optional>
                   <rng:ref name="model.divTop"/>
                 </rng:optional>
+		<rng:optional>
+		  <rng:ref name="model.global"/>
+		</rng:optional>
                 <rng:ref name="ab"/>
+		<rng:optional>
+		  <rng:ref name="model.global"/>
+		</rng:optional>
               </content>
               <attList>
                 <attDef ident="type" mode="change">
@@ -712,7 +730,7 @@
               <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
               an individual, institution, or organization acting as
               editor</desc>
-              <classes>
+              <classes mode="replace">
 		<memberOf key="att.global"/>
                 <memberOf key="model.respLike"/>
               </classes>
@@ -740,7 +758,7 @@
               <desc>contains any prefatory matter (headers, title page,
               prefaces, dedications, etc.) found at the start of a
               document, before the main body.</desc>
-	      <classes>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -783,7 +801,7 @@
               <gloss>heading</gloss>
               <desc>contains the heading of a division, for example the
               title of a section.</desc>
-              <classes>
+              <classes mode="replace">
 		<memberOf key="att.global"/>
                 <memberOf key="att.typed"/>
                 <memberOf key="model.headLike"/>
@@ -839,7 +857,7 @@
             </elementSpec>
             <elementSpec module="transcr" ident="surface" mode="change">
               <content>
-                <rng:ref name="graphc"/>
+                <rng:ref name="graphic"/>
               </content>
             </elementSpec>
             <!-- ********************************* -->
