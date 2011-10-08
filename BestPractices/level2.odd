@@ -343,20 +343,20 @@
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text front body back div div1"/>
             <moduleRef key="linking" include="ab"/>
-             <moduleRef key="transcr" include="facsimile surface att.global.facs"/>
+            <moduleRef key="transcr" include="facsimile surface"/>
             <moduleRef key="namesdates" include="orgName persName"/>
             <specGrpRef target="./lib-header.odd#libHeadSpec"/>
             <!-- ****************************************** -->
             <!-- Changes to elements, in alphabetical order -->
             <!-- ****************************************** -->
-            <elementSpec module="textstructure" ident="TEI" mode="replace">
+            <elementSpec module="textstructure" ident="TEI" mode="change">
               <gloss>TEI document</gloss>
-              <desc>contains a single TEI-in-Libraries level 2 document,
-              comprising a TEI header and a text, the latter represented
-              as either a transcription (in <gi>text</gi>) or a
-              transcription and page images (in <gi>facsimile</gi>),
-              either in isolation or as part of a <gi>teiCorpus</gi>
-              element.</desc>
+              <desc>contains a single TEI-in-Libraries level 2
+              document, comprising a TEI header and a text, the latter
+              represented as either a transcription (in <gi>text</gi>)
+              or a transcription and page images (in <gi>text</gi> and
+              <gi>facsimile</gi> respectively), either in isolation or
+              as part of a <gi>teiCorpus</gi> element.</desc>
 	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
@@ -367,16 +367,6 @@
                 </rng:optional>
                 <rng:ref name="text"/>
               </content>
-              <attList>
-                <attDef ident="version" usage="opt">
-                  <desc>The version of the TEI scheme</desc>
-                  <datatype>
-                    <rng:data type="decimal"/>
-                  </datatype>
-                  <defaultVal>5.0</defaultVal>
-                  <valDesc>A number identifying the version of the TEI guidelines</valDesc>
-                </attDef>
-              </attList>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <TEI>
@@ -404,14 +394,13 @@
                 </egXML>
               </exemplum>
               <remarks>
-                <p>This element is required. The TEI namespace should be specified on this element.</p>
+                <p>This element is required. The TEI namespace should
+                be specified on this element, e.g. <tag
+                type="start">TEI
+                xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
               </remarks>
-              <listRef>
-                <ptr target="#DS"/>
-                <ptr target="#CCDEF"/>
-              </listRef>
             </elementSpec>
-            <elementSpec module="linking" ident="ab" mode="replace">
+            <elementSpec module="linking" ident="ab" mode="change">
               <gloss>anonymous block</gloss>
               <desc>contains the entire content of a division of the
               document; or, when used within the <gi>teiHeader</gi>,
@@ -464,11 +453,8 @@
                 <gi>ab</gi> <emph>may</emph> be used in a variety of
                 places within the <gi>teiHeader</gi>.</p>
               </remarks>
-              <listRef>
-                <ptr target="#SASE"/>
-              </listRef>
             </elementSpec>
-            <elementSpec module="core" ident="author" mode="replace">
+            <elementSpec module="core" ident="author" mode="change">
               <desc>in a bibliographic reference, contains the name
               (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
               <gi>orgName</gi>) of the author, personal or corporate, of
@@ -479,9 +465,6 @@
                 <memberOf key="att.canonical"/>
                 <memberOf key="model.respLike"/>
               </classes>
-              <content>
-                <rng:ref name="macro.phraseSeq"/>
-              </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <author><orgName>British Broadcasting Corporation</orgName></author>
@@ -494,7 +477,7 @@
               </exemplum>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <author><name>Matthew Gibson</name></author>
+                  <author><name>Gibson, Matthew</name></author>
                 </egXML>
               </exemplum>
               <exemplum xml:lang="en">
@@ -515,30 +498,21 @@
                 or <att>ref</att> may also be used to reference
                 canonical information about the author(s) intended from
                 any appropriate authority, such as a library catalogue
-                or online resource. </p>
-                <p>In the case of a broadcast, use this element for the
-                name of the company or network responsible for making
-                the broadcast.</p>
+                or online resource.</p>
+                <p>In the case of a broadcast, use an <gi>orgName</gi>
+                inside this element for the name of the company or
+                network responsible for making the broadcast.</p>
                 <p>Where an author is unknown or unspecified, this
                 element may contain text such as
                 <mentioned>Unknown</mentioned> or
-                <mentioned>Anonymous</mentioned>. When the appropriate
-                TEI modules are in use, it may also contain detailed
-                tagging of the names used for people, organizations or
-                places, in particular where multiple names are
-                given.</p>
+                <mentioned>Anonymous</mentioned>.</p>
               </remarks>
               <listRef>
                 <ptr target="#COBICOR"/>
                 <ptr target="#HD21"/>
               </listRef>
             </elementSpec>
-            <elementSpec module="textstructure" ident="back" mode="replace">
-              <gloss>back matter</gloss>
-              <desc>contains any appendixes, etc. following the main part of a text.</desc>
-	      <classes mode="replace">
-		<memberOf key="att.global"/>
-	      </classes>
+            <elementSpec module="textstructure" ident="back" mode="change">
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -586,19 +560,8 @@
                   </back>
                 </egXML>
               </exemplum>
-              <remarks>
-                <p>The content model of back matter is identical to that
-                of front matter, reflecting the facts of cultural
-                history.</p>
-              </remarks>
-              <listRef>
-                <ptr target="#DSBACK"/>
-                <ptr target="#DS"/>
-              </listRef>
             </elementSpec>
-            <elementSpec module="textstructure" ident="body" mode="replace">
-              <desc>contains the body of a single unitary text,
-              excluding any front or back matter.</desc>
+            <elementSpec module="textstructure" ident="body" mode="change">
 	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
@@ -612,8 +575,8 @@
                   </rng:oneOrMore>
                 </rng:choice>
               </content>
-              <exemplum xml:lang="fr">
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="fr">
                   <body>
                     <head>LA FOREST
                     NVPTIALE,</head>
@@ -651,15 +614,10 @@
                 <gi>note</gi>, and either <gi>div</gi> or <gi>div1</gi>
                 elements.</p>
               </remarks>
-              <listRef>
-                <ptr target="#DS"/>
-              </listRef>
             </elementSpec>
-            <elementSpec module="textstructure" ident="div" mode="replace">
+            <elementSpec module="textstructure" ident="div" mode="change">
               <classes mode="change">
-		<memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.divLike"/>
               </classes>
               <content>
 		<rng:optional>
@@ -687,10 +645,11 @@
               <remarks>
                 <p>At level 2, <gi>div</gi> may contain only an
                 optional <gi>head</gi> followed by a required
-                <gi>ab</gi>.</p>
+                <gi>ab</gi>; also <gi>pb</gi> and <gi>note</gi>
+                elements may be interspersed anywhere as needed.</p>
               </remarks>
             </elementSpec>
-            <elementSpec module="textstructure" ident="div1" mode="replace">
+            <elementSpec module="textstructure" ident="div1" mode="change">
               <classes mode="change">
 		<memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
@@ -725,26 +684,20 @@
                 <gi>ab</gi>.</p>
               </remarks>
             </elementSpec>
-            <elementSpec module="core" ident="editor" mode="replace">
+            <elementSpec module="core" ident="editor" mode="change">
               <desc>contains the name (typically encoded as
               <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
               an individual, institution, or organization acting as
-              editor</desc>
+              editor.</desc>
               <classes mode="replace">
 		<memberOf key="att.global"/>
                 <memberOf key="model.respLike"/>
               </classes>
-              <content>
-                <rng:ref name="macro.phraseSeq"/>
-              </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <editor><persName ref="names.xml#khawkins.tvt">Kevin Hawkins</persName></editor>
                 </egXML>
               </exemplum>
-              <listRef>
-                <ptr target="#COBICOR"/>
-              </listRef>
             </elementSpec>
             <elementSpec module="transcr" ident="facsimile" mode="change">
               <content>
@@ -753,8 +706,7 @@
                 </rng:oneOrMore>
               </content>
             </elementSpec>
-            <elementSpec module="textstructure" ident="front" mode="replace">
-              <gloss>front matter</gloss>
+            <elementSpec module="textstructure" ident="front" mode="change">
               <desc>contains any prefatory matter (headers, title page,
               prefaces, dedications, etc.) found at the start of a
               document, before the main body.</desc>
@@ -787,28 +739,18 @@
                   </front>
                 </egXML>
               </exemplum>
-              <listRef>
-                <ptr target="#DSTITL"/>
-                <ptr target="#DS"/>
-              </listRef>
             </elementSpec>
             <elementSpec module="core" ident="graphic" mode="change">
               <content>
                 <rng:empty/>
               </content>
             </elementSpec>
-            <elementSpec module="core" ident="head" mode="replace">
-              <gloss>heading</gloss>
-              <desc>contains the heading of a division, for example the
-              title of a section.</desc>
+            <elementSpec module="core" ident="head" mode="change">
               <classes mode="replace">
 		<memberOf key="att.global"/>
                 <memberOf key="att.typed"/>
                 <memberOf key="model.headLike"/>
               </classes>
-              <content>
-                <rng:ref name="macro.paraContent"/>
-              </content>
               <remarks>
                 <p>The <gi>head</gi> element is used for headings at all
                 levels; software which treats (e.g.) chapter headings,
@@ -819,9 +761,6 @@
                 <gi>div</gi> or <gi>div1</gi> is the title of that
                 chapter or section.</p>
               </remarks>
-              <listRef>
-                <ptr target="#DSHD" type="div2"/>
-              </listRef>
             </elementSpec>
             <elementSpec module="core" ident="note" mode="change">
               <attList>
@@ -930,6 +869,7 @@
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.typed" mode="change" type="atts">
               <attList>
                 <attDef ident="subtype" mode="delete"/>

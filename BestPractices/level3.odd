@@ -516,20 +516,21 @@
 	    <moduleRef key="tei"/>
 	    <moduleRef key="textstructure" include="TEI text front body back floatingText div div1 div2 div3 div4 div5 div6 div7"/>
 	    <moduleRef key="linking" include="ab"/>
-            <moduleRef key="transcr" include="facsimile surface att.global.facs"/>
+            <moduleRef key="transcr" include="facsimile surface"/>
 	    <moduleRef key="namesdates" include="orgName persName"/>
 	    <specGrpRef target="./lib-header.odd#libHeadSpec"/>
 	    <moduleRef key="figures" include="table row cell figure"/>
 	    <!-- ****************************************** -->
 	    <!-- Changes to elements, in alphabetical order -->
 	    <!-- ****************************************** -->
-	    <elementSpec module="textstructure" ident="TEI" mode="replace">
-	      <gloss>TEI document</gloss>
-	      <desc>contains a single TEI-in-Libraries level 3 document, comprising a TEI header and a
-              text, the latter represented as either a transcription (in <gi>text</gi>) or a
-              transcription and page images (in <gi>facsimile</gi>), either in isolation or as part
-              of a <gi>teiCorpus</gi> element.</desc>
-	      <classes>
+	    <elementSpec module="textstructure" ident="TEI" mode="change">
+	      <desc>contains a single TEI-in-Libraries level 3
+	      document, comprising a TEI header and a text, the latter
+	      represented as either a transcription (in <gi>text</gi>)
+	      or a transcription and page images (in
+	      <gi>facsimile</gi>), either in isolation or as part of a
+	      <gi>teiCorpus</gi> element.</desc>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -549,16 +550,6 @@
 		  </s:rule>
 		</constraint>
 	      </constraintSpec>
-	      <attList>
-		<attDef ident="version" usage="opt">
-		  <desc>The version of the TEI scheme</desc>
-		  <datatype>
-		    <rng:data type="decimal"/>
-		  </datatype>
-		  <defaultVal>5.0</defaultVal>
-		  <valDesc>A number identifying the version of the TEI guidelines</valDesc>
-		</attDef>
-	      </attList>
 	      <exemplum xml:lang="en">
 		<p>Note that for technical reasons the namespace is
 		not shown in this example, but it should always be
@@ -613,20 +604,19 @@
 		</egXML>
 	      </exemplum>
 	      <remarks>
-		<p>This element is required. The TEI namespace should be specified on this
-                element.</p>
+                <p>This element is required. The TEI namespace should
+                be specified on this element, e.g. <tag
+                type="start">TEI
+                xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
 	      </remarks>
-	      <listRef>
-		<ptr target="#DS"/>
-		<ptr target="#CCDEF"/>
-	      </listRef>
 	    </elementSpec>
-	    <elementSpec module="core" ident="author" mode="replace">
-	      <desc>in a bibliographic reference, contains the name (typically encoded as
-	      <gi>persName</gi> or <gi>orgName</gi>) of the author, personal or
-              corporate, of a work; for example in the same form as that provided by a recognized
-              bibliographic name authority. </desc>
-	      <classes>
+	    <elementSpec module="core" ident="author" mode="change">
+	      <desc>in a bibliographic reference, contains the name
+	      (typically encoded as <gi>persName</gi> or
+	      <gi>orgName</gi>) of the author, personal or corporate,
+	      of a work; for example in the same form as that provided
+	      by a recognized bibliographic name authority.</desc>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 		<memberOf key="att.canonical"/>
 		<memberOf key="model.respLike"/>
@@ -646,7 +636,7 @@
 	      </exemplum>
 	      <exemplum xml:lang="en">
 		<egXML xmlns="http://www.tei-c.org/ns/Examples">
-		  <author><name>Matthew Gibson</name></author>
+		  <author><name>Gibson, Matthew</name></author>
 		</egXML>
 	      </exemplum>
 	      <exemplum xml:lang="en">
@@ -660,28 +650,25 @@
 		</egXML>
 	      </exemplum>
 	      <remarks>
-		<p>Particularly where cataloguing is likely to be based on the content of the header,
-                it is advisable to use a generally recognized name authority file to supply the
-                content for this element. The attributes <att>key</att> or <att>ref</att> may also
-                be used to reference canonical information about the author(s) intended from any
-                appropriate authority, such as a library catalogue or online resource.</p>
-		<p>In the case of a broadcast, use this element for the name of the company or network
-                responsible for making the broadcast.</p>
-		<p>Where an author is unknown or unspecified, this element may contain text such as
-		<mentioned>Unknown</mentioned> or <mentioned>Anonymous</mentioned>. When the
-                appropriate TEI modules are in use, it may also contain detailed tagging of the
-                names used for people, organizations or places, in particular where multiple names
-                are given.</p>
+		<p>Particularly where cataloguing is likely to be
+		based on the content of the header, it is advisable to
+		use a generally recognized name authority file to
+		supply the content for this element. The attributes
+		<att>key</att> or <att>ref</att> may also be used to
+		reference canonical information about the author(s)
+		intended from any appropriate authority, such as a
+		library catalogue or online resource.</p>
+		<p>In the case of a broadcast, use this element for
+		the name of the company or network responsible for
+		making the broadcast.</p>
+		<p>Where an author is unknown or unspecified, this
+		element may contain text such as
+		<mentioned>Unknown</mentioned> or
+		<mentioned>Anonymous</mentioned>.</p>
 	      </remarks>
-	      <listRef>
-		<ptr target="#COBICOR"/>
-		<ptr target="#HD21"/>
-	      </listRef>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="back" mode="replace">
-	      <gloss>back matter</gloss>
-	      <desc>contains any appendixes, etc. following the main part of a text.</desc>
-	      <classes>
+	    <elementSpec module="textstructure" ident="back" mode="change">
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -722,19 +709,9 @@
 		  </back>
 		</egXML>
 	      </exemplum>
-	      <remarks>
-		<p>The content model of back matter is identical to that of front matter, reflecting
-                the facts of cultural history.</p>
-	      </remarks>
-	      <listRef>
-		<ptr target="#DSBACK"/>
-		<ptr target="#DS"/>
-	      </listRef>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="body" mode="replace">
-	      <desc>contains the body of a single unitary text, excluding any front or back
-              matter.</desc>
-	      <classes>
+	    <elementSpec module="textstructure" ident="body" mode="change">
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
 	      <content>
@@ -747,8 +724,8 @@
 		  </rng:oneOrMore>
 		</rng:choice>
 	      </content>
-	      <exemplum xml:lang="fr">
-		<egXML xmlns="http://www.tei-c.org/ns/Examples">
+	      <exemplum>
+		<egXML xmlns="http://www.tei-c.org/ns/Examples"  xml:lang="fr">
 		  <body>
 		    <head>LA FOREST NVPTIALE,</head>
 		    <p>Où e∫t repre∫entee vne varieté bigarree, non mois e∫merveillable que plai∫an‐
@@ -781,11 +758,8 @@
 		and
 		either <gi>div</gi> or <gi>div1</gi> elements.</p>
 	      </remarks>
-	      <listRef>
-		<ptr target="#DS"/>
-	      </listRef>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div" mode="replace">
+	    <elementSpec module="textstructure" ident="div" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
@@ -859,62 +833,12 @@
 		<gi>div</gi> elements.</p>
 	      </remarks>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div1" mode="replace">
+	    <elementSpec module="textstructure" ident="div1" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
 		<memberOf key="model.div1Like"/>
 	      </classes>
-	      <content>
-		<rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.divTop"/>
-		      <rng:ref name="model.global"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:oneOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div2Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:group>
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:ref name="model.common"/>
-			  </rng:group>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:oneOrMore>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.div2Like"/>
-			    <rng:ref name="model.divGenLike"/>
-			  </rng:choice>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		    <rng:zeroOrMore>
-		      <rng:group>
-			<rng:ref name="model.divBottom"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </content>
 	      <attList>
 		<attDef ident="type" mode="add">
 		  <datatype>
@@ -924,62 +848,12 @@
 		</attDef>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div2" mode="replace">
+	    <elementSpec module="textstructure" ident="div2" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
 		<memberOf key="model.div2Like"/>
 	      </classes>
-	      <content>
-		<rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.divTop"/>
-		      <rng:ref name="model.global"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:oneOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div3Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:group>
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:ref name="model.common"/>
-			  </rng:group>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:oneOrMore>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.div3Like"/>
-			    <rng:ref name="model.divGenLike"/>
-			  </rng:choice>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		    <rng:zeroOrMore>
-		      <rng:group>
-			<rng:ref name="model.divBottom"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </content>
 	      <attList>
 		<attDef ident="type" mode="change">
 		  <datatype>
@@ -989,62 +863,12 @@
 		</attDef>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div3" mode="replace">
+	    <elementSpec module="textstructure" ident="div3" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
 		<memberOf key="model.div3Like"/>
 	      </classes>
-	      <content>
-		<rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.divTop"/>
-		      <rng:ref name="model.global"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:oneOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div4Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:group>
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:ref name="model.common"/>
-			  </rng:group>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:oneOrMore>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.div4Like"/>
-			    <rng:ref name="model.divGenLike"/>
-			  </rng:choice>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		    <rng:zeroOrMore>
-		      <rng:group>
-			<rng:ref name="model.divBottom"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </content>
 	      <attList>
 		<attDef ident="type" mode="change">
 		  <datatype>
@@ -1054,62 +878,12 @@
 		</attDef>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div4" mode="replace">
+	    <elementSpec module="textstructure" ident="div4" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
 		<memberOf key="model.div4Like"/>
 	      </classes>
-	      <content>
-		<rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.divTop"/>
-		      <rng:ref name="model.global"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:oneOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div5Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:group>
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:ref name="model.common"/>
-			  </rng:group>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:oneOrMore>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.div5Like"/>
-			    <rng:ref name="model.divGenLike"/>
-			  </rng:choice>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		    <rng:zeroOrMore>
-		      <rng:group>
-			<rng:ref name="model.divBottom"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </content>
 	      <attList>
 		<attDef ident="type" mode="change">
 		  <datatype>
@@ -1119,62 +893,12 @@
 		</attDef>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div5" mode="replace">
+	    <elementSpec module="textstructure" ident="div5" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
 		<memberOf key="model.div5Like"/>
 	      </classes>
-	      <content>
-		<rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.divTop"/>
-		      <rng:ref name="model.global"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:oneOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div6Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:group>
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:ref name="model.common"/>
-			  </rng:group>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:oneOrMore>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.div6Like"/>
-			    <rng:ref name="model.divGenLike"/>
-			  </rng:choice>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		    <rng:zeroOrMore>
-		      <rng:group>
-			<rng:ref name="model.divBottom"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </content>
 	      <attList>
 		<attDef ident="type" mode="change">
 		  <datatype>
@@ -1184,62 +908,12 @@
 		</attDef>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div6" mode="replace">
+	    <elementSpec module="textstructure" ident="div6" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
 		<memberOf key="model.div6Like"/>
 	      </classes>
-	      <content>
-		<rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.divTop"/>
-		      <rng:ref name="model.global"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		  <rng:optional>
-		    <rng:choice>
-		      <rng:oneOrMore>
-			<rng:choice>
-			  <rng:ref name="model.div7Like"/>
-			  <rng:ref name="model.divGenLike"/>
-			</rng:choice>
-			<rng:zeroOrMore>
-			  <rng:ref name="model.global"/>
-			</rng:zeroOrMore>
-		      </rng:oneOrMore>
-		      <rng:group>
-			<rng:oneOrMore>
-			  <rng:group>
-			    <rng:ref name="model.common"/>
-			  </rng:group>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:oneOrMore>
-			<rng:zeroOrMore>
-			  <rng:choice>
-			    <rng:ref name="model.div7Like"/>
-			    <rng:ref name="model.divGenLike"/>
-			  </rng:choice>
-			  <rng:zeroOrMore>
-			    <rng:ref name="model.global"/>
-			  </rng:zeroOrMore>
-			</rng:zeroOrMore>
-		      </rng:group>
-		    </rng:choice>
-		    <rng:zeroOrMore>
-		      <rng:group>
-			<rng:ref name="model.divBottom"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </content>
 	      <attList>
 		<attDef ident="type" mode="change">
 		  <datatype>
@@ -1249,40 +923,12 @@
 		</attDef>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="textstructure" ident="div7" mode="replace">
+	    <elementSpec module="textstructure" ident="div7" mode="change">
 	      <classes mode="change">
 		<memberOf key="att.global"/>
 		<memberOf key="att.typed" mode="delete"/>
 		<memberOf key="model.div7Like"/>
 	      </classes>
-	      <content>
-		<rng:group>
-		  <rng:zeroOrMore>
-		    <rng:choice>
-		      <rng:ref name="model.divTop"/>
-		      <rng:ref name="model.global"/>
-		    </rng:choice>
-		  </rng:zeroOrMore>
-		  <rng:optional>
-		    <rng:oneOrMore>
-		      <rng:group>
-			<rng:ref name="model.common"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:oneOrMore>
-		    <rng:zeroOrMore>
-		      <rng:group>
-			<rng:ref name="model.divBottom"/>
-		      </rng:group>
-		      <rng:zeroOrMore>
-			<rng:ref name="model.global"/>
-		      </rng:zeroOrMore>
-		    </rng:zeroOrMore>
-		  </rng:optional>
-		</rng:group>
-	      </content>
 	      <attList>
 		<attDef ident="type" mode="change">
 		  <datatype>
@@ -1292,25 +938,19 @@
 		</attDef>
 	      </attList>
 	    </elementSpec>
-	    <elementSpec module="core" ident="editor" mode="replace">
+	    <elementSpec module="core" ident="editor" mode="change">
 	      <desc>contains the name (typically encoded as <gi>persName</gi> or
 	      <gi>orgName</gi>) of an individual, institution, or organization acting as
-              editor</desc>
-	      <classes>
-		<memberOf key="att.global"/>
-		<memberOf key="model.respLike"/>
+              editor.</desc>
+	      <classes mode="change">
+		<memberOf key="att.naming" mode="delete"/>
+		<memberOf key="att.canonical" mode="delete"/>
 	      </classes>
-	      <content>
-		<rng:ref name="macro.phraseSeq"/>
-	      </content>
 	      <exemplum xml:lang="en">
 		<egXML xmlns="http://www.tei-c.org/ns/Examples">
 		  <editor><persName ref="names.xml#khawkins.tvt">Kevin Hawkins</persName></editor>
 		</egXML>
 	      </exemplum>
-	      <listRef>
-		<ptr target="#COBICOR"/>
-	      </listRef>
 	    </elementSpec>
             <elementSpec module="transcr" ident="facsimile" mode="change">
               <content>
@@ -1319,13 +959,7 @@
                 </rng:oneOrMore>
               </content>
             </elementSpec>
-	    <elementSpec module="textstructure" ident="front" mode="replace">
-	      <gloss>front matter</gloss>
-	      <desc>contains any prefatory matter (headers, title page, prefaces, dedications, etc.)
-              found at the start of a document, before the main body.</desc>
-	      <classes>
-		<memberOf key="att.global"/>
-	      </classes>
+	    <elementSpec module="textstructure" ident="front" mode="change">
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -1351,57 +985,17 @@
 		  </front>
 		</egXML>
 	      </exemplum>
-	      <listRef>
-		<ptr target="#DSTITL"/>
-		<ptr target="#DS"/>
-	      </listRef>
 	    </elementSpec>
-	    <elementSpec module="core" ident="head" mode="replace">
-	      <gloss>heading</gloss>
-	      <desc>contains the heading of a division, for example the title of a section.</desc>
-	      <classes>
-		<memberOf key="att.global"/>
-		<memberOf key="att.typed"/>
-		<memberOf key="model.headLike"/>
-		<memberOf key="model.pLike.front"/>
-	      </classes>
-	      <content>
-		<rng:ref name="macro.paraContent"/>
-	      </content>
-	      <exemplum xml:lang="en">
-		<p>The most common use for the <gi>head</gi> element is to mark the headings of
-                sections. In older writings, the headings or <term>incipits</term> may be rather
-                longer than usual in modern works.</p>
-		<egXML xmlns="http://www.tei-c.org/ns/Examples">
-		  <div1 n="I" type="book">
-		    <head>In the name of Christ here begins the first book of the ecclesiastical
-                    history of Georgius Florentinus, known as Gregory, Bishop of Tours.</head>
-		    <p> ... </p>
-		    <div2 type="section">
-		      <head>In the name of Christ here begins Book I of the history.</head>
-		      <p>Proposing as I do ... ... From the Passion of our Lord until the death of
-                      Saint Martin four hundred and twelve years passed. Here ends the first Book,
-                      which covers five thousand, five hundred and ninety-six years from the
-                      beginning of the world down to the death of Saint Martin.</p>
-		    </div2>
-		  </div1>
-		</egXML>
-	      </exemplum>
-	      <remarks>
-		<p>The <gi>head</gi> element is used for headings at all levels; software which treats
-                (e.g.) chapter headings, section headings, and list titles differently must
-                determine the proper processing of a <gi>head</gi> element based on its structural
-                position.</p>
-		<p>A <gi>head</gi> occurring as the first element of a <gi>div1</gi> is the title of
-                that chapter or section.</p>
-	      </remarks>
-	      <listRef>
-		<ptr target="#DSHD" type="div2"/>
-	      </listRef>
+	    <elementSpec module="core" ident="head" mode="change">
+	      <desc>contains the heading of a division (for example
+	      the title of a section), figure, list, line group, or
+	      table.</desc>
 	    </elementSpec>
 	    <elementSpec module="core" ident="note" mode="change">
+	      <classes mode="change">
+		<memberOf key="att.pointing" mode="delete"/>
+	      </classes>
 	      <attList>
-		<attDef ident="target" mode="delete"/>
 		<attDef ident="targetEnd" mode="delete"/>
 	      </attList>
 	    </elementSpec>
@@ -1486,6 +1080,7 @@
 	    <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>
 	    <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/>
 	    <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>
+	    <classSpec module="tei" ident="model.pLike.front" mode="delete" type="model"/>
 	    <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>
 	    <classSpec module="tei" ident="model.titlepagePart" mode="delete" type="model"/>
 	    <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
@@ -1494,6 +1089,7 @@
 	    <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
 	    <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
 	    <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
 	    <classSpec module="tei" ident="att.typed" mode="change" type="atts">
 	      <attList>
 		<attDef ident="subtype" mode="delete"/>

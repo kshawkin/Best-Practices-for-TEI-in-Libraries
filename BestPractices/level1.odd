@@ -291,19 +291,18 @@
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text body div div1"/>
             <moduleRef key="linking" include="ab"/>
-            <moduleRef key="transcr" include="facsimile surface att.global.facs"/>
+            <moduleRef key="transcr" include="facsimile surface"/>
             <moduleRef key="namesdates" include="orgName persName"/>
             <specGrpRef target="./lib-header.odd#libHeadSpec"/>
             <!-- ****************************************** -->
             <!-- Changes to elements, in alphabetical order -->
             <!-- ****************************************** -->
-            <elementSpec module="textstructure" ident="TEI" mode="replace">
-              <gloss>TEI document</gloss>
+            <elementSpec module="textstructure" ident="TEI" mode="change">
               <desc>contains a single TEI-in-Libraries level 1
               document, comprising a TEI header and a text, either in
               isolation or as part of a <gi>teiCorpus</gi>
               element.</desc>
-	      <classes>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -313,17 +312,12 @@
                 </rng:optional>
                 <rng:ref name="text"/>
               </content>
-              <attList>
-                <attDef ident="version" usage="opt">
-                  <desc>The version of the TEI scheme</desc>
-                  <datatype>
-                    <rng:data type="decimal"/>
-                  </datatype>
-                  <defaultVal>5.0</defaultVal>
-                  <valDesc>A number identifying the version of the TEI guidelines</valDesc>
-                </attDef>
-              </attList>
               <exemplum xml:lang="en">
+		<p>For technical reasons, the TEI namespace is not
+		displayed in examples. However, a TEI namespace
+		declaration is required. It is typically given once on
+		the TEI root element, e.g. <tag type="start">TEI
+		xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <TEI>
                     <teiHeader>
@@ -351,18 +345,16 @@
               </exemplum>
               <remarks>
                 <p>This element is required. The TEI namespace should
-                be specified on this element.</p>
+                be specified on this element, e.g. <tag
+                type="start">TEI
+                xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
               </remarks>
-              <listRef>
-                <ptr target="#DS"/>
-                <ptr target="#CCDEF"/>
-              </listRef>
             </elementSpec>
             <elementSpec module="linking" ident="ab" mode="change">
               <desc>contains the entire content of the document; or,
               when used within the <gi>teiHeader</gi>, contains any
               arbitrary component-level unit of text, acting as an
-              anonymous container for phrase or inter level elements
+              anonymous container for phrase- or inter-level elements
               analogous to, but without the semantic baggage of, a
               paragraph.</desc>
               <content>
@@ -408,7 +400,7 @@
               (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
               <gi>orgName</gi>) of the author, personal or corporate, of
               a work; for example in the same form as that provided by a
-              recognized bibliographic name authority. </desc>
+              recognized bibliographic name authority.</desc>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <author><orgName>British Broadcasting Corporation</orgName></author>
@@ -435,10 +427,10 @@
                 </egXML>
               </exemplum>
             </elementSpec>
-            <elementSpec module="textstructure" ident="body" mode="replace">
+            <elementSpec module="textstructure" ident="body" mode="change">
               <desc>contains the entirety of a single unitary text,
               including any front or back matter.</desc>
-	      <classes>
+	      <classes mode="replace">
 		<memberOf key="att.global"/>
 	      </classes>
               <content>
@@ -447,8 +439,8 @@
                   <rng:ref name="model.div1Like"/>
                 </rng:choice>
               </content>
-              <exemplum xml:lang="mul">
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="mul">
                   <body>
                     <div>
                       <ab>
@@ -471,9 +463,6 @@
                 <p>At level 1, the content of <gi>body</gi> must be a
                 single <gi>div</gi> or <gi>div1</gi> element.</p>
               </remarks>
-              <listRef>
-                <ptr target="#DS"/>
-              </listRef>
             </elementSpec>
             <elementSpec module="textstructure" ident="div" mode="change">
               <classes mode="change">
@@ -511,7 +500,7 @@
               <desc>contains the name (typically encoded as
               <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
               an individual, institution, or organization acting as
-              editor</desc>
+              editor.</desc>
               <attList>
                 <attDef ident="role" mode="delete"/>
               </attList>
@@ -638,6 +627,7 @@
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
+	    <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.typed" mode="change" type="atts">
               <attList>
                 <attDef ident="subtype" mode="delete"/>

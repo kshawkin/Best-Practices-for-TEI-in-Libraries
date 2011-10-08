@@ -6,62 +6,10 @@
 # patch < /path/to/TEI-in-Libraries/BestPractices/odd2odd.xsl.patch
 Index: odd2odd.xsl
 ===================================================================
---- odd2odd.xsl	(revision 9446)
-+++ odd2odd.xsl	(working copy)
-@@ -698,7 +698,7 @@
-         </xsl:choose>
-       </attList>
-       <xsl:if test="$stripped='false'">
--        <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
-+        <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum[ancestor::tei:schemaSpec]"/>
-         <xsl:apply-templates mode="odd2odd-justcopy" select="tei:remarks"/>
-         <xsl:apply-templates mode="odd2odd-justcopy" select="tei:listRef"/>
-       </xsl:if>
-@@ -874,9 +874,9 @@
-               <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
-             </xsl:when>
-             <xsl:otherwise>
--              <xsl:for-each select="$ORIGINAL">
--                <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
--              </xsl:for-each>
-+              <!--xsl:for-each select="$ORIGINAL"-->
-+                <!--xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/-->
-+              <!--/xsl:for-each-->
-             </xsl:otherwise>
-           </xsl:choose>
-           <xsl:choose>
-@@ -985,9 +985,9 @@
-               <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
-             </xsl:when>
-             <xsl:otherwise>
--              <xsl:for-each select="$ORIGINAL">
--                <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
--              </xsl:for-each>
-+              <!--xsl:for-each select="$ORIGINAL"-->
-+                <!--xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/-->
-+              <!--/xsl:for-each-->
-             </xsl:otherwise>
-           </xsl:choose>
-           <xsl:choose>
-@@ -1953,9 +1953,9 @@
-             <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
-           </xsl:when>
-           <xsl:otherwise>
--            <xsl:for-each select="$Old">
--              <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
--            </xsl:for-each>
-+            <!--xsl:for-each select="$Old"-->
-+              <!--xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/-->
-+            <!--/xsl:for-each-->
-           </xsl:otherwise>
-         </xsl:choose>
-         <xsl:choose>
-@@ -2029,7 +2029,7 @@
-           <xsl:comment>5.</xsl:comment>
-         </attList>
-         <xsl:if test="$stripped='false'">
--          <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum"/>
-+          <xsl:apply-templates mode="odd2odd-justcopy" select="tei:exemplum[ancestor::tei:schemaSpec]"/>
-           <xsl:apply-templates mode="odd2odd-justcopy" select="tei:remarks"/>
-           <xsl:apply-templates mode="odd2odd-justcopy" select="tei:listRef"/>
-         </xsl:if>
+*** odd2odd.xsl	(revision 9471)
+--- odd2odd.xsl	(working copy)
+***************
+*** 661 ****
+--- 662,663 ----
++   <!-- TEI in Libraries does not want P5 examples to be copied to custom doc: -->
++   <xsl:template match="tei:exemplum" mode="odd2odd-copy"/>
