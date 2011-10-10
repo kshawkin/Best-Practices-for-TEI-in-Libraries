@@ -16,9 +16,13 @@
           <name type="person">Kevin Hawkins</name>
         </editor>
         <editor>
+          <name type="person">Michelle Dalmau</name>
+        </editor>
+        <editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
+      <editionStmt><p>Version 3.0 (October 2011)</p></editionStmt>
       <publicationStmt>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
