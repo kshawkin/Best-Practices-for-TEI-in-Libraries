@@ -1,15 +1,9 @@
-# this patch file is for updating Stylesheets/odds2/odd2odd.xsl so that
-# it drops <exemplum> elements from P5 source, i.e. they are not copied
-# over into the custom documentation. 
-# To use it issue
-# cd /path/to/Stylesheets/odds2/
-# patch < /path/to/TEI-in-Libraries/BestPractices/odd2odd.xsl.patch
 Index: odd2odd.xsl
 ===================================================================
-*** odd2odd.xsl	(revision 9471)
+*** odd2odd.xsl	(revision 9487)
 --- odd2odd.xsl	(working copy)
 ***************
-*** 661 ****
---- 662,663 ----
+*** 663 ****
+--- 664,665 ----
 +   <!-- TEI in Libraries does not want P5 examples to be copied to custom doc: -->
 +   <xsl:template match="tei:exemplum" mode="odd2odd-copy"/>

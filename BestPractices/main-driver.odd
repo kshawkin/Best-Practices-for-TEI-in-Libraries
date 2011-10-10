@@ -21,9 +21,6 @@
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
         <sponsor>
-          <name type="organization">DLF TEI Task Force</name>
-        </sponsor>
-        <sponsor>
           <name type="organization">Text Encoding Initiative Consortium</name>
         </sponsor>
       </titleStmt>
