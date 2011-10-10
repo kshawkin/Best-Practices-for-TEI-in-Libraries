@@ -72,6 +72,7 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>Level 2: Minimal Encoding</head>
       <div type="setting">
+        <head>Setting</head>
         <p>This is the <name>level 2</name> portion of the <ref target="http://wiki.tei-c.org/index.php/Best_Practices_for_TEI_in_Libraries#LEVEL_2:_Minimal_Encoding">Best
         Practices for TEI in Libraries</ref>. This document is not
         intended to stand alone, but rather to be considered in
@@ -85,7 +86,7 @@
       <!-- driver document can XInclude to suck in a <div> for all of the body of level 2,-->
       <!-- but have it be a <div> element so that it is valid in the driver.-->
       <div xml:id="level-2-content">
-	<head>Level 2: Minimal Encoding</head>
+        <head>Level 2: Minimal Encoding</head>
         <div type="reference">
           <head>Reference</head>
           <list>
@@ -186,23 +187,23 @@
                   &lt;!-- header goes here -->
                 </teiHeader>
                 <text xml:lang="en">
-		  <front>
-		    &lt;!-- entire &lt;front> is optional, but it might have, for example: -->
-		    <div type="titlePage">
-		      <pb facs="[URI of title page image]"/>
-		      <ab>[ entire title page here ]</ab>
-		    </div>
-		    <div type="TOC">
-		      <pb n="ii" facs="[URI of table of contents]"/>
-		      <head>[ heading of table of contents ]</head>
-		      <ab>[ entire table of contents here ]</ab>
-		    </div>
-		    <div type="preface">
-		      <head>[ heading of preface ]</head>
-		      <ab>[ entire preface, with interspersed <pb/> elements pointing
-		      to page images as needed, here ]</ab>
-		    </div>
-		  </front>
+                  <front>
+                    &lt;!-- entire &lt;front> is optional, but it might have, for example: -->
+                    <div type="titlePage">
+                      <pb facs="[URI of title page image]"/>
+                      <ab>[ entire title page here ]</ab>
+                    </div>
+                    <div type="TOC">
+                      <pb n="ii" facs="[URI of table of contents]"/>
+                      <head>[ heading of table of contents ]</head>
+                      <ab>[ entire table of contents here ]</ab>
+                    </div>
+                    <div type="preface">
+                      <head>[ heading of preface ]</head>
+                      <ab>[ entire preface, with interspersed <pb/> elements pointing
+                      to page images as needed, here ]</ab>
+                    </div>
+                  </front>
                   <body>
                     <div type="section">
                       <pb n="1" facs="[URI of page 1 image]"/>
@@ -221,10 +222,10 @@
                       </div>
                     </div>
                   </body>
-		  <back>
-		    &lt;!-- optional: organized like &lt;front>, with 1 or more &lt;div> or &lt;div1>,
-			 each with a single &lt;ab> -->
-		  </back>
+                  <back>
+                    &lt;!-- optional: organized like &lt;front>, with 1 or more &lt;div> or &lt;div1>,
+                         each with a single &lt;ab> -->
+                  </back>
                 </text>
               </TEI>
             </egXML>
@@ -360,9 +361,9 @@
               or a transcription and page images (in <gi>text</gi> and
               <gi>facsimile</gi> respectively), either in isolation or
               as part of a <gi>teiCorpus</gi> element.</desc>
-	      <classes mode="replace">
-		<memberOf key="att.global"/>
-	      </classes>
+              <classes mode="replace">
+                <memberOf key="att.global"/>
+              </classes>
               <content>
                 <rng:ref name="teiHeader"/>
                 <rng:optional>
@@ -412,7 +413,7 @@
               elements analogous to, but without the semantic baggage
               of, a paragraph.</desc>
               <classes mode="replace">
-		<memberOf key="att.global"/>
+                <memberOf key="att.global"/>
                 <memberOf key="model.pLike"/>
                 <memberOf key="att.typed"/>
               </classes>
@@ -464,7 +465,7 @@
               a work; for example in the same form as that provided by a
               recognized bibliographic name authority.</desc>
               <classes mode="replace">
-		<memberOf key="att.global"/>
+                <memberOf key="att.global"/>
                 <memberOf key="att.canonical"/>
                 <memberOf key="model.respLike"/>
               </classes>
@@ -565,9 +566,9 @@
               </exemplum>
             </elementSpec>
             <elementSpec module="textstructure" ident="body" mode="change">
-	      <classes mode="replace">
-		<memberOf key="att.global"/>
-	      </classes>
+              <classes mode="replace">
+                <memberOf key="att.global"/>
+              </classes>
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -623,19 +624,19 @@
                 <memberOf key="att.typed" mode="delete"/>
               </classes>
               <content>
-		<rng:optional>
-		  <rng:ref name="model.global"/>
-		</rng:optional>
+                <rng:optional>
+                  <rng:ref name="model.global"/>
+                </rng:optional>
                 <rng:optional>
                   <rng:ref name="model.divTop"/>
                 </rng:optional>
-		<rng:optional>
-		  <rng:ref name="model.global"/>
-		</rng:optional>
+                <rng:optional>
+                  <rng:ref name="model.global"/>
+                </rng:optional>
                 <rng:ref name="ab"/>
-		<rng:optional>
-		  <rng:ref name="model.global"/>
-		</rng:optional>
+                <rng:optional>
+                  <rng:ref name="model.global"/>
+                </rng:optional>
               </content>
               <attList>
                 <attDef ident="type" mode="add">
@@ -654,24 +655,24 @@
             </elementSpec>
             <elementSpec module="textstructure" ident="div1" mode="change">
               <classes mode="change">
-		<memberOf key="att.global"/>
+                <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="model.divLike"/>
               </classes>
               <content>
-		<rng:optional>
-		  <rng:ref name="model.global"/>
-		</rng:optional>
+                <rng:optional>
+                  <rng:ref name="model.global"/>
+                </rng:optional>
                 <rng:optional>
                   <rng:ref name="model.divTop"/>
                 </rng:optional>
-		<rng:optional>
-		  <rng:ref name="model.global"/>
-		</rng:optional>
+                <rng:optional>
+                  <rng:ref name="model.global"/>
+                </rng:optional>
                 <rng:ref name="ab"/>
-		<rng:optional>
-		  <rng:ref name="model.global"/>
-		</rng:optional>
+                <rng:optional>
+                  <rng:ref name="model.global"/>
+                </rng:optional>
               </content>
               <attList>
                 <attDef ident="type" mode="change">
@@ -693,7 +694,7 @@
               an individual, institution, or organization acting as
               editor.</desc>
               <classes mode="replace">
-		<memberOf key="att.global"/>
+                <memberOf key="att.global"/>
                 <memberOf key="model.respLike"/>
               </classes>
               <exemplum xml:lang="en">
@@ -713,9 +714,9 @@
               <desc>contains any prefatory matter (headers, title page,
               prefaces, dedications, etc.) found at the start of a
               document, before the main body.</desc>
-	      <classes mode="replace">
-		<memberOf key="att.global"/>
-	      </classes>
+              <classes mode="replace">
+                <memberOf key="att.global"/>
+              </classes>
               <content>
                 <rng:choice>
                   <rng:oneOrMore>
@@ -750,7 +751,7 @@
             </elementSpec>
             <elementSpec module="core" ident="head" mode="change">
               <classes mode="replace">
-		<memberOf key="att.global"/>
+                <memberOf key="att.global"/>
                 <memberOf key="att.typed"/>
                 <memberOf key="model.headLike"/>
               </classes>
@@ -872,7 +873,7 @@
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
-	    <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.typed" mode="change" type="atts">
               <attList>
                 <attDef ident="subtype" mode="delete"/>
