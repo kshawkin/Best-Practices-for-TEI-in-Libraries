@@ -36,12 +36,12 @@ else
     P5SRC=${P5SRC:-/home/syd/SFTEI/trunk/P5/Source/guidelines-en.xml}
 fi
 
-# first, fix odds2/odd2odd.xsl and common2/header.xsl
+# first, fix odds2/odd2odd.xsl, common2/header.xsl, and xhtml2/textstructure.xsl
 sPWD=`pwd`
 LINE=`egrep '^\+' odd2odd.xsl.patch | head -n 1 | perl -pe 's,^\+\s+,,;s,\s+$,,;s,<!--,.+,;s,-->,.+,;'`
 cd ${XSLDIR}
 if egrep -e "$LINE" odds2/odd2odd.xsl ; then
-    echo "Found odds2/odd2odd.xsl already patched, skipping it and common2/header.xsl"
+    echo "Found odds2/odd2odd.xsl already patched, skipping patces to it, common2/header.xsl, and xhtml2/textstructure.xsl"
 else
     echo "Patching odds2/odd2odd.xsl ..."
     cd odds2/
@@ -51,6 +51,10 @@ else
     cd ../common2/
     cp -p header.xsl header_hold.xsl
     patch <${sPWD}/header.xsl.patch
+    echo "Patching xhtml2/textstructure.xsl ..."
+    cd ../xhtml2/
+    cp -p textstructure.xsl textstructure_hold.xsl
+    patch <${sPWD}/xhtml2_textstructure.xsl.patch
 fi
 cd $sPWD
 
@@ -62,7 +66,8 @@ cd $sPWD
 
 
 
-for BASE in lib1 lib2 lib3 lib4 ; do
+for BASE in ; do
+# for BASE in lib1 lib2 lib3 lib4 ; do
     INNAME=${BASE}.odd                # input filename
     # find the prefix specified in the ODD file, if any
     # (the variable OSPFX is for Odd file Specified PreFiX)
@@ -101,3 +106,9 @@ for BASE in lib1 lib2 lib3 lib4 ; do
     done
 
 # process  main-driver  here
+
+echo "13. generate XInclude processed version of main driver."
+xmllint --xinclude main-driver.odd > /tmp/TiLBP.odd
+
+echo "14. generate HTML from it."
+saxon -s:/tmp/TiLBP.odd -xsl:/Users/syd/Documents/Stylesheets/xhtml2/tei.xsl -o:main-driver.html showTitleAuthor=true

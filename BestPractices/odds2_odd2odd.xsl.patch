@@ -1,3 +1,9 @@
+# this patch file is for updating Stylesheets/odds2/odd2odd.xsl so that
+# it drops <exemplum> elements from P5 source, i.e. they are not copied
+# over into the custom documentation. 
+# To use it issue
+# cd /path/to/Stylesheets/odds2/
+# patch < /path/to/TEI-in-Libraries/BestPractices/odds2_odd2odd.xsl.patch
 Index: odd2odd.xsl
 ===================================================================
 *** odd2odd.xsl	(revision 9487)

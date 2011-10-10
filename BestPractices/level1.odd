@@ -21,7 +21,7 @@
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
-      <editionStmt><p>Version 3.0 (October 2011)</p></editionStmt>
+      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
       <publicationStmt>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
@@ -79,7 +79,9 @@
         intended to stand alone, but rather to be considered in
         concert with the entire TEI in Libraries recommendations.</p>
       </div>
-      <divGen type="toc"/>
+      <divGen type="toc">
+        <head>Table of Contents</head>
+      </divGen>
     </front>
     <body>
       <!-- This document is encoded with a single <div> as the one and only child of <body>, -->

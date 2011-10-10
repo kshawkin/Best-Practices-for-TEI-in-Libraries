@@ -24,7 +24,7 @@
           <name type="organization">Text Encoding Initiative Consortium</name>
         </sponsor>
       </titleStmt>
-      <editionStmt><p>Version 3.0 (October 2011)</p></editionStmt>
+      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
       <publicationStmt>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
