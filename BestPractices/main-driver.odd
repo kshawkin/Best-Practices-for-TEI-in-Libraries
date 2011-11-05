@@ -21,12 +21,10 @@
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
         <sponsor>
-          <name type="organization">DLF TEI Task Force</name>
-        </sponsor>
-        <sponsor>
           <name type="organization">Text Encoding Initiative Consortium</name>
         </sponsor>
       </titleStmt>
+      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
       <publicationStmt>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
@@ -710,12 +708,12 @@
             encoding level below, XML comments are illustrative, and
             are not meant to be included in encoded documents. Here is
             an example of such a comment:
-	    <eg><![CDATA[<!-- uncorrected OCR for first page image begins here -->]]></eg>
-	    </p>
+            <eg><![CDATA[<!-- uncorrected OCR for first page image begins here -->]]></eg>
+            </p>
             <p>Note that for technical reasons the namespace is not shown
             in these examples, but it should always be supplied on the root
             <gi>TEI</gi> element, e.g.:
-	    <eg><![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0">]]></eg></p>
+            <eg><![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0">]]></eg></p>
           </div>
 
         <xi:include href="./level1.odd" xpointer="element(level-1-content)">

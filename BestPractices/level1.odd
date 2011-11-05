@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TEI xml:lang="en"
+<TEI xml:lang="en" version="1.9.1"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -9,16 +9,19 @@
       <titleStmt>
         <title>TEI in Libraries level 1</title>
         <author>
-          <name type="organization">TEI in Libraries SIG</name>
-          <name type="organization">DLF TEI Task Force</name>
+          <name type="organization">TEI SIG on Libraries</name>
         </author>
         <editor>
           <name type="person">Kevin Hawkins</name>
         </editor>
         <editor>
+          <name type="person">Michelle Dalmau</name>
+        </editor>
+        <editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
+      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
       <publicationStmt>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
@@ -69,13 +72,16 @@
       <head>Best Practices for TEI in Libraries</head>
       <head>Level 1: Fully Automated Conversion and Encoding</head>
       <div type="setting">
+        <head>Setting</head>
         <p>This is the <name>level 1</name> portion of the <ref
         target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
         Practices for TEI in Libraries</ref>. This document is not
         intended to stand alone, but rather to be considered in
         concert with the entire TEI in Libraries recommendations.</p>
       </div>
-      <divGen type="toc"/>
+      <divGen type="toc">
+        <head>Table of Contents</head>
+      </divGen>
     </front>
     <body>
       <!-- This document is encoded with a single <div> as the one and only child of <body>, -->
@@ -83,7 +89,7 @@
       <!-- driver document can XInclude to suck in a <div> for all of the body of level 1,-->
       <!-- but have it be a <div> element so that it is valid in the driver.-->
       <div xml:id="level-1-content">
-	<head>Level 1: Fully Automated Conversion and Encoding</head>
+        <head>Level 1: Fully Automated Conversion and Encoding</head>
         <div type="reference">
           <head>Reference</head>
           <list>
@@ -285,8 +291,8 @@
         </div>
         <!-- ********************************************* -->
         <div type="specification">
-          <!-- <head>Specification</head> -->
-          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_">
+          <head>Specification</head>
+          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:1.9.1">
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text body div div1"/>
@@ -302,9 +308,9 @@
               document, comprising a TEI header and a text, either in
               isolation or as part of a <gi>teiCorpus</gi>
               element.</desc>
-	      <classes mode="replace">
-		<memberOf key="att.global"/>
-	      </classes>
+              <classes mode="replace">
+                <memberOf key="att.global"/>
+              </classes>
               <content>
                 <rng:ref name="teiHeader"/>
                 <rng:optional>
@@ -313,11 +319,11 @@
                 <rng:ref name="text"/>
               </content>
               <exemplum xml:lang="en">
-		<p>For technical reasons, the TEI namespace is not
-		displayed in examples. However, a TEI namespace
-		declaration is required. It is typically given once on
-		the TEI root element, e.g. <tag type="start">TEI
-		xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
+                <p>For technical reasons, the TEI namespace is not
+                displayed in examples. However, a TEI namespace
+                declaration is required. It is typically given once on
+                the TEI root element, e.g. <tag type="start">TEI
+                xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <TEI>
                     <teiHeader>
@@ -430,9 +436,9 @@
             <elementSpec module="textstructure" ident="body" mode="change">
               <desc>contains the entirety of a single unitary text,
               including any front or back matter.</desc>
-	      <classes mode="replace">
-		<memberOf key="att.global"/>
-	      </classes>
+              <classes mode="replace">
+                <memberOf key="att.global"/>
+              </classes>
               <content>
                 <rng:choice>
                   <rng:ref name="model.divLike"/>
@@ -627,7 +633,7 @@
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
-	    <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.typed" mode="change" type="atts">
               <attList>
                 <attDef ident="subtype" mode="delete"/>
