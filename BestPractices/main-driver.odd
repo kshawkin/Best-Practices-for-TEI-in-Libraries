@@ -3,11 +3,13 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en">
+     xml:lang="en" version="1.9.1">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Best Practices for TEI in Libraries</title>
+        <title type="sub">A guide for mass digitization, automated workflows, and promotion of 
+        interoperability with XML using the TEI</title>
         <author>
           <name type="organization">TEI SIG on Libraries</name>
         </author>
@@ -61,11 +63,11 @@
       Best Encoding Practices</title>, which has been updated to comply
       with the <ref target="http://www.tei-c.org/">Text Encoding Initiative</ref>’s
       <ref target="http://www.tei-c.org/Guidelines/P5/">Guidelines for Text
-      Encoding and Interchange (P5)</ref>. These guidelines are intended
-      for use in large, library-based digitization projects, but may
-      be useful in other scenarios as well. This version of the
-      <title>Best Practices for TEI in Libraries</title> was created and
-      is maintained by the <title>TEI in Libraries: Guidelines for Best
+      Encoding and Interchange (P5)</ref>. These guidelines were originally 
+      created for use in large, library-based digitization projects but are
+      useful as a way of approaching digitization and encoding as a whole. 
+      This version of the <title>Best Practices for TEI in Libraries</title> 
+      was created by the <title>TEI in Libraries: Guidelines for Best
       Practices</title> Working Group.</p>
       <p>There are many different library text digitization projects,
       serving a variety of purposes. With this in mind, these

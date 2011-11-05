@@ -1,0 +1,101 @@
+# this patch file is for updating Stylesheets/common2/header.xsl so that
+# it drops <exemplum> elements from P5 source, i.e. they are not copied
+# over into the custom documentation. 
+# To use it issue
+# cd /path/to/Stylesheets/common2/
+# patch < /path/to/TEI-in-Libraries/BestPractices/common2_header.xsl.patch
+Index: header.xsl
+===================================================================
+*** header.xsl	(revision 9489)
+--- header.xsl	(working copy)
+***************
+*** 23 ****
+--- 24,52 ----
++       <desc>[common] Find a plausible editor name</desc>
++    </doc>
++   <xsl:template name="generateEditor">
++     <xsl:choose>
++       <xsl:when test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor">
++         <xsl:for-each
++           select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:editor">
++           <xsl:apply-templates/>
++           <xsl:choose>
++             <xsl:when test="count(following-sibling::tei:editor)=1">
++               <xsl:if test="count(preceding-sibling::tei:editor)>=1">
++                 <xsl:text>,</xsl:text>
++               </xsl:if>
++               <xsl:text> and </xsl:text>
++             </xsl:when>
++             <xsl:when test="following-sibling::tei:editor">, </xsl:when>
++           </xsl:choose>
++         </xsl:for-each>
++       </xsl:when>
++       <xsl:when
++         test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change/tei:respStmt[tei:resp='editor']">
++         <xsl:apply-templates
++           select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change/tei:respStmt[tei:resp='editor'][1]/tei:name"
++         />
++       </xsl:when>
++     </xsl:choose>
++   </xsl:template>
++   
++   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+***************
+*** 36 ****
+!                   <xsl:when test="count(following-sibling::tei:author)=1"> and </xsl:when>
+--- 65,70 ----
+!             <xsl:when test="count(following-sibling::tei:author)=1">
+!               <xsl:if test="count(preceding-sibling::tei:author)>1">
+!                 <xsl:text>,</xsl:text>
+!               </xsl:if>
+!               <xsl:text> and </xsl:text>
+!             </xsl:when>
+***************
+*** 88 ****
+--- 123,125 ----
++       <xsl:variable name="editor">
++         <xsl:call-template name="generateEditor"/>
++       </xsl:variable>
+***************
+*** 89 ****
+--- 127 ----
++         <p xmlns="http://www.w3.org/1999/xhtml" class="mainAuthor">
+***************
+*** 94 ****
+!          <xsl:text> </xsl:text>
+--- 132,135 ----
+!           <xsl:if test="contains($realauthor,' and ')">
+!             <xsl:text>s</xsl:text>
+!           </xsl:if>
+!           <xsl:text>: </xsl:text>
+***************
+*** 95 ****
+--- 137 ----
++         </p>
+***************
+*** 97 ****
+--- 140 ----
++       <p class="mainRevAuthor" xmlns="http://www.w3.org/1999/xhtml">
+***************
+*** 104 ****
+--- 148,158 ----
++       </p>
++     </xsl:if>
++     <xsl:if test="not($editor = '')">
++       <p class="mainEditor" xmlns="http://www.w3.org/1999/xhtml">
++         <xsl:text>Editor</xsl:text> <!-- need to internationalize this -->
++         <xsl:if test="contains($editor,' and ')">
++           <xsl:text>s</xsl:text>
++         </xsl:if>
++         <xsl:text>: </xsl:text>
++         <xsl:copy-of select="$editor"/>
++       </p>
+***************
+*** 318 ****
+--- 373,378 ----
++   <xsl:template name="generateEdition">
++     <p xmlns="http://www.w3.org/1999/xhtml" class="editionStmt">
++       <xsl:apply-templates select="/(tei:teiCorpus|tei:TEI)/tei:teiHeader/tei:fileDesc/tei:editionStmt"/>
++     </p>
++   </xsl:template>
++ 
