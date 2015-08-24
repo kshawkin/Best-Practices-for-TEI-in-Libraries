@@ -30,8 +30,7 @@ something like
 $ xmllint --xinclude main-driver.odd > /tmp/main-driver.odd
 $ ~/Documents/Stylesheets/teitohtml /tmp/main-driver.odd
 If `teitohtml` does not run on your system, you could submit the
-/tmp/main-driver.odd file to the OUCS OxGarage service
-(http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) instead.
+/tmp/main-driver.odd file to OxGarage (http://www.tei-c.org/oxgarage/) instead.
 
 Notes
 -----
@@ -43,4 +42,4 @@ Notes
 
 [3] Unofficial instructions for installing `roma` on a Mac OS X system
     or likely a GNU/Linux system can be found at
-    http://www.wwp.brown.edu/outreach/seminars/_current/handouts/roma_CLI_MacOS_X.html
+    http://www.wwp.neu.edu/outreach/seminars/_current/handouts/roma_CLI_MacOS_X.html
