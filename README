@@ -9,9 +9,9 @@ look at and play with the files (i.e., read-only) use:
 
 To check out an initial copy of this repository to your local system
 to work on it (i.e., read-write), use either:
-   git clone git@github.com:sydb/TEI-in-Libraries.git
+   git clone git@github.com:kshawkin/Best-Practices-for-TEI-in-Libraries.git
 or
-   git clone https://sydb@github.com/sydb/TEI-in-Libraries.git
+   git clone https://kshawkin@github.com/kshawkin/Best-Practices-for-TEI-in-Libraries.git
 (I'm not sure of the difference.)-:
 
 In order to commit changes, you will need to send your GitHub username
