@@ -1,9 +1,7 @@
-GIT repository for the Digital Library Federation's task force on the
-Text Encoding Initiative and the Text Encoding Initiative Consortium's
-special interest group on TEI in libraries.
-
-Initially established for joint work on the _Best Practices for TEI in
-Libraries_ ODDs.
+This repository contains the ODD ( http://wiki.tei-c.org/index.php/ODD ) 
+source files for "Best Practices for TEI in Libraries: A guide for mass 
+digitization, automated workflows, and promotion of interoperability 
+with XML using the TEI" ( http://purl.oclc.org/NET/teiinlibraries ).
 
 To check out a copy of this repository to your local system so you can
 look at and play with the files (i.e., read-only) use:
