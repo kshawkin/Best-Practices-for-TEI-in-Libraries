@@ -3,7 +3,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en" version="1.9.1">
+     xml:lang="en" version="2.9.1">
   <teiHeader>
     <fileDesc>
       <titleStmt>
