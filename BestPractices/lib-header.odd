@@ -916,8 +916,7 @@ Optionally use one or more <gi>idno</gi> elements to give identifiers for the so
 
 <list>
 <item><val>LC_call_number</val></item>
-<item><val>isbn-13</val></item>
-<item><val>isbn-10</val></item>
+<item><val>ISBN</val></item>
 </list>
 </cell>
 <cell><table>
@@ -1284,7 +1283,7 @@ The person who is responsible for making the change should be indicated by the <
                     </monogr>
                     <note>First published in condensed form in the Galaxy, v. 16, 1873, p. [518]-530,
                     [687]-700, [793]-804.</note>
-                    <idno type="isbn-10">1-4255-1817-6</idno>
+                    <idno type="ISBN">1-4255-1817-6</idno>
                     <idno type="LC_call_number">E456 .W44</idno>
                   </biblStruct>
                 </sourceDesc>
@@ -1519,11 +1518,8 @@ The person who is responsible for making the change should be indicated by the <
                     <valItem ident="LC_call_number">
                       <gloss>U.S. Library of Congress call number</gloss>
                     </valItem>
-                    <valItem ident="isbn-13">
-                      <gloss>intnerational serial book number, 13-digit</gloss>
-                    </valItem>
-                    <valItem ident="isbn-10">
-                      <gloss>intnerational serial book number, 10-digit</gloss>
+                    <valItem ident="ISBN">
+                      <gloss>International Standard Book Number</gloss>
                     </valItem>
                   </valList>
                 </attDef>
