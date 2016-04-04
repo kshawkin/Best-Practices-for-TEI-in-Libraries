@@ -518,9 +518,9 @@
         document (within the <gi>text</gi> element), as evidenced by
         attributes used in encoding example snippets and the prose
         description of this document.</p>
-        <p>Scores of attributes are available for use within
-        <gi>text</gi>, and a list of those recommended for use in Tite
-        documents is included in <ref
+	<p>Scores of attributes are available for use within
+	<gi>text</gi>, and a list of those recommended for use in documents
+	conforming to these Best Practices is included in <ref
         target="#Appendix_A:_Recommended_Attributes">Appendix
         A</ref>.</p>
         <p>In this section is general advice on the use of particular
