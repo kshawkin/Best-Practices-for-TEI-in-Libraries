@@ -465,9 +465,17 @@
         within a text division for ease of retrieval with indexing
         software. For example, a page break that occurs between
         chapters 2 and 3 should be encoded right after the opening tag
-        of the textual division that opens chapter 3 rather than
+        of the text division that opens chapter 3 rather than
         before the closing tag of the division that ends chapter
-        2.</p>
+        2. In the case of a page break occurring at the boundary of 
+        nested textual divisions, the <gi>pb</gi> element should always 
+        be encoded within the lowest level division. For example, a page 
+        break that occurs between chapters 2 and 3, where chapter 3 begins 
+        with an editor's note requiring its own text division, would be 
+        encoded right after the opening tag of the text division for the 
+        editor's note.</p>
+        <p>Any divergence from this practice should be documented in the 
+        <gi>editorialDecl</gi>.</p>
       </div>
       <div type="===" xml:id="txtimglnk">
         <head>Linking Between Encoded Text and Images of Source Documents</head>
