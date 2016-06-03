@@ -845,6 +845,9 @@
               <ab type="typography">*****</ab>
             </egXML>
             </p>
+            <p>Like <gi>pb</gi> elements, these should always be placed within the 
+            lowest-level text division unless otherwise documented in the 
+            <gi>editorialDecl</gi>.</p>
           </div>
           <div type="subsection" xml:id="L4AHex">
             <head>Level 4 Alger Hiss document</head>
