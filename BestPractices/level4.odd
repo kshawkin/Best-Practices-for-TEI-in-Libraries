@@ -46,6 +46,9 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change who="#sbauman.emt" when="2016-06-06">
+	Addressed issue #15 by adding <gi>distinct</gi>
+      </change>
       <change who="#sbauman.emt" when="2010-12-31">
         Updated to match current wiki document and (partially) take
         advantage of new ODD features:
@@ -263,7 +266,7 @@
               <cell>Optional.</cell>
             </row>
             <row>
-              <cell><gi>emph</gi>, <gi>foreign</gi>, <gi>gloss</gi>, or <gi>term</gi></cell>
+              <cell><gi>emph</gi>, <gi>distinct</gi>, <gi>foreign</gi>, <gi>gloss</gi>, or <gi>term</gi></cell>
               <cell>Optional.</cell>
             </row>
             <row>
@@ -374,6 +377,7 @@
               </list></item>
               <item>to represent foreign words or phrases, linguistically emphatic or stressed words or phrases, words regarded as technical terms, etc.:
               <list>
+                <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-distinct.html">distinct</ref></item>
                 <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-emph.html">emph</ref></item>
                 <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-foreign.html">foreign</ref> (e.g. <tag>foreign xml:lang="fr"</tag>)</item>
                 <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gloss.html">gloss</ref></item>
@@ -1452,7 +1456,6 @@
         <elementSpec module="core" ident="binaryObject" mode="delete"/>
         <elementSpec module="core" ident="cb" mode="delete"/>
         <elementSpec module="core" ident="cit" mode="delete"/>
-        <elementSpec module="core" ident="distinct" mode="delete"/>
         <elementSpec module="core" ident="divGen" mode="delete"/>
         <elementSpec module="core" ident="expan" mode="delete"/>
         <elementSpec module="core" ident="headItem" mode="delete"/>
