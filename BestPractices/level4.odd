@@ -23,6 +23,7 @@
       </titleStmt>
       <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
       <publicationStmt>
+        <authority>TEI SIG on Libraries</authority>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
           <p>Permission is granted to copy, distribute and/or modify
@@ -47,7 +48,7 @@
     </fileDesc>
     <revisionDesc>
       <change who="#sbauman.emt" when="2016-06-06">
-	Addressed issue #15 by adding <gi>distinct</gi>
+        Addressed issue #15 by adding <gi>distinct</gi>
       </change>
       <change who="#sbauman.emt" when="2010-12-31">
         Updated to match current wiki document and (partially) take

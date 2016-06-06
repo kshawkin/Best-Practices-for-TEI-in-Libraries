@@ -46,11 +46,11 @@ else
     echo "Patching odds2/odd2odd.xsl ..."
     cd odds2/
     cp -p odd2odd.xsl odd2odd_hold.xsl
-    patch <${sPWD}/odd2odd.xsl.patch
+    patch <${sPWD}/odds2_odd2odd.xsl.patch
     echo "Patching common2/header.xsl ..."
     cd ../common2/
     cp -p header.xsl header_hold.xsl
-    patch <${sPWD}/header.xsl.patch
+    patch <${sPWD}/common2_header.xsl.patch
     echo "Patching xhtml2/textstructure.xsl ..."
     cd ../xhtml2/
     cp -p textstructure.xsl textstructure_hold.xsl

@@ -23,6 +23,7 @@
       </titleStmt>
       <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
       <publicationStmt>
+        <authority>TEI SIG on Libraries</authority>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
           <p>Permission is granted to copy, distribute and/or modify
@@ -1782,6 +1783,9 @@ The person who is responsible for making the change should be indicated by the <
                   </remarks>
                 </attDef>
                 <attDef ident="type" usage="rec" mode="replace">
+                  <datatype minOccurs="1" maxOccurs="1">
+                    <dataRef key="teidata.enumerated"/>
+                  </datatype>
                   <constraintSpec scheme="isoschematron" ident="titleType">
                     <constraint>
                       <s:rule context="tei:titleStmt/tei:title">
