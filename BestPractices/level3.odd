@@ -297,7 +297,7 @@
               <note place="bottom" anchored="true" xml:id="n68" n="68">Also before 1947, [...]</note>
             </egXML>
             Marginal notes without reference from the base text should occur at the beginning of the paragraph to which they refer, with <code>place="margin"</code>.</p>
-            <p>Optionally combine notes that extend beyond one page into one <gi>note</gi>.</p>
+	    <p>For cases in which there exists a note which extends beyond one page, <gi>pb</gi> should be employed in order delimit precisely where the page break within the note occurs.  Further, the <gi>pb</gi> element should also be inserted directly before the initial word in the note on the proceeding page for such cases.</p>
           </div>
         </div>
         <div type="examples">
