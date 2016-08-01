@@ -105,19 +105,19 @@
           <cell>Level 3 (example)</cell>
           <cell>The text is created by conversion, either by way of OCR or keyboarding. Some structural elements of the text are encoded. The text may be used with or without page images.</cell>
           <cell><ref target="#L3AHex">Alger Hiss document</ref></cell>
-          <cell><ref target="http://www.dlib.indiana.edu/collections/vwwp/">example</ref></cell>
+          <cell><ref target="http://name.umdl.umich.edu/abu0246.0001.001">example</ref></cell>
         </row>
         <row>
           <cell>Level 4 (example)</cell>
           <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images in order for them to be read by students, scholars, and general readers.</cell>
           <cell><ref target="#L4AHex">Alger Hiss document</ref></cell>
-          <cell><ref target="http://docsouth.unc.edu/sohp/">example</ref></cell>
+          <cell><ref target="http://webapp1.dlib.indiana.edu/vwwp/view?docId=VAB7020.xml">example</ref></cell>
         </row>
         <row>
           <cell>Level 5 (example)</cell>
           <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images, as in Level 4.  In addition, the tagging requires substantial human intervention by encoders with subject knowledge.</cell>
           <cell>(none)</cell>
-          <cell><ref target="http://www.dlib.indiana.edu/collections/newton/">example</ref></cell>
+          <cell><ref target="http://webapp1.dlib.indiana.edu/newton/mss/dipl/ALCH00006/">example</ref></cell>
         </row>
       </table></p>
       <p>In these <title>Best Practices</title>, use of elements and
@@ -660,7 +660,7 @@
           number of keystrokes and possibly reducing the chance of
           typos being introduced in the encoding.</p>
           <p>If there are formatting features in the source that cannot be
-          expressed with CSS syntax, the <att>rend<att> attribute may be
+          expressed with CSS syntax, the <att>rend</att> attribute may be
           used.</p>
         </div>
         <div type="====">
