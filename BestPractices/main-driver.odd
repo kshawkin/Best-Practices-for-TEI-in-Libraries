@@ -28,6 +28,7 @@
       </titleStmt>
       <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
       <publicationStmt>
+        <authority>TEI SIG on Libraries</authority>
         <availability status="restricted">
           <ab>Copyleft 2009 DLF</ab>
           <p>Permission is granted to copy, distribute and/or modify
