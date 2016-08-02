@@ -288,16 +288,16 @@
           </div>
           <div type="grec">
             <head>Notes</head>
-            <p>Use the <gi>note</gi> element to encode the text of a margin note, footnote, endnote, or other note found in the source document. This element may be used for encoding notes "inline" at the point of reference (such as where a superscript number appears), as in the Alger Hiss example below.  In the case of conversion from OCR and from some born-digital source documents, this will require manual intervention to move the text of the note to the place of reference.</p>
-            <p>Alternatively, the <gi>note</gi> element may encode the text of the note at the point it occurs on the page or at another point convenient when converting from a born-digital source document, such as at the end of the containing <gi>div</gi> (or <gi>div1</gi>) or in a special <gi>div</gi> (or <gi>div1</gi>) element within <gi>back</gi>.  The point of reference should be encoded using a <gi>ref</gi> or <gi>ptr</gi> element, as in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6 Simple Links and Cross-References</ref>. According to this model, the first footnote reference in the Alger Hiss example would be encoded as:
+            <p>Use the <gi>note</gi> element to encode the text of a margin note, footnote, endnote, or other note found in the source document. This element may be used for encoding notes "inline" at the point of reference (such as where a superscript number appears), as in the Alger Hiss example below.  In the case of conversion from OCR and from some born-digital source documents, this will require manual intervention to move the text of the note to the place of reference. Note, though, that if the note in the source document begins on a different page from the place of reference, a <gi>pb</gi> should be inserted before the first word of the note within the <gi>note</gi> to record this.</p>
+            <p>Marginal notes without reference from the base text be inserted at the beginning of the paragraph to which they refer, with <code>place="margin"</code>.</p>
+            <p>Alternatively, the point of reference and note itself may be encoded separately.  In this model, the point of reference should be encoded using a <gi>ref</gi> or <gi>ptr</gi> element, as in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6 Simple Links and Cross-References</ref>. The text of the note itself is tagged using the <gi>note</gi> element, either at the point where the note occurs on the page or at another point convenient when converting from a born-digital source document, such as at the end of the containing <gi>div</gi> (or <gi>div1</gi>) or in a special <gi>div</gi> (or <gi>div1</gi>) element within <gi>back</gi>.  For example, the first footnote reference in the Alger Hiss example would be encoded as:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <ref target="#n68">68</ref>
             </egXML> and the note itself as:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <note place="bottom" anchored="true" xml:id="n68" n="68">Also before 1947, [...]</note>
             </egXML>
-            Marginal notes without reference from the base text should occur at the beginning of the paragraph to which they refer, with <code>place="margin"</code>.</p>
-	    <p>For cases in which there exists a note which extends beyond one page, <gi>pb</gi> should be employed in order delimit precisely where the page break within the note occurs.  Further, the <gi>pb</gi> element should also be inserted directly before the initial word in the note on the proceeding page for such cases.</p>
+            For cases in which a note spans pages, a <gi>pb</gi> should be used inside <gi>note</gi> to mark the page break that occurs within the note.</p>
           </div>
         </div>
         <div type="examples">
