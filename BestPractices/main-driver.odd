@@ -564,61 +564,52 @@
           in the source document, such as page numbers or footnote
           numbers. Example: <tag>pb n="456"/</tag></p>
         </div>
-        <div type="====">
-          <head>key and ref</head>
-          <p>These attributes are both available on a variety of
-          elements including <gi>persName</gi>, <gi>orgName</gi>
-          <gi>author</gi>, and <gi>title</gi>. They are used to
-          reference external metadata about the content of the
-          element. The <att>key</att> attribute may contain any string
-          of Unicode characters, whereas the <att>ref</att> attribute
-          contains a URI (including a relative one, as discussed
-          above). While <att>key</att> may supply any identifier,
-          there is no mechanism internal to XML for checking that the
-          value of this attribute is valid.</p>
-          <p>For example,
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <author><persName type="marc100" key="lccn-n78-95332">Shakespeare, William, 1564-1616</persName></author>
-          </egXML>
-          gives a project-specific key (in this case
-          <val>lccn-n78-95332</val>) for this name in the Library of
-          Congress Name Authority File. Values of <att>key</att>
-          attributes may be partially explained in a
-          non-machine-readable way through the use of a
-          <gi>taxonomy</gi> element:
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <taxonomy xml:id="lccn"><bibl>Library of Congress Control Number</bibl></taxonomy>
-          </egXML>
+<div type="====">
+          <head>ref and tag URIs</head>
+          <p>The <att>ref</att> attribute is available on a variety of elements, including <gi>persName</gi>, <gi>orgName</gi>
+          <gi>author</gi>, and <gi>title</gi>. Its value is a URI that identifies external metadata about the content of the
+          element. Linked Data applications in libraries have led to many authority records being made accessible through URIs, 
+          allowing this attribute to be used for disambiguation. For example:
           </p>
-          <p>Alternatively, use <att>ref</att> with a URI fragment
-          identifier, corresponding to the value of <att>xml:id</att>
-          given elsewhere. For example, in the transcription of the
-          text, use
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <placeName ref="#tgn_7012924">Indianapolis</placeName>
+            <placeName ref="http://vocab.getty.edu/page/tgn/7012924">Indianapolis</placeName>
+          </egXML>
+
+          <p>Still, there are times when an outside URI for disambiguation is not available. An encoding project could use URI 
+          fragment identifiers (see above) to point to an authority record (identified with <att>xml:id</att>) within the same 
+          TEI document. For example, in the transcription of the text, you can use
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <placeName ref="#geo_0034">Texas</placeName>
           </egXML>
           which would be defined in a controlled vocabulary elsewhere:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <listPlace>
-              <place xml:id="tgn_7012924">
+              <place xml:id="geo_0034">
                 <placeName>
-                  <settlement type="city">Indianapolis</settlement>
-                  <region type="state">Indiana</region>
+                  <settlement type="village">Texas</settlement>
+                  <region type="state">Maryland</region>
                 </placeName>
               </place>
             </listPlace>
           </egXML>
           </p>
           <p>Readily available software can then check when it
-          encounters <code>ref="#tgn_7012924"</code> that
-          <code>xml:id="tgn_7012924"</code> exists elsewhere in the
+          encounters <code>ref="#geo_0034"</code> that
+          <code>xml:id="geo_0034"</code> exists elsewhere in the
           document.</p>
-          <p>In general it is recommended to use <att>ref</att> when
-          the metadata object being referenced is accessible via a URI
-          (e.g., is on the web), and <att>key</att> when it is not. To
-          avoid ambiguity in referencing external data sources, it is
-          recommended not to use both attributes on the same instance
-          of an element.</p>
+
+          <p>If there is a desire to have an authority file spanning documents, it might be tempting 
+          to use relative URIs (as discussed above), rather than an absolute URIs, in the value of <att>ref</att> in order to 
+          create a local authority file.  However, such URIs cannot be resolved in a stable way as the location of the TEI document 
+          changes. Just as the TEI Guidelines <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">no 
+          longer recommend use of the <att>key</att> attribute</ref>, these <title>Best Practices</title> also recommend use of 
+          <term>tag URIs</term> in order to create unique local identifiers. For example, a tag URI created in 2016 for 
+          nabokovpapers.org might look like this:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <persName ref="tag:nabokovpapers.org,2016:B_V001">Blavdak Vinomori</persName>
+          </egXML>
+          If desired, such tag URIs could be shortened by creating a private URI scheme 
+          <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">as described in the TEI Guidelines.</p>
         </div>
         <div type="====">
           <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
