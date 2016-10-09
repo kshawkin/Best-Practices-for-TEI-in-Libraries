@@ -472,21 +472,17 @@
             </list>
             <p>Names should be encoded using <gi>persName</gi>,
             <gi>placeName</gi>, <gi>geogName</gi>, and <gi>orgName</gi>
-            elements with the <att>ref</att> or <att>key</att> attribute
+            elements with the <att>ref</att> attribute
             providing a reference to a <gi>person</gi>, <gi>place</gi>,
             or <gi>org</gi> element in an external file or database for
             managing name normalization and compilation of additional
             information such as biographical or geospatial information.
-            See the <ref>discussion of <att>ref</att> and
-            <att>key</att></ref> above for how to choose between
-            them.</p>
-            <p>If using <att>key</att>, provide a unique internal
-            identifier, such as in a local database.</p>
-            <p>If using <att>ref</att>, an external TEI file may contain
+            See the <ref>discussion of <att>ref</att> above.</p>
+            <p>When using <att>ref</att>, an external TEI file may contain
             an entry for each name, grouped accordingly under
             <gi>listPerson</gi>, <gi>listPlace</gi>, and
             <gi>listOrg</gi>, which is uniquely identified with an
-            <att>xml:id</att> attribute. In such a case the value of the
+            <att>xml:id</att> attribute. The value of the
             <att>ref</att> attribute in the main TEI document (the
             transcription of the source document) references the value
             of the <att>xml:id</att> attribute in the external file. (In
@@ -495,54 +491,26 @@
             in the same directory as the source file, but it may be
             named anything and placed anywhere that can be referenced by
             a URI.)</p>
-            <p>When referencing external files or databases, it is
+            <p>When referencing external files or databases by tag URI, it is
             strongly recommended to provide an explanation in the
-            <gi>editorialDecl</gi> section of the TEI header. References
-            to controlled vocabularies and national or local authority
-            files may be signified by a prefix in the <att>xml:id</att>
-            attribute (e.g., <val>tgn_0000000</val> for the <title>Getty
-            Thesaurus of Geographic Names</title>). When referencing a
-            controlled vocabulary be sure to specify this information in
+            <gi>editorialDecl</gi> section of the TEI header. When referencing a
+            controlled vocabulary by relative URI, be sure to specify the controlled vocabulary in
             the <gi>classDecl</gi> section of the TEI header.</p>
             <list>
               <item>Place-name tagging example in main TEI document (the transcription of the source document):
               <egXML xmlns="http://www.tei-c.org/ns/Examples">     
                 <p>The first Jews arrived in <placeName
-                ref="context.xml#tgn_7012924">Indianapolis</placeName>
+                ref="http://vocab.getty.edu/page/tgn/7012924">Indianapolis</placeName>
                 in the middle of the 19th century. Primarily immigrants
                 from <placeName ref="context.xml#tgn_7000084">
                 Germany</placeName> and other points in central Europe
                 (though many had lived elsewhere in the <placeName
-                ref="context.xml#tgn_7012149">United States</placeName>
+                ref="http://vocab.getty.edu/page/tgn/7012149">United States</placeName>
                 before they arrived in the city), they were drawn from
                 throughout the Midwest by the growth of commerce and
                 rail lines in <placeName
-                ref="context.xml#tgn_7012924">Indianapolis</placeName>.
+                ref="http://vocab.getty.edu/page/tgn/7012924">Indianapolis</placeName>.
                 </p>
-              </egXML>
-              </item>
-              <item>In the external file <name
-              type="file">context.xml</name>, for maintaining place name
-              normalization and additional information:
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <listPlace>
-                  <place xml:id="tgn_7012924">
-                    <placeName>
-                      <settlement type="city">Indianapolis</settlement>
-                      <region type="state">Indiana</region>
-                    </placeName>
-                  </place>
-                  <place xml:id="tgn_7000084">
-                    <placeName>
-                      <country xml:lang="de">Deutschland</country>
-                    </placeName>
-                  </place>
-                  <place xml:id="tgn_7012149">
-                    <placeName>
-                      <country>United States</country>
-                    </placeName>
-                  </place>
-                </listPlace>
               </egXML>
               </item>
               <item>Personal and organizational name tagging example in
@@ -550,64 +518,19 @@
               document):
               <egXML xmlns="http://www.tei-c.org/ns/Examples">    
                 <p>PRIZE LIBRARY GIFT-Indiana University President
-                <persName ref="context.xml#lcnaf_82134365">Elvis J.
+                <persName ref="http://id.loc.gov/authorities/names/n82134365.html">Elvis J.
                 Stahr</persName> (right), a former law dean and
                 practicing attorney, reminisces with Professor of Law
-                <persName ref="context.xml#lcnaf_00113347">W. Howard
+                <persName ref="http://id.loc.gov/authorities/names/n00113347">W. Howard
                 Mann</persName> as the two inspect some of the nearly
                 3,000 volumes of <orgName
-                ref="context.xml#lcnaf_79006848">U.S. Supreme
+                ref="http://id.loc.gov/authorities/names/n79006848">U.S. Supreme
                 Court</orgName> records recently transferred to I.U.
                 from the <orgName
-                ref="context.xml#lcnaf_79109178">Indiana Supreme Court
+                ref="http://id.loc.gov/authorities/names/n79109178">Indiana Supreme Court
                 Library</orgName>. The collection, dating back to 1925,
                 is one of the oldest and most complete sets in
                 existence.</p>
-              </egXML>
-              </item>
-              <item>In the external file <name
-              type="file">context.xml</name>, for maintaining personal
-              and organization name normalization and additional
-              information:
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <listPerson>
-                  <person xml:id="lcnaf_82134365">
-                    <persName>
-                      <surname>Stahr</surname>
-                      <forename type="first">Elvis</forename>
-                      <forename type="middle">J.</forename>
-                    </persName>
-                    <birth when="1916"/>
-                  </person>
-                  <person xml:id="lcnaf_00113347">
-                    <persName>
-                      <surname>Mann</surname>
-                      <forename type="first">W.</forename>
-                      <forename type="middle">Howard</forename>
-                    </persName>
-                  </person>
-                </listPerson>
-                <listOrg>
-                  <org xml:id="lcnaf_79006848">
-                    <orgName>United States. Supreme Court</orgName>
-                  </org>
-                  <org xml:id="lcnaf_79109178">
-                    <orgName>Indiana. Supreme Court</orgName>
-                  </org>
-                </listOrg>
-              </egXML>
-              </item>
-              <item>Alternatively, instead of using an external file for
-              the authority data, use the <att>key</att> attribute to
-              point to a unique key in a MySQL table that stores
-              information like county name, FIPS county code, and
-              latitude/longitude values:
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <p>When Harry Byrd "retired" to his orchards and
-                Rosemont, his new house outside <placeName
-                key="1498453">Berryville</placeName> in 1930, he was
-                still an energetic young man with a long political
-                career ahead of him.</p>
               </egXML>
               </item>
             </list>
@@ -1076,11 +999,10 @@
               <p>Particularly where cataloguing is likely to be based
               on the content of the header, it is advisable to use a
               generally recognized name authority file to supply the
-              content for this element. The attributes <att>key</att>
-              or <att>ref</att> may also be used to reference
-              canonical information about the author(s) intended from
-              any appropriate authority, such as a library catalogue
-              or online resource.</p>
+              content for this element. The attribute <att>ref</att> 
+              may also be used to reference canonical information about
+              the author(s) intended from any appropriate authority, 
+              such as a library catalogue or online resource.</p>
               <p>In the case of a broadcast, use this element for the
               name of the company or network responsible for making
               the broadcast.</p>
