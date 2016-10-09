@@ -704,10 +704,10 @@
               <list type="simple">
                 <head>Interview Participants</head>
                 <item>
-                  <persName xml:id="spk1" key="wf" type="interviewee">WILLIAM C. FRIDAY</persName>, interviewee
+                  <persName xml:id="spk1" ref="tag:docsouth.unc.edu,2016:wf" type="interviewee">WILLIAM C. FRIDAY</persName>, interviewee
                 </item>
                 <item>
-                  <persName xml:id="spk2" key="wl" type="interviewer">WILLIAM LINK</persName>, interviewer
+                  <persName xml:id="spk2" ref="tag:docsouth.unc.edu,2016:wl" type="interviewer">WILLIAM LINK</persName>, interviewer
                 </item>
               </list>
               &lt;!-- ... -->
