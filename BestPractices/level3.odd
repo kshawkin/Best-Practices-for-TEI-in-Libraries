@@ -659,11 +659,11 @@
                 <p>Particularly where cataloguing is likely to be
                 based on the content of the header, it is advisable to
                 use a generally recognized name authority file to
-                supply the content for this element. The attributes
-                <att>key</att> or <att>ref</att> may also be used to
-                reference canonical information about the author(s)
-                intended from any appropriate authority, such as a
-                library catalogue or online resource.</p>
+                supply the content for this element. The attribute
+                <att>ref</att> may also be used to reference canonical
+                information about the author(s) intended from any
+                appropriate authority, such as a library catalogue or
+                online resource.</p>
                 <p>In the case of a broadcast, use this element for
                 the name of the company or network responsible for
                 making the broadcast.</p>
