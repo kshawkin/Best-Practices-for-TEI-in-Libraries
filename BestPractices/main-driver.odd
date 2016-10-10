@@ -549,13 +549,13 @@
           the texts. It is worth noting that, at present, <ref
           target="http://www.tei-c.org/Roma/">Roma</ref>, the web
           front-end editor for ODD files, does not have a mechanism
-          for providing this documentation — it should be added to the
-          ODD file directly. For a list of standard names and
+          for providing this documentation; instead, this information should be added to the
+          ODD file manually. For a list of standard names and
           definitions of bibliographic features of printed books, see
           <title>ABC for Book Collectors</title> by John Carter (8th
           edition, New Castle, Del. and London: Oak Knoll Books and
           the British Library, 2004, available online at
-          <ptr target="http://www.ilab.org/images/abcforbookcollectors.pdf"/>).</p>
+          <ptr target="https://www.ilab.org/eng/documentation/29-abc_for_book_collectors.html"/>).</p>
         </div>
         <div type="====">
           <head><att>n</att></head>
