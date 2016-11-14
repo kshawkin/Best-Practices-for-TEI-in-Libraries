@@ -36,39 +36,6 @@ else
     P5SRC=${P5SRC:-/home/syd/Documents/TEI/P5/Source/guidelines-en.xml}
 fi
 
-# first, fix odds/odd2odd.xsl, common/header.xsl, and html/html_textstructure.xsl
-# ###
-# NO, take that back, skip the entire patch business for now
-# ###
-# sPWD=`pwd`
-# LINE=`egrep '^\+' odds_odd2odd.xsl.patch | head -n 1 | perl -pe 's,^\+\s+,,;s,\s+$,,;s,<!--,.+,;s,-->,.+,;'`
-# cd ${XSLDIR}
-# if egrep -e "$LINE" odds/odd2odd.xsl ; then
-#     echo "Found odds/odd2odd.xsl already patched, skipping patces to it, common/common_header.xsl, and html/html_textstructure.xsl"
-# else
-#     echo "Patching odds/odd2odd.xsl ..."
-#     cd odds/
-#     cp -p odd2odd.xsl odd2odd_hold.xsl
-#     patch <${sPWD}/odds_odd2odd.xsl.patch
-#     echo "Patching common/common_header.xsl ..."
-#     cd ../common/
-#     cp -p common_header.xsl common_header_hold.xsl
-#     patch <${sPWD}/common_header.xsl.patch
-#     echo "Patching html/html_textstructure.xsl ..."
-#     cd ../html/
-#     cp -p html_textstructure.xsl html_textstructure_hold.xsl
-#     patch <${sPWD}/html_textstructure.xsl.patch
-# fi
-# cd $sPWD
-
-# WARNING: we should use the same process to fix
-# xhtml2/oddprocessing.xsl, but I can't get the patch file to work. So
-# you'll have to do this one manually. The change just consists of
-# moving the 4 lines that output element specifications to in front of
-# those for model classes.
-
-
-
 for BASE in lib1 lib2 lib3 lib4 ; do
     INNAME=${BASE}.odd                # input filename
     # find the prefix specified in the ODD file, if any
