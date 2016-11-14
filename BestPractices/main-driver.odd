@@ -3,7 +3,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en" version="1.9.1">
+     xml:lang="en" version="2.9.1">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -609,7 +609,7 @@
             <persName ref="tag:nabokovpapers.org,2016:B_V001">Blavdak Vinomori</persName>
           </egXML>
           If desired, such tag URIs could be shortened by creating a private URI scheme 
-          <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">as described in the TEI Guidelines.</p>
+          <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">as described in the TEI Guidelines</ref>.</p>
         </div>
         <div type="====">
           <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
