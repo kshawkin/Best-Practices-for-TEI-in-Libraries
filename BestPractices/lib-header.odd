@@ -481,7 +481,7 @@ identifier.</cell>
 <cell/>
 <cell>├</cell>
 <cell cols="3"><gi>analytic</gi></cell>
-<cell>Use this element to group together elements describing the object of encoding when it would not have a corresponding catalog record—for example, an article in a journal issue, a chapter in a book, or a poem in a collection. '''If the object of encoding would have a corresponding catalog record, omit this element and its children.'''</cell>
+<cell>Use this element to group together elements describing the object of encoding when it would not have a corresponding catalog record—for example, an article in a journal issue, a chapter in a book, or a poem in a collection. <emph>If the object of encoding would have a corresponding catalog record, omit this element and its children.</emph></cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
