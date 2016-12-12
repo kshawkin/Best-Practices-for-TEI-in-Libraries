@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xml:lang="en" version="1.9.1"
+<TEI xml:lang="en" version="2.9.1"
   xmlns="http://www.tei-c.org/ns/1.0"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -118,7 +118,7 @@ In order to allow automatic generation of TEI headers from MARC records and MARC
           <head>The TEI Header and Other Metadata Schemas</head>
           <p>Several other descriptive metadata schemas are prevalent within the library domain, including Dublin Core (DC), Dublin Core Qualified (DCQ), and the Metadata Object Description Schema (MODS).  Each of these schemas contains elements that capture the same data as many of the elements in the TEI header. As with MARC, a variety of automated or manual workflows can be implemented to crosswalk metadata from one standard to another and provide for increased sharing of metadata about electronic texts in larger contexts. In particular, DC and MODS are common schemas used by the Open Archives Initiative (OAI) and may be particularly valuable for sharing metadata across institutions.
 
-Unfortunately, there is currently no mechanism for specifying that the content of an element should be drawn from an outside metadata source or that this outside metadata source should supplement the content of the element. In the absence of such mechanisms, users of these <title>Best Practices</title> may use the <gi>idno</gi> element to supply identifiers for outside metadata records and may supply identifiers for certain authority records using the <att>key</att> or <att>ref</att> attributes, allowed on certain elements.
+Unfortunately, there is currently no mechanism for specifying that the content of an element should be drawn from an outside metadata source or that this outside metadata source should supplement the content of the element. In the absence of such mechanisms, users of these <title>Best Practices</title> may use the <gi>idno</gi> element to supply identifiers for outside metadata records and may supply identifiers for certain authority records using the <att>ref</att> attribute, allowed on certain elements.
           </p>
         </div>
         <div type="section">
@@ -481,7 +481,7 @@ identifier.</cell>
 <cell/>
 <cell>├</cell>
 <cell cols="3"><gi>analytic</gi></cell>
-<cell>Use this element to group together elements describing the object of encoding when it would not have a corresponding catalog record—for example, an article in a journal issue, a chapter in a book, or a poem in a collection. '''If the object of encoding would have a corresponding catalog record, omit this element and its children.'''</cell>
+<cell>Use this element to group together elements describing the object of encoding when it would not have a corresponding catalog record—for example, an article in a journal issue, a chapter in a book, or a poem in a collection. <emph>If the object of encoding would have a corresponding catalog record, omit this element and its children.</emph></cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>

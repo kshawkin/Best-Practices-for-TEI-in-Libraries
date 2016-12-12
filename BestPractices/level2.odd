@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TEI xml:lang="en" version="1.9.1"
+<TEI xml:lang="en" version="2.9.1"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -343,7 +343,7 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib2" docLang="en" xml:lang="en" prefix="lib2_" source="tei:1.9.1">
+          <schemaSpec ident="lib2" docLang="en" xml:lang="en" prefix="lib2_" source="tei:2.9.1">
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text front body back div div1"/>
@@ -499,11 +499,10 @@
                 <p>Particularly where cataloguing is likely to be based
                 on the content of the header, it is advisable to use a
                 generally recognized name authority file to supply the
-                content for this element. The attributes <att>key</att>
-                or <att>ref</att> may also be used to reference
-                canonical information about the author(s) intended from
-                any appropriate authority, such as a library catalogue
-                or online resource.</p>
+                content for this element. The attribute <att>ref</att> 
+                may also be used to reference canonical information about
+                the author(s) intended from any appropriate authority, 
+                such as a library catalogue or online resource.</p>
                 <p>In the case of a broadcast, use an <gi>orgName</gi>
                 inside this element for the name of the company or
                 network responsible for making the broadcast.</p>

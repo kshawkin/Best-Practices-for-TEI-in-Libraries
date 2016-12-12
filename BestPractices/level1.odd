@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TEI xml:lang="en" version="1.9.1"
+<TEI xml:lang="en" version="2.9.1"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -293,7 +293,7 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:1.9.1">
+          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:2.9.1">
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text body div div1"/>
