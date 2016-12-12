@@ -841,13 +841,15 @@
             </p>
           </div>
           <div type="subsection">
-            <head>Level 4 Milestones</head>
-            <p>Instead of using the <gi>milestone</gi> element available
-            in TEI, use <tag>ab type="typography"</tag>. The content of
-            this element is the character(s) or device used to mark the
-            milestone in the source document. For example:
+            <head>Level 4 Typographic Separators</head>
+            <p>To mark typographic elements that indicate a structural break or boundary use <tag>ab type="typography"</tag>. The content of
+              this element is the character(s) or device used to mark the
+              division in the source document. <att>style</att> may be used to indicate
+              how the separator is rendered.  As a content-bearing element, <gi>ab</gi> is recommended over the empty elements 
+              <gi>milestone</gi> or <gi>space</gi>, as it can contain further markup and glyph information.
+              For example:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <ab type="typography">*****</ab>
+              <ab type="typography"  style="text-align: center">*****</ab>
             </egXML>
             </p>
             <p>Like <gi>pb</gi> elements, these should always be placed within the 
