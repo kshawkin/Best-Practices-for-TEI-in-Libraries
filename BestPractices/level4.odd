@@ -300,9 +300,9 @@
             </row> 
             <row>        
               <cell><gi>persName</gi>, <gi>placeName</gi>,
-              <gi>geogName</gi>, and <gi>orgName</gi> </cell>
-              <cell>Optionally use to encode personal, place, and
-              organizational names used in a text.</cell>
+              <gi>geogName</gi>, <gi>orgName</gi>, and <tag>name type="_"</tag> </cell>
+              <cell>Optionally use to encode personal, place, 
+              organizational, and other names used in a text.</cell>
             </row> 
             <row>        
               <cell><gi>listName</gi>, <gi>listPlace</gi>, and
@@ -472,17 +472,20 @@
             </list>
             <p>Names should be encoded using <gi>persName</gi>,
             <gi>placeName</gi>, <gi>geogName</gi>, and <gi>orgName</gi>
-            elements with the <att>ref</att> attribute
-            providing a reference to a <gi>person</gi>, <gi>place</gi>,
-            or <gi>org</gi> element in an external file or database for
-            managing name normalization and compilation of additional
-            information such as biographical or geospatial information.
-            See the <ref>discussion of <att>ref</att> above</ref>.</p>
-            <p>When using <att>ref</att>, an external TEI file may contain
+            elements. For names of entities other than persons, places, 
+            and organizations, use <gi>name</gi> with a <att>type</att> 
+            attribute containing an appropriate value, such as <val>event</val>
+            for the name of an event.</p>
+            <p>For all of these elements, use the <att>ref</att> attribute 
+            (see discussion above) to provide a reference to a <gi>person</gi>, 
+            <gi>place</gi>, <gi>org</gi>, <gi>event</gi>, or other element in 
+            an external file or database for managing name normalization and 
+            compilation of additional information such as biographical or 
+            geospatial information. An external TEI file may contain
             an entry for each name, grouped accordingly under
-            <gi>listPerson</gi>, <gi>listPlace</gi>, and
-            <gi>listOrg</gi>, which is uniquely identified with an
-            <att>xml:id</att> attribute. The value of the
+            <gi>listPerson</gi>, <gi>listPlace</gi>,
+            <gi>listOrg</gi>, or <gi>listEvent</gi> which is uniquely identified
+            with an <att>xml:id</att> attribute. The value of the
             <att>ref</att> attribute in the main TEI document (the
             transcription of the source document) references the value
             of the <att>xml:id</att> attribute in the external file. (In
