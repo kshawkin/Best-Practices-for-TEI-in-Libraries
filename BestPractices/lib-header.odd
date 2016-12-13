@@ -108,18 +108,51 @@
         </div>
         <div type="section">
           <head>The TEI Header and MARC</head>
-          <p>While a TEI header is often perceived as similar to or at least related to a MARC record, a TEI header does not typically have a one-to-one correspondence with a MARC record. One TEI header may be described by multiple MARC analytic records, or one MARC record may be used to describe a collection of TEI documents with individual headers. Furthermore, while a MARC record captures metadata about a bibliographic entity in a library’s collection, a TEI header records information both about an encoded text and about the source document for that encoded text.
-
-Each institution and even each project may have a different approach to the way electronic texts are created in TEI and then represented in a larger public catalog through MARC.  At one institution, the same unit (e.g., a cataloging department) may be responsible for creating both TEI headers and MARC records, while at other institutions the work may be distributed among different units. Within the library domain, metadata or cataloging experts are usually required for at least review and standardization of both the TEI header and the MARC record.
-
-In order to allow automatic generation of TEI headers from MARC records and MARC records from TEI headers, some elements (like <gi>author</gi>) contain content not typical for TEI practice but necessary due to a lack of granularity in the MARC format.</p>
+          <p>While a TEI header is often perceived as similar to or at 
+            least related to a MARC record, a TEI header does not typically
+            have a one-to-one correspondence with a MARC record. One TEI 
+            document, containing a single TEI header, may be described by
+            multiple MARC analytic records, or one MARC record may be used
+            to describe a collection of TEI documents with individual headers.
+            Furthermore, while a MARC record captures metadata about a 
+            bibliographic entity in a library’s collection, a TEI header 
+            records information both about an encoded text and about the 
+            source document for that encoded text.</p>
+          
+          <p>Each institution and even each project may have a different approach
+            to the way electronic texts are created in TEI and then represented in
+            a larger public catalog through MARC.  At one institution, the same 
+            unit (e.g., a cataloging department) may be responsible for creating 
+            both TEI headers and MARC records, while at other institutions the 
+            work may be distributed among different units. Within the library 
+            domain, metadata or cataloging experts are usually required for at
+            least review and standardization of both the TEI header and the MARC 
+            record.</p>
+          
+          <p>In order to allow automatic generation of TEI headers from MARC records 
+            and MARC records from TEI headers, some elements (like <gi>author</gi>) 
+            in these <title>Best Practices</title> contain content not typical for TEI
+            practice but necessary due to a lack of granularity in the MARC format.</p>
         </div>
         <div type="section">
           <head>The TEI Header and Other Metadata Schemas</head>
-          <p>Several other descriptive metadata schemas are prevalent within the library domain, including Dublin Core (DC), Dublin Core Qualified (DCQ), and the Metadata Object Description Schema (MODS).  Each of these schemas contains elements that capture the same data as many of the elements in the TEI header. As with MARC, a variety of automated or manual workflows can be implemented to crosswalk metadata from one standard to another and provide for increased sharing of metadata about electronic texts in larger contexts. In particular, DC and MODS are common schemas used by the Open Archives Initiative (OAI) and may be particularly valuable for sharing metadata across institutions.
-
-Unfortunately, there is currently no mechanism for specifying that the content of an element should be drawn from an outside metadata source or that this outside metadata source should supplement the content of the element. In the absence of such mechanisms, users of these <title>Best Practices</title> may use the <gi>idno</gi> element to supply identifiers for outside metadata records and may supply identifiers for certain authority records using the <att>ref</att> attribute, allowed on certain elements.
-          </p>
+          <p>Several other descriptive metadata schemas are prevalent within the library
+            domain, including Dublin Core (DC), Dublin Core Qualified (DCQ), and the
+            Metadata Object Description Schema (MODS).  Each of these schemas contains 
+            elements that capture the same data as many of the elements in the TEI header.
+            As with MARC, a variety of automated or manual workflows can be implemented 
+            to crosswalk metadata from one standard to another and provide for increased 
+            sharing of metadata about electronic texts in larger contexts. In particular,
+            DC and MODS are common schemas used by the Open Archives Initiative (OAI) and
+            may be particularly valuable for sharing metadata across institutions.</p>
+          
+          <p>Unfortunately, there is currently no mechanism for specifying that the content
+            of an element should be drawn from an outside metadata source or that this outside
+            metadata source should supplement the content of the element. In the absence of 
+            such mechanisms, users of these <title>Best Practices</title> may use the 
+            <gi>idno</gi> element to supply identifiers for outside metadata records and may
+            supply identifiers for certain authority records using the <att>ref</att> attribute,
+            allowed on certain elements.</p>
         </div>
         <div type="section">
           <head>Determining Data Values for the TEI Header</head>
