@@ -215,11 +215,11 @@ Gray boxes in the source document column indicate that while the corresponding T
 <cell>├</cell>
 <cell cols="4"><tag>title type="_"</tag></cell>
 <cell>
-One or more <gi>title</gi> elements are required to give the title of the TEI document being created. It is suggested that titles be constructed based on the source document according to a national cataloging code.
+<p>One or more <gi>title</gi> elements are required to give the title of the TEI document being created. It is suggested that titles be constructed based on the source document according to a national cataloging code.</p>
 
-Use of the <att>level</att> attribute is not recommended since it does not apply to a TEI document in a collection.
+<p>Use of the <att>level</att> attribute is not recommended since it does not apply to a TEI document in a collection.</p>
 
-Use of the <att>type</att> attribute is recommended.  It should have one of the following values as suitable in local practice:
+<p>Use of the <att>type</att> attribute is recommended.  It should have one of the following values as suitable in local practice:
 
 <list>
   <item><val>main</val></item>
@@ -233,6 +233,7 @@ Use of the <att>type</att> attribute is recommended.  It should have one of the 
     <val>marc245b</val> (used for the the remainder of the title information — parallel titles, titles subsequent to the first, and other title information — according to the national cataloging code)</item>
   <item><val>uniform</val> (used for a uniform title according to the national cataloging code)</item>
 </list>
+</p>
 </cell>
 <cell>
   <list>
@@ -294,9 +295,9 @@ One or more <gi>author</gi> elements (one name per element) are used to encode t
 <cell>├</cell>
 <cell cols="4"><gi>editor</gi></cell>
 <cell>
-If applicable, use one or more <gi>editor</gi> elements (one name per element) to encode the names of entities besides those in <gi>author</gi> elements that acted as editors of the TEI document—usually, the editor(s) of the source document. If considered appropriate by the encoding project, the editor of the TEI document should be entered here. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.
+<p>If applicable, use one or more <gi>editor</gi> elements (one name per element) to encode the names of entities besides those in <gi>author</gi> elements that acted as editors of the TEI document—usually, the editor(s) of the source document. If considered appropriate by the encoding project, the editor of the TEI document should be entered here. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.</p>
 
-Unlike in the TEI Guidelines, do not use this element for translators, illustrators, compilers, or other roles not generally considered an editor. Therefore, do not use the <att>role</att> attribute.
+<p>Unlike in the TEI Guidelines, do not use this element for translators, illustrators, compilers, or other roles not generally considered an editor. Therefore, do not use the <att>role</att> attribute.</p>
 </cell>
 <cell>
   <list>
@@ -545,11 +546,11 @@ identifier.</cell>
 <cell>└</cell>
 <cell cols="2"><tag>title level="a" type="_"</tag></cell>
 <cell>
-At least one <gi>title</gi> element is required for the title of the object of encoding 
+<p>At least one <gi>title</gi> element is required for the title of the object of encoding 
   that is part of a larger work. Transcribe the title according to the national cataloging
-  code.
+  code.</p>
 
-Use of the <att>type</att> attribute is recommended. It should have one of the following values as suitable in local practice:
+<p>Use of the <att>type</att> attribute is recommended. It should have one of the following values as suitable in local practice:
   <list>
     <item><val>main</val></item>
     <item><val>sub</val></item>
@@ -559,6 +560,7 @@ Use of the <att>type</att> attribute is recommended. It should have one of the f
     <item><val>translated</val></item>
     <item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)</item>
   </list>
+</p>
 </cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
@@ -627,11 +629,11 @@ Use of the <att>type</att> attribute is recommended. It should have one of the f
 <cell>├</cell>
 <cell cols="2"><tag>title level="_" type="_"</tag></cell>
 <cell>
-At least one <gi>title</gi> element is recommended for the title of the source document bibliographic item. Transcribe the title according to the national cataloging code.
+<p>At least one <gi>title</gi> element is recommended for the title of the source document bibliographic item. Transcribe the title according to the national cataloging code.</p>
 
-Use of the <att>level</att> attribute is optional.  If used, it should be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].
+<p>Use of the <att>level</att> attribute is optional.  If used, it should be used [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html as in the main TEI Guidelines].</p>
 
-Use of the <att>type</att> attribute is recommended. It should have one of the following values as suitable in local practice:
+<p>Use of the <att>type</att> attribute is recommended. It should have one of the following values as suitable in local practice:
 <list>
 <item><val>marc245a</val> (used for the title proper and alternative title according to the national cataloging code)</item>
 <item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)</item>
@@ -639,6 +641,7 @@ Use of the <att>type</att> attribute is recommended. It should have one of the f
 <item><val>marc245c</val> (used for the statement of responsibility according to the national cataloging code)</item>
 <item><val>uniform</val> (used for a uniform title according to the national cataloging code)</item>
 </list>
+</p>
 </cell>
 <cell>
 <table>
@@ -679,14 +682,16 @@ Use of the <att>type</att> attribute is recommended. It should have one of the f
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>respStmt</gi></cell>
-<cell>Statement of responsibility on the source document bibliographic item, according to the national cataloging code. Record
+<cell>
+<p>Statement of responsibility on the source document bibliographic item, according to the national cataloging code. Record
 one responsibility or party per <gi>respStmt</gi>. Each <gi>respStmt</gi> should contain either:
 <list type="simple">
 <item>one <gi>resp</gi> followed by one or more of <gi>persName</gi> or <gi>orgName</gi></item>
 <item>one or more of <gi>persName</gi> or <gi>orgName</gi> followed by one <gi>resp</gi></item>
 </list>
-Whenever possible, establish or use the form of the name from a national name authority file.
-<lb/>If generating the <gi>sourceDesc</gi> from a MARC record, it will be difficult to split the content of the 245c field into <gi>resp</gi> and <gi>persName</gi> (or <gi>orgName</gi>) elements, so it is recommended to use <tag>title type="marc245c"</tag> instead of this element.</cell>
+Whenever possible, establish or use the form of the name from a national name authority file.</p>
+<pIf generating the <gi>sourceDesc</gi> from a MARC record, it will be difficult to split the content of the 245c field into <gi>resp</gi> and <gi>persName</gi> (or <gi>orgName</gi>) elements, so it is recommended to use <tag>title type="marc245c"</tag> instead of this element.</p>
+</cell>
 <cell>245 $c</cell>
 <cell>245 $c</cell>
 </row>
@@ -826,13 +831,14 @@ Whenever possible, establish or use the form of the name from a national name au
 <lb/><emph>or</emph>
 <lb/><tag>date from="___" to="____"</tag>
 </cell>
-<cell>Date of publication, distribution, etc. from the source document bibliographic item. The content of the element is the statement of this data according to the national cataloging code.
+<cell>
+<p>Date of publication, distribution, etc. from the source document bibliographic item. The content of the element is the statement of this data according to the national cataloging code.</p>
 
-Since the content of the element according to the national cataloging code is not easily processed by machine, when possible include the following attribute(s) with valid values: ''either'' <att>when</att>, ''or'' both <att>notBefore</att> and <att>notAfter</att>, ''or'' one or both of <att>from</att> and <att>to</att>.
+<p>Since the content of the element according to the national cataloging code is not easily processed by machine, when possible include the following attribute(s) with valid values: ''either'' <att>when</att>, ''or'' both <att>notBefore</att> and <att>notAfter</att>, ''or'' one or both of <att>from</att> and <att>to</att>.</p>
 
-National cataloging codes may distinguish between a possible range of dates for publication (such as "186-" for something certainly published during the 1860s) and an uncertain date of publication (such as "1864?" or "186-?" for a date or range of dates assumed by the cataloger).  In the case of uncertainty, use <code>cert="low"</code>.
+<p>National cataloging codes may distinguish between a possible range of dates for publication (such as "186-" for something certainly published during the 1860s) and an uncertain date of publication (such as "1864?" or "186-?" for a date or range of dates assumed by the cataloger).  In the case of uncertainty, use <code>cert="low"</code>.</p>
 
-If the date is unknown (for example, recorded according to the national cataloging code as "[n.d.]", use <code>cert="unknown"</code>.
+<p>If the date is unknown (for example, recorded according to the national cataloging code as "[n.d.]", use <code>cert="unknown"</code>.</p>
 </cell>
 <cell>
 <table>
@@ -1046,12 +1052,12 @@ Optionally use one or more <gi>idno</gi> elements to give identifiers for the so
 <cell>└</cell>
 <cell><tag>title type="_"</tag></cell>
 <cell>
-At least one <gi>title</gi> element is recommended for the title of the related work. Transcribe the title according to the national cataloging code.
+<p>At least one <gi>title</gi> element is recommended for the title of the related work. Transcribe the title according to the national cataloging code.</p>
 
-Use of the <att>level</att> attribute is recommended. If used, it should
-be used <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as in the main TEI Guidelines</ref>.
+<p>Use of the <att>level</att> attribute is recommended. If used, it should
+be used <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as in the main TEI Guidelines</ref>.</p>
 
-Use of the <att>type</att> attribute is optional. It should have one of the following values as suitable in local practice:
+<p>Use of the <att>type</att> attribute is optional. It should have one of the following values as suitable in local practice:
 <list>
 <item><val>main</val></item>
 <item><val>sub</val></item>
@@ -1061,6 +1067,7 @@ Use of the <att>type</att> attribute is optional. It should have one of the foll
 <item><val>translated</val></item>
 <item><val>filing</val> (used for a version of the title with initial articles removed, to be used for sorting titles alphabetically but not for display)</item>
 </list>
+</p>
 </cell>
 <cell>740</cell>
 <cell>740</cell>
@@ -1088,9 +1095,9 @@ Use of the <att>type</att> attribute is optional. It should have one of the foll
 <cell>├</cell>
 <cell cols="5"><tag>editorialDecl n="_"</tag></cell>
 <cell>
-Use of the <att>n</att> attribute is recommended to record the encoding level: <val>1</val> for Level 1, <val>2</val> for Level 2, etc.
+<p>Use of the <att>n</att> attribute is recommended to record the encoding level: <val>1</val> for Level 1, <val>2</val> for Level 2, etc.</p>
 
-Include one or more <gi>p</gi> elements as children with information on:
+<p>Include one or more <gi>p</gi> elements as children with information on:
 
 <list>
 <item>editorial decisions made during encoding</item>
@@ -1102,6 +1109,7 @@ Include one or more <gi>p</gi> elements as children with information on:
 <item>whether hyphens and quotation marks have been retained as character data or removed and indicated by the presence of an element such as <gi>lb</gi>, <gi>cb</gi>, <gi>pb</gi>, <gi>quote</gi>, or <gi>floatingText</gi></item>
 <item>whether types of hyphens have been distinguished (applies to Level 3 only)</item>
 </list>
+</p>
 </cell>
 <cell>
 <list>
@@ -1157,7 +1165,8 @@ body of the TEI document. For example:
 <list>
 <item><code>&lt;taxonomy xml:id="LCC"&gt;&lt;bibl&gt;Library of Congress Classification&lt;/bibl&gt;&lt;/taxonomy&gt;</code></item>
 <item><code>&lt;taxonomy xml:id="LCSH"&gt;&lt;bibl&gt;Library of Congress Subject Headings&lt;/bibl&gt;&lt;/taxonomy&gt;</code></item>
-<item><code>&lt;taxonomy xml:id="AAT"&gt;&lt;bibl&gt;Art &amp;amp; Architecture Theasaurus&lt;/bibl&gt;&lt;/taxonomy&gt;</code></item></list>
+<item><code>&lt;taxonomy xml:id="AAT"&gt;&lt;bibl&gt;Art &amp;amp; Architecture Theasaurus&lt;/bibl&gt;&lt;/taxonomy&gt;</code></item>
+</list>
 
 The <att>xml:id</att> attribute is required in order to provide an identifier to which <att>scheme</att> attributes in elsewhere in the header refer.
 </cell>
@@ -1270,12 +1279,12 @@ online or to one defined previously in <gi>classDecl</gi>.
 <cell>└</cell>
 <cell cols="5"><tag>change when="''YYYY-MM-DD''" who="''URI''"</tag></cell>
 <cell>
-Create a <gi>change</gi> element to record each significant change to the TEI document, in reverse chronological order (i.e., most recent first). A prose description of the change is recorded as the content of each <gi>change</gi> element. This prose may contain lists for organization, and phrase-level markup (like <gi>gi</gi>, <gi>ptr</gi>, or <gi>date</gi>), but not paragraphs.
+<p>Create a <gi>change</gi> element to record each significant change to the TEI document, in reverse chronological order (i.e., most recent first). A prose description of the change is recorded as the content of each <gi>change</gi> element. This prose may contain lists for organization, and phrase-level markup (like <gi>gi</gi>, <gi>ptr</gi>, or <gi>date</gi>), but not paragraphs.</p>
 
-The date of the change should be recorded using the <att>when</att>
-attribute (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.datable.w3c.html">att.datable.w3c class</ref>).
+<p>The date of the change should be recorded using the <att>when</att>
+attribute (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.datable.w3c.html">att.datable.w3c class</ref>).</p>
 
-The person who is responsible for making the change should be indicated by the <att>who</att> attribute of <gi>change</gi>. Its value is a URI that points to a <gi>respStmt</gi> or <gi>person</gi> that encodes information about the responsible party. Note that this reference is a URI reference and not an ID/IDREF reference, and thus is not checked by validation software. Small projects sometimes take advantage of this by putting information into the URI itself, and not having a <gi>respStmt</gi> or <gi>person</gi> element. For example, the document might simply give <code>who="#Jane_Smith"</code>, relying on human readers to understand this reference.
+<p>The person who is responsible for making the change should be indicated by the <att>who</att> attribute of <gi>change</gi>. Its value is a URI that points to a <gi>respStmt</gi> or <gi>person</gi> that encodes information about the responsible party. Note that this reference is a URI reference and not an ID/IDREF reference, and thus is not checked by validation software. Small projects sometimes take advantage of this by putting information into the URI itself, and not having a <gi>respStmt</gi> or <gi>person</gi> element. For example, the document might simply give <code>who="#Jane_Smith"</code>, relying on human readers to understand this reference.</p>
 </cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
