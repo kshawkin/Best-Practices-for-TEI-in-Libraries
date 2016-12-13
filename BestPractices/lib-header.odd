@@ -514,7 +514,9 @@ identifier.</cell>
 <cell/>
 <cell>├</cell>
 <cell cols="3"><gi>analytic</gi></cell>
-<cell>Use this element to group together elements describing the object of encoding when it would not have a corresponding catalog record—for example, an article in a journal issue, a chapter in a book, or a poem in a collection. <emph>If the object of encoding would have a corresponding catalog record, omit this element and its children.</emph></cell>
+<cell>Use this element and its children only if the object of encoding is part of a larger 
+  work—for example, an article in a journal issue, a chapter in a book, or a poem in a
+  collection.</cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
@@ -526,7 +528,11 @@ identifier.</cell>
 <cell>│</cell>
 <cell>├</cell>
 <cell cols="2"><gi>author</gi></cell>
-  <cell>One or more <gi>author</gi> elements (one name per element) are used to encode the name for the personal author or corporate body responsible for the creation of the intellectual or artistic content of the object of encoding. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, establish or use the form of the name from a national name authority file.</cell>
+  <cell>One or more <gi>author</gi> elements (one name per element) are used to encode the
+    name for the personal author or corporate body responsible for the creation of the 
+    intellectual or artistic content of the object of encoding that is part of a larger 
+    work. Use <gi>persName</gi> or <gi>orgName</gi> when applicable. Whenever possible, 
+    establish or use the form of the name from a national name authority file.</cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
@@ -539,7 +545,9 @@ identifier.</cell>
 <cell>└</cell>
 <cell cols="2"><tag>title level="a" type="_"</tag></cell>
 <cell>
-At least one <gi>title</gi> element is required for the title of the object of encoding. Transcribe the title according to the national cataloging code.
+At least one <gi>title</gi> element is required for the title of the object of encoding 
+  that is part of a larger work. Transcribe the title according to the national cataloging
+  code.
 
 Use of the <att>type</att> attribute is recommended. It should have one of the following values as suitable in local practice:
   <list>
@@ -562,7 +570,11 @@ Use of the <att>type</att> attribute is recommended. It should have one of the f
 <cell/>
 <cell>├</cell>
 <cell cols="3"><gi>monogr</gi></cell>
-<cell>Use this element to group together the elements describing the bibliographic item that has (or would have) a corresponding catalog record. The TEI definition of this element specifies that it is used even for works that might not otherwise be considered “monographs,” so bibliographic data about a journal title would be included in this element.</cell>
+<cell>Use this element to group together the elements describing the source document 
+  bibliographic item that is published as an independent item. The TEI definition of 
+  this element specifies that it is used even for works that might not otherwise be 
+  considered “monographs,” so, for example, bibliographic data about a journal title
+  is included in this element.</cell>
 <cell>n/a</cell>
 <cell>n/a</cell>
 </row>
