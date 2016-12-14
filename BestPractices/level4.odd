@@ -770,7 +770,7 @@
             <head>Level 4 Typographic Separators</head>
             <p>To mark typographic elements that indicate a structural break or boundary use <tag>ab type="typography"</tag>. The content of
               this element is the character(s) or device used to mark the
-              division in the source document. <att>style</att> may be used to indicate
+              division in the source document. The <att>style</att> attribute may be used to indicate
               how the separator is rendered.  As a content-bearing element, <gi>ab</gi> is recommended over the empty elements 
               <gi>milestone</gi> or <gi>space</gi>, as it can contain further markup and glyph information.
               For example:
