@@ -268,12 +268,12 @@
           per the needs of a specific project.</p>
           <p>At Levels 1 and 2, do not attempt to disambiguate
           different uses of hyphens. Encode all hyphens appearing in
-          the source document using character U+2010 if possible;
-          alternatively, use the semantically ambiguous U+002D.</p>
-          <p>At Level 3, If <gi>lb</gi>, <gi>cb</gi> and <gi>pb</gi> are used, optionally distinguish uses of the hyphen
+          the source document using character U+2010 (HYPHEN) if possible;
+          alternatively, use the semantically ambiguous U+002D (HYPHEN-MINUS).</p>
+          <p>At Levels 3, if <gi>lb</gi>, <gi>cb</gi> and <gi>pb</gi> are used, optionally distinguish uses of the hyphen
           with <gi>pc</gi> and  <att>force</att>.
-            At Level 4, the use of <gi>pc</gi> and  <att>force</att> on these
-          elements is mandatory.</p>
+            At Level 4,the use of <gi>pc</gi> and  <att>force</att> on these
+          elements is preferred.</p>
           <p>Example hyphenation markup follows, when a word is broken at the end of a line.
          (If these hyphens occur at
           a column or page break instead of a line break, use
