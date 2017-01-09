@@ -76,9 +76,10 @@
               2, TEI Header, P5 Guidelines</ref>
             </item>
           </list>
-          <p>Note that this is not a complete customization. It is
-          just one specification group that is used by each of the
-          customizations for levels 1–4.</p>
+          <!-- Note that this file itself does not constitute a
+               complete customization. It is just one specification
+               group that is used by each of the customizations for
+               levels 1–4. -->
         </div>
         <div type="introduction">
           <head>Introduction</head>
@@ -1044,8 +1045,8 @@ Use of the <att>type</att> attribute is optional. It should have one of the foll
 <cell cols="5"><tag>editorialDecl n="_"</tag></cell>
 <cell>
 Use of the <att>n</att> attribute is recommended to record the encoding level: <val>1</val> for Level 1, <val>2</val> for Level 2, etc.
-
-Include one or more <gi>p</gi> elements as children with information on:
+</cell>
+<!-- Include one or more <gi>p</gi> elements as children with information on:
 
 <list>
 <item>editorial decisions made during encoding</item>
@@ -1063,7 +1064,18 @@ Include one or more <gi>p</gi> elements as children with information on:
 <item>500 for content of p element</item>
 <item>856 $z, which includes boilerplate text depending on encoding level and how the TEI document is presented to the user (as page images, text, or both)</item>
 </list>
-</cell>
+</cell> -->
+<cell>n/a</cell>
+</row>
+
+<row>
+<cell>│</cell>
+<cell>│</cell>
+<cell>├</cell>
+<cell cols="4"><tag>correction status="__" method="__"</tag></cell>
+<cell>A <gi>correction</gi> element may be used to describe what corrections, if any, have been
+made to the source text, and how they were made.</cell>
+<cell>n/a</cell>
 <cell>n/a</cell>
 </row>
 
@@ -1409,11 +1421,8 @@ The person who is responsible for making the change should be indicated by the <
                 </attList>
               </elementSpec>
               <elementSpec module="header" ident="editorialDecl" mode="change">
-                <content>
-                  <rng:zeroOrMore>
-                    <rng:ref name="model.pLike"/>
-                  </rng:zeroOrMore>
-                  <!-- move this to a new <hyphen> element at next release
+		<!-- move this to a new <hyphen> element at next release
+		     == Perhaps just using the TEI <hyphenation> element makes more senes —Syd, 2016-12-12 ==
                   <rng:element name="p">
                     <rng:choice>
                       <rng:value type="token">All hyphens in source document encoded as U+2010.</rng:value>
@@ -1428,7 +1437,6 @@ The person who is responsible for making the change should be indicated by the <
                       &lt;lb&gt; element.</rng:value>
                     </rng:choice>
                   </rng:element> -->
-                </content>
                 <!-- also move this to the new <hyphen> element at next release
                 <constraintSpec scheme="isoschematron" ident="hyphen-match">
                   <constraint>
@@ -1439,7 +1447,7 @@ The person who is responsible for making the change should be indicated by the <
                       <s:assert test="( normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+2010.'                                         or                                         normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+002D.' )                                       or                                         (                                           starts-with(                                             normalize-space(child::tei:p[position()=last()]),                                             'Hyphens in source document encoded as U+'                                             )                                           and                                           ends-with(                                             normalize-space(child::tei:p[position()=last()]),                                             '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                             )                                         ) ">At level 3, hyphenation encoding must be declared in the last paragraph of <s:name/>.</s:assert>
                       </s:rule>
                       <s:rule context="tei:editorialDecl[@n='4']">
-                        <s:assert test="                                         starts-with(                                           normalize-space(child::tei:p[position()=last()]),                                           'Hyphens in source document encoded as U+'                                           )                                         and                                         ends-with(                                           normalize-space(child::tei:p[position()=last()]),                                           '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                         )                                   ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb&gt;</s:assert>
+                        <s:assert test="                                         starts-with(                                           Normalize-space(child::tei:p[position()=last()]),                                           'Hyphens in source document encoded as U+'                                           )                                         and                                         ends-with(                                           normalize-space(child::tei:p[position()=last()]),                                           '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                         )                                   ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb&gt;</s:assert>
                       </s:rule>
                 </constraint>
               </constraintSpec> -->
@@ -1467,30 +1475,25 @@ The person who is responsible for making the change should be indicated by the <
                     record, translated to TEI via the <name type="software">Thutmose I</name> program.</p>
                     <p>Content originally generated by <name type="software">c-n-rite</name> OCR software, then the
                     needed TEI encoding put in place with <name type="software">cnr2tei.xslt</name>.</p>
-                    <p>All hyphens in source document encoded as U+2010.</p>
+		    <correction method="markup" status="low"/>
+		    <normalization method="silent">
+		      <p>Spacing between words and the following
+		      punctuation mark has been removed. Spacing
+		      between words has generally been regularized to
+		      one space.</p>
+		    </normalization>
+		    <normalization method="markup">
+		      <p>Distances expressed in imperial units in the
+		      source have been normalized to the metric system
+		      using the attributes of the <gi>measure</gi>
+		      element.</p>
+		    </normalization>
+		    <hyphenation eol="all">
+		      <p>All hyphens in source document encoded as U+2010.</p>
+		    </hyphenation>
                   </editorialDecl>
                 </egXML>
               </exemplum>
-              <remarks>
-                <p>The TEI provides a set of useful special-purpose
-                elements that can be used inside of <gi>editorialDecl</gi>
-                instead of paragraphs: <gi>correction</gi>,
-                <gi>hyphenation</gi>, <gi>interpretation</gi>,
-                <gi>normalization</gi>, <gi>quotation</gi>,
-                <gi>segmentation</gi>, and <gi>stdVals</gi>. But since at
-                the time these <title>Best Practices</title> were
-                developed one could not use any of these special-purpose
-                elements <emph>and</emph> a paragraph, and there are some
-                editorial practices likely to be of interest that are not
-                covered by these elements, our current requirement is to
-                use only paragraphs. The TEI has since fixed this bug (by
-                allowing a mix of paragraphs and the special-purpose
-                elements in any order), this recommendation will likely
-                change accordingly in the near future.</p>
-                <p>It is required that a paragraph explaining
-                hyphenation practices, with particular wording as above,
-                be present.</p>
-              </remarks>
             </elementSpec>
             <elementSpec module="header" ident="encodingDesc" mode="change">
               <content>
