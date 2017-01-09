@@ -58,39 +58,39 @@ else # dunno
     P5SRC=${P5SRC:-/usr/local/share/tei/P5/p5subset.xml}
 fi
 
-for BASE in lib1 lib2 lib3 lib4 ; do
-    INNAME=${BASE}.odd                # input filename
-    # find the prefix specified in the ODD file, if any
-    # (the variable OSPFX is for Odd file Specified PreFiX)
-    OSPFX=`${STARLET} sel -N t=http://www.tei-c.org/ns/1.0 -t -m "//t:schemaSpec[1]/@prefix" -v "." ${INNAME}`
-    # if we found one, use it; otherwise append the separator string to the BASE filename
-    PREFIX="${BASE}${PSC}"
-    PREFIX="${OSPFX:-${PREFIX}}"
-
-    if ${XSLDIR}/bin/teitorelaxng --odd --localsource=${P5SRC} $INNAME ; then
-	mv $INNAME.relaxng $BASE.rng
-	jing ${RELAX} ${BASE}.rng
-    else
-	echo "Error generating RELAX NG (XML syntax) and Schematron from $INNAME"
-    fi
-	 
-    if ${XSLDIR}/bin/teitornc --odd --localsource=${P5SRC} $INNAME ; then
-	if ~/bin/fix_rnc_whitespace.perl --patternprefix=${PREFIX} < $INNAME.rnc > $BASE.rnc ; then
-	    rm $INNAME.rnc
-	else
-	    echo "Error fixing whitespace in $INNAME.rnc"
-	fi
-    else
-	echo "Error generating RELAX NG (compact syntax) from $INNAME"
-    fi
-
-    if ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} --summaryDoc $INNAME ; then
-	mv $INNAME.html $BASE.html
-    else
-	echo "Error generating HTML from $INNAME"
-    fi
-
-done
+###TEMP### for BASE in lib1 lib2 lib3 lib4 ; do
+###TEMP###     INNAME=${BASE}.odd                # input filename
+###TEMP###     # find the prefix specified in the ODD file, if any
+###TEMP###     # (the variable OSPFX is for Odd file Specified PreFiX)
+###TEMP###     OSPFX=`${STARLET} sel -N t=http://www.tei-c.org/ns/1.0 -t -m "//t:schemaSpec[1]/@prefix" -v "." ${INNAME}`
+###TEMP###     # if we found one, use it; otherwise append the separator string to the BASE filename
+###TEMP###     PREFIX="${BASE}${PSC}"
+###TEMP###     PREFIX="${OSPFX:-${PREFIX}}"
+###TEMP### 
+###TEMP###     if ${XSLDIR}/bin/teitorelaxng --odd --localsource=${P5SRC} $INNAME ; then
+###TEMP### 	mv $INNAME.relaxng $BASE.rng
+###TEMP### 	jing ${RELAX} ${BASE}.rng
+###TEMP###     else
+###TEMP### 	echo "Error generating RELAX NG (XML syntax) and Schematron from $INNAME"
+###TEMP###     fi
+###TEMP### 	 
+###TEMP###     if ${XSLDIR}/bin/teitornc --odd --localsource=${P5SRC} $INNAME ; then
+###TEMP### 	if ~/bin/fix_rnc_whitespace.perl --patternprefix=${PREFIX} < $INNAME.rnc > $BASE.rnc ; then
+###TEMP### 	    rm $INNAME.rnc
+###TEMP### 	else
+###TEMP### 	    echo "Error fixing whitespace in $INNAME.rnc"
+###TEMP### 	fi
+###TEMP###     else
+###TEMP### 	echo "Error generating RELAX NG (compact syntax) from $INNAME"
+###TEMP###     fi
+###TEMP### 
+###TEMP###     if ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} --summaryDoc $INNAME ; then
+###TEMP### 	mv $INNAME.html $BASE.html
+###TEMP###     else
+###TEMP### 	echo "Error generating HTML from $INNAME"
+###TEMP###     fi
+###TEMP### 
+###TEMP### done
 
 # process  main-driver  here
 
@@ -120,8 +120,13 @@ echo "generate HTML from main driver."
 # is not at all clear to me that what we are doing here should be
 # valid.
 
-cp -p main-driver.odd ${TMP}
-xmllint --xinclude ${TMP} > main-driver.odd
-${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} --summaryDoc main-driver.odd
-mv ${TMP} main-driver.odd
-mv main-driver.odd.html main-driver.html
+# Also HACK warning: in this first line we simply remove all of the
+# <schemaSpec>s so as to avoid generating reference documentation from
+# them.
+${STARLET} ed -N t=http://www.tei-c.org/ns/1.0 --delete "//t:schemaSpec" main-driver.odd > ${TMP}
+# now we have a version of 'main-driver.odd' in TMP that has XIncludes
+# included, but has no <schemaSpec>s. Generate HTML from it:
+${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} ${TMP}
+# use correct name and nuke TMP file:
+mv ${TMP}.html main-driver.html
+rm ${TMP}
