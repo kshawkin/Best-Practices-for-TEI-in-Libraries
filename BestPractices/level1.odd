@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TEI xml:lang="en" version="2.9.1"
+<TEI xml:lang="en" version="3.1.0"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -21,7 +21,13 @@
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
-      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
+      <editionStmt>
+	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
+	<note>That version number <emph>happens</emph> to match the
+	TEI P5 version number against which we are building schemas;
+	this is complete happenstance, the two are not
+	related.</note></p>
+      </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
         <availability status="restricted">
@@ -189,7 +195,7 @@
         <div type="example" xml:id="L1AHex">
           <head>Level 1 Example: Alger Hiss document</head>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <TEI xml:id="someid">
+            <TEI xml:id="someid1">
               <teiHeader xml:lang="en">
                 &lt;!-- header goes here -->
               </teiHeader>
@@ -293,7 +299,7 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:2.9.1">
+          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:3.1.0">
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text body div div1"/>
@@ -610,10 +616,14 @@
             <!-- ****************************************************** -->
             <classSpec module="tei" type="atts" ident="att.global" mode="change">
               <attList>
-                <attDef ident="rend" mode="delete"/>
-                <attDef ident="rendition" mode="delete"/>
                 <attDef ident="xml:base" mode="delete"/>
               </attList>
+            </classSpec>
+            <classSpec module="tei" type="atts" ident="att.global.rendition" mode="change">
+              <attList>
+		<attDef ident="rend" mode="delete"/>
+		<attDef ident="rendition" mode="delete"/>
+	      </attList>
             </classSpec>
             <classSpec module="tei" type="model" ident="model.inter" mode="change">
               <classes mode="change">
@@ -626,7 +636,6 @@
             <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>        
             <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
             <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>      
-            <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>      
             <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
@@ -634,7 +643,6 @@
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
-            <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.typed" mode="change" type="atts">
               <attList>
                 <attDef ident="subtype" mode="delete"/>
@@ -644,7 +652,7 @@
             <classSpec module="linking" ident="att.pointing" mode="delete" type="atts"/>
             <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
             <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
-            <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
+            <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divTop" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divTopPart" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
