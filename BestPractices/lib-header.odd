@@ -1856,12 +1856,19 @@
 		    </content>
 		    <attList>
 		      <attDef ident="name" mode="change">
-			<datatype>
-			  <rng:value>http://www.tei-c.org/ns/1.0</rng:value>
+			<datatype minOccurs="1" maxOccurs="1">
+			  <dataRef key="lib.teins"/>
 			</datatype>
 		      </attDef>
 		    </attList>
 		  </elementSpec>
+		  <dataSpec ident="lib.teins">
+		    <content>
+		      <valList type="closed">
+			<valItem ident="http://www.tei-c.org/ns/1.0"/>
+		      </valList>
+		    </content>
+		  </dataSpec>
 		  <elementSpec module="header" ident="publicationStmt" mode="change">
                      <constraintSpec scheme="isoschematron" ident="PubStmt-specialPreferred">
                         <constraint>
@@ -1919,12 +1926,13 @@
                      </content>
                   </elementSpec>
                   <elementSpec module="header" ident="tagUsage" mode="change">
-                     <content>
-                        <rng:choice>
-                           <rng:value>Unnumbered divs used.</rng:value>
-                           <rng:value>Numbered divs used.</rng:value>
-                        </rng:choice>
-                     </content>
+		    <content>
+		      <!-- note: having explicit <dataRef key="teidata.enumerated"/> causes invalid RELAX NG output -->
+		      <valList type="closed">
+			<valItem ident="Unnumbered divs used."/>
+			<valItem ident="Numbered divs used."/>
+		      </valList>
+		    </content>
                      <attList>
 		       <attDef ident="gi" mode="replace" usage="req">
 			 <gloss>element name</gloss>
