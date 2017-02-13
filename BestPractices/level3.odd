@@ -2,8 +2,7 @@
 <TEI xml:lang="en" version="3.1.0"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns:s="http://purl.oclc.org/dsdl/schematron"
-     xmlns:rng="http://relaxng.org/ns/structure/1.0">
+     xmlns:s="http://purl.oclc.org/dsdl/schematron">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -22,11 +21,11 @@
         </editor>
       </titleStmt>
       <editionStmt>
-	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
-	<note>That version number <emph>happens</emph> to match the
-	TEI P5 version number against which we are building schemas;
-	this is complete happenstance, the two are not
-	related.</note></p>
+        <p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
+        <note>That version number <emph>happens</emph> to match the
+        TEI P5 version number against which we are building schemas;
+        this is complete happenstance, the two are not
+        related.</note></p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -546,11 +545,9 @@
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <rng:ref name="teiHeader"/>
-                <rng:optional>
-                  <rng:ref name="model.resourceLike"/>
-                </rng:optional>
-                <rng:ref name="text"/>
+                <elementRef key="teiHeader"/>
+                <classRef key="model.resourceLike" minOccurs="0"/>
+                <elementRef key="text"/>
               </content>
               <constraintSpec scheme="isoschematron" ident="no-rend-in-header">
                 <constraint>
@@ -634,7 +631,7 @@
                 <memberOf key="model.respLike"/>
               </classes>
               <content>
-                <rng:ref name="macro.phraseSeq"/>
+                <macroRef key="macro.phraseSeq"/>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -684,14 +681,10 @@
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <rng:choice>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.divLike"/>
-                  </rng:oneOrMore>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.div1Like"/>
-                  </rng:oneOrMore>
-                </rng:choice>
+                <alternate>
+                  <classRef key="model.divLike" minOccurs="1" maxOccurs="unbounded"/>
+                  <classRef key="model.div1Like" minOccurs="1" maxOccurs="unbounded"/>
+                </alternate>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -727,14 +720,10 @@
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <rng:choice>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.divLike"/>
-                  </rng:oneOrMore>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.div1Like"/>
-                  </rng:oneOrMore>
-                </rng:choice>
+                <alternate>
+                  <classRef key="model.divLike" minOccurs="1" maxOccurs="unbounded"/>
+                  <classRef key="model.div1Like" minOccurs="1" maxOccurs="unbounded"/>
+                </alternate>
               </content>
               <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples"  xml:lang="fr">
@@ -778,42 +767,28 @@
                 <memberOf key="model.divLike"/>
               </classes>
               <content>
-                <rng:group>
-                  <rng:zeroOrMore>
-                    <rng:choice>
-                      <rng:ref name="model.divTop"/>
-                      <rng:ref name="model.global"/>
-                    </rng:choice>
-                  </rng:zeroOrMore>
-                  <rng:optional>
-                    <rng:choice>
-                      <rng:group>
-                        <rng:oneOrMore>
-                          <rng:ref name="model.divLike"/>
-                          <rng:zeroOrMore>
-                            <rng:ref name="model.global"/>
-                          </rng:zeroOrMore>
-                        </rng:oneOrMore>
-                      </rng:group>
-                      <rng:group>
-                        <rng:oneOrMore>
-                          <rng:group>
-                            <rng:ref name="model.common"/>
-                          </rng:group>
-                          <rng:zeroOrMore>
-                            <rng:ref name="model.global"/>
-                          </rng:zeroOrMore>
-                        </rng:oneOrMore>
-                        <rng:zeroOrMore>
-                          <rng:ref name="model.divLike"/>
-                          <rng:zeroOrMore>
-                            <rng:ref name="model.global"/>
-                          </rng:zeroOrMore>
-                        </rng:zeroOrMore>
-                      </rng:group>
-                    </rng:choice>
-                  </rng:optional>
-                </rng:group>
+                <sequence>
+                  <alternate minOccurs="0" maxOccurs="unbounded">
+                    <classRef key="model.divTop"/>
+                    <classRef key="model.global"/>
+                  </alternate>
+                  <alternate minOccurs="0">
+                    <sequence minOccurs="1" maxOccurs="unbounded">
+                      <classRef key="model.divLike"/>
+                      <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
+                    <sequence>
+                      <sequence minOccurs="1" maxOccurs="unbounded">
+                        <classRef key="model.common"/>
+                      <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                      </sequence>
+                      <sequence minOccurs="0" maxOccurs="unbounded">
+                        <classRef key="model.divLike"/>
+                        <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                      </sequence>
+                    </sequence>
+                  </alternate>
+                </sequence>
               </content>
               <constraintSpec scheme="isoschematron" ident="recommendType">
                 <constraint>
@@ -826,7 +801,7 @@
               <attList>
                 <attDef ident="type" mode="add">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                 </attDef>
               </attList>
@@ -854,7 +829,7 @@
               <attList>
                 <attDef ident="type" mode="add">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -869,7 +844,7 @@
               <attList>
                 <attDef ident="type" mode="change">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -884,7 +859,7 @@
               <attList>
                 <attDef ident="type" mode="change">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -899,7 +874,7 @@
               <attList>
                 <attDef ident="type" mode="change">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -914,7 +889,7 @@
               <attList>
                 <attDef ident="type" mode="change">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -929,7 +904,7 @@
               <attList>
                 <attDef ident="type" mode="change">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -944,7 +919,7 @@
               <attList>
                 <attDef ident="type" mode="change">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -966,21 +941,15 @@
             </elementSpec>
             <elementSpec module="transcr" ident="facsimile" mode="change">
               <content>
-                <rng:oneOrMore>
-                  <rng:ref name="surface"/>
-                </rng:oneOrMore>
+                <elementRef key="surface" minOccurs="1" maxOccurs="unbounded"/>
               </content>
             </elementSpec>
             <elementSpec module="textstructure" ident="front" mode="change">
               <content>
-                <rng:choice>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.divLike"/>
-                  </rng:oneOrMore>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.div1Like"/>
-                  </rng:oneOrMore>
-                </rng:choice>
+                <alternate>
+                  <classRef key="model.divLike" minOccurs="1" maxOccurs="unbounded"/>
+                  <classRef key="model.div1Like" minOccurs="1" maxOccurs="unbounded"/>
+                </alternate>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1038,7 +1007,7 @@
             </elementSpec>
             <elementSpec module="transcr" ident="surface" mode="change">
               <content>
-                <rng:ref name="graphic"/>
+                <elementRef key="graphic"/>
               </content>
             </elementSpec>
             <!-- ********************************* -->
