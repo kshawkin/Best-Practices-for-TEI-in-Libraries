@@ -311,7 +311,7 @@
                 The use of <val>weak</val> as the value of  <att>force</att> 
                  indicates that the encoder considers "run-on" to be a single
                 orthographic token, where the hyphen is not a word separator. The use of <val>no</val> as the value of 
-                <att>break</att> also indicates that <gi>lb</gi> occurs inside an orthographic token (single word) which is broken across a line.
+                <att>break</att> also indicates that the line break occurs inside an orthographic token (single word) which is broken across a line.
               </cell>
             </row>
             <row>
@@ -332,8 +332,8 @@
               <cell>
                 The use of <val>strong</val> as the value of  <att>force</att> 
                 indicates that the encoder considers "run-on" to be two 
-                orthographic tokens, where the hyphen is also s a word separator. The use of <val>yes</val> as the value of 
-                <att>break</att> indicates that <gi>lb</gi> occurs between two words.
+                orthographic tokens, where the hyphen is also a word separator. The use of <val>yes</val> as the value of 
+                <att>break</att> indicates that the line break occurs between two words.
               </cell>
             </row>
             <row>
@@ -356,7 +356,7 @@
                 indicates that the encoder considers "character" to be a single
                 orthographic token where the hyphen is only indicating that the word is broken across a line. The use of <val>no</val> as 
                 the value of 
-                <att>break</att> also indicates that <gi>lb</gi> occurs inside an orthographic token (single word) which is broken across a line.
+                <att>break</att> also indicates that the line break occurs inside an orthographic token (single word) which is broken across a line.
               </cell>
             </row>
             <row>
@@ -378,7 +378,7 @@
                 The use of <val>inter</val> as the value of <att>force</att> 
                 indicates that the encoder is not taking a position on whether "mark-up" 
                 is a single orthographic token or two words. The use of <val>maybe</val> as the value of 
-                <att>break</att> is also inconclusive on whether <gi>lb</gi> occurs in between words or inside a word.
+                <att>break</att> is also inconclusive on whether the line break occurs in between words or inside a word.
               </cell>
             </row>
           </table>
