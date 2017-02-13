@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TEI xml:lang="en" version="2.9.1"
+<TEI xml:lang="en" version="3.1.0"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -21,7 +21,13 @@
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
-      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
+      <editionStmt>
+	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
+	<note>That version number <emph>happens</emph> to match the
+	TEI P5 version number against which we are building schemas;
+	this is complete happenstance, the two are not
+	related.</note></p>
+      </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
         <availability status="restricted">
@@ -770,7 +776,7 @@
             <head>Level 4 Typographic Separators</head>
             <p>To mark typographic elements that indicate a structural break or boundary use <tag>ab type="typography"</tag>. The content of
               this element is the character(s) or device used to mark the
-              division in the source document. <att>style</att> may be used to indicate
+              division in the source document. The <att>style</att> attribute may be used to indicate
               how the separator is rendered.  As a content-bearing element, <gi>ab</gi> is recommended over the empty elements 
               <gi>milestone</gi> or <gi>space</gi>, as it can contain further markup and glyph information.
               For example:
@@ -866,7 +872,7 @@
       <!-- ********************************************* -->
       <div type="specification">
         <head>Specification</head>
-        <schemaSpec ident="lib4" docLang="en" xml:lang="en" prefix="lib4_" source="tei:2.9.1">
+        <schemaSpec ident="lib4" docLang="en" xml:lang="en" prefix="lib4_" source="tei:3.1.0">
           <moduleRef key="core"/>
           <moduleRef key="tei"/>
           <moduleRef key="textstructure" except="byline imprimatur"/>
@@ -934,7 +940,7 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <editorialDecl n="4"/>
+      <schemaRef key="BPTL-L4-v3.1.0a"/>
       <tagsDecl>
         <namespace name="http://www.tei-c.org/ns/1.0">
           <tagUsage gi="div">Unnumbered divs used.</tagUsage>
@@ -1415,21 +1421,19 @@
         <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>        
         <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
         <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>      
-        <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>      
         <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
         <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
         <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
         <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
         <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
         <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
-        <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
         <classSpec module="tei" ident="att.typed" mode="change" type="atts">
           <attList>
             <attDef ident="subtype" mode="delete"/>
           </attList>
         </classSpec>
         <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
-        <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
+        <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
         <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
         <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
       </schemaSpec>

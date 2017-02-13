@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TEI xml:lang="en" version="2.9.1"
+<TEI xml:lang="en" version="3.1.0"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -21,7 +21,13 @@
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
-      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
+      <editionStmt>
+	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
+	<note>That version number <emph>happens</emph> to match the
+	TEI P5 version number against which we are building schemas;
+	this is complete happenstance, the two are not
+	related.</note></p>
+      </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
         <availability status="restricted">
@@ -446,7 +452,7 @@
           <div type="example" xml:id="L3AHex">
             <head>Level 3 Alger Hiss document</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <TEI xml:id="someid">
+              <TEI xml:id="someid3">
                 <teiHeader xml:lang="en">
                   &lt;!-- header goes here -->
                 </teiHeader>
@@ -517,7 +523,7 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_" source="tei:2.9.1">
+          <schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_" source="tei:3.1.0">
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text front body back floatingText div div1 div2 div3 div4 div5 div6 div7"/>
@@ -1087,7 +1093,6 @@
             <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/>
             <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>
             <classSpec module="tei" ident="model.pLike.front" mode="delete" type="model"/>
-            <classSpec module="tei" ident="model.publicationStmtPart" mode="delete" type="model"/>
             <classSpec module="tei" ident="model.titlepagePart" mode="delete" type="model"/>
             <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
@@ -1095,14 +1100,13 @@
             <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
-            <classSpec module="tei" ident="att.sourced" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.typed" mode="change" type="atts">
               <attList>
                 <attDef ident="subtype" mode="delete"/>
               </attList>
             </classSpec>
             <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
-            <classSpec module="textstructure" ident="model.divBottm" mode="delete" type="model"/>
+            <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
             <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
           </schemaSpec>

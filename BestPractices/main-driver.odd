@@ -3,7 +3,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en" version="2.9.1">
+     xml:lang="en" version="3.1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -26,7 +26,13 @@
           <name type="organization">Text Encoding Initiative Consortium</name>
         </sponsor>
       </titleStmt>
-      <editionStmt><p>Version 3.0 (<date when="2011-10">October 2011</date>)</p></editionStmt>
+      <editionStmt>
+	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
+	<note>That version number <emph>happens</emph> to match the
+	TEI P5 version number against which we are building schemas;
+	this is complete happenstance, the two are not
+	related.</note></p>
+      </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
         <availability status="restricted">
