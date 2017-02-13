@@ -1,9 +1,8 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI xml:lang="en" version="3.1.0"
      xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns:s="http://purl.oclc.org/dsdl/schematron"
-     xmlns:rng="http://relaxng.org/ns/structure/1.0">
+     xmlns:s="http://purl.oclc.org/dsdl/schematron">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -15,18 +14,18 @@
           <name type="person">Kevin Hawkins</name>
         </editor>
         <editor>
-          <name person="person">Michelle Dalmau</name>
+          <name type="person">Michelle Dalmau</name>
         </editor>
         <editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
       <editionStmt>
-	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
-	<note>That version number <emph>happens</emph> to match the
-	TEI P5 version number against which we are building schemas;
-	this is complete happenstance, the two are not
-	related.</note></p>
+        <p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
+        <note>That version number <emph>happens</emph> to match the
+        TEI P5 version number against which we are building schemas;
+        this is complete happenstance, the two are not
+        related.</note></p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -372,11 +371,9 @@
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <rng:ref name="teiHeader"/>
-                <rng:optional>
-                  <rng:ref name="model.resourceLike"/>
-                </rng:optional>
-                <rng:ref name="text"/>
+                <elementRef key="teiHeader"/>
+                <classRef key="model.resourceLike" minOccurs="0"/>
+                <elementRef key="text"/>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -425,12 +422,10 @@
                 <memberOf key="att.typed"/>
               </classes>
               <content>
-                <rng:oneOrMore>
-                  <rng:choice>
-                    <rng:text/>
-                    <rng:ref name="model.global"/>
-                  </rng:choice>
-                </rng:oneOrMore>
+                <alternate minOccurs="1" maxOccurs="unbounded">
+                  <textNode/>
+                <classRef key="model.global"/>
+                        </alternate>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -524,14 +519,10 @@
             </elementSpec>
             <elementSpec module="textstructure" ident="back" mode="change">
               <content>
-                <rng:choice>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.divLike"/>
-                  </rng:oneOrMore>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.div1Like"/>
-                  </rng:oneOrMore>
-                </rng:choice>
+                <alternate>
+                  <classRef key="model.divLike" minOccurs="1" maxOccurs="unbounded"/>
+                  <classRef key="model.div1Like" minOccurs="1" maxOccurs="unbounded"/>
+                </alternate>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -576,14 +567,10 @@
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <rng:choice>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.divLike"/>
-                  </rng:oneOrMore>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.div1Like"/>
-                  </rng:oneOrMore>
-                </rng:choice>
+                <alternate>
+                  <classRef key="model.divLike" minOccurs="1" maxOccurs="unbounded"/>
+                  <classRef key="model.div1Like" minOccurs="1" maxOccurs="unbounded"/>
+                </alternate>
               </content>
               <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="fr">
@@ -630,24 +617,16 @@
                 <memberOf key="att.typed" mode="delete"/>
               </classes>
               <content>
-                <rng:optional>
-                  <rng:ref name="model.global"/>
-                </rng:optional>
-                <rng:optional>
-                  <rng:ref name="model.divTop"/>
-                </rng:optional>
-                <rng:optional>
-                  <rng:ref name="model.global"/>
-                </rng:optional>
-                <rng:ref name="ab"/>
-                <rng:optional>
-                  <rng:ref name="model.global"/>
-                </rng:optional>
+                <classRef key="model.global" minOccurs="0"/>
+                <classRef key="model.divTop" minOccurs="0"/>
+                <classRef key="model.global" minOccurs="0"/>
+                <elementRef key="ab"/>
+                <classRef key="model.global" minOccurs="0"/>
               </content>
               <attList>
                 <attDef ident="type" mode="add">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -666,24 +645,16 @@
                 <memberOf key="model.divLike"/>
               </classes>
               <content>
-                <rng:optional>
-                  <rng:ref name="model.global"/>
-                </rng:optional>
-                <rng:optional>
-                  <rng:ref name="model.divTop"/>
-                </rng:optional>
-                <rng:optional>
-                  <rng:ref name="model.global"/>
-                </rng:optional>
-                <rng:ref name="ab"/>
-                <rng:optional>
-                  <rng:ref name="model.global"/>
-                </rng:optional>
+                <classRef key="model.global" minOccurs="0"/>
+                <classRef key="model.divTop" minOccurs="0"/>
+                <classRef key="model.global" minOccurs="0"/>
+                <elementRef key="ab"/>
+                <classRef key="model.global" minOccurs="0"/>
               </content>
               <attList>
                 <attDef ident="type" mode="change">
                   <datatype>
-                    <rng:ref name="data.enumerated"/>
+                    <dataRef key="teidata.enumerated"/>
                   </datatype>
                   <defaultVal>section</defaultVal>
                 </attDef>
@@ -711,9 +682,7 @@
             </elementSpec>
             <elementSpec module="transcr" ident="facsimile" mode="change">
               <content>
-                <rng:oneOrMore>
-                  <rng:ref name="surface"/>
-                </rng:oneOrMore>
+                <elementRef key="surface" minOccurs="1" maxOccurs="unbounded"/>
               </content>
             </elementSpec>
             <elementSpec module="textstructure" ident="front" mode="change">
@@ -724,14 +693,10 @@
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <rng:choice>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.divLike"/>
-                  </rng:oneOrMore>
-                  <rng:oneOrMore>
-                    <rng:ref name="model.div1Like"/>
-                  </rng:oneOrMore>
-                </rng:choice>
+                <alternate>
+                  <classRef key="model.divLike" minOccurs="1" maxOccurs="unbounded"/>
+                  <classRef key="model.div1Like" minOccurs="1" maxOccurs="unbounded"/>
+                </alternate>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -751,9 +716,7 @@
               </exemplum>
             </elementSpec>
             <elementSpec module="core" ident="graphic" mode="change">
-              <content>
-                <rng:empty/>
-              </content>
+              <content/>
             </elementSpec>
             <elementSpec module="core" ident="head" mode="change">
               <classes mode="replace">
@@ -806,7 +769,7 @@
             </elementSpec>
             <elementSpec module="transcr" ident="surface" mode="change">
               <content>
-                <rng:ref name="graphic"/>
+                <elementRef key="graphic"/>
               </content>
             </elementSpec>
             <!-- ********************************* -->
@@ -857,9 +820,9 @@
             </classSpec>
             <classSpec module="tei" type="atts" ident="att.global.rendition" mode="change">
               <attList>
-		<attDef ident="rend" mode="delete"/>
-		<attDef ident="rendition" mode="delete"/>
-	      </attList>
+                <attDef ident="rend" mode="delete"/>
+                <attDef ident="rendition" mode="delete"/>
+              </attList>
             </classSpec>
             <classSpec module="tei" type="model" ident="model.inter" mode="change">
               <classes mode="change">
