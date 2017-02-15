@@ -185,8 +185,8 @@
         <div type="elrecs">
           <head>Element Recommendations for Level 4</head>
           <p>Use all elements specified in Levels 1, 2, and 3
-          <emph>except <gi>ab</gi>, plus elements in the following
-          table</emph>. Note that some of these elements are defined in
+          <emph>except <gi>ab</gi>,</emph> plus elements in the following
+          table. Note that some of these elements are defined in
           Level 3 as well, but their use in Level 4 is more strict.</p>
           <table rend="border: thin solid black; width: 80%;">
             <row>
@@ -306,8 +306,10 @@
             <row>        
               <cell><gi>persName</gi>, <gi>placeName</gi>,
               <gi>geogName</gi>, <gi>orgName</gi>, and <tag>name type="_"</tag> </cell>
-              <cell>Optionally use to encode personal, place, 
-              organizational, and other names used in a text.</cell>
+              <cell>Optionally use to encode personal, place,
+              organizational, and other names used in a text. The
+              <gi>persName</gi> element is also used to indicate a
+              personal name inside a <gi>person</gi> element (see below).</cell>
             </row> 
             <row>        
               <cell><gi>listName</gi>, <gi>listPlace</gi>, and
@@ -325,6 +327,30 @@
               further encoded using elements such as <gi>author</gi>,
               <gi>title</gi>, <gi>publisher</gi>, <gi>biblScope</gi>.</cell>
             </row>
+	    <row>
+	      <cell><gi>listPerson</gi></cell>
+	      <cell>Optionally used in support of transcriptions of
+	      oral interviews.</cell>
+	    </row>
+	    <row>
+	      <cell><gi>person</gi></cell>
+	      <cell>Optionally used in support of transcriptions of
+	      oral interviews. The use of the <att>role</att>
+	      attribute is strongly recommended, particularly to
+	      differentiate interviewer(s) from interviewee(s).</cell>
+	    </row>
+	    <row>
+	      <cell><gi>birth</gi></cell>
+	      <cell>Optionally used inside a <gi>person</gi> to
+	      indicate the date or place of birth of the person being
+	      documented.</cell>
+	    </row>
+	    <row>
+	      <cell><gi>langKnowledge</gi> and <gi>langKnown</gi></cell>
+	      <cell>Optionally used inside a <gi>person</gi> to
+	      indicate the level of proficiency the person being
+	      documented has with a particular language(s).</cell>
+	    </row>
           </table>
         </div>
         <div type="grecs">
@@ -871,7 +897,7 @@
           <moduleRef key="textstructure" except="byline imprimatur"/>
           <moduleRef key="linking" include="ab"/>
           <moduleRef key="transcr" include="facsimile surface zone"/>
-          <moduleRef key="namesdates" include="orgName persName placeName geogName"/>
+          <moduleRef key="namesdates" include="orgName persName placeName geogName listPerson person birth langKnown"/>
           <specGrpRef target="./lib-header.odd#libHeadSpec"/>
           <moduleRef key="figures" include="table row cell figure figDesc"/>
           <moduleRef key="drama" include="castItem castList"/>
@@ -1324,6 +1350,16 @@
             <memberOf mode="delete" key="att.datable"/>
           </classes>
         </elementSpec>
+	<elementSpec module="namesdates" ident="person" mode="change">
+	  <attList>
+	    <attDef ident="role" mode="change">
+	      <valList type="semi">
+		<valItem ident="interviewer"/>
+		<valItem ident="interviewee"/>
+	      </valList>
+	    </attDef>
+	  </attList>
+	</elementSpec>
         <elementSpec module="core" ident="ptr" mode="change">
           <attList>
             <attDef ident="cRef" mode="delete"/>
