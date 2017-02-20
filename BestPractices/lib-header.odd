@@ -23,6 +23,10 @@
 	</editor>
       </titleStmt>
       <editionStmt>
+	<!-- When you change the version # here, remember to change it
+	     a) in the <editionStmt>s of the other .odd files, and
+	     b) in the semi-closed list of values of @key of <schemaRef> in
+	        lib-header.odd, too! -->
 	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
 	<note>That version number <emph>happens</emph> to match the
 	TEI P5 version number against which we are building schemas;
@@ -995,9 +999,9 @@
 	      <cell>
 		<p>Date of publication, distribution, etc. from the source document bibliographic item. The content of the element is the statement of this data according to the national cataloging code.</p>
 
-		<p>Since the content of the element according to the national cataloging code is not easily processed by machine, when possible include the following attribute(s) with valid values: ''either'' <att>when</att>, ''or'' both <att>notBefore</att> and <att>notAfter</att>, ''or'' one or both of <att>from</att> and <att>to</att>.</p>
+		<p>Since the content of the element according to the national cataloging code is not easily processed by machine, when possible include the following attribute(s) with valid values: <emph>either</emph> <att>when</att>, <emph>or</emph> both <att>notBefore</att> and <att>notAfter</att>, <emph>or</emph> one or both of <att>from</att> and <att>to</att>.</p>
 
-		<p>National cataloging codes may distinguish between a possible range of dates for publication (such as "186-" for something certainly published during the 1860s) and an uncertain date of publication (such as "1864?" or "186-?" for a date or range of dates assumed by the cataloger).  In the case of uncertainty, use <code>cert="low"</code>.</p>
+		<p>National cataloging codes may distinguish between a possible range of dates for publication (such as "186-" for something certainly published during the 1860s) and an uncertain date of publication (such as "1864?" or "186-?" for a date or range of dates assumed by the cataloger). In the case of uncertainty, use <code>cert="low"</code>.</p>
 
 		<p>If the date is unknown (for example, recorded according to the national cataloging code as "[n.d.]", use <code>cert="unknown"</code>.</p>
 	      </cell>
@@ -1306,27 +1310,37 @@
 	      <cell>n/a</cell>
 	    </row>
 
+	    <!-- put <schemaRef> here -->
+	    
 	    <row>
 	      <cell>│</cell>
 	      <cell>├</cell>
 	      <cell cols="5">
 		<tag>editorialDecl</tag>
 	      </cell>
-	      <cell style="color:red;">
-		<p>Use of the <att>n</att> attribute is recommended to record the encoding level: <val>1</val> for Level 1, <val>2</val> for Level 2, etc.</p>
-
-		<p>Include one or more <gi>p</gi> elements as children with information on:
-
+	      <cell>
+		<p>Include one or more of the specialized elements for
+		the purpose (<gi>correction</gi>,
+		<gi>hyphenation</gi>, <gi>interpretation</gi>,
+		<gi>normalization</gi>, <gi>punctuation</gi>,
+		<gi>quotation</gi>, <gi>segmentation</gi>, or
+		<gi>stdVals</gi>), or <gi>p</gi> elements as children
+		with information on:
 		<list>
 		  <item>editorial decisions made during encoding</item>
 		  <item>notes about omissions of material found in the original work</item>
-		  <item>the format of the data in the header: Does the data in the <gi>sourceDesc</gi> follow AACR rules? How about in the <gi>fileDesc</gi>?  Is ISBD punctuation included?</item>
+		  <item>the format of the data in the header: Does the data in the <gi>sourceDesc</gi> follow AACR rules? How about in the <gi>fileDesc</gi>? Is ISBD punctuation included?</item>
 		  <item>automated processes used to generate the markup or content</item>
 		  <item>external files or databases (such as those containing authority data) referenced in the TEI document</item>
 		  <item>whether line breaks, column breaks, and/or page breaks are encoded</item>
-		  <item>whether hyphens and quotation marks have been retained as character data or removed and indicated by the presence of an element such as <gi>lb</gi>, <gi>cb</gi>, <gi>pb</gi>, <gi>quote</gi>, or <gi>floatingText</gi>
-		  </item>
-		  <item>whether types of hyphens have been distinguished (applies to Level 3 only)</item>
+		  <item>whether hyphens (in <gi>hyphenation</gi>),
+		  quotation marks (in <gi>quotation</gi>), and other
+		  punctuation marks (in <gi>punctuation</gi>) have
+		  been retained as character data or removed and
+		  indicated by the presence of markup</item>
+		  <item>whether types of hyphens have been
+		  distinguished (in <gi>hyphenation</gi>, applies to
+		  Level 3 only)</item>
 		</list>
 		</p>
 	      </cell>
@@ -1335,10 +1349,11 @@
 		  <item>500 for content of p element</item>
 		  <item>856 $z, which includes boilerplate text depending on encoding level and how the TEI document is presented to the user (as page images, text, or both)</item>
 		</list>
-		</cell> --&gt;
+		</cell>
 		<cell>n/a</cell>
 	    </row>
-
+	    <!-- correction hyphenation interpretation normalization
+	         punctuation quotation segmentation stdVals -->
 	    <row>
 	      <cell>│</cell>
 	      <cell>│</cell>
@@ -1350,6 +1365,94 @@
 	      made to the source text, and how they were made.</cell>
 	      <cell>n/a</cell>
 	      <cell>n/a</cell>
+	    </row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<tag>hyphenation eol="__"</tag>
+	      </cell>
+	      <cell>A <gi>hyphenation</gi> element may be used to
+	      describe how both soft and hard hyphens have been
+	      recorded.</cell>
+	      <cell style="color:red;">???</cell>
+	      <cell style="color:red;">???</cell>
+	    </row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<gi>interpretation</gi>
+	      </cell>
+	      <cell style="color:red;">?? SHOULD THIS BE HERE ??</cell>
+	      <cell style="color:red;">???</cell>
+	      <cell style="color:red;">???</cell>
+	    </row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<tag>normalization method="__"</tag>
+	      </cell>
+	      <cell>One or more <gi>normalization</gi> elements may be
+	      provided to explicitly declare the extent of
+	      normalization or regularization.</cell>
+	      <cell style="color:red;">???</cell>
+	      <cell style="color:red;">???</cell>
+	    </row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<tag>punctuation marks="__" placement="__"</tag>
+	      </cell>
+	      <cell>A <gi>punctuation</gi> element may be provided to
+	      explicitly declare whether punctuation marks have been
+	      retained or replaced by markup, and if retained where
+	      they have been placed with respect intra-paragraph
+	      elements.</cell>
+	      <cell style="color:red;">???</cell>
+	      <cell style="color:red;">???</cell>
+	    </row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<gi>quotation</gi>
+	      </cell>
+	      <cell>A specialization of the <gi>punctuation</gi>
+	      element, the <gi>quotation</gi> element may be provided
+	      to explicitly declare whether quotation marks have been
+	      retained as content or not.</cell>
+	      <cell style="color:red;">???</cell>
+	      <cell style="color:red;">???</cell>
+	    </row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<gi>segmentation</gi>
+	      </cell>
+	      <cell style="color:red;">?? SHOULD THIS BE HERE ??</cell>
+	      <cell style="color:red;">???</cell>
+	      <cell style="color:red;">???</cell>
+	    </row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<gi>stdVals</gi>
+	      </cell>
+	      <cell style="color:red;">?? SHOULD THIS BE HERE ??</cell>
+	      <cell style="color:red;">???</cell>
+	      <cell style="color:red;">???</cell>
 	    </row>
 
 	    <row>
@@ -1743,6 +1846,9 @@
 		  <datatype minOccurs="1" maxOccurs="1">
 		    <dataRef key="teidata.enumerated"/>
 		  </datatype>
+		  <!-- When you change the version # here, remember to change it
+		       in the <editionStmt>s in each of the .odd
+		       files, too! -->
 		  <valList type="semi">
 		    <valItem ident="BPTL-L1-v3.1.0a">
 		      <gloss>Best Practices for TEI in Libraries level 1, version 3.1.0a</gloss>
@@ -1763,23 +1869,47 @@
 		</attDef>  
 	      </attList>
 	  </elementSpec>
-	  <elementSpec module="header" ident="editorialDecl" mode="change">
-	    <!-- move this to a new <hyphen> element at next release
-		 == Perhaps just using the TEI <hyphenation> element makes more senes —Syd, 2016-12-12 ==
-		 <rng:element name="p">
-		 <rng:choice>
-		 <rng:value type="token">All hyphens in source document encoded as U+2010.</rng:value>
-		 <rng:value type="token">All hyphens in source document encoded as U+002D.</rng:value>
-		 <rng:value type="token">Hyphens in source document
+	  <elementSpec ident="hyphenation-para" mode="add">
+	    <altIdent>p</altIdent>
+	    <content>
+	      <valList type="closed">
+		<valItem ident="All hyphens in source document encoded as U+2010."/>
+		<valItem ident="All hyphens in source document encoded as U+002D."/>
+		<valItem ident="Hyphens in source document
 		 encoded as U+2010. Line-ending hyphens
-		 differentiated with @type of immediately following
-		 &lt;lb&gt; element.</rng:value>
-		 <rng:value type="token">Hyphens in source document
+		 differentiated with @break of immediately following
+		 &lt;lb&gt; element."/>
+		<valItem ident="Hyphens in source document
 		 encoded as U+002D. Line-ending hyphens
-		 differentiated with @type of immediately following
-		 &lt;lb&gt; element.</rng:value>
-		 </rng:choice>
-		 </rng:element> -->
+		 differentiated with @break of immediately following
+		 &lt;lb&gt; element."/>
+		<valItem ident="Hyphens in source document encoded as
+				U+2010 inside a &lt;pc&gt;. Line-ending hyphens
+				differentiated with @force of the &lt;pc&gt; and
+				@break of immediately following &lt;lb&gt;
+				element."/>
+		<valItem ident="Hyphens in source document encoded as
+				U+202D inside a &lt;pc&gt;. Line-ending hyphens
+				differentiated with @force of the &lt;pc&gt; and
+				@break of immediately following &lt;lb&gt;
+				element."/>
+	      </valList>
+	    </content>
+	  </elementSpec>
+	  <elementSpec module="header" ident="hyphenation" mode="change">
+	    <content>
+	      <alternate>
+		<sequence>
+		  <elementRef key="hyphenation-para" minOccurs="1" maxOccurs="1"/>
+		  <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+		<sequence>
+		  <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+	      </alternate>
+	    </content>
+	  </elementSpec>
+	  <elementSpec module="header" ident="editorialDecl" mode="change">
 	    <!-- also move this to the new <hyphen> element at next release
 		 <constraintSpec scheme="isoschematron" ident="hyphen-match">
 		 <constraint>

@@ -59,6 +59,7 @@ else # dunno
 fi
 
 for BASE in lib1 lib2 lib3 lib4 ; do
+    echo ""; echo "--------- begin processing ${BASE} ---------"
     INNAME=${BASE}.odd                # input filename
     # find the prefix specified in the ODD file, if any
     # (the variable OSPFX is for Odd file Specified PreFiX)
@@ -97,7 +98,7 @@ done
 #echo "13. generate XInclude processed version of main driver."
 
 
-echo "generate HTML from main driver."
+echo ""; echo "--------- generate HTML from main driver ---------"
 # need a way to set showTitleAuthor=true
 # need a way to set suppressTEIexamples=true
 

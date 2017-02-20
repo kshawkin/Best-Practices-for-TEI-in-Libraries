@@ -27,6 +27,10 @@
         </sponsor>
       </titleStmt>
       <editionStmt>
+	<!-- When you change the version # here, remember to change it
+	     a) in the <editionStmt>s of the other .odd files, and
+	     b) in the semi-closed list of values of @key of <schemaRef> in
+	        lib-header.odd, too! -->
 	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
 	<note>That version number <emph>happens</emph> to match the
 	TEI P5 version number against which we are building schemas;
@@ -218,6 +222,7 @@
         indexes; at Level 4 and above, the transcription should be
         complete. Any omissions of material found in the original work
         should be noted in the <gi>editorialDecl</gi> in the
+	<!-- Why not in the <samplingDecl>? See issue #53 —Syd, 2017-02-20 -->
         TEI header.</p>
         <div type="====">
           <head>Punctuation</head>
@@ -228,18 +233,21 @@
           in order to simplify rendering of the encoded text as it
           appears in the source document. For example:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <p>She said, <said>“Nobody uses the term 
-            <soCalled>‘electronic text’</soCalled> anymore”</said>!</p>
+            <p>When she said <said>“Nobody uses the term
+            <mentioned>‘electronic text’</mentioned> anymore”</said>
+            he nearly passed out!</p>
           </egXML>
-          Use <gi>editorialDecl</gi> in the TEI header to record
-          whether such punctuation has been removed.</p>
+          Use <gi>quotation</gi> element in the <gi>editorialDecl</gi>
+          in the TEI header to record whether such punctuation has
+          been removed.</p>
           <p>When removing punctuation marks whose rendering in the
           source document is worth preserving, use the <att>rend</att>
           attribute on the appropriate element to describe the
           punctuation marks that were removed. For example:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <p>She said, <said rend="quotes: '“' '”'">Nobody uses the term 
-            <soCalled rend="quotes: '‘' '’'">electronic text</soCalled> anymore</said>!</p>
+            <p>When she said <said rend="quotes: '“' '”'">Nobody uses the term 
+            <mentioned rend="quotes: '‘' '’'">electronic text</mentioned> anymore</said>
+	    he nearly passed out!</p>
           </egXML>
           </p>
         </div>
@@ -486,8 +494,8 @@
         with an editor's note requiring its own text division, would be 
         encoded right after the opening tag of the text division for the 
         editor's note.</p>
-        <p>Any divergence from this practice should be documented in the 
-        <gi>editorialDecl</gi>.</p>
+        <p>Any divergence from this practice should be documented in a
+        <gi>p</gi> in the <gi>editorialDecl</gi>.</p>
       </div>
       <div type="===" xml:id="txtimglnk">
         <head>Linking Between Encoded Text and Images of Source Documents</head>

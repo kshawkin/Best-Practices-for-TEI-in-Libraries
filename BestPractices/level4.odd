@@ -21,6 +21,10 @@
         </editor>
       </titleStmt>
       <editionStmt>
+	<!-- When you change the version # here, remember to change it
+	     a) in the <editionStmt>s of the other .odd files, and
+	     b) in the semi-closed list of values of @key of <schemaRef> in
+	        lib-header.odd, too! -->
         <p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
         <note>That version number <emph>happens</emph> to match the
         TEI P5 version number against which we are building schemas;
@@ -525,11 +529,13 @@
             in the same directory as the source file, but it may be
             named anything and placed anywhere that can be referenced by
             a URI.)</p>
-            <p>When referencing external files or databases by tag URI, it is
-            strongly recommended to provide an explanation in the
-            <gi>editorialDecl</gi> section of the TEI header. When referencing a
-            controlled vocabulary by relative URI, be sure to specify the controlled vocabulary in
-            the <gi>classDecl</gi> section of the TEI header.</p>
+            <p>When referencing external files or databases by tag
+            URI, it is strongly recommended to provide an explanation
+            in a <gi>p</gi> element in the <gi>editorialDecl</gi>
+            section of the TEI header. When referencing a controlled
+            vocabulary by relative URI, be sure to specify the
+            controlled vocabulary in the <gi>classDecl</gi> section of
+            the TEI header.</p>
             <list>
               <item>Place-name tagging example in main TEI document (the transcription of the source document):
               <egXML xmlns="http://www.tei-c.org/ns/Examples">     
