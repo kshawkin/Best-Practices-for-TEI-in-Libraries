@@ -1179,9 +1179,10 @@
                   <dataRef key="teidata.enumerated"/>
                 </datatype>
                 <defaultVal>section</defaultVal>
-                <!-- When changing values for the @type attribute on the div element, remember to make the 
-                     parallel adjustments to the list that appears in the prose of the BPTL and to the attDef for the @type attribute, so that the
-                     values remain in sync -->
+                <!-- When changing values for the @type attribute on divs, remember to make the 
+                     parallel adjustments to the list that appears in the prose of the BPTL (in main-driver.odd) 
+                     and to the attDef for the @type attribute on numbered and unnumbered divs in level2.odd, 
+                     level3.odd, and level4.odd, so that the values remain in sync -->
                 <valList type="semi">
                   <valItem ident="preface">
                     <desc>A section of the front matter that does not carry a more specific designation. Usually appears in front matter.</desc>
