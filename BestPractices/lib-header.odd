@@ -1314,7 +1314,7 @@
 	  		<cell>│</cell>
 	  		<cell>├</cell>
 	  		<cell cols="5">
-	  			<tag>schemaRef</tag>
+	  			<tag>schemaRef key="_"</tag>
 	  		</cell>
 	  		<cell>
 	  			<p>Use of the <gi>schemaRef</att> element is recommended to record the encoding level. 
