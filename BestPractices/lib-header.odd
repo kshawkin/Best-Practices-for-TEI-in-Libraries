@@ -1348,26 +1348,22 @@
 	      <cell>
 		<p>Include one or more of the specialized elements for
 		the purpose (<gi>correction</gi>,
-		<gi>hyphenation</gi>, <gi>interpretation</gi>,
-		<gi>normalization</gi>, <gi>punctuation</gi>,
-		<gi>quotation</gi>, <gi>segmentation</gi>, or
-		<gi>stdVals</gi>), or <gi>p</gi> elements as children
-		with information on:
+		<gi>hyphenation</gi>, <gi>normalization</gi>,
+		<gi>punctuation</gi>, or <gi>quotation</gi>), or
+		<gi>p</gi> elements as children with information on:
 		<list>
 		  <item>editorial decisions made during encoding</item>
 		  <item>notes about omissions of material found in the original work</item>
-		  <item>the format of the data in the header: Does the data in the <gi>sourceDesc</gi> follow AACR rules? How about in the <gi>fileDesc</gi>? Is ISBD punctuation included?</item>
+		  <item>the format of the data in the header: Does the
+		  data in the <gi>sourceDesc</gi> follow AACR rules?
+		  How about in the <gi>fileDesc</gi>? Is ISBD
+		  punctuation included?</item>
 		  <item>automated processes used to generate the markup or content</item>
-		  <item>external files or databases (such as those containing authority data) referenced in the TEI document</item>
-		  <item>whether line breaks, column breaks, and/or page breaks are encoded</item>
-		  <item>whether hyphens (in <gi>hyphenation</gi>),
-		  quotation marks (in <gi>quotation</gi>), and other
-		  punctuation marks (in <gi>punctuation</gi>) have
-		  been retained as character data or removed and
-		  indicated by the presence of markup</item>
-		  <item>whether types of hyphens have been
-		  distinguished (in <gi>hyphenation</gi>, applies to
-		  Level 3 only)</item>
+		  <item>external files or databases (such as those
+		  containing authority data) referenced in the TEI
+		  document</item>
+		  <item>whether line breaks, column breaks, page
+		  breaks, or a combination are encoded</item>
 		</list>
 		</p>
 	      </cell>
@@ -1379,8 +1375,6 @@
 		</cell>
 		<cell>n/a</cell>
 	    </row>
-	    <!-- correction hyphenation interpretation normalization
-	         punctuation quotation segmentation stdVals -->
 	    <row>
 	      <cell>│</cell>
 	      <cell>│</cell>
@@ -1403,17 +1397,6 @@
 	      <cell>A <gi>hyphenation</gi> element may be used to
 	      describe how both soft and hard hyphens have been
 	      recorded.</cell>
-	      <cell style="color:red;">???</cell>
-	      <cell style="color:red;">???</cell>
-	    </row>
-	    <row>
-	      <cell>│</cell>
-	      <cell>│</cell>
-	      <cell>├</cell>
-	      <cell cols="4">
-		<gi>interpretation</gi>
-	      </cell>
-	      <cell style="color:red;">?? SHOULD THIS BE HERE ??</cell>
 	      <cell style="color:red;">???</cell>
 	      <cell style="color:red;">???</cell>
 	    </row>
@@ -1456,28 +1439,6 @@
 	      element, the <gi>quotation</gi> element may be provided
 	      to explicitly declare whether quotation marks have been
 	      retained as content or not.</cell>
-	      <cell style="color:red;">???</cell>
-	      <cell style="color:red;">???</cell>
-	    </row>
-	    <row>
-	      <cell>│</cell>
-	      <cell>│</cell>
-	      <cell>├</cell>
-	      <cell cols="4">
-		<gi>segmentation</gi>
-	      </cell>
-	      <cell style="color:red;">?? SHOULD THIS BE HERE ??</cell>
-	      <cell style="color:red;">???</cell>
-	      <cell style="color:red;">???</cell>
-	    </row>
-	    <row>
-	      <cell>│</cell>
-	      <cell>│</cell>
-	      <cell>├</cell>
-	      <cell cols="4">
-		<gi>stdVals</gi>
-	      </cell>
-	      <cell style="color:red;">?? SHOULD THIS BE HERE ??</cell>
 	      <cell style="color:red;">???</cell>
 	      <cell style="color:red;">???</cell>
 	    </row>
@@ -1820,7 +1781,7 @@
 	  </elementSpec>
 	  <moduleRef key="tagdocs" include="att val gi tag"/>
 	  <moduleRef key="header"
-		     include="extent teiHeader fileDesc titleStmt editionStmt edition idno publicationStmt authority availability distributor seriesStmt notesStmt sourceDesc encodingDesc schemaRef projectDesc editorialDecl correction hyphenation interpretation normalization punctuation quotation segmentation stdVals tagsDecl namespace tagUsage rendition classDecl taxonomy appInfo application profileDesc langUsage language textClass classCode keywords revisionDesc change"/>
+		     include="extent teiHeader fileDesc titleStmt editionStmt edition idno publicationStmt authority availability distributor seriesStmt notesStmt sourceDesc encodingDesc schemaRef projectDesc editorialDecl correction hyphenation normalization punctuation quotation tagsDecl namespace tagUsage rendition classDecl taxonomy appInfo application profileDesc langUsage language textClass classCode keywords revisionDesc change"/>
 	  <elementSpec module="header" ident="change" mode="change">
 	    <!-- constraintSpec scheme="isoschematron"
 		 ident="revChronOrder"> </constraintSpec -->
