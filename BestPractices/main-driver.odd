@@ -67,7 +67,7 @@
     <encodingDesc>
       <tagsDecl>
         <rendition scheme="css" selector="table">border-width: 2px; border-style: groove;</rendition>
-        <rendition scheme="css" selector="td">border-width: 2px; border-style: inset;</rendition>
+        <rendition scheme="css" selector="cell">border-width: 2px; border-style: inset;</rendition>
       </tagsDecl>
     </encodingDesc>
   </teiHeader>
