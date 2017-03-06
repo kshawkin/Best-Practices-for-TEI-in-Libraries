@@ -770,11 +770,11 @@
         document (within the <gi>text</gi> element), as evidenced by
         attributes used in encoding example snippets and the prose
         description of this document.</p>
-	<p>Scores of attributes are available for use within
+	<!--<p>Scores of attributes are available for use within
 	<gi>text</gi>, and a list of those recommended for use in documents
 	conforming to these <title>Best Practices</title> is included in <ref
         target="#Appendix_A:_Recommended_Attributes">Appendix
-        A</ref>.</p>
+        A</ref>.</p>-->
         <p>In this section is general advice on the use of particular
         attributes commonly needed for library encoding projects. (All
         of the attributes below are commonly used on various elements,
@@ -1128,99 +1128,7 @@
       work. The DLF also provided teleconferencing support for our
       regularly scheduled meetings.</p>
     </div>
-    <div type="==">
-      <head>Appendix A: Recommended Attributes</head>
-      <p>The following is a list of attributes recommended for use in
-      TEI documents created according to these <title>Best
-      Practices</title>. It includes both attributes explicitly
-      mentioned in these <title>Best Practices</title> as well as
-      those that the contributors to these <title>Best
-      Practices</title> find likely to be used with the elements
-      mentioned.</p>
-      <list>
-        <item><att>anchored</att></item>
-        <item><att>baseForm</att></item>
-        <item><att>baseTypes</att></item>
-        <item><att>calendar</att></item>
-        <item><att>cause</att></item>
-        <item><att>cert</att></item>
-        <item><att>class</att></item>
-        <item><att>cols</att></item>
-        <item><att>copyOf</att></item>
-        <item><att>corresp</att></item>
-        <item><att>degree</att></item>
-        <item><att>dur</att></item>
-        <item><att>dur-iso</att></item>
-        <item><att>ed</att></item>
-        <item><att>end</att></item>
-        <item><att>evaluate</att></item>
-        <item><att>exclude</att></item>
-        <item><att>facs</att></item>
-        <item><att>from</att></item>
-        <item><att>from-iso</att></item>
-        <item><att>full</att></item>
-        <item><att>gi</att></item>
-        <item><att>given</att></item>
-        <item><att>group</att></item>
-        <item><att>hand</att></item>
-        <item><att>height</att></item>
-        <item><att>ident</att></item>
-        <item><att>key</att></item>
-        <item><att>level</att></item>
-        <item><att>locus</att></item>
-        <item><att>marks</att></item>
-        <item><att>met</att></item>
-        <item><att>min</att></item>
-        <item><att>n</att></item>
-        <item><att>name</att></item>
-        <item><att>next</att></item>
-        <item><att>notAfter</att></item>
-        <item><att>notBefore</att></item>
-        <item><att>org</att></item>
-        <item><att>part</att></item>
-        <item><att>period</att></item>
-        <item><att>place</att></item>
-        <item><att>precision</att></item>
-        <item><att>prev</att></item>
-        <item><att>quantity</att></item>
-        <item><att>reason</att></item>
-        <item><att>ref</att></item>
-        <item><att>rend</att></item>
-        <item><att>render</att></item>
-        <item><att>rendition</att></item>
-        <item><att>resp</att></item>
-        <item><att>rhyme</att></item>
-        <item><att>role</att></item>
-        <item><att>rows</att></item>
-        <item><att>sex</att></item>
-        <item><att>scale</att></item>
-        <item><att>scheme</att></item>
-        <item><att>scope</att></item>
-        <item><att>select</att></item>
-        <item><att>sort</att></item>
-        <item><att>subtype</att></item>
-        <item><att>synch</att></item>
-        <item><att>target</att></item>
-        <item><att>targetEnd</att></item>
-        <item><att>targets</att></item>
-        <item><att>targFunc</att></item>
-        <item><att>to</att></item>
-        <item><att>to-iso</att></item>
-        <item><att>type</att></item>
-        <item><att>unit</att></item>
-        <item><att>uri</att></item>
-        <item><att>url</att></item>
-        <item><att>usage</att></item>
-        <item><att>version</att></item>
-        <item><att>when</att></item>
-        <item><att>who</att></item>
-        <item><att>width</att></item>
-        <item><att>xml:base</att></item>
-        <item><att>xml:id</att></item>
-        <item><att>xml:lang</att></item>
-        <item><att>xml:space</att></item>
-        </list>
-      </div>
+    <!-- removed Appendix A: List of Recommended Attributes -->
       <div type="==">
         <head>Appendix B: History of This Document</head>
         <p>This document was formerly known as <title>TEI Text
