@@ -1310,32 +1310,34 @@
 	      <cell>n/a</cell>
 	    </row>
 
-	  	<row>
-	  		<cell>│</cell>
-	  		<cell>├</cell>
-	  		<cell cols="5">
-	  			<tag>schemaRef key="_"</tag>
-	  		</cell>
-	  		<cell>
-	  			<p>Use of the <gi>schemaRef</att> element is recommended to record the encoding level. 
-	  				Use the <att>key</att> attribute for the value that indicates the encoding level:
-	  				<list>
-	  					<item> Level 1: <val>BPTL-L1-v3.1.0a</val></item>
-	  					<item> Level 2: <val>BPTL-L2-v3.1.0a</val></item>
-	  					<item> Level 3: <val>BPTL-L3-v3.1.0a</val></item>
-	  					<item> Level 4: <val>BPTL-L4-v3.1.0a</val></item>
-	  					<item> Level 5: <val>BPTL-L5-v3.1.0a</val></item>
-	  				</list>
-	  				
-	  				
-	  		</cell>
-	  		<cell>
-	  			<list>
-	  				<item>856 $z, which includes boilerplate text depending on encoding level and how the TEI document is presented to the user (as page images, text, or both)</item>
-	  			</list>
-	  		</cell> --&gt;
-	  		<cell>n/a</cell>
-	  	</row>
+	    <row>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="5">
+		<tag>schemaRef key="_"</tag>
+	      </cell>
+	      <cell>
+		<p>Use of the <gi>schemaRef</gi> element is recommended to record the encoding level. 
+		Use the <att>key</att> attribute for the value that indicates the encoding level:
+		<list>
+		  <item> Level 1: <val>BPTL-L1-v3.1.0a</val></item>
+		  <item> Level 2: <val>BPTL-L2-v3.1.0a</val></item>
+		  <item> Level 3: <val>BPTL-L3-v3.1.0a</val></item>
+		  <item> Level 4: <val>BPTL-L4-v3.1.0a</val></item>
+		  <item> Level 5: <val>BPTL-L5-v3.1.0a</val></item>
+		</list>
+		</p>		
+	      </cell>
+	      <cell>
+		<list>
+		  <item>856 $z, which includes boilerplate text
+		  depending on encoding level and how the TEI document
+		  is presented to the user (as page images, text, or
+		  both)</item>
+		</list>
+		</cell>
+		<cell>n/a</cell>
+	      </row>
 	    
 	    <row>
 	      <cell>│</cell>

@@ -64,6 +64,12 @@
         driver file started <date when="2011-01-01"/>.</p>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <tagsDecl>
+        <rendition scheme="css" selector="table">border-width: 2px; border-style: groove;</rendition>
+        <rendition scheme="css" selector="td">border-width: 2px; border-style: inset;</rendition>
+      </tagsDecl>
+    </encodingDesc>
   </teiHeader>
   <text>
     <body>
@@ -93,7 +99,7 @@
       used at higher levels&#x2014;often because more specific
       elements replace generic elements.</p>
       <p>In brief, the encoding levels (with approximate examples) are as follows:
-      <table rend="border: thin solid black;">
+      <table>
         <row role="label">
           <cell>Level</cell>
           <cell>Description</cell>
@@ -480,7 +486,7 @@
              parallel adjustments to the list that appears in the prose of the BPTL and to the attDef for the @type attribute, so that the
              values remain in sync -->
         
-        <table  rend="border: thin solid black;">
+        <table>
           <row>
             <cell cols="2">Front Matter</cell>
             <cell rend="width: 10px;"> </cell>
@@ -563,7 +569,7 @@
         </table>
         
        
-        <table rend="border: thin solid black;">
+        <table>
           <row>
             <cell cols="5">Body</cell>
           </row>
@@ -905,7 +911,7 @@
     </div>
     <div type="==">
       <head>Structure of a TEI Document</head>
-      <table rend="border: thin solid black;">
+      <table>
         <row role="label">
           <cell cols="2">Element</cell>
           <cell>Description</cell>
