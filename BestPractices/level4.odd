@@ -1583,7 +1583,6 @@
         <classSpec module="tei" ident="model.frontPart" mode="delete" type="model"/> 
         <classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/> 
         <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>        
-        <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
         <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>      
         <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
         <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
