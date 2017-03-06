@@ -1022,6 +1022,10 @@
             <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
             <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
+	    <!-- Not a class deletion: model.noteLike is removed from model.global at levels 1 & 2 -->
+	    <classSpec module="core" ident="model.noteLike" mode="change" type="model">
+	      <classes mode="replace"/>
+	    </classSpec>
           </schemaSpec>
         </div>
       </div>
