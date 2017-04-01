@@ -1528,6 +1528,18 @@
 	    </row>
 
 	    <row>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="5">
+		<gi>samplingDecl</gi>
+		<gi>p</gi>
+	      </cell>
+	      <cell>Enter a prose description of the rationale and methods used in selecting texts, or parts of text, for inclusion</cell>
+	      <cell>500</cell>
+	      <cell>n/a</cell>
+	    </row>
+
+	    <row>
 	      <cell>├</cell>
 	      <cell cols="6">
 		<gi>profileDesc</gi>
@@ -1781,7 +1793,7 @@
 	  </elementSpec>
 	  <moduleRef key="tagdocs" include="att val gi tag"/>
 	  <moduleRef key="header"
-		     include="extent teiHeader fileDesc titleStmt editionStmt edition idno publicationStmt authority availability distributor seriesStmt notesStmt sourceDesc encodingDesc schemaRef projectDesc editorialDecl correction hyphenation normalization punctuation quotation tagsDecl namespace tagUsage rendition classDecl taxonomy appInfo application profileDesc langUsage language textClass classCode keywords revisionDesc change"/>
+		     include="appInfo application authority availability change classCode classDecl correction distributor edition editionStmt editorialDecl encodingDesc extent fileDesc hyphenation idno keywords langUsage language namespace normalization notesStmt profileDesc projectDesc publicationStmt punctuation quotation rendition revisionDesc samplingDecl schemaRef seriesStmt sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
 	  <elementSpec module="header" ident="change" mode="change">
 	    <!-- constraintSpec scheme="isoschematron"
 		 ident="revChronOrder"> </constraintSpec -->
