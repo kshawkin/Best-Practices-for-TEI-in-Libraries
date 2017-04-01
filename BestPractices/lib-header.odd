@@ -190,7 +190,7 @@
 
 	  Gray boxes in the source document column indicate that while the corresponding TEI element describes the TEI document, the value of this field is often derived from metadata about the source document, to be found in the MARC fields listed.
 
-	  <table rend="border: 1 solid black;">
+	  <table rend="table">
 	    <row role="label">
 	      <cell cols="7">Element</cell>
 	      <cell>Description</cell>

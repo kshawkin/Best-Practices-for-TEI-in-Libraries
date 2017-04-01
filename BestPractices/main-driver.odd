@@ -99,7 +99,7 @@
       used at higher levels&#x2014;often because more specific
       elements replace generic elements.</p>
       <p>In brief, the encoding levels (with approximate examples) are as follows:
-      <table>
+      <table rend="table">
         <row role="label">
           <cell>Level</cell>
           <cell>Description</cell>
@@ -299,7 +299,7 @@
          (If these hyphens occur at
           a column or page break instead of a line break, use
           <gi>cb</gi> or <gi>pb</gi> instead.)
-          <table>
+          <table rend="table">
             <row role="label">
               <cell>Colloquial name</cell>
               <cell>Appearance in source document</cell>
@@ -486,7 +486,7 @@
              parallel adjustments to the list that appears in the prose of the BPTL and to the attDef for the @type attribute, so that the
              values remain in sync -->
         
-        <table>
+        <table rend="table">
           <row>
             <cell cols="2">Front Matter</cell>
             <cell rend="width: 10px;"> </cell>
@@ -569,7 +569,7 @@
         </table>
         
        
-        <table>
+        <table rend="table">
           <row>
             <cell cols="5">Body</cell>
           </row>
@@ -911,7 +911,7 @@
     </div>
     <div type="==">
       <head>Structure of a TEI Document</head>
-      <table>
+      <table rend="table">
         <row role="label">
           <cell cols="2">Element</cell>
           <cell>Description</cell>

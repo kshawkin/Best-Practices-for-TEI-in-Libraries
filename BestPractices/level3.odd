@@ -176,7 +176,7 @@
           <head>Element Recommendations for Level 3</head>
           <p>Use all elements specified in Levels 1 and 2 <emph>except <gi>ab</gi>, plus the
           following</emph>:
-          <table>
+          <table rend="table">
             <row>
               <cell><gi>front</gi>, <gi>back</gi></cell>
               <cell>Recommended if present.</cell>

@@ -192,7 +192,7 @@
           <emph>except <gi>ab</gi>,</emph> plus elements in the following
           table. Note that some of these elements are defined in
           Level 3 as well, but their use in Level 4 is more strict.</p>
-          <table rend="border: thin solid black; width: 80%;">
+          <table rend="table">
             <row>
               <cell><gi>titlePage</gi> and appropriate child elements</cell>
               <cell>Recommended.</cell>

@@ -171,7 +171,7 @@
         </div>
         <div type="elrecs">
           <head>Element Recommendations for Level 1</head>
-          <table>
+          <table rend="table">
             <row>
               <cell><gi>div</gi> or <gi>div1</gi></cell>
               <cell>There should be only one child of <gi>body</gi>: a single <gi>div</gi> (or <gi>div1</gi>).</cell>
