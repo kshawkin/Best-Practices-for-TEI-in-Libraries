@@ -218,6 +218,16 @@
         internal consistency in the local practice.</p>
       </div>
       <div type="===">
+	<head>Character Encoding</head>
+	<p>For the purpose of interchange, TEI documents should be saved 
+	in UTF-8 format, without beginning with a byte-order mark (U+FEFF). 
+	Furthermore, while TEI allows for capturing of glyph variants 
+	not distinguished by Unicode (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html">
+	P5 chapter 5</ref>), the special elements for this purpose are not 
+	recommended in these <title>Best Practices</title> in order to 
+	facilitate interchange.</p>
+      </div>
+      <div type="===">
         <head>Transcription</head>
         <p>When reformatting to digital media using any level of
         encoding, the electronic text should begin with the
