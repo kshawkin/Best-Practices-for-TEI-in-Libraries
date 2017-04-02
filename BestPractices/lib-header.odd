@@ -1035,7 +1035,7 @@
 	      <cell/>
 	      <cell/>
 	      <cell>│</cell>
-	      <cell>└</cell>
+	      <cell>│</cell>
 	      <cell cols="2">
 		<gi>extent</gi>
 	      </cell>
@@ -1071,52 +1071,9 @@
 	      <cell>│</cell>
 	      <cell/>
 	      <cell/>
-	      <cell>├</cell>
-	      <cell cols="3">
-		<gi>series</gi>
-	      </cell>
-	      <cell>Information about the series to which the source document
-	      bibliographic item belongs, given according to the national cataloging
-	      code. If generating this data from a catalog record, it is likely that
-	      you will have only one child element: a <tag>title level="s"</tag>.
-	      Use of the <att>type</att> attribute <emph>on the <gi>title</gi>
-	      element</emph> is optional, but if it is used, it should follow <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">instructions
-	      for use of this element in the full TEI Guidelines</ref>.</cell>
-	      <cell>
-		<table>
-		  <row role="label">
-		    <cell>MARC record based on encoded text</cell>
-		    <cell>MARC record based on source document</cell>
-		  </row>
-		  <row>
-		    <cell>
-		      <list>
-			<item>534 $f</item>
-		      </list>
-		    </cell>
-		    <cell>
-		      <list>
-			<item>4xx</item>
-			<item>8xx </item>
-		      </list>
-		    </cell>
-		  </row>
-		</table>
-	      </cell>
-	      <cell>
-		<list>
-		  <item>4xx</item>
-		  <item>8xx</item>
-		</list>
-	      </cell>
-	    </row>
-
-	    <row>
 	      <cell>│</cell>
-	      <cell/>
-	      <cell/>
-	      <cell>├</cell>
-	      <cell cols="3">
+	      <cell>│</cell>
+	      <cell cols="2">
 		<gi>note</gi>
 	      </cell>
 	      <cell>Optionally, use for notes about the source document bibliographic item, given according to a national cataloging code.</cell>
@@ -1147,8 +1104,9 @@
 	      <cell>│</cell>
 	      <cell/>
 	      <cell/>
-	      <cell>├</cell>
-	      <cell cols="3">
+	      <cell>│</cell>
+	      <cell>└</cell>
+	      <cell cols="2">
 		<gi>idno</gi>
 	      </cell>
 	      <cell>
@@ -1197,6 +1155,50 @@
 		  <item>029</item>
 		  <item>035</item>
 		  <item>050-099</item>
+		</list>
+	      </cell>
+	    </row>
+
+	    <row>
+	      <cell>│</cell>
+	      <cell/>
+	      <cell/>
+	      <cell>├</cell>
+	      <cell cols="3">
+		<gi>series</gi>
+	      </cell>
+	      <cell>Information about the series to which the source document
+	      bibliographic item belongs, given according to the national cataloging
+	      code. If generating this data from a catalog record, it is likely that
+	      you will have only one child element: a <tag>title level="s"</tag>.
+	      Use of the <att>type</att> attribute <emph>on the <gi>title</gi>
+	      element</emph> is optional, but if it is used, it should follow <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">instructions
+	      for use of this element in the full TEI Guidelines</ref>.</cell>
+	      <cell>
+		<table>
+		  <row role="label">
+		    <cell>MARC record based on encoded text</cell>
+		    <cell>MARC record based on source document</cell>
+		  </row>
+		  <row>
+		    <cell>
+		      <list>
+			<item>534 $f</item>
+		      </list>
+		    </cell>
+		    <cell>
+		      <list>
+			<item>4xx</item>
+			<item>8xx </item>
+		      </list>
+		    </cell>
+		  </row>
+		</table>
+	      </cell>
+	      <cell>
+		<list>
+		  <item>4xx</item>
+		  <item>8xx</item>
 		</list>
 	      </cell>
 	    </row>
@@ -1712,11 +1714,11 @@
 		    </imprint>
 		    <extent>viii, [7]-215 p</extent>
 		    <extent>20 cm.</extent>
+		    <note>First published in condensed form in the Galaxy, v. 16, 1873, p. [518]-530,
+		       [687]-700, [793]-804.</note>
+		    <idno type="ISBN">1-4255-1817-6</idno>
+		    <idno type="LC_call_number">E456 .W44</idno>
 		  </monogr>
-		  <note>First published in condensed form in the Galaxy, v. 16, 1873, p. [518]-530,
-		  [687]-700, [793]-804.</note>
-		  <idno type="ISBN">1-4255-1817-6</idno>
-		  <idno type="LC_call_number">E456 .W44</idno>
 		</biblStruct>
 	      </sourceDesc>
 	    </fileDesc>
