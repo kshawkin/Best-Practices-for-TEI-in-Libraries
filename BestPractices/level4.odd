@@ -856,7 +856,8 @@
                     <lb/>as well.  CN Ex. 101 at p. 72.  Although this twenty-four-hour
                     <lb/>surveillance was discontinued on December 14, 1945, physical
                     <lb/>surveillance was conducted frequently at various times until
-                    <lb/>September, 1947.<note place="bottom" anchored="true" n="68">Also
+		    <lb/>September, 1947.<ptr target="n68">68</ptr><note place="bottom" 
+		    anchored="true" xml:id="n68"><label>68</label>Also
                     before 1947, a letter from Priscilla Hiss addressed
                     <lb/>to her son, Timothy Hobson, was intercepted and its contents
                     <lb/>read.  CN Ex. 100A at p. 167.  In approximately March, 1947,
@@ -877,8 +878,8 @@
                     <lb/>habits is recorded.</p>          
                     <p>The wiretap was installed following FBI Director Hoover's
                     <lb/>application to the Attorney General for authorization,
-                    <note place="bottom" anchored="true" n="69">Hoover's
-                    initial request was answered by a note reques- 
+		    <ptr target="n69">69</ptr><note place="bottom" anchored="true" xml:id="n69">
+		    <label>69</label>Hoover's initial request was answered by a note reques- 
                     <lb break="no"/>ting information on Hiss.  CN Ex. 104<sic> </sic>.  Additional information
                     <lb/>was furnished by letter dated November 30, 1945.  CN Ex. 105<sic> </sic>.</note>
                     <lb/>although no written authorization appears in the documents released to
