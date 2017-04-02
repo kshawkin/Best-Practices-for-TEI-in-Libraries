@@ -247,11 +247,11 @@
           in the TEI header to record whether such punctuation has
           been removed.</p>
           <p>When removing punctuation marks whose rendering in the
-          source document is worth preserving, use the <att>rend</att>
+          source document is worth preserving, use the <att>style</att>
           attribute on the appropriate element to describe the
           punctuation marks that were removed. For example:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <p>When she said <said rend="quotes: '“' '”'">Nobody uses the term 
+            <p>When she said <said style="quotes: '“' '”'">Nobody uses the term 
             <mentioned rend="quotes: '‘' '’'">electronic text</mentioned> anymore</said>
 	    he nearly passed out!</p>
           </egXML>
