@@ -166,6 +166,9 @@
 	  <gi>idno</gi> element to supply identifiers for outside metadata records and may
 	  supply identifiers for certain authority records using the <att>ref</att> attribute,
 	  allowed on certain elements.</p>
+		
+	  <p>The header's <gi>xenoData</gi> element may be used to embed non-TEI metadata in a 
+	  TEI document.</p>
 	</div>
 	<div type="section">
 	  <head>Determining Data Values for the TEI Header</head>
@@ -1641,6 +1644,16 @@
 	      <cell>6xx</cell>
 	    </row>
 
+	    <row>
+	      <cell>│</cell>
+	      <cell cols="6">
+		<gi>xenoData</gi>
+	      </cell>
+	      <cell>Use as a wrapper for embedded non-TEI metadata.</cell>
+	      <cell>n/a</cell>
+	      <cell>n/a</cell>
+	    </row>
+		  
 	    <row>
 	      <cell>└</cell>
 	      <cell cols="6">
