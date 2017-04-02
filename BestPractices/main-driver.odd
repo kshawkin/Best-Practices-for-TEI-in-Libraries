@@ -855,10 +855,10 @@
           <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">as described in the TEI Guidelines</ref>.</p>
         </div>
         <div type="====">
-          <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
+          <head><att>style</att>, <att>rend</att>, and <att>rendition</att></head>
           <p>At levels 3 and above, the <att>style</att>, <att>rend</att> and
           <att>rendition</att> attributes may be used when it is
-          desirable to record information about how the textual
+          desirable to record information about how a textual
           feature was displayed in the source document.</p>
           <p>Never use these attributes on header elements: metadata
           is transcribed and possibly regularized, as in a catalog
@@ -877,7 +877,7 @@
           text or on all elements whose rendering does not follow the
           default stylesheet.</p>
           <p>For the value of the <att>style</att> attribute, use only
-          valid CSS properties and values as in a declaration-block
+          valid CSS properties and values as in a CSS declaration-block
           but without curly braces. For example:
           <eg>&lt;foreign style="font-style: italic"></eg>
           <eg>&lt;title style="text-decoration: underline; font-size: x-large"></eg></p>
@@ -896,7 +896,7 @@
           typos being introduced in the encoding.</p>
           <p>If there are formatting features in the source that cannot be
           expressed with CSS syntax, the <att>rend</att> attribute may be
-          used.</p>
+	  used instead of <att>style</att> or <att>rendition</att>.</p>
         </div>
         <div type="====">
           <head><att>xml:lang</att></head>
