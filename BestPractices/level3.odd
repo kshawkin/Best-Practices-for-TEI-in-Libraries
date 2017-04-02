@@ -297,16 +297,52 @@
           </div>
           <div type="grec">
             <head>Notes</head>
-            <p>Use the <gi>note</gi> element to encode the text of a margin note, footnote, endnote, or other note found in the source document. This element may be used for encoding notes "inline" at the point of reference (such as where a superscript number appears), as in the Alger Hiss example below.  In the case of conversion from OCR and from some born-digital source documents, this will require manual intervention to move the text of the note to the place of reference. Note, though, that if the note in the source document begins on a different page from the place of reference, a <gi>pb</gi> should be inserted before the first word of the note within the <gi>note</gi> to record this.</p>
-            <p>Marginal notes without reference from the base text be inserted at the beginning of the paragraph to which they refer, with <code>place="margin"</code>.</p>
-            <p>Alternatively, the point of reference and note itself may be encoded separately.  In this model, the point of reference should be encoded using a <gi>ref</gi> or <gi>ptr</gi> element, as in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6 Simple Links and Cross-References</ref>. The text of the note itself is tagged using the <gi>note</gi> element, either at the point where the note occurs on the page or at another point convenient when converting from a born-digital source document, such as at the end of the containing <gi>div</gi> (or <gi>div1</gi>) or in a special <gi>div</gi> (or <gi>div1</gi>) element within <gi>back</gi>.  For example, the first footnote reference in the Alger Hiss example would be encoded as:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <ref target="#n68">68</ref>
-            </egXML> and the note itself as:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <note place="bottom" anchored="true" xml:id="n68" n="68">Also before 1947, [...]</note>
-            </egXML>
-            For cases in which a note spans pages, a <gi>pb</gi> should be used inside <gi>note</gi> to mark the page break that occurs within the note.</p>
+            <p>Use the <gi>note</gi> element to encode the text of a margin note, 
+	      footnote, endnote, or other note found in the source document. If a
+	      point of attachment is marked with a siglumn (such as an asterisk 
+	      or superscript number), encode the siglum with a <gi>ref</gi> 
+	      element. Alternatively, if there is no marked point of attachment, 
+	      insert a <gi>ptr</gi> at the most likely implied point of attachment
+	      for the note.</p>
+	    <p>The text of the note (inside a <gi>note</gi> element) may either (a) be 
+	      left where it occurs in the layout of the page (as may be more 
+	      convenient in the case of conversion from OCR text) or may (b) be moved
+	      so that the <gi>note</gi> occurs just following the <gi>ref</gi> or 
+	      <gi>ptr</gi> marking the point of attachment. If a note span pages,
+	      be sure to insert a <gi>pb</gi> to mark the start of a new page. 
+	      Similarly, if the note in the source document begins on a different 
+	      page from the place of reference, a <gi>pb</gi> should be inserted 
+	      before the first word of the note within the <gi>note</gi> to record 
+	      this.</p>
+	    <p>The siglum is often repeated at the beginning of the note to aid the 
+	      reader in matching the siglum in the text to the note. Encode any 
+	      siglum within the note using <gi>label</gi>.</p>
+            <p>Here is an example encoded according to method (a)—first the sigla:
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-pigs">
+<p>The three little pigs built their houses out of straw,<ref target="#n1">1</ref> sticks<ref target="#n2">2</ref> and bricks.<ref target="#n3">3</ref></p>
+	      </egXML>
+	      <bibl><title>How to properly typeset footnotes/superscripts after 
+		punctuation marks?</title>, <ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>
+	      </bibl>
+	    <p>And then the note that endnotes:</p>
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-pigs">
+<note place="bottom" anchored="true" xml:id="n1"><label>1</label>not to be confused with hay</note>
+<note place="bottom" anchored="true" xml:id="n2"><label>2</label>or lumber according to some sources</note>
+<note place="bottom" anchored="true" xml:id="n3"><label>3</label>probably fired clay bricks</note>
+	      </egXML>
+	    </p>
+	    <p>Here is an example encoded according to method (b), with notes encoded 
+	      right after the point of attachment:
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<p>The three little pigs built their houses out of 
+straw,<ref target="#n1">1</ref><note place="bottom" anchored="true" xml:id="n1"><label>1</label>not 
+to be confused with hay</note> 
+sticks<ref target="#n2">2</ref><note place="bottom" anchored="true" xml:id="n2"><label>2</label>or 
+lumber according to some sources</note> and 
+bricks.<ref target="#n3">3</ref><note place="bottom" anchored="true" xml:id="n3"><label>3</label>probably 
+fired clay bricks</note></p>
+	      </egXML>
+	    </p>  
           </div>
         </div>
         <div type="examples">
@@ -490,8 +526,9 @@
                       70; CN Ex. 102. Continuous physical surveillance of Hiss was begun as well. CN
                       Ex. 101 at p. 72. Although this twenty-four-hour surveillance was discontinued
                       on December 14, 1945, physical surveillance was conducted frequently at
-                      various times until September, 1947. <note place="bottom" anchored="true"
-                      n="68">Also before 1947, a letter from Priscilla Hiss addressed to her son,
+		      various times until September, 1947. <ptr target="#n68">68</ptr>
+		      <note place="bottom" anchored="true" xml:id="n68"><label>68</label>Also before 
+		      1947, a letter from Priscilla Hiss addressed to her son,
                       Timothy Hobson, was intercepted and its contents read. CN Ex. 100A at p.
                       167. In approximately March, 1947, a letter from a Michael Greenberg
                       addressed to petitioner re­ garding an application for employment with the
@@ -507,8 +544,8 @@
                       sonal lives, relationships with friends and associates, and habits is
                       recorded.</p>
                       <p>The wiretap was installed following FBI Director Hoover's application to the
-                      Attorney General for authorization, <note place="bottom" anchored="true"
-                      n="69">Hoover's initial request was answered by a note reques­ ting
+		      Attorney General for authorization, <ptr target="n69">69</ptr><note place="bottom" 
+		      anchored="true" xml:id="n69"><label>69</label>Hoover's initial request was answered by a note reques­ ting
                       information on Hiss. CN Ex. 104. Additional information was furnished by
                       letter dated November 30, 1945. CN Ex. 105.</note> although no written
                       authorization appears in the documents released to Hiss. The purpose of the
