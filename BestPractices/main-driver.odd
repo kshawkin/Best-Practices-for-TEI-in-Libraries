@@ -1396,43 +1396,40 @@
      DLF-sponsored meeting that took place as part of the DLF Spring
      Forum in Raleigh, North Carolina on May 6, 2009.</p>
      <p>In April 2009, a year after the revision work began, the
-     significantly revamped <title>Best Practices</title> soon to be
+     significantly revamped <title>Best Practices</title>, soon to be
      known as <title>Best Practices for TEI in Libraries</title>
-     (version 3) were disseminated for public comment. At DLF that
-     year, a <ref
+     (version 3), were disseminated for public comment. At the DLF Spring Forum in Raleigh, a <ref
      target="http://www.diglib.org/forums/spring2009/2009springprogram.htm">Birds-of-a-Feather
      session entitled <title>TEI Text Encoding in
      Libraries</title></ref> was held to gather in-person public
      feedback. Comments received at the in-person meeting, from the
-     <ref
-     target="http://www.lsoft.com/scripts/wl.exe?SL1=TEILIB-L&amp;H=LISTSERV.INDIANA.EDU">TEILIB-L
-     listserv</ref>, through a survey, and by direct email were
+     TEILIB-L
+     listserv, through a survey, and by direct email were
      gathered and prioritized at the DLF meeting. Renee McBride
      (University of North Carolina, Chapel Hill) agreed to map header
      elements to MARC elements, and Vitus Tang (Stanford University)
      provided valuable comments. In addition to addressing most of the
-     comments received, it was resolved that Syd Bauman will generate
-     an ODD specification (One Document Does it All; schema, prose
-     documentation, etc.) for levels 1-4, further ensuring
+     comments received, it was resolved that Syd Bauman would generate
+     an ODD document (containing both schema constraints and prose) for levels 1-4, further ensuring
      interoperability of texts encoded according to these <title>Best
      Practices</title>.</p>
-     <p>The revised <title>Best Practices</title> contain updated
+     <p>The revised <title>Best Practices</title> contained updated
      versions of the widely adopted encoding
      <soCalled>levels</soCalled> &#x2014; from fully automated conversion to
-     content analysis and scholarly encoding. They also contain a
+     content analysis and scholarly encoding. They also contained a
      substantially revised section on the TEI header, designed to
      support interoperability between text collections and the use of
-     complementary metadata schemas such as MARC. They also explore
+     complementary metadata schemas such as MARC. Furthermore, they explored
      the relationship between METS and TEI and the relationship
      between these <title>Best Practices</title> and the new vendor
      specification, TEI Tite.</p>
-     <p>The new <title>Best Practices</title> also reflect an
+     <p>The new <title>Best Practices</title> also reflected an
      organizational shift. Originally authored by the DLF-sponsored
-     TEI Task Force, the current revision work is a partnership
+     TEI Task Force, the new revision was a partnership
      between members of the Task Force and the TEI SIG on Libraries.
      As a result of this partnership, responsibility for the
-     <title>Best Practices</title> will migrate to the SIG, allowing
-     closer work with the TEI Consortium as a whole, and a stronger
+     <title>Best Practices</title> moved to the SIG, allowing
+     closer work with the TEI Consortium as a whole and a stronger
      basis for advocating for the needs of libraries in future TEI
      releases.</p>
    </div>
