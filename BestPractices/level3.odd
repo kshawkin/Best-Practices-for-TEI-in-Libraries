@@ -318,29 +318,52 @@
 	      reader in matching the siglum in the text to the note. Encode any 
 	      siglum within the note using <gi>label</gi>.</p>
             <p>Here is an example encoded according to method (a)—first the sigla:
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-pigs">
-<p>The three little pigs built their houses out of straw,<ref target="#n1">1</ref> sticks<ref target="#n2">2</ref> and bricks.<ref target="#n3">3</ref></p>
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+		<p>The three little pigs built their houses out of straw,<ref target="#n_a1">1</ref>
+		sticks,<ref target="#n_a2">2</ref> and bricks.<ref target="#n_a3">3</ref></p>
 	      </egXML>
-	      <bibl><title>How to properly typeset footnotes/superscripts after 
-		punctuation marks?</title>, <ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>
+	      <bibl>
+		<title>How to properly typeset footnotes/superscripts after 
+		punctuation marks?</title>,
+		<ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>
 	      </bibl>
-	    <p>And then the note that endnotes:</p>
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-pigs">
-<note place="bottom" anchored="true" xml:id="n1"><label>1</label>not to be confused with hay</note>
-<note place="bottom" anchored="true" xml:id="n2"><label>2</label>or lumber according to some sources</note>
-<note place="bottom" anchored="true" xml:id="n3"><label>3</label>probably fired clay bricks</note>
+	    <p>And then the annotations themselves, encoded as
+	    <gi>note</gi> elements inside a division in the backmatter
+	    that holds the endnotes:</p>
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+		<back>
+		  <div type="endnotes">
+		    <head>The Collected End-notes</head>
+		    <note place="bottom" anchored="true" xml:id="n_a1">
+		      <label>1</label>
+		      not to be confused with hay</note>
+		    <note place="bottom" anchored="true" xml:id="n_a2">
+		      <label>2</label>
+		      or lumber according to some sources</note>
+		    <note place="bottom" anchored="true" xml:id="n_a3">
+		      <label>3</label>
+		      probably fired clay bricks</note>
+		  </div>
+		</back>
 	      </egXML>
 	    </p>
 	    <p>Here is an example encoded according to method (b), with notes encoded 
 	      right after the point of attachment:
 	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<p>The three little pigs built their houses out of 
-straw,<ref target="#n1">1</ref><note place="bottom" anchored="true" xml:id="n1"><label>1</label>not 
-to be confused with hay</note> 
-sticks<ref target="#n2">2</ref><note place="bottom" anchored="true" xml:id="n2"><label>2</label>or 
-lumber according to some sources</note> and 
-bricks.<ref target="#n3">3</ref><note place="bottom" anchored="true" xml:id="n3"><label>3</label>probably 
-fired clay bricks</note></p>
+		<p>The three little pigs built their houses out of 
+		straw,<ref target="#n_b1">1</ref>
+		<note place="bottom" anchored="true" xml:id="n_b1">
+		  <label>1</label> not to be confused with hay
+		</note> 
+		sticks,<ref target="#n_b2">2</ref>
+		<note place="bottom" anchored="true" xml:id="n_b2">
+		  <label>2</label> or lumber according to some sources
+		</note>
+		and bricks.<ref target="#n_b3">3</ref>
+		<note place="bottom" anchored="true" xml:id="n_b3">
+		  <label>3</label> probably fired clay bricks
+		</note>
+		</p>
 	      </egXML>
 	    </p>  
           </div>
