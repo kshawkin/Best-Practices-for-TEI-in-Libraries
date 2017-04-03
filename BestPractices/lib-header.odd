@@ -2313,7 +2313,7 @@
 		      </attDef>
 		    </attList>
 		  </elementSpec>
-		<classSpec module="tei" type="atts" ident="att.BPTL.div.typed" mode="add">
+		<classSpec type="atts" ident="att.BPTL.div.typed" mode="add">
 			<desc versionDate="2017-04-02" xml:lang="en">provides a recommended set of values describing common text divisions which can be used to classify sections of text.</desc>
 			<attList>
 				<attDef ident="type" usage="rec">
