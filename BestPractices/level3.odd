@@ -823,7 +823,6 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="att.BTPL.div.typed"/>
-                <memberOf key="model.div1Like"/>
               </classes>
             </elementSpec>
             <elementSpec module="textstructure" ident="div2" mode="change">
@@ -831,7 +830,6 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="att.BTPL.div.typed"/>
-                <memberOf key="model.div2Like"/>
               </classes>
              </elementSpec>
             <elementSpec module="textstructure" ident="div3" mode="change">
@@ -839,7 +837,6 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="att.BTPL.div.typed"/>
-                <memberOf key="model.div3Like"/>
               </classes>
             </elementSpec>
             <elementSpec module="textstructure" ident="div4" mode="change">
@@ -847,7 +844,6 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="att.BTPL.div.typed"/>
-                <memberOf key="model.div4Like"/>
               </classes>
             </elementSpec>
             <elementSpec module="textstructure" ident="div5" mode="change">
@@ -855,7 +851,6 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="att.BTPL.div.typed"/>
-                <memberOf key="model.div5Like"/>
               </classes>
             </elementSpec>
             <elementSpec module="textstructure" ident="div6" mode="change">
@@ -863,7 +858,6 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="att.BTPL.div.typed"/>
-                <memberOf key="model.div6Like"/>
               </classes>
             </elementSpec>
             <elementSpec module="textstructure" ident="div7" mode="change">
@@ -871,7 +865,6 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="att.BTPL.div.typed"/>
-                <memberOf key="model.div7Like"/>
               </classes>
              </elementSpec>
             <elementSpec module="core" ident="editor" mode="change">
