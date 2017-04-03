@@ -349,12 +349,6 @@
 	      indicate the date or place of birth of the person being
 	      documented.</cell>
 	    </row>
-	    <row>
-	      <cell><gi>langKnowledge</gi> and <gi>langKnown</gi></cell>
-	      <cell>Optionally used inside a <gi>person</gi> to
-	      indicate the level of proficiency the person being
-	      documented has with a particular language(s).</cell>
-	    </row>
           </table>
         </div>
         <div type="grecs">
@@ -904,7 +898,7 @@
           <moduleRef key="textstructure" except="byline imprimatur"/>
           <moduleRef key="linking" include="ab"/>
           <moduleRef key="transcr" include="facsimile surface zone"/>
-          <moduleRef key="namesdates" include="orgName persName placeName geogName listPerson person birth langKnown"/>
+          <moduleRef key="namesdates" include="orgName persName placeName geogName listPerson person birth"/>
           <specGrpRef target="./lib-header.odd#libHeadSpec"/>
           <moduleRef key="figures" include="table row cell figure figDesc"/>
           <moduleRef key="drama" include="castItem castList"/>
