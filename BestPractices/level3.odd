@@ -806,6 +806,7 @@ fired clay bricks</note></p>
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="model.divLike"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
               <content>
                 <sequence>
@@ -839,175 +840,6 @@ fired clay bricks</note></p>
                   </s:rule>
                 </constraint>
               </constraintSpec>
-              <attList>
-                <attDef ident="type" mode="add">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                <defaultVal>section</defaultVal>
-                <!-- When changing values for the @type attribute on divs, remember to make the 
-                     parallel adjustments to the list that appears in the prose of the BPTL (in main-driver.odd) 
-                     and to the attDef for the @type attribute on numbered and unnumbered divs in level2.odd, 
-                     level3.odd, and level4.odd, so that the values remain in sync -->
-                <valList type="semi">
-                  <valItem ident="preface">
-                    <desc>A section of the front matter that does not carry a more specific designation. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="foreword">
-                    <desc>Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="acknowledgement">
-                    <desc>Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="dedication">
-                    <desc>A dedication. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="abstract">
-                    <desc>Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="contents">
-                    <desc>A table of contents. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="frontispiece">
-                    <desc>A portrait or other image (usually of the author, usually full page) printed at the front of a document. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="appendix">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="glossary">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="notes">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="bibliography">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="index">
-                    <desc><desc>An alphabetical listing of the topics in a document, usually with accompanying page references</desc> Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="colophon">
-                    <desc>A short inscription, typically at the end of a book or manuscript, containing the title, printer, date and place of printing, etc. Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="book">
-                    <desc>A major structural component of a long work, identified explicitly in
-                      the text as a "book".se</desc>
-                  </valItem>
-                  <valItem ident="chapter">
-                    <desc>A chapter, typically in a prose document.</desc>
-                  </valItem>
-                  <valItem ident="part">
-                    <desc>A major component of a work, containing further subdivisions.</desc>
-                  </valItem>
-                  <valItem ident="section">
-                    <desc>A generic section of a larger work.</desc>
-                  </valItem>
-                  <valItem ident="subsection">
-                    <desc>A generic subdivision of a section.</desc>
-                  </valItem>
-                  <valItem ident="volume">
-                    <desc>A single printed volume in a multi-volume work.</desc>
-                  </valItem>
-                  <valItem ident="endnotes">
-                    <desc>A section containing endnotes for the document.</desc>
-                  </valItem>
-                  <valItem ident="advert">
-                    <desc>An advertisement for a printed work or other product.</desc>
-                  </valItem>
-                  <valItem ident="corrigenda">
-                    <desc>A section describing corrections to be made to the document.</desc>
-                  </valItem>
-                  <valItem ident="docAuthorization">
-                    <desc>A statement indicating that the document's printing was officially
-                      authorized.</desc>
-                  </valItem>
-                  <valItem ident="imprimatur">
-                    <desc>A formal indication (usually on the title page or in the front matter)
-                      that the document has received official license to be printed.</desc>
-                  </valItem>
-                  <valItem ident="drama">
-                    <desc>A dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="dramaPart">
-                    <desc>A portion of a drama other than a prologue, act, scene, or epilogue.</desc>
-                  </valItem>
-                  <valItem ident="act">
-                    <desc>An act in a dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="scene">
-                    <desc>A scene in a dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="castlist">
-                    <desc>A list of characters in a dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="poem">
-                    <desc>A poem.</desc>
-                  </valItem>
-                  <valItem ident="poemGroup">
-                    <desc>A group of two or more poems under a common heading.</desc>
-                  </valItem>
-                  <valItem ident="argument">
-                    <desc>A short passage at the start of a document or section giving a prose
-                      description of its contents.</desc>
-                  </valItem>
-                  <valItem ident="entry">
-                    <desc>An entry in a document that is organized as a log or diary with dated
-                      entries.</desc>
-                  </valItem>
-                  <valItem ident="concluding">
-                    <desc>Any section of the back matter that does not carry a more specific
-                      designation; includes afterwords, epilogues, codas, etc.</desc>
-                  </valItem>
-                  <valItem ident="epigraph">
-                    <desc>A short quotation at the start of a document or section, often
-                      accompanied by an attribution.</desc>
-                  </valItem>
-                  <valItem ident="prologue">
-                    <desc>An opening section of a literary work (typically drama or poetry).</desc>
-                  </valItem>
-                  <valItem ident="epilogue">
-                    <desc>A short concluding section, usually of a dramatic or fictional work.
-                    </desc>
-                  </valItem>
-                  <valItem ident="narrative">
-                    <desc>An embedded narrative.</desc>
-                  </valItem>
-                  <valItem ident="nonfictionProse">
-                    <desc>A text intended to be nonfiction consisting primarily of prose.</desc>
-                  </valItem>
-                  <valItem ident="novelPart">
-                    <desc>A portion of a novel.</desc>
-                  </valItem>
-                  <valItem ident="calendar">
-                    <desc>A formal calendar; a document or document section identifying itself as a calendar.</desc>
-                  </valItem>
-                  <valItem ident="essay">
-                    <desc>A short prose non-fiction document.</desc>
-                  </valItem>
-                  <valItem ident="timeline">
-                    <desc>A timeline.</desc>
-                  </valItem>
-                  <valItem ident="examination">
-                    <desc>A section that is identified explicitly as an <soCalled>examination</soCalled> in a text that uses this as a main structural division.</desc>
-                  </valItem>
-                  <valItem ident="letter">
-                    <desc>Any document in epistolary form, i.e. addressed by a sender to a recipient.</desc>
-                  </valItem>
-                  <valItem ident="prayer">
-                    <desc>A prayer.</desc>
-                  </valItem>
-                  <valItem ident="recipe">
-                    <desc>A recipe in a cookbook.</desc>
-                  </valItem>
-                  <valItem ident="speech">
-                    <desc>A section described as a speech or public lecture, in a document that uses this as a main structural division.</desc>
-                  </valItem>
-                  <valItem ident="tract">
-                    <desc>A short treatise in pamphlet form often on a religious subject.</desc>
-                  </valItem>
-                </valList>
-                </attDef>
-              </attList>
               <remarks>
                 <p>At level 3, <gi>div</gi> may only contain
                 the <gi>head</gi>,
@@ -1027,107 +859,51 @@ fired clay bricks</note></p>
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div1Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="add">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div2" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div2Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
-            </elementSpec>
+             </elementSpec>
             <elementSpec module="textstructure" ident="div3" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div3Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div4" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div4Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div5" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div5Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div6" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div6Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div7" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div7Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
-            </elementSpec>
+             </elementSpec>
             <elementSpec module="core" ident="editor" mode="change">
               <desc>contains the name (typically encoded as <gi>persName</gi> or
               <gi>orgName</gi>) of an individual, institution, or organization acting as
