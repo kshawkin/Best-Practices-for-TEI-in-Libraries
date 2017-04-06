@@ -721,7 +721,7 @@
                 <item>within <gi>speaker</gi> elements, which are the
                 first child of <gi>sp</gi>, or</item>
                 <item>with a <att>who</att> attribute on <gi>sp</gi>,
-                the value of which poiints to the the <gi>item</gi>
+                the value of which points to the the <gi>item</gi>
                 for the given speaker in the list of interview
                 participants (by its <att>xml:id</att>), or</item>
                 <item>both.</item>
