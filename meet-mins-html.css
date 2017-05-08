@@ -1,0 +1,114 @@
+@import url(spans-html.css);
+body {
+  margin : 2em 2em 2em 2em;
+  padding : 6em 6em 6em 6em;
+  border : 1ex groove red;
+}
+td {
+  padding : 0.4ex 0.6ex 0.4ex 0.6ex;
+}
+span.note- {
+  color : darkgreen;
+}
+span.note-temp {
+  font-style : italic;
+  font-size : small;
+  color : darkgreen;
+}
+span.note-annotation {
+  font-style : italic;
+  font-size : small;
+}
+tr.label {
+  background-color : lightgray;
+}
+div.div-actionReview {
+  border : thin dashed blue;
+  padding : 1em 1em 1em 1em;
+}
+dl {
+  padding: 1em 1em 1em 1em;
+}
+dt:before {
+    display: marker;
+    list-style: disc outside;
+}
+dt {
+    display: in-line;
+    margin-top: 1ex;
+}
+dd {
+    display: in-line;
+}
+
+## CSS for dl, dt, dd adapted from
+## http://www.the-art-of-web.com/css/format-dl/#section_2 then
+## commented out 2012-02-28 and replaced with previous ugly stuff, as
+## it was messing up RAC BOD to-do list review
+#dl {
+#  padding : 0.5em;
+#}
+#dt {
+#  float : left;
+#  clear : left;
+#  width : 8em;
+#  text-align : right;
+#  font-weight : bold;
+#}
+#dt:after {
+#  content : ":\A0";
+#}
+#dd {
+#}
+
+span.hi-who {
+  color : darkblue;
+}
+span.hi-inexactQuote {
+  quotes : '"' '"' "'" "'";
+}
+:lang(en) > span.hi-inexactQuote {
+  quotes : '\201C' '\201D' '\2018' '\2019'
+}
+:lang(fr) > span.hi-inexactQuote {
+  quotes : '« ' ' »'
+}
+:lang(de) > span.hi-inexactQuote {
+  quotes : '»' '«' '\2039' '\203A'
+}
+span.hi-inexactQuote:before {
+  content : open-quote;
+}
+span.hi-inexactQuote:after {
+  content : close-quote;
+}
+p > span.label {
+  font-style : italic;
+}
+dd {
+  padding : 0em 0em 0em 1em;
+  margin : 0em 0em 0em 0em;
+}
+span.res {
+  color : darkblue;
+}
+a.notLookLikeLink {
+  color : inherit;
+  text-decoration : inherit;
+}
+h4.edition:before {
+  content : "Version: "
+}
+li.agendaItem {
+  margin-top : 1ex;
+}
+p.agendaItemData {
+  font-size : small;
+  padding : 0.5ex 0em 0em 1em;
+  margin : 0em 0em 0em 0em;
+}
+p.agendaItemData:first-child {
+  font-size : small;
+  padding : 0.1ex 0em 0em 1em;
+  margin : 0em 0em 0em 0em;
+}

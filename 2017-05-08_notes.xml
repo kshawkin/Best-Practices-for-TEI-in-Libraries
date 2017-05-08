@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="meet-mins2xhtml.xslt"?>
+<TEI xmlns="http://www.wwp.northeastern.edu/ns/meetingMinutes/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Notes from TEI-in-Libraries Best Practices Work Group
+        conference call of <date when="2017-05-08"/> </title>
+        <author>
+          <persName xml:id="Syd">Syd Bauman</persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Not really published, but available under Artistic License
+        2.0 if you really want.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <div type="section">
+        <head>Notes on the notes themselves</head>
+        <p>Notes added after the fact <note resp="#Syd">look like this</note>.</p>
+        <p>Notes that I insert that are for others to answer and correct or supply (typically
+        because I missed something) <note resp="#Syd" type="temp">look like this</note>. They also
+        occur in a table “Questions on minutes themselves” near the top.</p>
+      </div>
+      <div type="section">
+        <head>This meeting</head>
+        <p>Kevin Hawkins (chair), Syd Bauman (note-taker), and Paul
+        Schaffner began @ ~17:02Z; Elli Mylonas joined us @
+        ~17:24Z. Andrew Rouner had sent his apologies.
+        <note type="temp" resp="#Syd">Kevin — who else said they couldn't make it?</note>
+        </p>
+        <p>Meeting adjourned @ ~17:56.</p>
+      </div>
+    </front>
+    <body>
+      <div type="section">
+        <head>Ticket Review</head>
+        <p>We reviewed outstanding tickets per our <ref
+        target="https://wiki.tei-c.org/index.php/BP_revision_ticket_triage">BP
+        revision ticket triage</ref> page.</p>
+        <p>We then quickly reviewed the same information via <ref
+        target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues">GitHub</ref>
+        itself, to make sure that the status there matches the status
+        on the triage page. Kevin discovered the secret to listing
+        GitHub tickets that <emph>do not</emph> possess a certain
+        quality: prefix the search term by a minus sign (U+002D).
+        E.g., <code>is:issue is:open -label:postponed</code> will list
+        the open issues <emph>without</emph> the label
+        <q>postponed</q>.</p>
+        <list type="gloss">
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/12">ticket #12</ref></label>
+          <item>Paul pointed out that the requirement to use
+          <gi>listBibl</gi> with <gi>bibl</gi>, <gi>author</gi>, and
+          <gi>title</gi> at level 4 would knock many projects at the
+          University of Michigan out of level 4. It is quite
+          human-intensive to ascertain which bits of a bibliographic
+          entry are <gi>author</gi>s and <gi>title</gi>s. While the
+          concern was noted, no changes to the plan were made.<note
+          resp="#Syd">In which case these U. Mich. projects may become
+          excellent examples of projects that use the BPGs as
+          Guidelines, but do not strictly adhere to a specific
+          level.</note> <action><persName>Elli</persName><item>Adjust
+          the prose of the BPGs per the ticket, then notify Syd, who
+          will adjust the schema to match.</item><date
+          when="2017-05-29"/></action></item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/13">ticket #13</ref></label>
+          <item>Kevin has met with Adam Baron, the cataloger at his
+          institution. He (Kevin) has paper notes from their nearly
+          4-hour long meeting on <date when="2017-05-06">Sat 06
+          May</date>. <action><persName>Kevin</persName><item>Write up
+          notes from meeting with cataloger Adam Baron and post to
+          group.</item><date when="2017-06-05"/></action></item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/16">ticket #16</ref></label>
+          <item>Still on Kevin, nothing to report.
+          <action><persName>Kevin</persName><item>Tackle ticket 16.</item><date when="2017-06-18"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/19">ticket #19</ref></label>
+          <item>Still on Kevin, nothing to report.
+          <action><persName>Kevin</persName><item>Tackle ticket 19.</item><date when="2017-06-18"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/23">ticket #23</ref></label>
+          <item>Still on Kevin, nothing to report.
+          <action><persName>Kevin</persName><item>Tackle ticket 23.</item><date when="2017-06-18"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/26">ticket #26</ref></label>
+          <item>Still on Elli, nothing to report.
+          <action><persName>Elli</persName><item>Tackle ticket 26.</item><date when="2017-06-18"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/27">ticket #27</ref></label>
+          <item>Indefinitely postponed.</item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/28">ticket #28</ref></label>
+          <item>Kevin worked on this with Adam the cataloger, too.
+          Adam basically thinks BIBFRAME is too new and too under
+          development to actively recommend its use.<note
+          resp="#Syd">I think this ticket should be closed, and
+          re-opened (or re-created) if &amp; when BIBFRAME is more up
+          to the task.</note></item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/37">ticket #37</ref></label>
+          <item>Syd reports we are still waiting on TEI Council, and
+          likely will be for a long time. The remaining validity issue
+          is that we use some TEI elements (e.g., <gi>gi</gi>,
+          <gi>att</gi>, and <gi>val</gi>) inside Schematron elements
+          (<gi>sch:assert</gi> and <gi>sch:report</gi>). These show up
+          as invalid according to TEI schemas, although they would be
+          valid against Schematron itself. Resolution of this ticket
+          is blocked (by Council), but it is not blocking anything
+          else.</item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/44">ticket #44</ref></label>
+          <item>This ticket cannot be worked on until we are done with
+          the others and just about ready to publish. James R. Griffin
+          III volunteered to execute this ticket a while ago.</item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/46">ticket #46</ref></label>
+          <item>Still on Kevin, nothing to report.
+          <action><persName>Kevin</persName><item>Tackle ticket 46.</item><date when="2017-06-18"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/47">ticket #47</ref></label>
+          <item>Still on Elli, nothing to report. (It was low
+          priority, but now that other things have been done, is
+          hereby bumped up the priority tree a bit.)
+          <action><persName>Elli</persName><item>Tackle ticket
+          47.</item><date when="2017-06-18"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/50">ticket #50</ref></label>
+          <item>This ticket was closed <date when="2017-02-13"/>, but
+          we should remember to do a final ODD-sweep still Pure ODD
+          before publication to ensure everything that can be Pure ODD
+          is so.</item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/52">ticket #52</ref></label>
+          <item>Still on Kevin, nothing to report.
+          <action><persName>Kevin</persName><item>Tackle ticket 52.</item><date when="2017-06-18"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/53">ticket #53</ref></label>
+          <item>Andrew Rouner is currently working on this, but we are
+          not sure he will be doing all the outstanding work.
+          <action><persName>Syd</persName><item>Read through ticket
+          and at least fold what AR says three into repository prose,
+          if not finish entire ticket.</item><date when="2017-05-23"/></action></item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/56">ticket #56</ref></label>
+          <item>Syd will check if done, and was reminded to get it
+          done soon if not
+          <action><persName>Syd</persName><item>Tackle ticket 56.</item><date when="2017-05-16"/></action>
+          </item>
+
+          <label><ref target="https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/issues/57">ticket #57</ref></label>
+          <item>We had a long discussion on how to handle this. The
+          eventual decision was to put the acknowledgments for people
+          involved in the previous release (version 3.0) and the
+          upcoming release we are working on (likely version 3.1) in
+          the same section. We will use the current
+          <q>Acknowledgments</q> section for this purpose, modifying
+          as appropriate:
+          <list>
+            <item>Add something like “version 3.0”, “version 3.1”, or “versions 3.0 &amp; 3.1” parenthetically after the name.</item>
+            <item>Add missing people. (E.g., those who worked on 3.1 but are not there already for having worked on 3.0)</item>
+            <item>Use a solidus between institution names if person
+            has changed institutions (e.g., <q>Brown University /
+            Northeastern University</q>)</item>
+            <item>Use <q>(Ret.)</q> for those who have retired.</item>
+          </list>
+          Note that the <q>writing</q> section is for those who
+          contributed to the GitHub repository (or suggested prose
+          that someone else committed); the <q>planning</q> for those
+          who attended conference but did not contribute content.
+          <action><persName>Kevin</persName><item>Tackle ticket
+          57</item><date when="2017-06-18"/></action>
+          </item>
+        </list>
+      </div>
+      <div>
+        <head>Next meeting</head>
+        <p>As various of us will be away at various DH events in early June, we scheduled our
+        next meeting for <date when="2017-06-18T17:00:00Z">Mon 18 Jun @ 13:00 EDT</date>.
+        Our goal is to have completed work on all 8 non-postponed tickets by then.</p>
+      </div>
+    </body>
+  </text>
+</TEI>
