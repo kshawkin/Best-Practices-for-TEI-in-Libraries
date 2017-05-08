@@ -218,6 +218,16 @@
         internal consistency in the local practice.</p>
       </div>
       <div type="===">
+	<head>Character Encoding</head>
+	<p>For the purpose of interchange, TEI documents should be saved 
+	in UTF-8 format, without beginning with a byte-order mark (U+FEFF). 
+	Furthermore, while TEI allows for capturing of glyph variants 
+	not distinguished by Unicode (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html">
+	P5 chapter 5</ref>), the special elements for this purpose are not 
+	recommended in these <title>Best Practices</title> in order to 
+	facilitate interchange.</p>
+      </div>
+      <div type="===">
         <head>Transcription</head>
         <p>When reformatting to digital media using any level of
         encoding, the electronic text should begin with the
@@ -247,11 +257,11 @@
           in the TEI header to record whether such punctuation has
           been removed.</p>
           <p>When removing punctuation marks whose rendering in the
-          source document is worth preserving, use the <att>rend</att>
+          source document is worth preserving, use the <att>style</att>
           attribute on the appropriate element to describe the
           punctuation marks that were removed. For example:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <p>When she said <said rend="quotes: '“' '”'">Nobody uses the term 
+            <p>When she said <said style="quotes: '“' '”'">Nobody uses the term 
             <mentioned rend="quotes: '‘' '’'">electronic text</mentioned> anymore</said>
 	    he nearly passed out!</p>
           </egXML>
@@ -770,11 +780,11 @@
         document (within the <gi>text</gi> element), as evidenced by
         attributes used in encoding example snippets and the prose
         description of this document.</p>
-	<p>Scores of attributes are available for use within
+	<!--<p>Scores of attributes are available for use within
 	<gi>text</gi>, and a list of those recommended for use in documents
 	conforming to these <title>Best Practices</title> is included in <ref
         target="#Appendix_A:_Recommended_Attributes">Appendix
-        A</ref>.</p>
+        A</ref>.</p>-->
         <p>In this section is general advice on the use of particular
         attributes commonly needed for library encoding projects. (All
         of the attributes below are commonly used on various elements,
@@ -855,10 +865,10 @@
           <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">as described in the TEI Guidelines</ref>.</p>
         </div>
         <div type="====">
-          <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
+          <head><att>style</att>, <att>rend</att>, and <att>rendition</att></head>
           <p>At levels 3 and above, the <att>style</att>, <att>rend</att> and
           <att>rendition</att> attributes may be used when it is
-          desirable to record information about how the textual
+          desirable to record information about how a textual
           feature was displayed in the source document.</p>
           <p>Never use these attributes on header elements: metadata
           is transcribed and possibly regularized, as in a catalog
@@ -877,7 +887,7 @@
           text or on all elements whose rendering does not follow the
           default stylesheet.</p>
           <p>For the value of the <att>style</att> attribute, use only
-          valid CSS properties and values as in a declaration-block
+          valid CSS properties and values as in a CSS declaration-block
           but without curly braces. For example:
           <eg>&lt;foreign style="font-style: italic"></eg>
           <eg>&lt;title style="text-decoration: underline; font-size: x-large"></eg></p>
@@ -896,7 +906,7 @@
           typos being introduced in the encoding.</p>
           <p>If there are formatting features in the source that cannot be
           expressed with CSS syntax, the <att>rend</att> attribute may be
-          used.</p>
+	  used instead of <att>style</att> or <att>rendition</att>.</p>
         </div>
         <div type="====">
           <head><att>xml:lang</att></head>
@@ -1072,45 +1082,45 @@
       to develop these <title>Best Practices</title>.</p>
       <p>The individuals who served as editors of this document are:
       <list>
-        <item>Kevin Hawkins, University of Michigan</item>
+        <item>Kevin Hawkins, formerly of the University of Michigan</item>
         <item>Michelle Dalmau, Indiana University</item>
       </list></p>
       <p>The individuals who have contributed to the writing of this
       document are:
       <list>
-        <item>Syd Bauman, Brown University</item>
+        <item>Syd Bauman, formerly of Brown University</item>
         <item>Michelle Dalmau, Indiana University</item>
-        <item>Matthew Gibson, University of Virginia</item>
-        <item>Kevin Hawkins, University of Michigan</item>
+        <item>Matthew Gibson, Virginia Foundation for the Humanities</item>
+        <item>Kevin Hawkins, formerly of the University of Michigan</item>
         <item>Lisa McAulay, University of California, Los Angeles</item>
         <item>Renee McBride, University of North Carolina, Chapel Hill</item>
-        <item>Melanie Schlosser, Ohio State University</item>
-        <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
+        <item>Melanie Schlosser, formerly of the Ohio State University</item>
+        <item>Natasha Smith, formerly of the University of North Carolina, Chapel Hill</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC</item>
         <item>Vitus Tang, Stanford University</item>
-        <item>Richard Wisneski, Case Western University</item>
+        <item>Richard Wisneski, formerly of Case Western University</item>
         <item>Glen Worthey, Stanford University</item>
       </list></p>
       <p>The individuals who have contributed to the planning of this
       document are:
       <list>
-        <item>Syd Bauman, Brown University</item>
+        <item>Syd Bauman, formerly of Brown University</item>
         <item>Michelle Dalmau, Indiana University</item>
-        <item>Matthew Gibson, University of Virginia</item>
-        <item>Kevin Hawkins, University of Michigan</item>
+        <item>Matthew Gibson, Virginia Foundation for the Humanities</item>
+        <item>Kevin Hawkins, formerly of the University of Michigan</item>
         <item>Lisa McAulay, University of California, Los Angeles</item>
         <item>Chris Powell, University of Michigan</item>
         <item>Andrew Rouner, Washington University in St. Louis</item>
-        <item>Melanie Schlosser, Ohio State University</item>
-        <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
+        <item>Melanie Schlosser, formerly of the Ohio State University</item>
+        <item>Natasha Smith, formerly of the University of North Carolina, Chapel Hill</item>
         <item>Perry Willett, California Digital Library</item>
-        <item>Richard Wisneski, Case Western University</item>
+        <item>Richard Wisneski, formerly of Case Western University</item>
         <item>Glen Worthey, Stanford University</item>
       </list></p>
       <p>The individuals who have contributed complementary tools to
       this document are:
       <list>
-        <item>Syd Bauman, Brown University: schema specifications and
+        <item>Syd Bauman, formerly of Brown University: schema specifications and
         translation to a set of TEI ODD customizations</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC:
         <ref target="http://wiki.tei-c.org/index.php/Thutmose">Thutmose stylesheets for MARC-to-TEI header mappings</ref></item>
@@ -1119,7 +1129,7 @@
       document are:
       <list>
         <item>Susan Lorand, University of Michigan</item>
-        <item>Becky Welzenbach, University of Michigan</item>
+        <item>Rebecca Welzenbach, University of Michigan</item>
       </list></p>
       <p>Lastly, we would like to thank the Digital Library Federation
       (DLF) for sponsoring two in-person meetings as part of the
@@ -1128,99 +1138,7 @@
       work. The DLF also provided teleconferencing support for our
       regularly scheduled meetings.</p>
     </div>
-    <div type="==">
-      <head>Appendix A: Recommended Attributes</head>
-      <p>The following is a list of attributes recommended for use in
-      TEI documents created according to these <title>Best
-      Practices</title>. It includes both attributes explicitly
-      mentioned in these <title>Best Practices</title> as well as
-      those that the contributors to these <title>Best
-      Practices</title> find likely to be used with the elements
-      mentioned.</p>
-      <list>
-        <item><att>anchored</att></item>
-        <item><att>baseForm</att></item>
-        <item><att>baseTypes</att></item>
-        <item><att>calendar</att></item>
-        <item><att>cause</att></item>
-        <item><att>cert</att></item>
-        <item><att>class</att></item>
-        <item><att>cols</att></item>
-        <item><att>copyOf</att></item>
-        <item><att>corresp</att></item>
-        <item><att>degree</att></item>
-        <item><att>dur</att></item>
-        <item><att>dur-iso</att></item>
-        <item><att>ed</att></item>
-        <item><att>end</att></item>
-        <item><att>evaluate</att></item>
-        <item><att>exclude</att></item>
-        <item><att>facs</att></item>
-        <item><att>from</att></item>
-        <item><att>from-iso</att></item>
-        <item><att>full</att></item>
-        <item><att>gi</att></item>
-        <item><att>given</att></item>
-        <item><att>group</att></item>
-        <item><att>hand</att></item>
-        <item><att>height</att></item>
-        <item><att>ident</att></item>
-        <item><att>key</att></item>
-        <item><att>level</att></item>
-        <item><att>locus</att></item>
-        <item><att>marks</att></item>
-        <item><att>met</att></item>
-        <item><att>min</att></item>
-        <item><att>n</att></item>
-        <item><att>name</att></item>
-        <item><att>next</att></item>
-        <item><att>notAfter</att></item>
-        <item><att>notBefore</att></item>
-        <item><att>org</att></item>
-        <item><att>part</att></item>
-        <item><att>period</att></item>
-        <item><att>place</att></item>
-        <item><att>precision</att></item>
-        <item><att>prev</att></item>
-        <item><att>quantity</att></item>
-        <item><att>reason</att></item>
-        <item><att>ref</att></item>
-        <item><att>rend</att></item>
-        <item><att>render</att></item>
-        <item><att>rendition</att></item>
-        <item><att>resp</att></item>
-        <item><att>rhyme</att></item>
-        <item><att>role</att></item>
-        <item><att>rows</att></item>
-        <item><att>sex</att></item>
-        <item><att>scale</att></item>
-        <item><att>scheme</att></item>
-        <item><att>scope</att></item>
-        <item><att>select</att></item>
-        <item><att>sort</att></item>
-        <item><att>subtype</att></item>
-        <item><att>synch</att></item>
-        <item><att>target</att></item>
-        <item><att>targetEnd</att></item>
-        <item><att>targets</att></item>
-        <item><att>targFunc</att></item>
-        <item><att>to</att></item>
-        <item><att>to-iso</att></item>
-        <item><att>type</att></item>
-        <item><att>unit</att></item>
-        <item><att>uri</att></item>
-        <item><att>url</att></item>
-        <item><att>usage</att></item>
-        <item><att>version</att></item>
-        <item><att>when</att></item>
-        <item><att>who</att></item>
-        <item><att>width</att></item>
-        <item><att>xml:base</att></item>
-        <item><att>xml:id</att></item>
-        <item><att>xml:lang</att></item>
-        <item><att>xml:space</att></item>
-        </list>
-      </div>
+    <!-- removed Appendix A: List of Recommended Attributes -->
       <div type="==">
         <head>Appendix B: History of This Document</head>
         <p>This document was formerly known as <title>TEI Text
@@ -1396,43 +1314,40 @@
      DLF-sponsored meeting that took place as part of the DLF Spring
      Forum in Raleigh, North Carolina on May 6, 2009.</p>
      <p>In April 2009, a year after the revision work began, the
-     significantly revamped <title>Best Practices</title> soon to be
+     significantly revamped <title>Best Practices</title>, soon to be
      known as <title>Best Practices for TEI in Libraries</title>
-     (version 3) were disseminated for public comment. At DLF that
-     year, a <ref
+     (version 3), were disseminated for public comment. At the DLF Spring Forum in Raleigh, a <ref
      target="http://www.diglib.org/forums/spring2009/2009springprogram.htm">Birds-of-a-Feather
      session entitled <title>TEI Text Encoding in
      Libraries</title></ref> was held to gather in-person public
      feedback. Comments received at the in-person meeting, from the
-     <ref
-     target="http://www.lsoft.com/scripts/wl.exe?SL1=TEILIB-L&amp;H=LISTSERV.INDIANA.EDU">TEILIB-L
-     listserv</ref>, through a survey, and by direct email were
+     TEILIB-L
+     listserv, through a survey, and by direct email were
      gathered and prioritized at the DLF meeting. Renee McBride
      (University of North Carolina, Chapel Hill) agreed to map header
      elements to MARC elements, and Vitus Tang (Stanford University)
      provided valuable comments. In addition to addressing most of the
-     comments received, it was resolved that Syd Bauman will generate
-     an ODD specification (One Document Does it All; schema, prose
-     documentation, etc.) for levels 1-4, further ensuring
+     comments received, it was resolved that Syd Bauman would generate
+     an ODD document (containing both schema constraints and prose) for levels 1-4, further ensuring
      interoperability of texts encoded according to these <title>Best
      Practices</title>.</p>
-     <p>The revised <title>Best Practices</title> contain updated
+     <p>The revised <title>Best Practices</title> contained updated
      versions of the widely adopted encoding
      <soCalled>levels</soCalled> &#x2014; from fully automated conversion to
-     content analysis and scholarly encoding. They also contain a
+     content analysis and scholarly encoding. They also contained a
      substantially revised section on the TEI header, designed to
      support interoperability between text collections and the use of
-     complementary metadata schemas such as MARC. They also explore
+     complementary metadata schemas such as MARC. Furthermore, they explored
      the relationship between METS and TEI and the relationship
      between these <title>Best Practices</title> and the new vendor
      specification, TEI Tite.</p>
-     <p>The new <title>Best Practices</title> also reflect an
+     <p>The new <title>Best Practices</title> also reflected an
      organizational shift. Originally authored by the DLF-sponsored
-     TEI Task Force, the current revision work is a partnership
+     TEI Task Force, the new revision was a partnership
      between members of the Task Force and the TEI SIG on Libraries.
      As a result of this partnership, responsibility for the
-     <title>Best Practices</title> will migrate to the SIG, allowing
-     closer work with the TEI Consortium as a whole, and a stronger
+     <title>Best Practices</title> moved to the SIG, allowing
+     closer work with the TEI Consortium as a whole and a stronger
      basis for advocating for the needs of libraries in future TEI
      releases.</p>
    </div>

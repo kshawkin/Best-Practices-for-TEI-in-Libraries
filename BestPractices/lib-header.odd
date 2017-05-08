@@ -166,6 +166,9 @@
 	  <gi>idno</gi> element to supply identifiers for outside metadata records and may
 	  supply identifiers for certain authority records using the <att>ref</att> attribute,
 	  allowed on certain elements.</p>
+		
+	  <p>The header's <gi>xenoData</gi> element may be used to embed non-TEI metadata in a 
+	  TEI document.</p>
 	</div>
 	<div type="section">
 	  <head>Determining Data Values for the TEI Header</head>
@@ -1035,7 +1038,7 @@
 	      <cell/>
 	      <cell/>
 	      <cell>│</cell>
-	      <cell>└</cell>
+	      <cell>│</cell>
 	      <cell cols="2">
 		<gi>extent</gi>
 	      </cell>
@@ -1071,52 +1074,9 @@
 	      <cell>│</cell>
 	      <cell/>
 	      <cell/>
-	      <cell>├</cell>
-	      <cell cols="3">
-		<gi>series</gi>
-	      </cell>
-	      <cell>Information about the series to which the source document
-	      bibliographic item belongs, given according to the national cataloging
-	      code. If generating this data from a catalog record, it is likely that
-	      you will have only one child element: a <tag>title level="s"</tag>.
-	      Use of the <att>type</att> attribute <emph>on the <gi>title</gi>
-	      element</emph> is optional, but if it is used, it should follow <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">instructions
-	      for use of this element in the full TEI Guidelines</ref>.</cell>
-	      <cell>
-		<table>
-		  <row role="label">
-		    <cell>MARC record based on encoded text</cell>
-		    <cell>MARC record based on source document</cell>
-		  </row>
-		  <row>
-		    <cell>
-		      <list>
-			<item>534 $f</item>
-		      </list>
-		    </cell>
-		    <cell>
-		      <list>
-			<item>4xx</item>
-			<item>8xx </item>
-		      </list>
-		    </cell>
-		  </row>
-		</table>
-	      </cell>
-	      <cell>
-		<list>
-		  <item>4xx</item>
-		  <item>8xx</item>
-		</list>
-	      </cell>
-	    </row>
-
-	    <row>
 	      <cell>│</cell>
-	      <cell/>
-	      <cell/>
-	      <cell>├</cell>
-	      <cell cols="3">
+	      <cell>│</cell>
+	      <cell cols="2">
 		<gi>note</gi>
 	      </cell>
 	      <cell>Optionally, use for notes about the source document bibliographic item, given according to a national cataloging code.</cell>
@@ -1147,8 +1107,9 @@
 	      <cell>│</cell>
 	      <cell/>
 	      <cell/>
-	      <cell>├</cell>
-	      <cell cols="3">
+	      <cell>│</cell>
+	      <cell>└</cell>
+	      <cell cols="2">
 		<gi>idno</gi>
 	      </cell>
 	      <cell>
@@ -1197,6 +1158,50 @@
 		  <item>029</item>
 		  <item>035</item>
 		  <item>050-099</item>
+		</list>
+	      </cell>
+	    </row>
+
+	    <row>
+	      <cell>│</cell>
+	      <cell/>
+	      <cell/>
+	      <cell>├</cell>
+	      <cell cols="3">
+		<gi>series</gi>
+	      </cell>
+	      <cell>Information about the series to which the source document
+	      bibliographic item belongs, given according to the national cataloging
+	      code. If generating this data from a catalog record, it is likely that
+	      you will have only one child element: a <tag>title level="s"</tag>.
+	      Use of the <att>type</att> attribute <emph>on the <gi>title</gi>
+	      element</emph> is optional, but if it is used, it should follow <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">instructions
+	      for use of this element in the full TEI Guidelines</ref>.</cell>
+	      <cell>
+		<table>
+		  <row role="label">
+		    <cell>MARC record based on encoded text</cell>
+		    <cell>MARC record based on source document</cell>
+		  </row>
+		  <row>
+		    <cell>
+		      <list>
+			<item>534 $f</item>
+		      </list>
+		    </cell>
+		    <cell>
+		      <list>
+			<item>4xx</item>
+			<item>8xx </item>
+		      </list>
+		    </cell>
+		  </row>
+		</table>
+	      </cell>
+	      <cell>
+		<list>
+		  <item>4xx</item>
+		  <item>8xx</item>
 		</list>
 	      </cell>
 	    </row>
@@ -1640,6 +1645,16 @@
 	    </row>
 
 	    <row>
+	      <cell>│</cell>
+	      <cell cols="6">
+		<gi>xenoData</gi>
+	      </cell>
+	      <cell>Use as a wrapper for embedded non-TEI metadata.</cell>
+	      <cell>n/a</cell>
+	      <cell>n/a</cell>
+	    </row>
+		  
+	    <row>
 	      <cell>└</cell>
 	      <cell cols="6">
 		<gi>revisionDesc</gi>
@@ -1712,11 +1727,11 @@
 		    </imprint>
 		    <extent>viii, [7]-215 p</extent>
 		    <extent>20 cm.</extent>
+		    <note>First published in condensed form in the Galaxy, v. 16, 1873, p. [518]-530,
+		       [687]-700, [793]-804.</note>
+		    <idno type="ISBN">1-4255-1817-6</idno>
+		    <idno type="LC_call_number">E456 .W44</idno>
 		  </monogr>
-		  <note>First published in condensed form in the Galaxy, v. 16, 1873, p. [518]-530,
-		  [687]-700, [793]-804.</note>
-		  <idno type="ISBN">1-4255-1817-6</idno>
-		  <idno type="LC_call_number">E456 .W44</idno>
 		</biblStruct>
 	      </sourceDesc>
 	    </fileDesc>
@@ -2286,6 +2301,178 @@
 		      </attDef>
 		    </attList>
 		  </elementSpec>
+		<classSpec type="atts" ident="att.BPTL.div.typed" mode="add">
+			<desc versionDate="2017-04-02" xml:lang="en">provides a recommended set of values describing common text divisions which can be used to classify sections of text.</desc>
+			<attList>
+				<attDef ident="type" usage="rec">
+					<datatype>
+						<dataRef key="teidata.enumerated"/>
+					</datatype>
+					<defaultVal>section</defaultVal>
+					<!-- When changing values for the @type attribute on divs, remember to make the 
+                     parallel adjustments to the list that appears in the prose of the BPTL (in main-driver.odd) 
+                     and to the attDef for the @type attribute on numbered and unnumbered divs in level2.odd, 
+                     level3.odd, and level4.odd, so that the values remain in sync -->
+					<valList type="semi">
+						<valItem ident="preface">
+							<desc>A section of the front matter that does not carry a more specific designation. Usually appears in front matter.</desc>
+						</valItem>
+						<valItem ident="foreword">
+							<desc>Usually appears in front matter.</desc>
+						</valItem>
+						<valItem ident="acknowledgement">
+							<desc>Usually appears in front matter.</desc>
+						</valItem>
+						<valItem ident="dedication">
+							<desc>A dedication. Usually appears in front matter.</desc>
+						</valItem>
+						<valItem ident="abstract">
+							<desc>Usually appears in front matter.</desc>
+						</valItem>
+						<valItem ident="contents">
+							<desc>A table of contents. Usually appears in front matter.</desc>
+						</valItem>
+						<valItem ident="frontispiece">
+							<desc>A portrait or other image (usually of the author, usually full page) printed at the front of a document. Usually appears in front matter.</desc>
+						</valItem>
+						<valItem ident="appendix">
+							<desc>Usually appears in back matter.</desc>
+						</valItem>
+						<valItem ident="glossary">
+							<desc>Usually appears in back matter.</desc>
+						</valItem>
+						<valItem ident="notes">
+							<desc>Usually appears in back matter.</desc>
+						</valItem>
+						<valItem ident="bibliography">
+							<desc>Usually appears in back matter.</desc>
+						</valItem>
+						<valItem ident="index">
+							<desc><desc>An alphabetical listing of the topics in a document, usually with accompanying page references</desc> Usually appears in back matter.</desc>
+						</valItem>
+						<valItem ident="colophon">
+							<desc>A short inscription, typically at the end of a book or manuscript, containing the title, printer, date and place of printing, etc. Usually appears in back matter.</desc>
+						</valItem>
+						<valItem ident="book">
+							<desc>A major structural component of a long work, identified explicitly in
+								the text as a "book".se</desc>
+						</valItem>
+						<valItem ident="chapter">
+							<desc>A chapter, typically in a prose document.</desc>
+						</valItem>
+						<valItem ident="part">
+							<desc>A major component of a work, containing further subdivisions.</desc>
+						</valItem>
+						<valItem ident="section">
+							<desc>A generic section of a larger work.</desc>
+						</valItem>
+						<valItem ident="subsection">
+							<desc>A generic subdivision of a section.</desc>
+						</valItem>
+						<valItem ident="volume">
+							<desc>A single printed volume in a multi-volume work.</desc>
+						</valItem>
+						<valItem ident="endnotes">
+							<desc>A section containing endnotes for the document.</desc>
+						</valItem>
+						<valItem ident="advert">
+							<desc>An advertisement for a printed work or other product.</desc>
+						</valItem>
+						<valItem ident="corrigenda">
+							<desc>A section describing corrections to be made to the document.</desc>
+						</valItem>
+						<valItem ident="docAuthorization">
+							<desc>A statement indicating that the document's printing was officially
+								authorized.</desc>
+						</valItem>
+						<valItem ident="imprimatur">
+							<desc>A formal indication (usually on the title page or in the front matter)
+								that the document has received official license to be printed.</desc>
+						</valItem>
+						<valItem ident="drama">
+							<desc>A dramatic text.</desc>
+						</valItem>
+						<valItem ident="dramaPart">
+							<desc>A portion of a drama other than a prologue, act, scene, or epilogue.</desc>
+						</valItem>
+						<valItem ident="act">
+							<desc>An act in a dramatic text.</desc>
+						</valItem>
+						<valItem ident="scene">
+							<desc>A scene in a dramatic text.</desc>
+						</valItem>
+						<valItem ident="castlist">
+							<desc>A list of characters in a dramatic text.</desc>
+						</valItem>
+						<valItem ident="poem">
+							<desc>A poem.</desc>
+						</valItem>
+						<valItem ident="poemGroup">
+							<desc>A group of two or more poems under a common heading.</desc>
+						</valItem>
+						<valItem ident="argument">
+							<desc>A short passage at the start of a document or section giving a prose
+								description of its contents.</desc>
+						</valItem>
+						<valItem ident="entry">
+							<desc>An entry in a document that is organized as a log or diary with dated
+								entries.</desc>
+						</valItem>
+						<valItem ident="concluding">
+							<desc>Any section of the back matter that does not carry a more specific
+								designation; includes afterwords, epilogues, codas, etc.</desc>
+						</valItem>
+						<valItem ident="epigraph">
+							<desc>A short quotation at the start of a document or section, often
+								accompanied by an attribution.</desc>
+						</valItem>
+						<valItem ident="prologue">
+							<desc>An opening section of a literary work (typically drama or poetry).</desc>
+						</valItem>
+						<valItem ident="epilogue">
+							<desc>A short concluding section, usually of a dramatic or fictional work.
+							</desc>
+						</valItem>
+						<valItem ident="narrative">
+							<desc>An embedded narrative.</desc>
+						</valItem>
+						<valItem ident="nonfictionProse">
+							<desc>A text intended to be nonfiction consisting primarily of prose.</desc>
+						</valItem>
+						<valItem ident="novelPart">
+							<desc>A portion of a novel.</desc>
+						</valItem>
+						<valItem ident="calendar">
+							<desc>A formal calendar; a document or document section identifying itself as a calendar.</desc>
+						</valItem>
+						<valItem ident="essay">
+							<desc>A short prose non-fiction document.</desc>
+						</valItem>
+						<valItem ident="timeline">
+							<desc>A timeline.</desc>
+						</valItem>
+						<valItem ident="examination">
+							<desc>A section that is identified explicitly as an <soCalled>examination</soCalled> in a text that uses this as a main structural division.</desc>
+						</valItem>
+						<valItem ident="letter">
+							<desc>Any document in epistolary form, i.e. addressed by a sender to a recipient.</desc>
+						</valItem>
+						<valItem ident="prayer">
+							<desc>A prayer.</desc>
+						</valItem>
+						<valItem ident="recipe">
+							<desc>A recipe in a cookbook.</desc>
+						</valItem>
+						<valItem ident="speech">
+							<desc>A section described as a speech or public lecture, in a document that uses this as a main structural division.</desc>
+						</valItem>
+						<valItem ident="tract">
+							<desc>A short treatise in pamphlet form often on a religious subject.</desc>
+						</valItem>
+					</valList>
+				</attDef>
+			</attList>
+		</classSpec>
 		  <!-- class deletions, in alphabetical order: -->
                </specGrp>
             </div>

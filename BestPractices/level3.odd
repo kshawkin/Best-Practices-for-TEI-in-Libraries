@@ -297,16 +297,75 @@
           </div>
           <div type="grec">
             <head>Notes</head>
-            <p>Use the <gi>note</gi> element to encode the text of a margin note, footnote, endnote, or other note found in the source document. This element may be used for encoding notes "inline" at the point of reference (such as where a superscript number appears), as in the Alger Hiss example below.  In the case of conversion from OCR and from some born-digital source documents, this will require manual intervention to move the text of the note to the place of reference. Note, though, that if the note in the source document begins on a different page from the place of reference, a <gi>pb</gi> should be inserted before the first word of the note within the <gi>note</gi> to record this.</p>
-            <p>Marginal notes without reference from the base text be inserted at the beginning of the paragraph to which they refer, with <code>place="margin"</code>.</p>
-            <p>Alternatively, the point of reference and note itself may be encoded separately.  In this model, the point of reference should be encoded using a <gi>ref</gi> or <gi>ptr</gi> element, as in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6 Simple Links and Cross-References</ref>. The text of the note itself is tagged using the <gi>note</gi> element, either at the point where the note occurs on the page or at another point convenient when converting from a born-digital source document, such as at the end of the containing <gi>div</gi> (or <gi>div1</gi>) or in a special <gi>div</gi> (or <gi>div1</gi>) element within <gi>back</gi>.  For example, the first footnote reference in the Alger Hiss example would be encoded as:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <ref target="#n68">68</ref>
-            </egXML> and the note itself as:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <note place="bottom" anchored="true" xml:id="n68" n="68">Also before 1947, [...]</note>
-            </egXML>
-            For cases in which a note spans pages, a <gi>pb</gi> should be used inside <gi>note</gi> to mark the page break that occurs within the note.</p>
+            <p>Use the <gi>note</gi> element to encode the text of a margin note, 
+	      footnote, endnote, or other note found in the source document. If a
+	      point of attachment is marked with a siglumn (such as an asterisk 
+	      or superscript number), encode the siglum with a <gi>ref</gi> 
+	      element. Alternatively, if there is no marked point of attachment, 
+	      insert a <gi>ptr</gi> at the most likely implied point of attachment
+	      for the note.</p>
+	    <p>The text of the note (inside a <gi>note</gi> element) may either (a) be 
+	      left where it occurs in the layout of the page (as may be more 
+	      convenient in the case of conversion from OCR text) or may (b) be moved
+	      so that the <gi>note</gi> occurs just following the <gi>ref</gi> or 
+	      <gi>ptr</gi> marking the point of attachment. If a note span pages,
+	      be sure to insert a <gi>pb</gi> to mark the start of a new page. 
+	      Similarly, if the note in the source document begins on a different 
+	      page from the place of reference, a <gi>pb</gi> should be inserted 
+	      before the first word of the note within the <gi>note</gi> to record 
+	      this.</p>
+	    <p>The siglum is often repeated at the beginning of the note to aid the 
+	      reader in matching the siglum in the text to the note. Encode any 
+	      siglum within the note using <gi>label</gi>.</p>
+            <p>Here is an example encoded according to method (a)—first the sigla:
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+		<p>The three little pigs built their houses out of straw,<ref target="#n_a1">1</ref>
+		sticks,<ref target="#n_a2">2</ref> and bricks.<ref target="#n_a3">3</ref></p>
+	      </egXML>
+	      <bibl>
+		<title>How to properly typeset footnotes/superscripts after 
+		punctuation marks?</title>,
+		<ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>
+	      </bibl>
+	    <p>And then the annotations themselves, encoded as
+	    <gi>note</gi> elements inside a division in the backmatter
+	    that holds the endnotes:</p>
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+		<back>
+		  <div type="endnotes">
+		    <head>The Collected End-notes</head>
+		    <note place="bottom" anchored="true" xml:id="n_a1">
+		      <label>1</label>
+		      not to be confused with hay</note>
+		    <note place="bottom" anchored="true" xml:id="n_a2">
+		      <label>2</label>
+		      or lumber according to some sources</note>
+		    <note place="bottom" anchored="true" xml:id="n_a3">
+		      <label>3</label>
+		      probably fired clay bricks</note>
+		  </div>
+		</back>
+	      </egXML>
+	    </p>
+	    <p>Here is an example encoded according to method (b), with notes encoded 
+	      right after the point of attachment:
+	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+		<p>The three little pigs built their houses out of 
+		straw,<ref target="#n_b1">1</ref>
+		<note place="bottom" anchored="true" xml:id="n_b1">
+		  <label>1</label> not to be confused with hay
+		</note> 
+		sticks,<ref target="#n_b2">2</ref>
+		<note place="bottom" anchored="true" xml:id="n_b2">
+		  <label>2</label> or lumber according to some sources
+		</note>
+		and bricks.<ref target="#n_b3">3</ref>
+		<note place="bottom" anchored="true" xml:id="n_b3">
+		  <label>3</label> probably fired clay bricks
+		</note>
+		</p>
+	      </egXML>
+	    </p>  
           </div>
         </div>
         <div type="examples">
@@ -490,8 +549,9 @@
                       70; CN Ex. 102. Continuous physical surveillance of Hiss was begun as well. CN
                       Ex. 101 at p. 72. Although this twenty-four-hour surveillance was discontinued
                       on December 14, 1945, physical surveillance was conducted frequently at
-                      various times until September, 1947. <note place="bottom" anchored="true"
-                      n="68">Also before 1947, a letter from Priscilla Hiss addressed to her son,
+		      various times until September, 1947. <ptr target="#n68">68</ptr>
+		      <note place="bottom" anchored="true" xml:id="n68"><label>68</label>Also before 
+		      1947, a letter from Priscilla Hiss addressed to her son,
                       Timothy Hobson, was intercepted and its contents read. CN Ex. 100A at p.
                       167. In approximately March, 1947, a letter from a Michael Greenberg
                       addressed to petitioner re­ garding an application for employment with the
@@ -507,8 +567,8 @@
                       sonal lives, relationships with friends and associates, and habits is
                       recorded.</p>
                       <p>The wiretap was installed following FBI Director Hoover's application to the
-                      Attorney General for authorization, <note place="bottom" anchored="true"
-                      n="69">Hoover's initial request was answered by a note reques­ ting
+		      Attorney General for authorization, <ptr target="n69">69</ptr><note place="bottom" 
+		      anchored="true" xml:id="n69"><label>69</label>Hoover's initial request was answered by a note reques­ ting
                       information on Hiss. CN Ex. 104. Additional information was furnished by
                       letter dated November 30, 1945. CN Ex. 105.</note> although no written
                       authorization appears in the documents released to Hiss. The purpose of the
@@ -769,6 +829,7 @@
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
                 <memberOf key="model.divLike"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
               <content>
                 <sequence>
@@ -802,175 +863,6 @@
                   </s:rule>
                 </constraint>
               </constraintSpec>
-              <attList>
-                <attDef ident="type" mode="add">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                <defaultVal>section</defaultVal>
-                <!-- When changing values for the @type attribute on divs, remember to make the 
-                     parallel adjustments to the list that appears in the prose of the BPTL (in main-driver.odd) 
-                     and to the attDef for the @type attribute on numbered and unnumbered divs in level2.odd, 
-                     level3.odd, and level4.odd, so that the values remain in sync -->
-                <valList type="semi">
-                  <valItem ident="preface">
-                    <desc>A section of the front matter that does not carry a more specific designation. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="foreword">
-                    <desc>Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="acknowledgement">
-                    <desc>Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="dedication">
-                    <desc>A dedication. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="abstract">
-                    <desc>Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="contents">
-                    <desc>A table of contents. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="frontispiece">
-                    <desc>A portrait or other image (usually of the author, usually full page) printed at the front of a document. Usually appears in front matter.</desc>
-                  </valItem>
-                  <valItem ident="appendix">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="glossary">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="notes">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="bibliography">
-                    <desc>Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="index">
-                    <desc><desc>An alphabetical listing of the topics in a document, usually with accompanying page references</desc> Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="colophon">
-                    <desc>A short inscription, typically at the end of a book or manuscript, containing the title, printer, date and place of printing, etc. Usually appears in back matter.</desc>
-                  </valItem>
-                  <valItem ident="book">
-                    <desc>A major structural component of a long work, identified explicitly in
-                      the text as a "book".se</desc>
-                  </valItem>
-                  <valItem ident="chapter">
-                    <desc>A chapter, typically in a prose document.</desc>
-                  </valItem>
-                  <valItem ident="part">
-                    <desc>A major component of a work, containing further subdivisions.</desc>
-                  </valItem>
-                  <valItem ident="section">
-                    <desc>A generic section of a larger work.</desc>
-                  </valItem>
-                  <valItem ident="subsection">
-                    <desc>A generic subdivision of a section.</desc>
-                  </valItem>
-                  <valItem ident="volume">
-                    <desc>A single printed volume in a multi-volume work.</desc>
-                  </valItem>
-                  <valItem ident="endnotes">
-                    <desc>A section containing endnotes for the document.</desc>
-                  </valItem>
-                  <valItem ident="advert">
-                    <desc>An advertisement for a printed work or other product.</desc>
-                  </valItem>
-                  <valItem ident="corrigenda">
-                    <desc>A section describing corrections to be made to the document.</desc>
-                  </valItem>
-                  <valItem ident="docAuthorization">
-                    <desc>A statement indicating that the document's printing was officially
-                      authorized.</desc>
-                  </valItem>
-                  <valItem ident="imprimatur">
-                    <desc>A formal indication (usually on the title page or in the front matter)
-                      that the document has received official license to be printed.</desc>
-                  </valItem>
-                  <valItem ident="drama">
-                    <desc>A dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="dramaPart">
-                    <desc>A portion of a drama other than a prologue, act, scene, or epilogue.</desc>
-                  </valItem>
-                  <valItem ident="act">
-                    <desc>An act in a dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="scene">
-                    <desc>A scene in a dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="castlist">
-                    <desc>A list of characters in a dramatic text.</desc>
-                  </valItem>
-                  <valItem ident="poem">
-                    <desc>A poem.</desc>
-                  </valItem>
-                  <valItem ident="poemGroup">
-                    <desc>A group of two or more poems under a common heading.</desc>
-                  </valItem>
-                  <valItem ident="argument">
-                    <desc>A short passage at the start of a document or section giving a prose
-                      description of its contents.</desc>
-                  </valItem>
-                  <valItem ident="entry">
-                    <desc>An entry in a document that is organized as a log or diary with dated
-                      entries.</desc>
-                  </valItem>
-                  <valItem ident="concluding">
-                    <desc>Any section of the back matter that does not carry a more specific
-                      designation; includes afterwords, epilogues, codas, etc.</desc>
-                  </valItem>
-                  <valItem ident="epigraph">
-                    <desc>A short quotation at the start of a document or section, often
-                      accompanied by an attribution.</desc>
-                  </valItem>
-                  <valItem ident="prologue">
-                    <desc>An opening section of a literary work (typically drama or poetry).</desc>
-                  </valItem>
-                  <valItem ident="epilogue">
-                    <desc>A short concluding section, usually of a dramatic or fictional work.
-                    </desc>
-                  </valItem>
-                  <valItem ident="narrative">
-                    <desc>An embedded narrative.</desc>
-                  </valItem>
-                  <valItem ident="nonfictionProse">
-                    <desc>A text intended to be nonfiction consisting primarily of prose.</desc>
-                  </valItem>
-                  <valItem ident="novelPart">
-                    <desc>A portion of a novel.</desc>
-                  </valItem>
-                  <valItem ident="calendar">
-                    <desc>A formal calendar; a document or document section identifying itself as a calendar.</desc>
-                  </valItem>
-                  <valItem ident="essay">
-                    <desc>A short prose non-fiction document.</desc>
-                  </valItem>
-                  <valItem ident="timeline">
-                    <desc>A timeline.</desc>
-                  </valItem>
-                  <valItem ident="examination">
-                    <desc>A section that is identified explicitly as an <soCalled>examination</soCalled> in a text that uses this as a main structural division.</desc>
-                  </valItem>
-                  <valItem ident="letter">
-                    <desc>Any document in epistolary form, i.e. addressed by a sender to a recipient.</desc>
-                  </valItem>
-                  <valItem ident="prayer">
-                    <desc>A prayer.</desc>
-                  </valItem>
-                  <valItem ident="recipe">
-                    <desc>A recipe in a cookbook.</desc>
-                  </valItem>
-                  <valItem ident="speech">
-                    <desc>A section described as a speech or public lecture, in a document that uses this as a main structural division.</desc>
-                  </valItem>
-                  <valItem ident="tract">
-                    <desc>A short treatise in pamphlet form often on a religious subject.</desc>
-                  </valItem>
-                </valList>
-                </attDef>
-              </attList>
               <remarks>
                 <p>At level 3, <gi>div</gi> may only contain
                 the <gi>head</gi>,
@@ -990,107 +882,51 @@
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div1Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="add">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div2" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div2Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
-            </elementSpec>
+             </elementSpec>
             <elementSpec module="textstructure" ident="div3" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div3Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div4" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div4Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div5" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div5Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div6" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div6Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
             </elementSpec>
             <elementSpec module="textstructure" ident="div7" mode="change">
               <classes mode="change">
                 <memberOf key="att.global"/>
                 <memberOf key="att.typed" mode="delete"/>
-                <memberOf key="model.div7Like"/>
+                <memberOf key="att.BTPL.div.typed"/>
               </classes>
-              <attList>
-                <attDef ident="type" mode="change">
-                  <datatype>
-                    <dataRef key="teidata.enumerated"/>
-                  </datatype>
-                  <defaultVal>section</defaultVal>
-                </attDef>
-              </attList>
-            </elementSpec>
+             </elementSpec>
             <elementSpec module="core" ident="editor" mode="change">
               <desc>contains the name (typically encoded as <gi>persName</gi> or
               <gi>orgName</gi>) of an individual, institution, or organization acting as
