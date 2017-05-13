@@ -39,7 +39,7 @@ elif which xmlstarlet ; then
     STARLET=`which xmlstarlet`
 fi
 
-if [ -e /Applications/oxygen/ ] ; then
+if [ -e /Library/PreferencePanes/ ] ; then
     # on a Mac OS X system. Hope it is Syd's, as these paths are where he stores stuff.
     XSLDIR=${XSLDIR:-~/Documents/Stylesheets}
     P5SRC=${P5SRC:-~/Documents/TEI-GitHub/P5/p5subset.xml}
