@@ -252,9 +252,10 @@
             <mentioned>‘electronic text’</mentioned> anymore”</said>
             he nearly passed out!</p>
           </egXML>
-          Use <gi>quotation</gi> element in the <gi>editorialDecl</gi>
-          in the TEI header to record whether such punctuation has
-          been removed.</p>
+          Use the <gi>quotation</gi> element in the header to record 
+          whether quotation marks have been removed, and use the 
+          <gi>punctuation</gi> element in the header to record whether 
+	  other punctuation has been removed.</p>
           <p>When removing punctuation marks whose rendering in the
           source document is worth preserving, use the <att>style</att>
           attribute on the appropriate element to describe the
