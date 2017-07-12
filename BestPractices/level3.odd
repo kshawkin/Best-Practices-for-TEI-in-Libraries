@@ -183,7 +183,7 @@
             </row>
             <row>
               <cell><gi>p</gi></cell>
-              <cell>Recommended for paragraph breaks in prose.</cell>
+              <cell>Recommended for paragraphs in prose.</cell>
             </row>
             <row>
               <cell><gi>lg</gi> and <gi>l</gi></cell>
@@ -219,11 +219,11 @@
             </row>
             <row>
               <cell><gi>lb</gi></cell>
-              <cell>Optionally used to indicate line breaks.</cell>
+              <cell>Optionally used to indicate the beginning of a new line.</cell>
             </row>
             <row>
               <cell><gi>cb</gi></cell>
-              <cell>Optionally used to indicate column breaks.</cell>
+              <cell>Optionally used to indicate the beginning of a new column.</cell>
             </row>
           </table>
           </p>
