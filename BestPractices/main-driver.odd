@@ -749,7 +749,9 @@
           attribute on a <gi>pb</gi> element to point to the
           corresponding page image using a URI.</item>
           <item>Use the <att>xml:id</att> attribute on each
-          <gi>pb</gi> element and a METS document to provide
+	  <gi>pb</gi> element to refer to the <att>GROUPID</att> 
+	  attribute on various <gi>file</gi> elements in a METS 
+	  document, thereby providing
           correspondence between <gi>pb</gi> elements and one or more
           facsimile page images (e.g., master, web derivatives,
           etc.).</item>
