@@ -75,7 +75,7 @@
     <body>
     <div type="==">
       <head>Introduction</head>
-      <p>This document is the third version of a document formerly
+      <p>This document is the third major revision of a document formerly
       known as <title>TEI Text Encoding in Libraries: Guidelines for
       Best Encoding Practices</title>, which has been updated to comply
       with the <ref target="http://www.tei-c.org/">Text Encoding Initiative</ref>’s
@@ -1099,54 +1099,60 @@
       to develop these <title>Best Practices</title>.</p>
       <p>The individuals who served as editors of this document are:
       <list>
-        <item>Kevin Hawkins, formerly of the University of Michigan</item>
-        <item>Michelle Dalmau, Indiana University</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+        <item>Michelle Dalmau, Indiana University (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed to the writing of this
       document are:
       <list>
-        <item>Syd Bauman, formerly of Brown University</item>
-        <item>Michelle Dalmau, Indiana University</item>
-        <item>Matthew Gibson, Virginia Foundation for the Humanities</item>
-        <item>Kevin Hawkins, formerly of the University of Michigan</item>
-        <item>Lisa McAulay, University of California, Los Angeles</item>
-        <item>Renee McBride, University of North Carolina, Chapel Hill</item>
-        <item>Melanie Schlosser, formerly of the Ohio State University</item>
-        <item>Natasha Smith, formerly of the University of North Carolina, Chapel Hill</item>
-        <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC</item>
-        <item>Vitus Tang, Stanford University</item>
-        <item>Richard Wisneski, formerly of Case Western University</item>
-        <item>Glen Worthey, Stanford University</item>
+        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
+        <item>Michelle Dalmau, Indiana University (version 3.0)</item>
+        <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
+	<item>James R. Griffin, III, Lafayette College (version 3.1.0)</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+        <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
+        <item>Renee McBride, University of North Carolina, Chapel Hill (version 3.0)</item>
+	<item>Martin Mueller, Northwestern University (version 3.1.0)</item>
+	<item>Elli Mylonas, Brown University (version 3.1.0)</item>
+        <item>Andrew Rouner, Washington University in St. Louis (versions 3.0 &amp; 3.1.0)</item>
+        <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
+        <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
+        <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC (version 3.0)</item>
+        <item>Vitus Tang, Stanford University (version 3.0)</item>
+        <item>Richard Wisneski, Case Western University (version 3.0)</item>
+        <item>Glen Worthey, Stanford University (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed to the planning of this
       document are:
       <list>
-        <item>Syd Bauman, formerly of Brown University</item>
-        <item>Michelle Dalmau, Indiana University</item>
-        <item>Matthew Gibson, Virginia Foundation for the Humanities</item>
-        <item>Kevin Hawkins, formerly of the University of Michigan</item>
-        <item>Lisa McAulay, University of California, Los Angeles</item>
-        <item>Chris Powell, University of Michigan</item>
-        <item>Andrew Rouner, Washington University in St. Louis</item>
-        <item>Melanie Schlosser, formerly of the Ohio State University</item>
-        <item>Natasha Smith, formerly of the University of North Carolina, Chapel Hill</item>
-        <item>Perry Willett, California Digital Library</item>
-        <item>Richard Wisneski, formerly of Case Western University</item>
-        <item>Glen Worthey, Stanford University</item>
+        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
+        <item>Michelle Dalmau, Indiana University (version 3.0)</item>
+	<item>Stefanie Gehrke (Biblissima)</item>
+        <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
+	<item>Peter Gorman, University of Wisconsin (version 3.1.0)</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+        <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
+        <item>Chris Powell, University of Michigan (version 3.0)</item>
+	<item>Paul Schaffner, University of Michigan (version 3.1.0)</item>
+        <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
+        <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
+        <item>Perry Willett, California Digital Library (version 3.0)</item>
+        <item>Richard Wisneski, Case Western University (version 3.0)</item>
+        <item>Glen Worthey, Stanford University (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed complementary tools to
       this document are:
       <list>
-        <item>Syd Bauman, formerly of Brown University: schema specifications and
-        translation to a set of TEI ODD customizations</item>
+        <item>Syd Bauman, Brown University / Northeastern University: schema specifications and
+        translation to a set of TEI ODD customizations (versions 3.0 &amp; 3.1.0)</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC:
-        <ref target="http://wiki.tei-c.org/index.php/Thutmose">Thutmose stylesheets for MARC-to-TEI header mappings</ref></item>
+        <ref target="http://wiki.tei-c.org/index.php/Thutmose">Thutmose stylesheets for MARC-to-TEI header mappings</ref> (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed to copyediting of this
       document are:
       <list>
-        <item>Susan Lorand, University of Michigan</item>
-        <item>Rebecca Welzenbach, University of Michigan</item>
+        <item>Susan Lorand, University of Michigan (version 3.0)</item>
+        <item>Rebecca Welzenbach, University of Michigan (version 3.0)</item>
       </list></p>
       <p>Lastly, we would like to thank the Digital Library Federation
       (DLF) for sponsoring two in-person meetings as part of the
@@ -1367,6 +1373,9 @@
      closer work with the TEI Consortium as a whole and a stronger
      basis for advocating for the needs of libraries in future TEI
      releases.</p>
+     <p>The SIG decided to undertake a revision to this document at 
+     its meeting in November 2015 in Lyon.  A workgroup met monthly 
+     from early 2016 to ____ to undertake the work.</p>
    </div>
  </body>
 </text>
