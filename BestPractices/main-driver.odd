@@ -1021,14 +1021,12 @@
           discussed in Levels 1-4 above. They might also include
           elements for editorial, critical, or analytical additions;
           manuscript descriptions; translations; or other textual
-          apparatus. It is impossible to make concrete recommendations
-          for encoding at this level since the scholarly analysis
-          required is usually specific to each project; instead, Level
-          5 offers the full set of P5 elements as needed.</p>
+          apparatus.</p>
           <div type="====">
             <head>Reference</head>
             <list>
               <item><ref target="http://www.tei-c.org/Guidelines/P5">Complete P5 Guidelines</ref></item>
+	      <item><ref target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_simplePrint.doc.html">TEI simplePrint</ref></item>
             </list>
           </div>
           <div type="====">
@@ -1049,24 +1047,22 @@
             acknowledging the impact of library-specific practices on
             encoded text that is created under the auspices of a
             library.</p>
-            <p>The specific influences of library practice on a
-            Level-5 encoded text are expressed primarily in adherence
-            to the <ref target="#General_Recommendations">General
-            Recommendations</ref> and <ref
-            target="#The_TEI_Header">TEI Header</ref> sections
-            above.</p>
           </div>
           <div type="====">
             <head>Element Recommendations and Examples</head>
             <p>Because of the vast range of possibilities for Level-5
             encoding, these <title>Best Practices</title> have chosen
             to provide neither a list of recommended elements nor any
-            specific examples for this Level.</p>
-            <p>Please refer to the <ref target="#The_TEI_Header">TEI
+            specific examples for encoding a transcription of a source
+	    document at this level. Please refer to the <ref target="#The_TEI_Header">TEI
             Header</ref> section above for recommendations for the
-            <gi>teiHeader</gi>, and to the <ref
-            target="#General_Recommendations">General
-            Recommendations</ref> section and the <ref
+            <gi>teiHeader</gi>.</p>
+	    <p>Those encoding Western European early modern printed 
+	    material may find that TEI simplePrint, a TEI customization,
+	    provides appropriate guidance for encoding a 
+	    transcription of the source document. Otherwise, refer to 
+	    the <ref target="#General_Recommendations">General
+            Recommendations</ref> section above and the <ref
             target="http://www.tei-c.org/Guidelines/P5">Complete TEI
             P5 Guidelines</ref> for element recommendations and usage
             examples within the <gi>text</gi>.</p>
