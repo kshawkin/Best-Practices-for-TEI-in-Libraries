@@ -826,7 +826,7 @@
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <placeName ref="#geo_0034">Texas</placeName>
           </egXML>
-          which would be defined in a controlled vocabulary elsewhere:
+          which would be defined in a controlled vocabulary elsewhere in the same document:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <listPlace>
               <place xml:id="geo_0034">
@@ -838,7 +838,7 @@
             </listPlace>
           </egXML>
           </p>
-          <p>Readily available software can then check when it
+          <p>XML software will then confirm when it
           encounters <code>ref="#geo_0034"</code> that
           <code>xml:id="geo_0034"</code> exists elsewhere in the
           document.</p>
@@ -846,9 +846,10 @@
           <p>If there is a desire to have an authority file spanning documents, it might be tempting 
           to use relative URIs (as discussed above), rather than an absolute URIs, in the value of <att>ref</att> in order to 
           create a local authority file.  However, such URIs cannot be resolved in a stable way as the location of the TEI document 
-          changes. Just as the TEI Guidelines <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">no 
-          longer recommend use of the <att>key</att> attribute</ref>, these <title>Best Practices</title> also recommend use of 
-          <term>tag URIs</term> in order to create unique local identifiers. For example, a tag URI created in 2016 for 
+          changes. As in the TEI Guidelines <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">3.5.1 Referring Strings</ref>,
+          these <title>Best Practices</title> recommend the use of the <att>ref</att> attribute 
+            with <term>tag URIs</term> as described in <ref target="http://www.ietf.org/rfc/rfc4151.txt">IETF RFC 4151</ref> in order to create unique local identifiers that can also be 
+          shared across files and projects. For example, a tag URI created in 2016 for 
           nabokovpapers.org might look like this:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <persName ref="tag:nabokovpapers.org,2016:B_V001">Blavdak Vinomori</persName>
