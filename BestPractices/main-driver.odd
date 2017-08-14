@@ -817,6 +817,7 @@
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <placeName ref="http://vocab.getty.edu/page/tgn/7012924">Indianapolis</placeName>
+            <persName ref="http://viaf.org/viaf/31995584">Emily Dickinson</persName>
           </egXML>
 
           <p>Still, there are times when an outside URI for disambiguation is not available. An encoding project could use URI 
@@ -857,7 +858,7 @@
         </div>
         <div type="====">
           <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
-          <p>At levels 3 and above, the <att>style</att>, <att>rend</att> and
+          <p>At levels 3 and above, the <att>style</att>, <att>rend</att>, and
           <att>rendition</att> attributes may be used when it is
           desirable to record information about how the textual
           feature was displayed in the source document.</p>
