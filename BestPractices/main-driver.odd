@@ -848,7 +848,7 @@
           create a local authority file.  However, such URIs cannot be resolved in a stable way as the location of the TEI document 
           changes. As in the TEI Guidelines <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">3.5.1 Referring Strings</ref>,
           these <title>Best Practices</title> recommend the use of the <att>ref</att> attribute 
-            with <term>tag URIs</term> as described in <ref target="http://www.ietf.org/rfc/rfc4151.txt">IETF RFC 4151</ref> in order to create unique local identifiers that can also be 
+            with <term>tag URIs</term> as described in <ref target="http://www.ietf.org/rfc/rfc4151">IETF RFC 4151</ref> in order to create unique local identifiers that can also be 
           shared across files and projects. For example, a tag URI created in 2016 for 
           nabokovpapers.org might look like this:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
