@@ -206,11 +206,6 @@
               represent the source document.</cell>
             </row>
             <row>
-              <cell><gi>head</gi></cell>
-              <cell>Recommended if headings are present. As in TEI, this element
-              must be the first child of a textual division.</cell>
-            </row>
-            <row>
               <cell><gi>floatingText</gi></cell>
               <cell>Recommended when a floating text is identified.</cell>
             </row>
