@@ -794,6 +794,12 @@
         <ref
         target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
         METS document</ref> for a TEI project).</p>
+	<p>The <ref target="http://iiif.io/">International Image 
+	Interoperability Framework</ref> (IIIF), with its growing user 
+	community, is likely to emerge as an alternative mechanism for
+	linking between encoded text and images of source documents. 
+	However, TEI and IIIF users have not yet agreed upon a mechanism 
+	for integrating data from these two communities of practice.</p>
       </div>
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>
