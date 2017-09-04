@@ -1064,12 +1064,12 @@
 	      Maori</title>). Use the following values for the
 	      <att>type</att> attribute if applicable, and create
 	      other values if appropriate:
-
 	      <list>
 		<item> <val>LCCN</val> (for a Library of Congress control number) </item>
-		<item> <val>OCLC_control_number</val> </item>
 		<item> <val>LC_call_number</val> </item>
-		<item> <val>ISBN</val> </item>
+		<item> Those listed in the <ref
+		target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-idno.html">TEI
+	      Guidelines</ref></item>
 	      </list>
 	      </cell>
 	      <cell>534 $z for ISBN</cell>
@@ -1159,7 +1159,7 @@
 	      <cell>│</cell>
 	      <cell>└</cell>
 	      <cell cols="2">
-		<tag>idno type="issn"</tag>
+		<tag>idno type="ISSN"</tag>
 	      </cell>
 	      <cell>If applicable, use for an ISSN for the series.</cell>
 	      <cell/>
@@ -2024,16 +2024,13 @@
 	  </elementSpec>
 	  <elementSpec module="header" ident="idno" mode="change">
 	    <attList>
-	      <attDef mode="replace" ident="type">
-		<datatype>
-		  <dataRef key="teidata.enumerated"/>
-		</datatype>
-		<valList type="semi">
-		  <valItem ident="LC_call_number">
+	      <attDef mode="change" ident="type">
+		<valList type="semi" mode="change">
+		  <valItem ident="LC_call_number" mode="add">
 		    <gloss>U.S. Library of Congress call number</gloss>
 		  </valItem>
-		  <valItem ident="ISBN">
-		    <gloss>International Standard Book Number</gloss>
+		  <valItem ident="LCCN" mode="add">
+		    <gloss>Library of Congress control number</gloss>
 		  </valItem>
 		</valList>
 	      </attDef>
