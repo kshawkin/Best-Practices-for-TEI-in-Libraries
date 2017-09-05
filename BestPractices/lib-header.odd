@@ -324,7 +324,6 @@
 		  <item>246</item>
 		  <item>247</item>
 		</list>
-		For all, use the relation designator “author”.
 	      </cell>
 	      <cell rend="background-color: silver">
 		<list>
@@ -388,6 +387,7 @@
 		  <item>710</item>
 		  <item>711</item>
 		</list>
+		For all, use the relation designator “author”.
 	      </cell>
 	      <cell rend="background-color: silver">
 		<list>
@@ -563,11 +563,12 @@
 		<tag>date when="___"/</tag>
 	      </cell>
 	      <cell>Refers to the date of the first publication of
-	      this edition of the TEI document. Use the
-	      <att>when</att> attribute (see <ref
+	      this edition of the TEI document. The <att>when</att>
+	      attribute (see <ref
 	      target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.datable.w3c.html">att.datable.w3c
-	      class</ref>) to aid machine processing. This element has
-	      no content.</cell>
+	      class</ref>) is used instead of free content to aid
+	      machine processing. (In this context, the <gi>date</gi>
+	      element should have no content.)</cell>
 	      <cell>264_1 $c</cell>
 	      <cell>n/a</cell>
 	    </row>
