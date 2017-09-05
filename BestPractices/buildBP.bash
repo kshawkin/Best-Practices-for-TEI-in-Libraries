@@ -44,7 +44,7 @@ if [ -e /Library/PreferencePanes/ ] ; then
     XSLDIR=${XSLDIR:-~/Documents/Stylesheets}
     P5SRC=${P5SRC:-~/Documents/TEI-GitHub/P5/p5subset.xml}
     RELAX=${RELAX:--c /usr/local/share/emacs/23.2/etc/schema/relaxng.rnc}
-elif [ ${HOSTNAME} = albus ] || [ ${HOSTNAME} = aberforth ]; then
+elif [ ${HOSTNAME} = albus ] || [ ${HOSTNAME} = aberforth ] || [ ${HOSTNAME} = paramedic ]; then
     # Syd's desktop, use whatever his symlinks point to
     XSLDIR=${XSLDIR:-~/Documents/Stylesheets}
     P5SRC=${P5SRC:-/home/syd/Documents/TEI_dev/P5/p5subset.xml}
