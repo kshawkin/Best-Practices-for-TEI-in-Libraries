@@ -27,11 +27,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	     lib-header.odd, too! -->
-	<p>Version 3.3.0a (<date when="2017-08-27">27 Aug 17</date>)
-	<note>That version number <emph>happens</emph> to match the
-	TEI P5 version number against which we are building schemas;
-	this is complete happenstance, the two are not
-	related.</note></p>
+        <p>Version 3.4.0a (<date when="2017-09-04">04 Sep 17</date>)</p>
       </editionStmt>
       <publicationStmt>
 	<authority>TEI SIG on Libraries</authority>
@@ -1318,11 +1314,11 @@
 		<p>Use of the <gi>schemaRef</gi> element is recommended to record the encoding level. 
 		Use the <att>key</att> attribute for the value that indicates the encoding level:
 		<list>
-		  <item> Level 1: <val>BPTL-L1-v3.3.0a</val></item>
-		  <item> Level 2: <val>BPTL-L2-v3.3.0a</val></item>
-		  <item> Level 3: <val>BPTL-L3-v3.3.0a</val></item>
-		  <item> Level 4: <val>BPTL-L4-v3.3.0a</val></item>
-		  <item> Level 5: <val>BPTL-L5-v3.3.0a</val></item>
+		  <item> Level 1: <val>BPTL-L1-v3.4.0a</val></item>
+		  <item> Level 2: <val>BPTL-L2-v3.4.0a</val></item>
+		  <item> Level 3: <val>BPTL-L3-v3.4.0a</val></item>
+		  <item> Level 4: <val>BPTL-L4-v3.4.0a</val></item>
+		  <item> Level 5: <val>BPTL-L5-v3.4.0a</val></item>
 		</list>
 		</p>
 	      </cell>
@@ -1909,21 +1905,21 @@
 		  <!-- When you change the version # here, remember to change it
 		       in the <editionStmt>s in each of the .odd
 		       files, too! -->
-		  <valList type="semi">
-		    <valItem ident="BPTL-L1-v3.3.0a">
-		      <gloss>Best Practices for TEI in Libraries level 1, version 3.3.0a</gloss>
+		  <valList type="semi" mode="add">
+		    <valItem ident="BPTL-L1-v3.4.0a">
+		      <gloss>Best Practices for TEI in Libraries level 1, version 3.4.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L2-v3.3.0a">
-		      <gloss>Best Practices for TEI in Libraries level 2, version 3.3.0a</gloss>
+		    <valItem ident="BPTL-L2-v3.4.0a">
+		      <gloss>Best Practices for TEI in Libraries level 2, version 3.4.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L3-v3.3.0a">
-		      <gloss>Best Practices for TEI in Libraries level 3, version 3.3.0a</gloss>
+		    <valItem ident="BPTL-L3-v3.4.0a">
+		      <gloss>Best Practices for TEI in Libraries level 3, version 3.4.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L4-v3.3.0a">
-		      <gloss>Best Practices for TEI in Libraries level 4, version 3.3.0a</gloss>
+		    <valItem ident="BPTL-L4-v3.4.0a">
+		      <gloss>Best Practices for TEI in Libraries level 4, version 3.4.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L5-v3.3.0a">
-		      <gloss>Best Practices for TEI in Libraries level 5, version 3.3.0a</gloss>
+		    <valItem ident="BPTL-L5-v3.4.0a">
+		      <gloss>Best Practices for TEI in Libraries level 5, version 3.4.0a</gloss>
 		    </valItem>
 		  </valList>
 		</attDef>
@@ -1984,6 +1980,16 @@
 		   </s:rule>
 		   </constraint>
 		   </constraintSpec> -->
+	      <content>
+		<sequence>
+		  <classRef key="model.pLike"     minOccurs="0" maxOccurs="6"/>
+		  <elementRef key="correction"    minOccurs="0" maxOccurs="1"/>
+		  <elementRef key="hyphenation"   minOccurs="0" maxOccurs="1"/>
+		  <elementRef key="normalization" minOccurs="0" maxOccurs="1"/>
+		  <elementRef key="punctuation"   minOccurs="0" maxOccurs="1"/>
+		  <elementRef key="quotation"     minOccurs="0" maxOccurs="1"/>
+		</sequence>
+	      </content>
 	      <exemplum xml:lang="en">
 		<egXML xmlns="http://www.tei-c.org/ns/Examples">
 		  <editorialDecl>
