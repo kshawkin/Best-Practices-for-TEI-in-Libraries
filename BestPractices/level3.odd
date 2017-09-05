@@ -25,7 +25,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	        lib-header.odd, too! -->
-        <p>Version 3.2.0a (<date when="2017-06-04">04 Jun 17</date>)</p>
+        <p>Version 3.4.0a (<date when="2017-09-04">04 Sep 17</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -853,10 +853,8 @@
               </content>
               <constraintSpec scheme="isoschematron" ident="recommendType">
                 <constraint>
-                  <s:rule>
-                    <s:report test="./not[@type]">Use of the <att>type</att> attribute of <gi>div</gi>
-                    is recommended</s:report>
-                  </s:rule>
+		  <s:report test="not(@type)">Use of the <att>type</att> attribute of <gi>div</gi>
+		  is recommended</s:report>
                 </constraint>
               </constraintSpec>
               <remarks>
@@ -1026,6 +1024,7 @@
             <elementSpec module="core" ident="listBibl" mode="delete"/>
             <elementSpec module="core" ident="measure" mode="delete"/>
             <elementSpec module="core" ident="measureGrp" mode="delete"/>
+            <elementSpec module="core" ident="meeting" mode="delete"/>
             <elementSpec module="core" ident="mentioned" mode="delete"/>
             <elementSpec module="core" ident="milestone" mode="delete"/>
             <elementSpec module="core" ident="num" mode="delete"/>

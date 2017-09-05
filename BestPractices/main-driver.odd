@@ -148,13 +148,15 @@
       Guidelines</ref> for guidance on use of elements and attributes
       beyond what is described below.</p>
       <p>As guidelines rather than a specification, these <title>Best 
-      Practices</title> use <mentioned>should</mentioned> instead of 
-      <mentioned>must</mentioned> in nearly all cases (except where a 
-      practice is required by P5), with optional practices indicated 
-      by <mentioned>may</mentioned>. However, to encourage conformance 
-      to these <title>Best Practices</title>, the ODD files will generate 
-      schemas that <emph>require</emph> use of recommended elements 
-      (indicated by <mentioned>should</mentioned>).</p>
+      Practices</title> use <mentioned>should</mentioned> or 
+      <mentioned>recommended</mentioned> instead of 
+      <mentioned>must</mentioned> to give recommendations in all cases 
+      except where a practice is required by P5. Optional practices indicated 
+      by <mentioned>may</mentioned> or <mentioned>optional</mentioned>. 
+      However, to encourage conformance to these <title>Best Practices</title>, 
+      the ODD files will generate schemas that <emph>require</emph> use of 
+      recommended elements (those indicated by <mentioned>should</mentioned> or 
+      <mentioned>recommended</mentioned>).</p>
       <p>These <title>Best Practices</title> specify a recommended
       archival storage format. Local system needs may require
       transformation of documents in this archival format to another
@@ -792,6 +794,12 @@
         <ref
         target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
         METS document</ref> for a TEI project).</p>
+	<p>The <ref target="http://iiif.io/">International Image 
+	Interoperability Framework</ref> (IIIF), with its growing user 
+	community, is likely to emerge as an alternative mechanism for
+	linking between encoded text and images of source documents. 
+	However, TEI and IIIF users have not yet agreed upon a mechanism 
+	for integrating data from these two communities of practice.</p>
       </div>
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>

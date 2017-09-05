@@ -85,6 +85,12 @@ for BASE in lib1 lib2 lib3 lib4 ; do
 	echo "Error generating RELAX NG (compact syntax) from $INNAME"
     fi
 
+    if ${XSLDIR}/bin/teitoschematron --odd --localsource=${P5SRC} $INNAME ; then
+	mv $INNAME.schematron $BASE.sch
+    else
+	echo "Error extracting Schematron from $INNAME"
+    fi
+
     if ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} --summaryDoc $INNAME ; then
 	mv $INNAME.html $BASE.html
     else
