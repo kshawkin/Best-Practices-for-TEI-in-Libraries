@@ -179,7 +179,7 @@
             </row>
             <row>
               <cell><gi>div</gi> or <gi>div1</gi></cell>
-              <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended.</cell>
+              <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. </cell>
             </row>
             <row>
               <cell><gi>p</gi></cell>
@@ -224,6 +224,15 @@
             <row>
               <cell><gi>cb</gi></cell>
               <cell>Optionally used to indicate the beginning of a new column.</cell>
+            </row>
+            <row>
+              <cell><gi>listBibl</gi></cell>
+              <cell>Optionally use in support of bibliographies as a child of <tag>div type="bibliogrpahy"</tag>. Should contain a series of <gi>bibl</gi> elements, which may be
+                further encoded using phrase-level elements such as <gi>hi</gi>.</cell>
+            </row>
+            <row>
+              <cell><gi>bibl</gi></cell>
+              <cell>Contains a single bibliographic entry. Phrase level markup is optional. No further bibliographic markup is necessary.</cell>
             </row>
           </table>
           </p>
