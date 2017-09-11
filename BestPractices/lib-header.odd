@@ -1350,44 +1350,6 @@
 
 	    <row>
 	      <cell>│</cell>
-	      <cell/>
-	      <cell/>
-	      <cell>│</cell>
-	      <cell>├</cell>
-	      <cell cols="2">
-		<gi>p</gi>
-	      </cell>
-	      <cell>Include one <gi>p</gi> element for each of the
-	      following, addressing in prose:
-	      <list>
-		<item>editorial decisions made during encoding</item>
-		<item>notes about omissions of material found in the
-		original work</item>
-		<item>the format of the data in the header: Does the
-		data in the <gi>sourceDesc</gi> follow RDA rules? How
-		about in the <gi>fileDesc</gi>? Is ISBD punctuation
-		included?</item>
-		<item>automated processes used to generate the markup
-		or content</item>
-		<item>external files or databases (such as those
-		containing authority data) referenced in the TEI
-		document</item>
-		<item>whether line breaks, column breaks, page breaks,
-		or a combination are encoded</item>
-	      </list>
-	      </cell>
-	      <cell>
-		<list>
-		  <item>008/18</item>
-		  <item>040 $e</item>
-		  <item>500</item>
-		</list>
-	      </cell>
-	      <cell>n/a</cell>
-	    </row>
-	    
-	    <row>
-	      <cell>│</cell>
 	      <cell>│</cell>
 	      <cell>├</cell>
 	      <cell cols="4">
@@ -1458,6 +1420,42 @@
 	      <cell>n/a</cell>
 	    </row>
 
+	    <row>
+	      <cell>│</cell>
+	      <cell>│</cell>
+	      <cell>├</cell>
+	      <cell cols="4">
+		<gi>p</gi>
+	      </cell>
+	      <cell>Include up to one <gi>p</gi> element for each of the
+	      following in the order given, addressing in prose:
+	      <list>
+		<item>notes about omissions of material found in the
+		original work</item>
+		<item>the format of the data in the header: Does the
+		data in the <gi>sourceDesc</gi> follow RDA rules? How
+		about in the <gi>fileDesc</gi>? Is ISBD punctuation
+		included?</item>
+		<item>automated processes used to generate the markup
+		or content</item>
+		<item>external files or databases (such as those
+		containing authority data) referenced in the TEI
+		document</item>
+		<item>whether line breaks, column breaks, page breaks,
+		or a combination are encoded</item>
+		<item>any other editorial decisions made during encoding</item>
+	      </list>
+	      </cell>
+	      <cell>
+		<list>
+		  <item>008/18</item>
+		  <item>040 $e</item>
+		  <item>500</item>
+		</list>
+	      </cell>
+	      <cell>n/a</cell>
+	    </row>
+	    
 	    <row>
 	      <cell>│</cell>
 	      <cell>├</cell>
@@ -1966,28 +1964,14 @@
 	      </content>
 	    </elementSpec>
 	    <elementSpec module="header" ident="editorialDecl" mode="change">
-	      <!-- also move this to the new <hyphen> element at next release
-		   <constraintSpec scheme="isoschematron" ident="hyphen-match">
-		   <constraint>
-		   <s:rule context="tei:editorialDecl[@n='1' or @n='2']">
-		   <s:assert test="normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+2010.'                                     or                                     normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+002D.'                                     ">At level 1 or 2, hyphenation encoding must be declared as all U+2010 or all U+002D.</s:assert>
-		   </s:rule>
-		   <s:rule context="tei:editorialDecl[@n='3']">
-		   <s:assert test="( normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+2010.'                                         or                                         normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+002D.' )                                       or                                         (                                           starts-with(                                             normalize-space(child::tei:p[position()=last()]),                                             'Hyphens in source document encoded as U+'                                             )                                           and                                           ends-with(                                             normalize-space(child::tei:p[position()=last()]),                                             '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                             )                                         ) ">At level 3, hyphenation encoding must be declared in the last paragraph of <s:name/>.</s:assert>
-		   </s:rule>
-		   <s:rule context="tei:editorialDecl[@n='4']">
-		   <s:assert test="                                         starts-with(                                           Normalize-space(child::tei:p[position()=last()]),                                           'Hyphens in source document encoded as U+'                                           )                                         and                                         ends-with(                                           normalize-space(child::tei:p[position()=last()]),                                           '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                         )                                   ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb&gt;</s:assert>
-		   </s:rule>
-		   </constraint>
-		   </constraintSpec> -->
 	      <content>
 		<sequence>
-		  <classRef key="model.pLike"     minOccurs="0" maxOccurs="6"/>
 		  <elementRef key="correction"    minOccurs="0" maxOccurs="1"/>
 		  <elementRef key="hyphenation"   minOccurs="0" maxOccurs="1"/>
 		  <elementRef key="normalization" minOccurs="0" maxOccurs="1"/>
 		  <elementRef key="punctuation"   minOccurs="0" maxOccurs="1"/>
 		  <elementRef key="quotation"     minOccurs="0" maxOccurs="1"/>
+		  <classRef key="model.pLike"     minOccurs="0" maxOccurs="6"/>
 		</sequence>
 	      </content>
 	      <exemplum xml:lang="en">
@@ -2536,3 +2520,18 @@
   </body>
 </text>
 </TEI>
+
+	      <!-- also move this to the new <hyphen> element at next release
+		   <constraintSpec scheme="isoschematron" ident="hyphen-match">
+		   <constraint>
+		   <s:rule context="tei:editorialDecl[@n='1' or @n='2']">
+		   <s:assert test="normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+2010.'                                     or                                     normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+002D.'                                     ">At level 1 or 2, hyphenation encoding must be declared as all U+2010 or all U+002D.</s:assert>
+		   </s:rule>
+		   <s:rule context="tei:editorialDecl[@n='3']">
+		   <s:assert test="( normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+2010.'                                         or                                         normalize-space(child::tei:p[position()=last()])=                                         'All hyphens in source document encoded as U+002D.' )                                       or                                         (                                           starts-with(                                             normalize-space(child::tei:p[position()=last()]),                                             'Hyphens in source document encoded as U+'                                             )                                           and                                           ends-with(                                             normalize-space(child::tei:p[position()=last()]),                                             '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                             )                                         ) ">At level 3, hyphenation encoding must be declared in the last paragraph of <s:name/>.</s:assert>
+		   </s:rule>
+		   <s:rule context="tei:editorialDecl[@n='4']">
+		   <s:assert test="                                         starts-with(                                           Normalize-space(child::tei:p[position()=last()]),                                           'Hyphens in source document encoded as U+'                                           )                                         and                                         ends-with(                                           normalize-space(child::tei:p[position()=last()]),                                           '. Line-ending hyphens differentiated with @type of immediately following &lt;lb&gt; element.'                                         )                                   ">At level 4, hyphenation encoding must be ceclared as using @type on &lt;lb&gt;</s:assert>
+		   </s:rule>
+		   </constraint>
+		   </constraintSpec> -->
