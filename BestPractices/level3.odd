@@ -183,7 +183,8 @@
             </row>
             <row>
               <cell><gi>div</gi> or <gi>div1</gi></cell>
-              <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended.</cell>
+              <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. If a bibliography is included in the document, 
+                it is recommended that it be encoded within a <gi>div</gi> whose <att>type</att> attribute has the value "bibliography." </cell>
             </row>
             <row>
               <cell><gi>p</gi></cell>
@@ -228,6 +229,14 @@
             <row>
               <cell><gi>cb</gi></cell>
               <cell>Optionally used to indicate column breaks.</cell>
+            </row>
+            <row>
+              <cell><gi>listBibl</gi></cell>
+              <cell>If bibliography is encoded, recommended for identifying the bibliographic entries. Note that any header or title should be encoded by a <gi>head</gi> in the containing <gi>div</gi>.</cell>
+            </row>
+            <row>
+              <cell><gi>bibl</gi></cell>
+              <cell>Contains a single bibliographic entry. Phrase level markup is optional. No further bibliographic markup is necessary.</cell>
             </row>
           </table>
           </p>
