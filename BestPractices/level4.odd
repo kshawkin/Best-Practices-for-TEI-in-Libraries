@@ -25,11 +25,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	        lib-header.odd, too! -->
-        <p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
-        <note>That version number <emph>happens</emph> to match the
-        TEI P5 version number against which we are building schemas;
-        this is complete happenstance, the two are not
-        related.</note></p>
+        <p>Version 3.4.0a (<date when="2017-09-04">04 Sep 17</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -192,7 +188,7 @@
           <emph>except <gi>ab</gi>,</emph> plus elements in the following
           table. Note that some of these elements are defined in
           Level 3 as well, but their use in Level 4 is more strict.</p>
-          <table rend="border: thin solid black; width: 80%;">
+          <table rend="table">
             <row>
               <cell><gi>titlePage</gi> and appropriate child elements</cell>
               <cell>Recommended.</cell>
@@ -208,11 +204,6 @@
               <cell>Recommended for encoding a hierarchy of textual
               divisions. Use as many levels of hierarchy as needed to
               represent the source document.</cell>
-            </row>
-            <row>
-              <cell><gi>head</gi></cell>
-              <cell>Recommended if headings are present. As in TEI, this element
-              must be the first child of a textual division.</cell>
             </row>
             <row>
               <cell><gi>floatingText</gi></cell>
@@ -342,12 +333,6 @@
 	      <cell>Optionally used inside a <gi>person</gi> to
 	      indicate the date or place of birth of the person being
 	      documented.</cell>
-	    </row>
-	    <row>
-	      <cell><gi>langKnowledge</gi> and <gi>langKnown</gi></cell>
-	      <cell>Optionally used inside a <gi>person</gi> to
-	      indicate the level of proficiency the person being
-	      documented has with a particular language(s).</cell>
 	    </row>
           </table>
         </div>
@@ -721,7 +706,7 @@
                 <item>within <gi>speaker</gi> elements, which are the
                 first child of <gi>sp</gi>, or</item>
                 <item>with a <att>who</att> attribute on <gi>sp</gi>,
-                the value of which poiints to the the <gi>item</gi>
+                the value of which points to the the <gi>item</gi>
                 for the given speaker in the list of interview
                 participants (by its <att>xml:id</att>), or</item>
                 <item>both.</item>
@@ -850,7 +835,8 @@
                     <lb/>as well.  CN Ex. 101 at p. 72.  Although this twenty-four-hour
                     <lb/>surveillance was discontinued on December 14, 1945, physical
                     <lb/>surveillance was conducted frequently at various times until
-                    <lb/>September, 1947.<note place="bottom" anchored="true" n="68">Also
+		    <lb/>September, 1947.<ptr target="#N68">68</ptr><note place="bottom" 
+		    anchored="true" xml:id="N68"><label>68</label>Also
                     before 1947, a letter from Priscilla Hiss addressed
                     <lb/>to her son, Timothy Hobson, was intercepted and its contents
                     <lb/>read.  CN Ex. 100A at p. 167.  In approximately March, 1947,
@@ -871,8 +857,8 @@
                     <lb/>habits is recorded.</p>          
                     <p>The wiretap was installed following FBI Director Hoover's
                     <lb/>application to the Attorney General for authorization,
-                    <note place="bottom" anchored="true" n="69">Hoover's
-                    initial request was answered by a note reques- 
+		    <ptr target="#N69">69</ptr><note place="bottom" anchored="true" xml:id="N69">
+		    <label>69</label>Hoover's initial request was answered by a note reques- 
                     <lb break="no"/>ting information on Hiss.  CN Ex. 104<sic> </sic>.  Additional information
                     <lb/>was furnished by letter dated November 30, 1945.  CN Ex. 105<sic> </sic>.</note>
                     <lb/>although no written authorization appears in the documents released to
@@ -897,7 +883,7 @@
           <moduleRef key="textstructure" except="byline imprimatur"/>
           <moduleRef key="linking" include="ab"/>
           <moduleRef key="transcr" include="facsimile surface zone"/>
-          <moduleRef key="namesdates" include="orgName persName placeName geogName listPerson person birth langKnown"/>
+          <moduleRef key="namesdates" include="orgName persName placeName geogName listPerson person birth"/>
           <specGrpRef target="./lib-header.odd#libHeadSpec"/>
           <moduleRef key="figures" include="table row cell figure figDesc"/>
           <moduleRef key="drama" include="castItem castList"/>
@@ -1161,11 +1147,9 @@
             </content>
             <constraintSpec scheme="isoschematron" ident="recommendType">
               <constraint>
-                <s:rule>
-                  <s:report test="not(@type)">Use of the
-                  <att>type</att> attribute of <gi>div</gi> is
-                  recommended</s:report>
-                </s:rule>
+		<s:report test="not(@type)">Use of the
+		<att>type</att> attribute of <gi>div</gi> is
+		recommended</s:report>
               </constraint>
             </constraintSpec>
             <remarks>
@@ -1343,6 +1327,7 @@
         <elementSpec module="core" ident="index" mode="delete"/>
         <elementSpec module="core" ident="measure" mode="delete"/>
         <elementSpec module="core" ident="measureGrp" mode="delete"/>
+	<elementSpec module="core" ident="meeting" mode="delete"/>
         <elementSpec module="core" ident="milestone" mode="delete"/>
         <elementSpec module="core" ident="num" mode="delete"/>
         <elementSpec module="core" ident="orig" mode="delete"/>

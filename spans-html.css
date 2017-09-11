@@ -1,0 +1,130 @@
+/*
+** spans-html.css
+**
+** This stylesheet is a "subroutine" included by
+** - meet-mins-html.css
+** It contains rulesets for the various <span> tags, most of which are
+** generated from TEI phrase-level elements.
+**
+** Copyright 2006 Syd Bauman
+** Availalbe via LGPL. For complete copyleft notice see near end-of-file.
+*/
+
+span.att { font-family: Monaco, monospace; }
+span.att:after { content: "="; }
+span.val { font-family: Monaco, monospace; }
+span.val:after { content: '"'; }
+span.val:before { content: '"'; }
+span.gi { font-family: Monaco, monospace; }
+span.gi:after { content: '>'; }
+span.gi:before { content: '<'; }
+span.tag { font-family: Monaco, monospace; }
+span.tag:after { content: '>'; }
+span.tag:before { content: '<'; }
+span.ident_pe { font-family: Monaco, monospace; }
+span.ident_pe:before { content: '%'; }
+span.ident_pe:after { content: ';'; }
+span.ent { font-family: Monaco, monospace; }
+span.ent:before { content: '&'; }
+span.ent:after { content: ';'; }
+
+span.q { quotes: '"' '"' "'" "'"; }
+:lang(en) > span.q { quotes: '\201C' '\201D' '\2018' '\2019' }
+:lang(fr) > span.q { quotes: '« ' ' »' }
+:lang(de) > span.q { quotes: '»' '«' '\2039' '\203A' }
+span.q:before { content: open-quote; }
+span.q:after { content: close-quote; }
+
+span.quote { quotes: '"' '"' "'" "'"; }
+:lang(en) > span.quote { quotes: '\201C' '\201D' '\2018' '\2019' }
+:lang(fr) > span.quote { quotes: '« ' ' »' }
+:lang(de) > span.quote { quotes: '»' '«' '\2039' '\203A' }
+span.quote:before { content: open-quote; }
+span.quote:after { content: close-quote; }
+
+span.said { quotes: '"' '"' "'" "'"; }
+:lang(en) > span.said { quotes: '\201C' '\201D' '\2018' '\2019' }
+:lang(fr) > span.said { quotes: '« ' ' »' }
+:lang(de) > span.said { quotes: '»' '«' '\2039' '\203A' }
+span.said:before { content: open-quote; }
+span.said:after { content: close-quote; }
+
+span.soCalled { quotes: '"' '"' "'" "'"; }
+:lang(en) > span.soCalled { quotes: '\201C' '\201D' '\2018' '\2019' }
+:lang(fr) > span.soCalled { quotes: '« ' ' »' }
+:lang(de) > span.soCalled { quotes: '»' '«' '\2039' '\203A' }
+span.soCalled:before { content: open-quote; }
+span.soCalled:after { content: close-quote; }
+
+span.mentioned { quotes: '"' '"' "'" "'"; }
+:lang(en) > span.mentioned { quotes: '\201C' '\201D' '\2018' '\2019' }
+:lang(fr) > span.mentioned { quotes: '« ' ' »' }
+:lang(de) > span.mentioned { quotes: '»' '«' '\2039' '\203A' }
+span.mentioned:before { content: open-quote; }
+span.mentioned:after { content: close-quote; }
+
+span.ident_cmd, span.name_cmd,
+span.ident_path, span.name_path,
+span.ident_file, span.name_file,
+span.ident_filePath, span.name_filePath {
+	font-family: Monaco, monospace;
+	}
+
+span.name_module, span.name_class, span.name_macro, span.name_datatype {
+	font-family: Monaco, monospace;
+	}
+	
+span.code, span.email {
+	font-family: Monaco, monospace;
+/*	font-size: 90%; */
+	}
+	
+span.emph {
+	font-weight: bold;
+	}
+
+span.foreign,
+span.title,
+span.term,
+span.hi {
+	font-style: italic;
+	}
+
+span.name_language {
+        display: inline;
+	}
+
+span[style] { }
+
+pre > span.hi {
+	font-weight: bold;
+	font-style: inherit;
+	}
+
+/*
+ yaps: yet another presentation system
+ Copyright (C) 2007 Syd Bauman
+ 
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ 
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ 
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the
+   Free Software Foundation, Inc.,
+   51 Franklin Street, fifth Floor
+   Boston, MA  02110-1301
+   USA
+   
+ The copyright holder can be reached at Syd_Bauman@Brown.edu, or
+   Brown University Women Writers Project
+   P.O. Box 1841
+   Providence, RI  02912-1841
+   USA
+*/

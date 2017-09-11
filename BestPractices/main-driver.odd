@@ -67,7 +67,7 @@
     <encodingDesc>
       <tagsDecl>
         <rendition scheme="css" selector="table">border-width: 2px; border-style: groove;</rendition>
-        <rendition scheme="css" selector="td">border-width: 2px; border-style: inset;</rendition>
+        <rendition scheme="css" selector="cell">border-width: 2px; border-style: inset;</rendition>
       </tagsDecl>
     </encodingDesc>
   </teiHeader>
@@ -75,7 +75,7 @@
     <body>
     <div type="==">
       <head>Introduction</head>
-      <p>This document is the third version of a document formerly
+      <p>This document is the third major revision of a document formerly
       known as <title>TEI Text Encoding in Libraries: Guidelines for
       Best Encoding Practices</title>, which has been updated to comply
       with the <ref target="http://www.tei-c.org/">Text Encoding Initiative</ref>’s
@@ -99,7 +99,7 @@
       used at higher levels&#x2014;often because more specific
       elements replace generic elements.</p>
       <p>In brief, the encoding levels (with approximate examples) are as follows:
-      <table>
+      <table rend="table">
         <row role="label">
           <cell>Level</cell>
           <cell>Description</cell>
@@ -148,20 +148,24 @@
       Guidelines</ref> for guidance on use of elements and attributes
       beyond what is described below.</p>
       <p>As guidelines rather than a specification, these <title>Best 
-      Practices</title> use <mentioned>should</mentioned> instead of 
-      <mentioned>must</mentioned> in nearly all cases (except where a 
-      practice is required by P5), with optional practices indicated 
-      by <mentioned>may</mentioned>. However, to encourage conformance 
-      to these <title>Best Practices</title>, the ODD files will generate 
-      schemas that <emph>require</emph> use of recommended elements 
-      (indicated by <mentioned>should</mentioned>).</p>
+      Practices</title> use <mentioned>should</mentioned> or 
+      <mentioned>recommended</mentioned> instead of 
+      <mentioned>must</mentioned> to give recommendations in all cases 
+      except where a practice is required by P5. Optional practices indicated 
+      by <mentioned>may</mentioned> or <mentioned>optional</mentioned>. 
+      However, to encourage conformance to these <title>Best Practices</title>, 
+      the ODD files will generate schemas that <emph>require</emph> use of 
+      recommended elements (those indicated by <mentioned>should</mentioned> or 
+      <mentioned>recommended</mentioned>).</p>
       <p>These <title>Best Practices</title> specify a recommended
       archival storage format. Local system needs may require
       transformation of documents in this archival format to another
       XML format for use by a local indexing or delivery software.</p>
     </div>
     <div type="==">
-      <head>Relationship to TEI Tite</head>
+      <head>Relation to other TEI customizations</head>
+      <div type="===">
+        <head>TEI Tite</head>
       <p>The TEI Tite customization of the TEI Guidelines was
       developed as a subset of the TEI to be used as a vendor
       specification for outsourced encoding of the type often
@@ -199,6 +203,23 @@
       Practices</title>, see <ref
       target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html#tei-in-lib-bpg">TEI
       Tite's Appendix A</ref>.</p>
+      </div>
+      <div type="===">
+	<head>TEI simplePrint</head>
+	<p>TEI SimplePrint is a customization of the TEI Guidelines 
+	designed to be an entry point for a wide variety of encoding 
+	projects, especially those dealing with Western European early 
+	modern printed material. An implicit aim of the creators of 
+	this customization, as with these <cite>Best Practices</cite>, 
+	was to prescribe a single way to encode common features in 
+	source documents. The features to be encoded are more granular
+	than those in Levels 1 through 4 of these <cite>Best 
+	Practices</cite>, but TEI simplePrint is discussed below with 
+	Level 5. Furthermore, unlike these <cite>Best Practices</cite>,
+	TEI simplePrint specifies a processing model for each element, 
+	prescribing how they should be displayed or otherwise 
+	processed.</p>
+      </div>
     </div>
     <div type="==">
       <head>General Recommendations</head>
@@ -218,6 +239,16 @@
         internal consistency in the local practice.</p>
       </div>
       <div type="===">
+	<head>Character Encoding</head>
+	<p>For the purpose of interchange, TEI documents should be saved 
+	in UTF-8 format, without beginning with a byte-order mark (U+FEFF). 
+	Furthermore, while TEI allows for capturing of glyph variants 
+	not distinguished by Unicode (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html">
+	P5 chapter 5</ref>), the special elements for this purpose are not 
+	recommended in these <title>Best Practices</title> in order to 
+	facilitate interchange.</p>
+      </div>
+      <div type="===">
         <head>Transcription</head>
         <p>When reformatting to digital media using any level of
         encoding, the electronic text should begin with the
@@ -227,8 +258,7 @@
         features of the text, such as publisher’s advertisements or
         indexes; at Level 4 and above, the transcription should be
         complete. Any omissions of material found in the original work
-        should be noted in the <gi>editorialDecl</gi> in the
-	<!-- Why not in the <samplingDecl>? See issue #53 —Syd, 2017-02-20 -->
+        should be noted in the <gi>samplingDecl</gi> in the
         TEI header.</p>
         <p>When encoding composite documents (an issue of a journal, a volume of conference papers, a book of poems, etc.) at Level 3 and above, consider creating separate TEI documents for each unit (journal article, conference paper, poem, etc.) so that more granular metadata may be attached to each unit in its own TEI header. A further step will be necessary in order to ensure that the structure of the composite document—how the units relate to each other—is adequately represented. A common way to accomplish this is to create a separate TEI document for the composite document that uses XInclude or URI references to include the relevant portions of the TEI documents for the units in the correct order.</p>
         <div type="====">
@@ -244,15 +274,16 @@
             <mentioned>‘electronic text’</mentioned> anymore”</said>
             he nearly passed out!</p>
           </egXML>
-          Use <gi>quotation</gi> element in the <gi>editorialDecl</gi>
-          in the TEI header to record whether such punctuation has
-          been removed.</p>
+          Use the <gi>quotation</gi> element in the header to record 
+          whether quotation marks have been removed, and use the 
+          <gi>punctuation</gi> element in the header to record whether 
+	  other punctuation has been removed.</p>
           <p>When removing punctuation marks whose rendering in the
-          source document is worth preserving, use the <att>rend</att>
+          source document is worth preserving, use the <att>style</att>
           attribute on the appropriate element to describe the
           punctuation marks that were removed. For example:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <p>When she said <said rend="quotes: '“' '”'">Nobody uses the term 
+            <p>When she said <said style="quotes: '“' '”'">Nobody uses the term 
             <mentioned rend="quotes: '‘' '’'">electronic text</mentioned> anymore</said>
 	    he nearly passed out!</p>
           </egXML>
@@ -300,7 +331,7 @@
          (If these hyphens occur at
           a column or page break instead of a line break, use
           <gi>cb</gi> or <gi>pb</gi> instead.)
-          <table>
+          <table rend="table">
             <row role="label">
               <cell>Colloquial name</cell>
               <cell>Appearance in source document</cell>
@@ -487,7 +518,7 @@
              parallel adjustments to the list that appears in the prose of the BPTL and to the attDef for the @type attribute, so that the
              values remain in sync -->
         
-        <table>
+        <table rend="table">
           <row>
             <cell cols="2">Front Matter</cell>
             <cell rend="width: 10px;"> </cell>
@@ -570,7 +601,7 @@
         </table>
         
        
-        <table>
+        <table rend="table">
           <row>
             <cell cols="5">Body</cell>
           </row>
@@ -740,7 +771,9 @@
           attribute on a <gi>pb</gi> element to point to the
           corresponding page image using a URI.</item>
           <item>Use the <att>xml:id</att> attribute on each
-          <gi>pb</gi> element and a METS document to provide
+	  <gi>pb</gi> element to refer to the <att>GROUPID</att> 
+	  attribute on various <gi>file</gi> elements in a METS 
+	  document, thereby providing
           correspondence between <gi>pb</gi> elements and one or more
           facsimile page images (e.g., master, web derivatives,
           etc.).</item>
@@ -762,6 +795,12 @@
         <ref
         target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
         METS document</ref> for a TEI project).</p>
+	<p>The <ref target="http://iiif.io/">International Image 
+	Interoperability Framework</ref> (IIIF), with its growing user 
+	community, is likely to emerge as an alternative mechanism for
+	linking between encoded text and images of source documents. 
+	However, TEI and IIIF users have not yet agreed upon a mechanism 
+	for integrating data from these two communities of practice.</p>
       </div>
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>
@@ -860,8 +899,10 @@
         <div type="====">
           <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
           <p>At levels 3 and above, the <att>style</att>, <att>rend</att>, and
+          <head><att>style</att>, <att>rend</att>, and <att>rendition</att></head>
+          <p>At levels 3 and above, the <att>style</att>, <att>rend</att> and
           <att>rendition</att> attributes may be used when it is
-          desirable to record information about how the textual
+          desirable to record information about how a textual
           feature was displayed in the source document.</p>
           <p>Never use these attributes on header elements: metadata
           is transcribed and possibly regularized, as in a catalog
@@ -880,7 +921,7 @@
           text or on all elements whose rendering does not follow the
           default stylesheet.</p>
           <p>For the value of the <att>style</att> attribute, use only
-          valid CSS properties and values as in a declaration-block
+          valid CSS properties and values as in a CSS declaration-block
           but without curly braces. For example:
           <eg>&lt;foreign style="font-style: italic"></eg>
           <eg>&lt;title style="text-decoration: underline; font-size: x-large"></eg></p>
@@ -899,7 +940,7 @@
           typos being introduced in the encoding.</p>
           <p>If there are formatting features in the source that cannot be
           expressed with CSS syntax, the <att>rend</att> attribute may be
-          used.</p>
+	  used instead of <att>style</att> or <att>rendition</att>.</p>
         </div>
         <div type="====">
           <head><att>xml:lang</att></head>
@@ -914,7 +955,7 @@
     </div>
     <div type="==">
       <head>Structure of a TEI Document</head>
-      <table>
+      <table rend="table">
         <row role="label">
           <cell cols="2">Element</cell>
           <cell>Description</cell>
@@ -1012,14 +1053,12 @@
           discussed in Levels 1-4 above. They might also include
           elements for editorial, critical, or analytical additions;
           manuscript descriptions; translations; or other textual
-          apparatus. It is impossible to make concrete recommendations
-          for encoding at this level since the scholarly analysis
-          required is usually specific to each project; instead, Level
-          5 offers the full set of P5 elements as needed.</p>
+          apparatus.</p>
           <div type="====">
             <head>Reference</head>
             <list>
               <item><ref target="http://www.tei-c.org/Guidelines/P5">Complete P5 Guidelines</ref></item>
+	      <item><ref target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_simplePrint.doc.html">TEI simplePrint</ref></item>
             </list>
           </div>
           <div type="====">
@@ -1040,24 +1079,22 @@
             acknowledging the impact of library-specific practices on
             encoded text that is created under the auspices of a
             library.</p>
-            <p>The specific influences of library practice on a
-            Level-5 encoded text are expressed primarily in adherence
-            to the <ref target="#General_Recommendations">General
-            Recommendations</ref> and <ref
-            target="#The_TEI_Header">TEI Header</ref> sections
-            above.</p>
           </div>
           <div type="====">
             <head>Element Recommendations and Examples</head>
             <p>Because of the vast range of possibilities for Level-5
             encoding, these <title>Best Practices</title> have chosen
             to provide neither a list of recommended elements nor any
-            specific examples for this Level.</p>
-            <p>Please refer to the <ref target="#The_TEI_Header">TEI
+            specific examples for encoding a transcription of a source
+	    document at this level. Please refer to the <ref target="#The_TEI_Header">TEI
             Header</ref> section above for recommendations for the
-            <gi>teiHeader</gi>, and to the <ref
-            target="#General_Recommendations">General
-            Recommendations</ref> section and the <ref
+            <gi>teiHeader</gi>.</p>
+	    <p>Those encoding Western European early modern printed 
+	    material may find that TEI simplePrint, a TEI customization,
+	    provides appropriate guidance for encoding a 
+	    transcription of the source document. Otherwise, refer to 
+	    the <ref target="#General_Recommendations">General
+            Recommendations</ref> section above and the <ref
             target="http://www.tei-c.org/Guidelines/P5">Complete TEI
             P5 Guidelines</ref> for element recommendations and usage
             examples within the <gi>text</gi>.</p>
@@ -1075,54 +1112,60 @@
       to develop these <title>Best Practices</title>.</p>
       <p>The individuals who served as editors of this document are:
       <list>
-        <item>Kevin Hawkins, University of Michigan</item>
-        <item>Michelle Dalmau, Indiana University</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+        <item>Michelle Dalmau, Indiana University (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed to the writing of this
       document are:
       <list>
-        <item>Syd Bauman, Brown University</item>
-        <item>Michelle Dalmau, Indiana University</item>
-        <item>Matthew Gibson, University of Virginia</item>
-        <item>Kevin Hawkins, University of Michigan</item>
-        <item>Lisa McAulay, University of California, Los Angeles</item>
-        <item>Renee McBride, University of North Carolina, Chapel Hill</item>
-        <item>Melanie Schlosser, Ohio State University</item>
-        <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
-        <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC</item>
-        <item>Vitus Tang, Stanford University</item>
-        <item>Richard Wisneski, Case Western University</item>
-        <item>Glen Worthey, Stanford University</item>
+        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
+        <item>Michelle Dalmau, Indiana University (version 3.0)</item>
+        <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
+	<item>James R. Griffin, III, Lafayette College (version 3.1.0)</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+        <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
+        <item>Renee McBride, University of North Carolina, Chapel Hill (version 3.0)</item>
+	<item>Martin Mueller, Northwestern University (version 3.1.0)</item>
+	<item>Elli Mylonas, Brown University (version 3.1.0)</item>
+        <item>Andrew Rouner, Washington University in St. Louis (versions 3.0 &amp; 3.1.0)</item>
+        <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
+        <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
+        <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC (version 3.0)</item>
+        <item>Vitus Tang, Stanford University (version 3.0)</item>
+        <item>Richard Wisneski, Case Western University (version 3.0)</item>
+        <item>Glen Worthey, Stanford University (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed to the planning of this
       document are:
       <list>
-        <item>Syd Bauman, Brown University</item>
-        <item>Michelle Dalmau, Indiana University</item>
-        <item>Matthew Gibson, University of Virginia</item>
-        <item>Kevin Hawkins, University of Michigan</item>
-        <item>Lisa McAulay, University of California, Los Angeles</item>
-        <item>Chris Powell, University of Michigan</item>
-        <item>Andrew Rouner, Washington University in St. Louis</item>
-        <item>Melanie Schlosser, Ohio State University</item>
-        <item>Natasha Smith, University of North Carolina, Chapel Hill</item>
-        <item>Perry Willett, California Digital Library</item>
-        <item>Richard Wisneski, Case Western University</item>
-        <item>Glen Worthey, Stanford University</item>
+        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
+        <item>Michelle Dalmau, Indiana University (version 3.0)</item>
+	<item>Stefanie Gehrke (Biblissima)</item>
+        <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
+	<item>Peter Gorman, University of Wisconsin (version 3.1.0)</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+        <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
+        <item>Chris Powell, University of Michigan (version 3.0)</item>
+	<item>Paul Schaffner, University of Michigan (version 3.1.0)</item>
+        <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
+        <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
+        <item>Perry Willett, California Digital Library (version 3.0)</item>
+        <item>Richard Wisneski, Case Western University (version 3.0)</item>
+        <item>Glen Worthey, Stanford University (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed complementary tools to
       this document are:
       <list>
-        <item>Syd Bauman, Brown University: schema specifications and
-        translation to a set of TEI ODD customizations</item>
+        <item>Syd Bauman, Brown University / Northeastern University: schema specifications and
+        translation to a set of TEI ODD customizations (versions 3.0 &amp; 3.1.0)</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC:
-        <ref target="http://wiki.tei-c.org/index.php/Thutmose">Thutmose stylesheets for MARC-to-TEI header mappings</ref></item>
+        <ref target="http://wiki.tei-c.org/index.php/Thutmose">Thutmose stylesheets for MARC-to-TEI header mappings</ref> (version 3.0)</item>
       </list></p>
       <p>The individuals who have contributed to copyediting of this
       document are:
       <list>
-        <item>Susan Lorand, University of Michigan</item>
-        <item>Becky Welzenbach, University of Michigan</item>
+        <item>Susan Lorand, University of Michigan (version 3.0)</item>
+        <item>Rebecca Welzenbach, University of Michigan (version 3.0)</item>
       </list></p>
       <p>Lastly, we would like to thank the Digital Library Federation
       (DLF) for sponsoring two in-person meetings as part of the
@@ -1307,45 +1350,45 @@
      DLF-sponsored meeting that took place as part of the DLF Spring
      Forum in Raleigh, North Carolina on May 6, 2009.</p>
      <p>In April 2009, a year after the revision work began, the
-     significantly revamped <title>Best Practices</title> soon to be
+     significantly revamped <title>Best Practices</title>, soon to be
      known as <title>Best Practices for TEI in Libraries</title>
-     (version 3) were disseminated for public comment. At DLF that
-     year, a <ref
+     (version 3), were disseminated for public comment. At the DLF Spring Forum in Raleigh, a <ref
      target="http://www.diglib.org/forums/spring2009/2009springprogram.htm">Birds-of-a-Feather
      session entitled <title>TEI Text Encoding in
      Libraries</title></ref> was held to gather in-person public
      feedback. Comments received at the in-person meeting, from the
-     <ref
-     target="http://www.lsoft.com/scripts/wl.exe?SL1=TEILIB-L&amp;H=LISTSERV.INDIANA.EDU">TEILIB-L
-     listserv</ref>, through a survey, and by direct email were
+     TEILIB-L
+     listserv, through a survey, and by direct email were
      gathered and prioritized at the DLF meeting. Renee McBride
      (University of North Carolina, Chapel Hill) agreed to map header
      elements to MARC elements, and Vitus Tang (Stanford University)
      provided valuable comments. In addition to addressing most of the
-     comments received, it was resolved that Syd Bauman will generate
-     an ODD specification (One Document Does it All; schema, prose
-     documentation, etc.) for levels 1-4, further ensuring
+     comments received, it was resolved that Syd Bauman would generate
+     an ODD document (containing both schema constraints and prose) for levels 1-4, further ensuring
      interoperability of texts encoded according to these <title>Best
      Practices</title>.</p>
-     <p>The revised <title>Best Practices</title> contain updated
+     <p>The revised <title>Best Practices</title> contained updated
      versions of the widely adopted encoding
      <soCalled>levels</soCalled> &#x2014; from fully automated conversion to
-     content analysis and scholarly encoding. They also contain a
+     content analysis and scholarly encoding. They also contained a
      substantially revised section on the TEI header, designed to
      support interoperability between text collections and the use of
-     complementary metadata schemas such as MARC. They also explore
+     complementary metadata schemas such as MARC. Furthermore, they explored
      the relationship between METS and TEI and the relationship
      between these <title>Best Practices</title> and the new vendor
      specification, TEI Tite.</p>
-     <p>The new <title>Best Practices</title> also reflect an
+     <p>The new <title>Best Practices</title> also reflected an
      organizational shift. Originally authored by the DLF-sponsored
-     TEI Task Force, the current revision work is a partnership
+     TEI Task Force, the new revision was a partnership
      between members of the Task Force and the TEI SIG on Libraries.
      As a result of this partnership, responsibility for the
-     <title>Best Practices</title> will migrate to the SIG, allowing
-     closer work with the TEI Consortium as a whole, and a stronger
+     <title>Best Practices</title> moved to the SIG, allowing
+     closer work with the TEI Consortium as a whole and a stronger
      basis for advocating for the needs of libraries in future TEI
      releases.</p>
+     <p>The SIG decided to undertake a revision to this document at 
+     its meeting in November 2015 in Lyon.  A workgroup met monthly 
+     from early 2016 to ____ to undertake the work.</p>
    </div>
  </body>
 </text>
