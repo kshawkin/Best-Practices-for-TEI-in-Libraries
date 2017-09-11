@@ -183,8 +183,7 @@
             </row>
             <row>
               <cell><gi>div</gi> or <gi>div1</gi></cell>
-              <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. If a bibliography is included in the document, 
-                it is recommended that it be encoded within a <gi>div</gi> whose <att>type</att> attribute has the value "bibliography." </cell>
+              <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. </cell>
             </row>
             <row>
               <cell><gi>p</gi></cell>
@@ -232,9 +231,8 @@
             </row>
             <row>
               <cell><gi>listBibl</gi></cell>
-              <cell>Optionally use in support of bibliographies. Should
-                contain a series of <gi>bibl</gi> elements, which may be
-                further encoded using phrase-level elements such as <gi>hi</gi>..</cell>
+              <cell>Optionally use in support of bibliographies as a child of <tag>div type="bibliogrpahy"</tag>. Should contain a series of <gi>bibl</gi> elements, which may be
+                further encoded using phrase-level elements such as <gi>hi</gi>.</cell>
             </row>
             <row>
               <cell><gi>bibl</gi></cell>
