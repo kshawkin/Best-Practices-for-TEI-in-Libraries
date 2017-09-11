@@ -334,6 +334,11 @@
 	      indicate the date or place of birth of the person being
 	      documented.</cell>
 	    </row>
+      <row>
+         <cell><gi>bibl</gi></cell>
+        <cell>Contains a single bibliographic entry. Use of the <gi>author</gi> or <gi>editor</gi> element is recommended. Other valid elements that the TEI allows to appear in <gi>bibl</gi> may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
+       </row>
+            
           </table>
         </div>
         <div type="grecs">
