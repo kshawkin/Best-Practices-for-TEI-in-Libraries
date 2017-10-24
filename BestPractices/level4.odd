@@ -300,12 +300,23 @@
             </row> 
             <row>        
               <cell><gi>persName</gi>, <gi>placeName</gi>,
-              <gi>geogName</gi>, <gi>orgName</gi>, and <tag>name type="_"</tag> </cell>
+              <gi>geogName</gi>, <gi>orgName</gi>, and <tag>name type="___"</tag> </cell>
               <cell>Optionally use to encode personal, place,
               organizational, and other names used in a text. The
               <gi>persName</gi> element is also used to indicate a
               personal name inside a <gi>person</gi> element (see below).</cell>
-            </row> 
+            </row>
+	    <row>
+	      <cell><gi>bibl</gi></cell>
+	      <cell>May contain bibliographic elements like
+	      <gi>author</gi>, <gi>biblScope</gi>,
+	      <gi>citedRange</gi>, <gi>distributor</gi>,
+	      <gi>edition</gi> <gi>editor</gi>, <gi>idno</gi>,
+	      <gi>pubPlace</gi>, <gi>publisher</gi>,
+	      <gi>relatedItem</gi>, <gi>respStmt</gi>,
+	      <gi>series</gi>, and <gi>title</gi> in addition
+	      to text.</cell>
+	    </row>
             <row>        
               <cell><gi>listName</gi>, <gi>listPlace</gi>, and
               <gi>listOrg</gi> </cell>
@@ -315,7 +326,6 @@
               in an external TEI file or database for easier maintenance
               of names.</cell>
             </row> 
-           
 	    <row>
 	      <cell><gi>listPerson</gi></cell>
 	      <cell>Optionally used in support of transcriptions of

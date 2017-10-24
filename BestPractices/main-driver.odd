@@ -899,8 +899,6 @@
         <div type="====">
           <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
           <p>At levels 3 and above, the <att>style</att>, <att>rend</att>, and
-          <head><att>style</att>, <att>rend</att>, and <att>rendition</att></head>
-          <p>At levels 3 and above, the <att>style</att>, <att>rend</att> and
           <att>rendition</att> attributes may be used when it is
           desirable to record information about how a textual
           feature was displayed in the source document.</p>

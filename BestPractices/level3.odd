@@ -21,10 +21,10 @@
         </editor>
       </titleStmt>
       <editionStmt>
-	<!-- When you change the version # here, remember to change it
-	     a) in the <editionStmt>s of the other .odd files, and
-	     b) in the semi-closed list of values of @key of <schemaRef> in
-	        lib-header.odd, too! -->
+        <!-- When you change the version # here, remember to change it
+             a) in the <editionStmt>s of the other .odd files, and
+             b) in the semi-closed list of values of @key of <schemaRef> in
+                lib-header.odd, too! -->
         <p>Version 3.4.0a (<date when="2017-09-04">04 Sep 17</date>)</p>
       </editionStmt>
       <publicationStmt>
@@ -227,12 +227,16 @@
             </row>
             <row>
               <cell><gi>listBibl</gi></cell>
-              <cell>Optionally use in support of bibliographies as a child of <tag>div type="bibliogrpahy"</tag>. Should contain a series of <gi>bibl</gi> elements, which may be
-                further encoded using phrase-level elements such as <gi>hi</gi>.</cell>
+              <cell>Optionally use in support of bibliographies as a
+              child of <tag>div type="bibliogrpahy"</tag>. Should
+              contain a series of <gi>bibl</gi> elements.</cell>
             </row>
             <row>
               <cell><gi>bibl</gi></cell>
-              <cell>Contains a single bibliographic entry. Phrase level markup is optional. No further bibliographic markup is necessary.</cell>
+              <cell>Contains a single bibliographic entry. Phrase
+              level markup (e.g., <gi>hi</gi>) is optional. Further
+              structural markup (e.g., <gi>author</gi>) is not used
+              at level 3.</cell>
             </row>
           </table>
           </p>
@@ -303,74 +307,74 @@
           <div type="grec">
             <head>Notes</head>
             <p>Use the <gi>note</gi> element to encode the text of a margin note, 
-	      footnote, endnote, or other note found in the source document. If a
-	      point of attachment is marked with a siglumn (such as an asterisk 
-	      or superscript number), encode the siglum with a <gi>ref</gi> 
-	      element. Alternatively, if there is no marked point of attachment, 
-	      insert a <gi>ptr</gi> at the most likely implied point of attachment
-	      for the note.</p>
-	    <p>The text of the note (inside a <gi>note</gi> element) may either (a) be 
-	      left where it occurs in the layout of the page (as may be more 
-	      convenient in the case of conversion from OCR text) or may (b) be moved
-	      so that the <gi>note</gi> occurs just following the <gi>ref</gi> or 
-	      <gi>ptr</gi> marking the point of attachment. If a note span pages,
-	      be sure to insert a <gi>pb</gi> to mark the start of a new page. 
-	      Similarly, if the note in the source document begins on a different 
-	      page from the place of reference, a <gi>pb</gi> should be inserted 
-	      before the first word of the note within the <gi>note</gi> to record 
-	      this.</p>
-	    <p>The siglum is often repeated at the beginning of the note to aid the 
-	      reader in matching the siglum in the text to the note. Encode any 
-	      siglum within the note using <gi>label</gi>.</p>
+              footnote, endnote, or other note found in the source document. If a
+              point of attachment is marked with a siglumn (such as an asterisk 
+              or superscript number), encode the siglum with a <gi>ref</gi> 
+              element. Alternatively, if there is no marked point of attachment, 
+              insert a <gi>ptr</gi> at the most likely implied point of attachment
+              for the note.</p>
+            <p>The text of the note (inside a <gi>note</gi> element) may either (a) be 
+              left where it occurs in the layout of the page (as may be more 
+              convenient in the case of conversion from OCR text) or may (b) be moved
+              so that the <gi>note</gi> occurs just following the <gi>ref</gi> or 
+              <gi>ptr</gi> marking the point of attachment. If a note span pages,
+              be sure to insert a <gi>pb</gi> to mark the start of a new page. 
+              Similarly, if the note in the source document begins on a different 
+              page from the place of reference, a <gi>pb</gi> should be inserted 
+              before the first word of the note within the <gi>note</gi> to record 
+              this.</p>
+            <p>The siglum is often repeated at the beginning of the note to aid the 
+              reader in matching the siglum in the text to the note. Encode any 
+              siglum within the note using <gi>label</gi>.</p>
             <p>Here is an example encoded according to method (a)—first the sigla:
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<p>The three little pigs built their houses out of straw,<ref target="#n_a1">1</ref>
-		sticks,<ref target="#n_a2">2</ref> and bricks.<ref target="#n_a3">3</ref></p>
-	      </egXML>
-	      <bibl>
-		<title>How to properly typeset footnotes/superscripts after 
-		punctuation marks?</title>,
-		<ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>
-	      </bibl>
-	    <p>And then the annotations themselves, encoded as
-	    <gi>note</gi> elements inside a division in the backmatter
-	    that holds the endnotes:</p>
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<back>
-		  <div type="endnotes">
-		    <head>The Collected End-notes</head>
-		    <note place="bottom" anchored="true" xml:id="n_a1">
-		      <label>1</label>
-		      not to be confused with hay</note>
-		    <note place="bottom" anchored="true" xml:id="n_a2">
-		      <label>2</label>
-		      or lumber according to some sources</note>
-		    <note place="bottom" anchored="true" xml:id="n_a3">
-		      <label>3</label>
-		      probably fired clay bricks</note>
-		  </div>
-		</back>
-	      </egXML>
-	    </p>
-	    <p>Here is an example encoded according to method (b), with notes encoded 
-	      right after the point of attachment:
-	      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		<p>The three little pigs built their houses out of 
-		straw,<ref target="#n_b1">1</ref>
-		<note place="bottom" anchored="true" xml:id="n_b1">
-		  <label>1</label> not to be confused with hay
-		</note> 
-		sticks,<ref target="#n_b2">2</ref>
-		<note place="bottom" anchored="true" xml:id="n_b2">
-		  <label>2</label> or lumber according to some sources
-		</note>
-		and bricks.<ref target="#n_b3">3</ref>
-		<note place="bottom" anchored="true" xml:id="n_b3">
-		  <label>3</label> probably fired clay bricks
-		</note>
-		</p>
-	      </egXML>
-	    </p>  
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <p>The three little pigs built their houses out of straw,<ref target="#n_a1">1</ref>
+                sticks,<ref target="#n_a2">2</ref> and bricks.<ref target="#n_a3">3</ref></p>
+              </egXML>
+              <bibl>
+                <title>How to properly typeset footnotes/superscripts after 
+                punctuation marks?</title>,
+                <ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>
+              </bibl>
+            <p>And then the annotations themselves, encoded as
+            <gi>note</gi> elements inside a division in the backmatter
+            that holds the endnotes:</p>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <back>
+                  <div type="endnotes">
+                    <head>The Collected End-notes</head>
+                    <note place="bottom" anchored="true" xml:id="n_a1">
+                      <label>1</label>
+                      not to be confused with hay</note>
+                    <note place="bottom" anchored="true" xml:id="n_a2">
+                      <label>2</label>
+                      or lumber according to some sources</note>
+                    <note place="bottom" anchored="true" xml:id="n_a3">
+                      <label>3</label>
+                      probably fired clay bricks</note>
+                  </div>
+                </back>
+              </egXML>
+            </p>
+            <p>Here is an example encoded according to method (b), with notes encoded 
+              right after the point of attachment:
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <p>The three little pigs built their houses out of 
+                straw,<ref target="#n_b1">1</ref>
+                <note place="bottom" anchored="true" xml:id="n_b1">
+                  <label>1</label> not to be confused with hay
+                </note> 
+                sticks,<ref target="#n_b2">2</ref>
+                <note place="bottom" anchored="true" xml:id="n_b2">
+                  <label>2</label> or lumber according to some sources
+                </note>
+                and bricks.<ref target="#n_b3">3</ref>
+                <note place="bottom" anchored="true" xml:id="n_b3">
+                  <label>3</label> probably fired clay bricks
+                </note>
+                </p>
+              </egXML>
+            </p>  
           </div>
         </div>
         <div type="examples">
@@ -554,9 +558,9 @@
                       70; CN Ex. 102. Continuous physical surveillance of Hiss was begun as well. CN
                       Ex. 101 at p. 72. Although this twenty-four-hour surveillance was discontinued
                       on December 14, 1945, physical surveillance was conducted frequently at
-		      various times until September, 1947. <ptr target="#n68">68</ptr>
-		      <note place="bottom" anchored="true" xml:id="n68"><label>68</label>Also before 
-		      1947, a letter from Priscilla Hiss addressed to her son,
+                      various times until September, 1947. <ptr target="#n68">68</ptr>
+                      <note place="bottom" anchored="true" xml:id="n68"><label>68</label>Also before 
+                      1947, a letter from Priscilla Hiss addressed to her son,
                       Timothy Hobson, was intercepted and its contents read. CN Ex. 100A at p.
                       167. In approximately March, 1947, a letter from a Michael Greenberg
                       addressed to petitioner re­ garding an application for employment with the
@@ -572,8 +576,8 @@
                       sonal lives, relationships with friends and associates, and habits is
                       recorded.</p>
                       <p>The wiretap was installed following FBI Director Hoover's application to the
-		      Attorney General for authorization, <ptr target="n69">69</ptr><note place="bottom" 
-		      anchored="true" xml:id="n69"><label>69</label>Hoover's initial request was answered by a note reques­ ting
+                      Attorney General for authorization, <ptr target="n69">69</ptr><note place="bottom" 
+                      anchored="true" xml:id="n69"><label>69</label>Hoover's initial request was answered by a note reques­ ting
                       information on Hiss. CN Ex. 104. Additional information was furnished by
                       letter dated November 30, 1945. CN Ex. 105.</note> although no written
                       authorization appears in the documents released to Hiss. The purpose of the
@@ -784,6 +788,48 @@
                 </egXML>
               </exemplum>
             </elementSpec>
+            <elementSpec module="core" ident="bibl" mode="change">
+              <constraintSpec scheme="schematron" ident="L3_bibl_">
+                <constraint>
+                  <s:report test="ancestor::tei:text and (
+				    tei:author
+                                  | tei:biblScope
+                                  | tei:citedRange
+                                  | tei:distributor
+                                  | tei:edition
+                                  | tei:editor
+                                  | tei:idno
+                                  | tei:pubPlace
+                                  | tei:publisher
+                                  | tei:relatedItem
+                                  | tei:respStmt
+                                  | tei:series
+                                  | tei:title )
+                                  ">When used inside the transcribed text at level 3,
+                    the <gi>bibl</gi> element uses only generic
+                    phrase-level markup like <gi>hi</gi>, not
+                    structured bibliographic markup like <s:value-of
+                    select="(  tei:author
+                             | tei:biblScope
+                             | tei:citedRange
+                             | tei:distributor
+                             | tei:edition
+                             | tei:editor
+                             | tei:idno
+                             | tei:pubPlace
+                             | tei:publisher
+                             | tei:relatedItem
+                             | tei:respStmt
+                             | tei:series
+                             | tei:title)[1]/local-name(.)"/>.</s:report>
+                </constraint>
+              </constraintSpec>
+              <remarks>
+                <p>At level 3, the <gi>bibl</gi> element uses only
+                generic phrase-level markup like <gi>hi</gi>, not
+                structured bibliographic markup like <gi>author</gi>.</p>
+              </remarks>
+            </elementSpec>
             <elementSpec module="textstructure" ident="body" mode="change">
               <classes mode="replace">
                 <memberOf key="att.global"/>
@@ -862,8 +908,8 @@
               </content>
               <constraintSpec scheme="isoschematron" ident="recommendType">
                 <constraint>
-		  <s:report test="not(@type)">Use of the <att>type</att> attribute of <gi>div</gi>
-		  is recommended</s:report>
+                  <s:report test="not(@type)">Use of the <att>type</att> attribute of <gi>div</gi>
+                  is recommended</s:report>
                 </constraint>
               </constraintSpec>
               <remarks>
@@ -977,6 +1023,21 @@
               the title of a section), figure, list, line group, or
               table.</desc>
             </elementSpec>
+            <elementSpec module="core" ident="listBibl" mode="change">
+              <content>
+                <sequence>
+                  <!-- model.headLike (i.e., <head>) removed -->
+                  <alternate minOccurs="1" maxOccurs="unbounded">
+                    <classRef key="model.biblLike"/>
+                    <classRef key="model.milestoneLike"/>
+                  </alternate>
+                  <alternate minOccurs="0" maxOccurs="unbounded">
+                    <elementRef key="relation"/>
+                    <elementRef key="listRelation"/>
+                  </alternate>
+                </sequence>
+              </content>
+            </elementSpec>
             <elementSpec module="core" ident="note" mode="change">
               <classes mode="change">
                 <memberOf key="att.pointing" mode="delete"/>
@@ -1030,7 +1091,6 @@
             <elementSpec module="core" ident="headItem" mode="delete"/>
             <elementSpec module="core" ident="headLabel" mode="delete"/>
             <elementSpec module="core" ident="index" mode="delete"/>
-            <elementSpec module="core" ident="listBibl" mode="delete"/>
             <elementSpec module="core" ident="measure" mode="delete"/>
             <elementSpec module="core" ident="measureGrp" mode="delete"/>
             <elementSpec module="core" ident="meeting" mode="delete"/>
