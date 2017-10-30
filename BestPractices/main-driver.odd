@@ -253,11 +253,11 @@
         <p>When reformatting to digital media using any level of
         encoding, the electronic text should begin with the
         transcription of the first word on the first leaf of the
-        original work. At lower levels of encoding, it may be
+        original work. At levels 1 to 3 of encoding, it may be
         impractical or undesirable to transcribe and encode certain
         features of the text, such as publisher’s advertisements or
-        indexes; at Level 4 and above, the transcription should be
-        complete. Any omissions of material found in the original work
+        indexes. Such omissions may be indicated in the <gi>notesStmt</gi> of the <gi>teiHeader</gi>. At Level 4 and above, the transcription should be
+        complete. Any systematic omissions of material found in the original work
         should be noted in the <gi>samplingDecl</gi> in the
         TEI header.</p>
         <p>When encoding composite documents (an issue of a journal, a volume of conference papers, a book of poems, etc.) at Level 3 and above, consider creating separate TEI documents for each unit (journal article, conference paper, poem, etc.) so that more granular metadata may be attached to each unit in its own TEI header. A further step will be necessary in order to ensure that the structure of the composite document—how the units relate to each other—is adequately represented. A common way to accomplish this is to create a separate TEI document for the composite document that uses XInclude or URI references to include the relevant portions of the TEI documents for the units in the correct order.</p>

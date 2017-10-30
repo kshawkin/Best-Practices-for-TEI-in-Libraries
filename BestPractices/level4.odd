@@ -273,7 +273,7 @@
             <row>
               <cell><tag>title type="_"</tag></cell>
               <cell>Optional within the <gi>text</gi> (not the <gi>teiHeader</gi>), especially when text is 
-              typographically distinct. Optioanlly use the <att>type</att>
+              typographically distinct. Optionally use the <att>type</att>
               attribute with a value <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
               given in the full TEI guidelines</ref> except for main
@@ -344,6 +344,11 @@
 	      indicate the date or place of birth of the person being
 	      documented.</cell>
 	    </row>
+      <row>
+         <cell><gi>bibl</gi></cell>
+        <cell>Contains a single bibliographic entry. Use of the <gi>author</gi> or <gi>editor</gi> element is recommended. Other valid elements that the TEI allows to appear in <gi>bibl</gi> may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
+       </row>
+            
           </table>
         </div>
         <div type="grecs">
@@ -480,7 +485,7 @@
               <label>Tables of contents, errata, subscription lists,
               lists of other titles by the same author, and other such
               lists'</label>
-              <item>must use a <gi>list</gi> with <gi>item</gi>s. For an
+              <item>should use a <gi>list</gi> with <gi>item</gi>s. For an
               index, use <tag>ref target="____"</tag> to mark up page
               numbers given in the index, with the value of
               <att>target</att> referring to the <att>xml:id</att>
