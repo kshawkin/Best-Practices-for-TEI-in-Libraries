@@ -2060,12 +2060,12 @@
 	      <constraint>
 		<s:rule context="tei:publicationStmt/tei:date">
 		  <s:assert test="@when">Dates inside the
-		  publication statement must have @when
+		  publication statement should have @when
 		  (and should not have content)</s:assert>
 		  <s:report test="string-length(
 				  normalize-space(.) ) &gt; 0">Dates
 		  inside the publication statement should
-		  not have content (and must have
+		  not have content (and should have
 		  @when)</s:report>
 		</s:rule>
 	      </constraint>
@@ -2127,9 +2127,9 @@
 		    <s:rule context="tei:TEI">
 		      <s:assert test="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace/tei:tagUsage/@gi">
 			The use of divisions (i.e., whether numbered or
-			unnumbered divisions are used) must be
-			documented in a &lt;tagUsage&gt; element (inside a
-		      &lt;namespace&gt; element ... </s:assert>
+			unnumbered divisions are used) should be
+			documented in a &lt;tagUsage&gt; element by "Unnumbered divs used." or "Numbered divs used." The &lt;tagUsage&gt; element must be the child of
+			a &lt;namespace name="http://www.tei-c.org/ns/1.0"&gt; element. </s:assert>
 		    </s:rule>
 		    <s:rule context="tei:tagUsage">
 		      <s:assert
@@ -2207,23 +2207,23 @@
 		    </s:rule>
 		    <s:rule context="tei:title[parent::tei:seriesStmt]">
 		      <s:assert test="@level='s'">When a child of
-		      &lt;seriesStmt&gt;, the level of a title must be
+		      &lt;seriesStmt&gt;, the level of a title should be
 		      specified as 's'.</s:assert>
 		    </s:rule>
 		    <s:rule context="tei:title[ancestor::tei:series]">
 		      <s:assert test="@level='s'">When inside the
 		      series-level portion of a structured bibliographic
-		      citation, the level of a title must be specified
+		      citation, the level of a title should be specified
 		      as 's'.</s:assert>
 		    </s:rule>
 		    <s:rule context="tei:title[parent::tei:analytic]">
 		      <s:assert test="@level='a'">When a child of
-		      &lt;analytic&gt;, the level of a title must be
+		      &lt;analytic&gt;, the level of a title should be
 		      specified as 'a'.</s:assert>
 		    </s:rule>
 		    <s:rule context="tei:title[parent::tei:monogr]">
 		      <s:report test="@level='a'">When a child of
-		      &lt;monogr&gt;, the level of a title must not be
+		      &lt;monogr&gt;, the level of a title should not be
 		      specified as 'a'.</s:report>
 		    </s:rule>
 		  </constraint>
