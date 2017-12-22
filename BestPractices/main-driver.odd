@@ -31,11 +31,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	        lib-header.odd, too! -->
-	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
-	<note>That version number <emph>happens</emph> to match the
-	TEI P5 version number against which we are building schemas;
-	this is complete happenstance, the two are not
-	related.</note></p>
+        <p>Version 3.4.1a (<date when="2017-09-04">04 Sep 17</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
