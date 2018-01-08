@@ -146,6 +146,17 @@
 	  due to a lack of granularity in the MARC format.</p>
 	</div>
 	<div type="section">
+	  <head>The TEI Header and METS</head>
+	  <p>The METS (Metadata Encoding and Transmission Standard) includes 
+	  direct support for TEI Headers, that is complete  <gi>teiHeader</gi> 
+	  tags can be included in METS metadata alongside MARC, MODS and DC. METS 
+	  specifies 'TEIHDR' to indicate a TEI Header.   
+	  See <ref target="https://github.com/stuartyeates/METS_metadata_for_complete_beginners/blob/master/edmcook-original/content/mets_file.xml">this 
+	  cookbook</ref> for an example of how this might be done. We are unaware 
+          of any METS implementations which provide significant support for TEI 
+          Headers out-of-the-box.</p>
+       </div>
+	<div type="section">
 	  <head>The TEI Header and Other Metadata Schemas</head>
 	  <p>Several other descriptive metadata schemas are prevalent
 	  within the library domain, including Dublin Core (DC),
