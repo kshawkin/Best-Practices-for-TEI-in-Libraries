@@ -970,7 +970,7 @@
         <row>
           <cell>├</cell>
           <cell><gi>facsimile</gi></cell>
-          <cell>The <gi>facsimile</gi> defines sets of images that correspond with the text. This element should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#Linking">between encoded text and images of source documents|Linking between encoded text and images of source documents</ref>.</cell>
+          <cell>The <gi>facsimile</gi> defines sets of images that correspond with the text. This element should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#txtimglnk">Linking between encoded text and images of source documents</ref>.</cell>
         </row>
         <row>
           <cell>└</cell>
