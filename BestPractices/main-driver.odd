@@ -31,7 +31,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	        lib-header.odd, too! -->
-        <p>Version 3.4.1a (<date when="2017-09-04">04 Sep 17</date>)</p>
+        <p>Version 3.5.0a (<date when="2018-01-23">23 Jan 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -791,12 +791,16 @@
         <ref
         target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
         METS document</ref> for a TEI project).</p>
-	<p>The <ref target="http://iiif.io/">International Image 
-	Interoperability Framework</ref> (IIIF), with its growing user 
+
+	<p>The <ref target="http://iiif.io/">International Image
+	Interoperability Framework</ref> (IIIF), with its growing user
 	community, is likely to emerge as an alternative mechanism for
-	linking between encoded text and images of source documents. 
-	However, TEI and IIIF users have not yet agreed upon a mechanism 
-	for integrating data from these two communities of practice.</p>
+	linking between encoded text and images of source documents.
+	The value of a <att>facs</att> attribute could be a IIIF Image
+	API Request URI (e.g., to access a full-sized image). However,
+	note that the TEI and IIIF communities have not yet agreed
+	upon specific details of a mechanism for integrating data from
+	these two communities of practice.</p>
       </div>
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>
@@ -1112,7 +1116,7 @@
       <p>The individuals who have contributed to the writing of this
       document are:
       <list>
-	<item>Adam Baron, University of North Texas (version 3.1.0)
+	<item>Adam Baron, University of North Texas (version 3.1.0)</item>
         <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
         <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>

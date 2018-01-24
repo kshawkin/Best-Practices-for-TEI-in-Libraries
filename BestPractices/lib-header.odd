@@ -27,7 +27,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	     lib-header.odd, too! -->
-        <p>Version 3.4.1a (<date when="2017-09-04">04 Sep 17</date>)</p>
+        <p>Version 3.5.0a (<date when="2018-01-23">23 Jan 18</date>)</p>
       </editionStmt>
       <publicationStmt>
 	<authority>TEI SIG on Libraries</authority>
@@ -147,14 +147,20 @@
 	</div>
 	<div type="section">
 	  <head>The TEI Header and METS</head>
-	  <p>The METS (Metadata Encoding and Transmission Standard) includes 
-	  direct support for TEI Headers, that is complete  <gi>teiHeader</gi> 
-	  tags can be included in METS metadata alongside MARC, MODS and DC. METS 
-	  specifies 'TEIHDR' to indicate a TEI Header.   
-	  See <ref target="https://github.com/stuartyeates/METS_metadata_for_complete_beginners/blob/master/edmcook-original/content/mets_file.xml">this 
-	  cookbook</ref> for an example of how this might be done. We are unaware 
-          of any METS implementations which provide significant support for TEI 
-          Headers out-of-the-box.</p>
+	  <p>The <ref
+	  target="https://www.loc.gov/standards/mets/">Metadata
+	  Encoding and Transmission Standard</ref> (METS) includes
+	  direct support for TEI Headers; that is, a complete
+	  <gi>teiHeader</gi> element can be included in a METS
+	  metadata record alongside MARC, MODS, and DC metadata. METS
+	  specifies an <att>OTHERMDTYPE</att> of <val>TEIHDR</val> to
+	  indicate a TEI Header. For an example of how this might be
+	  done, see this <ref
+	  target="./edmcook-original_mets_xmp.xml">example METS
+	  record</ref> for <title>The “Sure to Rise” Cookery
+	  Book</title>. We are unaware of any METS implementations
+	  which provide significant support for TEI Headers
+	  out-of-the-box.</p>
        </div>
 	<div type="section">
 	  <head>The TEI Header and Other Metadata Schemas</head>
@@ -1325,11 +1331,11 @@
 		<p>Use of the <gi>schemaRef</gi> element is recommended to record the encoding level. 
 		Use the <att>key</att> attribute for the value that indicates the encoding level:
 		<list>
-		  <item> Level 1: <val>BPTL-L1-v3.4.0a</val></item>
-		  <item> Level 2: <val>BPTL-L2-v3.4.0a</val></item>
-		  <item> Level 3: <val>BPTL-L3-v3.4.0a</val></item>
-		  <item> Level 4: <val>BPTL-L4-v3.4.0a</val></item>
-		  <item> Level 5: <val>BPTL-L5-v3.4.0a</val></item>
+		  <item> Level 1: <val>BPTL-L1-v3.5.0a</val></item>
+		  <item> Level 2: <val>BPTL-L2-v3.5.0a</val></item>
+		  <item> Level 3: <val>BPTL-L3-v3.5.0a</val></item>
+		  <item> Level 4: <val>BPTL-L4-v3.5.0a</val></item>
+		  <item> Level 5: <val>BPTL-L5-v3.5.0a</val></item>
 		</list>
 		</p>
 	      </cell>
@@ -1915,20 +1921,20 @@
 		       in the <editionStmt>s in each of the .odd
 		       files, too! -->
 		  <valList type="semi" mode="add">
-		    <valItem ident="BPTL-L1-v3.4.1a">
-		      <gloss>Best Practices for TEI in Libraries level 1, version 3.4.1a</gloss>
+		    <valItem ident="BPTL-L1-v3.5.0a">
+		      <gloss>Best Practices for TEI in Libraries level 1, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L2-v3.4.1a">
-		      <gloss>Best Practices for TEI in Libraries level 2, version 3.4.1a</gloss>
+		    <valItem ident="BPTL-L2-v3.5.0a">
+		      <gloss>Best Practices for TEI in Libraries level 2, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L3-v3.4.1a">
-		      <gloss>Best Practices for TEI in Libraries level 3, version 3.4.1a</gloss>
+		    <valItem ident="BPTL-L3-v3.5.0a">
+		      <gloss>Best Practices for TEI in Libraries level 3, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L4-v3.4.1a">
-		      <gloss>Best Practices for TEI in Libraries level 4, version 3.4.1a</gloss>
+		    <valItem ident="BPTL-L4-v3.5.0a">
+		      <gloss>Best Practices for TEI in Libraries level 4, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L5-v3.4.1a">
-		      <gloss>Best Practices for TEI in Libraries level 5, version 3.4.1a</gloss>
+		    <valItem ident="BPTL-L5-v3.5.0a">
+		      <gloss>Best Practices for TEI in Libraries level 5, version 3.5.0a</gloss>
 		    </valItem>
 		  </valList>
 		</attDef>
