@@ -856,7 +856,13 @@
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <placeName ref="http://vocab.getty.edu/page/tgn/7012924">Indianapolis</placeName>
-            <persName ref="http://viaf.org/viaf/31995584">Emily Dickinson</persName>
+            <author>
+              <persName>Emily Dickinson</persName> 
+              <idno type="VIAF">http://viaf.org/viaf/31995584</idno> 
+              <idno type="ISNI">http://isni.org/isni/0000000121265882</idno> 
+              <idno type="LCCN">http://id.loc.gov/authorities/names/n79054166</idno> 
+              <idno type="Wikidata">https://www.wikidata.org/wiki/Q4441</idno>
+            </author>
           </egXML>
 
           <p>Still, there are times when an outside URI for disambiguation is not available. An encoding project could use URI 
