@@ -31,11 +31,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	        lib-header.odd, too! -->
-	<p>Version 3.1.0a (<date when="2017-01-15">15 Jan 17</date>)
-	<note>That version number <emph>happens</emph> to match the
-	TEI P5 version number against which we are building schemas;
-	this is complete happenstance, the two are not
-	related.</note></p>
+        <p>Version 3.5.0a (<date when="2018-01-23">23 Jan 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -217,7 +213,7 @@
 	Practices</cite>, but TEI simplePrint is discussed below with 
 	Level 5. Furthermore, unlike these <cite>Best Practices</cite>,
 	TEI simplePrint specifies a processing model for each element, 
-	prescribing how they should be displayed or otherwise 
+	recommending how they should be displayed or otherwise 
 	processed.</p>
       </div>
     </div>
@@ -795,12 +791,16 @@
         <ref
         target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
         METS document</ref> for a TEI project).</p>
-	<p>The <ref target="http://iiif.io/">International Image 
-	Interoperability Framework</ref> (IIIF), with its growing user 
+
+	<p>The <ref target="http://iiif.io/">International Image
+	Interoperability Framework</ref> (IIIF), with its growing user
 	community, is likely to emerge as an alternative mechanism for
-	linking between encoded text and images of source documents. 
-	However, TEI and IIIF users have not yet agreed upon a mechanism 
-	for integrating data from these two communities of practice.</p>
+	linking between encoded text and images of source documents.
+	The value of a <att>facs</att> attribute could be a IIIF Image
+	API Request URI (e.g., to access a full-sized image). However,
+	note that the TEI and IIIF communities have not yet agreed
+	upon specific details of a mechanism for integrating data from
+	these two communities of practice.</p>
       </div>
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>
@@ -905,8 +905,6 @@
         <div type="====">
           <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
           <p>At levels 3 and above, the <att>style</att>, <att>rend</att>, and
-          <head><att>style</att>, <att>rend</att>, and <att>rendition</att></head>
-          <p>At levels 3 and above, the <att>style</att>, <att>rend</att> and
           <att>rendition</att> attributes may be used when it is
           desirable to record information about how a textual
           feature was displayed in the source document.</p>
@@ -978,7 +976,7 @@
         <row>
           <cell>├</cell>
           <cell><gi>facsimile</gi></cell>
-          <cell>The <gi>facsimile</gi> defines sets of images that correspond with the text. This element should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#Linking">between encoded text and images of source documents|Linking between encoded text and images of source documents</ref>.</cell>
+          <cell>The <gi>facsimile</gi> defines sets of images that correspond with the text. This element should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#txtimglnk">Linking between encoded text and images of source documents</ref>.</cell>
         </row>
         <row>
           <cell>└</cell>
@@ -1124,8 +1122,11 @@
       <p>The individuals who have contributed to the writing of this
       document are:
       <list>
+	<item>Adam Baron, University of North Texas (version 3.1.0)</item>
         <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
+	<item>Lou Burnard, Independent Consultant (version 3.1.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
+	<item>Martin de la Iglesia, Herzog August Bibliothek Wolfenbüttel (version 3.1.0)</item>
         <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
 	<item>James R. Griffin, III, Lafayette College (version 3.1.0)</item>
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
@@ -1133,20 +1134,24 @@
         <item>Renee McBride, University of North Carolina, Chapel Hill (version 3.0)</item>
 	<item>Martin Mueller, Northwestern University (version 3.1.0)</item>
 	<item>Elli Mylonas, Brown University (version 3.1.0)</item>
+	<item>Kiyonori Nagasaki, International Institute for Digital Humanities (version 3.1.0)</item>
         <item>Andrew Rouner, Washington University in St. Louis (versions 3.0 &amp; 3.1.0)</item>
         <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
         <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC (version 3.0)</item>
+	<item>Thomas Stäcker, Universitäts- und Landesbibliothek Darmstadt (version 3.1.0)</item>
         <item>Vitus Tang, Stanford University (version 3.0)</item>
         <item>Richard Wisneski, Case Western University (version 3.0)</item>
         <item>Glen Worthey, Stanford University (version 3.0)</item>
+	<item>Martin Wynne, University of Oxford (version 3.1.0)</item>
+	<item>Stuart Yeates, Victoria University of Wellington (version 3.1.0)</item>
       </list></p>
       <p>The individuals who have contributed to the planning of this
       document are:
       <list>
         <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
-	<item>Stefanie Gehrke (Biblissima)</item>
+	<item>Stefanie Gehrke, Biblissima (version 3.1.0)</item>
         <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
 	<item>Peter Gorman, University of Wisconsin (version 3.1.0)</item>
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>

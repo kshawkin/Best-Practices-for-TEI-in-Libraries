@@ -25,7 +25,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	        lib-header.odd, too! -->
-        <p>Version 3.4.0a (<date when="2017-09-04">04 Sep 17</date>)</p>
+        <p>Version 3.5.0a (<date when="2018-01-23">23 Jan 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -300,12 +300,23 @@
             </row> 
             <row>        
               <cell><gi>persName</gi>, <gi>placeName</gi>,
-              <gi>geogName</gi>, <gi>orgName</gi>, and <tag>name type="_"</tag> </cell>
+              <gi>geogName</gi>, <gi>orgName</gi>, and <tag>name type="___"</tag> </cell>
               <cell>Optionally use to encode personal, place,
               organizational, and other names used in a text. The
               <gi>persName</gi> element is also used to indicate a
               personal name inside a <gi>person</gi> element (see below).</cell>
-            </row> 
+            </row>
+	    <row>
+	      <cell><gi>bibl</gi></cell>
+	      <cell>May contain bibliographic elements like
+	      <gi>author</gi>, <gi>biblScope</gi>,
+	      <gi>citedRange</gi>, <gi>distributor</gi>,
+	      <gi>edition</gi> <gi>editor</gi>, <gi>idno</gi>,
+	      <gi>pubPlace</gi>, <gi>publisher</gi>,
+	      <gi>relatedItem</gi>, <gi>respStmt</gi>,
+	      <gi>series</gi>, and <gi>title</gi> in addition
+	      to text.</cell>
+	    </row>
             <row>        
               <cell><gi>listName</gi>, <gi>listPlace</gi>, and
               <gi>listOrg</gi> </cell>
@@ -315,7 +326,6 @@
               in an external TEI file or database for easier maintenance
               of names.</cell>
             </row> 
-           
 	    <row>
 	      <cell><gi>listPerson</gi></cell>
 	      <cell>Optionally used in support of transcriptions of
@@ -1323,10 +1333,10 @@
         <!-- ********************************* -->
         <elementSpec module="core" ident="abbr" mode="delete"/>
         <elementSpec module="core" ident="binaryObject" mode="delete"/>
-        <elementSpec module="core" ident="cb" mode="delete"/>
         <elementSpec module="core" ident="cit" mode="delete"/>
         <elementSpec module="core" ident="divGen" mode="delete"/>
         <elementSpec module="core" ident="expan" mode="delete"/>
+	<elementSpec module="core" ident="gb" mode="delete"/>
         <elementSpec module="core" ident="headItem" mode="delete"/>
         <elementSpec module="core" ident="headLabel" mode="delete"/>
         <elementSpec module="core" ident="index" mode="delete"/>

@@ -17,12 +17,8 @@
 # pointed to on the commandline.
 
 # --------- WARNING ---------
-# A single change is needed to one of the TEI stylesheets in order to
-# generate the single large HTML document. See "IMPORTANT", below. If
-# you don't make that tweak, the process will build all of the outputs
-# for the individual levels, but not the main-driver.html, which will
-# suffer a fatal error.
-# --------- GNINRAW ---------
+# This build process requires the change made to the Stylesheets at commit
+# 0f7cdf348973d5eb80f6f28eb702d88548e086d8
 
 # watch what happens, as it happens
 # set -o xtrace
@@ -107,25 +103,6 @@ done
 echo ""; echo "--------- generate HTML from main driver ---------"
 # need a way to set showTitleAuthor=true
 # need a way to set suppressTEIexamples=true
-
-# IMPORTANT -- As currently written, line 2392 of
-# ${XSLDIR}/odds/teiodds.xsl tries to set the context node to
-# that which was looked up by using
-#   	  <xsl:for-each select="key('IDENTS',$lookup)">
-# HOWEVER, because each of our 4 included ODD files (level1.odd,
-# level2.odd, level3.odd, level4.odd) has a <specGrpRef> that points
-# to a set of ODD elements in lib-header.odd, we end up with 4 copies
-# of quite a few identifiable constructs in the IDENTS key. Thus when
-# the author intended just to set the context node (I think), we now
-# end up iterating over the same <elementSpec> (or whatever) 4 times.
-# Thus the function being defined (tei:generateRefPrefix()) tries to
-# return 4 things, when it is only allowed to return one, and we get a
-# fatal error. To fix this, or at least to hack around it, change the
-# line in question to read
-#   	  <xsl:for-each select="key('IDENTS',$lookup)[1]">
-# I am not checking that change into the TEI Stylesheets, because it
-# is not at all clear to me that what we are doing here should be
-# valid.
 
 # HACK warning 1: we simply remove all of the <schemaSpec>s so as
 # to avoid generating reference documentation from them.
