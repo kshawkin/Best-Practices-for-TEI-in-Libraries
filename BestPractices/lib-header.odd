@@ -153,7 +153,7 @@
 	  direct support for TEI Headers; that is, a complete
 	  <gi>teiHeader</gi> element can be included in a METS
 	  metadata record alongside MARC, MODS, and DC metadata. METS
-	  specifies an <att>OTHERMDTYPE</att> of <val>TEIHDR</val> to
+	  specifies an <att>MDTYPE</att> of <val>TEIHDR</val> to
 	  indicate a TEI Header. For an example of how this might be
 	  done, see this <ref
 	  target="./edmcook-original_mets_xmp.xml">example METS

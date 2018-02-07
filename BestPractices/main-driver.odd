@@ -256,7 +256,7 @@
         complete. Any systematic omissions of material found in the original work
         should be noted in the <gi>samplingDecl</gi> in the
         TEI header.</p>
-        <p>When encoding composite documents (an issue of a journal, a volume of conference papers, a book of poems, etc.) at Level 3 and above, consider creating separate TEI documents for each unit (journal article, conference paper, poem, etc.) so that more granular metadata may be attached to each unit in its own TEI header. A further step will be necessary in order to ensure that the structure of the composite document—how the units relate to each other—is adequately represented. A common way to accomplish this is to create a separate TEI document for the composite document that uses XInclude or URI references to include the relevant portions of the TEI documents for the units in the correct order.</p>
+        <p>When encoding composite documents (an issue of a journal, a volume of conference papers, a book of poems, etc.) at Level 3 and above, consider creating separate TEI documents for each unit (journal article, conference paper, poem, etc.) so that more granular metadata may be attached to each unit in its own TEI header. A further step will be necessary in order to ensure that the structure of the composite document—how the units relate to each other—is adequately represented. A common way to accomplish this is to create a separate TEI document for the composite document that uses XInclude to include the relevant portions of the TEI documents for the units in the correct order.</p>
         <div type="====">
           <head>Punctuation</head>
           <p>While the TEI gives the option of removing punctuation
@@ -856,7 +856,13 @@
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <placeName ref="http://vocab.getty.edu/page/tgn/7012924">Indianapolis</placeName>
-            <persName ref="http://viaf.org/viaf/31995584">Emily Dickinson</persName>
+            <author>
+              <persName>Emily Dickinson</persName> 
+              <idno type="VIAF">http://viaf.org/viaf/31995584</idno> 
+              <idno type="ISNI">http://isni.org/isni/0000000121265882</idno> 
+              <idno type="LCCN">http://id.loc.gov/authorities/names/n79054166</idno> 
+              <idno type="Wikidata">https://www.wikidata.org/wiki/Q4441</idno>
+            </author>
           </egXML>
 
           <p>Still, there are times when an outside URI for disambiguation is not available. An encoding project could use URI 
