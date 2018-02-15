@@ -206,12 +206,12 @@
 	designed to be an entry point for a wide variety of encoding 
 	projects, especially those dealing with Western European early 
 	modern printed material. An implicit aim of the creators of 
-	this customization, as with these <cite>Best Practices</cite>, 
+	this customization, as with these <title>Best Practices</title>, 
 	was to prescribe a single way to encode common features in 
 	source documents. The features to be encoded are more granular
-	than those in Levels 1 through 4 of these <cite>Best 
-	Practices</cite>, but TEI simplePrint is discussed below with 
-	Level 5. Furthermore, unlike these <cite>Best Practices</cite>,
+	than those in Levels 1 through 4 of these <title>Best 
+	Practices</title>, but TEI simplePrint is discussed below with 
+	Level 5. Furthermore, unlike these <title>Best Practices</title>,
 	TEI simplePrint specifies a processing model for each element, 
 	recommending how they should be displayed or otherwise 
 	processed.</p>
