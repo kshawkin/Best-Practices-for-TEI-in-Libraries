@@ -162,6 +162,58 @@
 	  which provide significant support for TEI Headers
 	  out-of-the-box.</p>
        </div>
+	<div xml:id="frbr" type="section">
+        <head>The TEI Header and FRBR</head>
+        <p><title><choice><abbr>FRBR</abbr><expan>Functional Requirements for Bibliographic
+                        Records</expan></choice></title><ptr
+                target="https://www.ifla.org/publications/functional-requirements-for-bibliographic-records"
+            /> is a conceptual model developed by <choice><abbr>IFLA</abbr><expan>the International
+                    Federation of Library Associations</expan></choice>
+            <cit><quote>for relating the data that are stored in bibliographic records to the needs
+                    of the users of those records</quote><bibl><title>Functional Requirements for
+                        Bibliographic Records: Final Report</title><date>February
+                        2009</date><citedRange unit="page">7</citedRange></bibl></cit>. It is best
+            known for its model of four primary bibliographic entities: <term>work</term>,
+                <term>expression</term>, <term>manifestation</term>, and <term>item</term>. The FRBR
+            model also includes primary relationships between certain of these entities: a work may
+            be <term>realized through</term> one or more expressions, an expression may be
+                <term>embodied in</term> one or more manifestations, and a manifestation may be
+                <term>exemplified by</term> one or more items. Since the publication of
+                <title>FRBR</title> in 2008, the library metadata community has collaborated to
+            develop more precise entity-relationship models relating to bibliographic
+            metadata—notably <title>FRBRoo</title><ptr target="http://www.cidoc-crm.org/frbroo/"/>
+            and BIBFRAME<ptr target="https://www.loc.gov/bibframe/"/>, each with different
+            configurations of bibliographic entities than the four primary entities in FRBR.</p>
+        <p>Due to sustained interest in the original FRBR model from within the TEI community, these
+                <title>Best Practices</title> describe how an encoder might identify bibliographic
+            entities relating to a TEI document and express relationships between them. For example,
+            a TEI document might contain the text of a particular edition of a rare book (a FRBR
+            manifestation), and the header could reference all extant copies (FRBR items) of this
+            book. These relationships and references to bibliographic entities are encoded using the
+                <gi>listRelation</gi> element, an optional child of <gi>sourceDesc</gi>.</p>
+        <p>The following example expresses all three FRBR relationships between instances of the
+            four primary FRBR entities: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <listRelation>
+                    <relation ref="http://purl.org/vocab/frbr/core#realization"
+                        active="http://d-nb.info/gnd/4128140-8"
+                        passive="http://d-nb.info/gnd/4217850-2"/>
+                    <relation ref="http://purl.org/vocab/frbr/core#embodiment"
+                        active="http://d-nb.info/gnd/4217850-2"
+                        passive="http://d-nb.info/1022142836"/>
+                    <relation ref="http://purl.org/vocab/frbr/core#exemplar"
+                        active="http://d-nb.info/1022142836"
+                        passive="http://lobid.org/items/HT017412936:DE-361:NA088.88-4442721#!"/>
+                </listRelation>
+            </egXML></p><p>Note that a TEI document itself, like any other XML document, has an
+            ambiguous status between a FRBR expression and a FRBR manifestation.<bibl><author>Allen
+                    Renear</author>, <author>Christopher Phillippe</author>, <author>Pat
+                    Lawton</author>, and <author>David Dubin</author></bibl>. <date>2003.
+                </date><title level="a">An XML document corresponds to which FRBR Group 1
+                entity?</title>. <title level="m">Proceedings of Extreme Markup
+                Languages</title><ptr
+                target="http://conferences.idealliance.org/extreme/html/2003/Lawton01/EML2003Lawton01.html"
+            /></p>
+    	</div>
 	<div type="section">
 	  <head>The TEI Header and Other Metadata Schemas</head>
 	  <p>Several other descriptive metadata schemas are prevalent
@@ -647,7 +699,7 @@
 	    <row>
 	      <cell>│</cell>
 	      <cell/>
-	      <cell>└</cell>
+	      <cell>├</cell>
 	      <cell cols="4">
 		<gi>biblStruct</gi>
 	      </cell>
@@ -1298,6 +1350,19 @@
 		</list>
 	      </cell>
 	    </row>
+    <row>
+        <cell>│</cell>
+        <cell/>
+        <cell>└</cell>
+        <cell cols="4">
+            <gi>listRelation</gi>
+        </cell>
+        <cell>Use <gi>listRelation</gi> with <gi>relation</gi> child elements to express any FRBR
+            entities and relationships relating to the TEI document (see <ref target="#frbr"
+                >discussion above</ref>).</cell>
+        <cell>n/a</cell>
+        <cell>n/a</cell>
+    </row>
 
 	    <row>
 	      <cell>├</cell>
