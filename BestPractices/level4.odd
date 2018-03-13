@@ -364,7 +364,7 @@
           <list>
             <item>The use of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html"><gi>group</gi></ref> is recommended when you need to encode a body of distinct texts that are grouped together and are regarded as a unit. Most typical examples of such composite texts would be anthologies, collected works of an author, etc. Section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1 Grouped Texts</ref> states, <quote>The presence of common front matter referring to the whole collection, possibly in addition to front matter relating to each individual text, is a good indication that a given text might usefully be encoded in this way.</quote></item>
             <item>Use <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-argument.html"><gi>argument</gi></ref> to encode a prefatory list or prose description of the topics usually discovered at the beginning of a chapter. The content within the <gi>argument</gi> element can be presented as a list or as a paragraph: 
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-OVRAHoB">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-OVRAHoB">
               <div type="chapter" n="1">
                 <pb xml:id="albert14" n="14"/>
                 <head>CHAPTER I.</head>
@@ -421,7 +421,7 @@
               <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element used alone is optional to indicate errors without correcting them</item>
               <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element used alone is optional to provide corrections without indicating the initial error</item>
               <item>the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html">choice</ref> element allows both the apparent error and its editorial correction to be recorded, as in the following examples:
-              <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-TBSoS">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-TBSoS">
                 <p>He has no Scruple about Fish; but won't touch a bit of Pork, it being 
                 <choice>
                   <sic>expresly</sic>
@@ -431,7 +431,7 @@
               <bibl xml:id="BIB-TBSoS"><author>Thomas Bluett</author> <title>Some Memoirs of the Life of Job, the Son of Solomon,
               the High Priest of Boonda in Africa; Who was a Slave About Two Years in Maryland; and Afterwards Being Brought to England, was Set Free, and Sent to His Native Land in the Year 1734.</title> London: Printed for R. Ford, 1734.</bibl>
               or
-              <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-AMBS">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-AMBS">
                 <p>4. The art of writing she obtained by her own industry and curiosity, and in so
                 short a time that in the year 1765, when she was not more than twelve years of
                 <choice>
@@ -445,7 +445,7 @@
               </item>
             </list></item>
             <item>The elements <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><gi>add</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><gi>del</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><gi>unclear</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html"><gi>gap</gi></ref> may be used to indicate instances when a text (i.e. word or part of it, phrase or part of it) has been added, marked for deletion, or to indicate cases where transcription is difficult (<gi>unclear</gi>) or impossible (<gi>gap</gi>) because the material is illegible, invisible, or inaudible (i.e. while transcribing oral history interviews):
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-JHLCC">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-JHLCC">
               <p>But it is well authenticated by the observation of every one, that <del rend="text-decoration: line-through" hand="#JHL">their manner</del> 
               <add rend="vertical-align: super" hand="#JHL">this way—i.e.
               the above</add> of writing influences the style of compos. of those who practise it
@@ -455,7 +455,7 @@
               speak).</p>
             </egXML>
             <bibl xml:id="BIB-JHLCC"><title>Class Composition of J. Horace Lacy</title> [January 1851] 1. <author><name type="person">Lacy, James Horace</name> 1834-1852</author></bibl>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-KFPC01">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-KFPC01">
               <p>But I still hope for &amp;amp; trust in God and I believe he will animate our brave
               defenders with a superhuman power and we will yet drive from our soil the hated invaders
               whose tread <gap reason="ink blot"/> profanation, but this is an hour to try
@@ -588,7 +588,7 @@
             <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-closer.html"><gi>closer</gi></ref>,
             <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-postscript.html"><gi>postscript</gi></ref>
             included as appropriate. For example:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-ABLMWW">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-ABLMWW">
               <p>She opened and read as follows:</p>
               <floatingText>
                 <body>
@@ -628,7 +628,7 @@
             desired, each <gi>castItem</gi> may be uniquely identified
             with an <att>xml:id</att> attribute.</p>
             <p>For example,
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-SKL">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-SKL">
               <front>
                 <castList><head>Dramatis Personae</head>
                 <castItem xml:id="kllear">LEAR king of Britain</castItem>
@@ -664,7 +664,7 @@
               be used to refer to the <gi>castItem</gi> of the speaker.
               When <att>who</att> is used, <gi>speaker</gi> is
               optional.
-              <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-SKL">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-SKL">
                 <div type="act" n="1">
                   <head>Act 1</head>
                   <div type="scene" n="1">
@@ -770,7 +770,7 @@
             addition, use the <att>rend</att> attribute to indicate
             lines that are indented.</p>
             <p>For example,
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-LCHoS">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-LCHoS">
               <div type="fit" n="1">
                 <head>Fit the First: THE LANDING</head>
                 <lg type="stanza" n="1">
