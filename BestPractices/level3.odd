@@ -277,7 +277,7 @@
             </list>
             </p>
             <p>An example of frontispiece encoding: 
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" corresp="#BIB-NoST">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-NoST">
               <front>
                 <div type="frontispiece">
                   <figure>
