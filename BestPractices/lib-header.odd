@@ -204,15 +204,25 @@
                         active="http://d-nb.info/1022142836"
                         passive="http://lobid.org/items/HT017412936:DE-361:NA088.88-4442721#!"/>
                 </listRelation>
-            </egXML></p><p>Note that a TEI document itself, like any other XML document, has an
-            ambiguous status between a FRBR expression and a FRBR manifestation.<note><bibl><author>Allen
-                    Renear</author>, <author>Christopher Phillippe</author>, <author>Pat
-                    Lawton</author>, and <author>David Dubin</author></bibl>. <date>2003.
-                </date><title level="a">An XML document corresponds to which FRBR Group 1
-                entity?</title>. <title level="m">Proceedings of Extreme Markup
-                Languages</title><ptr
-                target="http://conferences.idealliance.org/extreme/html/2003/Lawton01/EML2003Lawton01.html"
-		/></bibl></note></p>
+            </egXML></p>
+	    <p>Note that a TEI document itself, like any other XML
+	    document, has an ambiguous status between a FRBR
+	    expression and a FRBR
+	    manifestation.<note>
+	    <bibl>
+	      <author>Allen Renear</author>,
+	      <author>Christopher Phillippe</author>,
+	      <author>Pat Lawton</author>, and
+	      <author>David Dubin</author>.
+	    <date>2003</date>.
+	    <title level="a">An XML document corresponds to which FRBR Group 1 entity?</title>.
+	    <title level="m">Proceedings of Extreme Markup Languages</title>
+	    <ptr
+	    target="http://conferences.idealliance.org/extreme/html/2003/Lawton01/EML2003Lawton01.html"
+	    />
+	    </bibl>
+	    </note>
+	    </p>
     	</div>
 	<div type="section">
 	  <head>The TEI Header and Other Metadata Schemas</head>

@@ -64,6 +64,7 @@ for BASE in lib1 lib2 lib3 lib4 ; do
     PREFIX="${BASE}${PSC}"
     PREFIX="${OSPFX:-${PREFIX}}"
 
+    echo "------ teitorelaxng --odd $INNAME"
     if ${XSLDIR}/bin/teitorelaxng --odd --localsource=${P5SRC} $INNAME ; then
 	mv $INNAME.relaxng $BASE.rng
 	jing ${RELAX} ${BASE}.rng
@@ -71,6 +72,7 @@ for BASE in lib1 lib2 lib3 lib4 ; do
 	echo "Error generating RELAX NG (XML syntax) and Schematron from $INNAME"
     fi
 	 
+    echo "------ teitornc --odd $INNAME"
     if ${XSLDIR}/bin/teitornc --odd --localsource=${P5SRC} $INNAME ; then
 	if ~/bin/fix_rnc_whitespace.perl --patternprefix=${PREFIX} < $INNAME.rnc > $BASE.rnc ; then
 	    rm $INNAME.rnc
@@ -81,12 +83,14 @@ for BASE in lib1 lib2 lib3 lib4 ; do
 	echo "Error generating RELAX NG (compact syntax) from $INNAME"
     fi
 
+    echo "------ teitoschematron --odd $INNAME"
     if ${XSLDIR}/bin/teitoschematron --odd --localsource=${P5SRC} $INNAME ; then
 	mv $INNAME.schematron $BASE.sch
     else
 	echo "Error extracting Schematron from $INNAME"
     fi
 
+    echo "------ teitohtml --odd --summaryDoc $INNAME"
     if ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} --summaryDoc $INNAME ; then
 	mv $INNAME.html $BASE.html
     else
