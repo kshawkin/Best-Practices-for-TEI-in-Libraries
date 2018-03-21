@@ -27,7 +27,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	     lib-header.odd, too! -->
-        <p>Version 3.5.0a (<date when="2018-01-23">23 Jan 18</date>)</p>
+        <p>Version 3.5.1a (<date when="2018-03-21">21 Mar 18</date>)</p>
       </editionStmt>
       <publicationStmt>
 	<authority>TEI SIG on Libraries</authority>
@@ -1996,19 +1996,19 @@
 		       in the <editionStmt>s in each of the .odd
 		       files, too! -->
 		  <valList type="semi" mode="add">
-		    <valItem ident="BPTL-L1-v3.5.0a">
+		    <valItem ident="BPTL-L1-v3.5.1a">
 		      <gloss>Best Practices for TEI in Libraries level 1, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L2-v3.5.0a">
+		    <valItem ident="BPTL-L2-v3.5.1a">
 		      <gloss>Best Practices for TEI in Libraries level 2, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L3-v3.5.0a">
+		    <valItem ident="BPTL-L3-v3.5.1a">
 		      <gloss>Best Practices for TEI in Libraries level 3, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L4-v3.5.0a">
+		    <valItem ident="BPTL-L4-v3.5.1a">
 		      <gloss>Best Practices for TEI in Libraries level 4, version 3.5.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L5-v3.5.0a">
+		    <valItem ident="BPTL-L5-v3.5.1a">
 		      <gloss>Best Practices for TEI in Libraries level 5, version 3.5.0a</gloss>
 		    </valItem>
 		  </valList>

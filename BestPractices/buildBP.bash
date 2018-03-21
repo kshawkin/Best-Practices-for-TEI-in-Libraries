@@ -90,8 +90,8 @@ for BASE in lib1 lib2 lib3 lib4 ; do
 	echo "Error extracting Schematron from $INNAME"
     fi
 
-    echo "------ teitohtml --odd --summaryDoc $INNAME"
-    if ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} --summaryDoc $INNAME ; then
+    echo "------ teitohtml --odd [NOT --summaryDoc] $INNAME"
+    if ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} $INNAME ; then
 	mv $INNAME.html $BASE.html
     else
 	echo "Error generating HTML from $INNAME"
