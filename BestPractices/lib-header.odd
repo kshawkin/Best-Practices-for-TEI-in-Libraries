@@ -1370,8 +1370,8 @@
         <cell>Use <gi>listRelation</gi> with <gi>relation</gi> child elements to express any FRBR
             entities and relationships relating to the TEI document (see <ref target="#frbr"
                 >discussion above</ref>).</cell>
-        <cell></cell>
-        <cell></cell>
+        <cell>n/a</cell>
+        <cell>n/a</cell>
     </row>
 
 	    <row>
