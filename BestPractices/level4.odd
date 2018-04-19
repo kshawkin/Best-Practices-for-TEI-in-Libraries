@@ -25,7 +25,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	        lib-header.odd, too! -->
-        <p>Version 3.5.1a (<date when="2018-03-21">21 Mar 18</date>)</p>
+        <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -892,7 +892,7 @@
       <!-- ********************************************* -->
       <div type="specification">
         <head>Specification</head>
-        <schemaSpec ident="lib4" docLang="en" xml:lang="en" prefix="lib4_" source="tei:3.1.0">
+        <schemaSpec ident="lib4" docLang="en" xml:lang="en" prefix="lib4_" source="tei:3.3.0">
           <moduleRef key="core"/>
           <moduleRef key="tei"/>
           <moduleRef key="textstructure" except="byline imprimatur"/>
@@ -1134,7 +1134,7 @@
           <elementSpec module="textstructure" ident="div" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
             <content>
               <sequence>
@@ -1176,43 +1176,43 @@
           <elementSpec module="textstructure" ident="div1" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
           </elementSpec>
           <elementSpec module="textstructure" ident="div2" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
           </elementSpec>
           <elementSpec module="textstructure" ident="div3" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
           </elementSpec>
           <elementSpec module="textstructure" ident="div4" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
           </elementSpec>
           <elementSpec module="textstructure" ident="div5" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
           </elementSpec>
           <elementSpec module="textstructure" ident="div6" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
           </elementSpec>
           <elementSpec module="textstructure" ident="div7" mode="change">
             <classes mode="change">
               <memberOf key="att.typed" mode="delete"/>
-              <memberOf key="att.BTPL.div.typed"/>
+              <memberOf key="att.BPTL.div.typed"/>
             </classes>
           </elementSpec>
           <elementSpec module="core" ident="editor" mode="change">

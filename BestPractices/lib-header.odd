@@ -27,7 +27,7 @@
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @key of <schemaRef> in
 	     lib-header.odd, too! -->
-        <p>Version 3.5.1a (<date when="2018-03-21">21 Mar 18</date>)</p>
+        <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
       </editionStmt>
       <publicationStmt>
 	<authority>TEI SIG on Libraries</authority>
@@ -55,6 +55,11 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change who="#sbauman.emt" when="2018-04-15">
+	Beginning to address ticket #27: use <gi>sourceDoc</gi> for
+	encoding of OCR text. Also update base version of TEI from
+	3.1.0 to 3.3.0.
+      </change>
       <change who="#sbauman.emt" when="2010-12-19">
 	Subsumed the <gi>specGrp</gi> into a complete TEI document so
 	that it can have its own metadata. I hope that the roma ODD
@@ -1406,11 +1411,11 @@
 		<p>Use of the <gi>schemaRef</gi> element is recommended to record the encoding level. 
 		Use the <att>key</att> attribute for the value that indicates the encoding level:
 		<list>
-		  <item> Level 1: <val>BPTL-L1-v3.5.0a</val></item>
-		  <item> Level 2: <val>BPTL-L2-v3.5.0a</val></item>
-		  <item> Level 3: <val>BPTL-L3-v3.5.0a</val></item>
-		  <item> Level 4: <val>BPTL-L4-v3.5.0a</val></item>
-		  <item> Level 5: <val>BPTL-L5-v3.5.0a</val></item>
+		  <item> Level 1: <val>BPTL-L1-v4.0.0a</val></item>
+		  <item> Level 2: <val>BPTL-L2-v4.0.0a</val></item>
+		  <item> Level 3: <val>BPTL-L3-v4.0.0a</val></item>
+		  <item> Level 4: <val>BPTL-L4-v4.0.0a</val></item>
+		  <item> Level 5: <val>BPTL-L5-v4.0.0a</val></item>
 		</list>
 		</p>
 	      </cell>
@@ -1593,6 +1598,9 @@
 		  </item>
 		  <item>
 		    <eg>&lt;tagUsage gi="div"&gt;Unnumbered divs used.&lt;/tagUsage&gt;</eg>
+		  </item>
+		  <item>
+		    <eg>&lt;tagUsage gi="sourceDoc"&gt;Logical divisions not encoded.&lt;/tagUsage&gt;</eg>
 		  </item>
 		</list>
 	      </cell>
@@ -1833,9 +1841,9 @@
 		<publicationStmt>
 		  <publisher>University of Michigan, Digital Library Initiatives</publisher>
 		  <availability>
-		    <p>These pages may be freely searched and displayed. Permission must be received for
-		    subsequent distribution in print or electronically. Please go to
-		    http://www.umdl.umich.edu/ for more information.</p>
+		    <p>These pages may be freely searched and displayed. Permission must
+		    be received for subsequent distribution in print or electronically.
+		    Please go to http://www.umdl.umich.edu/ for more information.</p>
 		  </availability>
 		  <date when="1996"/>
 		</publicationStmt>
@@ -1873,7 +1881,7 @@
 		<projectDesc>
 		  <p>XML created for the Making of America collection.</p>
 		</projectDesc>
-		<schemaRef key="BPTL-L1-v3.2.0"/>
+		<schemaRef key="BPTL-L1-v4.0.0"/>
 		<editorialDecl>
 		  <p>Data in the <gi>sourceDesc</gi> of the header comes from a pre-AACR2 record. Other data 
 		  follows AACR2 when applicable.</p>
@@ -1882,12 +1890,11 @@
 		  corrections have been made to the OCR-ed text and no editing has been done to the content
 		  of the original document. Encoding has been done using the recommendations for Level 1 of
 		  the <title>Best Practices for TEI in Libraries</title>.</p>
-		  <p>Line breaks and column breaks have not been encoded, but page breaks have.</p>
 		  <p>All hyphens and quotation marks have been retained.</p>
 		</editorialDecl>
 		<tagsDecl>
 		  <namespace name="http://www.tei-c.org/ns/1.0">
-		    <tagUsage gi="div">Unnumbered divs used.</tagUsage>
+		    <tagUsage gi="sourceDoc">Logical divisions not encoded.</tagUsage>
 		  </namespace>
 		</tagsDecl>
 		<classDecl>
@@ -1921,6 +1928,7 @@
 	    </teiHeader>
 	  </egXML>
 	</div>
+	<!-- ===================================================================== -->
 	<div type="specification">
 	  <head>Specification</head>
 	  <specGrp xml:id="libHeadSpec" xml:lang="en">
@@ -1932,16 +1940,15 @@
 		       ident="model.teiHeaderPart"
 		       type="model"
 		       mode="delete"/>
-	    <!-- First, some constraints that we have no where else to put, as we make no other-->
-	    <!-- modifications to the relevant elements. -->
+	    <!-- First, some constraints that we have no where else to put, as we make no -->
+	    <!-- other modifications to the relevant elements. -->
 	    <constraintSpec scheme="isoschematron" ident="no-extent-in-fileDesc">
 	      <constraint>
 		<s:rule context="tei:fileDesc">
 		  <s:report test="tei:extent">The &lt;extent&gt; element
 		  should not be used as a direct child of
 		  &lt;fileDesc&gt;, but rather only as a descendant of a
-		  bibliographic citation (e.g., of the
-		  source).</s:report>
+		  bibliographic citation (e.g., of the source).</s:report>
 		</s:rule>
 	      </constraint>
 	    </constraintSpec>
@@ -1962,7 +1969,27 @@
 	      <constraint>
 		<s:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
 		<s:rule context="tei:*/@*">
-		  <s:assert test="name(.) = ('anchored', 'baseForm', 'baseTypes', 'calendar', 'cause', 'cert', 'class', 'cols', 'copyOf', 'corresp', 'degree', 'dur', 'dur-iso', 'ed', 'end', 'eol', 'evaluate', 'exclude', 'facs', 'from', 'from-iso', 'full', 'gi', 'given', 'group', 'hand', 'height', 'ident', 'key', 'level', 'locus', 'marks', 'met', 'min', 'n', 'name', 'next', 'notAfter', 'notBefore', 'org', 'part', 'period', 'place', 'precision', 'prev', 'quantity', 'reason', 'ref', 'rend', 'render', 'rendition', 'resp', 'rhyme', 'role', 'rows', 'sex', 'scale', 'scheme', 'scope', 'select', 'sort', 'subtype', 'synch', 'target', 'targetEnd', 'targets', 'targFunc', 'to', 'to-iso', 'type', 'unit', 'uri', 'url', 'usage', 'version', 'when', 'who', 'width', 'xml:base', 'xml:id', 'xml:lang', 'xml:space' )">The use of the <s:name/>= attribute (found here on the &lt;<s:value-of select="local-name(..)"/>&gt; element) is not recommended by the Best Practices for TEI in Libraries</s:assert>
+		  <s:assert test="name(.) = ('anchored', 'baseForm',
+		  'baseTypes', 'calendar', 'cause', 'cert', 'class',
+		  'cols', 'copyOf', 'corresp', 'degree', 'dur',
+		  'dur-iso', 'ed', 'end', 'eol', 'evaluate',
+		  'exclude', 'facs', 'from', 'from-iso', 'full', 'gi',
+		  'given', 'group', 'hand', 'height', 'ident', 'key',
+		  'level', 'locus', 'marks', 'met', 'min', 'n',
+		  'name', 'next', 'notAfter', 'notBefore', 'org',
+		  'part', 'period', 'place', 'precision', 'prev',
+		  'quantity', 'reason', 'ref', 'rend', 'render',
+		  'rendition', 'resp', 'rhyme', 'role', 'rows', 'sex',
+		  'scale', 'scheme', 'scope', 'select', 'sort',
+		  'subtype', 'synch', 'target', 'targetEnd',
+		  'targets', 'targFunc', 'to', 'to-iso', 'type',
+		  'unit', 'uri', 'url', 'usage', 'version', 'when',
+		  'who', 'width', 'lrx', 'lry', 'ulx', 'uly',
+		  'xml:base', 'xml:id', 'xml:lang', 'xml:space')">The
+		  use of the <s:name/>= attribute (found here on the
+		  &lt;<s:value-of select="local-name(..)"/>&gt;
+		  element) is not recommended by the Best Practices
+		  for TEI in Libraries</s:assert>
 		</s:rule>
 	      </constraint>
 	    </constraintSpec>
@@ -1996,20 +2023,20 @@
 		       in the <editionStmt>s in each of the .odd
 		       files, too! -->
 		  <valList type="semi" mode="add">
-		    <valItem ident="BPTL-L1-v3.5.1a">
-		      <gloss>Best Practices for TEI in Libraries level 1, version 3.5.0a</gloss>
+		    <valItem ident="BPTL-L1-v4.0.0a">
+		      <gloss>Best Practices for TEI in Libraries level 1, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L2-v3.5.1a">
-		      <gloss>Best Practices for TEI in Libraries level 2, version 3.5.0a</gloss>
+		    <valItem ident="BPTL-L2-v4.0.0a">
+		      <gloss>Best Practices for TEI in Libraries level 2, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L3-v3.5.1a">
-		      <gloss>Best Practices for TEI in Libraries level 3, version 3.5.0a</gloss>
+		    <valItem ident="BPTL-L3-v4.0.0a">
+		      <gloss>Best Practices for TEI in Libraries level 3, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L4-v3.5.1a">
-		      <gloss>Best Practices for TEI in Libraries level 4, version 3.5.0a</gloss>
+		    <valItem ident="BPTL-L4-v4.0.0a">
+		      <gloss>Best Practices for TEI in Libraries level 4, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="BPTL-L5-v3.5.1a">
-		      <gloss>Best Practices for TEI in Libraries level 5, version 3.5.0a</gloss>
+		    <valItem ident="BPTL-L5-v4.0.0a">
+		      <gloss>Best Practices for TEI in Libraries level 5, version 4.0.0a</gloss>
 		    </valItem>
 		  </valList>
 		</attDef>
@@ -2200,6 +2227,7 @@
 	      <valList type="closed">
 		<valItem ident="Unnumbered divs used."/>
 		<valItem ident="Numbered divs used."/>
+		<valItem ident="Logical divisions not encoded."/>
 	      </valList>
 	    </content>
 	    <attList>
@@ -2216,25 +2244,38 @@
 			A single TEI in Libraries document should not mix numbered and unnumbered divisions.
 		      </s:report>
 		    </s:rule>
-		    <s:rule context="tei:TEI">
-		      <s:assert test="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace/tei:tagUsage/@gi">
+		    <s:rule context="/tei:TEI[ tei:text//tei:div or tei:text//tei:div1 ]">
+		      <s:assert test="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace/tei:tagUsage[ @gi = ('div','div1') ]">
 			The use of divisions (i.e., whether numbered or
 			unnumbered divisions are used) should be
 			documented in a &lt;tagUsage&gt; element by "Unnumbered divs used." or "Numbered divs used." The &lt;tagUsage&gt; element must be the child of
-			a &lt;namespace name="http://www.tei-c.org/ns/1.0"&gt; element. </s:assert>
+			a &lt;namespace name="http://www.tei-c.org/ns/1.0"&gt; element.</s:assert>
+		    </s:rule>
+		    <s:rule context="/tei:TEI[ tei:sourceDoc and not( tei:text )]">
+		      <s:assert test="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace/tei:tagUsage[ @gi eq 'sourceDoc' ] ">
+			The fact that logical divisions are not encoded (and thus neither numbered nor unnumbered divisions are used) should be
+			documented in a &lt;tagUsage&gt; element by "Logical divisions not encoded." The &lt;tagUsage&gt; element must be the child of
+			a &lt;namespace name="http://www.tei-c.org/ns/1.0"&gt; element.</s:assert>
 		    </s:rule>
 		    <s:rule context="tei:tagUsage">
 		      <s:assert
 			  test="( @gi eq 'div' and normalize-space(.) eq 'Unnumbered divs used.' and not( /tei:TEI/tei:text//tei:div1 ) )
 				or
-				( @gi eq 'div1' and normalize-space(.) eq 'Numbered divs used.' and not( /tei:TEI/tei:text//tei:div ) )">
-			A document that uses un-numbered divisions
-			should specify so by using &lt;tagUsage
-			gi="div"&gt;Unnumbered divs used.&lt;/tagUsage&gt;; a
-			document that uses numbered divisions should
-			specify so by using &lt;tagUsage
-			gi="div1"&gt;Numbered divs
-		      used.&lt;/tagUsage&gt;.</s:assert>
+				( @gi eq 'div1' and normalize-space(.) eq 'Numbered divs used.' and not( /tei:TEI/tei:text//tei:div ) )
+				or
+				( @gi eq 'sourceDoc' and normalize-space(.) eq 'Logical divisions not encoded.' and not( /tei:TEI/tei:text//tei:div | /tei:TEI/tei:text//tei:div1 )
+				">
+		      A document that uses un-numbered divisions
+		      should specify so by using &lt;tagUsage
+		      gi="div">Unnumbered divs
+		      used.&lt;/tagUsage>; a document that uses
+		      numbered divisions should specify so by using
+		      &lt;tagUsage gi="div1">Numbered divs
+		      used.&lt;/tagUsage>; a document that uses
+		      neither should specify so by using &lt;tagUsage
+		      gi="sourceDoc">Logical divisions not
+		      encoded.&lt;/tagUsage>.
+		      </s:assert>
 		    </s:rule>
 		  </constraint>
 		</constraintSpec>
@@ -2252,6 +2293,14 @@
 		    <gi>div2</gi>, etc.), not <gi>div</gi> elements. The content of
 		    this <gi>tagUsage</gi> should be <quote>Numbered
 		    divs used.</quote>.</desc>
+		  </valItem>
+		  <valItem ident="sourceDoc">
+		    <gloss>logical divisions not encoded</gloss>
+		    <desc>The document uses neither <gi>div</gi> nor
+		    <gi>div1</gi> elements, as the logical structure
+		    of the document is not encoded. The content of
+		    this <gi>tagUsage</gi> should be <quote>Logical
+		    divisions not encoded.</quote>.</desc>
 		  </valItem>
 		</valList>
 	      </attDef>
@@ -2272,9 +2321,9 @@
 	      </sequence>
 	    </content>
 	    <constraintSpec scheme="schematron" ident="no-ab-inside-header">
-	      <p>Although TEI allows both <gi>ab</gi> and <gi>p</gi>
+	      <desc>Although TEI allows both <gi>ab</gi> and <gi>p</gi>
 	      in various places in the TEI header, these Best
-	      Practices recommend only <gi>p</gi>.</p>
+	      Practices recommend only <gi>p</gi>.</desc>
 	      <constraint>
 		<s:report test=".//tei:ab">Use <gi>p</gi> instead of <gi>ab</gi> in the TEI header. (There are <s:value-of select="count(.//tei:ab)"/> <gi>ab</gi> elements in this header.)</s:report>
 	      </constraint>
@@ -2324,22 +2373,22 @@
 		  <valItem ident="a">
 		    <gloss>analytic</gloss>
 		    <desc>analytic title (article, poem, or other item
-		    published as part of a larger item) </desc>
+		    published as part of a larger item)</desc>
 		  </valItem>
 		  <valItem ident="m">
 		    <gloss>monographic</gloss>
 		    <desc>monographic title (book, collection, or
 		    other item published as a distinct item,
 		    including single volumes of multi-volume
-		    works) </desc>
+		    works)</desc>
 		  </valItem>
 		  <valItem ident="j">
 		    <gloss>journal</gloss>
-		    <desc>journal title </desc>
+		    <desc>journal title</desc>
 		  </valItem>
 		  <valItem ident="s">
 		    <gloss>series</gloss>
-		    <desc>series title </desc>
+		    <desc>series title</desc>
 		  </valItem>
 		  <valItem ident="u">
 		    <gloss>unpublished</gloss>
@@ -2390,16 +2439,16 @@
 		</constraintSpec>
 		<valList type="semi">
 		  <valItem ident="main">
-		    <desc>main title </desc>
+		    <desc>main title</desc>
 		  </valItem>
 		  <valItem ident="sub">
 		    <gloss>subordinate</gloss>
-		    <desc>subtitle, title of part </desc>
+		    <desc>subtitle, title of part</desc>
 		  </valItem>
 		  <valItem ident="alt">
 		    <gloss>alternate</gloss>
 		    <desc>alternate title, often in another language,
-		    by which the work is also known </desc>
+		    by which the work is also known</desc>
 		  </valItem>
 		  <valItem ident="short">
 		    <desc>abbreviated form of title</desc>
@@ -2441,10 +2490,11 @@
 		  <dataRef key="teidata.enumerated"/>
 		</datatype>
 		<defaultVal>section</defaultVal>
-		<!-- When changing values for the @type attribute on divs, remember to make the 
-		     parallel adjustments to the list that appears in the prose of the BPTL (in main-driver.odd) 
-		     and to the attDef for the @type attribute on numbered and unnumbered divs in level2.odd, 
-		     level3.odd, and level4.odd, so that the values remain in sync -->
+		<!-- When changing values for the @type attribute on
+		     divs, remember to make the parallel adjustments
+		     to the list that appears in the prose of the BPTL
+		     (in main-driver.odd), so that the values remain
+		     in sync -->
 		<valList type="semi">
 		  <valItem ident="preface">
 		    <desc>A section of the front matter that does not carry a more specific designation. Usually appears in front matter.</desc>
@@ -2562,8 +2612,7 @@
 		    <desc>An opening section of a literary work (typically drama or poetry).</desc>
 		  </valItem>
 		  <valItem ident="epilogue">
-		    <desc>A short concluding section, usually of a dramatic or fictional work.
-		    </desc>
+		    <desc>A short concluding section, usually of a dramatic or fictional work.</desc>
 		  </valItem>
 		  <valItem ident="narrative">
 		    <desc>An embedded narrative.</desc>
