@@ -23,7 +23,7 @@
       <editionStmt>
 	<!-- When you change the version # here, remember to change it
 	     a) in the <editionStmt>s of the other .odd files, and
-	     b) in the semi-closed list of values of @key of <schemaRef> in
+	     b) in the semi-closed list of values of @url of <schemaRef> in
 	        lib-header.odd, too! -->
         <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
       </editionStmt>
