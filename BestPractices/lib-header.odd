@@ -2014,8 +2014,8 @@
 	    </elementSpec>
 	    <elementSpec module="header" ident="schemaRef" mode="change">
 	      <attList>
-		<attDef ident="key" mode="change">
-		  <desc versionDate="2016-11-24" xml:lang="en">the identifier used for the customization or schema</desc>
+		<attDef ident="key" mode="delete"/>
+		<attDef ident="url" mode="change">
 		  <datatype minOccurs="1" maxOccurs="1">
 		    <dataRef key="teidata.enumerated"/>
 		  </datatype>
