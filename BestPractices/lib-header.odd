@@ -1199,7 +1199,7 @@
 	      <cell>Recommended for the title of the series. Whenever
 	      possible, establish or use the authorized form of the
 	      title from a name authority file. Use of the
-	      <att>type</att> attribute is optional, but if it is
+	      <att>type</att> attribute is optional, but if it is
 	      used, it should follow <ref
 	      target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">the
 	      instructions for use of this element in the full TEI
@@ -1411,11 +1411,11 @@
 		<p>Use of the <gi>schemaRef</gi> element is recommended to record the encoding level. 
 		Use the <att>url</att> attribute for the value that indicates the encoding level:
 		<list>
-		  <item> Level 1: <val>bptl:l1-v4.0.0a</val></item>
-		  <item> Level 2: <val>bptl:l2-v4.0.0a</val></item>
-		  <item> Level 3: <val>bptl:l3-v4.0.0a</val></item>
-		  <item> Level 4: <val>bptl:l4-v4.0.0a</val></item>
-		  <item> Level 5: <val>bptl:l5-v4.0.0a</val></item>
+		  <item> Level 1: <val>bptl:L1-v4.0.0a</val></item>
+		  <item> Level 2: <val>bptl:L2-v4.0.0a</val></item>
+		  <item> Level 3: <val>bptl:L3-v4.0.0a</val></item>
+		  <item> Level 4: <val>bptl:L4-v4.0.0a</val></item>
+		  <item> Level 5: <val>bptl:L5-v4.0.0a</val></item>
 		</list>
 		</p>
 	      </cell>
@@ -1530,8 +1530,8 @@
 		<item>notes about omissions of material found in the
 		original work</item>
 		<item>the format of the data in the header: Does the
-		data in the <gi>sourceDesc</gi> follow RDA rules? How
-		about in the <gi>fileDesc</gi>? Is ISBD punctuation
+		data in the <gi>sourceDesc</gi> follow RDA rules? How
+		about in the <gi>fileDesc</gi>? Is ISBD punctuation
 		included?</item>
 		<item>automated processes used to generate the markup
 		or content</item>
@@ -1881,7 +1881,7 @@
 		<projectDesc>
 		  <p>XML created for the Making of America collection.</p>
 		</projectDesc>
-		<schemaRef url="bptl:l1-v4.0.0"/>
+		<schemaRef url="bptl:L1-v4.0.0"/>
 		<editorialDecl>
 		  <p>Data in the <gi>sourceDesc</gi> of the header comes from a pre-AACR2 record. Other data 
 		  follows AACR2 when applicable.</p>
@@ -2023,19 +2023,19 @@
 		       in the <editionStmt>s in each of the .odd
 		       files, too! -->
 		  <valList type="semi" mode="add">
-		    <valItem ident="bptl:l1-v4.0.0a">
+		    <valItem ident="bptl:L1-v4.0.0a">
 		      <gloss>Best Practices for TEI in Libraries level 1, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="bptl:l2-v4.0.0a">
+		    <valItem ident="bptl:L2-v4.0.0a">
 		      <gloss>Best Practices for TEI in Libraries level 2, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="bptl:l3-v4.0.0a">
+		    <valItem ident="bptl:L3-v4.0.0a">
 		      <gloss>Best Practices for TEI in Libraries level 3, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="bptl:l4-v4.0.0a">
+		    <valItem ident="bptl:L4-v4.0.0a">
 		      <gloss>Best Practices for TEI in Libraries level 4, version 4.0.0a</gloss>
 		    </valItem>
-		    <valItem ident="bptl:l5-v4.0.0a">
+		    <valItem ident="bptl:L5-v4.0.0a">
 		      <gloss>Best Practices for TEI in Libraries level 5, version 4.0.0a</gloss>
 		    </valItem>
 		  </valList>
