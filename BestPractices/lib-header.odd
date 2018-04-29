@@ -175,9 +175,9 @@
             /> is a conceptual model developed by <choice><abbr>IFLA</abbr><expan>the International
                     Federation of Library Associations</expan></choice>
             <cit><quote>for relating the data that are stored in bibliographic records to the needs
-                    of the users of those records</quote><bibl><title>Functional Requirements for
-                        Bibliographic Records: Final Report</title><date>February
-                        2009</date><citedRange unit="page">7</citedRange></bibl></cit>. It is best
+                    of the users of those records</quote> <bibl>(<title>Functional Requirements for
+                        Bibliographic Records: Final Report</title>, <date>February
+                        2009</date>, <citedRange unit="page">p. 7</citedRange>)</bibl></cit>. It is best
             known for its model of four primary bibliographic entities: <term>work</term>,
                 <term>expression</term>, <term>manifestation</term>, and <term>item</term>. The FRBR
             model also includes primary relationships between certain of these entities: a work may
@@ -215,16 +215,16 @@
 	    expression and a FRBR
 	    manifestation.<note>
 	    <bibl>
-	      <author>Allen Renear</author>,
+	      <author>Renear, Allen</author>,
 	      <author>Christopher Phillippe</author>,
 	      <author>Pat Lawton</author>, and
 	      <author>David Dubin</author>.
 	    <date>2003</date>.
 	    <title level="a">An XML document corresponds to which FRBR Group 1 entity?</title>.
-	    <title level="m">Proceedings of Extreme Markup Languages</title>
+	    <title level="m">Proceedings of Extreme Markup Languages 2003</title>.
 	    <ptr
 	    target="http://conferences.idealliance.org/extreme/html/2003/Lawton01/EML2003Lawton01.html"
-	    />
+	    />.
 	    </bibl>
 	    </note>
 	    </p>
