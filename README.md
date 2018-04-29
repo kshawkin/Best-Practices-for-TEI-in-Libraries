@@ -27,6 +27,6 @@ If `teitohtml` does not run on your system, you could submit the /tmp/main-drive
 
 Notes
 -----
-[2] Available form the TEI project at Sourceforge; this is the program that combines customization ODDs with the TEI Guidelines and produces schemas and reference documentation.
+[2] See [page in the TEI wiki](https://wiki.tei-c.org/index.php/Roma); this is the program that combines customization ODDs with the TEI Guidelines and produces schemas and reference documentation.
 
 [3] If you don’t already have `roma` on your Mac OS X system, you may find these [unofficial instructions](http://www.wwp.neu.edu/outreach/seminars/_current/handouts/roma_CLI_MacOS_X.html) useful. The likely work on a GNU/Linux system, too.
