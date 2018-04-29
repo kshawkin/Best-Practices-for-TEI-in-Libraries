@@ -289,9 +289,11 @@
                 <ref target="Etc">...</ref>
               </front>
             </egXML>
-            <bibl xml:id="BIB-NoST"><title>Narrative of Sojourner Truth,
+	    <note><bibl xml:id="BIB-NoST"><author>Truth, Sojourner</date> and <author>Olive Gilbert</author>. 
+	    <date>1850</date>. <title>Narrative of Sojourner Truth,
             a Northern Slave, Emancipated from Bodily Servitude by the
-            State of New York, in 1828</title></bibl>
+	    State of New York, in 1828</title>. <pubPlace>Boston</pubPlace>: 
+	    <publisher>n.p.</publisher></bibl></note>
             </p>
           </div>
           <div type="grec">
@@ -331,11 +333,11 @@
                 <p>The three little pigs built their houses out of straw,<ref target="#n_a1">1</ref>
                 sticks,<ref target="#n_a2">2</ref> and bricks.<ref target="#n_a3">3</ref></p>
               </egXML>
-              <bibl>
-                <title>How to properly typeset footnotes/superscripts after 
-                punctuation marks?</title>,
-                <ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>
-              </bibl></p>
+              <note><bibl>
+		<author>Christian</author>. <date>2012</date>. <title>How to properly typeset footnotes/superscripts after 
+                punctuation marks?</title>.
+                <ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>.
+		</bibl></note></p>
             <p>And then the annotations themselves, encoded as
             <gi>note</gi> elements inside a division in the backmatter
             that holds the endnotes:</p>
