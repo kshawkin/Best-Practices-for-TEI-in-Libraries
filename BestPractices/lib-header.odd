@@ -1256,9 +1256,7 @@
 	      <cell cols="3">
 		<gi>relatedItem</gi>
 	      </cell>
-	      <cell>Use this element and its children to reference a
-	      work related to the source document, if
-	      applicable.</cell>
+	      <cell/>
 	      <cell>n/a</cell>
 	      <cell>n/a</cell>
 	    </row>
@@ -1270,82 +1268,11 @@
 	      <cell/>
 	      <cell>└</cell>
 	      <cell cols="2">
-		<gi>bibl</gi>
+		<gi>biblStruct</gi>
 	      </cell>
-	      <cell/>
-	      <cell>n/a</cell>
-	      <cell>n/a</cell>
-	    </row>
-
-	    <row>
-	      <cell>│</cell>
-	      <cell/>
-	      <cell/>
-	      <cell/>
-	      <cell/>
-	      <cell>├</cell>
-	      <cell>
-		<gi>author</gi>
-	      </cell>
-	      <cell>Optionally use one or more <gi>author</gi>
-	      elements (one name per element) to encode the name for
-	      the personal author or corporate body responsible for
-	      the creation of the intellectual or artistic content of
-	      the related work. Use <gi>persName</gi> or
-	      <gi>orgName</gi> when applicable. Whenever possible,
-	      establish or use the authorized form of the name from a
-	      name authority file.</cell>
-	      <cell>
-		<list>
-		  <item>700</item>
-		  <item>710</item>
-		  <item>711</item>
-		</list>
-	      </cell>
-	      <cell>
-		<list>
-		  <item>700</item>
-		  <item>710</item>
-		  <item>711</item>
-		</list>
-	      </cell>
-	    </row>
-
-	    <row>
-	      <cell>│</cell>
-	      <cell/>
-	      <cell/>
-	      <cell/>
-	      <cell/>
-	      <cell>└</cell>
-	      <cell>
-		<tag>title level="___" type="___"</tag>
-	      </cell>
-	      <cell>
-		<p>At least one <gi>title</gi> element is recommended
-		for the title of the related work. Transcribe the
-		title according to the descriptive cataloging standard
-		used.</p>
-		<p>Use of the <att>level</att> attribute is
-		recommended. If used, it should be used <ref
-		target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
-		in the main TEI Guidelines</ref>.</p>
-		<p>Use of the <att>type</att> attribute is optional.
-		It should have one of the following values as suitable
-		in local practice:
-		<list>
-		  <item> <val>main</val> </item>
-		  <item> <val>sub</val> </item>
-		  <item> <val>alt</val> </item>
-		  <item> <val>short</val> </item>
-		  <item> <val>desc</val> </item>
-		  <item> <val>translated</val> </item>
-		  <item> <val>filing</val> (used for a version of the
-		  title with initial articles removed, to be used for
-		  sorting titles alphabetically but not for
-		  display)</item>
-		</list>
-		</p>
+	      <cell>If applicable, describe a work related to the source 
+	      document, following the guidelines for the components of the 
+	      <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.
 	      </cell>
 	      <cell>
 		<list>
@@ -1366,6 +1293,7 @@
 		</list>
 	      </cell>
 	    </row>
+		  
     <row>
         <cell>│</cell>
         <cell/>
