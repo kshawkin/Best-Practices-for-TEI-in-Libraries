@@ -376,7 +376,11 @@
                 <p> ... </p>
               </div>
             </egXML>
-            <bibl xml:id="BIB-OVRAHoB"><author>Octavia V. Rogers Albert</author> <title>The House of Bondage, or, Charlotte Brooks and Other Slaves, Original and Life Like, As They Appeared in Their Old Plantation and City Slave Life; Together with Pen-Pictures of the Peculiar Institution, with Sights and Insights into Their New Relations as Freedmen, Freemen, and Citizens.</title> New York: Hunt &amp; Eaton, 1890.</bibl>
+            <note><bibl xml:id="BIB-OVRAHoB">
+		    <author>Albert, Octavia V. Rogers</author>. <date>1890</date>. 
+		    <title>The House of Bondage, or, Charlotte Brooks and Other Slaves, Original and Life Like, As They Appeared in Their Old Plantation and City Slave Life; Together with Pen-Pictures of the Peculiar Institution, with Sights and Insights into Their New Relations as Freedmen, Freemen, and Citizens</title>.
+		    <pubPlace>New York</pubPlace>: <publisher>Hunt &amp; Eaton</publisher>.
+            </bibl></note>
             </item>
             <item>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-trailer.html"><gi>trailer</gi></ref> element is recommended to encode a heading- or title-like content at the end of a textual division:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -428,8 +432,12 @@
                   <corr>expressly</corr>
                 </choice> forbidden by their Law.</p>
               </egXML>
-              <bibl xml:id="BIB-TBSoS"><author>Thomas Bluett</author> <title>Some Memoirs of the Life of Job, the Son of Solomon,
-              the High Priest of Boonda in Africa; Who was a Slave About Two Years in Maryland; and Afterwards Being Brought to England, was Set Free, and Sent to His Native Land in the Year 1734.</title> London: Printed for R. Ford, 1734.</bibl>
+              <note><bibl xml:id="BIB-TBSoS">
+		      <author>Bluett, Thomas</author>. <date>1734</date>.
+		      <title>Some Memoirs of the Life of Job, the Son of Solomon,
+              the High Priest of Boonda in Africa; Who was a Slave About Two Years in Maryland; and Afterwards Being Brought to England, was Set Free, and Sent to His Native Land in the Year 1734</title>.
+		      <pubPlace>London</pubPlace>: <publisher>n.p.</publisher>.
+	      </bibl></note>
               or
               <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-AMBS">
                 <p>4. The art of writing she obtained by her own industry and curiosity, and in so
@@ -441,7 +449,11 @@
                 was capable of writing letters to her friends <pb xml:id="p11" n="11"/> on various
                 subjects. She also wrote to several persons in high stations.</p>
               </egXML>
-              <bibl xml:id="BIB-AMBS"><author><name type="perason">Abigail Mott</name>, 1766-1851</author> <title>Biographical Sketches and Interesting Anecdotes of Persons of Colour. To Which is Added, a Selection of Pieces in Poetry.</title> New-York: M. Day, 1826. </bibl>
+              <note><bibl xml:id="BIB-AMBS">
+		      <author>Mott, Abigail</author>. <date>1826</date>.
+		      <title>Biographical Sketches and Interesting Anecdotes of Persons of Colour. To Which is Added, a Selection of Pieces in Poetry.</title>
+		      <pubPlace>New-York</pubPlace>: <publisher>M. Day</publisher>.
+	      </bibl></note>
               </item>
             </list></item>
             <item>The elements <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><gi>add</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><gi>del</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><gi>unclear</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html"><gi>gap</gi></ref> may be used to indicate instances when a text (i.e. word or part of it, phrase or part of it) has been added, marked for deletion, or to indicate cases where transcription is difficult (<gi>unclear</gi>) or impossible (<gi>gap</gi>) because the material is illegible, invisible, or inaudible (i.e. while transcribing oral history interviews):
@@ -454,7 +466,10 @@
               most disgusting manner, without divisions or heads &amp;amp; in short without a subject (so to
               speak).</p>
             </egXML>
-            <bibl xml:id="BIB-JHLCC"><title>Class Composition of J. Horace Lacy</title> [January 1851] 1. <author><name type="person">Lacy, James Horace</name> 1834-1852</author></bibl>
+            <note><bibl xml:id="BIB-JHLCC">
+		    <author>Lacy, J.H.</author>. <date>[1851]</date>.
+		    <title>Prejudice Against Composition Writing</title>
+	    </bibl></note>
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-KFPC01">
               <p>But I still hope for &amp;amp; trust in God and I believe he will animate our brave
               defenders with a superhuman power and we will yet drive from our soil the hated invaders
@@ -463,7 +478,9 @@
               himself with honor but his bravery cost him a wound; he was wounded in the leg slightly—a
               flesh wound only, you must not be uneasy.</p>
             </egXML>
-            <bibl xml:id="BIB-KFPC01">Kimberly Family Personal Correspondence, 1862-1864. Transcript of the manuscript, UNC-Chapel Hill, Southern Historical Collection.</bibl>
+            <note><bibl xml:id="BIB-KFPC01">
+		    Kimberly Family Personal Correspondence, 1862-1864. Transcript of the manuscript, UNC-Chapel Hill, Southern Historical Collection.
+	    </bibl></note>
           </item></list>
           <div type="subsection">
             <head>Level 4 Front and Back Matter</head>
@@ -614,10 +631,13 @@
                 </body>       
               </floatingText>
             </egXML>
-            <bibl xml:id="BIB-ABLMWW"><author><name>Augustus Baldwin
-            Longstreet</name>, 1790-1870</author> <title>Master William
+            <note><bibl xml:id="BIB-ABLMWW">
+		    <author>Longstreet, Augustus B.</author>. <date>1864</date>.
+		    <title>Master William
             Mitten: or, A Youth of Brilliant Talents, Who Was Ruined by
-            Bad Luck.</title> Macon, Ga.: Burke, Boykin, 1864.</bibl>
+            Bad Luck</title>.
+		    <pubPlace>Macon, Ga.</pubPlace>: <publisher>Burke, Boykin</publisher>.
+            </bibl></note>
             </p>
           </div>
           <div type="subsection">
@@ -644,7 +664,9 @@
                 </castList>
               </front>
             </egXML>
-            <bibl xml:id="BIB-SKL">Shakespeare’s <title>King Lear</title></bibl></p>
+            <note><bibl xml:id="BIB-SKL">
+		    <author>Shakespeare</author>. <title>King Lear</title>.
+	    </bibl></note></p>
             <p>Within the body of performative texts:
             <list>
               <item>speeches are encoded as <gi>sp</gi> and speakers
@@ -788,7 +810,11 @@
                 &lt;!-- ... -->
               </div> 
             </egXML>
-            <bibl xml:id="BIB-LCHoS">Lewis Carroll’s <title>The Hunting of the Snark</title></bibl>
+            <note><bibl xml:id="BIB-LCHoS">
+		    <author>Carroll, Lewis</author>. <date>1876</date>. 
+		    <title>The Hunting of the Snark</title>.
+		    <pubPlace>London</pubPlace>: <publisher>Macmillan &amp; Co.</publisher>.
+	    </bibl></note>
             </p>
           </div>
           <div type="subsection">
