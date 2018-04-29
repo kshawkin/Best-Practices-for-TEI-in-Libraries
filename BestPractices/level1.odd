@@ -41,13 +41,16 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>No source in the transcriptional sense, but this document is a planned re-implementation 
-        of <bibl><title>TEI in Libraries: Guidelines for Best
-        Practices</title> <author>TEI in Libraries SIG</author>
-        <author>Digital Libraries Federation TEI task force</author>
-        <ptr target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
-      </bibl>
-      written in a wiki language into the TEI ODD language. This
+        <p>No source in the transcriptional sense, but this document
+        is a re-implementation of
+        <bibl>
+          <title>TEI in Libraries: Guidelines for Best Practices</title>
+          <author>TEI in Libraries SIG</author>
+          <author>Digital Libraries Federation TEI task force</author>
+          <ptr
+              target="https://wiki.tei-c.org/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
+        </bibl>
+        written in MediaWiki syntax and converted into the TEI ODD language. This
         verssion started <date when="2009-07-30"/>.</p>
       </sourceDesc>
     </fileDesc>
