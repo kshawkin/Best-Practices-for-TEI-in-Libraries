@@ -291,7 +291,7 @@
                 <ref target="Etc">...</ref>
               </front>
             </egXML>
-	    <note><bibl xml:id="BIB-NoST"><author>Truth, Sojourner</date> and <author>Olive Gilbert</author>. 
+	    <note><bibl xml:id="BIB-NoST"><author>Truth, Sojourner</author> and <author>Olive Gilbert</author>. 
 	    <date>1850</date>. <title>Narrative of Sojourner Truth,
             a Northern Slave, Emancipated from Bodily Servitude by the
 	    State of New York, in 1828</title>. <pubPlace>Boston</pubPlace>: 
@@ -626,7 +626,7 @@
                 <classRef key="model.resourceLike" minOccurs="0"/>
                 <elementRef key="text"/>
               </content>
-              <constraintSpec scheme="isoschematron" ident="no-rend-in-header">
+              <constraintSpec scheme="schematron" ident="no-rend-in-header">
                 <constraint>
                   <s:rule context="tei:TEI | tei:teiHeader | tei:teiHeader//*">
                     <s:report test="@rend or @rendition or
@@ -910,7 +910,7 @@
                   </alternate>
                 </sequence>
               </content>
-              <constraintSpec scheme="isoschematron" ident="recommendType">
+              <constraintSpec scheme="schematron" ident="recommendType">
                 <constraint>
                   <s:report test="not(@type)">Use of the <att>type</att> attribute of <gi>div</gi>
                   is recommended</s:report>
