@@ -9,6 +9,15 @@ To check out a copy of this repository to your local system use:
 
 You can look at, play with, and even modify the files to your heart&#x2019;s content. If you like to submit your changes to the editors for inclusion, issue a pull request. (I.e., surf over to (https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/pulls) and click on “New pull request”.)
 
+The derived documentation and schemas from these source ODD files
+**may** be available on [Syd’s temporary build
+page](http://paramedic.wwp.neu.edu/~syd/temp/BPTL.html). Note that all
+builds until beta testing are version “4.0.0a” (and we expect the beta
+test versions will all be “4.0.0b” :-), so that page is just landing page
+that forwards you to Syd’s latest build directory, using the timestamp
+as part of the directory name so you can tell which version you are
+reading.
+
 There are a variety of ways to to generate schemas from the ODD.
 (And remember to generate both ISO Schematron and RELAX NG; or, if for
 some reason you can’t use RELAX NG you can
