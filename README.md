@@ -11,7 +11,7 @@ You can look at, play with, and even modify the files to your heart&#x2019;s con
 
 The derived documentation and schemas from these source ODD files
 **may** be available on [Syd’s temporary build
-page](http://paramedic.wwp.neu.edu/~syd/temp/BPTL.html). Note that all
+page](http://paramedic.wwp.neu.edu/~syd/temp/BPTL/index.html). Note that all
 builds until beta testing are version “4.0.0a” (and we expect the beta
 test versions will all be “4.0.0b” :-), so that page is just landing page
 that forwards you to Syd’s latest build directory, using the timestamp
