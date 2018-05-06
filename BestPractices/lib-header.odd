@@ -176,15 +176,15 @@
        </div>
 	<div xml:id="frbr" type="section">
         <head>The TEI Header and FRBR</head>
-        <p><title><choice><abbr>FRBR</abbr><expan>Functional Requirements for Bibliographic
-                        Records</expan></choice></title><ptr
+        <p><title><choice><expan>Functional Requirements for Bibliographic
+                        Records</expan><abbr>FRBR</abbr></choice></title><ptr
                 target="https://www.ifla.org/publications/functional-requirements-for-bibliographic-records"
-            /> is a conceptual model developed by <choice><abbr>IFLA</abbr><expan>the International
-                    Federation of Library Associations</expan></choice>
+            /> is a conceptual model developed by <choice><expan>the International
+                    Federation of Library Associations</expan><abbr>IFLA</abbr></choice><ptr target="https://www.ifla.org/"/>
             <cit><quote>for relating the data that are stored in bibliographic records to the needs
                     of the users of those records</quote> <bibl>(<title>Functional Requirements for
                         Bibliographic Records: Final Report</title>, <date>February
-                        2009</date>, <citedRange unit="page">p. 7</citedRange>)</bibl></cit>. It is best
+                        2009</date>, <citedRange unit="page">p. 7</citedRange>, <ptr target="https://www.ifla.org/files/assets/cataloguing/frbr/frbr_2008.pdf"/>)</bibl></cit>. It is best
             known for its model of four primary bibliographic entities: <term>work</term>,
                 <term>expression</term>, <term>manifestation</term>, and <term>item</term>. The FRBR
             model also includes primary relationships between certain of these entities: a work may
@@ -218,7 +218,7 @@
                 </listRelation>
             </egXML></p>
 	    <p>Note that a TEI document itself, like any other XML
-	    document, has an ambiguous status between a FRBR
+	    document, occupied an ambiguous territory between a FRBR
 	    expression and a FRBR
 	    manifestation.<note>
 	    <bibl>
