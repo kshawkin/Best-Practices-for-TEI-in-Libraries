@@ -1122,48 +1122,50 @@
       to develop these <title>Best Practices</title>.</p>
       <p>The individuals who served as editors of this document are:
       <list>
-        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
+	<itemElli Mylonas, Brown University (version 4.0.0)</item>
+	<item>Syd Bauman, Northeastern University (version 4.0.0)</item>
       </list></p>
       <p>The individuals who have contributed to the writing of this
       document are:
       <list>
-	<item>Adam Baron, University of North Texas (version 3.1.0)</item>
-        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
-	<item>Lou Burnard, Independent Consultant (version 3.1.0)</item>
+	<item>Adam Baron, University of North Texas (version 4.0.0)</item>
+        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 4.0.0)</item>
+	<item>Lou Burnard, Independent Consultant (version 4.0.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
-	<item>Martin de la Iglesia, Herzog August Bibliothek Wolfenbüttel (version 3.1.0)</item>
+	<item>Martin de la Iglesia, Herzog August Bibliothek Wolfenbüttel (version 4.0.0)</item>
         <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
-	<item>James R. Griffin, III, Lafayette College (version 3.1.0)</item>
-        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+	<item>James R. Griffin, III, Lafayette College (version 4.0.0)</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
         <item>Renee McBride, University of North Carolina, Chapel Hill (version 3.0)</item>
-	<item>Martin Mueller, Northwestern University (version 3.1.0)</item>
-	<item>Elli Mylonas, Brown University (version 3.1.0)</item>
-	<item>Kiyonori Nagasaki, International Institute for Digital Humanities (version 3.1.0)</item>
-        <item>Andrew Rouner, Washington University in St. Louis (versions 3.0 &amp; 3.1.0)</item>
+	<item>Martin Mueller, Northwestern University (version 4.0.0)</item>
+	<item>Elli Mylonas, Brown University (version 4.0.0)</item>
+	<item>Kiyonori Nagasaki, International Institute for Digital Humanities (version 4.0.0)</item>
+        <item>Andrew Rouner, Washington University in St. Louis (versions 3.0 &amp; 4.0.0)</item>
         <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
         <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC (version 3.0)</item>
-	<item>Thomas Stäcker, Universitäts- und Landesbibliothek Darmstadt (version 3.1.0)</item>
+	<item>Thomas Stäcker, Universitäts- und Landesbibliothek Darmstadt (version 4.0.0)</item>
         <item>Vitus Tang, Stanford University (version 3.0)</item>
         <item>Richard Wisneski, Case Western University (version 3.0)</item>
         <item>Glen Worthey, Stanford University (version 3.0)</item>
-	<item>Martin Wynne, University of Oxford (version 3.1.0)</item>
-	<item>Stuart Yeates, Victoria University of Wellington (version 3.1.0)</item>
+	<item>Martin Wynne, University of Oxford (version 4.0.0)</item>
+	<item>Stuart Yeates, Victoria University of Wellington (version 4.0.0)</item>
       </list></p>
       <p>The individuals who have contributed to the planning of this
       document are:
       <list>
-        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 3.1.0)</item>
+        <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 4.0.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
-	<item>Stefanie Gehrke, Biblissima (version 3.1.0)</item>
+	<item>Stefanie Gehrke, Biblissima (version 4.0.0)</item>
         <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
-	<item>Peter Gorman, University of Wisconsin (version 3.1.0)</item>
-        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 3.1.0)</item>
+	<item>Peter Gorman, University of Wisconsin (version 4.0.0)</item>
+        <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
         <item>Chris Powell, University of Michigan (version 3.0)</item>
-	<item>Paul Schaffner, University of Michigan (version 3.1.0)</item>
+	<item>Paul Schaffner, University of Michigan (version 4.0.0)</item>
         <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
         <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
         <item>Perry Willett, California Digital Library (version 3.0)</item>
@@ -1174,7 +1176,7 @@
       this document are:
       <list>
         <item>Syd Bauman, Brown University / Northeastern University: schema specifications and
-        translation to a set of TEI ODD customizations (versions 3.0 &amp; 3.1.0)</item>
+        translation to a set of TEI ODD customizations (versions 3.0 &amp; 4.0.0)</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC:
         <ref target="http://wiki.tei-c.org/index.php/Thutmose">Thutmose stylesheets for MARC-to-TEI header mappings</ref> (version 3.0)</item>
       </list></p>
