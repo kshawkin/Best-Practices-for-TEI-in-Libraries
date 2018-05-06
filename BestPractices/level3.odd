@@ -17,6 +17,12 @@
           <name type="person">Michelle Dalmau</name>
         </editor>
         <editor>
+          <name type="person">Elli Mylonas</name>	
+	</editor>
+	<editor>
+          <name type="person">Syd Bauman</name>
+	</editor>
+	<editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
