@@ -583,7 +583,7 @@
 	      <cell cols="5">
 		<gi>publicationStmt</gi>
 	      </cell>
-	      <cell>Use the child elements below (rather than <gi>p</gi>) for a prose description.</cell>
+	      <cell>Use the child elements below (rather than <gi>p</gi> for a prose description).</cell>
 	      <cell>n/a</cell>
 	      <cell>n/a</cell>
 	    </row>
