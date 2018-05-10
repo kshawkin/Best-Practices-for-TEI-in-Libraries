@@ -624,14 +624,18 @@
               </attList>
             </classSpec>
             <classSpec module="linking" ident="att.global.linking" mode="delete" type="atts"/>
-            <classSpec module="linking" ident="att.pointing" mode="delete" type="atts"/>
+            <classSpec module="linking" ident="att.pointing" mode="change" type="atts">
+              <attList>
+                <attDef ident="targetLang" mode="delete"/>
+                <attDef ident="evaluate" mode="delete"/>
+              </attList>
+	    </classSpec>
             <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
             <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
             <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divTop" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divTopPart" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
-            <classSpec module="transcr" ident="att.coordinated" mode="delete" type="atts"/>
 	    <!-- Not a class deletion: model.noteLike is removed from model.global at levels 1 & 2 -->
 	    <classSpec module="core" ident="model.noteLike" mode="change" type="model">
 	      <classes mode="replace"/>
