@@ -291,11 +291,16 @@
                 <ref target="Etc">...</ref>
               </front>
             </egXML>
-	    <note><bibl xml:id="BIB-NoST"><author>Truth, Sojourner</date> and <author>Olive Gilbert</author>. 
-	    <date>1850</date>. <title>Narrative of Sojourner Truth,
-            a Northern Slave, Emancipated from Bodily Servitude by the
-	    State of New York, in 1828</title>. <pubPlace>Boston</pubPlace>: 
-	    <publisher>n.p.</publisher></bibl></note>
+	    <note><bibl xml:id="BIB-NoST">
+	      <author>Truth, Sojourner</author> and
+	      <author>Olive Gilbert</author>. 
+	    <date>1850</date>.
+	    <title>Narrative of Sojourner Truth, a Northern Slave,
+	    Emancipated from Bodily Servitude by the State of New
+	    York, in 1828</title>.
+	    <pubPlace>Boston</pubPlace>:
+	    <publisher>n.p.</publisher>
+	    </bibl></note>
             </p>
           </div>
           <div type="grec">
