@@ -17,6 +17,12 @@
           <name type="person">Michelle Dalmau</name>
         </editor>
         <editor>
+          <name type="person">Elli Mylonas</name>	
+	</editor>
+	<editor>
+          <name type="person">Syd Bauman</name>
+	</editor>
+	<editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
@@ -631,7 +637,7 @@
                 <classRef key="model.resourceLike" minOccurs="0"/>
                 <elementRef key="text"/>
               </content>
-              <constraintSpec scheme="isoschematron" ident="no-rend-in-header">
+              <constraintSpec scheme="schematron" ident="no-rend-in-header">
                 <constraint>
                   <s:rule context="tei:TEI | tei:teiHeader | tei:teiHeader//*">
                     <s:report test="@rend or @rendition or
@@ -915,7 +921,7 @@
                   </alternate>
                 </sequence>
               </content>
-              <constraintSpec scheme="isoschematron" ident="recommendType">
+              <constraintSpec scheme="schematron" ident="recommendType">
                 <constraint>
                   <s:report test="not(@type)">Use of the <att>type</att> attribute of <gi>div</gi>
                   is recommended</s:report>

@@ -19,6 +19,12 @@
 	  <name type="person">Michelle Dalmau</name>
 	</editor>
 	<editor>
+          <name type="person">Elli Mylonas</name>	
+	</editor>
+	<editor>
+          <name type="person">Syd Bauman</name>
+	</editor>
+	<editor>
 	  <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
 	</editor>
       </titleStmt>
@@ -170,15 +176,15 @@
        </div>
 	<div xml:id="frbr" type="section">
         <head>The TEI Header and FRBR</head>
-        <p><title><choice><abbr>FRBR</abbr><expan>Functional Requirements for Bibliographic
-                        Records</expan></choice></title><ptr
+        <p><title><choice><expan>Functional Requirements for Bibliographic
+                        Records</expan><abbr>FRBR</abbr></choice></title><ptr
                 target="https://www.ifla.org/publications/functional-requirements-for-bibliographic-records"
-            /> is a conceptual model developed by <choice><abbr>IFLA</abbr><expan>the International
-                    Federation of Library Associations</expan></choice>
+            /> is a conceptual model developed by <choice><expan>the International
+                    Federation of Library Associations</expan><abbr>IFLA</abbr></choice><ptr target="https://www.ifla.org/"/>
             <cit><quote>for relating the data that are stored in bibliographic records to the needs
                     of the users of those records</quote> <bibl>(<title>Functional Requirements for
                         Bibliographic Records: Final Report</title>, <date>February
-                        2009</date>, <citedRange unit="page">p. 7</citedRange>)</bibl></cit>. It is best
+                        2009</date>, <citedRange unit="page">p. 7</citedRange>, <ptr target="https://www.ifla.org/files/assets/cataloguing/frbr/frbr_2008.pdf"/>)</bibl></cit>. It is best
             known for its model of four primary bibliographic entities: <term>work</term>,
                 <term>expression</term>, <term>manifestation</term>, and <term>item</term>. The FRBR
             model also includes primary relationships between certain of these entities: a work may
@@ -212,7 +218,7 @@
                 </listRelation>
             </egXML></p>
 	    <p>Note that a TEI document itself, like any other XML
-	    document, has an ambiguous status between a FRBR
+	    document, occupied an ambiguous territory between a FRBR
 	    expression and a FRBR
 	    manifestation.<note>
 	    <bibl>
@@ -577,7 +583,7 @@
 	      <cell cols="5">
 		<gi>publicationStmt</gi>
 	      </cell>
-	      <cell>Use the child elements below (rather than <gi>p</gi>) for a prose description.</cell>
+	      <cell>Use the child elements below (rather than <gi>p</gi> for a prose description).</cell>
 	      <cell>n/a</cell>
 	      <cell>n/a</cell>
 	    </row>
@@ -1871,7 +1877,7 @@
 		       mode="delete"/>
 	    <!-- First, some constraints that we have no where else to put, as we make no -->
 	    <!-- other modifications to the relevant elements. -->
-	    <constraintSpec scheme="isoschematron" ident="no-extent-in-fileDesc">
+	    <constraintSpec scheme="schematron" ident="no-extent-in-fileDesc">
 	      <constraint>
 		<s:rule context="tei:fileDesc">
 		  <s:report test="tei:extent">The &lt;extent&gt; element
@@ -1881,7 +1887,7 @@
 		</s:rule>
 	      </constraint>
 	    </constraintSpec>
-	    <constraintSpec scheme="isoschematron" ident="when-or-before-after">
+	    <constraintSpec scheme="schematron" ident="when-or-before-after">
 	      <constraint>
 		<s:rule context="tei:imprint/tei:date">
 		  <s:assert test="@when or ( @notBefore and @notAfter )">
@@ -1894,7 +1900,7 @@
 		</s:rule>
 	      </constraint>
 	    </constraintSpec>
-	    <constraintSpec scheme="isoschematron" ident="onlyAllowedAttrs">
+	    <constraintSpec scheme="schematron" ident="onlyAllowedAttrs">
 	      <constraint>
 		<s:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
 		<s:rule context="tei:*/@*">
@@ -1934,7 +1940,7 @@
 	    <moduleRef key="header"
 		       include="appInfo application availability change classCode classDecl correction distributor edition editionStmt editorialDecl encodingDesc extent fileDesc hyphenation idno keywords langUsage language namespace normalization notesStmt profileDesc projectDesc publicationStmt punctuation quotation rendition revisionDesc samplingDecl schemaRef seriesStmt sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
 	    <elementSpec module="header" ident="change" mode="change">
-	      <!-- constraintSpec scheme="isoschematron"
+	      <!-- constraintSpec scheme="schematron"
 		   ident="revChronOrder"> </constraintSpec -->
 	      <attList>
 		<attDef mode="change" ident="when" usage="req"/>
@@ -2095,7 +2101,7 @@
 	    </content>
 	  </dataSpec>
 	  <elementSpec module="header" ident="publicationStmt" mode="change">
-	    <constraintSpec scheme="isoschematron" ident="PubStmt-specialPreferred">
+	    <constraintSpec scheme="schematron" ident="PubStmt-specialPreferred">
 	      <constraint>
 		<s:report test="child::tei:p">Use of
 		specialized child elements of the
@@ -2104,7 +2110,7 @@
 		possible</s:report>
 	      </constraint>
 	    </constraintSpec>
-	    <constraintSpec scheme="isoschematron" ident="whenNotContent">
+	    <constraintSpec scheme="schematron" ident="whenNotContent">
 	      <constraint>
 		<s:rule context="tei:publicationStmt/tei:date">
 		  <s:assert test="@when">Dates inside the
@@ -2166,7 +2172,7 @@
 		<datatype>
 		  <dataRef key="teidata.enumerated"/>
 		</datatype>
-		<constraintSpec scheme="isoschematron" ident="numbered-vs-unnumbered">
+		<constraintSpec scheme="schematron" ident="numbered-vs-unnumbered">
 		  <constraint>
 		    <s:rule context="tei:text">
 		      <s:report test=".//tei:div and .//tei:div1">
@@ -2268,7 +2274,7 @@
 		<desc>indicates the bibliographic level for a title,
 		that is, whether it identifies an article, book,
 		journal, series, or unpublished material.</desc>
-		<constraintSpec scheme="isoschematron" ident="titleLevel">
+		<constraintSpec scheme="schematron" ident="titleLevel">
 		  <constraint>
 		    <s:rule context="tei:fileDesc/tei:titleStmt/tei:title">
 		      <s:report test="@level">The @level attribute
@@ -2343,7 +2349,7 @@
 		<datatype minOccurs="1" maxOccurs="1">
 		  <dataRef key="teidata.enumerated"/>
 		</datatype>
-		<constraintSpec scheme="isoschematron" ident="titleType">
+		<constraintSpec scheme="schematron" ident="titleType">
 		  <constraint>
 		    <s:rule context="tei:titleStmt/tei:title">
 		      <s:assert test="@type">Inside the title statment the
@@ -2592,7 +2598,7 @@
 </TEI>
 
 	      <!-- also move this to the new <hyphen> element at next release
-		   <constraintSpec scheme="isoschematron" ident="hyphen-match">
+		   <constraintSpec scheme="schematron" ident="hyphen-match">
 		   <constraint>
 		   <s:rule context="tei:editorialDecl[@n='1' or @n='2']">
 		   <s:assert test="normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+2010.'                                     or                                     normalize-space(child::tei:p[position()=last()])=                                     'All hyphens in source document encoded as U+002D.'                                     ">At level 1 or 2, hyphenation encoding must be declared as all U+2010 or all U+002D.</s:assert>

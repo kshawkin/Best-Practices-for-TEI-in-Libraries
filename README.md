@@ -9,13 +9,22 @@ To check out a copy of this repository to your local system use:
 
 You can look at, play with, and even modify the files to your heart&#x2019;s content. If you like to submit your changes to the editors for inclusion, issue a pull request. (I.e., surf over to (https://github.com/kshawkin/Best-Practices-for-TEI-in-Libraries/pulls) and click on “New pull request”.)
 
+The derived documentation and schemas from these source ODD files
+**may** be available on [Syd’s temporary build
+page](http://paramedic.wwp.neu.edu/~syd/temp/BPTL/index.html). Note that all
+builds until beta testing are version “4.0.0a” (and we expect the beta
+test versions will all be “4.0.0b” :-), so that page is just landing page
+that forwards you to Syd’s latest build directory, using the timestamp
+as part of the directory name so you can tell which version you are
+reading.
+
 There are a variety of ways to to generate schemas from the ODD.
 (And remember to generate both ISO Schematron and RELAX NG; or, if for
 some reason you can’t use RELAX NG you can
 also generate DTDs or W3C XML Schema).
 
 1. Submit the ODD files the TEI [Roma](http://www.tei-c.org/Roma/) website
-1. Install `roma`[2] on your machine[3] issue something like `roma2 --patternprefix=lib3_ --noxsd --dochtml --nodtd --isoschematron lib3.odd .`
+1. Install `roma`[1] on your machine[2] issue something like `roma2 --patternprefix=lib3_ --noxsd --dochtml --nodtd --isoschematron lib3.odd .`
 1. In oXygen, use the TEI ODD transformation scenarios.
 
 To generate the main HTML documentation for the entire system, use something like
@@ -27,6 +36,6 @@ If `teitohtml` does not run on your system, you could submit the /tmp/main-drive
 
 Notes
 -----
-[2] See [page in the TEI wiki](https://wiki.tei-c.org/index.php/Roma); this is the program that combines customization ODDs with the TEI Guidelines and produces schemas and reference documentation.
+[1] See [page in the TEI wiki](https://wiki.tei-c.org/index.php/Roma); this is the program that combines customization ODDs with the TEI Guidelines and produces schemas and reference documentation.
 
-[3] If you don’t already have `roma` on your Mac OS X system, you may find these [unofficial instructions](http://www.wwp.neu.edu/outreach/seminars/_current/handouts/roma_CLI_MacOS_X.html) useful. The likely work on a GNU/Linux system, too.
+[2] If you don’t already have `roma` on your Mac OS X system, you may find these [unofficial instructions](http://www.wwp.neu.edu/outreach/seminars/_current/handouts/roma_CLI_MacOS_X.html) useful. The likely work on a GNU/Linux system, too.
