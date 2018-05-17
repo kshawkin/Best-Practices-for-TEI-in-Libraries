@@ -16,21 +16,18 @@
         <editor>
           <name type="person">Michelle Dalmau</name>
         </editor>
-	<editor>
-          <name type="person">Elli Mylonas</name>	
-	</editor>
-	<editor>
-          <name type="person">Syd Bauman</name>
-	</editor>
+        <editor>
+          <name type="person">Elli Mylonas</name>       
+        </editor>
         <editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
       <editionStmt>
-	<!-- When you change the version # here, remember to change it
-	     a) in the <editionStmt>s of the other .odd files, and
-	     b) in the semi-closed list of values of @url of <schemaRef> in
-	        lib-header.odd, too! -->
+        <!-- When you change the version # here, remember to change it
+             a) in the <editionStmt>s of the other .odd files, and
+             b) in the semi-closed list of values of @url of <schemaRef> in
+                lib-header.odd, too! -->
         <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
       </editionStmt>
       <publicationStmt>
@@ -201,6 +198,22 @@
                 <teiHeader xml:lang="en">
                   &lt;!-- header goes here -->
                 </teiHeader>
+                <sourceDoc>
+                  &lt;!-- entire &lt;sourceDoc> is optional, but it might have, for example: -->
+                  <surface facs="imgs/xmp_pg01.jpg">
+                    <line>[ OCR content of page 1 line 1 here ]</line>
+                    <line>[ OCR content of page 1 line 2 here ]</line>
+                    <line>[ OCR content of page 1 line 3 here ]</line>
+                    &lt;!-- ... -->
+                  </surface>
+                  <surface facs="imgs/xmp_pg02.jpg">
+                    <line>[ OCR content of page 2 line 1 here ]</line>
+                    <line>[ OCR content of page 2 line 2 here ]</line>
+                    <line>[ OCR content of page 2 line 3 here ]</line>
+                    &lt;!-- ... -->
+                  </surface>
+                  &lt;!-- ... -->
+                </sourceDoc>
                 <text xml:lang="en">
                   <front>
                     &lt;!-- entire &lt;front> is optional, but it might have, for example: -->
@@ -215,7 +228,7 @@
                     </div>
                     <div type="preface">
                       <head>[ heading of preface ]</head>
-                      <ab>[ entire preface, with interspersed <pb/> elements pointing
+                      <ab>[ entire preface, with interspersed <gi>pb</gi> elements pointing
                       to page images as needed, here ]</ab>
                     </div>
                   </front>
@@ -258,91 +271,91 @@
                       <pb n="113" facs="00000001.tif"/>
                       &lt;!-- content of head element was transcribed from page image -->
                       <head>POINT VIII. BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
-                      CONVICTION SHOULD BE VACATED; ALTERNATIVELY, DISCOVERY AND A HEARING
-                      SHOULD BE ORDERED.</head>
+                      <lb/>CONVICTION SHOULD BE VACATED; ALTERNATIVELY, DISCOVERY AND A HEARING
+                      <lb/>SHOULD BE ORDERED.</head>
                       <ab>
                         &lt;!-- uncorrected OCR for first page image begins here -->
                         POINT VIII.
-                        BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
-                        CONVICTION SHOULD BE VACATED; ALTERNATIVELY,
-                        DISCOVERY AND A HEARING SHOULD BE ORDERED.
-                        The nature and extent of surveillance of Hiss, his
-                        family and associates was not known at the time of trial by
-                        the defense. Even now, with the release of some of the govern‐
-                        ment documents concerning FBI investigative techniques regarding
-                        Hiss, the full extent of surveillance -- wiretapping, mail open‐
-                        ings, mail covers, physical surveillance, and other intrusive
-                        techniques -- is still not 'clear. Nevertheless, it is apparent
-                        that information gathered through the exploitation of unlawful
-                        wiretaps and other illegal surveillance was used at trial and
-                        consequently the conviction must be reversed. Alternatively,
-                        further discovery and a hearing is essential to a fair deter‐
-                        mination regarding these issues.
-                        FBI surveillance of Hiss began in earnest in 1941 with
-                        the institution of a mail cover on his incoming correspondence
-                        at his home in connection with an FBI investigation of possible
-                        Hatch Act violations. CN Ex. 98A. Another mail cover was placed
+                        <lb/>BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S
+                        <lb/>CONVICTION SHOULD BE VACATED; ALTERNATIVELY,
+                        <lb/>DISCOVERY AND A HEARING SHOULD BE ORDERED.
+                        <lb/>The nature and extent of surveillance of Hiss, his
+                        <lb/>family and associates was not known at the time of trial by
+                        <lb/>the defense. Even now, with the release of some of the govern‐
+                        <lb/>ment documents concerning FBI investigative techniques regarding
+                        <lb/>Hiss, the full extent of surveillance -- wiretapping, mail open‐
+                        <lb/>ings, mail covers, physical surveillance, and other intrusive
+                        <lb/>techniques -- is still not 'clear. Nevertheless, it is apparent
+                        <lb/>that information gathered through the exploitation of unlawful
+                        <lb/>wiretaps and other illegal surveillance was used at trial and
+                        <lb/>consequently the conviction must be reversed. Alternatively,
+                        <lb/>further discovery and a hearing is essential to a fair deter‐
+                        <lb/>mination regarding these issues.
+                        <lb/>FBI surveillance of Hiss began in earnest in 1941 with
+                        <lb/>the institution of a mail cover on his incoming correspondence
+                        <lb/>at his home in connection with an FBI investigation of possible
+                        <lb/>Hatch Act violations. CN Ex. 98A. Another mail cover was placed
 
 
-                        -113 -
+                        <lb/>-113 -
 
 
                         &lt;!-- uncorrected OCR for first page image ends here -->
                         <pb n="114" facs="00000002.tif"/>
                         &lt;!-- uncorrected OCR for second page image begins here -->
-                        on the Hiss mail in 1945, and at the same time the FBI obtained
-                        toll call records from the Hiss residence Telephone for the
-                        years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
-                        the FBI intercepted telegrams to Hiss as well. CN Ex. 100.
-                        In late November, 1945, FBI surveillance of the Hiss
-                        residence in Washington, D.C., escalated. For the third time,
-                        a mail cover was instituted beginning on November 28, 1945,
-                        which was continued at least until 1946. CN Ex. 101 at p. 70;
-                        CN Ex. 102. Continuous physical surveillance of Hiss was begun
-                        as well. CN Ex. 101 at p. 72. Although this twenty-four-hour
-                        surveillance was discontinued on December 14, 1945, physical
-                        surveillance was conducted frequently at various times until
-                        September, 1947. CN Ex. 102; CN Ex. 103.
-                        The most intrusive invasion of petitioner's rights
-                        68/ Also before 1947, a letter from Priscilla Hiss addressed
-                        to her son, Timothy Hobson, was intercepted and its contents
-                        read. CN Ex. 100A at p. 167. In approximately March, 1947,
-                        a letter from a Michael Greenberg addressed to petitioner re‐
-                        garding an application for employment with the United Nations
-                        was also intercepted, in a manner not revealed by the docu‐
-                        ments. CN Ex. 100B
+                        <lb/>on the Hiss mail in 1945, and at the same time the FBI obtained
+                        <lb/>toll call records from the Hiss residence Telephone for the
+                        <lb/>years 1943 and 1944 as well. CN Ex. 99. In September, 1945,
+                        <lb/>the FBI intercepted telegrams to Hiss as well. CN Ex. 100.
+                        <lb/>In late November, 1945, FBI surveillance of the Hiss
+                        <lb/>residence in Washington, D.C., escalated. For the third time,
+                        <lb/>a mail cover was instituted beginning on November 28, 1945,
+                        <lb/>which was continued at least until 1946. CN Ex. 101 at p. 70;
+                        <lb/>CN Ex. 102. Continuous physical surveillance of Hiss was begun
+                        <lb/>as well. CN Ex. 101 at p. 72. Although this twenty-four-hour
+                        <lb/>surveillance was discontinued on December 14, 1945, physical
+                        <lb/>surveillance was conducted frequently at various times until
+                        <lb/>September, 1947. CN Ex. 102; CN Ex. 103.
+                        <lb/>The most intrusive invasion of petitioner's rights
+                        <lb/>68/ Also before 1947, a letter from Priscilla Hiss addressed
+                        <lb/>to her son, Timothy Hobson, was intercepted and its contents
+                        <lb/>read. CN Ex. 100A at p. 167. In approximately March, 1947,
+                        <lb/>a letter from a Michael Greenberg addressed to petitioner re‐
+                        <lb/>garding an application for employment with the United Nations
+                        <lb/>was also intercepted, in a manner not revealed by the docu‐
+                        <lb/>ments. CN Ex. 100B
 
 
-                        -114 -
+                        <lb/>-114 -
 
 
 
                         &lt;!-- uncorrected OCR for second page image ends here -->
                         <pb n="115" facs="00000003.tif"/>
                         &lt;!-- uncorrected OCR for third page image begins here -->
-                        occurred from December 13, 1945 until the Hisses moved from
-                        Washington, D.C. to New York City on September 13, 1947. A
-                        "technical surveillance," -- a wiretap -- was placed on the Hiss
-                        telephone at their residence on P Street-in Washington, D.C.
-                        The logs of this surveillance constitute twenty-nine volumes
-                        of FBI serials and are roughly 2,500 pages in length, in which
-                        an enormous amount of information concerning the Hisses' per‐
-                        sonal lives, relationships with friends and associates, and
-                        habits is recorded.
-                        The wiretap was installed following FBI Director Hoover's
-                        application to the Attorney General for authorization,  although
-                        no written authorization appears in the documents released to
-                        Hiss. The purpose of the application was to gather information
-                        regarding Hiss' alleged contacts with Soviet espionage agents and
-                        communists in government service, general allegations which had
-                        been made by Elizabeth Bentley and Chambers.
-                        As one would expect, the interception of every telephone
-                        h9/       Hoover's initial request was answered by a note reques‐
-                        ting information on Hiss. CN Ex. 104. Additional information
-                        was furnished by letter dated November 30, 1945. CN Ex. 105.
+                        <lb/>occurred from December 13, 1945 until the Hisses moved from
+                        <lb/>Washington, D.C. to New York City on September 13, 1947. A
+                        <lb/>"technical surveillance," -- a wiretap -- was placed on the Hiss
+                        <lb/>telephone at their residence on P Street-in Washington, D.C.
+                        <lb/>The logs of this surveillance constitute twenty-nine volumes
+                        <lb/>of FBI serials and are roughly 2,500 pages in length, in which
+                        <lb/>an enormous amount of information concerning the Hisses' per‐
+                        <lb/>sonal lives, relationships with friends and associates, and
+                        <lb/>habits is recorded.
+                        <lb/>The wiretap was installed following FBI Director Hoover's
+                        <lb/>application to the Attorney General for authorization,  although
+                        <lb/>no written authorization appears in the documents released to
+                        <lb/>Hiss. The purpose of the application was to gather information
+                        <lb/>regarding Hiss' alleged contacts with Soviet espionage agents and
+                        <lb/>communists in government service, general allegations which had
+                        <lb/>been made by Elizabeth Bentley and Chambers.
+                        <lb/>As one would expect, the interception of every telephone
+                        <lb/>h9/       Hoover's initial request was answered by a note reques‐
+                        <lb/>ting information on Hiss. CN Ex. 104. Additional information
+                        <lb/>was furnished by letter dated November 30, 1945. CN Ex. 105.
 
 
-                        -115 -
+                        <lb/>-115 -
 
 
                         &lt;!-- uncorrected OCR for third page image ends here -->
@@ -362,7 +375,7 @@
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text front body back div div1"/>
             <moduleRef key="linking" include="ab"/>
-            <moduleRef key="transcr" include="facsimile surface"/>
+            <moduleRef key="transcr" include="sourceDoc facsimile surface surfaceGrp zone line"/>
             <moduleRef key="namesdates" include="orgName persName"/>
             <specGrpRef target="./lib-header.odd#libHeadSpec"/>
             <!-- ****************************************** -->
@@ -372,17 +385,29 @@
               <gloss>TEI document</gloss>
               <desc>contains a single TEI-in-Libraries level 2
               document, comprising a TEI header and a text, the latter
-              represented as either a transcription (in <gi>text</gi>)
-              or a transcription and page images (in <gi>text</gi> and
-              <gi>facsimile</gi> respectively), either in isolation or
-              as part of a <gi>teiCorpus</gi> element.</desc>
+              represented as either a logical transcription (in
+              <gi>text</gi>) or a transcription and page images (in
+              <gi>text</gi> and <gi>facsimile</gi> respectively),
+              along with an optional typographic transcription (in
+              <gi>sourceDoc</gi>, typically automatically generated
+              from OCR software), either in isolation or as part of a
+              <gi>teiCorpus</gi> element.</desc>
               <classes mode="replace">
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <elementRef key="teiHeader"/>
-                <classRef key="model.resourceLike" minOccurs="0"/>
-                <elementRef key="text"/>
+                <elementRef key="teiHeader" minOccurs="1" maxOccurs="1"/>
+                <alternate minOccurs="0" maxOccurs="1">
+                  <sequence>
+                    <elementRef key="sourceDoc" minOccurs="1" maxOccurs="1"/>
+                    <elementRef key="facsimile" minOccurs="0" maxOccurs="1"/>
+                  </sequence>
+                  <sequence>
+                    <elementRef key="facsimile" minOccurs="1" maxOccurs="1"/>
+                    <elementRef key="sourceDoc" minOccurs="0" maxOccurs="1"/>
+                  </sequence>
+                </alternate>
+                <elementRef key="text" minOccurs="1" maxOccurs="1"/>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -433,8 +458,8 @@
               <content>
                 <alternate minOccurs="1" maxOccurs="unbounded">
                   <textNode/>
-                <classRef key="model.global"/>
-                        </alternate>
+                  <classRef key="model.global"/>
+                </alternate>
               </content>
               <exemplum xml:lang="en">
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -448,13 +473,11 @@
                   <body>
                     <div>
                       <head>Genesis</head>
-                      <ab>
-                        In the beginning God created the heaven and the earth.
-                        And the earth was without form, and void; and darkness was upon
-                        the face of the deep. And the spirit of God moved upon the face
-                        of the waters.
-                        And God said, Let there be light: and there was light.
-                      </ab>
+                      <ab>In the beginning God created the heaven and the earth.
+                      <lb/>And the earth was without form, and void; and darkness was upon
+                      <lb/>the face of the deep. And the spirit of God moved upon the face
+                      <lb/>of the waters.
+                      <lb/>And God said, Let there be light: and there was light.</ab>
                     </div>
                   </body>
                 </egXML>
@@ -543,28 +566,26 @@
                     <div1 type="epistle">
                       <head>A letter from the Printer, which he desires may be inserted</head>
                       <ab>Sir.
-                      I have done with your Copy, so you may return it to the Vatican, if you please</ab>
+                      <lb/>I have done with your Copy, so you may return it to the Vatican, if you please</ab>
                     </div1>
                     <div1 type="advert">
                       <head>The Books usually read by the Scholars of
-                      Mrs Two-Shoes are these and are sold at Mr
-                      Newbery's at the Bible and Sun in St Paul's
-                      Church-yard.</head>
-                      <ab>
-                        The Christmas Box, Price 1d.
-                        The History of Giles Gingerbread, 1d.
-                        A Curious Collection of Travels, selected from the Writers of all Nations,
-                        10 Vol, Pr. bound 1l.
+                      <lb/>Mrs Two-Shoes are these and are sold at Mr
+                      <lb/>Newbery's at the Bible and Sun in St Paul's
+                      <lb/>Church-yard.</head>
+                      <ab>The Christmas Box, Price 1d.
+                        <lb/>The History of Giles Gingerbread, 1d.
+                        <lb/>A Curious Collection of Travels, selected from the Writers of all Nations,
+                        <lb/>10 Vol, Pr. bound 1l.
                       </ab>
                     </div1>
                     <div1 type="advert">
                       <head>By the KING's Royal Patent,
-                      Are sold by J. NEWBERY, at the
-                      Bible and Sun in St. Paul's Church-Yard.</head>
-                      <ab>
-                        Dr. James's Powders for Fevers, the Small-Pox, Measles, Colds, &amp;c.
-                        2s. 6d
-                        Dr. Hooper's Female Pills, 1s.
+                      <lb/>Are sold by J. NEWBERY, at the
+                      <lb/>Bible and Sun in St. Paul's Church-Yard.</head>
+                      <ab>Dr. James's Powders for Fevers, the Small-Pox, Measles, Colds, &amp;c.
+                        <lb/>2s. 6d
+                        <lb/>Dr. Hooper's Female Pills, 1s.
                       </ab>
                     </div1>
                   </back>
@@ -585,29 +606,28 @@
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="fr">
                   <body>
                     <head>LA FOREST
-                    NVPTIALE,</head>
+                    <lb/>NVPTIALE,</head>
                     <ab>Où e∫t repre∫entee vne varieté bigarree,
-                    non mois e∫merveillable que plai∫an‐
-                    te, de diuers mariages, ∫elon qu’ils ∫ont
-                    ob∫erueZ &amp; pratiqueZ par plu∫ieurs
-                    peuples &amp; nations e∫tranges. Auec
-                    la maniere de policier, regir, gouuer‐
-                    ner &amp; admini∫trer leur famille.</ab>
+                    <lb/>non mois e∫merveillable que plai∫an‐
+                    <lb/>te, de diuers mariages, ∫elon qu’ils ∫ont
+                    <lb/>ob∫erueZ &amp; pratiqueZ par plu∫ieurs
+                    <lb/>peuples &amp; nations e∫tranges. Auec
+                    <lb/>la maniere de policier, regir, gouuer‐
+                    <lb/>ner &amp; admini∫trer leur famille.</ab>
                     <div type="chapter">
                       <head>Les Romains. CHAPITRE I.</head>
                       <ab>Encores que ie ne
-                      veuille me formali‐
-                      ∫er contre le droict
-                      Romain, neãtmoins
-                      puis que le forma‐
-                      litez, qui e∫toient an‐
-                      ciennement gardees au nopces
-                      Romaines, ∫ont maintenant mi∫es
-                      hors d’v∫ages &amp; pratique, ie ne ∫e‐
-                      A
-                      <pb/>
-                      ray point de difficulté d’emprunter
-                      des anciens autheurs ce qui appar‐
+                      <lb/>veuille me formali‐
+                      <lb/>∫er contre le droict
+                      <lb/>Romain, neãtmoins
+                      <lb/>puis que le forma‐
+                      <lb/>litez, qui e∫toient an‐
+                      <lb/>ciennement gardees au nopces
+                      <lb/>Romaines, ∫ont maintenant mi∫es
+                      <lb/>hors d’v∫ages &amp; pratique, ie ne ∫e‐
+                      <lb/>A
+                      <pb/>ray point de difficulté d’emprunter
+                      <lb/>des anciens autheurs ce qui appar‐
                       &lt;!-- ... -->
                       </ab>
                     </div>
@@ -630,14 +650,15 @@
                 <classRef key="model.global" minOccurs="0"/>
                 <classRef key="model.divTop" minOccurs="0"/>
                 <classRef key="model.global" minOccurs="0"/>
-                <elementRef key="ab"/>
+                <elementRef key="ab" minOccurs="1" maxOccurs="1"/>
                 <classRef key="model.global" minOccurs="0"/>
               </content>
               <remarks>
                 <p>At level 2, <gi>div</gi> may contain only an
                 optional <gi>head</gi> followed by a required
-                <gi>ab</gi>; also <gi>pb</gi> and <gi>note</gi>
-                elements may be interspersed anywhere as needed.</p>
+                <gi>ab</gi>; also <gi>lb</gi>, <gi>pb</gi>, and
+                <gi>note</gi> elements may be interspersed anywhere as
+                needed.</p>
               </remarks>
             </elementSpec>
             <elementSpec module="textstructure" ident="div1" mode="change">
@@ -650,7 +671,7 @@
                 <classRef key="model.global" minOccurs="0"/>
                 <classRef key="model.divTop" minOccurs="0"/>
                 <classRef key="model.global" minOccurs="0"/>
-                <elementRef key="ab"/>
+                <elementRef key="ab" minOccurs="1" maxOccurs="1"/>
                 <classRef key="model.global" minOccurs="0"/>
               </content>
               <attList>
@@ -709,16 +730,16 @@
                     <div type="preface">
                       <head>Author's Note</head>
                       <ab>All the characters in this book are purely
-                      imaginary, and if the author has used names that
-                      may suggest a reference to living persons she has
-                      done so inadvertently. ...</ab>
+                      <lb/>imaginary, and if the author has used names that
+                      <lb/>may suggest a reference to living persons she has
+                      <lb/>done so inadvertently. ...</ab>
                     </div>
                   </front>
                 </egXML>
               </exemplum>
             </elementSpec>
             <elementSpec module="core" ident="graphic" mode="change">
-              <content/>
+              <content><empty/></content>
             </elementSpec>
             <elementSpec module="core" ident="head" mode="change">
               <classes mode="replace">
@@ -771,7 +792,7 @@
             </elementSpec>
             <elementSpec module="transcr" ident="surface" mode="change">
               <content>
-                <elementRef key="graphic"/>
+                <elementRef key="graphic" minOccurs="1" maxOccurs="1"/>
               </content>
             </elementSpec>
             <!-- ********************************* -->
@@ -792,7 +813,6 @@
             <elementSpec module="core" ident="hi" mode="delete"/>
             <elementSpec module="core" ident="index" mode="delete"/>
             <elementSpec module="core" ident="l" mode="delete"/>
-            <elementSpec module="core" ident="lb" mode="delete"/>
             <elementSpec module="core" ident="lg" mode="delete"/>
             <elementSpec module="core" ident="listBibl" mode="delete"/>
             <elementSpec module="core" ident="measure" mode="delete"/>
@@ -833,7 +853,6 @@
                 <memberOf key="model.common" mode="delete"/>
               </classes>
             </classSpec>
-            <classSpec module="tei" ident="model.resourceLike" mode="delete" type="model"/>
             <classSpec module="tei" ident="model.common" mode="delete" type="model"/>
             <classSpec module="tei" ident="model.divBottomPart" mode="delete" type="model"/>
             <classSpec module="tei" ident="model.frontPart" mode="delete" type="model"/>
@@ -860,15 +879,15 @@
                 <attDef ident="targetLang" mode="delete"/>
                 <attDef ident="evaluate" mode="delete"/>
               </attList>
-	    </classSpec>
+            </classSpec>
             <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
             <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
             <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
-	    <!-- Not a class deletion: model.noteLike is removed from model.global at levels 1 & 2 -->
-	    <classSpec module="core" ident="model.noteLike" mode="change" type="model">
-	      <classes mode="replace"/>
-	    </classSpec>
+            <!-- Not a class deletion: model.noteLike is removed from model.global at levels 1 & 2 -->
+            <classSpec module="core" ident="model.noteLike" mode="change" type="model">
+              <classes mode="replace"/>
+            </classSpec>
           </schemaSpec>
         </div>
       </div>

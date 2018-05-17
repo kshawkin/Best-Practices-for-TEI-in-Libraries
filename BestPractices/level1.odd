@@ -496,7 +496,7 @@
               </content>
             </elementSpec>
             <elementSpec module="core" ident="graphic" mode="change">
-              <content/>
+              <content><empty/></content>
             </elementSpec>
             <elementSpec module="core" ident="note" mode="change">
               <attList>
