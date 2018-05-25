@@ -761,40 +761,45 @@
         the encoded text and facsimile page images of source
         documents. Projects may use any of the following methods:
         <list>
+	  <item>Use the <ref
+          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><att>facs</att></ref>
+          attribute on a <gi>surface</gi> element to point to the
+          corresponding page image using a URI (any level).</item>
           <item>Use the <ref
           target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><att>facs</att></ref>
           attribute on a <gi>pb</gi> element to point to the
-          corresponding page image using a URI.</item>
+          corresponding page image using a URI (levels 2–5).</item>
           <item>Use the <ref
           target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><gi>facsimile</gi></ref>
-          element to define a set of images that corresponds to the
+          element to define a set of images that correspond to the
           text, in conjunction with the <ref
           target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><att>facs</att></ref>
-          attribute on a <gi>pb</gi> element to point to the
+          attribute on a <gi>surface</gi> element (any level) or
+          <gi>pb</gi> element (levels 2–5) to point to the
           corresponding page image using a URI.</item>
-          <item>Use the <att>xml:id</att> attribute on each
-	  <gi>pb</gi> element to refer to the <att>GROUPID</att> 
-	  attribute on various <gi>file</gi> elements in a METS 
-	  document, thereby providing
-          correspondence between <gi>pb</gi> elements and one or more
-          facsimile page images (e.g., master, web derivatives,
-          etc.).</item>
+	  <item>Use the <att>GROUPID</att> attribute on various
+	  <gi>file</gi> elements in a METS document to point to the
+	  <att>xml:id</att> attributes of the <gi>surface</gi> (any
+	  level) or <gi>pb</gi> (levels 2–5), thereby providing
+	  correspondence between the page indicated by the
+	  <gi>surface</gi> or <gi>pb</gi> and one or more facsimile
+	  page images (e.g., master, web derivatives, etc.).</item>
         </list>
         </p>
         <p>For those projects relying on the <ref
         target="http://www.loc.gov/standards/mets/">Metadata Encoding
         and Transmission Standard</ref> (METS), the <att>xml:id</att>
         attribute is used as a conceptual identifier for content as
-        opposed to an explicit pointer (i.e., <att>facs</att>
-        attribute) to a specific representation of that content. These
-        identifiers are then used to generate a METS document that
-        bundles the various content types (e.g., master image files,
-        derivative image files for Web delivery, PDFs, etc.),
-        explicitly lists all versions of the content, and defines the
-        relationships between the constituent parts. This is achieved
-        through the use of the <gi>mets:fileSec</gi> and
-        <gi>mets:structMap</gi> sections of the METS document (see
-        <ref
+        opposed to an explicit pointer to a specific representation of
+        that content. (Conversly, the <att>facs</att> attribute is a
+        pointer, not an identifier.) These identifiers are then used
+        to generate a METS document that bundles the various content
+        types (e.g., master image files, derivative image files for
+        Web delivery, PDFs, etc.), explicitly lists all versions of
+        the content, and defines the relationships between the
+        constituent parts. This is achieved through the use of the
+        <gi>mets:fileSec</gi> and <gi>mets:structMap</gi> sections of
+        the METS document (see <ref
         target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
         METS document</ref> for a TEI project).</p>
 
@@ -955,11 +960,13 @@
         <div type="====">
           <head><att>xml:lang</att></head>
           <p>Used to indicate the natural language of the content of
-          an element. It is generally not used for children of the
-          <gi>text</gi> element at Level 1 or Level 2 but is common at
-          Level 3 and above. See <ref
-          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-data.language.html">the
-          data.language datatype in the TEI Guidelines</ref>.</p>
+          an element. It is generally not on or within the
+          <gi>sourceDoc</gi> or <gi>text</gi> elements at Level 1 or
+          Level 2, but is common at Level 3 and above. See the
+          documentation of the <ref
+          target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-teidata.language.html">teidata.language
+          datatype</ref> in the TEI Guidelines for information on the
+          values of <att>xml:lang</att>.</p>
         </div>
       </div>
     </div>
@@ -972,22 +979,27 @@
         </row>
         <row>
           <cell cols="2"><tag>TEI xml:id="___" xmlns="http://www.tei-c.org/ns/1.0"</tag></cell>
-          <cell>The root element of a TEI document. Use of the <att>xml:id</att> attribute is recommended, giving the same unique identifier for the TEI document as in <code>teiHeader/fileDesc/publicationStmt/idno</code> .</cell>
+          <cell>The root element of a TEI document. Use of the <att>xml:id</att> attribute is recommended, giving the same unique identifier for the TEI document as in <code>teiHeader/fileDesc/publicationStmt/idno</code>.</cell>
         </row>
         <row>
           <cell>├</cell>
           <cell><tag>teiHeader xml:lang="___"</tag></cell>
-          <cell>The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> is recommended; it indicates the language used for the metadata describing the document.</cell>
+          <cell>[required] Contains metadata about the TEI document. The <att>xml:lang</att> is recommended; it indicates the language used for the metadata describing the document.</cell>
         </row>
-        <row>
+	<row>
+          <cell>├</cell>
+          <cell><gi>sourceDoc</gi></cell>
+          <cell>[required at Level 1, optional at Levels 2–5] Contains a direct, generally machine-generated, transcription of document pages without further logical or structural information.</cell>
+	</row>
+	<row>
           <cell>├</cell>
           <cell><gi>facsimile</gi></cell>
-          <cell>The <gi>facsimile</gi> defines sets of images that correspond with the text. This element should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#txtimglnk">Linking between encoded text and images of source documents</ref>.</cell>
+          <cell>[optional] Defines sets of images that correspond with the text. Should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#txtimglnk">Linking between encoded text and images of source documents</ref>.</cell>
         </row>
         <row>
           <cell>└</cell>
-          <cell>The <tag>text xml:lang="___"</tag></cell>
-          <cell>The <gi>text</gi> element contains the encoded transcription of the source document. The <att>xml:lang</att> attribute is recommended; it indicates the primary language of the source document.</cell>
+          <cell><tag>text xml:lang="___"</tag></cell>
+          <cell>[required at Levels 2–5] Contains the encoded transcription of the source document. The <att>xml:lang</att> attribute is recommended; it indicates the primary language of the source document.</cell>
         </row>
       </table>
       <p>The child elements of the <gi>teiHeader</gi> and

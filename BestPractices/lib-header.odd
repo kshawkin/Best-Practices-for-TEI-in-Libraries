@@ -1538,6 +1538,15 @@
 		    <eg>&lt;tagUsage gi="sourceDoc"&gt;Logical divisions not encoded.&lt;/tagUsage&gt;</eg>
 		  </item>
 		</list>
+		Note that the intent of the <gi>tagUsage</gi> is to
+		explicitly express whether logical divisions and
+		subdivisions are encoded using numbered or unnumbered
+		<gi>div</gi> elements. Thus the 3rd (with
+		<att>gi</att> of <val>sourceDoc</val>) is only
+		intended for use at level 1. At levels 2 and above
+		<gi>sourceDoc</gi> is optional, and the
+		<gi>tagUsage</gi> should describe the divisions used
+		inside the required <gi>text</gi>.
 	      </cell>
 	      <cell>n/a</cell>
 	      <cell>n/a</cell>
@@ -1938,7 +1947,7 @@
 	    </elementSpec>
 	    <moduleRef key="tagdocs" include="att val gi tag"/>
 	    <moduleRef key="header"
-		       include="appInfo application availability change classCode classDecl correction distributor edition editionStmt editorialDecl encodingDesc extent fileDesc hyphenation idno keywords langUsage language namespace normalization notesStmt profileDesc projectDesc publicationStmt punctuation quotation rendition revisionDesc samplingDecl schemaRef seriesStmt sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
+		       include="appInfo application availability change classCode classDecl correction distributor edition editionStmt editorialDecl encodingDesc extent fileDesc hyphenation idno keywords langUsage language licence namespace normalization notesStmt profileDesc projectDesc publicationStmt punctuation quotation rendition revisionDesc samplingDecl schemaRef seriesStmt sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
 	    <elementSpec module="header" ident="change" mode="change">
 	      <!-- constraintSpec scheme="schematron"
 		   ident="revChronOrder"> </constraintSpec -->
@@ -2103,11 +2112,10 @@
 	  <elementSpec module="header" ident="publicationStmt" mode="change">
 	    <constraintSpec scheme="schematron" ident="PubStmt-specialPreferred">
 	      <constraint>
-		<s:report test="child::tei:p">Use of
-		specialized child elements of the
-		publication statement (rather than
-		paragraphs) is recommended whenever
-		possible</s:report>
+		<s:report role="warning" test="child::tei:p">Use of
+		specialized child elements of the publication
+		statement (rather than paragraphs) is recommended
+		whenever possible</s:report>
 	      </constraint>
 	    </constraintSpec>
 	    <constraintSpec scheme="schematron" ident="whenNotContent">
@@ -2193,12 +2201,12 @@
 			a &lt;namespace name="http://www.tei-c.org/ns/1.0"&gt; element.</s:assert>
 		    </s:rule>
 		    <s:rule context="tei:tagUsage">
-		      <s:assert
-			  test="( @gi eq 'div' and normalize-space(.) eq 'Unnumbered divs used.' and not( /tei:TEI/tei:text//tei:div1 ) )
+		      <s:assert test="
+				( @gi eq 'div' and normalize-space(.) eq 'Unnumbered divs used.' and not( /tei:TEI/tei:text//tei:div1 ) )
 				or
 				( @gi eq 'div1' and normalize-space(.) eq 'Numbered divs used.' and not( /tei:TEI/tei:text//tei:div ) )
 				or
-				( @gi eq 'sourceDoc' and normalize-space(.) eq 'Logical divisions not encoded.' and not( /tei:TEI/tei:text//tei:div | /tei:TEI/tei:text//tei:div1 )
+				( @gi eq 'sourceDoc' and normalize-space(.) eq 'Logical divisions not encoded.' and not( /tei:TEI/tei:text//tei:div | /tei:TEI/tei:text//tei:div1 ) )
 				">
 		      A document that uses un-numbered divisions
 		      should specify so by using &lt;tagUsage

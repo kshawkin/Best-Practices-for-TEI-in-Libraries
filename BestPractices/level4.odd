@@ -948,11 +948,20 @@
             transcription and page images (in <gi>facsimile</gi>),
             either in isolation or as part of a <gi>teiCorpus</gi>
             element.</desc>
-            <content>
-              <elementRef key="teiHeader"/>
-              <classRef key="model.resourceLike" minOccurs="0" maxOccurs="unbounded"/>
-              <elementRef key="text"/>
-            </content>
+	    <content>
+	      <elementRef key="teiHeader" minOccurs="1" maxOccurs="1"/>
+	      <alternate minOccurs="0" maxOccurs="1">
+		<sequence>
+		  <elementRef key="sourceDoc" minOccurs="1" maxOccurs="1"/>
+		  <elementRef key="facsimile" minOccurs="0" maxOccurs="1"/>
+		</sequence>
+		<sequence>
+		  <elementRef key="facsimile" minOccurs="1" maxOccurs="1"/>
+		  <elementRef key="sourceDoc" minOccurs="0" maxOccurs="1"/>
+		</sequence>
+	      </alternate>
+	      <elementRef key="text" minOccurs="1" maxOccurs="1"/>
+	    </content>
             <constraintSpec scheme="schematron" ident="no-rend-in-header">
               <constraint>
                 <s:rule context="tei:TEI | tei:teiHeader | tei:teiHeader//*">

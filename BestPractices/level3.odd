@@ -633,9 +633,18 @@
                 <memberOf key="att.global"/>
               </classes>
               <content>
-                <elementRef key="teiHeader"/>
-                <classRef key="model.resourceLike" minOccurs="0"/>
-                <elementRef key="text"/>
+                <elementRef key="teiHeader" minOccurs="1" maxOccurs="1"/>
+                <alternate minOccurs="0" maxOccurs="1">
+                  <sequence>
+                    <elementRef key="sourceDoc" minOccurs="1" maxOccurs="1"/>
+                    <elementRef key="facsimile" minOccurs="0" maxOccurs="1"/>
+                  </sequence>
+                  <sequence>
+                    <elementRef key="facsimile" minOccurs="1" maxOccurs="1"/>
+                    <elementRef key="sourceDoc" minOccurs="0" maxOccurs="1"/>
+                  </sequence>
+                </alternate>
+                <elementRef key="text" minOccurs="1" maxOccurs="1"/>
               </content>
               <constraintSpec scheme="schematron" ident="no-rend-in-header">
                 <constraint>
@@ -804,7 +813,7 @@
               </exemplum>
             </elementSpec>
             <elementSpec module="core" ident="bibl" mode="change">
-              <constraintSpec scheme="schematron" ident="L3_bibl_">
+              <constraintSpec scheme="schematron" ident="no-specialized-children">
                 <constraint>
                   <s:report test="ancestor::tei:text and (
 				    tei:author
@@ -923,8 +932,9 @@
               </content>
               <constraintSpec scheme="schematron" ident="recommendType">
                 <constraint>
-                  <s:report test="not(@type)">Use of the <att>type</att> attribute of <gi>div</gi>
-                  is recommended</s:report>
+                  <s:report role="warning" test="not(@type)">Use of
+                  the <att>type</att> attribute of <gi>div</gi> is
+                  recommended</s:report>
                 </constraint>
               </constraintSpec>
               <remarks>

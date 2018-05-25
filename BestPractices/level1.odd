@@ -192,7 +192,7 @@
 	      <cell>There should be one <gi>surface</gi> for each page
 	      that is to represented (whether it is represented via a
 	      facsimile image file, a transcription, or most likely a
-	      textual representation obtained form OCR).</cell>
+	      textual representation obtained from OCR).</cell>
 	    </row>
             <row>
               <cell><gi>zone</gi></cell>
