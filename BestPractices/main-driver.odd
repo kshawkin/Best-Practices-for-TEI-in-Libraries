@@ -3,7 +3,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en" version="3.1.0">
+     xml:lang="en" version="3.1.0"><!-- The value of TEI@version is the version number of P5 to which the ODDs conform. -->
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -33,7 +33,7 @@
         </sponsor>
       </titleStmt>
       <editionStmt>
-	<!-- When you change the version # here, remember to change it
+	<!-- This is the version number of the BPTL. When you change the version # here, remember to change it
 	     a) in the <editionStmt>s of the other .odd files, and
 	     b) in the semi-closed list of values of @url of <schemaRef> in
 	        lib-header.odd, too! -->
@@ -1133,6 +1133,7 @@
       acknowledge all of those who have given their time and expertise
       to develop these <title>Best Practices</title>.</p>
       <p>The individuals who served as editors of this document are:
+	      <!-- version numbers below are for versions of the BPTL -->
       <list>
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
