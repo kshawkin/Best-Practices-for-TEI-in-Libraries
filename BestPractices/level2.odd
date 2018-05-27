@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xml:lang="en" version="3.1.0"
-     xmlns="http://www.tei-c.org/ns/1.0"
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns:s="http://purl.oclc.org/dsdl/schematron">
+     xmlns:s="http://purl.oclc.org/dsdl/schematron"
+     xml:lang="en" version="3.1.0"><!-- The value of TEI@version is the version number of P5 to which the ODDs conform. -->
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -24,7 +24,7 @@
         </editor>
       </titleStmt>
       <editionStmt>
-        <!-- When you change the version # here, remember to change it
+        <!-- This is the version number of the BPTL. When you change the version # here, remember to change it
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
                 lib-header.odd, too! -->
@@ -370,7 +370,7 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib2" docLang="en" xml:lang="en" prefix="lib2_" source="tei:3.3.0">
+          <schemaSpec ident="lib2" docLang="en" xml:lang="en" prefix="lib2_" source="tei:3.3.0"><-- This is the version number against which our ODD files are built. -->
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text front body back div div1"/>
