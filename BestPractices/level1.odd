@@ -2,7 +2,8 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron" 
-     xml:lang="en" version="3.1.0"><!-- The value of TEI@version is the version number of P5 to which the ODDs conform. -->
+     xml:lang="en" version="3.1.0">
+  <!-- The value of TEI/@version is the version number of P5 to which the ODDs conform. -->
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -16,22 +17,23 @@
         <editor>
           <name type="person">Michelle Dalmau</name>
         </editor>
-	<editor>
-          <name type="person">Elli Mylonas</name>	
-	</editor>
-	<editor>
+        <editor>
+          <name type="person">Elli Mylonas</name>       
+        </editor>
+        <editor>
           <name type="person">Syd Bauman</name>
-	</editor>
+        </editor>
         <editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
       <editionStmt>
-	<!-- This is the version number of the BPTL. When you change the version # here, remember to change it
-	     a) in the <editionStmt>s of the other .odd files, and
-	     b) in the semi-closed list of values of @url of <schemaRef> in
-	        lib-header.odd, too! -->
-        <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
+        <!-- This is the version number of the BPTL. When you change
+             the version # here, remember to change it
+             a) in the <editionStmt>s of the other .odd files, and
+             b) in the semi-closed list of values of @url of <schemaRef> in
+                lib-header.odd, too! -->
+        <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -62,9 +64,9 @@
     </fileDesc>
     <revisionDesc>
       <change who="#sbauman.emt" when="2018-04-15">
-	Beginning to address ticket #27: use <gi>sourceDoc</gi> for
-	encoding of OCR text. Also update base version of TEI from
-	3.1.0 to 3.3.0.
+        Beginning to address ticket #27: use <gi>sourceDoc</gi> for
+        encoding of OCR text. Also update base version of TEI from
+        3.1.0 to 3.3.0.
       </change>
       <change who="#sbauman.emt" when="2010-12-19">
         Updated to match current wiki document and (partially) take
@@ -119,9 +121,9 @@
               <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">Chapter
               3, Elements Available in All TEI Documents</ref>
             </item>
-	    <item>
-	      <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html">Chapter 11, Representation of Primary Sources</ref>
-	    </item>
+            <item>
+              <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html">Chapter 11, Representation of Primary Sources</ref>
+            </item>
           </list>
         </div>
         <div type="purpose">
@@ -184,34 +186,37 @@
           <table rend="table">
             <row>
               <cell><gi>sourceDoc</gi></cell>
-              <cell>There should be only one element following the <gi>teiHeader</gi>,
-	      a single <gi>sourceDoc</gi>.</cell>
+              <cell>[required] There should be only one element
+              following the <gi>teiHeader</gi>, a single
+              <gi>sourceDoc</gi> which contains a raw transcription of
+              the text of the source document.</cell>
             </row>
-	    <row>
-	      <cell><gi>surface</gi></cell>
-	      <cell>There should be one <gi>surface</gi> for each page
-	      that is to represented (whether it is represented via a
-	      facsimile image file, a transcription, or most likely a
-	      textual representation obtained from OCR).</cell>
-	    </row>
+            <row>
+              <cell><gi>surface</gi></cell>
+              <cell>[required] Defines a written surface as a
+              two-dimensional coordinate space. There should be one
+              <gi>surface</gi> for each encoded page, whether it is
+              represented via a facsimile image file, a transcription,
+              or most likely a textual representation obtained from
+              OCR.</cell>
+            </row>
             <row>
               <cell><gi>zone</gi></cell>
-	      <cell><?khem There should be at least one child
-	      <gi>zone</gi> of every <gi>surface</gi>? Optionally used
-	      to divide a <gi>surface</gi> into regions ?> Each
-	      <gi>zone</gi> may be divided into <gi>line</gi>s.</cell>
+              <cell>A two dimensional region. May be used to divide a
+              <gi>surface</gi> or <gi>line</gi> into two dimensional
+              regions, e.g. a column, a dropped initial capital, or a
+              word of interest. A <gi>zone</gi> may itself be divided
+              into <gi>line</gi>s or <gi>zone</gi>s.</cell>
             </row>
             <row>
               <cell><gi>line</gi></cell>
-              <cell>A topographic <?khem the word "topographic" is
-              what P5 uses, but I'm not sure there is really a
-              definition of that term that quite fits the bill.?> line
-              of transcribed text.</cell>
+              <cell>Contains text appearing in a single physical line
+              on the page.</cell>
             </row>
           </table>
-	  <p>See the explanation above for <ref
-	  target="#txtimglnk">how to link between the encoded text and
-	  images of source documents</ref>.</p>
+          <p>See the explanation above for <ref
+          target="#txtimglnk">how to link between the encoded text and
+          images of source documents</ref>.</p>
         </div>
         <div type="example" xml:id="L1AHex">
           <head>Level 1 Example: Alger Hiss document</head>
@@ -220,104 +225,106 @@
               <teiHeader xml:lang="en">
                 &lt;!-- header goes here -->
               </teiHeader>
-	      <sourceDoc xml:lang="en">
-		<surface n="113" facs="00000001.tif">
-		  &lt;!-- uncorrected OCR for first page image begins here -->
-		  <line>POINT VIII.</line>
-		  <line>BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S</line>
-		  <line>CONVICTION SHOULD BE VACATED; ALTERNATIVELY,</line>
-		  <line>DISCOVERY AND A HEARING SHOULD BE ORDERED.</line>
-		  <line>The nature and extent of surveillance of Hiss, his</line>
-		  <line>family and associates was not known at the time of trial by</line>
-		  <line>the defense. Even now, with the release of some of the govern‐</line>
-		  <line>ment documents concerning FBI investigative techniques regarding</line>
-		  <line>Hiss, the full extent of surveillance -- wiretapping, mail open‐</line>
-		  <line>ings, mail covers, physical surveillance, and other intrusive</line>
-		  <line>techniques -- is still not 'clear. Nevertheless, it is apparent</line>
-		  <line>that information gathered through the exploitation of unlawful</line>
-		  <line>wiretaps and other illegal surveillance was used at trial and</line>
-		  <line>consequently the conviction must be reversed. Alternatively,</line>
-		  <line>further discovery and a hearing is essential to a fair deter‐</line>
-		  <line>mination regarding these issues.</line>
-		  <line>FBI surveillance of Hiss began in earnest in 1941 with</line>
-		  <line>the institution of a mail cover on his incoming correspondence</line>
-		  <line>at his home in connection with an FBI investigation of possible</line>
-		  <line>Hatch Act violations. CN Ex. 98A. Another mail cover was placed</line>
-		  <line></line>
-		  <line></line>
-		  <line>-113 -</line>
-		  <line></line>
-		  <line></line>
-		  &lt;!-- uncorrected OCR for first page image ends here -->
-		</surface>
-		<surface n="114" facs="00000002.tif">
-		  &lt;!-- uncorrected OCR for second page image begins here -->
-		  <line>on the Hiss mail in 1945, and at the same time the FBI obtained</line>
-		  <line>toll call records from the Hiss residence Telephone for the</line>
-		  <line>years 1943 and 1944 as well. CN Ex. 99. In September, 1945,</line>
-		  <line>the FBI intercepted telegrams to Hiss as well. CN Ex. 100.</line>
-		  <line>In late November, 1945, FBI surveillance of the Hiss</line>
-		  <line>residence in Washington, D.C., escalated. For the third time,</line>
-		  <line>a mail cover was instituted beginning on November 28, 1945,</line>
-		  <line>which was continued at least until 1946. CN Ex. 101 at p. 70;</line>
-		  <line>CN Ex. 102. Continuous physical surveillance of Hiss was begun</line>
-		  <line>as well. CN Ex. 101 at p. 72. Although this twenty-four-hour</line>
-		  <line>surveillance was discontinued on December 14, 1945, physical</line>
-		  <line>surveillance was conducted frequently at various times until</line>
-		  <line>September, 1947. CN Ex. 102; CN Ex. 103.</line>
-		  <line>The most intrusive invasion of petitioner's rights</line>
-		  <line>68/ Also before 1947, a letter from Priscilla Hiss addressed</line>
-		  <line>to her son, Timothy Hobson, was intercepted and its contents</line>
-		  <line>read. CN Ex. 100A at p. 167. In approximately March, 1947,</line>
-		  <line>a letter from a Michael Greenberg addressed to petitioner re‐</line>
-		  <line>garding an application for employment with the United Nations</line>
-		  <line>was also intercepted, in a manner not revealed by the docu‐</line>
-		  <line>ments. CN Ex. 100B</line>
-		  <line></line>
-		  <line></line>
-		  <line>-114 -</line>
-		  <line></line>
-		  <line></line>
-		  <line></line>
-		  &lt;!-- uncorrected OCR for second page image ends here -->
-		</surface>
-		<surface n="115" facs="00000003.tif">
-		  &lt;!-- uncorrected OCR for third page image begins here -->
-		  <line>occurred from December 13, 1945 until the Hisses moved from</line>
-		  <line>Washington, D.C. to New York City on September 13, 1947. A</line>
-		  <line>"technical surveillance," -- a wiretap -- was placed on the Hiss</line>
-		  <line>telephone at their residence on P Street-in Washington, D.C.</line>
-		  <line>The logs of this surveillance constitute twenty-nine volumes</line>
-		  <line>of FBI serials and are roughly 2,500 pages in length, in which</line>
-		  <line>an enormous amount of information concerning the Hisses' per‐</line>
-		  <line>sonal lives, relationships with friends and associates, and</line>
-		  <line>habits is recorded.</line>
-		  <line>The wiretap was installed following FBI Director Hoover's</line>
-		  <line>application to the Attorney General for authorization,  although</line>
-		  <line>no written authorization appears in the documents released to</line>
-		  <line>Hiss. The purpose of the application was to gather information</line>
-		  <line>regarding Hiss' alleged contacts with Soviet espionage agents and</line>
-		  <line>communists in government service, general allegations which had</line>
-		  <line>been made by Elizabeth Bentley and Chambers.</line>
-		  <line>As one would expect, the interception of every telephone</line>
-		  <line>h9/       Hoover's initial request was answered by a note reques‐</line>
-		  <line>ting information on Hiss. CN Ex. 104. Additional information</line>
-		  <line>was furnished by letter dated November 30, 1945. CN Ex. 105.</line>
-		  <line></line>
-		  <line></line>
-		  <line>-115 -</line>
-		  <line></line>
-		  <line></line>
-		  &lt;!-- uncorrected OCR for third page image ends here -->
-		</surface>
-	      </sourceDoc>	
+              <sourceDoc xml:lang="en">
+                <surface n="113" facs="00000001.tif">
+                  &lt;!-- uncorrected OCR for first page image begins here -->
+                  <line>POINT VIII.</line>
+                  <line>BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S</line>
+                  <line>CONVICTION SHOULD BE VACATED; ALTERNATIVELY,</line>
+                  <line>DISCOVERY AND A HEARING SHOULD BE ORDERED.</line>
+                  <line>The nature and extent of surveillance of Hiss, his</line>
+                  <line>family and associates was not known at the time of trial by</line>
+                  <line>the defense. Even now, with the release of some of the govern‐</line>
+                  <line>ment documents concerning FBI investigative techniques regarding</line>
+                  <line>Hiss, the full extent of surveillance -- wiretapping, mail open‐</line>
+                  <line>ings, mail covers, physical surveillance, and other intrusive</line>
+                  <line>techniques -- is still not 'clear. Nevertheless, it is apparent</line>
+                  <line>that information gathered through the exploitation of unlawful</line>
+                  <line>wiretaps and other illegal surveillance was used at trial and</line>
+                  <line>consequently the conviction must be reversed. Alternatively,</line>
+                  <line>further discovery and a hearing is essential to a fair deter‐</line>
+                  <line>mination regarding these issues.</line>
+                  <line>FBI surveillance of Hiss began in earnest in 1941 with</line>
+                  <line>the institution of a mail cover on his incoming correspondence</line>
+                  <line>at his home in connection with an FBI investigation of possible</line>
+                  <line>Hatch Act violations. CN Ex. 98A. Another mail cover was placed</line>
+                  <line></line>
+                  <line></line>
+                  <line>-113 -</line>
+                  <line></line>
+                  <line></line>
+                  &lt;!-- uncorrected OCR for first page image ends here -->
+                </surface>
+                <surface n="114" facs="00000002.tif">
+                  &lt;!-- uncorrected OCR for second page image begins here -->
+                  <line>on the Hiss mail in 1945, and at the same time the FBI obtained</line>
+                  <line>toll call records from the Hiss residence Telephone for the</line>
+                  <line>years 1943 and 1944 as well. CN Ex. 99. In September, 1945,</line>
+                  <line>the FBI intercepted telegrams to Hiss as well. CN Ex. 100.</line>
+                  <line>In late November, 1945, FBI surveillance of the Hiss</line>
+                  <line>residence in Washington, D.C., escalated. For the third time,</line>
+                  <line>a mail cover was instituted beginning on November 28, 1945,</line>
+                  <line>which was continued at least until 1946. CN Ex. 101 at p. 70;</line>
+                  <line>CN Ex. 102. Continuous physical surveillance of Hiss was begun</line>
+                  <line>as well. CN Ex. 101 at p. 72. Although this twenty-four-hour</line>
+                  <line>surveillance was discontinued on December 14, 1945, physical</line>
+                  <line>surveillance was conducted frequently at various times until</line>
+                  <line>September, 1947. CN Ex. 102; CN Ex. 103.</line>
+                  <line>The most intrusive invasion of petitioner's rights</line>
+                  <line>68/ Also before 1947, a letter from Priscilla Hiss addressed</line>
+                  <line>to her son, Timothy Hobson, was intercepted and its contents</line>
+                  <line>read. CN Ex. 100A at p. 167. In approximately March, 1947,</line>
+                  <line>a letter from a Michael Greenberg addressed to petitioner re‐</line>
+                  <line>garding an application for employment with the United Nations</line>
+                  <line>was also intercepted, in a manner not revealed by the docu‐</line>
+                  <line>ments. CN Ex. 100B</line>
+                  <line></line>
+                  <line></line>
+                  <line>-114 -</line>
+                  <line></line>
+                  <line></line>
+                  <line></line>
+                  &lt;!-- uncorrected OCR for second page image ends here -->
+                </surface>
+                <surface n="115" facs="00000003.tif">
+                  &lt;!-- uncorrected OCR for third page image begins here -->
+                  <line>occurred from December 13, 1945 until the Hisses moved from</line>
+                  <line>Washington, D.C. to New York City on September 13, 1947. A</line>
+                  <line>"technical surveillance," -- a wiretap -- was placed on the Hiss</line>
+                  <line>telephone at their residence on P Street-in Washington, D.C.</line>
+                  <line>The logs of this surveillance constitute twenty-nine volumes</line>
+                  <line>of FBI serials and are roughly 2,500 pages in length, in which</line>
+                  <line>an enormous amount of information concerning the Hisses' per‐</line>
+                  <line>sonal lives, relationships with friends and associates, and</line>
+                  <line>habits is recorded.</line>
+                  <line>The wiretap was installed following FBI Director Hoover's</line>
+                  <line>application to the Attorney General for authorization,  although</line>
+                  <line>no written authorization appears in the documents released to</line>
+                  <line>Hiss. The purpose of the application was to gather information</line>
+                  <line>regarding Hiss' alleged contacts with Soviet espionage agents and</line>
+                  <line>communists in government service, general allegations which had</line>
+                  <line>been made by Elizabeth Bentley and Chambers.</line>
+                  <line>As one would expect, the interception of every telephone</line>
+                  <line>h9/       Hoover's initial request was answered by a note reques‐</line>
+                  <line>ting information on Hiss. CN Ex. 104. Additional information</line>
+                  <line>was furnished by letter dated November 30, 1945. CN Ex. 105.</line>
+                  <line></line>
+                  <line></line>
+                  <line>-115 -</line>
+                  <line></line>
+                  <line></line>
+                  &lt;!-- uncorrected OCR for third page image ends here -->
+                </surface>
+              </sourceDoc>      
             </TEI>
           </egXML>
         </div>
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:3.3.0"><-- This is the version number against which our ODD files are built. -->
+          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:3.3.0">
+            <!-- The @source on <elementSpec>, above, is the version
+                 number against which our ODD files are built. -->
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI"/>
@@ -346,26 +353,26 @@
                 the TEI root element, e.g. <tag type="start">TEI
                 xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-		  <TEI>
-		    <teiHeader>
-		      <fileDesc>
-			<titleStmt>
-			  <title>A Short Level 1 Document</title>
-			</titleStmt>
-			<publicationStmt>
-			  <p>Only published as an example.</p>
-			</publicationStmt>
-			<sourceDesc>
-			  <p>Since this is an example, it doesn't really have a source</p>
-			</sourceDesc>
-		      </fileDesc>
-		    </teiHeader>
-		    <sourceDoc>
-		      <surface>
-			<line>This is almost the shortest TEI document imaginable.</line>
-		      </surface>
-		    </sourceDoc>
-		  </TEI>
+                  <TEI>
+                    <teiHeader>
+                      <fileDesc>
+                        <titleStmt>
+                          <title>A Short Level 1 Document</title>
+                        </titleStmt>
+                        <publicationStmt>
+                          <p>Only published as an example.</p>
+                        </publicationStmt>
+                        <sourceDesc>
+                          <p>Since this is an example, it doesn't really have a source</p>
+                        </sourceDesc>
+                      </fileDesc>
+                    </teiHeader>
+                    <sourceDoc>
+                      <surface>
+                        <line>This is almost the shortest TEI document imaginable.</line>
+                      </surface>
+                    </sourceDoc>
+                  </TEI>
                 </egXML>
               </exemplum>
               <remarks>
@@ -525,17 +532,17 @@
                 <attDef ident="cRef" mode="delete"/>
               </attList>
             </elementSpec>
-	    <elementSpec module="transcr" ident="surface" mode="change">
-	      <attList>
-		<attDef ident="attachment" mode="delete"/>
-		<attDef ident="flipping" mode="delete"/>
-	      </attList>
-	    </elementSpec>
-	    <elementSpec module="transcr" ident="zone" mode="change">
-	      <attList>
-		<attDef ident="rotate" mode="delete"/>
-	      </attList>
-	    </elementSpec>
+            <elementSpec module="transcr" ident="surface" mode="change">
+              <attList>
+                <attDef ident="attachment" mode="delete"/>
+                <attDef ident="flipping" mode="delete"/>
+              </attList>
+            </elementSpec>
+            <elementSpec module="transcr" ident="zone" mode="change">
+              <attList>
+                <attDef ident="rotate" mode="delete"/>
+              </attList>
+            </elementSpec>
             <!-- ********************************* -->
             <!-- Element deletion, in module order -->
             <!-- ********************************* -->
@@ -568,6 +575,7 @@
             <elementSpec module="core" ident="num" mode="delete"/>
             <elementSpec module="core" ident="orig" mode="delete"/>
             <elementSpec module="core" ident="pb" mode="delete"/>
+            <elementSpec module="core" ident="quote" mode="delete"/>
             <elementSpec module="core" ident="reg" mode="delete"/>
             <elementSpec module="core" ident="rs" mode="delete"/>
             <elementSpec module="core" ident="said" mode="delete"/>
@@ -588,7 +596,7 @@
                 <attDef ident="xml:base" mode="delete"/>
               </attList>
             </classSpec>
-	    <classSpec module="tei" type="atts" ident="att.global.change" mode="delete"/>
+            <classSpec module="tei" type="atts" ident="att.global.change" mode="delete"/>
             <classSpec module="tei" type="atts" ident="att.global.rendition" mode="change">
               <attList>
                 <attDef ident="rend" mode="delete"/>
@@ -604,13 +612,13 @@
             <classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/> 
             <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>
             <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
-	    <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>
-	    <classSpec module="transcr" ident="att.coordinated" mode="change" type="atts">
+            <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>
+            <classSpec module="transcr" ident="att.coordinated" mode="change" type="atts">
               <attList>
                 <attDef ident="start" mode="delete"/>
                 <attDef ident="points" mode="delete"/>
               </attList>
-	    </classSpec>
+            </classSpec>
             <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
             <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
@@ -629,17 +637,17 @@
                 <attDef ident="targetLang" mode="delete"/>
                 <attDef ident="evaluate" mode="delete"/>
               </attList>
-	    </classSpec>
+            </classSpec>
             <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
             <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
             <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divTop" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divTopPart" mode="delete" type="model"/>
             <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
-	    <!-- Not a class deletion: model.noteLike is removed from model.global at levels 1 & 2 -->
-	    <classSpec module="core" ident="model.noteLike" mode="change" type="model">
-	      <classes mode="replace"/>
-	    </classSpec>
+            <!-- Not a class deletion: model.noteLike is removed from model.global at levels 1 & 2 -->
+            <classSpec module="core" ident="model.noteLike" mode="change" type="model">
+              <classes mode="replace"/>
+            </classSpec>
           </schemaSpec>
         </div>
       </div>

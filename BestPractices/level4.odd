@@ -2,7 +2,8 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
-     xml:lang="en" version="3.1.0"><!-- The value of TEI@version is the version number of P5 to which the ODDs conform. -->
+     xml:lang="en" version="3.1.0">
+  <!-- The value of TEI/@version is the version number of P5 to which the ODDs conform. -->
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -16,22 +17,23 @@
         <editor>
           <name type="person">Michelle Dalmau</name>
         </editor>
-	<editor>
-          <name type="person">Elli Mylonas</name>	
-	</editor>
-	<editor>
+        <editor>
+          <name type="person">Elli Mylonas</name>       
+        </editor>
+        <editor>
           <name type="person">Syd Bauman</name>
-	</editor>
+        </editor>
         <editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
       <editionStmt>
-	<!-- This is the version number of the BPTL. When you change the version # here, remember to change it
-	     a) in the <editionStmt>s of the other .odd files, and
-	     b) in the semi-closed list of values of @url of <schemaRef> in
-	        lib-header.odd, too! -->
-        <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
+        <!-- This is the version number of the BPTL. When you change
+             the version # here, remember to change it
+             a) in the <editionStmt>s of the other .odd files, and
+             b) in the semi-closed list of values of @url of <schemaRef> in
+                lib-header.odd, too! -->
+        <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -316,17 +318,17 @@
               <gi>persName</gi> element is also used to indicate a
               personal name inside a <gi>person</gi> element (see below).</cell>
             </row>
-	    <row>
-	      <cell><gi>bibl</gi></cell>
-	      <cell>May contain bibliographic elements like
-	      <gi>author</gi>, <gi>biblScope</gi>,
-	      <gi>citedRange</gi>, <gi>distributor</gi>,
-	      <gi>edition</gi> <gi>editor</gi>, <gi>idno</gi>,
-	      <gi>pubPlace</gi>, <gi>publisher</gi>,
-	      <gi>relatedItem</gi>, <gi>respStmt</gi>,
-	      <gi>series</gi>, and <gi>title</gi> in addition
-	      to text.</cell>
-	    </row>
+            <row>
+              <cell><gi>bibl</gi></cell>
+              <cell>May contain bibliographic elements like
+              <gi>author</gi>, <gi>biblScope</gi>,
+              <gi>citedRange</gi>, <gi>distributor</gi>,
+              <gi>edition</gi> <gi>editor</gi>, <gi>idno</gi>,
+              <gi>pubPlace</gi>, <gi>publisher</gi>,
+              <gi>relatedItem</gi>, <gi>respStmt</gi>,
+              <gi>series</gi>, and <gi>title</gi> in addition
+              to text.</cell>
+            </row>
             <row>        
               <cell><gi>listName</gi>, <gi>listPlace</gi>, and
               <gi>listOrg</gi> </cell>
@@ -336,24 +338,24 @@
               in an external TEI file or database for easier maintenance
               of names.</cell>
             </row> 
-	    <row>
-	      <cell><gi>listPerson</gi></cell>
-	      <cell>Optionally used in support of transcriptions of
-	      oral interviews.</cell>
-	    </row>
-	    <row>
-	      <cell><gi>person</gi></cell>
-	      <cell>Optionally used in support of transcriptions of
-	      oral interviews. The use of the <att>role</att>
-	      attribute is strongly recommended, particularly to
-	      differentiate interviewer(s) from interviewee(s).</cell>
-	    </row>
-	    <row>
-	      <cell><gi>birth</gi></cell>
-	      <cell>Optionally used inside a <gi>person</gi> to
-	      indicate the date or place of birth of the person being
-	      documented.</cell>
-	    </row>
+            <row>
+              <cell><gi>listPerson</gi></cell>
+              <cell>Optionally used in support of transcriptions of
+              oral interviews.</cell>
+            </row>
+            <row>
+              <cell><gi>person</gi></cell>
+              <cell>Optionally used in support of transcriptions of
+              oral interviews. The use of the <att>role</att>
+              attribute is strongly recommended, particularly to
+              differentiate interviewer(s) from interviewee(s).</cell>
+            </row>
+            <row>
+              <cell><gi>birth</gi></cell>
+              <cell>Optionally used inside a <gi>person</gi> to
+              indicate the date or place of birth of the person being
+              documented.</cell>
+            </row>
       <row>
          <cell><gi>bibl</gi></cell>
         <cell>Contains a single bibliographic entry. Use of the <gi>author</gi> or <gi>editor</gi> element is recommended. Other valid elements that the TEI allows to appear in <gi>bibl</gi> may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
@@ -387,9 +389,9 @@
               </div>
             </egXML>
             <note><bibl xml:id="BIB-OVRAHoB">
-		    <author>Albert, Octavia V. Rogers</author>. <date>1890</date>. 
-		    <title>The House of Bondage, or, Charlotte Brooks and Other Slaves, Original and Life Like, As They Appeared in Their Old Plantation and City Slave Life; Together with Pen-Pictures of the Peculiar Institution, with Sights and Insights into Their New Relations as Freedmen, Freemen, and Citizens</title>.
-		    <pubPlace>New York</pubPlace>: <publisher>Hunt &amp; Eaton</publisher>.
+                    <author>Albert, Octavia V. Rogers</author>. <date>1890</date>. 
+                    <title>The House of Bondage, or, Charlotte Brooks and Other Slaves, Original and Life Like, As They Appeared in Their Old Plantation and City Slave Life; Together with Pen-Pictures of the Peculiar Institution, with Sights and Insights into Their New Relations as Freedmen, Freemen, and Citizens</title>.
+                    <pubPlace>New York</pubPlace>: <publisher>Hunt &amp; Eaton</publisher>.
             </bibl></note>
             </item>
             <item>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-trailer.html"><gi>trailer</gi></ref> element is recommended to encode a heading- or title-like content at the end of a textual division:
@@ -443,11 +445,11 @@
                 </choice> forbidden by their Law.</p>
               </egXML>
               <note><bibl xml:id="BIB-TBSoS">
-		      <author>Bluett, Thomas</author>. <date>1734</date>.
-		      <title>Some Memoirs of the Life of Job, the Son of Solomon,
+                      <author>Bluett, Thomas</author>. <date>1734</date>.
+                      <title>Some Memoirs of the Life of Job, the Son of Solomon,
               the High Priest of Boonda in Africa; Who was a Slave About Two Years in Maryland; and Afterwards Being Brought to England, was Set Free, and Sent to His Native Land in the Year 1734</title>.
-		      <pubPlace>London</pubPlace>: <publisher>n.p.</publisher>.
-	      </bibl></note>
+                      <pubPlace>London</pubPlace>: <publisher>n.p.</publisher>.
+              </bibl></note>
               or
               <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-AMBS">
                 <p>4. The art of writing she obtained by her own industry and curiosity, and in so
@@ -460,10 +462,10 @@
                 subjects. She also wrote to several persons in high stations.</p>
               </egXML>
               <note><bibl xml:id="BIB-AMBS">
-		      <author>Mott, Abigail</author>. <date>1826</date>.
-		      <title>Biographical Sketches and Interesting Anecdotes of Persons of Colour. To Which is Added, a Selection of Pieces in Poetry.</title>
-		      <pubPlace>New-York</pubPlace>: <publisher>M. Day</publisher>.
-	      </bibl></note>
+                      <author>Mott, Abigail</author>. <date>1826</date>.
+                      <title>Biographical Sketches and Interesting Anecdotes of Persons of Colour. To Which is Added, a Selection of Pieces in Poetry.</title>
+                      <pubPlace>New-York</pubPlace>: <publisher>M. Day</publisher>.
+              </bibl></note>
               </item>
             </list></item>
             <item>The elements <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><gi>add</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><gi>del</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><gi>unclear</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html"><gi>gap</gi></ref> may be used to indicate instances when a text (i.e. word or part of it, phrase or part of it) has been added, marked for deletion, or to indicate cases where transcription is difficult (<gi>unclear</gi>) or impossible (<gi>gap</gi>) because the material is illegible, invisible, or inaudible (i.e. while transcribing oral history interviews):
@@ -477,9 +479,9 @@
               speak).</p>
             </egXML>
             <note><bibl xml:id="BIB-JHLCC">
-		    <author>Lacy, J.H.</author>. <date>[1851]</date>.
-		    <title>Prejudice Against Composition Writing</title>
-	    </bibl></note>
+                    <author>Lacy, J.H.</author>. <date>[1851]</date>.
+                    <title>Prejudice Against Composition Writing</title>
+            </bibl></note>
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-KFPC01">
               <p>But I still hope for &amp;amp; trust in God and I believe he will animate our brave
               defenders with a superhuman power and we will yet drive from our soil the hated invaders
@@ -489,8 +491,8 @@
               flesh wound only, you must not be uneasy.</p>
             </egXML>
             <note><bibl xml:id="BIB-KFPC01">
-		    Kimberly Family Personal Correspondence, 1862-1864. Transcript of the manuscript, UNC-Chapel Hill, Southern Historical Collection.
-	    </bibl></note>
+                    Kimberly Family Personal Correspondence, 1862-1864. Transcript of the manuscript, UNC-Chapel Hill, Southern Historical Collection.
+            </bibl></note>
           </item></list>
           <div type="subsection">
             <head>Level 4 Front and Back Matter</head>
@@ -642,11 +644,11 @@
               </floatingText>
             </egXML>
             <note><bibl xml:id="BIB-ABLMWW">
-		    <author>Longstreet, Augustus B.</author>. <date>1864</date>.
-		    <title>Master William
+                    <author>Longstreet, Augustus B.</author>. <date>1864</date>.
+                    <title>Master William
             Mitten: or, A Youth of Brilliant Talents, Who Was Ruined by
             Bad Luck</title>.
-		    <pubPlace>Macon, Ga.</pubPlace>: <publisher>Burke, Boykin</publisher>.
+                    <pubPlace>Macon, Ga.</pubPlace>: <publisher>Burke, Boykin</publisher>.
             </bibl></note>
             </p>
           </div>
@@ -675,8 +677,8 @@
               </front>
             </egXML>
             <note><bibl xml:id="BIB-SKL">
-		    <author>Shakespeare</author>. <title>King Lear</title>.
-	    </bibl></note></p>
+                    <author>Shakespeare</author>. <title>King Lear</title>.
+            </bibl></note></p>
             <p>Within the body of performative texts:
             <list>
               <item>speeches are encoded as <gi>sp</gi> and speakers
@@ -821,10 +823,10 @@
               </div> 
             </egXML>
             <note><bibl xml:id="BIB-LCHoS">
-		    <author>Carroll, Lewis</author>. <date>1876</date>. 
-		    <title>The Hunting of the Snark</title>.
-		    <pubPlace>London</pubPlace>: <publisher>Macmillan &amp; Co.</publisher>.
-	    </bibl></note>
+                    <author>Carroll, Lewis</author>. <date>1876</date>. 
+                    <title>The Hunting of the Snark</title>.
+                    <pubPlace>London</pubPlace>: <publisher>Macmillan &amp; Co.</publisher>.
+            </bibl></note>
             </p>
           </div>
           <div type="subsection">
@@ -886,8 +888,8 @@
                     <lb/>as well.  CN Ex. 101 at p. 72.  Although this twenty-four-hour
                     <lb/>surveillance was discontinued on December 14, 1945, physical
                     <lb/>surveillance was conducted frequently at various times until
-		    <lb/>September, 1947.<ptr target="#N68">68</ptr><note place="bottom" 
-		    anchored="true" xml:id="N68"><label>68</label>Also
+                    <lb/>September, 1947.<ptr target="#N68">68</ptr><note place="bottom" 
+                    anchored="true" xml:id="N68"><label>68</label>Also
                     before 1947, a letter from Priscilla Hiss addressed
                     <lb/>to her son, Timothy Hobson, was intercepted and its contents
                     <lb/>read.  CN Ex. 100A at p. 167.  In approximately March, 1947,
@@ -908,8 +910,8 @@
                     <lb/>habits is recorded.</p>          
                     <p>The wiretap was installed following FBI Director Hoover's
                     <lb/>application to the Attorney General for authorization,
-		    <ptr target="#N69">69</ptr><note place="bottom" anchored="true" xml:id="N69">
-		    <label>69</label>Hoover's initial request was answered by a note reques- 
+                    <ptr target="#N69">69</ptr><note place="bottom" anchored="true" xml:id="N69">
+                    <label>69</label>Hoover's initial request was answered by a note reques- 
                     <lb break="no"/>ting information on Hiss.  CN Ex. 104<sic> </sic>.  Additional information
                     <lb/>was furnished by letter dated November 30, 1945.  CN Ex. 105<sic> </sic>.</note>
                     <lb/>although no written authorization appears in the documents released to
@@ -928,7 +930,9 @@
       <!-- ********************************************* -->
       <div type="specification">
         <head>Specification</head>
-        <schemaSpec ident="lib4" docLang="en" xml:lang="en" prefix="lib4_" source="tei:3.3.0"><-- This is the version number against which our ODD files are built. -->
+        <schemaSpec ident="lib4" docLang="en" xml:lang="en" prefix="lib4_" source="tei:3.3.0">
+          <!-- The @source on <elementSpec>, above, is the version
+               number against which our ODD files are built. -->
           <moduleRef key="core"/>
           <moduleRef key="tei"/>
           <moduleRef key="textstructure" except="byline imprimatur"/>
@@ -948,20 +952,20 @@
             transcription and page images (in <gi>facsimile</gi>),
             either in isolation or as part of a <gi>teiCorpus</gi>
             element.</desc>
-	    <content>
-	      <elementRef key="teiHeader" minOccurs="1" maxOccurs="1"/>
-	      <alternate minOccurs="0" maxOccurs="1">
-		<sequence>
-		  <elementRef key="sourceDoc" minOccurs="1" maxOccurs="1"/>
-		  <elementRef key="facsimile" minOccurs="0" maxOccurs="1"/>
-		</sequence>
-		<sequence>
-		  <elementRef key="facsimile" minOccurs="1" maxOccurs="1"/>
-		  <elementRef key="sourceDoc" minOccurs="0" maxOccurs="1"/>
-		</sequence>
-	      </alternate>
-	      <elementRef key="text" minOccurs="1" maxOccurs="1"/>
-	    </content>
+            <content>
+              <elementRef key="teiHeader" minOccurs="1" maxOccurs="1"/>
+              <alternate minOccurs="0" maxOccurs="1">
+                <sequence>
+                  <elementRef key="sourceDoc" minOccurs="1" maxOccurs="1"/>
+                  <elementRef key="facsimile" minOccurs="0" maxOccurs="1"/>
+                </sequence>
+                <sequence>
+                  <elementRef key="facsimile" minOccurs="1" maxOccurs="1"/>
+                  <elementRef key="sourceDoc" minOccurs="0" maxOccurs="1"/>
+                </sequence>
+              </alternate>
+              <elementRef key="text" minOccurs="1" maxOccurs="1"/>
+            </content>
             <constraintSpec scheme="schematron" ident="no-rend-in-header">
               <constraint>
                 <s:rule context="tei:TEI | tei:teiHeader | tei:teiHeader//*">
@@ -1207,9 +1211,9 @@
             </content>
             <constraintSpec scheme="schematron" ident="recommendType">
               <constraint>
-		<s:report test="not(@type)">Use of the
-		<att>type</att> attribute of <gi>div</gi> is
-		recommended</s:report>
+                <s:report test="not(@type)">Use of the
+                <att>type</att> attribute of <gi>div</gi> is
+                recommended</s:report>
               </constraint>
             </constraintSpec>
             <remarks>
@@ -1343,16 +1347,16 @@
             <memberOf mode="delete" key="att.datable"/>
           </classes>
         </elementSpec>
-	<elementSpec module="namesdates" ident="person" mode="change">
-	  <attList>
-	    <attDef ident="role" mode="change">
-	      <valList type="semi">
-		<valItem ident="interviewer"/>
-		<valItem ident="interviewee"/>
-	      </valList>
-	    </attDef>
-	  </attList>
-	</elementSpec>
+        <elementSpec module="namesdates" ident="person" mode="change">
+          <attList>
+            <attDef ident="role" mode="change">
+              <valList type="semi">
+                <valItem ident="interviewer"/>
+                <valItem ident="interviewee"/>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
         <elementSpec module="core" ident="ptr" mode="change">
           <attList>
             <attDef ident="cRef" mode="delete"/>
@@ -1381,13 +1385,13 @@
         <elementSpec module="core" ident="cit" mode="delete"/>
         <elementSpec module="core" ident="divGen" mode="delete"/>
         <elementSpec module="core" ident="expan" mode="delete"/>
-	<elementSpec module="core" ident="gb" mode="delete"/>
+        <elementSpec module="core" ident="gb" mode="delete"/>
         <elementSpec module="core" ident="headItem" mode="delete"/>
         <elementSpec module="core" ident="headLabel" mode="delete"/>
         <elementSpec module="core" ident="index" mode="delete"/>
         <elementSpec module="core" ident="measure" mode="delete"/>
         <elementSpec module="core" ident="measureGrp" mode="delete"/>
-	<elementSpec module="core" ident="meeting" mode="delete"/>
+        <elementSpec module="core" ident="meeting" mode="delete"/>
         <elementSpec module="core" ident="milestone" mode="delete"/>
         <elementSpec module="core" ident="num" mode="delete"/>
         <elementSpec module="core" ident="orig" mode="delete"/>

@@ -2,7 +2,8 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
-     xml:lang="en" version="3.1.0"><!-- The value of TEI@version is the version number of P5 to which the ODDs conform. -->
+     xml:lang="en" version="3.1.0">
+  <!-- The value of TEI/@version is the version number of P5 to which the ODDs conform. -->
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,21 +18,22 @@
           <name type="person">Michelle Dalmau</name>
         </editor>
         <editor>
-          <name type="person">Elli Mylonas</name>	
-	</editor>
-	<editor>
+          <name type="person">Elli Mylonas</name>       
+        </editor>
+        <editor>
           <name type="person">Syd Bauman</name>
-	</editor>
-	<editor>
+        </editor>
+        <editor>
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
       </titleStmt>
       <editionStmt>
-        <!-- This is the version number of the BPTL. When you change the version # here, remember to change it
+        <!-- This is the version number of the BPTL. When you change
+             the version # here, remember to change it
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
                 lib-header.odd, too! -->
-        <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
+        <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -297,16 +299,16 @@
                 <ref target="Etc">...</ref>
               </front>
             </egXML>
-	    <note><bibl xml:id="BIB-NoST">
-	      <author>Truth, Sojourner</author> and
-	      <author>Olive Gilbert</author>. 
-	    <date>1850</date>.
-	    <title>Narrative of Sojourner Truth, a Northern Slave,
-	    Emancipated from Bodily Servitude by the State of New
-	    York, in 1828</title>.
-	    <pubPlace>Boston</pubPlace>:
-	    <publisher>n.p.</publisher>
-	    </bibl></note>
+            <note><bibl xml:id="BIB-NoST">
+              <author>Truth, Sojourner</author> and
+              <author>Olive Gilbert</author>. 
+            <date>1850</date>.
+            <title>Narrative of Sojourner Truth, a Northern Slave,
+            Emancipated from Bodily Servitude by the State of New
+            York, in 1828</title>.
+            <pubPlace>Boston</pubPlace>:
+            <publisher>n.p.</publisher>
+            </bibl></note>
             </p>
           </div>
           <div type="grec">
@@ -347,10 +349,10 @@
                 sticks,<ref target="#n_a2">2</ref> and bricks.<ref target="#n_a3">3</ref></p>
               </egXML>
               <note><bibl>
-		<author>Christian</author>. <date>2012</date>. <title>How to properly typeset footnotes/superscripts after 
+                <author>Christian</author>. <date>2012</date>. <title>How to properly typeset footnotes/superscripts after 
                 punctuation marks?</title>.
                 <ptr target="https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks/56085"/>.
-		</bibl></note></p>
+                </bibl></note></p>
             <p>And then the annotations themselves, encoded as
             <gi>note</gi> elements inside a division in the backmatter
             that holds the endnotes:</p>
@@ -610,7 +612,9 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_" source="tei:3.3.0"><-- This is the version number against which our ODD files are built. -->
+          <schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_" source="tei:3.3.0">
+            <!-- The @source on <elementSpec>, above, is the version
+                 number against which our ODD files are built. -->
             <moduleRef key="core"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="TEI text front body back floatingText div div1 div2 div3 div4 div5 div6 div7"/>
@@ -816,7 +820,7 @@
               <constraintSpec scheme="schematron" ident="no-specialized-children">
                 <constraint>
                   <s:report test="ancestor::tei:text and (
-				    tei:author
+                                    tei:author
                                   | tei:biblScope
                                   | tei:citedRange
                                   | tei:distributor

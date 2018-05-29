@@ -3,7 +3,8 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:s="http://purl.oclc.org/dsdl/schematron"
      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-     xml:lang="en" version="3.1.0"><!-- The value of TEI@version is the version number of P5 to which the ODDs conform. -->
+     xml:lang="en" version="3.1.0">
+  <!-- The value of TEI/@version is the version number of P5 to which the ODDs conform. -->
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -19,12 +20,12 @@
         <editor>
           <name type="person">Michelle Dalmau</name>
         </editor>
-	<editor>
-          <name type="person">Elli Mylonas</name>	
-	</editor>
-	<editor>
+        <editor>
+          <name type="person">Elli Mylonas</name>       
+        </editor>
+        <editor>
           <name type="person">Syd Bauman</name>
-	</editor>
+        </editor>
         <editor role="ODDs">
           <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
         </editor>
@@ -33,11 +34,12 @@
         </sponsor>
       </titleStmt>
       <editionStmt>
-	<!-- This is the version number of the BPTL. When you change the version # here, remember to change it
-	     a) in the <editionStmt>s of the other .odd files, and
-	     b) in the semi-closed list of values of @url of <schemaRef> in
-	        lib-header.odd, too! -->
-        <p>Version 4.0.0a (<date when="2018-04-15">15 Apr 18</date>)</p>
+        <!-- This is the version number of the BPTL. When you change
+             the version # here, remember to change it
+             a) in the <editionStmt>s of the other .odd files, and
+             b) in the semi-closed list of values of @url of <schemaRef> in
+                lib-header.odd, too! -->
+        <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -207,20 +209,20 @@
       Tite's Appendix A</ref>.</p>
       </div>
       <div type="===">
-	<head>TEI simplePrint</head>
-	<p>TEI SimplePrint is a customization of the TEI Guidelines 
-	designed to be an entry point for a wide variety of encoding 
-	projects, especially those dealing with Western European early 
-	modern printed material. An implicit aim of the creators of 
-	this customization, as with these <title>Best Practices</title>, 
-	was to prescribe a single way to encode common features in 
-	source documents. The features to be encoded are more granular
-	than those in Levels 1 through 4 of these <title>Best 
-	Practices</title>, but TEI simplePrint is discussed below with 
-	Level 5. Furthermore, unlike these <title>Best Practices</title>,
-	TEI simplePrint specifies a processing model for each element, 
-	recommending how they should be displayed or otherwise 
-	processed.</p>
+        <head>TEI simplePrint</head>
+        <p>TEI SimplePrint is a customization of the TEI Guidelines 
+        designed to be an entry point for a wide variety of encoding 
+        projects, especially those dealing with Western European early 
+        modern printed material. An implicit aim of the creators of 
+        this customization, as with these <title>Best Practices</title>, 
+        was to prescribe a single way to encode common features in 
+        source documents. The features to be encoded are more granular
+        than those in Levels 1 through 4 of these <title>Best 
+        Practices</title>, but TEI simplePrint is discussed below with 
+        Level 5. Furthermore, unlike these <title>Best Practices</title>,
+        TEI simplePrint specifies a processing model for each element, 
+        recommending how they should be displayed or otherwise 
+        processed.</p>
       </div>
     </div>
     <div type="==">
@@ -241,14 +243,14 @@
         internal consistency in the local practice.</p>
       </div>
       <div type="===">
-	<head>Character Encoding</head>
-	<p>For the purpose of interchange, TEI documents should be saved 
-	in UTF-8 format, without beginning with a byte-order mark (U+FEFF). 
-	Furthermore, while TEI allows for capturing of glyph variants 
-	not distinguished by Unicode (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html">
-	P5 chapter 5</ref>), the special elements for this purpose are not 
-	recommended in these <title>Best Practices</title> in order to 
-	facilitate interchange.</p>
+        <head>Character Encoding</head>
+        <p>For the purpose of interchange, TEI documents should be saved 
+        in UTF-8 format, without beginning with a byte-order mark (U+FEFF). 
+        Furthermore, while TEI allows for capturing of glyph variants 
+        not distinguished by Unicode (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html">
+        P5 chapter 5</ref>), the special elements for this purpose are not 
+        recommended in these <title>Best Practices</title> in order to 
+        facilitate interchange.</p>
       </div>
       <div type="===">
         <head>Transcription</head>
@@ -258,11 +260,23 @@
         original work. At levels 1 to 3 of encoding, it may be
         impractical or undesirable to transcribe and encode certain
         features of the text, such as publisher’s advertisements or
-        indexes. Such omissions may be indicated in the <gi>notesStmt</gi> of the <gi>teiHeader</gi>. At Level 4 and above, the transcription should be
-        complete. Any systematic omissions of material found in the original work
-        should be noted in the <gi>samplingDecl</gi> in the
-        TEI header.</p>
-        <p>When encoding composite documents (an issue of a journal, a volume of conference papers, a book of poems, etc.) at Level 3 and above, consider creating separate TEI documents for each unit (journal article, conference paper, poem, etc.) so that more granular metadata may be attached to each unit in its own TEI header. A further step will be necessary in order to ensure that the structure of the composite document—how the units relate to each other—is adequately represented. A common way to accomplish this is to create a separate TEI document for the composite document that uses XInclude to include the relevant portions of the TEI documents for the units in the correct order.</p>
+        indexes. Such omissions may be indicated in the
+        <gi>notesStmt</gi> of the <gi>teiHeader</gi>. At Level 4 and
+        above, the transcription should be complete. Any systematic
+        omissions of material found in the original work should be
+        noted in the <gi>samplingDecl</gi> in the TEI header.</p>
+        <p>When encoding composite documents (an issue of a journal, a
+        volume of conference papers, a book of poems, etc.) at Level 3
+        and above, consider creating separate TEI documents for each
+        unit (journal article, conference paper, poem, etc.) so that
+        more granular metadata may be attached to each unit in its own
+        TEI header. A further step will be necessary in order to
+        ensure that the structure of the composite document—how the
+        units relate to each other—is adequately represented. A common
+        way to accomplish this is to create a separate TEI document
+        for the composite document that uses XInclude to include the
+        relevant portions of the TEI documents for the units in the
+        correct order.</p>
         <div type="====">
           <head>Punctuation</head>
           <p>While the TEI gives the option of removing punctuation
@@ -279,7 +293,7 @@
           Use the <gi>quotation</gi> element in the header to record 
           whether quotation marks have been removed, and use the 
           <gi>punctuation</gi> element in the header to record whether 
-	  other punctuation has been removed.</p>
+          other punctuation has been removed.</p>
           <p>When removing punctuation marks whose rendering in the
           source document is worth preserving, use the <att>style</att>
           attribute on the appropriate element to describe the
@@ -287,7 +301,7 @@
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <p>When she said <said style="quotes: '“' '”'">Nobody uses the term 
             <mentioned rend="quotes: '‘' '’'">electronic text</mentioned> anymore</said>
-	    he nearly passed out!</p>
+            he nearly passed out!</p>
           </egXML>
           </p>
         </div>
@@ -513,12 +527,17 @@
         the text exists), is optional at Level 2 (because the
         division-level metadata need not classify these divisions), is
         recommended at Level 3 (for broad yet useful analysis of text
-        divisions), and is strongly recommended at Levels 4 and 5 
-        (for full analysis of the text structure). Recommended values for the <att>type</att> attribute are listed below. 
-          Other values may be used if these are not applicable. See the section on the <att>type</att> attribute, below on adding customized values to the project ODD.</p>
-        <!-- When changing values for the @type attribute on the div element, remember to make the 
-             parallel adjustments to the list that appears in the prose of the BPTL and to the attDef for the @type attribute, so that the
-             values remain in sync -->
+        divisions), and is strongly recommended at Levels 4 and 5 (for
+        full analysis of the text structure). Recommended values for
+        the <att>type</att> attribute are listed below. Other values
+        may be used if these are not applicable. See the section on
+        the <att>type</att> attribute, below on adding customized
+        values to the project ODD.</p>
+        <!-- When changing values for the @type attribute on the <div>
+             element, remember to make the parallel adjustments to the
+             list that appears in the prose of the BPTL and to the
+             attDef for the @type attribute, so that the values remain
+             in sync -->
         
         <table rend="table">
           <row>
@@ -761,7 +780,7 @@
         the encoded text and facsimile page images of source
         documents. Projects may use any of the following methods:
         <list>
-	  <item>Use the <ref
+          <item>Use the <ref
           target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX"><att>facs</att></ref>
           attribute on a <gi>surface</gi> element to point to the
           corresponding page image using a URI (any level).</item>
@@ -777,13 +796,13 @@
           attribute on a <gi>surface</gi> element (any level) or
           <gi>pb</gi> element (levels 2–5) to point to the
           corresponding page image using a URI.</item>
-	  <item>Use the <att>GROUPID</att> attribute on various
-	  <gi>file</gi> elements in a METS document to point to the
-	  <att>xml:id</att> attributes of the <gi>surface</gi> (any
-	  level) or <gi>pb</gi> (levels 2–5), thereby providing
-	  correspondence between the page indicated by the
-	  <gi>surface</gi> or <gi>pb</gi> and one or more facsimile
-	  page images (e.g., master, web derivatives, etc.).</item>
+          <item>Use the <att>GROUPID</att> attribute on various
+          <gi>file</gi> elements in a METS document to point to the
+          <att>xml:id</att> attributes of the <gi>surface</gi> (any
+          level) or <gi>pb</gi> (levels 2–5), thereby providing
+          correspondence between the page indicated by the
+          <gi>surface</gi> or <gi>pb</gi> and one or more facsimile
+          page images (e.g., master, web derivatives, etc.).</item>
         </list>
         </p>
         <p>For those projects relying on the <ref
@@ -803,15 +822,15 @@
         target="http://fedora.dlib.indiana.edu:8080/fedora/get/iudl:269584/METSNAV">sample
         METS document</ref> for a TEI project).</p>
 
-	<p>The <ref target="http://iiif.io/">International Image
-	Interoperability Framework</ref> (IIIF), with its growing user
-	community, is likely to emerge as an alternative mechanism for
-	linking between encoded text and images of source documents.
-	The value of a <att>facs</att> attribute could be a IIIF Image
-	API Request URI (e.g., to access a full-sized image). However,
-	note that the TEI and IIIF communities have not yet agreed
-	upon specific details of a mechanism for integrating data from
-	these two communities of practice.</p>
+        <p>The <ref target="http://iiif.io/">International Image
+        Interoperability Framework</ref> (IIIF), with its growing user
+        community, is likely to emerge as an alternative mechanism for
+        linking between encoded text and images of source documents.
+        The value of a <att>facs</att> attribute could be a IIIF Image
+        API Request URI (e.g., to access a full-sized image). However,
+        note that the TEI and IIIF communities have not yet agreed
+        upon specific details of a mechanism for integrating data from
+        these two communities of practice.</p>
       </div>
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>
@@ -821,9 +840,9 @@
         document (within the <gi>text</gi> element), as evidenced by
         attributes used in encoding example snippets and the prose
         description of this document.</p>
-	<!--<p>Scores of attributes are available for use within
-	<gi>text</gi>, and a list of those recommended for use in documents
-	conforming to these <title>Best Practices</title> is included in <ref
+        <!--<p>Scores of attributes are available for use within
+        <gi>text</gi>, and a list of those recommended for use in documents
+        conforming to these <title>Best Practices</title> is included in <ref
         target="#Appendix_A:_Recommended_Attributes">Appendix
         A</ref>.</p>-->
         <p>In this section is general advice on the use of particular
@@ -955,7 +974,7 @@
           typos being introduced in the encoding.</p>
           <p>If there are formatting features in the source that cannot be
           expressed with CSS syntax, the <att>rend</att> attribute may be
-	  used instead of <att>style</att> or <att>rendition</att>.</p>
+          used instead of <att>style</att> or <att>rendition</att>.</p>
         </div>
         <div type="====">
           <head><att>xml:lang</att></head>
@@ -986,12 +1005,12 @@
           <cell><tag>teiHeader xml:lang="___"</tag></cell>
           <cell>[required] Contains metadata about the TEI document. The <att>xml:lang</att> is recommended; it indicates the language used for the metadata describing the document.</cell>
         </row>
-	<row>
+        <row>
           <cell>├</cell>
           <cell><gi>sourceDoc</gi></cell>
           <cell>[required at Level 1, optional at Levels 2–5] Contains a direct, generally machine-generated, transcription of document pages without further logical or structural information.</cell>
-	</row>
-	<row>
+        </row>
+        <row>
           <cell>├</cell>
           <cell><gi>facsimile</gi></cell>
           <cell>[optional] Defines sets of images that correspond with the text. Should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#txtimglnk">Linking between encoded text and images of source documents</ref>.</cell>
@@ -1080,7 +1099,7 @@
             <head>Reference</head>
             <list>
               <item><ref target="http://www.tei-c.org/Guidelines/P5">Complete P5 Guidelines</ref></item>
-	      <item><ref target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_simplePrint.doc.html">TEI simplePrint</ref></item>
+              <item><ref target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_simplePrint.doc.html">TEI simplePrint</ref></item>
             </list>
           </div>
           <div type="====">
@@ -1108,14 +1127,14 @@
             encoding, these <title>Best Practices</title> have chosen
             to provide neither a list of recommended elements nor any
             specific examples for encoding a transcription of a source
-	    document at this level. Please refer to the <ref target="#The_TEI_Header">TEI
+            document at this level. Please refer to the <ref target="#The_TEI_Header">TEI
             Header</ref> section above for recommendations for the
             <gi>teiHeader</gi>.</p>
-	    <p>Those encoding Western European early modern printed 
-	    material may find that TEI simplePrint, a TEI customization,
-	    provides appropriate guidance for encoding a 
-	    transcription of the source document. Otherwise, refer to 
-	    the <ref target="#General_Recommendations">General
+            <p>Those encoding Western European early modern printed 
+            material may find that TEI simplePrint, a TEI customization,
+            provides appropriate guidance for encoding a 
+            transcription of the source document. Otherwise, refer to 
+            the <ref target="#General_Recommendations">General
             Recommendations</ref> section above and the <ref
             target="http://www.tei-c.org/Guidelines/P5">Complete TEI
             P5 Guidelines</ref> for element recommendations and usage
@@ -1133,52 +1152,52 @@
       acknowledge all of those who have given their time and expertise
       to develop these <title>Best Practices</title>.</p>
       <p>The individuals who served as editors of this document are:
-	      <!-- version numbers below are for versions of the BPTL -->
+              <!-- version numbers below are for versions of the BPTL -->
       <list>
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
-	<item>Elli Mylonas, Brown University (version 4.0.0)</item>
-	<item>Syd Bauman, Northeastern University (version 4.0.0)</item>
+        <item>Elli Mylonas, Brown University (version 4.0.0)</item>
+        <item>Syd Bauman, Northeastern University (version 4.0.0)</item>
       </list></p>
       <p>The individuals who have contributed to the writing of this
       document are:
       <list>
-	<item>Adam Baron, University of North Texas (version 4.0.0)</item>
+        <item>Adam Baron, University of North Texas (version 4.0.0)</item>
         <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 4.0.0)</item>
-	<item>Lou Burnard, Independent Consultant (version 4.0.0)</item>
+        <item>Lou Burnard, Independent Consultant (version 4.0.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
-	<item>Martin de la Iglesia, Herzog August Bibliothek Wolfenbüttel (version 4.0.0)</item>
+        <item>Martin de la Iglesia, Herzog August Bibliothek Wolfenbüttel (version 4.0.0)</item>
         <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
-	<item>James R. Griffin, III, Lafayette College (version 4.0.0)</item>
+        <item>James R. Griffin, III, Lafayette College (version 4.0.0)</item>
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
         <item>Renee McBride, University of North Carolina, Chapel Hill (version 3.0)</item>
-	<item>Martin Mueller, Northwestern University (version 4.0.0)</item>
-	<item>Elli Mylonas, Brown University (version 4.0.0)</item>
-	<item>Kiyonori Nagasaki, International Institute for Digital Humanities (version 4.0.0)</item>
+        <item>Martin Mueller, Northwestern University (version 4.0.0)</item>
+        <item>Elli Mylonas, Brown University (version 4.0.0)</item>
+        <item>Kiyonori Nagasaki, International Institute for Digital Humanities (version 4.0.0)</item>
         <item>Andrew Rouner, Washington University in St. Louis (versions 3.0 &amp; 4.0.0)</item>
         <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
         <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
         <item>Michael Sperberg-McQueen, Black Mesa Technologies LLC (version 3.0)</item>
-	<item>Thomas Stäcker, Universitäts- und Landesbibliothek Darmstadt (version 4.0.0)</item>
+        <item>Thomas Stäcker, Universitäts- und Landesbibliothek Darmstadt (version 4.0.0)</item>
         <item>Vitus Tang, Stanford University (version 3.0)</item>
         <item>Richard Wisneski, Case Western University (version 3.0)</item>
         <item>Glen Worthey, Stanford University (version 3.0)</item>
-	<item>Martin Wynne, University of Oxford (version 4.0.0)</item>
-	<item>Stuart Yeates, Victoria University of Wellington (version 4.0.0)</item>
+        <item>Martin Wynne, University of Oxford (version 4.0.0)</item>
+        <item>Stuart Yeates, Victoria University of Wellington (version 4.0.0)</item>
       </list></p>
       <p>The individuals who have contributed to the planning of this
       document are:
       <list>
         <item>Syd Bauman, Brown University / Northeastern University (versions 3.0 &amp; 4.0.0)</item>
         <item>Michelle Dalmau, Indiana University (version 3.0)</item>
-	<item>Stefanie Gehrke, Biblissima (version 4.0.0)</item>
+        <item>Stefanie Gehrke, Biblissima (version 4.0.0)</item>
         <item>Matthew Gibson, Virginia Foundation for the Humanities (version 3.0)</item>
-	<item>Peter Gorman, University of Wisconsin (version 4.0.0)</item>
+        <item>Peter Gorman, University of Wisconsin (version 4.0.0)</item>
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
         <item>Chris Powell, University of Michigan (version 3.0)</item>
-	<item>Paul Schaffner, University of Michigan (version 4.0.0)</item>
+        <item>Paul Schaffner, University of Michigan (version 4.0.0)</item>
         <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
         <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
         <item>Perry Willett, California Digital Library (version 3.0)</item>
