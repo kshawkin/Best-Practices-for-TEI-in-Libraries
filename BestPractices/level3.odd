@@ -228,14 +228,6 @@
               <cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell>
               <cell>Optionally used to indicate table structures.</cell>
             </row>
-            <row>
-              <cell><gi>lb</gi></cell>
-              <cell>Optionally used to indicate the beginning of a new line.</cell>
-            </row>
-            <row>
-              <cell><gi>cb</gi></cell>
-              <cell>Optionally used to indicate the beginning of a new column.</cell>
-            </row>
             
             <row>
               <cell><gi>listBibl</gi></cell>
