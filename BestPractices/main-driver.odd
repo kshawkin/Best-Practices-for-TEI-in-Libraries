@@ -1008,7 +1008,7 @@
         <row>
           <cell>├</cell>
           <cell><gi>sourceDoc</gi></cell>
-          <cell>[required at Level 1, optional at Levels 2–5] Contains a direct, generally machine-generated, transcription of document pages without further logical or structural information.</cell>
+          <cell>[recommended at Level 1, optional at Levels 2–5] Contains a direct, generally machine-generated, transcription of document pages without further logical or structural information.</cell>
         </row>
         <row>
           <cell>├</cell>
@@ -1018,7 +1018,7 @@
         <row>
           <cell>└</cell>
           <cell><tag>text xml:lang="___"</tag></cell>
-          <cell>[required at Levels 2–5] Contains the encoded transcription of the source document. The <att>xml:lang</att> attribute is recommended; it indicates the primary language of the source document.</cell>
+          <cell>[recommended at Levels 2–5] Contains the encoded transcription of the source document. The <att>xml:lang</att> attribute is recommended; it indicates the primary language of the source document.</cell>
         </row>
       </table>
       <p>The child elements of the <gi>teiHeader</gi> and
