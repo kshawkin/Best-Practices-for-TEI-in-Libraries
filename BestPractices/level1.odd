@@ -186,14 +186,14 @@
           <table rend="table">
             <row>
               <cell><gi>sourceDoc</gi></cell>
-              <cell>[required] There should be only one element
+              <cell>[recommended] There should be only one element
               following the <gi>teiHeader</gi>, a single
-              <gi>sourceDoc</gi> which contains a raw transcription of
+              <gi>sourceDoc</gi> containing a raw transcription of
               the text of the source document.</cell>
             </row>
             <row>
               <cell><gi>surface</gi></cell>
-              <cell>[required] Defines a written surface as a
+              <cell>[recommended] Defines a written surface as a
               two-dimensional coordinate space. There should be one
               <gi>surface</gi> for each encoded page, whether it is
               represented via a facsimile image file, a transcription,
