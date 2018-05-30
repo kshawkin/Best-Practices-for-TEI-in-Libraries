@@ -185,6 +185,14 @@
             <row><cell><gi>body</gi></cell><cell>[required] Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
             <row><cell><gi>div1</gi> or <gi>div</gi> </cell><cell>[required] One <gi>div</gi> or <gi>div1</gi> is used per section of the text identified with division-level metadata. If no <att>type</att> attribute is specified, a <att>type</att> value of <val>section</val> should be presumed.</cell></row>
             <row><cell><gi>head</gi> </cell><cell>Recommended if headings are present. As in the TEI Guidelines, this element must appear before the <gi>ab</gi> for that division.</cell></row>
+            <row>
+              <cell><gi>lb</gi></cell>
+              <cell>Optionally used to indicate the beginning of a new line.</cell>
+            </row>
+            <row>
+              <cell><gi>cb</gi></cell>
+              <cell>Optionally used to indicate the beginning of a new column.</cell>
+            </row>
           </table>
           </p>
         </div>
