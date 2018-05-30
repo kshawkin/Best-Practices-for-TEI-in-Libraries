@@ -180,10 +180,10 @@
           <head>Element Recommendations for Level 2</head>
           <p>Optionally use the elements specified in Level 1. In addition, use the following:
           <table rend="table">
-            <row><cell><gi>text</gi></cell><cell>[required] Used as a wrapper for the encoded transcription of the source document.</cell></row>
+            <row><cell><gi>text</gi></cell><cell>[recommended] Used as a wrapper for the encoded transcription of the source document.</cell></row>
             <row><cell><gi>front</gi>, <gi>back</gi> </cell><cell>Optional. Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
-            <row><cell><gi>body</gi></cell><cell>[required] Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
-            <row><cell><gi>div1</gi> or <gi>div</gi> </cell><cell>[required] One <gi>div</gi> or <gi>div1</gi> is used per section of the text identified with division-level metadata. If no <att>type</att> attribute is specified, a <att>type</att> value of <val>section</val> should be presumed.</cell></row>
+            <row><cell><gi>body</gi></cell><cell>[recommended] Contains one or more <gi>div</gi> or <gi>div1</gi>.</cell></row>
+            <row><cell><gi>div1</gi> or <gi>div</gi> </cell><cell>[recommended] One <gi>div</gi> or <gi>div1</gi> is used per section of the text identified with division-level metadata. If no <att>type</att> attribute is specified, a <att>type</att> value of <val>section</val> should be presumed.</cell></row>
             <row><cell><gi>head</gi> </cell><cell>Recommended if headings are present. As in the TEI Guidelines, this element must appear before the <gi>ab</gi> for that division.</cell></row>
             <row>
               <cell><gi>lb</gi></cell>
