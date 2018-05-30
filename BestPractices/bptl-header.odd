@@ -34,7 +34,7 @@
              the version # here, remember to change it
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
-                lib-header.odd, too! -->
+                bptl-header.odd, too! -->
         <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>

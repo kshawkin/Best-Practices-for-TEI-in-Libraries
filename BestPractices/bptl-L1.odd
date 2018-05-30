@@ -32,7 +32,7 @@
              the version # here, remember to change it
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
-                lib-header.odd, too! -->
+                bptl-header.odd, too! -->
         <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>
@@ -222,191 +222,192 @@
              <head>Level 1 Examples</head>
         <div type="example" xml:id="L1AHex">
           <head>Level 1 Alger Hiss document</head>
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <TEI xml:id="someid1">
-              <teiHeader xml:lang="en">
-                &lt;!-- header goes here -->
-              </teiHeader>
-              <sourceDoc xml:lang="en">
-                <surface n="113" facs="00000001.tif">
-                  &lt;!-- uncorrected OCR for first page image begins here -->
-                  <line>POINT VIII.</line>
-                  <line>BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S</line>
-                  <line>CONVICTION SHOULD BE VACATED; ALTERNATIVELY,</line>
-                  <line>DISCOVERY AND A HEARING SHOULD BE ORDERED.</line>
-                  <line>The nature and extent of surveillance of Hiss, his</line>
-                  <line>family and associates was not known at the time of trial by</line>
-                  <line>the defense. Even now, with the release of some of the govern‐</line>
-                  <line>ment documents concerning FBI investigative techniques regarding</line>
-                  <line>Hiss, the full extent of surveillance -- wiretapping, mail open‐</line>
-                  <line>ings, mail covers, physical surveillance, and other intrusive</line>
-                  <line>techniques -- is still not 'clear. Nevertheless, it is apparent</line>
-                  <line>that information gathered through the exploitation of unlawful</line>
-                  <line>wiretaps and other illegal surveillance was used at trial and</line>
-                  <line>consequently the conviction must be reversed. Alternatively,</line>
-                  <line>further discovery and a hearing is essential to a fair deter‐</line>
-                  <line>mination regarding these issues.</line>
-                  <line>FBI surveillance of Hiss began in earnest in 1941 with</line>
-                  <line>the institution of a mail cover on his incoming correspondence</line>
-                  <line>at his home in connection with an FBI investigation of possible</line>
-                  <line>Hatch Act violations. CN Ex. 98A. Another mail cover was placed</line>
-                  <line></line>
-                  <line></line>
-                  <line>-113 -</line>
-                  <line></line>
-                  <line></line>
-                  &lt;!-- uncorrected OCR for first page image ends here -->
-                </surface>
-                <surface n="114" facs="00000002.tif">
-                  &lt;!-- uncorrected OCR for second page image begins here -->
-                  <line>on the Hiss mail in 1945, and at the same time the FBI obtained</line>
-                  <line>toll call records from the Hiss residence Telephone for the</line>
-                  <line>years 1943 and 1944 as well. CN Ex. 99. In September, 1945,</line>
-                  <line>the FBI intercepted telegrams to Hiss as well. CN Ex. 100.</line>
-                  <line>In late November, 1945, FBI surveillance of the Hiss</line>
-                  <line>residence in Washington, D.C., escalated. For the third time,</line>
-                  <line>a mail cover was instituted beginning on November 28, 1945,</line>
-                  <line>which was continued at least until 1946. CN Ex. 101 at p. 70;</line>
-                  <line>CN Ex. 102. Continuous physical surveillance of Hiss was begun</line>
-                  <line>as well. CN Ex. 101 at p. 72. Although this twenty-four-hour</line>
-                  <line>surveillance was discontinued on December 14, 1945, physical</line>
-                  <line>surveillance was conducted frequently at various times until</line>
-                  <line>September, 1947. CN Ex. 102; CN Ex. 103.</line>
-                  <line>The most intrusive invasion of petitioner's rights</line>
-                  <line>68/ Also before 1947, a letter from Priscilla Hiss addressed</line>
-                  <line>to her son, Timothy Hobson, was intercepted and its contents</line>
-                  <line>read. CN Ex. 100A at p. 167. In approximately March, 1947,</line>
-                  <line>a letter from a Michael Greenberg addressed to petitioner re‐</line>
-                  <line>garding an application for employment with the United Nations</line>
-                  <line>was also intercepted, in a manner not revealed by the docu‐</line>
-                  <line>ments. CN Ex. 100B</line>
-                  <line></line>
-                  <line></line>
-                  <line>-114 -</line>
-                  <line></line>
-                  <line></line>
-                  <line></line>
-                  &lt;!-- uncorrected OCR for second page image ends here -->
-                </surface>
-                <surface n="115" facs="00000003.tif">
-                  &lt;!-- uncorrected OCR for third page image begins here -->
-                  <line>occurred from December 13, 1945 until the Hisses moved from</line>
-                  <line>Washington, D.C. to New York City on September 13, 1947. A</line>
-                  <line>"technical surveillance," -- a wiretap -- was placed on the Hiss</line>
-                  <line>telephone at their residence on P Street-in Washington, D.C.</line>
-                  <line>The logs of this surveillance constitute twenty-nine volumes</line>
-                  <line>of FBI serials and are roughly 2,500 pages in length, in which</line>
-                  <line>an enormous amount of information concerning the Hisses' per‐</line>
-                  <line>sonal lives, relationships with friends and associates, and</line>
-                  <line>habits is recorded.</line>
-                  <line>The wiretap was installed following FBI Director Hoover's</line>
-                  <line>application to the Attorney General for authorization,  although</line>
-                  <line>no written authorization appears in the documents released to</line>
-                  <line>Hiss. The purpose of the application was to gather information</line>
-                  <line>regarding Hiss' alleged contacts with Soviet espionage agents and</line>
-                  <line>communists in government service, general allegations which had</line>
-                  <line>been made by Elizabeth Bentley and Chambers.</line>
-                  <line>As one would expect, the interception of every telephone</line>
-                  <line>h9/       Hoover's initial request was answered by a note reques‐</line>
-                  <line>ting information on Hiss. CN Ex. 104. Additional information</line>
-                  <line>was furnished by letter dated November 30, 1945. CN Ex. 105.</line>
-                  <line></line>
-                  <line></line>
-                  <line>-115 -</line>
-                  <line></line>
-                  <line></line>
-                  &lt;!-- uncorrected OCR for third page image ends here -->
-                </surface>
-              </sourceDoc>      
-            </TEI>
-          </egXML>
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+	    <TEI xml:id="someid1">
+	      <teiHeader xml:lang="en">
+		&lt;!-- header goes here -->
+	      </teiHeader>
+	      <sourceDoc xml:lang="en">
+		<surface n="113" facs="00000001.tif">
+		  &lt;!-- uncorrected OCR for first page image begins here -->
+		  <line>POINT VIII.</line>
+		  <line>BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S</line>
+		  <line>CONVICTION SHOULD BE VACATED; ALTERNATIVELY,</line>
+		  <line>DISCOVERY AND A HEARING SHOULD BE ORDERED.</line>
+		  <line>The nature and extent of surveillance of Hiss, his</line>
+		  <line>family and associates was not known at the time of trial by</line>
+		  <line>the defense. Even now, with the release of some of the govern‐</line>
+		  <line>ment documents concerning FBI investigative techniques regarding</line>
+		  <line>Hiss, the full extent of surveillance -- wiretapping, mail open‐</line>
+		  <line>ings, mail covers, physical surveillance, and other intrusive</line>
+		  <line>techniques -- is still not 'clear. Nevertheless, it is apparent</line>
+		  <line>that information gathered through the exploitation of unlawful</line>
+		  <line>wiretaps and other illegal surveillance was used at trial and</line>
+		  <line>consequently the conviction must be reversed. Alternatively,</line>
+		  <line>further discovery and a hearing is essential to a fair deter‐</line>
+		  <line>mination regarding these issues.</line>
+		  <line>FBI surveillance of Hiss began in earnest in 1941 with</line>
+		  <line>the institution of a mail cover on his incoming correspondence</line>
+		  <line>at his home in connection with an FBI investigation of possible</line>
+		  <line>Hatch Act violations. CN Ex. 98A. Another mail cover was placed</line>
+		  <line></line>
+		  <line></line>
+		  <line>-113 -</line>
+		  <line></line>
+		  <line></line>
+		  &lt;!-- uncorrected OCR for first page image ends here -->
+		</surface>
+		<surface n="114" facs="00000002.tif">
+		  &lt;!-- uncorrected OCR for second page image begins here -->
+		  <line>on the Hiss mail in 1945, and at the same time the FBI obtained</line>
+		  <line>toll call records from the Hiss residence Telephone for the</line>
+		  <line>years 1943 and 1944 as well. CN Ex. 99. In September, 1945,</line>
+		  <line>the FBI intercepted telegrams to Hiss as well. CN Ex. 100.</line>
+		  <line>In late November, 1945, FBI surveillance of the Hiss</line>
+		  <line>residence in Washington, D.C., escalated. For the third time,</line>
+		  <line>a mail cover was instituted beginning on November 28, 1945,</line>
+		  <line>which was continued at least until 1946. CN Ex. 101 at p. 70;</line>
+		  <line>CN Ex. 102. Continuous physical surveillance of Hiss was begun</line>
+		  <line>as well. CN Ex. 101 at p. 72. Although this twenty-four-hour</line>
+		  <line>surveillance was discontinued on December 14, 1945, physical</line>
+		  <line>surveillance was conducted frequently at various times until</line>
+		  <line>September, 1947. CN Ex. 102; CN Ex. 103.</line>
+		  <line>The most intrusive invasion of petitioner's rights</line>
+		  <line>68/ Also before 1947, a letter from Priscilla Hiss addressed</line>
+		  <line>to her son, Timothy Hobson, was intercepted and its contents</line>
+		  <line>read. CN Ex. 100A at p. 167. In approximately March, 1947,</line>
+		  <line>a letter from a Michael Greenberg addressed to petitioner re‐</line>
+		  <line>garding an application for employment with the United Nations</line>
+		  <line>was also intercepted, in a manner not revealed by the docu‐</line>
+		  <line>ments. CN Ex. 100B</line>
+		  <line></line>
+		  <line></line>
+		  <line>-114 -</line>
+		  <line></line>
+		  <line></line>
+		  <line></line>
+		  &lt;!-- uncorrected OCR for second page image ends here -->
+		</surface>
+		<surface n="115" facs="00000003.tif">
+		  &lt;!-- uncorrected OCR for third page image begins here -->
+		  <line>occurred from December 13, 1945 until the Hisses moved from</line>
+		  <line>Washington, D.C. to New York City on September 13, 1947. A</line>
+		  <line>"technical surveillance," -- a wiretap -- was placed on the Hiss</line>
+		  <line>telephone at their residence on P Street-in Washington, D.C.</line>
+		  <line>The logs of this surveillance constitute twenty-nine volumes</line>
+		  <line>of FBI serials and are roughly 2,500 pages in length, in which</line>
+		  <line>an enormous amount of information concerning the Hisses' per‐</line>
+		  <line>sonal lives, relationships with friends and associates, and</line>
+		  <line>habits is recorded.</line>
+		  <line>The wiretap was installed following FBI Director Hoover's</line>
+		  <line>application to the Attorney General for authorization,  although</line>
+		  <line>no written authorization appears in the documents released to</line>
+		  <line>Hiss. The purpose of the application was to gather information</line>
+		  <line>regarding Hiss' alleged contacts with Soviet espionage agents and</line>
+		  <line>communists in government service, general allegations which had</line>
+		  <line>been made by Elizabeth Bentley and Chambers.</line>
+		  <line>As one would expect, the interception of every telephone</line>
+		  <line>h9/       Hoover's initial request was answered by a note reques‐</line>
+		  <line>ting information on Hiss. CN Ex. 104. Additional information</line>
+		  <line>was furnished by letter dated November 30, 1945. CN Ex. 105.</line>
+		  <line></line>
+		  <line></line>
+		  <line>-115 -</line>
+		  <line></line>
+		  <line></line>
+		  &lt;!-- uncorrected OCR for third page image ends here -->
+		</surface>
+	      </sourceDoc>      
+	    </TEI>
+	  </egXML>
         </div>
         <div type="example">
-             <head>Level 1 Text with OCR Coordinates</head>
-             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <TEI xml:id="someid1a">
-                       <teiHeader xml:lang="en">
-                            &lt;!-- header goes here -->
-                       </teiHeader>
-                       <sourceDoc xml:lang="en">
-                            <surface n="113" facs="00000001.tif" ulx="0" uly="0" lrx="2550" lry="3300"> <!-- uncorrected OCR for first page image begins here -->
-      <zone type="print_space" ulx="407" uly="40" lrx="2525" lry="3219">
-        <zone type="text_block" ulx="1255" uly="386" lrx="1605" lry="426">
-            <line type="text_line" ulx="1256" uly="387" lrx="1604" lry="425">
-                <zone type="word" ulx="1256" uly="390" lrx="1411" lry="425">POINT</zone>
-                <zone type="word" ulx="1452" uly="387" lrx="1579" lry="424">VIII</zone>
-                <zone type="word" ulx="1592" uly="408" lrx="1604" lry="418">.</zone>
-            </line>
-        </zone>
-        <zone type="text_block" ulx="744" uly="481" lrx="2222" lry="534">
-            <line type="text_line" ulx="745" uly="482" lrx="2221" lry="533">
-                <zone type="word" ulx="745" uly="498" lrx="970" lry="533">BECAUSE</zone>
-                <zone type="word" ulx="1006" uly="498" lrx="1064" lry="529">OF</zone>
-                <zone type="word" ulx="1102" uly="494" lrx="1353" lry="528">UNLAWFUL</zone>
-                <zone type="word" ulx="1392" uly="491" lrx="1798" lry="527">SURVEILLANCE,</zone>
-                <zone type="word" ulx="1847" uly="482" lrx="2221" lry="521">PETITIONER'S</zone>
-            </line>
-        </zone>
-        <zone type="text_block" ulx="746" uly="546" lrx="2155" lry="593">
-            <line type="text_line" ulx="747" uly="547" lrx="2154" lry="592">
-                <zone type="word" ulx="748" uly="556" lrx="1068" lry="592">CONVICTION</zone>
-                <zone type="word" ulx="1103" uly="555" lrx="1291" lry="588">SHOULD</zone>
-                <zone type="word" ulx="1326" uly="553" lrx="1389" lry="585">BE</zone>
-                <zone type="word" ulx="1421" uly="551" lrx="1673" lry="588">VACATED?</zone>
-                <zone type="word" ulx="1712" uly="547" lrx="2154" lry="584">ALTERNATIVELY,</zone>
-            </line>
-        </zone>
-        <zone type="text_block" ulx="746" uly="607" lrx="2091" lry="652">
-            <line type="text_line" ulx="747" uly="608" lrx="2090" lry="651">
-                <zone type="word" ulx="747" uly="617" lrx="1037" lry="651">DISCOVERY</zone>
-                <zone type="word" ulx="1069" uly="616" lrx="1163" lry="648">AND</zone>
-                <zone type="word" ulx="1197" uly="615" lrx="1228" lry="647">A</zone>
-                <zone type="word" ulx="1262" uly="612" lrx="1488" lry="647">HEARING</zone>
-                <zone type="word" ulx="1522" uly="610" lrx="1712" lry="643">SHOULD</zone>
-                <zone type="word" ulx="1750" uly="610" lrx="1810" lry="641">BE</zone>
-                <zone type="word" ulx="1847" uly="608" lrx="2090" lry="641">ORDERED.</zone>
-            </line>
-        </zone>
-        <zone type="text_block" ulx="414" uly="802" lrx="2482" lry="2190">
-            <line type="text_line" ulx="741" uly="803" lrx="2345" lry="848">
-                <zone type="word" ulx="741" uly="808" lrx="833" lry="844">The</zone>
-                <zone type="word" ulx="870" uly="809" lrx="1059" lry="843">nature</zone>
-                <zone type="word" ulx="1099" uly="807" lrx="1191" lry="842">and</zone>
-                <zone type="word" ulx="1225" uly="808" lrx="1415" lry="841">extent</zone>
-                <zone type="word" ulx="1453" uly="805" lrx="1511" lry="841">of</zone>
-                <zone type="word" ulx="1551" uly="804" lrx="1930" lry="840">surveillance</zone>
-                <zone type="word" ulx="1968" uly="805" lrx="2027" lry="839">of</zone>
-                <zone type="word" ulx="2060" uly="803" lrx="2210" lry="844">Hiss,</zone>
-                <zone type="word" ulx="2255" uly="803" lrx="2345" lry="839">his</zone>
-            </line>
-            <line type="text_line" ulx="420" uly="924" lrx="2318" lry="976">
-                <zone type="word" ulx="420" uly="930" lrx="609" lry="975">family</zone>
-                <zone type="word" ulx="645" uly="930" lrx="740" lry="965">and</zone>
-                <zone type="word" ulx="777" uly="927" lrx="1092" lry="965">associates</zone>
-                <zone type="word" ulx="1128" uly="938" lrx="1221" lry="964">was</zone>
-                <zone type="word" ulx="1258" uly="930" lrx="1351" lry="964">not</zone>
-                <zone type="word" ulx="1386" uly="928" lrx="1547" lry="962">known</zone>
-                <zone type="word" ulx="1584" uly="930" lrx="1645" lry="962">at</zone>
-                <zone type="word" ulx="1681" uly="927" lrx="1769" lry="962">the</zone>
-                <zone type="word" ulx="1809" uly="925" lrx="1932" lry="961">time</zone>
-                <zone type="word" ulx="1969" uly="927" lrx="2027" lry="962">of</zone>
-                <zone type="word" ulx="2066" uly="925" lrx="2219" lry="961">trial</zone>
-                <zone type="word" ulx="2253" uly="926" lrx="2318" lry="971">by</zone>
-            </line>
-             &lt;!-- encoded text continues -->
-           </zone>
-         </zone>
-                            </surface>
-                            &lt;!-- encoded text continues -->
-                       </sourceDoc>
-                  </TEI>
-             </egXML>
+	  <head>Level 1 Text with OCR Coordinates</head>
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+	    <TEI xml:id="someid1a">
+	      <teiHeader xml:lang="en">
+		&lt;!-- header goes here -->
+	      </teiHeader>
+	      <sourceDoc xml:lang="en">
+		<surface n="113" facs="00000001.tif" ulx="0" uly="0" lrx="2550" lry="3300">
+		  &lt;!-- uncorrected OCR for first page image begins here -->
+		  <zone type="print_space" ulx="407" uly="40" lrx="2525" lry="3219">
+		    <zone type="text_block" ulx="1255" uly="386" lrx="1605" lry="426">
+		      <line type="text_line" ulx="1256" uly="387" lrx="1604" lry="425">
+			<zone type="word" ulx="1256" uly="390" lrx="1411" lry="425">POINT</zone>
+			<zone type="word" ulx="1452" uly="387" lrx="1579" lry="424">VIII</zone>
+			<zone type="word" ulx="1592" uly="408" lrx="1604" lry="418">.</zone>
+		      </line>
+		    </zone>
+		    <zone type="text_block" ulx="744" uly="481" lrx="2222" lry="534">
+		      <line type="text_line" ulx="745" uly="482" lrx="2221" lry="533">
+			<zone type="word" ulx="745" uly="498" lrx="970" lry="533">BECAUSE</zone>
+			<zone type="word" ulx="1006" uly="498" lrx="1064" lry="529">OF</zone>
+			<zone type="word" ulx="1102" uly="494" lrx="1353" lry="528">UNLAWFUL</zone>
+			<zone type="word" ulx="1392" uly="491" lrx="1798" lry="527">SURVEILLANCE,</zone>
+			<zone type="word" ulx="1847" uly="482" lrx="2221" lry="521">PETITIONER'S</zone>
+		      </line>
+		    </zone>
+		    <zone type="text_block" ulx="746" uly="546" lrx="2155" lry="593">
+		      <line type="text_line" ulx="747" uly="547" lrx="2154" lry="592">
+			<zone type="word" ulx="748" uly="556" lrx="1068" lry="592">CONVICTION</zone>
+			<zone type="word" ulx="1103" uly="555" lrx="1291" lry="588">SHOULD</zone>
+			<zone type="word" ulx="1326" uly="553" lrx="1389" lry="585">BE</zone>
+			<zone type="word" ulx="1421" uly="551" lrx="1673" lry="588">VACATED?</zone>
+			<zone type="word" ulx="1712" uly="547" lrx="2154" lry="584">ALTERNATIVELY,</zone>
+		      </line>
+		    </zone>
+		    <zone type="text_block" ulx="746" uly="607" lrx="2091" lry="652">
+		      <line type="text_line" ulx="747" uly="608" lrx="2090" lry="651">
+			<zone type="word" ulx="747" uly="617" lrx="1037" lry="651">DISCOVERY</zone>
+			<zone type="word" ulx="1069" uly="616" lrx="1163" lry="648">AND</zone>
+			<zone type="word" ulx="1197" uly="615" lrx="1228" lry="647">A</zone>
+			<zone type="word" ulx="1262" uly="612" lrx="1488" lry="647">HEARING</zone>
+			<zone type="word" ulx="1522" uly="610" lrx="1712" lry="643">SHOULD</zone>
+			<zone type="word" ulx="1750" uly="610" lrx="1810" lry="641">BE</zone>
+			<zone type="word" ulx="1847" uly="608" lrx="2090" lry="641">ORDERED.</zone>
+		      </line>
+		    </zone>
+		    <zone type="text_block" ulx="414" uly="802" lrx="2482" lry="2190">
+		      <line type="text_line" ulx="741" uly="803" lrx="2345" lry="848">
+			<zone type="word" ulx="741" uly="808" lrx="833" lry="844">The</zone>
+			<zone type="word" ulx="870" uly="809" lrx="1059" lry="843">nature</zone>
+			<zone type="word" ulx="1099" uly="807" lrx="1191" lry="842">and</zone>
+			<zone type="word" ulx="1225" uly="808" lrx="1415" lry="841">extent</zone>
+			<zone type="word" ulx="1453" uly="805" lrx="1511" lry="841">of</zone>
+			<zone type="word" ulx="1551" uly="804" lrx="1930" lry="840">surveillance</zone>
+			<zone type="word" ulx="1968" uly="805" lrx="2027" lry="839">of</zone>
+			<zone type="word" ulx="2060" uly="803" lrx="2210" lry="844">Hiss,</zone>
+			<zone type="word" ulx="2255" uly="803" lrx="2345" lry="839">his</zone>
+		      </line>
+		      <line type="text_line" ulx="420" uly="924" lrx="2318" lry="976">
+			<zone type="word" ulx="420" uly="930" lrx="609" lry="975">family</zone>
+			<zone type="word" ulx="645" uly="930" lrx="740" lry="965">and</zone>
+			<zone type="word" ulx="777" uly="927" lrx="1092" lry="965">associates</zone>
+			<zone type="word" ulx="1128" uly="938" lrx="1221" lry="964">was</zone>
+			<zone type="word" ulx="1258" uly="930" lrx="1351" lry="964">not</zone>
+			<zone type="word" ulx="1386" uly="928" lrx="1547" lry="962">known</zone>
+			<zone type="word" ulx="1584" uly="930" lrx="1645" lry="962">at</zone>
+			<zone type="word" ulx="1681" uly="927" lrx="1769" lry="962">the</zone>
+			<zone type="word" ulx="1809" uly="925" lrx="1932" lry="961">time</zone>
+			<zone type="word" ulx="1969" uly="927" lrx="2027" lry="962">of</zone>
+			<zone type="word" ulx="2066" uly="925" lrx="2219" lry="961">trial</zone>
+			<zone type="word" ulx="2253" uly="926" lrx="2318" lry="971">by</zone>
+		      </line>
+		      &lt;!-- encoded text continues -->
+		    </zone>
+		  </zone>
+		</surface>
+		&lt;!-- encoded text continues -->
+	      </sourceDoc>
+	    </TEI>
+	  </egXML>
         </div>
         </div>
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:3.3.0">
+          <schemaSpec ident="bptl-L1" docLang="en" xml:lang="en" prefix="L1_" source="tei:3.3.0">
             <!-- The @source on <elementSpec>, above, is the version
                  number against which our ODD files are built. -->
             <moduleRef key="core"/>
@@ -414,7 +415,7 @@
             <moduleRef key="textstructure" include="TEI"/>
             <moduleRef key="transcr" include="sourceDoc facsimile surface surfaceGrp zone line"/>
             <moduleRef key="namesdates" include="orgName persName"/>
-            <specGrpRef target="./lib-header.odd#libHeadSpec"/>
+            <specGrpRef target="./bptl-header.odd#libHeadSpec"/>
             <!-- ****************************************** -->
             <!-- Changes to elements, in alphabetical order -->
             <!-- ****************************************** -->

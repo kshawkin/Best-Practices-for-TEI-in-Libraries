@@ -29,7 +29,7 @@
              the version # here, remember to change it
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
-                lib-header.odd, too! -->
+                bptl-header.odd, too! -->
         <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>
@@ -381,7 +381,7 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib2" docLang="en" xml:lang="en" prefix="lib2_" source="tei:3.3.0">
+          <schemaSpec ident="bptl-L2" docLang="en" xml:lang="en" prefix="L2_" source="tei:3.3.0">
             <!-- The @source on <elementSpec>, above, is the version
                  number against which our ODD files are built. -->
             <moduleRef key="core"/>
@@ -390,7 +390,7 @@
             <moduleRef key="linking" include="ab"/>
             <moduleRef key="transcr" include="sourceDoc facsimile surface surfaceGrp zone line"/>
             <moduleRef key="namesdates" include="orgName persName"/>
-            <specGrpRef target="./lib-header.odd#libHeadSpec"/>
+            <specGrpRef target="./bptl-header.odd#libHeadSpec"/>
             <!-- ****************************************** -->
             <!-- Changes to elements, in alphabetical order -->
             <!-- ****************************************** -->

@@ -54,7 +54,7 @@ else # dunno
     P5SRC=${P5SRC:-/usr/local/share/tei/P5/p5subset.xml}
 fi
 
-for BASE in lib1 lib2 lib3 lib4 ; do
+for BASE in bptl-L1 bptl-L2 bptl-L3 bptl-L4 ; do
     echo ""; echo "--------- begin processing ${BASE} ---------"
     INNAME=${BASE}.odd                # input filename
     # find the prefix specified in the ODD file, if any
@@ -99,7 +99,7 @@ for BASE in lib1 lib2 lib3 lib4 ; do
 
 done
 
-# process  main-driver  here
+# process  bptl-driver  here
 
 #echo "13. generate XInclude processed version of main driver."
 
@@ -115,10 +115,10 @@ echo ""; echo "--------- generate HTML from main driver ---------"
 # versions of `xmllint` do XInclude processing (using element() in
 # @xpointer) and some do not. So far, on all of my systems, one or the
 # other (or both) will do it.
-xmllint --xinclude main-driver.odd | ${STARLET} ed -N t=http://www.tei-c.org/ns/1.0 --delete "//t:schemaSpec" > ${TMP}
+xmllint --xinclude bptl-driver.odd | ${STARLET} ed -N t=http://www.tei-c.org/ns/1.0 --delete "//t:schemaSpec" > ${TMP}
 # now we have a version of 'main-driver.odd' in TMP that has XIncludes
 # included, but has no <schemaSpec>s. Generate HTML from it:
 ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} ${TMP}
 # use correct name and nuke TMP file:
-mv ${TMP}.html main-driver.html
-rm ${TMP}
+mv ${TMP}.html bptl-driver.html
+#rm ${TMP}

@@ -32,7 +32,7 @@
              the version # here, remember to change it
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
-                lib-header.odd, too! -->
+                bptl-header.odd, too! -->
         <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
       </editionStmt>
       <publicationStmt>
@@ -75,7 +75,7 @@
           header ODD (which is now a complete <gi>TEI</gi>
           document)</item>
           <item>Take out some stuff that is now already in
-          lib-header.odd</item>
+          bptl-header.odd</item>
         </list>
       </change>
       <change who="#sbauman.emt" when="2009-10-05"> Begun, based on level 2. </change>
@@ -604,7 +604,7 @@
         <!-- ********************************************* -->
         <div type="specification">
           <head>Specification</head>
-          <schemaSpec ident="lib3" docLang="en" xml:lang="en" prefix="lib3_" source="tei:3.3.0">
+          <schemaSpec ident="bptl-L3" docLang="en" xml:lang="en" prefix="L3_" source="tei:3.3.0">
             <!-- The @source on <elementSpec>, above, is the version
                  number against which our ODD files are built. -->
             <moduleRef key="core"/>
@@ -613,7 +613,7 @@
             <moduleRef key="linking" include="ab"/>
             <moduleRef key="transcr" include="facsimile surface"/>
             <moduleRef key="namesdates" include="orgName persName"/>
-            <specGrpRef target="./lib-header.odd#libHeadSpec"/>
+            <specGrpRef target="./bptl-header.odd#libHeadSpec"/>
             <moduleRef key="figures" include="table row cell figure"/>
             <!-- ****************************************** -->
             <!-- Changes to elements, in alphabetical order -->
