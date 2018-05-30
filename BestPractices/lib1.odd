@@ -1,1 +1,740 @@
-level1.odd
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:s="http://purl.oclc.org/dsdl/schematron" 
+     xml:lang="en" version="3.1.0">
+  <!-- The value of TEI/@version is the version number of P5 to which the ODDs conform. -->
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TEI in Libraries level 1</title>
+        <author>
+          <name type="organization">TEI SIG on Libraries</name>
+        </author>
+        <editor>
+          <name type="person">Kevin Hawkins</name>
+        </editor>
+        <editor>
+          <name type="person">Michelle Dalmau</name>
+        </editor>
+        <editor>
+          <name type="person">Elli Mylonas</name>       
+        </editor>
+        <editor>
+          <name type="person">Syd Bauman</name>
+        </editor>
+        <editor>
+          <name type="person" xml:id="sbauman.emt">Syd Bauman</name>
+        </editor>
+      </titleStmt>
+      <editionStmt>
+        <!-- This is the version number of the BPTL. When you change
+             the version # here, remember to change it
+             a) in the <editionStmt>s of the other .odd files, and
+             b) in the semi-closed list of values of @url of <schemaRef> in
+                lib-header.odd, too! -->
+        <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
+      </editionStmt>
+      <publicationStmt>
+        <authority>TEI SIG on Libraries</authority>
+        <availability status="restricted">
+          <ab>Copyleft 2009 DLF</ab>
+          <p>Permission is granted to copy, distribute and/or modify
+          this document under the terms of the <ref target="http://www.gnu.org/licenses/fdl-1.2.html">GNU Free
+          Documentation License, Version 1.2</ref> or any later
+          version published by the Free Software Foundation; with no
+          Invariant Sections, no Front-Cover Texts, and no Back-Cover
+          Texts. A copy of the license is included in the document
+          entitled <name type="file">COPYING.txt</name>.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>No source in the transcriptional sense, but this document
+        is a re-implementation of
+        <bibl>
+          <title>TEI in Libraries: Guidelines for Best Practices</title>
+          <author>TEI in Libraries SIG</author>
+          <author>Digital Libraries Federation TEI task force</author>
+          <ptr
+              target="https://wiki.tei-c.org/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices"/>
+        </bibl>
+        written in MediaWiki syntax and converted into the TEI ODD language. This
+        verssion started <date when="2009-07-30"/>.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="#sbauman.emt" when="2018-04-15">
+        Beginning to address ticket #27: use <gi>sourceDoc</gi> for
+        encoding of OCR text. Also update base version of TEI from
+        3.1.0 to 3.3.0.
+      </change>
+      <change who="#sbauman.emt" when="2010-12-19">
+        Updated to match current wiki document and (partially) take
+        advantage of new ODD features:
+        <list>
+          <item>wrap main content in a <gi>div</gi> so driver document
+          can include the contents of this document as a division of
+          its own</item>
+          <item>use <att>include</att> on <gi>moduleRef</gi> where we
+          only want certain elements</item>
+          <item>link to only the <gi>specGrp</gi> of interest in the
+          header ODD (which is now a complete <gi>TEI</gi>
+          document)</item>
+          <item>Add <code>tei</code> prefix to element selectors in
+          Schematron <att>context</att>s</item>
+        </list>
+      </change>
+      <change who="#sbauman.emt" when="2009-07-30">
+        Begun, based on lib1.odd
+      </change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <head>Best Practices for TEI in Libraries</head>
+      <head>Level 1: Fully Automated Conversion and Encoding</head>
+      <div type="setting">
+        <head>Setting</head>
+        <p>This is the <name>level 1</name> portion of the <ref
+        target="http://www.tei-c.org/wiki/index.php/TEI_in_Libraries:_Guidelines_for_Best_Practices#LEVEL_1:_Fully_Automated_Conversion_and_Encoding">Best
+        Practices for TEI in Libraries</ref>. This document is not
+        intended to stand alone, but rather to be considered in
+        concert with the entire TEI in Libraries recommendations.</p>
+      </div>
+      <divGen type="toc">
+        <head>Table of Contents</head>
+      </divGen>
+    </front>
+    <body>
+      <!-- This document is encoded with a single <div> as the one and
+           only child of <body>, which on the face of it seems silly.
+           This is on purpose, though, so that the driver document can
+           use XInclude to suck in a <div> for all of the body of
+           level 1, but have it be a <div> element so that it is valid
+           in the driver. -->
+      <div xml:id="level-1-content">
+        <head>Level 1: Fully Automated Conversion and Encoding</head>
+        <div type="reference">
+          <head>Reference</head>
+          <list>
+            <item>
+              <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">Chapter
+              3, Elements Available in All TEI Documents</ref>
+            </item>
+            <item>
+              <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html">Chapter 11, Representation of Primary Sources</ref>
+            </item>
+          </list>
+        </div>
+        <div type="purpose">
+          <head>Purpose</head>
+          <p>To create electronic text with the primary purpose of
+          keyword searching and linking to page images. The primary
+          advantage in using the TEI at this very strictly limited
+          level of encoding is that a TEI header is attached to the
+          text file.</p>
+        </div>
+        <div type="rationale">
+          <head>Rationale</head>
+          <p>The text is subordinate to the page image, and is not
+          intended to stand alone as an electronic text (without page
+          images). Level 1 texts are not intended to be adequate for
+          textual analysis; they are more likely to be suited to the
+          goals of a preservation unit or mass digitization
+          initiative. Though their encoding is minimal, Level 1 texts
+          are fully valid XML texts. In addition to taking advantage
+          of the TEI header, these texts, while lightly encoded, can
+          be easily combined with more richly encoded texts (that also
+          follow these guidelines) for searching. Further encoding
+          based on document structures or content analysis can be
+          added to a Level 1 text at any time.</p>
+          <list>
+            <head>Level 1 is most suitable for projects with the
+            following characteristics</head>
+            <item>a large volume of material is to be made available
+            online quickly</item>
+            <item>a digital image of each page is desired</item>
+            <item>no manual intervention will be performed in the text
+            creation process</item>
+            <item>the material is of interest to a large community of
+            users who wish to read texts that allow keyword
+            searching</item>
+            <item>sophisticated search and display capabilities based on
+            the structure of the text are not necessary</item>
+            <item>extensibility is desired; that is, one desires to keep
+            open the option for a higher level of encoding to be added at
+            a later date</item>
+          </list>
+        </div>
+        <div type="workflow">
+          <head>Workflow</head>
+          <p>Texts at Level 1 can be created and encoded by fully
+          automated means. Page images are scanned and processed using
+          OCR, but the text is left uncorrected (“dirty OCR”). Page
+          images are tagged using software that assigns page-level
+          metadata (page number and possibly tags for page features)
+          to each page image for display in the user interface in a
+          list of pages. Encoding is performed automatically: markup
+          with page-level metadata is inserted at selected points into
+          the dirty OCR text, generating a valid XML document. This
+          encoding is both minimal and reliable, and does not
+          typically require extensive review of each page of each
+          text.</p>
+        </div>
+        <div type="elrecs">
+          <head>Element Recommendations for Level 1</head>
+          <table rend="table">
+            <row>
+              <cell><gi>sourceDoc</gi></cell>
+              <cell>[recommended] There should be only one element
+              following the <gi>teiHeader</gi>, a single
+              <gi>sourceDoc</gi> containing a raw transcription of
+              the text of the source document.</cell>
+            </row>
+            <row>
+              <cell><gi>surface</gi></cell>
+              <cell>[recommended] Defines a written surface as a
+              two-dimensional coordinate space. There should be one
+              <gi>surface</gi> for each encoded page, whether it is
+              represented via a facsimile image file, a transcription,
+              or most likely a textual representation obtained from
+              OCR.</cell>
+            </row>
+            <row>
+              <cell><gi>zone</gi></cell>
+              <cell>A two dimensional region. May be used to divide a
+              <gi>surface</gi> or <gi>line</gi> into two dimensional
+              regions, e.g. a column, a dropped initial capital, or a
+              word of interest. A <gi>zone</gi> may itself be divided
+              into <gi>line</gi>s or <gi>zone</gi>s.</cell>
+            </row>
+            <row>
+              <cell><gi>line</gi></cell>
+              <cell>Contains text appearing in a single physical line
+              on the page.</cell>
+            </row>
+          </table>
+          <p>See the explanation above for <ref
+          target="#txtimglnk">how to link between the encoded text and
+          images of source documents</ref>.</p>
+        </div>
+        <div type="examples">
+             <head>Level 1 Examples</head>
+        <div type="example" xml:id="L1AHex">
+          <head>Level 1 Alger Hiss document</head>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <TEI xml:id="someid1">
+              <teiHeader xml:lang="en">
+                &lt;!-- header goes here -->
+              </teiHeader>
+              <sourceDoc xml:lang="en">
+                <surface n="113" facs="00000001.tif">
+                  &lt;!-- uncorrected OCR for first page image begins here -->
+                  <line>POINT VIII.</line>
+                  <line>BECAUSE OF UNLAWFUL SURVEILLANCE, PETITIONER'S</line>
+                  <line>CONVICTION SHOULD BE VACATED; ALTERNATIVELY,</line>
+                  <line>DISCOVERY AND A HEARING SHOULD BE ORDERED.</line>
+                  <line>The nature and extent of surveillance of Hiss, his</line>
+                  <line>family and associates was not known at the time of trial by</line>
+                  <line>the defense. Even now, with the release of some of the govern‐</line>
+                  <line>ment documents concerning FBI investigative techniques regarding</line>
+                  <line>Hiss, the full extent of surveillance -- wiretapping, mail open‐</line>
+                  <line>ings, mail covers, physical surveillance, and other intrusive</line>
+                  <line>techniques -- is still not 'clear. Nevertheless, it is apparent</line>
+                  <line>that information gathered through the exploitation of unlawful</line>
+                  <line>wiretaps and other illegal surveillance was used at trial and</line>
+                  <line>consequently the conviction must be reversed. Alternatively,</line>
+                  <line>further discovery and a hearing is essential to a fair deter‐</line>
+                  <line>mination regarding these issues.</line>
+                  <line>FBI surveillance of Hiss began in earnest in 1941 with</line>
+                  <line>the institution of a mail cover on his incoming correspondence</line>
+                  <line>at his home in connection with an FBI investigation of possible</line>
+                  <line>Hatch Act violations. CN Ex. 98A. Another mail cover was placed</line>
+                  <line></line>
+                  <line></line>
+                  <line>-113 -</line>
+                  <line></line>
+                  <line></line>
+                  &lt;!-- uncorrected OCR for first page image ends here -->
+                </surface>
+                <surface n="114" facs="00000002.tif">
+                  &lt;!-- uncorrected OCR for second page image begins here -->
+                  <line>on the Hiss mail in 1945, and at the same time the FBI obtained</line>
+                  <line>toll call records from the Hiss residence Telephone for the</line>
+                  <line>years 1943 and 1944 as well. CN Ex. 99. In September, 1945,</line>
+                  <line>the FBI intercepted telegrams to Hiss as well. CN Ex. 100.</line>
+                  <line>In late November, 1945, FBI surveillance of the Hiss</line>
+                  <line>residence in Washington, D.C., escalated. For the third time,</line>
+                  <line>a mail cover was instituted beginning on November 28, 1945,</line>
+                  <line>which was continued at least until 1946. CN Ex. 101 at p. 70;</line>
+                  <line>CN Ex. 102. Continuous physical surveillance of Hiss was begun</line>
+                  <line>as well. CN Ex. 101 at p. 72. Although this twenty-four-hour</line>
+                  <line>surveillance was discontinued on December 14, 1945, physical</line>
+                  <line>surveillance was conducted frequently at various times until</line>
+                  <line>September, 1947. CN Ex. 102; CN Ex. 103.</line>
+                  <line>The most intrusive invasion of petitioner's rights</line>
+                  <line>68/ Also before 1947, a letter from Priscilla Hiss addressed</line>
+                  <line>to her son, Timothy Hobson, was intercepted and its contents</line>
+                  <line>read. CN Ex. 100A at p. 167. In approximately March, 1947,</line>
+                  <line>a letter from a Michael Greenberg addressed to petitioner re‐</line>
+                  <line>garding an application for employment with the United Nations</line>
+                  <line>was also intercepted, in a manner not revealed by the docu‐</line>
+                  <line>ments. CN Ex. 100B</line>
+                  <line></line>
+                  <line></line>
+                  <line>-114 -</line>
+                  <line></line>
+                  <line></line>
+                  <line></line>
+                  &lt;!-- uncorrected OCR for second page image ends here -->
+                </surface>
+                <surface n="115" facs="00000003.tif">
+                  &lt;!-- uncorrected OCR for third page image begins here -->
+                  <line>occurred from December 13, 1945 until the Hisses moved from</line>
+                  <line>Washington, D.C. to New York City on September 13, 1947. A</line>
+                  <line>"technical surveillance," -- a wiretap -- was placed on the Hiss</line>
+                  <line>telephone at their residence on P Street-in Washington, D.C.</line>
+                  <line>The logs of this surveillance constitute twenty-nine volumes</line>
+                  <line>of FBI serials and are roughly 2,500 pages in length, in which</line>
+                  <line>an enormous amount of information concerning the Hisses' per‐</line>
+                  <line>sonal lives, relationships with friends and associates, and</line>
+                  <line>habits is recorded.</line>
+                  <line>The wiretap was installed following FBI Director Hoover's</line>
+                  <line>application to the Attorney General for authorization,  although</line>
+                  <line>no written authorization appears in the documents released to</line>
+                  <line>Hiss. The purpose of the application was to gather information</line>
+                  <line>regarding Hiss' alleged contacts with Soviet espionage agents and</line>
+                  <line>communists in government service, general allegations which had</line>
+                  <line>been made by Elizabeth Bentley and Chambers.</line>
+                  <line>As one would expect, the interception of every telephone</line>
+                  <line>h9/       Hoover's initial request was answered by a note reques‐</line>
+                  <line>ting information on Hiss. CN Ex. 104. Additional information</line>
+                  <line>was furnished by letter dated November 30, 1945. CN Ex. 105.</line>
+                  <line></line>
+                  <line></line>
+                  <line>-115 -</line>
+                  <line></line>
+                  <line></line>
+                  &lt;!-- uncorrected OCR for third page image ends here -->
+                </surface>
+              </sourceDoc>      
+            </TEI>
+          </egXML>
+        </div>
+        <div type="example">
+             <head>Level 1 Text with OCR Coordinates</head>
+             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <TEI xml:id="someid1a">
+                       <teiHeader xml:lang="en">
+                            &lt;!-- header goes here -->
+                       </teiHeader>
+                       <sourceDoc xml:lang="en">
+                            <surface n="113" facs="00000001.tif" ulx="0" uly="0" lrx="2550" lry="3300"> <!-- uncorrected OCR for first page image begins here -->
+      <zone type="print_space" ulx="407" uly="40" lrx="2525" lry="3219">
+        <zone type="text_block" ulx="1255" uly="386" lrx="1605" lry="426">
+            <line type="text_line" ulx="1256" uly="387" lrx="1604" lry="425">
+                <zone type="word" ulx="1256" uly="390" lrx="1411" lry="425">POINT</zone>
+                <zone type="word" ulx="1452" uly="387" lrx="1579" lry="424">VIII</zone>
+                <zone type="word" ulx="1592" uly="408" lrx="1604" lry="418">.</zone>
+            </line>
+        </zone>
+        <zone type="text_block" ulx="744" uly="481" lrx="2222" lry="534">
+            <line type="text_line" ulx="745" uly="482" lrx="2221" lry="533">
+                <zone type="word" ulx="745" uly="498" lrx="970" lry="533">BECAUSE</zone>
+                <zone type="word" ulx="1006" uly="498" lrx="1064" lry="529">OF</zone>
+                <zone type="word" ulx="1102" uly="494" lrx="1353" lry="528">UNLAWFUL</zone>
+                <zone type="word" ulx="1392" uly="491" lrx="1798" lry="527">SURVEILLANCE,</zone>
+                <zone type="word" ulx="1847" uly="482" lrx="2221" lry="521">PETITIONER'S</zone>
+            </line>
+        </zone>
+        <zone type="text_block" ulx="746" uly="546" lrx="2155" lry="593">
+            <line type="text_line" ulx="747" uly="547" lrx="2154" lry="592">
+                <zone type="word" ulx="748" uly="556" lrx="1068" lry="592">CONVICTION</zone>
+                <zone type="word" ulx="1103" uly="555" lrx="1291" lry="588">SHOULD</zone>
+                <zone type="word" ulx="1326" uly="553" lrx="1389" lry="585">BE</zone>
+                <zone type="word" ulx="1421" uly="551" lrx="1673" lry="588">VACATED?</zone>
+                <zone type="word" ulx="1712" uly="547" lrx="2154" lry="584">ALTERNATIVELY,</zone>
+            </line>
+        </zone>
+        <zone type="text_block" ulx="746" uly="607" lrx="2091" lry="652">
+            <line type="text_line" ulx="747" uly="608" lrx="2090" lry="651">
+                <zone type="word" ulx="747" uly="617" lrx="1037" lry="651">DISCOVERY</zone>
+                <zone type="word" ulx="1069" uly="616" lrx="1163" lry="648">AND</zone>
+                <zone type="word" ulx="1197" uly="615" lrx="1228" lry="647">A</zone>
+                <zone type="word" ulx="1262" uly="612" lrx="1488" lry="647">HEARING</zone>
+                <zone type="word" ulx="1522" uly="610" lrx="1712" lry="643">SHOULD</zone>
+                <zone type="word" ulx="1750" uly="610" lrx="1810" lry="641">BE</zone>
+                <zone type="word" ulx="1847" uly="608" lrx="2090" lry="641">ORDERED.</zone>
+            </line>
+        </zone>
+        <zone type="text_block" ulx="414" uly="802" lrx="2482" lry="2190">
+            <line type="text_line" ulx="741" uly="803" lrx="2345" lry="848">
+                <zone type="word" ulx="741" uly="808" lrx="833" lry="844">The</zone>
+                <zone type="word" ulx="870" uly="809" lrx="1059" lry="843">nature</zone>
+                <zone type="word" ulx="1099" uly="807" lrx="1191" lry="842">and</zone>
+                <zone type="word" ulx="1225" uly="808" lrx="1415" lry="841">extent</zone>
+                <zone type="word" ulx="1453" uly="805" lrx="1511" lry="841">of</zone>
+                <zone type="word" ulx="1551" uly="804" lrx="1930" lry="840">surveillance</zone>
+                <zone type="word" ulx="1968" uly="805" lrx="2027" lry="839">of</zone>
+                <zone type="word" ulx="2060" uly="803" lrx="2210" lry="844">Hiss,</zone>
+                <zone type="word" ulx="2255" uly="803" lrx="2345" lry="839">his</zone>
+            </line>
+            <line type="text_line" ulx="420" uly="924" lrx="2318" lry="976">
+                <zone type="word" ulx="420" uly="930" lrx="609" lry="975">family</zone>
+                <zone type="word" ulx="645" uly="930" lrx="740" lry="965">and</zone>
+                <zone type="word" ulx="777" uly="927" lrx="1092" lry="965">associates</zone>
+                <zone type="word" ulx="1128" uly="938" lrx="1221" lry="964">was</zone>
+                <zone type="word" ulx="1258" uly="930" lrx="1351" lry="964">not</zone>
+                <zone type="word" ulx="1386" uly="928" lrx="1547" lry="962">known</zone>
+                <zone type="word" ulx="1584" uly="930" lrx="1645" lry="962">at</zone>
+                <zone type="word" ulx="1681" uly="927" lrx="1769" lry="962">the</zone>
+                <zone type="word" ulx="1809" uly="925" lrx="1932" lry="961">time</zone>
+                <zone type="word" ulx="1969" uly="927" lrx="2027" lry="962">of</zone>
+                <zone type="word" ulx="2066" uly="925" lrx="2219" lry="961">trial</zone>
+                <zone type="word" ulx="2253" uly="926" lrx="2318" lry="971">by</zone>
+            </line>
+             &lt;!-- encoded text continues -->
+           </zone>
+         </zone>
+                            </surface>
+                            &lt;!-- encoded text continues -->
+                       </sourceDoc>
+                  </TEI>
+             </egXML>
+        </div>
+        </div>
+        <!-- ********************************************* -->
+        <div type="specification">
+          <head>Specification</head>
+          <schemaSpec ident="lib1" docLang="en" xml:lang="en" prefix="lib1_" source="tei:3.3.0">
+            <!-- The @source on <elementSpec>, above, is the version
+                 number against which our ODD files are built. -->
+            <moduleRef key="core"/>
+            <moduleRef key="tei"/>
+            <moduleRef key="textstructure" include="TEI"/>
+            <moduleRef key="transcr" include="sourceDoc facsimile surface surfaceGrp zone line"/>
+            <moduleRef key="namesdates" include="orgName persName"/>
+            <specGrpRef target="./lib-header.odd#libHeadSpec"/>
+            <!-- ****************************************** -->
+            <!-- Changes to elements, in alphabetical order -->
+            <!-- ****************************************** -->
+            <elementSpec module="textstructure" ident="TEI" mode="change">
+              <desc>contains a single TEI-in-Libraries level 1
+              document, comprising a TEI header and a text, either in
+              isolation or as part of a <gi>teiCorpus</gi>
+              element.</desc>
+              <classes mode="replace">
+                <memberOf key="att.global"/>
+              </classes>
+              <content>
+                <elementRef key="teiHeader"/>
+                <elementRef key="sourceDoc"/>
+              </content>
+              <exemplum xml:lang="en">
+                <p>For technical reasons, the TEI namespace is not
+                displayed in examples. However, a TEI namespace
+                declaration is required. It is typically given once on
+                the TEI root element, e.g. <tag type="start">TEI
+                xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <TEI>
+                    <teiHeader>
+                      <fileDesc>
+                        <titleStmt>
+                          <title>A Short Level 1 Document</title>
+                        </titleStmt>
+                        <publicationStmt>
+                          <p>Only published as an example.</p>
+                        </publicationStmt>
+                        <sourceDesc>
+                          <p>Since this is an example, it doesn't really have a source</p>
+                        </sourceDesc>
+                      </fileDesc>
+                    </teiHeader>
+                    <sourceDoc>
+                      <surface>
+                        <line>This is almost the shortest TEI document imaginable.</line>
+                      </surface>
+                    </sourceDoc>
+                  </TEI>
+                </egXML>
+              </exemplum>
+              <remarks>
+                <p>This element is required. The TEI namespace should
+                be specified on this element, e.g. <tag
+                type="start">TEI
+                xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
+              </remarks>
+            </elementSpec>
+            <elementSpec module="core" ident="author" mode="change">
+              <desc>in a bibliographic reference, contains the name
+              (typically encoded as <gi>name</gi>, <gi>persName</gi>, or
+              <gi>orgName</gi>) of the author, personal or corporate, of
+              a work; for example in the same form as that provided by a
+              recognized bibliographic name authority.</desc>
+              <exemplum xml:lang="en">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <author><orgName>British Broadcasting Corporation</orgName></author>
+                </egXML>
+              </exemplum>
+              <exemplum xml:lang="en">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <author><persName ref="#mdalmau.cny">Michelle Dalmau</persName></author>
+                </egXML>
+              </exemplum>
+              <exemplum xml:lang="en">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <author><name>Matthew Gibson</name></author>
+                </egXML>
+              </exemplum>
+              <exemplum xml:lang="en">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <author>anonymous</author>
+                </egXML>
+              </exemplum>
+              <exemplum xml:lang="en">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <author>unknown</author>
+                </egXML>
+              </exemplum>
+            </elementSpec>
+            <elementSpec module="textstructure" ident="body" mode="change">
+              <desc>contains the entirety of a single unitary text,
+              including any front or back matter.</desc>
+              <classes mode="replace">
+                <memberOf key="att.global"/>
+              </classes>
+              <content>
+                <alternate>
+                  <classRef key="model.divLike"/>
+                  <classRef key="model.div1Like"/>
+                </alternate>
+              </content>
+              <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="mul">
+                  <body>
+                    <div>
+                      <ab>
+                        Nu scylun hergan hefaenricaes uard
+                        metudæs maecti end his modgidanc
+                        uerc uuldurfadur sue he uundra gihuaes
+                        eci dryctin or astelidæ
+                        he aerist scop aelda barnum
+                        heben til hrofe haleg scepen.
+                        tha middungeard moncynnæs uard
+                        eci dryctin æfter tiadæ
+                        firum foldu frea allmectig
+                        primo cantauit Cædmon istud carmen.
+                      </ab>
+                    </div>
+                  </body>
+                </egXML>
+              </exemplum>
+              <remarks>
+                <p>At level 1, the content of <gi>body</gi> must be a
+                single <gi>div</gi> or <gi>div1</gi> element.</p>
+              </remarks>
+            </elementSpec>
+            <elementSpec module="textstructure" ident="div" mode="change">
+              <classes mode="change">
+                <memberOf key="att.typed" mode="delete"/>
+              </classes>
+              <content>
+                <elementRef key="ab"/>
+              </content>
+              <remarks>
+                <p>At level 1, the content of <gi>div</gi> must be a
+                single <gi>ab</gi> element.</p>
+              </remarks>
+            </elementSpec>
+            <elementSpec module="textstructure" ident="div1" mode="change">
+              <classes mode="change">
+                <memberOf key="att.typed" mode="delete"/>
+              </classes>
+              <content>
+                <elementRef key="ab"/>
+              </content>
+              <attList>
+                <attDef ident="type" mode="change">
+                  <datatype>
+                    <dataRef key="teidata.enumerated"/>
+                  </datatype>
+                  <defaultVal>section</defaultVal>
+                </attDef>
+              </attList>
+              <remarks>
+                <p>At level 1, the content of <gi>div1</gi> must be a
+                single <gi>ab</gi> element.</p>
+              </remarks>
+            </elementSpec>
+            <elementSpec module="core" ident="editor" mode="change">
+              <desc>contains the name (typically encoded as
+              <gi>name</gi>, <gi>persName</gi>, or <gi>orgName</gi>) of
+              an individual, institution, or organization acting as
+              editor.</desc>
+              <attList>
+                <attDef ident="role" mode="delete"/>
+              </attList>
+              <exemplum xml:lang="en">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <editor><persName ref="names.xml#khawkins.tvt">Kevin Hawkins</persName></editor>
+                </egXML>
+              </exemplum>
+            </elementSpec>
+            <elementSpec module="transcr" ident="facsimile" mode="change">
+              <content>
+                <elementRef key="surface" minOccurs="1" maxOccurs="unbounded"/>
+              </content>
+            </elementSpec>
+            <elementSpec module="core" ident="graphic" mode="change">
+              <content><empty/></content>
+            </elementSpec>
+            <elementSpec module="core" ident="note" mode="change">
+              <attList>
+                <attDef ident="anchored" mode="delete"/>
+                <attDef ident="target" mode="delete"/>
+                <attDef ident="targetEnd" mode="delete"/>
+              </attList>
+            </elementSpec>
+            <elementSpec module="namesdates" ident="orgName" mode="change">
+              <classes mode="change">
+                <memberOf mode="delete" key="att.datable"/>
+              </classes>
+            </elementSpec>
+            <elementSpec module="namesdates" ident="persName" mode="change">
+              <classes mode="change">
+                <memberOf mode="delete" key="att.datable"/>
+              </classes>
+            </elementSpec>
+            <elementSpec module="core" ident="ptr" mode="change">
+              <attList>
+                <attDef ident="cRef" mode="delete"/>
+              </attList>
+            </elementSpec>
+            <elementSpec module="core" ident="ref" mode="change">
+              <attList>
+                <attDef ident="cRef" mode="delete"/>
+              </attList>
+            </elementSpec>
+            <elementSpec module="transcr" ident="surface" mode="change">
+              <attList>
+                <attDef ident="attachment" mode="delete"/>
+                <attDef ident="flipping" mode="delete"/>
+              </attList>
+            </elementSpec>
+            <elementSpec module="transcr" ident="zone" mode="change">
+              <attList>
+                <attDef ident="rotate" mode="delete"/>
+              </attList>
+            </elementSpec>
+            <!-- ********************************* -->
+            <!-- Element deletion, in module order -->
+            <!-- ********************************* -->
+            <elementSpec module="core" ident="add" mode="delete"/>
+            <elementSpec module="core" ident="binaryObject" mode="delete"/>
+            <elementSpec module="core" ident="cb" mode="delete"/>
+            <elementSpec module="core" ident="corr" mode="delete"/>
+            <elementSpec module="core" ident="del" mode="delete"/>
+            <elementSpec module="core" ident="desc" mode="delete"/>
+            <elementSpec module="core" ident="distinct" mode="delete"/>
+            <elementSpec module="core" ident="divGen" mode="delete"/>
+            <elementSpec module="core" ident="gap" mode="delete"/>
+            <elementSpec module="core" ident="gb" mode="delete"/>
+            <elementSpec module="core" ident="graphic" mode="delete"/>
+            <elementSpec module="core" ident="head" mode="delete"/>
+            <elementSpec module="core" ident="headItem" mode="delete"/>
+            <elementSpec module="core" ident="headLabel" mode="delete"/>
+            <elementSpec module="core" ident="hi" mode="delete"/>
+            <elementSpec module="core" ident="index" mode="delete"/>
+            <elementSpec module="core" ident="l" mode="delete"/>
+            <elementSpec module="core" ident="lb" mode="delete"/>
+            <elementSpec module="core" ident="lg" mode="delete"/>
+            <elementSpec module="core" ident="listBibl" mode="delete"/>
+            <elementSpec module="core" ident="measure" mode="delete"/>
+            <elementSpec module="core" ident="measureGrp" mode="delete"/>
+            <elementSpec module="core" ident="media" mode="delete"/>
+            <elementSpec module="core" ident="meeting" mode="delete"/>
+            <elementSpec module="core" ident="mentioned" mode="delete"/>
+            <elementSpec module="core" ident="milestone" mode="delete"/>
+            <elementSpec module="core" ident="num" mode="delete"/>
+            <elementSpec module="core" ident="orig" mode="delete"/>
+            <elementSpec module="core" ident="pb" mode="delete"/>
+            <elementSpec module="core" ident="quote" mode="delete"/>
+            <elementSpec module="core" ident="reg" mode="delete"/>
+            <elementSpec module="core" ident="rs" mode="delete"/>
+            <elementSpec module="core" ident="said" mode="delete"/>
+            <elementSpec module="core" ident="sic" mode="delete"/>
+            <elementSpec module="core" ident="soCalled" mode="delete"/>
+            <elementSpec module="core" ident="sp" mode="delete"/>
+            <elementSpec module="core" ident="speaker" mode="delete"/>
+            <elementSpec module="core" ident="stage" mode="delete"/>
+            <elementSpec module="core" ident="teiCorpus" mode="delete"/>
+            <elementSpec module="core" ident="time" mode="delete"/>
+            <elementSpec module="core" ident="unclear" mode="delete"/>
+            <!-- ****************************************************** -->
+            <!-- Class deletions (both deletion of classes and deletion -->
+            <!-- of attributes from classes) in no particiular order    -->
+            <!-- ****************************************************** -->
+            <classSpec module="tei" type="atts" ident="att.global" mode="change">
+              <attList>
+                <attDef ident="xml:base" mode="delete"/>
+              </attList>
+            </classSpec>
+            <classSpec module="tei" type="atts" ident="att.global.change" mode="delete"/>
+            <classSpec module="tei" type="atts" ident="att.global.rendition" mode="change">
+              <attList>
+                <attDef ident="rend" mode="delete"/>
+                <attDef ident="rendition" mode="delete"/>
+              </attList>
+            </classSpec>
+            <classSpec module="tei" type="model" ident="model.inter" mode="change">
+              <classes mode="change">
+                <memberOf key="model.common" mode="delete"/>
+              </classes>
+            </classSpec>
+            <classSpec module="tei" ident="model.common" mode="delete" type="model"/>
+            <classSpec module="tei" ident="model.msItemPart" mode="delete" type="model"/> 
+            <classSpec module="tei" ident="model.msQuoteLike" mode="delete" type="model"/>
+            <classSpec module="tei" ident="model.personPart" mode="delete" type="model"/> 
+            <classSpec module="tei" ident="model.persStateLike" mode="delete" type="model"/>
+            <classSpec module="transcr" ident="att.coordinated" mode="change" type="atts">
+              <attList>
+                <attDef ident="start" mode="delete"/>
+                <attDef ident="points" mode="delete"/>
+              </attList>
+            </classSpec>
+            <classSpec module="tei" ident="att.declarable" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.declaring" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.divLike" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.editLike" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.naming" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.placement" mode="delete" type="atts"/>
+            <classSpec module="tei" ident="att.typed" mode="change" type="atts">
+              <attList>
+                <attDef ident="subtype" mode="delete"/>
+              </attList>
+            </classSpec>
+            <classSpec module="linking" ident="att.global.linking" mode="delete" type="atts"/>
+            <classSpec module="linking" ident="att.pointing" mode="change" type="atts">
+              <attList>
+                <attDef ident="targetLang" mode="delete"/>
+                <attDef ident="evaluate" mode="delete"/>
+              </attList>
+            </classSpec>
+            <classSpec module="linking" ident="att.pointing.group" mode="delete" type="atts"/>
+            <classSpec module="namesdates" ident="att.datable.iso" mode="delete" type="atts"/>
+            <classSpec module="textstructure" ident="model.divBottom" mode="delete" type="model"/>
+            <classSpec module="textstructure" ident="model.divTop" mode="delete" type="model"/>
+            <classSpec module="textstructure" ident="model.divTopPart" mode="delete" type="model"/>
+            <classSpec module="textstructure" ident="model.divWrapper" mode="delete" type="model"/>
+            <!-- Not a class deletion: model.noteLike is removed from model.global at levels 1 & 2 -->
+            <classSpec module="core" ident="model.noteLike" mode="change" type="model">
+              <classes mode="replace"/>
+            </classSpec>
+          </schemaSpec>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
