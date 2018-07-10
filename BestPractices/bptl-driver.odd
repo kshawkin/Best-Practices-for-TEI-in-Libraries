@@ -535,250 +535,249 @@
         values to the project ODD.</p>
         <!-- When changing values for the @type attribute on the <div>
              element, remember to make the parallel adjustments to the
-             list that appears in the prose of the BPTL and to the
-             attDef for the @type attribute, so that the values remain
-             in sync -->
-        
-        <table rend="table">
-          <row>
-            <cell cols="2">Front Matter</cell>
-          </row>
-          <row role="label">
-            <cell>Attribute Value</cell>
-            <cell>Description</cell>
-          </row>
-          <row>
-            <cell>abstract</cell>
-            <cell>Usually appears in front matter.</cell>
-          </row>
-          <row>
-            <cell>acknowledgement</cell>
-            <cell>Usually appears in front matter.</cell>
-          </row>
-          <row>
-            <cell>contents</cell>
-            <cell>A table of contents. Usually appears in front matter.</cell>
-          </row>
-          <row>
-            <cell>dedication</cell>
-            <cell>A dedication. Usually appears in front matter.</cell>
-          </row>
-          <row>
-            <cell>docAuthorization</cell>
-            <cell>A statement indicating that the document's printing was officially authorized.</cell>
-          </row>
-          <row>
-            <cell>foreword</cell>
-            <cell>Usually appears in front matter.</cell>
-          </row>
-          <row>
-            <cell>frontispiece</cell>
-            <cell>A portrait or other image (usually of the author, usually full page) printed at the
-              front of a document. Usually appears in front matter.</cell>
-          </row>
-          <row>
-            <cell>imprimatur</cell>
-            <cell>A formal indication (usually on the title page or in the front matter) that the
-              document has received official license to be printed.</cell>
-          </row>
-          <row>
-            <cell>preface</cell>
-            <cell>A section of the front matter that does not carry a more specific designation. Usually
-              appears in front matter.</cell>
-          </row>
-        </table>
-        
-       
-        <table rend="table">
-          <row>
-            <cell cols="5">Body</cell>
-          </row>
-          <row role="label">
-            <cell>Attribute Value</cell>
-            <cell>Description</cell>
-          </row>
-          <row>
-            <cell>book</cell>
-            <cell>A major structural component of a long work, identified explicitly in the text as a
-              "book"</cell>
-           </row>
-          <row>
-            <cell>chapter</cell>
-            <cell>A chapter, typically in a prose document.</cell>
-          </row>
-          <row>
-            <cell>part</cell>
-            <cell>A major component of a work, containing further subdivisions.</cell>
-          </row>
-          <row>
-            <cell>section</cell>
-            <cell>A generic section of a larger work.</cell>
-          </row>
-          <row>
-            <cell>subsection</cell>
-            <cell>A generic subdivision of a section.</cell>
-          </row>
-          <row>
-            <cell>volume</cell>
-            <cell>A single printed volume in a multi-volume work.</cell>
-          </row>
-           <row>
-            <cell>drama</cell>
-            <cell>A dramatic text.</cell>
-          </row>
-          <row>
-            <cell>dramaPart</cell>
-            <cell>A portion of a drama other than a prologue, act, scene, or epilogue.</cell>
-          </row>
-          <row>
-            <cell>act</cell>
-            <cell>An act in a dramatic text.</cell>
-          </row>
-          <row>
-            <cell>scene</cell>
-            <cell>A scene in a dramatic text.</cell>
-          </row>
-          <row>
-            <cell>castlist</cell>
-            <cell>A list of characters in a dramatic text.</cell>
-          </row>
-          <row>
-            <cell>poem</cell>
-            <cell>A poem.</cell>
-          </row>
-          <row>
-            <cell>poemGroup</cell>
-            <cell>A group of two or more poems under a common heading.</cell>
-          </row>
-           <row>
-            <cell>argument</cell>
-            <cell>A short passage at the start of a document or section giving a prose description of
-              its contents.</cell>
-          </row>
-          <row>
-            <cell>corrigenda</cell>
-            <cell>A section describing corrections to be made to the document.</cell>
-          </row>
-          <row>
-            <cell>entry</cell>
-            <cell>An entry in a document that is organized as a log or diary with dated entries.</cell>
-            
-            <row>
-              <cell>epigraph</cell>
-              <cell>A short quotation at the start of a document or section, often accompanied by an
-                attribution.</cell>
-            </row>
-            <row>
-              <cell>epilogue</cell>
-              <cell>A short concluding section, usually of a dramatic or fictional work. </cell>
-            </row>
-            <row>
-              <cell>prologue</cell>
-              <cell>An opening section of a literary work (typically drama or poetry).</cell>          </row>
-            <row>
-              <cell>narrative</cell>
-              <cell>An embedded narrative.</cell>
-            </row>
-            <row>
-              <cell>nonfictionProse</cell>
-              <cell>A text intended to be nonfiction consisting primarily of prose.</cell>
-            </row>
-            <row>
-              <cell>novelPart</cell>
-              <cell>A portion of a novel.</cell>
-            </row>
-            <row>
-              <cell>advert</cell>
-              <cell>An advertisement for a printed work or other product.</cell>
-            </row>
-            <row>
-              <cell>calendar</cell>
-              <cell>A formal calendar; a document or document section identifying itself as a
-                calendar.</cell>
-            </row>
-            <row>
-              <cell>essay</cell>
-              <cell>A short prose non-fiction document.</cell>
-            </row>
-            <row>
-              <cell>examination</cell>
-              <cell>A section that is identified explicitly as an <soCalled>examination</soCalled> in a
-                text that uses this as a main structural division.</cell>
-            </row>
-            <row>
-              <cell>letter</cell>
-              <cell>Any document in epistolary form, i.e. addressed by a sender to a recipient.</cell>
-            </row>
-            <row>
-              <cell>prayer</cell>
-              <cell>A prayer.</cell>
-            </row>
-            <row>
-              <cell>recipe</cell>
-              <cell>A recipe in a cookbook.</cell>
-            </row>
-            <row>
-              <cell>speech</cell>
-              <cell>A section described as a speech or public lecture, in a document that uses this as a
-                main structural division.</cell>
-            </row>
-            <row>
-              <cell>timeline</cell>
-              <cell>A timeline.</cell>
-            </row>
-            <row>
-              <cell>tract</cell>
-              <cell>A short treatise in pamphlet form often on a religious subject.</cell>
-            </row>
-          </row>
-          
-          
-        </table>
-        
-        <table rend="table">
-          <row>
-            <cell cols="2">Back Matter</cell>
-          </row>
-          <row role="label">
-            <cell>Attribute Value</cell>
-            <cell>Description</cell>
-          </row>
-          <row>
-            <cell>appendix</cell>
-            <cell>Usually appears in back matter.</cell>
-          </row>
-          <row>
-            <cell>bibliography</cell>
-            <cell>Usually appears in back matter.</cell>
-          </row>
-          <row>
-            <cell>colophon</cell>
-            <cell>A short inscription, typically at the end of a book or manuscript, containing the
-              title, printer, date and place of printing, etc. Usually appears in back matter.</cell>
-          </row>
-          <row>
-            <cell>concluding</cell>
-            <cell>Any section of the back matter that does not carry a more specific designation;
-              includes afterwords, epilogues, codas, etc.</cell>
-          </row>
-          <row>
-            <cell>endnotes</cell>
-            <cell>A section containing endnotes for the document.</cell>
-          </row>
-          <row>
-            <cell>glossary</cell>
-            <cell>Usually appears in back matter.</cell>
-          </row>
-          <row>
-            <cell>index</cell>
-            <cell>An alphabetical listing of the topics in a document, usually with accompanying
-              page references Usually appears in back matter.</cell>
-          </row>
-          <row>
-            <cell>notes</cell>
-            <cell>Usually appears in back matter.</cell>
-          </row>
-        </table>
+	     list that appears in the prose of the BPTL and to the
+	     attDef for the @type attribute, so that the values remain
+	     in sync -->
+	<div type="====">
+	  <head>Front Matter</head>
+	  <table rend="table">
+	    <row role="label">
+	      <cell>Attribute Value</cell>
+	      <cell>Description</cell>
+	    </row>
+	    <row>
+	      <cell>abstract</cell>
+	      <cell>Usually appears in front matter.</cell>
+	    </row>
+	    <row>
+	      <cell>acknowledgement</cell>
+	      <cell>Usually appears in front matter.</cell>
+	    </row>
+	    <row>
+	      <cell>contents</cell>
+	      <cell>A table of contents. Usually appears in front matter.</cell>
+	    </row>
+	    <row>
+	      <cell>dedication</cell>
+	      <cell>A dedication. Usually appears in front matter.</cell>
+	    </row>
+	    <row>
+	      <cell>docAuthorization</cell>
+	      <cell>A statement indicating that the document's printing was officially authorized.</cell>
+	    </row>
+	    <row>
+	      <cell>foreword</cell>
+	      <cell>Usually appears in front matter.</cell>
+	    </row>
+	    <row>
+	      <cell>frontispiece</cell>
+	      <cell>A portrait or other image (usually of the author, usually full page) printed at the
+	      front of a document. Usually appears in front matter.</cell>
+	    </row>
+	    <row>
+	      <cell>imprimatur</cell>
+	      <cell>A formal indication (usually on the title page or in the front matter) that the
+	      document has received official license to be printed.</cell>
+	    </row>
+	    <row>
+	      <cell>preface</cell>
+	      <cell>A section of the front matter that does not carry a more specific designation. Usually
+	      appears in front matter.</cell>
+	    </row>
+	  </table>
+	</div>
+	<div type="====">
+	  <head>Body</head>
+	  <table rend="table">
+	    <row>
+	      <cell cols="5">Body</cell>
+	    </row>
+	    <row role="label">
+	      <cell>Attribute Value</cell>
+	      <cell>Description</cell>
+	    </row>
+	    <row>
+	      <cell>book</cell>
+	      <cell>A major structural component of a long work, identified explicitly in the text as a
+	      "book"</cell>
+	    </row>
+	    <row>
+	      <cell>chapter</cell>
+	      <cell>A chapter, typically in a prose document.</cell>
+	    </row>
+	    <row>
+	      <cell>part</cell>
+	      <cell>A major component of a work, containing further subdivisions.</cell>
+	    </row>
+	    <row>
+	      <cell>section</cell>
+	      <cell>A generic section of a larger work.</cell>
+	    </row>
+	    <row>
+	      <cell>subsection</cell>
+	      <cell>A generic subdivision of a section.</cell>
+	    </row>
+	    <row>
+	      <cell>volume</cell>
+	      <cell>A single printed volume in a multi-volume work.</cell>
+	    </row>
+	    <row>
+	      <cell>drama</cell>
+	      <cell>A dramatic text.</cell>
+	    </row>
+	    <row>
+	      <cell>dramaPart</cell>
+	      <cell>A portion of a drama other than a prologue, act, scene, or epilogue.</cell>
+	    </row>
+	    <row>
+	      <cell>act</cell>
+	      <cell>An act in a dramatic text.</cell>
+	    </row>
+	    <row>
+	      <cell>scene</cell>
+	      <cell>A scene in a dramatic text.</cell>
+	    </row>
+	    <row>
+	      <cell>castlist</cell>
+	      <cell>A list of characters in a dramatic text.</cell>
+	    </row>
+	    <row>
+	      <cell>poem</cell>
+	      <cell>A poem.</cell>
+	    </row>
+	    <row>
+	      <cell>poemGroup</cell>
+	      <cell>A group of two or more poems under a common heading.</cell>
+	    </row>
+	    <row>
+	      <cell>argument</cell>
+	      <cell>A short passage at the start of a document or section giving a prose description of
+	      its contents.</cell>
+	    </row>
+	    <row>
+	      <cell>corrigenda</cell>
+	      <cell>A section describing corrections to be made to the document.</cell>
+	    </row>
+	    <row>
+	      <cell>entry</cell>
+	      <cell>An entry in a document that is organized as a log or diary with dated entries.</cell>
+	    </row>	      
+	    <row>
+	      <cell>epigraph</cell>
+	      <cell>A short quotation at the start of a document or section, often accompanied by an
+	      attribution.</cell>
+	    </row>
+	    <row>
+	      <cell>epilogue</cell>
+	      <cell>A short concluding section, usually of a dramatic or fictional work. </cell>
+	    </row>
+	    <row>
+	      <cell>prologue</cell>
+	    <cell>An opening section of a literary work (typically drama or poetry).</cell>          </row>
+	    <row>
+	      <cell>narrative</cell>
+	      <cell>An embedded narrative.</cell>
+	    </row>
+	    <row>
+	      <cell>nonfictionProse</cell>
+	      <cell>A text intended to be nonfiction consisting primarily of prose.</cell>
+	    </row>
+	    <row>
+	      <cell>novelPart</cell>
+	      <cell>A portion of a novel.</cell>
+	    </row>
+	    <row>
+	      <cell>advert</cell>
+	      <cell>An advertisement for a printed work or other product.</cell>
+	    </row>
+	    <row>
+	      <cell>calendar</cell>
+	      <cell>A formal calendar; a document or document section identifying itself as a
+	      calendar.</cell>
+	    </row>
+	    <row>
+	      <cell>essay</cell>
+	      <cell>A short prose non-fiction document.</cell>
+	    </row>
+	    <row>
+	      <cell>examination</cell>
+	      <cell>A section that is identified explicitly as an <soCalled>examination</soCalled> in a
+	      text that uses this as a main structural division.</cell>
+	    </row>
+	    <row>
+	      <cell>letter</cell>
+	      <cell>Any document in epistolary form, i.e. addressed by a sender to a recipient.</cell>
+	    </row>
+	    <row>
+	      <cell>prayer</cell>
+	      <cell>A prayer.</cell>
+	    </row>
+	    <row>
+	      <cell>recipe</cell>
+	      <cell>A recipe in a cookbook.</cell>
+	    </row>
+	    <row>
+	      <cell>speech</cell>
+	      <cell>A section described as a speech or public lecture, in a document that uses this as a
+	      main structural division.</cell>
+	    </row>
+	    <row>
+	      <cell>timeline</cell>
+	      <cell>A timeline.</cell>
+	    </row>
+	    <row>
+	      <cell>tract</cell>
+	      <cell>A short treatise in pamphlet form often on a religious subject.</cell>
+	    </row>
+	  </table>
+	</div>
+	<div type="=====">
+	  <head>Back Matter</head>
+	  <table rend="table">
+	    <row>
+	      <cell cols="2">Back Matter</cell>
+	    </row>
+	    <row role="label">
+	      <cell>Attribute Value</cell>
+	      <cell>Description</cell>
+	    </row>
+	    <row>
+	      <cell>appendix</cell>
+	      <cell>Usually appears in back matter.</cell>
+	    </row>
+	    <row>
+	      <cell>bibliography</cell>
+	      <cell>Usually appears in back matter.</cell>
+	    </row>
+	    <row>
+	      <cell>colophon</cell>
+	      <cell>A short inscription, typically at the end of a book or manuscript, containing the
+	      title, printer, date and place of printing, etc. Usually appears in back matter.</cell>
+	    </row>
+	    <row>
+	      <cell>concluding</cell>
+	      <cell>Any section of the back matter that does not carry a more specific designation;
+	      includes afterwords, epilogues, codas, etc.</cell>
+	    </row>
+	    <row>
+	      <cell>endnotes</cell>
+	      <cell>A section containing endnotes for the document.</cell>
+	    </row>
+	    <row>
+	      <cell>glossary</cell>
+	      <cell>Usually appears in back matter.</cell>
+	    </row>
+	    <row>
+	      <cell>index</cell>
+	      <cell>An alphabetical listing of the topics in a document, usually with accompanying
+	      page references Usually appears in back matter.</cell>
+	    </row>
+	    <row>
+	      <cell>notes</cell>
+	      <cell>Usually appears in back matter.</cell>
+	    </row>
+	  </table>
+	</div>
         
       </div>
       <div type="===">
