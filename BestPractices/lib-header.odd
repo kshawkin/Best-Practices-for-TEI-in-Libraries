@@ -638,7 +638,7 @@
               <cell cols="4">
                 <gi>availability</gi>
               </cell>
-              <cell>Provide a prose rights statement for the TEI document. If possible, provide a standard license, such as one from Creative Commons using the <gi>license</gi> element. Otherwise, provide information on all applicable rights: rights in the original work, rights in page images of the source document, and rights in the encoded text in a <gi>p</gi> element</p></cell>
+              <cell>Provide a prose rights statement for the TEI document. If possible, provide a standard license, such as one from Creative Commons using the <gi>license</gi> element. Otherwise, provide information on all applicable rights: rights in the original work, rights in page images of the source document, and rights in the encoded text in a <gi>p</gi> element</cell>
               <cell>540</cell>
               <cell>n/a</cell>
             </row>
