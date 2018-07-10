@@ -1,57 +1,106 @@
 #! /bin/bash
 
-# buildBP.bash
+CMDNAME=`basename $0`
 
+help="
+# ${CMDNAME}
+#
 # This is a script intended to build the TEI-in-Libraries
 # _Best_Practices_for_TEI_in_Libraries_ from the source ODD files on
 # Syd's machines. You will probably have to change some tests or paths
-# to get it to work on your system. In addition, you would need to
-# have the following things installed:
+# to get it to work on your system. Most of these paths can be changed
+# by overriding the default on the commandline.
+# In addition, you would need to have the following things installed:
 # * xmllint
 # * xmlstarlet
+# * jing
 # You need to either have the following installed, or provide
 # pointers to web-accessible copies of them on the commandline:
-# * TEI Stylesheets repo (modified -- see WARNING below)
+# * TEI Stylesheets repo
 # * TEI P5 source document
-# And it is helpful to have a copy of the RELAX NG schema available or
-# pointed to on the commandline.
+# And it is helpful to have a copy of the RELAX NG schema for the RELAX NG
+# language itself available or pointed to on the commandline.
+#
+# Example usage:
+# $ cd Best-Practices-for-TEI-in-Libraries/BestPractices/
+# $ XSLDIR=~/Documents/Stylesheets_dev ${CMDNAME}
+#
+# To get lots of verbose debugging information, in addition to not
+# deleting temporary files, use the -d switch. Note that switch
+# parsing is *not* displayed.
+#
+# To get an output string that gives the command with several of the
+# important variables shown with their defaults, use the -p switch; nothing
+# else happens except the output. Thus, a reasonable approach to using
+# this command would be to:
+# 1) just issue it and see if it works out of the box
+# 2) if not, use it with the -p switch
+# 3) copy the output generated in (2) to the commandline, changing the
+#    paths as needed
+"
 
-# --------- WARNING ---------
-# This build process requires the change made to the Stylesheets at commit
-# 0f7cdf348973d5eb80f6f28eb702d88548e086d8
+DEBUG=false
+PRINTPATHS=false
+while getopts "dphH" opt; do
+    case $opt in
+	d ) DEBUG=true
+	    ;;
+	p ) PRINTPATHS=true
+	    ;;
+	h ) printf "usage: $0 [-dphH]\nshould be issued from the working directory that contains the source BPTL ODD files; use the -H switch for more detailed help info\n"
+	    exit 1
+	    ;;
+	H ) printf "$help"
+	    exit 1
+	    ;;
+	* ) printf "usage: $0 [-dphH]\nshould be issued from the working directory that contains the source BPTL ODD files; use the -H switch for more detailed help info\n"
+	    exit 1
+    esac
+done
+shift $((OPTIND - 1))
 
-# watch what happens, as it happens
-# set -o xtrace
+
+# if user asked for it, show her everything that happens hereafter
+if [ $DEBUG = true ]; then set -o xtrace; fi
 
 PSC=${PSC:-_}                     # prefix separator string (typically '.' or '_')
 TMPDIR=${TMPDIR:-/tmp}            # temporary directory
 TMP=${TiLBPtemp}$$.xml            # temporary sibling file
-TMPTMP=${TMPDIR}/{$TMP}           # temporary file in temp dir
-
-# find xml starlet cmd
-if which xml ; then
-    STARLET=`which xml`
-elif which xmlstarlet ; then
-    STARLET=`which xmlstarlet`
-fi
+TMPTMP=${TMPDIR}/${TMP}           # temporary file in temp dir
 
 if [ -e /Library/PreferencePanes/ ] ; then
     # on a Mac OS X system. Hope it is Syd's, as these paths are where he stores stuff.
     XSLDIR=${XSLDIR:-~/Documents/Stylesheets}
     P5SRC=${P5SRC:-~/Documents/TEI-GitHub/P5/p5subset.xml}
     RELAX=${RELAX:--c /usr/local/share/emacs/23.2/etc/schema/relaxng.rnc}
-elif [ ${HOSTNAME} = albus ] || [ ${HOSTNAME} = aberforth ] || [ ${HOSTNAME} = paramedic ]; then
-    # Syd's desktop, use whatever his symlinks point to
+    JING=${JING:-/Applications/oxygen/lib/jing.jar}
+elif [ ${HOSTNAME} = albus ] || [ ${HOSTNAME} = aberforth ] || [ ${HOSTNAME} = paramedic ] || [ ${HOSTNAME} = Nimbus2016 ]; then
+    # on one of Syd's GNU/Linux systems, use whatever his symlinks point to
     XSLDIR=${XSLDIR:-~/Documents/Stylesheets}
     P5SRC=${P5SRC:-/home/syd/Documents/TEI_dev/P5/p5subset.xml}
-    RELAX=${RELAX:--c /usr/share/emacs/24.5/etc/schema/relaxng.rnc}    
+    RELAX=${RELAX:--c /usr/share/emacs/24.5/etc/schema/relaxng.rnc}
+    JING=${JING:-/opt/Oxygen_XML_Editor_20/lib/jing.jar}
 elif egrep 'Ubuntu' /etc/issue || [ -e /etc/debian_veresion ]; then
     # on an Ubuntu or Debian system, use standard locations
     XSLDIR=${XSLDIR:-/usr/local/share/tei/Stylesheets}
     P5SRC=${P5SRC:-/usr/local/share/tei/P5/p5subset.xml}
+    JING=${JING:-/usr/share/java/jing.jar}
 else # dunno
     XSLDIR=${XSLDIR:-/usr/local/share/tei/Stylesheets}
     P5SRC=${P5SRC:-/usr/local/share/tei/P5/p5subset.xml}
+    JING=${JING:-/usr/share/java/jing.jar}
+fi
+
+if [ ${PRINTPATHS} = true ]; then
+    echo "XSLDIR=${XSLDIR} P5SRC=${P5SRC} RELAX=${RELAX} JING=${JING} ${0}"
+    exit 13
+fi
+
+# find xml starlet cmd
+if which xml ; then
+    STARLET=`which xml`
+elif which xmlstarlet ; then
+    STARLET=`which xmlstarlet`
 fi
 
 for BASE in bptl-L1 bptl-L2 bptl-L3 bptl-L4 ; do
@@ -115,10 +164,11 @@ echo ""; echo "--------- generate HTML from main driver ---------"
 # versions of `xmllint` do XInclude processing (using element() in
 # @xpointer) and some do not. So far, on all of my systems, one or the
 # other (or both) will do it.
-xmllint --xinclude bptl-driver.odd | ${STARLET} ed -N t=http://www.tei-c.org/ns/1.0 --delete "//t:schemaSpec" > ${TMP}
-# now we have a version of 'main-driver.odd' in TMP that has XIncludes
-# included, but has no <schemaSpec>s. Generate HTML from it:
-${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} ${TMP}
-# use correct name and nuke TMP file:
-mv ${TMP}.html bptl-driver.html
-rm ${TMP}
+xmllint --xinclude bptl-driver.odd | ${STARLET} ed -N t=http://www.tei-c.org/ns/1.0 --delete "//t:schemaSpec" > ${TMPTMP}
+# Now we have a version of 'main-driver.odd' in TMPTMP that has 
+# XIncludes included, but has no <schemaSpec>s.
+# Generate HTML from it:
+${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} ${TMPTMP}
+# use correct name and nuke TMPTMP file:
+mv ${TMPTMP}.html bptl-driver.html
+rm ${TMPTMP}
