@@ -638,7 +638,13 @@
               <cell cols="4">
                 <gi>availability</gi>
               </cell>
-              <cell>Provide a prose rights statement for the TEI document. If possible, provide a standard license, such as one from Creative Commons using the <gi>license</gi> element. Otherwise, provide information on all applicable rights: rights in the original work, rights in page images of the source document, and rights in the encoded text in a <gi>p</gi> element</cell>
+              <cell>Provide a prose rights statement for the TEI
+              document. If possible, provide a standard license, such
+              as one from Creative Commons, using the <gi>license</gi>
+              element. Otherwise, provide information on all
+              applicable rights—rights in the original work, rights
+              in page images of the source document, and rights in the
+              encoded text—in a <gi>p</gi> element.</cell>
               <cell>540</cell>
               <cell>n/a</cell>
             </row>
@@ -726,7 +732,13 @@
               <cell cols="4">
                 <gi>biblStruct</gi>
               </cell>
-              <cell>Use <gi>biblStruct</gi> with child elements arranged in the order below for ease of display according to ISBD. (This element is used instead of <gi>bibl</gi> to enforce structure, but <gi>biblFull</gi> is not used because it requires more elements than are typically available in library metadata sources.</cell>
+              <cell>Use <gi>biblStruct</gi> with child elements
+              arranged in the order below for ease of display
+              according to ISBD. (This element is used instead of
+              <gi>bibl</gi> to enforce structure, but
+              <gi>biblFull</gi> is not used because it requires more
+              elements than are typically available in library
+              metadata sources.)</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1332,7 +1344,7 @@
                 <gi>projectDesc</gi>
                 <gi>p</gi>
               </cell>
-              <cell>Enter a description of the purpose for which the electronic file was encoded.</cell>
+              <cell>[Optional] Enter a description of the purpose for which the electronic file was encoded.</cell>
               <cell>500</cell>
               <cell>n/a</cell>
             </row>
@@ -1344,8 +1356,10 @@
                 <tag>schemaRef url="___"</tag>
               </cell>
               <cell>
-                <p>Use of the <gi>schemaRef</gi> element is recommended to record the encoding level. 
-                Use the <att>url</att> attribute for the value that indicates the encoding level:
+		<p>[Recommended] Use of the <gi>schemaRef</gi> element is
+		recommended to record the encoding level. Use the
+		<att>url</att> attribute for the value that indicates
+		the encoding level:
                 <list>
                   <item> Level 1: <val>bptl:L1-v4.0.0a</val></item>
                   <item> Level 2: <val>bptl:L2-v4.0.0a</val></item>
@@ -1372,10 +1386,7 @@
                 <tag>editorialDecl</tag>
               </cell>
               <cell>
-                <p>Child elements <gi>address</gi>,
-                <gi>editorial</gi>, <gi>principle</gi>, and
-                <gi>practices</gi> applied during the encoding of the
-                text.</p>
+                <p>[optional]</p>
               </cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
@@ -1505,15 +1516,15 @@
               <cell>│</cell>
               <cell>├</cell>
               <cell cols="4">
-                <tag>rendition xml:id="___" scheme="css"</tag>
+                <tag>rendition selector="___" scheme="css"</tag>
               </cell>
-              <cell>Include one or more <gi>rendition</gi> elements
-              for each unique value of a <att>rendition</att>
-              attribute (not <att>rend</att> attribute) used in the
-              body of the TEI document. The <att>xml:id</att>
-              attribute is required in order to provide an identifier
-              to which <att>rendition</att> attributes in the body
-              refer.</cell>
+              <cell>Include one or more <gi>rendition</gi> elements to
+              indicate the default renditions of various elements in
+              the source document. Use the <att>selector</att>
+              attribute to indicate to which elements this rendition
+              should be applied. (Alternatively, use an
+              <att>xml:id</att> attribute and point to it from a
+              <att>rendition</att> attribute.)</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1527,7 +1538,10 @@
                 <gi>tagUsage</gi>
               </cell>
               <cell>
-                <gi>tagUsage</gi> should be one of the following:
+		[required] This element must have one and only one
+		child <gi>tagUsage</gi> element for describing the
+		encoding of logical divisions, which must be one of
+		the following:
                 <list>
                   <item>
                     <eg>&lt;tagUsage gi="div1"&gt;Numbered divs used.&lt;/tagUsage&gt;</eg>
@@ -1547,7 +1561,7 @@
                 intended for use at level 1. At levels 2 and above
                 <gi>sourceDoc</gi> is optional, and the
                 <gi>tagUsage</gi> should describe the divisions used
-                inside the required <gi>text</gi>.
+                within the required <gi>text</gi>.
               </cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
@@ -1561,8 +1575,9 @@
                 <tag>taxonomy xml:id="___"</tag>
                 <gi>bibl</gi>
               </cell>
-              <cell>Use to document classification schemes and controlled vocabularies
-              referenced by a <att>scheme</att> attribute elsewhere in the header or
+              <cell>[optional] Use to document classification schemes
+              and controlled vocabularies referenced by a
+              <att>scheme</att> attribute elsewhere in the header or
               body of the TEI document. For example:
               <list>
                 <item>
@@ -1588,10 +1603,42 @@
                 <gi>samplingDecl</gi>
                 <gi>p</gi>
               </cell>
-              <cell>Enter a prose description of the rationale and methods used in selecting texts, or parts of text, for inclusion</cell>
+              <cell>[optional] Used to record a prose description of
+              the rationale and methods used in selecting texts, or
+              parts of text, for inclusion</cell>
               <cell>500</cell>
               <cell>n/a</cell>
-            </row>
+	    </row>
+
+	    <row>
+              <cell>│</cell>
+              <cell>├</cell>
+              <cell cols="5">
+                <gi>appInfo</gi>
+                <gi>app</gi>
+              </cell>
+              <cell>[optional] Used by external processes to record
+              information about themselves and the changes they have
+              made to the file.</cell>
+              <cell/>
+              <cell/>
+	    </row>
+
+	    <row>
+              <cell>│</cell>
+              <cell>├</cell>
+              <cell cols="5">
+                <gi>listPrefixDef</gi>
+                <tag>prefixDef ident="bptl" matchPattern="L([1-5])-v(\d+\.\d+\.\d+[aαβb]?)"
+          replacementPattern="http://www.tei-c.org/SIG/Libraries/teiinlibraries/$2/"</tag>
+              </cell>
+              <cell>[required] Defines the “bptl:” prefix used on the
+              value of the <att>url</att> attribute of the
+              <gi>schemaRef</gi> element. Additional <gi>prefixDef</gi> elements
+	      may be specified if other private URI schemes are to be used.</cell>
+              <cell/>
+              <cell/>
+	    </row>
 
             <row>
               <cell>├</cell>
@@ -1947,6 +1994,10 @@
               <content>
 		<elementRef key="biblStruct"/>
               </content>
+	      <constraintSpec ident="targetorcontent1" mode="delete" scheme="schematron"/>
+	      <attList>
+		<attDef ident="target" mode="delete"/>
+	      </attList>
             </elementSpec>
             <elementSpec module="core" ident="respStmt" mode="change">
               <content>
@@ -1958,7 +2009,7 @@
             </elementSpec>
             <moduleRef key="tagdocs" include="att val gi tag"/>
             <moduleRef key="header"
-                       include="appInfo application availability change classCode classDecl correction distributor edition editionStmt editorialDecl encodingDesc extent fileDesc hyphenation idno keywords langUsage language licence namespace normalization notesStmt profileDesc projectDesc publicationStmt punctuation quotation rendition revisionDesc samplingDecl schemaRef seriesStmt sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
+                       include="appInfo application availability change classCode classDecl correction distributor edition editionStmt editorialDecl encodingDesc extent fileDesc hyphenation idno keywords langUsage language licence listPrefixDef namespace normalization notesStmt prefixDef profileDesc projectDesc publicationStmt punctuation quotation rendition revisionDesc samplingDecl schemaRef seriesStmt sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
             <elementSpec module="header" ident="change" mode="change">
               <!-- constraintSpec scheme="schematron"
                    ident="revChronOrder"> </constraintSpec -->
@@ -2080,10 +2131,12 @@
               <sequence>
                 <elementRef key="projectDesc"   minOccurs="0" maxOccurs="1"/>
                 <elementRef key="schemaRef"     minOccurs="0" maxOccurs="unbounded"/>
-                <elementRef key="editorialDecl" minOccurs="1" maxOccurs="1"/>
+                <elementRef key="editorialDecl" minOccurs="0" maxOccurs="1"/>
                 <elementRef key="tagsDecl"      minOccurs="1" maxOccurs="1"/>
                 <elementRef key="classDecl"     minOccurs="0" maxOccurs="1"/>
-                <elementRef key="appInfo"       minOccurs="0" maxOccurs="1"/>
+		<elementRef key="samplingDecl"  minOccurs="0" maxOccurs="1"/>
+                <elementRef key="appInfo"       minOccurs="0" maxOccurs="unbounded"/>
+		<elementRef key="listPrefixDef" minOccurs="1" maxOccurs="unbounded"/>
               </sequence>
             </content>
           </elementSpec>
@@ -2101,6 +2154,40 @@
               </attDef>
             </attList>
           </elementSpec>
+	  <elementSpec ident="BPTL.required.prefixDef" mode="add">
+	    <altIdent>prefixDef</altIdent>
+	    <attList>
+	      <attDef ident="ident" usage="req">
+		<valList type="closed">
+		  <valItem ident="bptl">
+		    <gloss>Best Practices for TEI in Libraries</gloss>
+		  </valItem>
+		</valList>
+	      </attDef>
+	      <attDef ident="matchPattern" usage="req">
+		<valList type="closed">
+		  <valItem ident="L([1-5])-v(\d+\.\d+\.\d+[aαβb]?)">
+		    <desc>This regular expression matches BPTL version
+		    numbers like <q>L1-v1.0.2a</q>.</desc>
+		  </valItem>
+		</valList>
+	      </attDef>
+	      <attDef ident="replacementPattern" usage="req">
+		<valList type="semi">
+		  <valItem ident="http://www.tei-c.org/SIG/Libraries/teiinlibraries/$2/"/>
+		</valList>
+	      </attDef>
+	    </attList>
+	  </elementSpec>	      
+	  <elementSpec module="header" ident="listPrefixDef" mode="change">
+	    <content>
+	      <elementRef key="BPTL.required.prefixDef"/>
+	      <alternate minOccurs="0" maxOccurs="unbounded">
+		<elementRef key="prefixDef"/>
+		<elementRef key="listPrefixDef"/>
+	      </alternate>
+	    </content>
+	  </elementSpec>
           <elementSpec module="header" ident="namespace" mode="change">
             <content>
               <elementRef key="tagUsage"/>
@@ -2152,7 +2239,6 @@
           </elementSpec>
           <elementSpec module="header" ident="rendition" mode="change">
             <attList>
-              <attDef ident="xml:id" mode="change" usage="req"/>
               <attDef ident="scheme" mode="change" usage="req">
                 <valList type="closed" mode="replace">
                   <valItem ident="css">

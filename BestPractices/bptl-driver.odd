@@ -589,17 +589,14 @@
 	<div type="====">
 	  <head>Body</head>
 	  <table rend="table">
-	    <row>
-	      <cell cols="5">Body</cell>
-	    </row>
 	    <row role="label">
 	      <cell>Attribute Value</cell>
 	      <cell>Description</cell>
 	    </row>
 	    <row>
 	      <cell>book</cell>
-	      <cell>A major structural component of a long work, identified explicitly in the text as a
-	      "book"</cell>
+	      <cell>A major structural component of a long work,
+	      identified explicitly in the text as a “book”</cell>
 	    </row>
 	    <row>
 	      <cell>chapter</cell>
@@ -651,8 +648,9 @@
 	    </row>
 	    <row>
 	      <cell>argument</cell>
-	      <cell>A short passage at the start of a document or section giving a prose description of
-	      its contents.</cell>
+	      <cell>A short passage at the start of a document or
+	      section giving a prose description of its
+	      contents.</cell>
 	    </row>
 	    <row>
 	      <cell>corrigenda</cell>
@@ -660,20 +658,23 @@
 	    </row>
 	    <row>
 	      <cell>entry</cell>
-	      <cell>An entry in a document that is organized as a log or diary with dated entries.</cell>
+	      <cell>An entry in a document that is organized as a log
+	      or diary with dated entries.</cell>
 	    </row>	      
 	    <row>
 	      <cell>epigraph</cell>
-	      <cell>A short quotation at the start of a document or section, often accompanied by an
-	      attribution.</cell>
+	      <cell>A short quotation at the start of a document or
+	      section, often accompanied by an attribution.</cell>
 	    </row>
 	    <row>
 	      <cell>epilogue</cell>
-	      <cell>A short concluding section, usually of a dramatic or fictional work. </cell>
+	      <cell>A short concluding section, usually of a dramatic
+	      or fictional work. </cell>
 	    </row>
 	    <row>
 	      <cell>prologue</cell>
-	    <cell>An opening section of a literary work (typically drama or poetry).</cell>          </row>
+	      <cell>An opening section of a literary work (typically drama or poetry).</cell>
+	    </row>
 	    <row>
 	      <cell>narrative</cell>
 	      <cell>An embedded narrative.</cell>
@@ -701,12 +702,14 @@
 	    </row>
 	    <row>
 	      <cell>examination</cell>
-	      <cell>A section that is identified explicitly as an <soCalled>examination</soCalled> in a
-	      text that uses this as a main structural division.</cell>
+	      <cell>A section that is identified explicitly as an
+	      <soCalled>examination</soCalled> in a text that uses
+	      this as a main structural division.</cell>
 	    </row>
 	    <row>
 	      <cell>letter</cell>
-	      <cell>Any document in epistolary form, i.e. addressed by a sender to a recipient.</cell>
+	      <cell>Any document in epistolary form, i.e. addressed by
+	      a sender to a recipient.</cell>
 	    </row>
 	    <row>
 	      <cell>prayer</cell>
@@ -718,8 +721,9 @@
 	    </row>
 	    <row>
 	      <cell>speech</cell>
-	      <cell>A section described as a speech or public lecture, in a document that uses this as a
-	      main structural division.</cell>
+	      <cell>A section described as a speech or public lecture,
+	      in a document that uses this as a main structural
+	      division.</cell>
 	    </row>
 	    <row>
 	      <cell>timeline</cell>
@@ -734,12 +738,14 @@
 	<div type="=====">
 	  <head>Back Matter</head>
 	  <table rend="table">
-	    <row>
-	      <cell cols="2">Back Matter</cell>
-	    </row>
 	    <row role="label">
 	      <cell>Attribute Value</cell>
 	      <cell>Description</cell>
+	    </row>
+	    <row>
+	      <cell>addendum</cell>
+	      <cell>Additional material, typically omissions, added at
+	      the end of a publication.</cell>
 	    </row>
 	    <row>
 	      <cell>appendix</cell>
@@ -751,13 +757,16 @@
 	    </row>
 	    <row>
 	      <cell>colophon</cell>
-	      <cell>A short inscription, typically at the end of a book or manuscript, containing the
-	      title, printer, date and place of printing, etc. Usually appears in back matter.</cell>
+	      <cell>A short inscription, typically at the end of a
+	      book or manuscript, containing the title, printer, date
+	      and place of printing, etc. Usually appears in back
+	      matter.</cell>
 	    </row>
 	    <row>
 	      <cell>concluding</cell>
-	      <cell>Any section of the back matter that does not carry a more specific designation;
-	      includes afterwords, epilogues, codas, etc.</cell>
+	      <cell>Any section of the back matter that does not carry
+	      a more specific designation; includes afterwords,
+	      epilogues, codas, etc.</cell>
 	    </row>
 	    <row>
 	      <cell>endnotes</cell>
@@ -769,8 +778,9 @@
 	    </row>
 	    <row>
 	      <cell>index</cell>
-	      <cell>An alphabetical listing of the topics in a document, usually with accompanying
-	      page references Usually appears in back matter.</cell>
+	      <cell>An alphabetical listing of the topics in a
+	      document, usually with accompanying page references.
+	      Usually appears in back matter.</cell>
 	    </row>
 	    <row>
 	      <cell>notes</cell>
@@ -981,12 +991,28 @@
           elements to be rendered differently from the surrounding
           text or on all elements whose rendering does not follow the
           default stylesheet.</p>
-          <p>For the value of the <att>style</att> attribute, use only
+
+	  <p>For the value of the <att>style</att> attribute, use only
           valid CSS properties and values as in a CSS declaration-block
           but without curly braces. For example:
           <eg>&lt;foreign style="font-style: italic"></eg>
           <eg>&lt;title style="text-decoration: underline; font-size: x-large"></eg></p>
-          <p>Alternatively, use the <att>rendition</att> <emph
+
+	  <p>Default descriptions of source document renditions can be
+	  established using the <gi>rendition</gi> element in the
+	  <gi>teiHeader</gi>. Specify the desired rendition (as CSS)
+	  in the content of the <gi>rendition</gi>, and to which
+	  elements it applies (using CSS selector syntax) in the
+	  <att>selector</att> attribute.
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+	    <rendition selector="div[type='chap']>head" scheme="css">font-style: italic; font-weight: bold</rendition>
+	    <rendition selector="div[type='sect']>head" scheme="css">font-style: italic</rendition>
+	  </egXML>
+	    The above example indicates that headings of chapters in
+	    the source document were in bold italics, whereas headings
+	    of sections were in italics, but not boldface.</p>
+
+	    <p>Alternatively, use the <att>rendition</att> <emph
           rend="font-weight: bold;">attribute</emph> to give an
           internal scheme:
           <eg>&lt;foreign rendition="#i"></eg>
