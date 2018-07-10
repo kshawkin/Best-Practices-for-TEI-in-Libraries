@@ -1946,10 +1946,7 @@
                 <memberOf key="att.typed"/>
               </classes>
               <content>
-                <alternate minOccurs="0">
-                  <elementRef key="biblStruct"/>
-                  <classRef key="model.ptrLike"/>
-                </alternate>
+		<elementRef key="biblStruct"/>
               </content>
             </elementSpec>
             <elementSpec module="core" ident="respStmt" mode="change">

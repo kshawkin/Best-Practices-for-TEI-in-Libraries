@@ -121,4 +121,4 @@ xmllint --xinclude bptl-driver.odd | ${STARLET} ed -N t=http://www.tei-c.org/ns/
 ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} ${TMP}
 # use correct name and nuke TMP file:
 mv ${TMP}.html bptl-driver.html
-#rm ${TMP}
+rm ${TMP}

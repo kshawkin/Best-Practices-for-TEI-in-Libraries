@@ -1024,6 +1024,7 @@
       <p>The child elements of the <gi>teiHeader</gi> and
       <gi>text</gi> elements are described below.</p>
 
+      <!-- START included ./bptl-header.odd#header-content  -->
       <xi:include href="./bptl-header.odd" xpointer="element(header-content)">
         <xi:fallback>
           <div>
@@ -1032,6 +1033,7 @@
           </div>
         </xi:fallback>
       </xi:include>
+      <!-- END included ./bptl-header.odd#header-content  -->
 
       <div n="6">
         <head>Encoding Levels</head>
@@ -1049,6 +1051,7 @@
             <eg><![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0">]]></eg></p>
           </div>
 
+	  <!-- START included ./bptl-L1.odd#header-content  -->
         <xi:include href="./bptl-L1.odd" xpointer="element(level-1-content)">
           <xi:fallback>
             <div>
@@ -1057,7 +1060,9 @@
             </div>
           </xi:fallback>
         </xi:include>
+	  <!-- END included ./bptl-L1.odd#header-content  -->
 
+	  <!-- START included ./bptl-L2.odd#header-content  -->
         <xi:include href="./bptl-L2.odd" xpointer="element(level-2-content)">
           <xi:fallback>
             <div>
@@ -1066,7 +1071,9 @@
             </div>
           </xi:fallback>
         </xi:include>
+	  <!-- END included ./bptl-L2.odd#header-content  -->
 
+	  <!-- START included ./bptl-L3.odd#header-content  -->
         <xi:include href="./bptl-L3.odd" xpointer="element(level-3-content)">
           <xi:fallback>
             <div>
@@ -1075,7 +1082,9 @@
             </div>
           </xi:fallback>
         </xi:include>
+	  <!-- END included ./bptl-L3.odd#header-content  -->
 
+	  <!-- START included ./bptl-L4.odd#header-content  -->
         <xi:include href="./bptl-L4.odd" xpointer="element(level-4-content)">
           <xi:fallback>
             <div>
@@ -1084,6 +1093,7 @@
             </div>
           </xi:fallback>
         </xi:include>
+	  <!-- END included ./bptl-L4.odd#header-content  -->
 
         <div type="===">
           <head>LEVEL 5: Scholarly Encoding Projects</head>
