@@ -915,7 +915,7 @@
           numbers. Example: <tag>pb n="456"/</tag></p>
         </div>
 <div type="====">
-          <head>ref and tag URIs</head>
+          <head><att>ref</att> and tag URIs</head>
           <p>The <att>ref</att> attribute is available on a variety of elements, including <gi>persName</gi>, <gi>orgName</gi>
           <gi>author</gi>, and <gi>title</gi>. Its value is a URI that identifies external metadata about the content of the
           element. Linked Data applications in libraries have led to many authority records being made accessible through URIs, 
