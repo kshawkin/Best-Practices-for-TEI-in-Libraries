@@ -320,7 +320,7 @@
               <cell cols="7">
                 <tag>teiHeader xml:lang="___"</tag>
               </cell>
-              <cell>The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> attribute is recommended; it indicates the language used for the metadata describing the document.</cell>
+              <cell>[required] The <gi>teiHeader</gi> contains metadata about the TEI document. The <att>xml:lang</att> attribute is recommended; it indicates the language used for the metadata describing the document.</cell>
               <cell>040 $b</cell>
               <cell>n/a</cell>
             </row>
@@ -330,7 +330,7 @@
               <cell cols="6">
                 <gi>fileDesc</gi>
               </cell>
-              <cell>The <gi>fileDesc</gi> contains bibliographic metadata about the TEI document. One of its child elements, <gi>sourceDesc</gi>, describes the source document from which the TEI document was created.</cell>
+              <cell>[required] The <gi>fileDesc</gi> contains bibliographic metadata about the TEI document. One of its child elements, <gi>sourceDesc</gi>, describes the source document from which the TEI document was created.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -341,7 +341,7 @@
               <cell cols="5">
                 <gi>titleStmt</gi>
               </cell>
-              <cell/>
+	      <cell>[required]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -354,7 +354,7 @@
                 <tag>title type="___"</tag>
               </cell>
               <cell>
-                <p>One or more <gi>title</gi> elements are required to
+                <p>[required] One or more <gi>title</gi> elements are required to
                 give the title of the TEI document being created. It
                 is suggested that titles be constructed based on the
                 source document according to the descriptive
@@ -435,7 +435,7 @@
                 <gi>author</gi>
               </cell>
               <cell>
-                One or more <gi>author</gi> elements (one name per
+                [recommended] One or more <gi>author</gi> elements (one name per
                 element) are used to encode the names of entities
                 primarily responsible for the content of the TEI
                 document—usually, the author(s) of the source
@@ -498,7 +498,7 @@
                 <gi>editor</gi>
               </cell>
               <cell>
-                <p>If applicable, use one or more <gi>editor</gi>
+                <p>[recommended] If applicable, use one or more <gi>editor</gi>
                 elements (one name per element) to encode the names of
                 entities besides those in <gi>author</gi> elements
                 that acted as editors of the TEI document—usually, the
@@ -538,7 +538,7 @@
               <cell cols="4">
                 <gi>respStmt</gi>
               </cell>
-              <cell>Record the names of other persons or
+              <cell>[recommended] Record the names of other persons or
               organizations, one responsibility or party per
               <gi>respStmt</gi>, that have responsibility for the
               intellectual or artistic content of the TEI
@@ -575,7 +575,7 @@
                 <gi>editionStmt</gi>
 		<gi>p</gi>
               </cell>
-              <cell>Include a statement about the edition of the TEI document produced, not the source document.</cell>
+              <cell>[recommended] Include a statement about the edition of the TEI document produced, not the source document.</cell>
               <cell>250</cell>
               <cell>n/a</cell>
             </row>
@@ -586,7 +586,7 @@
               <cell cols="5">
                 <gi>publicationStmt</gi>
               </cell>
-              <cell>Use the child elements below (rather than <gi>p</gi> for a prose description).</cell>
+              <cell>[required] Use the child elements below (rather than <gi>p</gi> for a prose description).</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -598,7 +598,7 @@
               <cell cols="4">
                 <gi>publisher</gi>
               </cell>
-              <cell>The publisher is the party responsible for making
+              <cell>[recommended] The publisher is the party responsible for making
               the file (the TEI document, not the source document)
               public.</cell>
               <cell>264_1 $b</cell>
@@ -612,7 +612,7 @@
               <cell cols="4">
                 <gi>distributor</gi>
               </cell>
-              <cell>The distributor is the party from whom copies of the file (the TEI document, not the source document) can be obtained. Often the same as <gi>publisher</gi>, in which case no <gi>distributor</gi> should be given.</cell>
+              <cell>[recommended] The distributor is the party from whom copies of the file (the TEI document, not the source document) can be obtained. Often the same as <gi>publisher</gi>, in which case no <gi>distributor</gi> should be given.</cell>
               <cell>264_2 $b</cell>
               <cell>n/a</cell>
             </row>
@@ -624,8 +624,8 @@
               <cell cols="4">
                 <gi>idno</gi>
               </cell>
-              <cell>Any unique identifier for the TEI document as determined by the
-              publisher of the TEI document. Use of this element is recommended.
+              <cell>[recommended] Any unique identifier for the TEI document as determined by the
+              publisher of the TEI document.
               Optionally use a <att>type</att> attribute to indicate the type of
               identifier.</cell>
               <cell>028 5_</cell>
@@ -639,7 +639,7 @@
               <cell cols="4">
                 <gi>availability</gi>
               </cell>
-              <cell>Provide a prose rights statement for the TEI
+              <cell>[recommended] Provide a prose rights statement for the TEI
               document. If possible, provide a standard license, such
               as one from Creative Commons, using the <gi>license</gi>
               element. Otherwise, provide information on all
@@ -657,7 +657,7 @@
               <cell cols="4">
                 <tag>date when="___"/</tag>
               </cell>
-              <cell>Refers to the date of the first publication of
+              <cell>[recommended] Refers to the date of the first publication of
               this edition of the TEI document. The <att>when</att>
               attribute (see <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.datable.w3c.html">att.datable.w3c
@@ -674,7 +674,7 @@
               <cell cols="5">
                 <gi>seriesStmt</gi>
               </cell>
-              <cell>Optional. This element contains information about
+              <cell>[optional] This element contains information about
               the electronic series being created.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
@@ -687,7 +687,7 @@
               <cell cols="4">
                 <tag>title level="s" type="___"</tag>
               </cell>
-              <cell>Recommended for the title of the series. Whenever
+              <cell>[recommended] This element contains the title of the series. Whenever
               possible, establish or use the authorized form of the
               title from a name authority file. Use of the
               <att>type</att> attribute is optional, but if it is
@@ -710,7 +710,7 @@
               <cell cols="5">
                 <gi>notesStmt</gi>
               </cell>
-              <cell>Optional.</cell>
+              <cell>[optional]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -722,7 +722,7 @@
               <cell cols="4">
                 <gi>note</gi>
               </cell>
-              <cell>Use one <gi>note</gi> element for each note about the TEI document that does not have an appropriate location elsewhere in the header.</cell>
+              <cell>[optional] Use one <gi>note</gi> element for each note about the TEI document that does not have an appropriate location elsewhere in the header.</cell>
               <cell>5xx</cell>
               <cell>5xx</cell>
             </row>
@@ -735,7 +735,7 @@
                 <gi>relatedItem</gi>
 		<gi>biblStruct</gi>
               </cell>
-		    <cell>Use one or more <gi>relatedItem</gi> elements to describe a work related to the TEI document, following the guidelines for the components of the <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
+	      <cell>[optional] Use one or more <gi>relatedItem</gi> elements to describe a work related to the TEI document, following the guidelines for the components of the <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
               <cell>???</cell>
               <cell>???</cell>
             </row>
@@ -746,7 +746,7 @@
               <cell cols="5">
                 <gi>sourceDesc</gi>
               </cell>
-              <cell>Use one <gi>sourceDesc</gi> per source document. Metadata for the source document may be automatically generated from a MARC record.</cell>
+              <cell>[required] Use one <gi>sourceDesc</gi> per source document. Metadata for the source document may be automatically generated from a MARC record.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -758,7 +758,7 @@
               <cell cols="4">
                 <gi>biblStruct</gi>
               </cell>
-              <cell>Use <gi>biblStruct</gi> with child elements
+              <cell>[recommended] Use <gi>biblStruct</gi> with child elements
               arranged in the order below for ease of display
               according to ISBD. (This element is used instead of
               <gi>bibl</gi> to enforce structure, but
@@ -777,7 +777,7 @@
               <cell cols="3">
                 <gi>analytic</gi>
               </cell>
-              <cell>Use this element and its children only if the object of encoding is part of a larger 
+              <cell>[recommended] Use this element and its children only if the object of encoding is part of a larger 
               work—for example, an article in a journal issue, a chapter in a book, or a poem in a
               collection.</cell>
               <cell>n/a</cell>
@@ -793,7 +793,7 @@
               <cell cols="2">
                 <gi>author</gi>
               </cell>
-              <cell>One or more <gi>author</gi> elements (one name per
+              <cell>[recommended] One or more <gi>author</gi> elements (one name per
               element) are used to encode the name for the personal
               author or corporate body responsible for the creation of
               the intellectual or artistic content of the object of
@@ -815,7 +815,7 @@
                 <tag>title level="a" type="___"</tag>
               </cell>
               <cell>
-                <p>At least one <gi>title</gi> element is required for
+                <p>[recommended] At least one <gi>title</gi> element is required for
                 the title of the object of encoding that is part of a
                 larger work. Transcribe the title according to the the
                 descriptive cataloging standard used.</p>
@@ -858,7 +858,7 @@
               <cell cols="3">
                 <gi>monogr</gi>
               </cell>
-              <cell>Use this element to group together the elements describing the source document 
+              <cell>[required] Use this element to group together the elements describing the source document 
               bibliographic item that is published as an independent item. The TEI definition of 
               this element specifies that it is used even for works that might not otherwise be 
               considered “monographs,” so, for example, bibliographic data about a journal title
@@ -876,7 +876,7 @@
               <cell cols="2">
                 <gi>author</gi>
               </cell>
-              <cell>One or more <gi>author</gi> elements (one name per
+              <cell>[recommended] One or more <gi>author</gi> elements (one name per
               element) are used to encode the name for the personal
               author or corporate body responsible for the creation of
               the intellectual or artistic content of the source
@@ -906,7 +906,7 @@
                 <tag>title level="___" type="___"</tag>
               </cell>
               <cell>
-                <p>At least one <gi>title</gi> element is recommended
+                <p>[recommended] At least one <gi>title</gi> element is recommended
                 for the title of the source document bibliographic
                 item. Transcribe the title according to the
                 descriptive cataloging standard used.</p>
@@ -959,7 +959,7 @@
                 <gi>respStmt</gi>
               </cell>
               <cell>
-                <p>Statement of responsibility on the source document
+                <p>[recommended] Statement of responsibility on the source document
                 bibliographic item, according to the descriptive
                 cataloging standard used. Record one responsibility or
                 party per <gi>respStmt</gi>. Each <gi>respStmt</gi>
@@ -993,7 +993,7 @@
               <cell cols="2">
                 <gi>edition</gi>
               </cell>
-              <cell>Edition statement (if present) according to the descriptive cataloging standard used.</cell>
+              <cell>[recommended] Edition statement (if present) according to the descriptive cataloging standard used.</cell>
               <cell>534 $b</cell>
               <cell>250</cell>
             </row>
@@ -1007,7 +1007,7 @@
               <cell cols="2">
                 <gi>imprint</gi>
               </cell>
-              <cell/>
+	      <cell>[required]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1022,7 +1022,7 @@
               <cell cols="1">
                 <gi>pubPlace</gi>
               </cell>
-              <cell>Place of publication from the source document
+              <cell>[recommended] Place of publication from the source document
               bibliographic item according to the descriptive
               cataloging standard used. Optionally remove ISBD
               punctuation for separating areas of the bibliographic
@@ -1050,7 +1050,7 @@
               <cell cols="1">
                 <gi>publisher</gi>
               </cell>
-              <cell>Name of publisher, distributor, etc. from the
+              <cell>[recommended] Name of publisher, distributor, etc. from the
               source document bibliographic item according to the
               descriptive cataloging standard used. Optionally remove
               ISBD punctuation for separating areas of the
@@ -1096,7 +1096,7 @@
                 <tag>date from="___" to="___"</tag>
               </cell>
               <cell>
-                <p>Date of publication, distribution, etc. from the
+                <p>[recommended] Date of publication, distribution, etc. from the
                 source document bibliographic item. The content of the
                 element is the statement of this data according to the
                 descriptive cataloging standard used.</p>
@@ -1142,8 +1142,8 @@
               <cell cols="2">
                 <gi>extent</gi>
               </cell>
-              <cell>Use of this element to describe the extent of the
-              source document bibliographic item is recommended. If
+              <cell>[recommended] Describes the extent of the
+              source document bibliographic item. If
               the data is generated by hand, it should include a
               comprehensible statement of the size of the item, such
               as the number of pages or leaves. If generated from a
@@ -1165,7 +1165,7 @@
               <cell cols="2">
                 <gi>note</gi>
               </cell>
-              <cell>Optionally, use for notes about the source
+              <cell>[optional] Use for notes about the source
               document bibliographic item, given according to the
               descriptive cataloging standard used.</cell>
               <cell>534 $n</cell>
@@ -1181,7 +1181,7 @@
               <cell cols="2">
                 <gi>idno</gi>
               </cell>
-              <cell>Optionally use one or more <gi>idno</gi> elements
+              <cell>[optional] Use one or more <gi>idno</gi> elements
               to give identifiers for the source document, text, or
               work of the bibliographic item, whether assigned by the
               holding library (such as a call number), the publisher
@@ -1225,7 +1225,7 @@
               <cell cols="3">
                 <gi>series</gi>
               </cell>
-              <cell>If applicable, give information about the series
+              <cell>[recommended] If applicable, give information about the series
               to which the source document bibliographic item belongs,
               given according to the descriptive cataloging standard
               used.</cell>
@@ -1242,7 +1242,7 @@
               <cell cols="2">
                 <tag>title level="s"</tag>
               </cell>
-              <cell>Recommended for the title of the series. Whenever
+              <cell>[recommended] Contains the title of the series. Whenever
               possible, establish or use the authorized form of the
               title from a name authority file. Use of the
               <att>type</att> attribute is optional, but if it is
@@ -1268,7 +1268,7 @@
               <cell cols="2">
                 <tag>biblScope unit="volume"</tag>
               </cell>
-              <cell>If applicable, use for volume numbering of the
+              <cell>[recommended] If applicable, use for volume numbering of the
               source document within the series.</cell>
               <cell>534 $f</cell>
               <cell>
@@ -1288,7 +1288,7 @@
               <cell cols="2">
                 <tag>idno type="ISSN"</tag>
               </cell>
-              <cell>If applicable, use for an ISSN for the series.</cell>
+              <cell>[recommended] If applicable, use for an ISSN for the series.</cell>
               <cell/>
               <cell/>
             </row>
@@ -1302,7 +1302,7 @@
                 <gi>relatedItem</gi>
 		<gi>biblStruct</gi>
               </cell>
-              <cell>If applicable, describe a work related to the source 
+              <cell>[recommended] If applicable, describe a work related to the source 
               document, following the guidelines for the components of the 
 		      <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
               <cell>
@@ -1332,7 +1332,7 @@
         <cell cols="4">
             <gi>listRelation</gi>
         </cell>
-        <cell>Use <gi>listRelation</gi> with <gi>relation</gi> child elements to express any FRBR
+        <cell>[optional] Use <gi>listRelation</gi> with <gi>relation</gi> child elements to express any FRBR
             entities and relationships relating to the TEI document (see <ref target="#frbr"
                 >discussion above</ref>).</cell>
         <cell>n/a</cell>
@@ -1344,7 +1344,7 @@
               <cell cols="6">
                 <gi>encodingDesc</gi>
               </cell>
-              <cell/>
+	      <cell>[recommended]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1356,7 +1356,7 @@
                 <gi>projectDesc</gi>
                 <gi>p</gi>
               </cell>
-              <cell>[Optional] Enter a description of the purpose for which the electronic file was encoded.</cell>
+              <cell>[optional] Include a description of the purpose for which the electronic file was encoded.</cell>
               <cell>500</cell>
               <cell>n/a</cell>
             </row>
@@ -1368,8 +1368,7 @@
                 <tag>schemaRef url="___"</tag>
               </cell>
               <cell>
-		<p>[Recommended] Use of the <gi>schemaRef</gi> element is
-		recommended to record the encoding level. Use the
+		  <p>[recommended] Documents the encoding level according to these <title>Best Practices</title>. Use the
 		<att>url</att> attribute for the value that indicates
 		the encoding level:
                 <list>
@@ -1411,7 +1410,7 @@
               <cell cols="4">
                 <tag>correction status="___" method="___"</tag>
               </cell>
-              <cell>A <gi>correction</gi> element may be used to describe what corrections, if any, have been
+              <cell>[optional] A <gi>correction</gi> element may be used to describe what corrections, if any, have been
               made to the source text, and how they were made.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
@@ -1424,7 +1423,7 @@
               <cell cols="4">
                 <tag>hyphenation eol="___"</tag>
               </cell>
-              <cell>A <gi>hyphenation</gi> element may be used to
+              <cell>[optional] A <gi>hyphenation</gi> element may be used to
               describe how both soft and hard hyphens have been
               recorded.</cell>
               <cell>n/a</cell>
@@ -1438,7 +1437,7 @@
               <cell cols="4">
                 <tag>normalization method="___"</tag>
               </cell>
-              <cell>One or more <gi>normalization</gi> elements may be
+              <cell>[optional] One or more <gi>normalization</gi> elements may be
               provided to explicitly declare the extent of
               normalization or regularization.</cell>
               <cell>n/a</cell>
@@ -1452,7 +1451,7 @@
               <cell cols="4">
                 <tag>punctuation marks="___" placement="___"</tag>
               </cell>
-              <cell>A <gi>punctuation</gi> element may be provided to
+              <cell>[optional] A <gi>punctuation</gi> element may be provided to
               explicitly declare whether punctuation marks have been
               retained or replaced by markup, and if retained where
               they have been placed with respect intra-paragraph
@@ -1468,7 +1467,7 @@
               <cell cols="4">
                 <gi>quotation</gi>
               </cell>
-              <cell>A specialization of the <gi>punctuation</gi>
+              <cell>[optional] A specialization of the <gi>punctuation</gi>
               element, the <gi>quotation</gi> element may be provided
               to explicitly declare whether quotation marks have been
               retained as content or not.</cell>
@@ -1483,7 +1482,7 @@
               <cell cols="4">
                 <gi>p</gi>
               </cell>
-              <cell>Include up to one <gi>p</gi> element for each of the
+              <cell>[optional] Include up to one <gi>p</gi> element for each of the
               following in the order given, addressing in prose:
               <list rend="numbered">
                 <item>notes about omissions of material found in the
@@ -1518,7 +1517,7 @@
               <cell cols="5">
                 <gi>tagsDecl</gi>
               </cell>
-              <cell/>
+	      <cell>[recommended]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1530,7 +1529,7 @@
               <cell cols="4">
                 <tag>rendition selector="___" scheme="css"</tag>
               </cell>
-              <cell>Include one or more <gi>rendition</gi> elements to
+              <cell>[recommended] Include one or more <gi>rendition</gi> elements to
               indicate the default renditions of various elements in
               the source document. Use the <att>selector</att>
               attribute to indicate to which elements this rendition
@@ -1550,9 +1549,9 @@
                 <gi>tagUsage</gi>
               </cell>
               <cell>
-		[required] This element must have one and only one
+		[recommended] This element should have one and only one
 		child <gi>tagUsage</gi> element for describing the
-		encoding of logical divisions, which must be one of
+		encoding of logical divisions, which should be one of
 		the following:
                 <list>
                   <item>
@@ -1644,7 +1643,7 @@
                 <tag>prefixDef ident="bptl" matchPattern="L([1-5])-v(\d+\.\d+\.\d+[aαβb]?)"
           replacementPattern="http://www.tei-c.org/SIG/Libraries/teiinlibraries/$2/"</tag>
               </cell>
-              <cell>[required] Defines the “bptl:” prefix used on the
+              <cell>[recommended] Defines the “bptl:” prefix used on the
               value of the <att>url</att> attribute of the
               <gi>schemaRef</gi> element. Additional <gi>prefixDef</gi> elements
 	      may be specified if other private URI schemes are to be used.</cell>
@@ -1657,7 +1656,7 @@
               <cell cols="6">
                 <gi>profileDesc</gi>
               </cell>
-              <cell/>
+	      <cell>[optional]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1668,7 +1667,7 @@
               <cell cols="5">
                 <gi>langUsage</gi>
               </cell>
-              <cell>Optionally use this element and child
+              <cell>[optional] Use this element and child
               <gi>language</gi> elements to list languages used in the
               text. This supplements the <att>xml:lang</att> attribute
               on the <gi>text</gi> (which is outside the header) in
@@ -1686,7 +1685,7 @@
               <cell cols="4">
                 <tag>language ident="___"</tag>
               </cell>
-              <cell>Use one or more <gi>language</gi> elements to
+              <cell>[optional] Use one or more <gi>language</gi> elements to
               indicate language(s) used in the source document. Use of
               the <att>ident</att> attribute is required <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-language.html">as
@@ -1719,7 +1718,7 @@
               <cell cols="5">
                 <gi>textClass</gi>
               </cell>
-              <cell/>
+	      <cell>[optional]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1731,7 +1730,7 @@
               <cell cols="4">
                 <tag>classCode scheme="___"</tag>
               </cell>
-              <cell>True classification numbers as opposed to call
+              <cell>[optional] True classification numbers as opposed to call
               numbers may be entered here. The value of the scheme
               attribute corresponds to a classification scheme defined
               previously in <gi>classDecl</gi>.
@@ -1748,7 +1747,7 @@
               <cell cols="4">
                 <tag>keywords scheme="___"</tag>
               </cell>
-              <cell>Repeat this element as many times as there are keyword schemes.
+              <cell>[optional] Repeat this element as many times as there are keyword schemes.
               The value of the <att>scheme</att> attribute is a URI for a controlled
               or uncontrolled vocabulary. The URI may be absolute to a version
               online or to one defined previously in <gi>classDecl</gi>.
@@ -1766,7 +1765,7 @@
               <cell cols="3">
                 <gi>term</gi>
               </cell>
-              <cell>Use for terms from controlled or uncontrolled
+              <cell>[optional] Use for terms from controlled or uncontrolled
               vocabularies as defined according to the containing
               <gi>keywords</gi> element.</cell>
               <cell>6xx</cell>
@@ -1778,7 +1777,7 @@
               <cell cols="6">
                 <gi>xenoData</gi>
               </cell>
-              <cell>Use as a wrapper for embedded non-TEI metadata.</cell>
+              <cell>[optional] Use as a wrapper for embedded non-TEI metadata.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1790,7 +1789,7 @@
 		<tag>change when="YYYY-MM-DD" who="[URI]"</tag>
               </cell>
               <cell>
-		<p>Create a <gi>change</gi> element to record each
+		<p>[optional] Create a <gi>change</gi> element to record each
                 significant change to the TEI document, in reverse
                 chronological order (i.e., most recent first). A prose
                 description of the change is recorded as the content
