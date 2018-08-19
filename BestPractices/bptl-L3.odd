@@ -189,7 +189,7 @@
             </row>
             <row>
               <cell><gi>div</gi> or <gi>div1</gi></cell>
-              <cell>At least one is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. If a bibliography is included in the document, 
+              <cell>At least one <gi>div</gi> or <gi>div1</gi> is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. If a bibliography is included in the document, 
                 +                it is recommended that it be encoded within a <gi>div</gi> whose <att>type</att> attribute has the value <val>bibliography</val>.</cell>
             </row>
             <row>
@@ -213,8 +213,8 @@
               <cell>Recommended for notes.</cell>
             </row>
             <row>
-              <cell><gi>ptr</gi> and <gi>ref</gi></cell>
-              <cell>If a table of contents is encoded, recommended for linking to sections of the document. If notes are encoded at the point they occur in the text or at another point convenient when converting from a born-digital source document, recommended for encoding the point of reference.</cell>
+              <cell><gi>ptr</gi> or <gi>ref</gi></cell>
+              <cell>If a table of contents is encoded, <gi>ptr</gi> and <gi>ref</gi> is recommended for linking to sections of the document. If notes are encoded at the point they occur in the text or at another point convenient when converting from a born-digital source document, recommended for encoding the point of reference.</cell>
             </row>
             <row>
               <cell><gi>hi</gi></cell>
@@ -231,7 +231,7 @@
             
             <row>
               <cell><gi>listBibl</gi></cell>
-              <cell>If bibliography is encoded, recommended for identifying the bibliographic entries. Note that any header or title should be encoded by a <gi>head</gi> in the containing <gi>div</gi>.</cell>
+              <cell>If a bibliography is present and encoded, recommended for identifying the bibliographic entries. Note that any header or title should be encoded by a <gi>head</gi> in the containing <gi>div</gi>.</cell>
             </row>
             <row>
               <cell><gi>bibl</gi></cell>
