@@ -154,8 +154,9 @@
       <p>As guidelines rather than a specification, these <title>Best 
       Practices</title> use <mentioned>should</mentioned> or 
       <mentioned>recommended</mentioned> instead of 
-      <mentioned>must</mentioned> to give recommendations in all cases 
-      except where a practice is required by P5. Optional practices are indicated 
+      <mentioned>must</mentioned> to explain conformance to the guidelines; 
+      the only exception is a practice required by P5, indicated by 
+      <mentioned>required</mentioned>. Optional practices are indicated 
       by <mentioned>may</mentioned> or <mentioned>optional</mentioned>. 
       However, to encourage conformance to these <title>Best Practices</title>, 
       the ODD files will generate schemas that <emph>require</emph> use of 
