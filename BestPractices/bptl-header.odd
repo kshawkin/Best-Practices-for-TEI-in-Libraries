@@ -414,7 +414,7 @@
                   <item>247</item>
                 </list>
               </cell>
-              <cell rend="background-color: silver">
+              <cell>
                 <list>
                   <item>130</item>
                   <item>210</item>
@@ -478,7 +478,7 @@
                 </list>
                 For all, use the relation designator “author”.
               </cell>
-              <cell rend="background-color: silver">
+              <cell>
                 <list>
                   <item>100</item>
                   <item>110</item>
@@ -522,7 +522,7 @@
                 </list>
                 For all, use the relationship designator “editor”.
               </cell>
-              <cell rend="background-color: silver">
+              <cell>
                 <list>
                   <item>700</item>
                   <item>710</item>
@@ -560,7 +560,7 @@
                   <item>710</item>
                 </list>
               </cell>
-              <cell rend="background-color: silver">
+              <cell>
                 <list>
                   <item>700</item>
                   <item>710</item>
@@ -573,8 +573,9 @@
               <cell>├</cell>
               <cell cols="5">
                 <gi>editionStmt</gi>
+		<gi>p</gi>
               </cell>
-              <cell>This element contains information about the edition of the TEI document produced, not the source document.</cell>
+              <cell>Include a statement about the edition of the TEI document produced, not the source document.</cell>
               <cell>250</cell>
               <cell>n/a</cell>
             </row>
@@ -710,11 +711,36 @@
                 <gi>notesStmt</gi>
               </cell>
               <cell>Optional.</cell>
-              <cell>5xx</cell>
-              <cell rend="background-color: silver">5xx</cell>
+              <cell>n/a</cell>
+              <cell>n/a</cell>
             </row>
 
             <row>
+              <cell>│</cell>
+              <cell/>
+              <cell>├</cell>
+              <cell cols="4">
+                <gi>note</gi>
+              </cell>
+              <cell>Use one <gi>note</gi> element for each note about the TEI document that does not have an appropriate location elsewhere in the header.</cell>
+              <cell>5xx</cell>
+              <cell>5xx</cell>
+            </row>
+		  
+            <row>
+              <cell>│</cell>
+              <cell>│</cell>
+              <cell>└</cell>
+              <cell cols="4">
+                <gi>relatedItem</gi>
+		<gi>biblStruct</gi>
+              </cell>
+		    <cell>Use one or more <gi>relatedItem</gi> elements to describe a work related to the TEI document, following the guidelines for the components of the <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
+              <cell>???</cell>
+              <cell>???</cell>
+            </row>
+
+		  <row>
               <cell>│</cell>
               <cell>└</cell>
               <cell cols="5">
@@ -1274,46 +1300,32 @@
               <cell>└</cell>
               <cell cols="3">
                 <gi>relatedItem</gi>
-              </cell>
-              <cell/>
-              <cell>n/a</cell>
-              <cell>n/a</cell>
-            </row>
-
-            <row>
-              <cell>│</cell>
-              <cell/>
-              <cell/>
-              <cell/>
-              <cell>└</cell>
-              <cell cols="2">
-                <gi>biblStruct</gi>
+		<gi>biblStruct</gi>
               </cell>
               <cell>If applicable, describe a work related to the source 
               document, following the guidelines for the components of the 
-              <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.
-              </cell>
+		      <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
               <cell>
-                <list>
+	        <list>
                   <item>700 $t</item>
                   <item>710 $t</item>
                   <item>711 $t</item>
                   <item>730</item>
                   <item>740</item>
                 </list>
-              </cell>
+	      </cell>
               <cell>
-                <list>
+		<list>
                   <item>700 $t</item>
                   <item>710 $t</item>
                   <item>711 $t</item>
                   <item>730</item>
                   <item>740</item>
                 </list>
-              </cell>
+	      </cell>
             </row>
-                  
-    <row>
+		  
+     <row>
         <cell>│</cell>
         <cell/>
         <cell>└</cell>
@@ -1473,7 +1485,7 @@
               </cell>
               <cell>Include up to one <gi>p</gi> element for each of the
               following in the order given, addressing in prose:
-              <list>
+              <list rend="numbered">
                 <item>notes about omissions of material found in the
                 original work</item>
                 <item>the format of the data in the header: Does the
@@ -1556,8 +1568,8 @@
                 Note that the intent of the <gi>tagUsage</gi> is to
                 explicitly express whether logical divisions and
                 subdivisions are encoded using numbered or unnumbered
-                <gi>div</gi> elements. Thus the 3rd (with
-                <att>gi</att> of <val>sourceDoc</val>) is only
+                <gi>div</gi> elements. Thus the third option (with
+                <val>sourceDoc</val> as the value of <att>gi</att>) is only
                 intended for use at level 1. At levels 2 and above
                 <gi>sourceDoc</gi> is optional, and the
                 <gi>tagUsage</gi> should describe the divisions used
@@ -1726,7 +1738,7 @@
               <lb/>Example: <code>scheme="#LCC"</code>
               </cell>
               <cell>050-099</cell>
-              <cell rend="background-color: silver">050-099</cell>
+              <cell>050-099</cell>
             </row>
 
             <row>
@@ -1775,20 +1787,10 @@
               <cell>└</cell>
               <cell cols="6">
                 <gi>revisionDesc</gi>
-              </cell>
-              <cell/>
-              <cell>n/a</cell>
-              <cell>n/a</cell>
-            </row>
-
-            <row>
-              <cell/>
-              <cell>└</cell>
-              <cell cols="5">
-                <tag>change when="YYYY-MM-DD" who="[URI]"</tag>
+		<tag>change when="YYYY-MM-DD" who="[URI]"</tag>
               </cell>
               <cell>
-                <p>Create a <gi>change</gi> element to record each
+		<p>Create a <gi>change</gi> element to record each
                 significant change to the TEI document, in reverse
                 chronological order (i.e., most recent first). A prose
                 description of the change is recorded as the content
@@ -1813,7 +1815,7 @@
                 example, the document might simply give
                 <code>who="#Jane_Smith"</code>, relying on human
                 readers to understand this reference.</p>
-              </cell>
+	      </cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
