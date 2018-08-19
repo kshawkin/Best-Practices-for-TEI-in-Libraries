@@ -185,57 +185,57 @@
           <table rend="table">
             <row>
               <cell><gi>front</gi>, <gi>back</gi></cell>
-              <cell>Recommended if present.</cell>
+              <cell>[recommended] Use if front or back matter is present.</cell>
             </row>
             <row>
               <cell><gi>div</gi> or <gi>div1</gi></cell>
-              <cell>At least one <gi>div</gi> or <gi>div1</gi> is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. If a bibliography is included in the document, 
+              <cell>[recommended] At least one <gi>div</gi> or <gi>div1</gi> is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. If a bibliography is included in the document, 
                 +                it is recommended that it be encoded within a <gi>div</gi> whose <att>type</att> attribute has the value <val>bibliography</val>.</cell>
             </row>
             <row>
               <cell><gi>p</gi></cell>
-              <cell>Recommended for paragraphs in prose.</cell>
+              <cell>[recommended] Use for paragraphs in prose.</cell>
             </row>
             <row>
               <cell><gi>lg</gi> and <gi>l</gi></cell>
-              <cell>Recommended for identifying groups of lines and lines, respectively.</cell>
+              <cell>[recommended] Use for identifying groups of lines and lines, respectively.</cell>
             </row>       
             <row>        
               <cell><gi>figure</gi> and appropriate child elements</cell>
-              <cell>Recommended to refer to illustrative images and descriptive information about those images.</cell>
+              <cell>[recommended] Use to refer to illustrative images and descriptive information about those images.</cell>
             </row> 
             <row>
               <cell><gi>floatingText</gi></cell>
-              <cell>Optionally used to indicate a floating text.</cell>
+              <cell>[optional] Use to indicate a floating text.</cell>
             </row>    
             <row>
               <cell><gi>note</gi></cell>
-              <cell>Recommended for notes.</cell>
+              <cell>[recommended] Use for notes.</cell>
             </row>
             <row>
               <cell><gi>ptr</gi> or <gi>ref</gi></cell>
-              <cell>If a table of contents is encoded, <gi>ptr</gi> and <gi>ref</gi> is recommended for linking to sections of the document. If notes are encoded at the point they occur in the text or at another point convenient when converting from a born-digital source document, recommended for encoding the point of reference.</cell>
+              <cell>[recommended] If a table of contents is encoded, <gi>ptr</gi> or <gi>ref</gi> is recommended for linking to sections of the document. If notes are encoded at the point they occur in the text or at another point convenient when converting from a born-digital source document, recommended for encoding the point of reference.</cell>
             </row>
             <row>
               <cell><gi>hi</gi></cell>
-              <cell>Recommended to indicate changes in typeface; <att>rend</att> attribute is optional.</cell>
+              <cell>[recommended] Indicates changes in typeface; <att>rend</att> attribute is optional.</cell>
             </row>
             <row>
               <cell><gi>list</gi> and <gi>item</gi></cell>
-              <cell>Optionally used to indicate ordered and unordered list structures.</cell>
+              <cell>[optional] Use to indicate ordered and unordered list structures.</cell>
             </row>
             <row>
               <cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell>
-              <cell>Optionally used to indicate table structures.</cell>
+              <cell>[optional] Use to indicate table structures.</cell>
             </row>
             
             <row>
               <cell><gi>listBibl</gi></cell>
-              <cell>If a bibliography is present and encoded, recommended for identifying the bibliographic entries. Note that any header or title should be encoded by a <gi>head</gi> in the containing <gi>div</gi>.</cell>
+              <cell>[recommended] If a bibliography is present and encoded, use for identifying the bibliographic entries. Note that any header or title should be encoded by a <gi>head</gi> in the containing <gi>div</gi>.</cell>
             </row>
             <row>
               <cell><gi>bibl</gi></cell>
-              <cell>Contains a single bibliographic entry. Phrase
+              <cell>[recommended] Contains a single bibliographic entry. Phrase
               level markup (e.g., <gi>hi</gi>) is optional. Further
               structural markup (e.g., <gi>author</gi>) is not used
               at level 3.</cell>
