@@ -202,7 +202,7 @@
             </row>
             <row>
               <cell><gi>zone</gi></cell>
-              <cell>A two dimensional region. May be used to divide a
+              <cell>[optional] A two-dimensional region. May be used to divide a
               <gi>surface</gi> or <gi>line</gi> into two dimensional
               regions, e.g. a column, a dropped initial capital, or a
               word of interest. A <gi>zone</gi> may itself be divided
@@ -210,7 +210,7 @@
             </row>
             <row>
               <cell><gi>line</gi></cell>
-              <cell>Contains text appearing in a single physical line
+              <cell>[recommended] Contains text appearing in a single physical line
               on the page.</cell>
             </row>
           </table>
