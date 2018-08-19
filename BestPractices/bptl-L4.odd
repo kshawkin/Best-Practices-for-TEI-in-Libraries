@@ -203,35 +203,35 @@
           <table rend="table">
             <row>
               <cell><gi>titlePage</gi> and appropriate child elements</cell>
-              <cell>Recommended.</cell>
+              <cell>[recommended]</cell>
             </row> 
             <row>
               <cell><gi>group</gi></cell>
-              <cell>Recommended to encode a collection of independent texts
+              <cell>[recommended] Use to encode a collection of independent texts
               that are regarded as a single group for processing or
               other purposes.</cell>
             </row> 
             <row>
               <cell><gi>div</gi> <emph>or</emph> <gi>div1</gi>, <gi>div2</gi>, <gi>div3</gi>, etc.</cell>
-              <cell>Recommended for encoding a hierarchy of textual
+              <cell>[recommended] Use for encoding a hierarchy of textual
               divisions. Use as many levels of hierarchy as needed to
               represent the source document.</cell>
             </row>
             <row>
               <cell><gi>floatingText</gi></cell>
-              <cell>Recommended when a floating text is identified.</cell>
+              <cell>[recommended] Use when a floating text is identified.</cell>
             </row>
             <row>
               <cell><gi>list</gi> and <gi>item</gi></cell>
-              <cell>Recommended to indicate ordered and unordered list structures.</cell>
+              <cell>[recommended] Use to indicate ordered and unordered list structures.</cell>
             </row>
             <row>
               <cell><gi>table</gi>, <gi>row</gi>, and <gi>cell</gi></cell>
-              <cell>Recommended to indicate table structures.</cell>
+              <cell>[recommended] Use to indicate table structures.</cell>
             </row>
             <row>
               <cell><gi>hi</gi></cell>
-              <cell>Recommended to indicate change in rendition when a more
+              <cell>[recommended] Use to indicate change in rendition when a more
               specific element is not being used; <att>rend</att>
               attribute is optional.</cell>
             </row>
@@ -239,52 +239,52 @@
               <cell><gi>opener</gi>, <gi>dateline</gi>, <gi>salute</gi>
               <gi>closer</gi>, <gi>signed</gi>,
               <gi>postscript</gi></cell>
-              <cell>Recommended to indicate specific parts of letters.</cell>
+              <cell>[recommended] Use to indicate specific parts of letters.</cell>
             </row>
             <row>        
               <cell><gi>castList</gi>, <gi>castItem</gi>, <gi>sp</gi>,
               <gi>speaker</gi>, and <gi>stage</gi></cell>
-              <cell>Recommended to encode different structures in
+              <cell>[recommended] Use to encode different structures in
               performance texts (i.e. drama).</cell>
             </row> 
             <row>        
               <cell><gi>sp</gi> and <gi>speaker</gi></cell>
-              <cell>Recommended to encode oral history interviews.</cell>
+              <cell>[recommended] Use to encode oral history interviews.</cell>
             </row> 
             <row>
               <cell><gi>epigraph</gi></cell>
-              <cell>Recommended for encoding epigraphs found as front
+              <cell>[recommended] Use for encoding epigraphs found as front
               matter</cell>
             </row>
             <row>
               <cell><tag>quote rend="___"</tag></cell>
-              <cell>Recommended for encoding blockquotes that appear
+              <cell>[recommended] Use for encoding blockquotes that appear
               outside the flow of a paragraph. In the <att>rend</att>
               attribute, give a CSS declaration-block (such as
               <val>padding-left: 0.5in;</val>)</cell>
             </row>
             <row>        
               <cell><gi>argument</gi></cell>
-              <cell>Recommended to encode a list of topics sometimes found
+              <cell>[recommended] Use to encode a list of topics sometimes found
               at the start of a chapter or other textual
               division.</cell>
             </row> 
             <row>        
               <cell><gi>trailer</gi></cell>
-              <cell>Recommended to encode a closing title or footer at the
+              <cell>[recommended] Use to encode a closing title or footer at the
               end of a division.</cell>
             </row>
             <row>
               <cell><gi>quote</gi>, <gi>said</gi>, <gi>mentioned</gi>, and <gi>soCalled</gi></cell>
-              <cell>Optional.</cell>
+              <cell>[optional]</cell>
             </row>
             <row>
               <cell><gi>emph</gi>, <gi>distinct</gi>, <gi>foreign</gi>, <gi>gloss</gi>, and <gi>term</gi></cell>
-              <cell>Optional.</cell>
+              <cell>[optional]</cell>
             </row>
             <row>
               <cell><tag>title type="_"</tag></cell>
-              <cell>Optional within the <gi>text</gi> (not the <gi>teiHeader</gi>), especially when text is 
+              <cell>[optional] Use of this element within the <gi>text</gi> (not the <gi>teiHeader</gi>) is optional, especially when text is 
               typographically distinct. Optionally use the <att>type</att>
               attribute with a value <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
@@ -295,25 +295,25 @@
               document.)</cell>
             </row>
             <row>
-              <cell><gi>ptr</gi> and <gi>ref</gi></cell>
-              <cell>In addition to using to point to notes (as in Level
-              3), optionally use for identifying cross-references within
+              <cell><gi>ptr</gi> or <gi>ref</gi></cell>
+              <cell>[optional] In addition to using to point to notes (as in Level
+              3), use for identifying cross-references within
               the text.</cell>
             </row>
             <row>
               <cell><gi>sic</gi>, <gi>corr</gi>, or <gi>choice</gi></cell>
-              <cell>Optionally use to encode errors or typos.</cell>
+              <cell>[optional] Use to encode errors or typos.</cell>
             </row>
             <row>        
               <cell><gi>add</gi>, <gi>del</gi>, <gi>gap</gi>, and <gi>unclear</gi></cell>
-              <cell>Optionally use to encode material that is added, marked
+              <cell>[optional] Use to encode material that is added, marked
               for deletion, or is illegible, invisible, or inaudible.
               </cell>
             </row> 
             <row>        
               <cell><gi>persName</gi>, <gi>placeName</gi>,
               <gi>geogName</gi>, <gi>orgName</gi>, and <tag>name type="___"</tag> </cell>
-              <cell>Optionally use to encode personal, place,
+              <cell>[optional] Use to encode personal, place,
               organizational, and other names used in a text. The
               <gi>persName</gi> element is also used to indicate a
               personal name inside a <gi>person</gi> element (see below).</cell>
@@ -321,7 +321,7 @@
             <row>        
               <cell><gi>listName</gi>, <gi>listPlace</gi>, and
               <gi>listOrg</gi> </cell>
-              <cell>Optionally use in support of personal, place, and
+              <cell>[optional] Use in support of personal, place, and
               organizational names normalization and to capture
               additional information about the names. Should be captured
               in an external TEI file or database for easier maintenance
@@ -329,25 +329,25 @@
             </row> 
             <row>
               <cell><gi>listPerson</gi></cell>
-              <cell>Optionally used in support of transcriptions of
+              <cell>[optional] Use in support of transcriptions of
               oral interviews.</cell>
             </row>
             <row>
               <cell><gi>person</gi></cell>
-              <cell>Optionally used in support of transcriptions of
+              <cell>[optional] Use in support of transcriptions of
               oral interviews. The use of the <att>role</att>
               attribute is strongly recommended, particularly to
               differentiate interviewer(s) from interviewee(s).</cell>
             </row>
             <row>
               <cell><gi>birth</gi></cell>
-              <cell>Optionally used inside a <gi>person</gi> to
+              <cell>[optional] Use inside a <gi>person</gi> to
               indicate the date or place of birth of the person being
               documented.</cell>
             </row>
       <row>
          <cell><gi>bibl</gi></cell>
-        <cell>Contains a single bibliographic entry. Use of the <gi>author</gi> or <gi>editor</gi> element is recommended. Other valid child elements given in P5 may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
+        <cell>[optional] Contains a single bibliographic entry. Use of at least one <gi>author</gi> or <gi>editor</gi> child element is recommended. Other valid child elements given in P5 may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
        </row>
             
           </table>
