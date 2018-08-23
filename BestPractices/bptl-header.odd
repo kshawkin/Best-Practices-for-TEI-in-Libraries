@@ -735,7 +735,7 @@
                 <gi>relatedItem</gi>
 		<gi>biblStruct</gi>
               </cell>
-	      <cell>[optional] Use one or more <gi>relatedItem</gi> elements to describe a work related to the TEI document, following the guidelines for the components of the <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
+	      <cell>[optional] Use one or more <gi>relatedItem</gi> elements to describe a work related to the TEI document but not described elsewhere in the header. Following the guidelines for the components of the <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
               <cell>???</cell>
               <cell>???</cell>
             </row>
