@@ -118,10 +118,6 @@
           <head>Reference</head>
           <list>
             <item>
-              <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">Chapter
-              3, Elements Available in All TEI Documents</ref>
-            </item>
-            <item>
               <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html">Chapter 11, Representation of Primary Sources</ref>
             </item>
           </list>
@@ -141,13 +137,10 @@
           images). Level 1 texts are not intended to be adequate for
           textual analysis; they are more likely to be suited to the
           goals of a preservation unit or mass digitization
-          initiative. Though their encoding is minimal, Level 1 texts
-          are fully valid XML texts. In addition to taking advantage
-          of the TEI header, these texts, while lightly encoded, can
-          be easily combined with more richly encoded texts (that also
-          follow these guidelines) for searching. Further encoding
-          based on document structures or content analysis can be
-          added to a Level 1 text at any time.</p>
+          initiative. These texts are meant to be a faithful representation 
+	  of the appearance of the source document derived from OCR, providing
+          the basis for subsequent encoding at Level 2 or higher of these 
+          <title>Best Practices</title>.</p>
           <list>
             <head>Level 1 is most suitable for projects with the
             following characteristics</head>
@@ -170,16 +163,11 @@
           <head>Workflow</head>
           <p>Texts at Level 1 can be created and encoded by fully
           automated means. Page images are scanned and processed using
-          OCR, but the text is left uncorrected (“dirty OCR”). Page
-          images are tagged using software that assigns page-level
-          metadata (page number and possibly tags for page features)
-          to each page image for display in the user interface in a
-          list of pages. Encoding is performed automatically: markup
-          with page-level metadata is inserted at selected points into
-          the dirty OCR text, generating a valid XML document. This
-          encoding is both minimal and reliable, and does not
-          typically require extensive review of each page of each
-          text.</p>
+          OCR, but the text is generally left uncorrected (“dirty OCR”) 
+          and the XML is generated from the OCR output. If desired, such 
+          automated output can be enhanced by tagging individual page 
+	  elements to indicate key textual features, such as a title page, 
+          front matter, or the start of a new chapter.</p>
         </div>
         <div type="elrecs">
           <head>Element Recommendations for Level 1</head>
