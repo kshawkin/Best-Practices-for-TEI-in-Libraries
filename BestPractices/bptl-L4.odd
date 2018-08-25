@@ -128,21 +128,21 @@
             <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html">Chapter 16, Linking, Segmentation, and Alignment, P5 Guidelines</ref></item>
           </list>
           <p>Note that this is intended to be a <soCalled>TEI
-          conformant</soCalled> customization, per <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
-          section 23.3</ref>.</p>
+          conformant</soCalled> customization, per <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">
+          section 23.3 of P5</ref>.</p>
         </div>
         <div type="purpose">
           <head>Purpose</head>
           <p>To create text that can stand alone as electronic text,
-          identifies hierarchy and typography, specifies function of
+          identifies hierarchy and typography, specifies the function of
           textual and structural elements, and describes the nature of
-          the content and not merely its appearance. This level is not
+          the content and not merely its appearance. However, this level is not
           meant to encode or identify all structural, semantic, or
           bibliographic features of the text.</p>
         </div>
         <div type="rationale">
           <head>Rationale</head>
-          <p>Greater description of function and content allows for:
+          <p>Greater description of function and content at this level of encoding allows for:
           <list>
             <item>flexibility of display and delivery</item>
             <item>sophisticated searching within specified textual and structural elements</item>
@@ -160,7 +160,7 @@
           allows them to be searched or displayed in sophisticated ways.
           For example, a searcher could limit his or her search in a
           dramatic text to stage directions or in a verse text to only
-          first lines. In a political tract published by subscription, a
+          first lines. Alternatively, in a political tract published by subscription, a
           search could be confined to names that appear in lists, thus
           limiting a search to names of people who subscribed to a
           particular volume. This ability to limit searches becomes more
@@ -170,15 +170,15 @@
           features needed to enhance interoperability.</p>
           <list>
             <head>Level 4 is most suitable for projects with the
-            following characteristics</head>
-            <item>sophisticated search and retrieval capabilities are
-            desired</item>
-            <item>the texts will be used for textual analysis</item>
-            <item>extensibility is desired; that is, one desires to keep
+            following characteristics:</head>
+            <item>Sophisticated search and retrieval capabilities are
+            desired.</item>
+            <item>The texts will be used for textual analysis.</item>
+            <item>Extensibility is desired; that is, one desires to keep
             open the option for a higher level of encoding to be added
-            by the scholarly community at a later date</item>
-            <item>the users of the texts may have limited storage or
-            display capabilities</item>
+            by the scholarly community at a later date.</item>
+            <item>The users of the texts may have limited storage or
+            display capabilities.</item>
           </list>
         </div>
         <div type="workflow">
@@ -187,7 +187,7 @@
           keyboarding from page images using <ref
           target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html">TEI
           Tite</ref>) or possibly by correcting OCR text using software
-          that identifies spelling mistakes and consults a log from the
+          that identifies spelling mistakes or consults a log from the
           OCR software to find regions of uncertainty in the OCR text.
           If converting from TEI Tite, minimal additional markup should be
           added, as discussed in <ref
@@ -196,7 +196,7 @@
         </div>
         <div type="elrecs">
           <head>Element Recommendations for Level 4</head>
-          <p>Use all elements specified in Levels 1, 2, and 3
+          <p>Use all elements specified in Levels 2 and 3
           <emph>except <gi>ab</gi>,</emph> plus elements in the following
           table. Note that some of these elements are defined in
           Level 3 as well, but their use in Level 4 is more strict.</p>
@@ -259,9 +259,9 @@
             <row>
               <cell><tag>quote rend="___"</tag></cell>
               <cell>[recommended] Use for encoding blockquotes that appear
-              outside the flow of a paragraph. In the <att>rend</att>
-              attribute, give a CSS declaration-block (such as
-              <val>padding-left: 0.5in;</val>)</cell>
+	      outside the flow of a paragraph. Use <att>style</att>, 
+	      <att>rendition</att>, or <att>rend</att> to describe the 
+	      appearance (such as <tag>style="padding-left: 0.5in;"</tag>)</cell>
             </row>
             <row>        
               <cell><gi>argument</gi></cell>
@@ -354,15 +354,16 @@
         </div>
         <div type="grecs">
           <head>General Level 4 Recommendations and Examples</head>
-          <p>There are many optinoal but not recommended elements at
+          <p>As shown above, there are many optional elements at
           Level 4. While content for many of these elements can be
           identified within running prose based on changes in typography
           or use of quotation marks in the source document, they are not
-          always so easily idenitified, or they may occur so often that
+          always so easily identified, or they may occur so often that
           identification of each instance is impractical. Use only those
           optional elements that are appropriate for your users'
           needs and your encoding budget.</p>
           <list>
+	    <head>Below are notes on usage of specific elements:</head>
             <item>The use of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html"><gi>group</gi></ref> is recommended when you need to encode a body of distinct texts that are grouped together and are regarded as a unit. Most typical examples of such composite texts would be anthologies, collected works of an author, etc. Section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1 Grouped Texts</ref> states, <quote>The presence of common front matter referring to the whole collection, possibly in addition to front matter relating to each individual text, is a good indication that a given text might usefully be encoded in this way.</quote></item>
             <item>Use <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-argument.html"><gi>argument</gi></ref> to encode a prefatory list or prose description of the topics usually discovered at the beginning of a chapter. The content within the <gi>argument</gi> element can be presented as a list or as a paragraph: 
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-OVRAHoB">
@@ -457,7 +458,7 @@
               </bibl></note>
               </item>
             </list></item>
-            <item>The elements <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><gi>add</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><gi>del</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><gi>unclear</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html"><gi>gap</gi></ref> may be used to indicate instances when a text (i.e. word or part of it, phrase or part of it) has been added, marked for deletion, or to indicate cases where transcription is difficult (<gi>unclear</gi>) or impossible (<gi>gap</gi>) because the material is illegible, invisible, or inaudible (i.e. while transcribing oral history interviews):
+            <item>The elements <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><gi>add</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><gi>del</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><gi>unclear</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html"><gi>gap</gi></ref> may be used to indicate instances when a text (i.e., a word or part of it, or a phrase or part of it) has been added or marked for deletion, or to indicate cases where transcription is difficult (<gi>unclear</gi>) or impossible (<gi>gap</gi>) because the material is illegible, invisible, or inaudible (such as while transcribing oral history interviews):
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-JHLCC">
               <p>But it is well authenticated by the observation of every one, that <del rend="text-decoration: line-through" hand="#JHL">their manner</del> 
               <add rend="vertical-align: super" hand="#JHL">this way—i.e.
@@ -496,14 +497,14 @@
               major features of most title pages is recommended. The child
               elements are listed in <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">Section
-              4.6 "Title Pages"</ref>. <ref
+              4.6, "Title Pages", of P5</ref>. <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePage.html"><gi>titlePage</gi></ref>
-              must include the verso if present, divided by <tag>pb
+              should include the verso if present, divided by <tag>pb
               n="verso"/</tag>.</item>
               <label>Tables of contents, errata, subscription lists,
               lists of other titles by the same author, and other such
               lists'</label>
-              <item>should use a <gi>list</gi> with <gi>item</gi>s. For an
+              <item>These should be encoded using a <gi>list</gi> with <gi>item</gi>s. For an
               index, use <tag>ref target="____"</tag> to mark up page
               numbers given in the index, with the value of
               <att>target</att> referring to the <att>xml:id</att>
@@ -644,7 +645,7 @@
           <div type="subsection">
             <head>Level 4 Drama</head>
             <p>Within the front matter (<gi>front</gi>) of a performance
-            text, cast lists must be encoded as <gi>castList</gi>s, with
+            text, cast lists should be encoded as <gi>castList</gi>s, with
             each item in that list encoded as a <gi>castItem</gi>. If
             desired, each <gi>castItem</gi> may be uniquely identified
             with an <att>xml:id</att> attribute.</p>
@@ -682,8 +683,8 @@
               prose speech with <gi>lb</gi> to designate a new line in a
               particular edition of the text or <gi>lg</gi> and
               <gi>l</gi> to describe dramatic verse structures).</item>
-              <item>If normalizing the speaker(s) of a speech is
-              desired, the <att>who</att> attribute of <gi>sp</gi> may
+              <item>If it is desired to tie the speaker(s) of a speech to 
+	      a particular persona in the cast list, the <att>who</att> attribute of <gi>sp</gi> may
               be used to refer to the <gi>castItem</gi> of the speaker.
               When <att>who</att> is used, <gi>speaker</gi> is
               optional.
@@ -721,26 +722,30 @@
           </div>
           <div type="subsection">
             <head>Level 4 Oral History</head>
-            <p>Speakers in oral history interviews, i.e.
-            interviewee(s) and interviewer(s), may be identified in
+	    <p>The list of participants in an oral history may be encoded in the 
+            body of the TEI document using the structured <gi>listPerson</gi> 
+	    element containing <gi>person</gi> elements for each participant. 
+	    Alternatively, the list of participants may be encoded as a free-form
+	    <gi>list</gi> in the body. The latter approach is especially useful 
+            when the list is included in the source document in an unstructured 
+	    form.</p>
+            <p>If a oral history document has no title of its own, the speakers 
+	    in oral history interviews, i.e., interviewee(s) and interviewer(s), 
+	    may also be identified in
             the <gi>teiHeader</gi> as a list of <gi>author</gi>
-            elements (typically each with a single <gi>persName</gi>)
+            elements (typically each with its own <gi>persName</gi>)
             within <ref
             target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD2"><gi>fileDesc</gi></ref>
             / <ref
             target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21"><gi>titleStmt</gi></ref>.
             </p>
-            <p>In either method, use an <att>xml:id</att> on the
+            <p>Regardless, use an <att>xml:id</att> on the
             <gi>persName</gi> element to uniquely identify the individual
-            participant:
+	    participant.</p>
+            <p>Questions and answers from interviewees and
+            interviewers are encoded as <gi>sp</gi>, with each
+	    speaker identified either:
             <list>
-              <item>The list of an interview’s participants can be also
-              listed within the body of the interview (see example
-              below).</item>
-              <item>Questions and answers from interviewees and
-              interviewers are encoded as <gi>sp</gi>, with each
-              speaker identified either
-              <list>
                 <item>within <gi>speaker</gi> elements, which are the
                 first child of <gi>sp</gi>, or</item>
                 <item>with a <att>who</att> attribute on <gi>sp</gi>,
@@ -748,7 +753,6 @@
                 for the given speaker in the list of interview
                 participants (by its <att>xml:id</att>), or</item>
                 <item>both.</item>
-              </list></item>
             </list>
             </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -776,7 +780,7 @@
                 hearing, along with the president of the student body, and some others.</p>
               </sp>
             </egXML>
-            <p>One possible way to synchronize audio and transcript has
+            <p>One way to synchronize audio and transcript has
             been introduced in <ref
             target="http://docsouth.unc.edu/sohp/">Oral Histories of the
             American South</ref>, using <ref
@@ -790,7 +794,7 @@
           <div type="subsection">
             <head>Level 4 Verse</head>
             <p>Use <gi>lg</gi> and <gi>l</gi> as in Level 3. In
-            addition, use the <att>rend</att> attribute to indicate
+	    addition, use the <att>style</att>, <att>rendition</att>, or <att>rend</att> attribute to indicate
             lines that are indented.</p>
             <p>For example,
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-LCHoS">
@@ -831,8 +835,7 @@
             </egXML>
             </p>
             <p>Like <gi>pb</gi> elements, these should always be placed within the 
-            lowest-level text division unless otherwise documented in the 
-            <gi>editorialDecl</gi>.</p>
+            lowest-level text division.</p>
           </div>
           <div type="subsection" xml:id="L4AHex">
             <head>Level 4 Alger Hiss document</head>
