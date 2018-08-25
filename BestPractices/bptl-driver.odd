@@ -84,12 +84,9 @@
       Best Encoding Practices</title>, which has been updated to comply
       with the <ref target="http://www.tei-c.org/">Text Encoding Initiative</ref>’s
       <ref target="http://www.tei-c.org/Guidelines/P5/">Guidelines for Text
-      Encoding and Interchange (P5)</ref>. These guidelines were originally 
+      Encoding and Interchange (P5)</ref>. These <title>Best Practices</title> were originally 
       created for use in large, library-based digitization projects but are
-      useful as a way of approaching digitization and encoding as a whole. 
-      This version of the <title>Best Practices for TEI in Libraries</title> 
-      was created by the <title>TEI in Libraries: Guidelines for Best
-      Practices</title> Working Group.</p>
+      useful as a way of approaching digitization and encoding as a whole.</p>
       <p>There are many different library text digitization projects,
       serving a variety of purposes. With this in mind, these
       <title>Best Practices</title> are meant to be as inclusive as
@@ -111,31 +108,31 @@
           <cell>Display example</cell>
         </row>
         <row>
-          <cell>Level 1</cell>
-          <cell>The text is generated through OCR, is subordinate to the page image, and is not intended to stand alone as an electronic text (without page images). Encoding is done to assist in full text searching.</cell>
+	  <cell><ref target="#level-1-content">Level 1</ref></cell>
+          <cell>The text is generated through OCR, is subordinate to the page image, and is not intended to stand alone as an electronic text (without page images).</cell>
           <cell><ref target="#L1AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://name.umdl.umich.edu/AGB8710.0001.001">example</ref></cell>
         </row>
         <row>
-          <cell>Level 2</cell>
-          <cell>The text is generated through OCR and is mainly subordinate to the page image, though navigational markers (textual divisions, headings) are captured.</cell>
+	  <cell><ref target="#level-2-content">Level 2</ref></cell>
+          <cell>The text is generated through OCR and is mainly subordinate to the page image, though navigational markers (suchg as textual divisions and headings) are captured.</cell>
           <cell><ref target="#L2AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://hdl.handle.net/2027/spo.5099288.0001.001">example</ref></cell>
         </row>
         <row>
-          <cell>Level 3 (example)</cell>
+	  <cell><ref target="#level-3-content">Level 3</ref></cell>
           <cell>The text is created by conversion, either by way of OCR or keyboarding. Some structural elements of the text are encoded. The text may be used with or without page images.</cell>
           <cell><ref target="#L3AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://name.umdl.umich.edu/abu0246.0001.001">example</ref></cell>
         </row>
         <row>
-          <cell>Level 4 (example)</cell>
+	  <cell><ref target="#level-4-content">Level 4</ref></cell>
           <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images in order for them to be read by students, scholars, and general readers.</cell>
           <cell><ref target="#L4AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://webapp1.dlib.indiana.edu/vwwp/view?docId=VAB7020.xml">example</ref></cell>
         </row>
         <row>
-          <cell>Level 5 (example)</cell>
+	  <cell><ref target="#level-5-content">Level 5</ref></cell>
           <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images, as in Level 4.  In addition, the tagging requires substantial human intervention by encoders with subject knowledge.</cell>
           <cell>(none)</cell>
           <cell><ref target="http://webapp1.dlib.indiana.edu/newton/mss/dipl/ALCH00006/">example</ref></cell>
@@ -149,12 +146,12 @@
       these <title>Best Practices</title>; use of other TEI elements
       and attributes is not recommended.  Consult the <ref
       target="http://www.tei-c.org/Guidelines/P5/">full TEI
-      Guidelines</ref> for guidance on use of elements and attributes
+      Guidelines (P5)</ref> for guidance on use of elements and attributes
       beyond what is described below.</p>
       <p>As guidelines rather than a specification, these <title>Best 
       Practices</title> use <mentioned>should</mentioned> or 
       <mentioned>recommended</mentioned> instead of 
-      <mentioned>must</mentioned> to explain conformance to the guidelines; 
+      <mentioned>must</mentioned> to explain conformance to the practices described here; 
       the only exception is a practice required by P5, indicated by 
       <mentioned>required</mentioned>. Optional practices are indicated 
       by <mentioned>may</mentioned> or <mentioned>optional</mentioned>. 
@@ -171,11 +168,11 @@
       <head>Relation to other TEI customizations</head>
       <div type="===">
         <head>TEI Tite</head>
-      <p>The TEI Tite customization of the TEI Guidelines was
+      <p>The TEI Tite <ref target="http://www.tei-c.org/Guidelines/Customization/">customization</ref> of the TEI Guidelines was
       developed as a subset of the TEI to be used as a vendor
       specification for outsourced encoding of the type often
       initiated by libraries, archives and other cultural heritage
-      organizations. This <title>Best Practices</title> document was
+      organizations. These <title>Best Practices</title> were
       created to support in-house encoding that adheres as closely as
       possible to common TEI practice and library standards yet still
       leaves room for variation in local practice.</p>
@@ -194,7 +191,7 @@
       the TEI Tite customization of the TEI Guidelines. Whereas TEI
       Tite is meant for vendors who need exact specifications for
       encoding, these <title>Best Practices</title> document how a
-      library or other large-scale encoding project might create
+      large-scale encoding project, whether based in a library or not, might create
       conformant TEI documents out of vendor-generated or
       locally-created TEI documents. TEI Tite lacks header metadata
       and elements for encoding textual structures of possible
@@ -211,7 +208,7 @@
       </div>
       <div type="===">
         <head>TEI simplePrint</head>
-        <p>TEI SimplePrint is a customization of the TEI Guidelines 
+        <p>TEI simplePrint is a <ref target="http://www.tei-c.org/Guidelines/Customization/">customization</ref> of the TEI Guidelines 
         designed to be an entry point for a wide variety of encoding 
         projects, especially those dealing with Western European early 
         modern printed material. An implicit aim of the creators of 
@@ -219,8 +216,8 @@
         was to prescribe a single way to encode common features in 
         source documents. The features to be encoded are more granular
         than those in Levels 1 through 4 of these <title>Best 
-        Practices</title>, but TEI simplePrint is discussed below with 
-        Level 5. Furthermore, unlike these <title>Best Practices</title>,
+        Practices</title>; therefore, TEI simplePrint is discussed below with 
+        Level 5. Note that unlike these <title>Best Practices</title>,
         TEI simplePrint specifies a processing model for each element, 
         recommending how they should be displayed or otherwise 
         processed.</p>
@@ -249,7 +246,7 @@
         in UTF-8 format, without beginning with a byte-order mark (U+FEFF). 
         Furthermore, while TEI allows for capturing of glyph variants 
         not distinguished by Unicode (see <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html">
-        P5 chapter 5</ref>), the special elements for this purpose are not 
+        chapter 5 of P5</ref>), the special elements for this purpose are not 
         recommended in these <title>Best Practices</title> in order to 
         facilitate interchange.</p>
       </div>
@@ -258,14 +255,14 @@
         <p>When reformatting to digital media using any level of
         encoding, the electronic text should begin with the
         transcription of the first word on the first leaf of the
-        original work. At levels 1 to 3 of encoding, it may be
+        original work. When using levels 1 to 3 of encoding, it may be
         impractical or undesirable to transcribe and encode certain
         features of the text, such as publisher’s advertisements or
-        indexes. Such omissions may be indicated in the
+        indexes. Any systematic omissions of material found in the 
+        original work should be noted in the <gi>samplingDecl</gi> in
+	the TEI header. Non-systematic omissions should be indicated in the
         <gi>notesStmt</gi> of the <gi>teiHeader</gi>. At Level 4 and
-        above, the transcription should be complete. Any systematic
-        omissions of material found in the original work should be
-        noted in the <gi>samplingDecl</gi> in the TEI header.</p>
+        above, the transcription should be complete.</p>
         <p>When encoding composite documents (an issue of a journal, a
         volume of conference papers, a book of poems, etc.) at Level 3
         and above, consider creating separate TEI documents for each
@@ -280,10 +277,10 @@
         correct order.</p>
         <div type="====">
           <head>Punctuation</head>
-          <p>While the TEI gives the option of removing punctuation
-          marks that could be encoded using XML tags, such as
-          quotation marks or end-of-line hyphens, from the transcribed
-          text, it is recommended to leave these as XML character data
+          <p>While the TEI gives the option of removing from the 
+	  transcribed text punctuation marks, such as quotation marks or 
+	  end-of-life hyphones, that could be encoded using XML tags, it 
+          is recommended to leave these as XML character data
           in order to simplify rendering of the encoded text as it
           appears in the source document. For example:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -296,7 +293,7 @@
           <gi>punctuation</gi> element in the header to record whether 
           other punctuation has been removed.</p>
           <p>When removing punctuation marks whose rendering in the
-          source document is worth preserving, use the <att>style</att>
+          source document is worth preserving in the encoding, use the <att>style</att>
           attribute on the appropriate element to describe the
           punctuation marks that were removed. For example:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -308,7 +305,7 @@
         </div>
         <div type="====">
           <head>Hyphenation</head>
-          <p>Encoding end-of-line, end-of-column, and end-of-page
+          <p>Encoding of end-of-line, end-of-column, and end-of-page
           hyphenation varies considerably in the TEI community. Some
           capture all hyphens found on the printed page, while others
           remove those in the middle of words not normally hyphenated
@@ -344,8 +341,8 @@
             At Level 4, if <gi>lb</gi>, <gi>cb</gi> and <gi>pb</gi> are used, the use of <gi>pc</gi> and  <att>force</att> on these
           elements is required when all original hyphenation and line breaks are being retained. This is important when 
           encoding a text that may be republished in different formats causing line breaks and hyphenation to differ from the original.</p>
-          <p>Example hyphenation markup follows, when a word is broken at the end of a line.
-         (If these hyphens occur at
+          <p>Sample hyphenation markup follows, using the example of a word broken at the end of a line.
+         (If such hyphens occur at
           a column or page break instead of a line break, use
           <gi>cb</gi> or <gi>pb</gi> instead.)
           <table rend="table">
@@ -458,7 +455,7 @@
       <div type="===">
         <head>Filenames</head>
         <p>A filename scheme that is internally consistent should be
-        established for the project.</p>
+        established for any encoding project.</p>
         <p>If it is likely that the files will need to be used on more
         primitive devices (MS-DOS computers or unextended ISO 9660
         CDs) it may be useful to limit names to 8 characters (limited
@@ -507,20 +504,21 @@
       </div>
       <div type="===">
         <head>Textual Divisions</head>
-        <p>An encoding project should use only numbered divisions
+	<p>At Levels 2 and higher, when <gi>text</gi> is used, an 
+ 	encoding project should use only numbered divisions
         (i.e., <gi>div1</gi>, <gi>div2</gi>, etc.) or unnumbered
         divisions (i.e., <gi>div</gi>) but not both. This applies both
         within a TEI document (i.e., within <gi>front</gi>,
         <gi>body</gi>, <gi>back</gi>, even if nested within
-        <gi>group</gi> or <gi>floatingText</gi>) and across TEI
+        <gi>group</gi> or <gi>floatingText</gi>), and across TEI
         documents in any given collection. Keep in mind that numbering
         of textual subdivisions starts over (at <gi>div1</gi>) within
-        <gi>floatingText</gi> nested inside a subdivision, so any
+        <gi>floatingText</gi> elements nested inside a subdivision, so any
         software that expects to process nested numbered divisions
         within a document will need to account for this.</p>
         <p>The choice of numbered or unnumbered divisions should be
         documented with the <gi>tagUsage</gi> element in the header.
-        See <ref><?tei winita: fix ref?>4.6, Element Recommendations
+        See <ref><?tei winita: fix ref?>section 4.6, Element Recommendations
         for the TEI Header</ref>, below.</p>
         <p>Whether numbered or unnumbered divisions are used, the
         <att>type</att> attribute of the division element is not
@@ -531,8 +529,8 @@
         divisions), and is strongly recommended at Levels 4 and 5 (for
         full analysis of the text structure). Recommended values for
         the <att>type</att> attribute are listed below. Other values
-        may be used if these are not applicable. See the section on
-        the <att>type</att> attribute, below on adding customized
+        may be used if these are not applicable. See section 3.91, on
+        the <att>type</att> attribute, below for a disussion of adding customized
         values to the project ODD.</p>
         <!-- When changing values for the @type attribute on the <div>
              element, remember to make the parallel adjustments to the
@@ -802,7 +800,7 @@
         chapters 2 and 3 should be encoded right after the opening tag
         of the text division that opens chapter 3 rather than
         before the closing tag of the division that ends chapter
-        2. In the case of a page break occurring at the boundary of 
+        2 or between the two text divisions. In the case of a page break occurring at the boundary of 
         nested textual divisions, the <gi>pb</gi> element should always 
         be encoded within the lowest level division. For example, a page 
         break that occurs between chapters 2 and 3, where chapter 3 begins 
@@ -835,7 +833,9 @@
           <gi>pb</gi> element (levels 2–5) to point to the
           corresponding page image using a URI.</item>
           <item>Use the <att>GROUPID</att> attribute on various
-          <gi>file</gi> elements in a METS document to point to the
+          <gi>file</gi> elements in a <ref
+        target="http://www.loc.gov/standards/mets/">Metadata Encoding
+        and Transmission Standard</ref> (METS) document to point to the
           <att>xml:id</att> attributes of the <gi>surface</gi> (any
           level) or <gi>pb</gi> (levels 2–5), thereby providing
           correspondence between the page indicated by the
@@ -843,12 +843,10 @@
           page images (e.g., master, web derivatives, etc.).</item>
         </list>
         </p>
-        <p>For those projects relying on the <ref
-        target="http://www.loc.gov/standards/mets/">Metadata Encoding
-        and Transmission Standard</ref> (METS), the <att>xml:id</att>
+        <p>For those projects relying on METS, note that the <att>xml:id</att>
         attribute is used as a conceptual identifier for content as
         opposed to an explicit pointer to a specific representation of
-        that content. (Conversly, the <att>facs</att> attribute is a
+        that content. (Conversely, the <att>facs</att> attribute is a
         pointer, not an identifier.) These identifiers are then used
         to generate a METS document that bundles the various content
         types (e.g., master image files, derivative image files for
@@ -883,7 +881,7 @@
         conforming to these <title>Best Practices</title> is included in <ref
         target="#Appendix_A:_Recommended_Attributes">Appendix
         A</ref>.</p>-->
-        <p>In this section is general advice on the use of particular
+        <p>This section contains general advice on the use of particular
         attributes commonly needed for library encoding projects. (All
         of the attributes below are commonly used on various elements,
         but not every element requires or even allows these
@@ -919,8 +917,8 @@
           <head><att>ref</att> and tag URIs</head>
           <p>The <att>ref</att> attribute is available on a variety of elements, including <gi>persName</gi>, <gi>orgName</gi>
           <gi>author</gi>, and <gi>title</gi>. Its value is a URI that identifies external metadata about the content of the
-          element. Linked Data applications in libraries have led to many authority records being made accessible through URIs, 
-          allowing this attribute to be used for disambiguation. For example:
+          element. Since Linked Data applications in libraries make many authority records being made accessible through URIs, 
+          this attribute can be used for disambiguation (authority control). For example:
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <placeName ref="http://vocab.getty.edu/page/tgn/7012924">Indianapolis</placeName>
@@ -959,7 +957,7 @@
           <p>If there is a desire to have an authority file spanning documents, it might be tempting 
           to use relative URIs (as discussed above), rather than an absolute URIs, in the value of <att>ref</att> in order to 
           create a local authority file.  However, such URIs cannot be resolved in a stable way as the location of the TEI document 
-          changes. As in the TEI Guidelines <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">3.5.1 Referring Strings</ref>,
+          changes. As in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">section 3.5.1, Referring Strings, of P5</ref>,
           these <title>Best Practices</title> recommend the use of the <att>ref</att> attribute 
             with <term>tag URIs</term> as described in <ref target="http://www.ietf.org/rfc/rfc4151">IETF RFC 4151</ref> in order to create unique local identifiers that can also be 
           shared across files and projects. For example, a tag URI created in 2016 for 
@@ -976,7 +974,7 @@
           <att>rendition</att> attributes may be used when it is
           desirable to record information about how a textual
           feature was displayed in the source document.</p>
-          <p>Never use these attributes on header elements: metadata
+          <p>Never use these attributes on header elements since, in the header, metadata
           is transcribed and possibly regularized, as in a catalog
           record, but its exact appearance is not meant to be
           captured.</p>
@@ -1004,12 +1002,12 @@
 	  <gi>teiHeader</gi>. Specify the desired rendition (as CSS)
 	  in the content of the <gi>rendition</gi>, and to which
 	  elements it applies (using CSS selector syntax) in the
-	  <att>selector</att> attribute.
+	  <att>selector</att> attribute. For example:
 	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
 	    <rendition selector="div[type='chap']>head" scheme="css">font-style: italic; font-weight: bold</rendition>
 	    <rendition selector="div[type='sect']>head" scheme="css">font-style: italic</rendition>
 	  </egXML>
-	    The above example indicates that headings of chapters in
+	    This example indicates that headings of chapters in
 	    the source document were in bold italics, whereas headings
 	    of sections were in italics, but not boldface.</p>
 
@@ -1024,7 +1022,7 @@
           </egXML>
           Use of the <att>rendition</att> attribute and element offers
           an additional level of indirection, decreasing the total
-          number of keystrokes and possibly reducing the chance of
+          number of keystrokes in the XML and therefore possibly reducing the chance of
           typos being introduced in the encoding.</p>
           <p>If there are formatting features in the source that cannot be
           expressed with CSS syntax, the <att>rend</att> attribute may be
@@ -1032,8 +1030,8 @@
         </div>
         <div type="====">
           <head><att>xml:lang</att></head>
-          <p>Used to indicate the natural language of the content of
-          an element. It is generally not on or within the
+          <p>This attribute is used to indicate the natural language of the content of
+          an element. It is generally not found on or within the
           <gi>sourceDoc</gi> or <gi>text</gi> elements at Level 1 or
           Level 2, but is common at Level 3 and above. See the
           documentation of the <ref
@@ -1149,13 +1147,13 @@
         </xi:include>
 	  <!-- END included ./bptl-L4.odd#header-content  -->
 
-        <div type="===">
-          <head>LEVEL 5: Scholarly Encoding Projects</head>
+        <div xml:id="level-5-content" type="==">
+          <head>Level 5: Scholarly Encoding Projects</head>
           <p>Level 5 texts are those that require substantial human
           intervention by encoders with subject knowledge. These texts
           might include encodings of semantic, linguistic, prosodic,
           or other features well beyond the basic structural elements
-          discussed in Levels 1-4 above. They might also include
+          discussed for Levels 1-4 above. They might also include
           elements for editorial, critical, or analytical additions;
           manuscript descriptions; translations; or other textual
           apparatus.</p>
@@ -1170,7 +1168,7 @@
             <head>Purpose</head>
             <p>To create deeply analytical encoded texts that might be
             appropriate for specific research purposes, as part of a
-            scholarly publishing project, or for any other encoding
+            scholarly publishing project, or for other encoding
             practices in library-based text encoding.</p>
           </div>
           <div type="====">
@@ -1180,14 +1178,14 @@
             efforts in digitization, scholarly editing, academic
             support, or other research. Level 5 is intended to
             represent that work, which can take advantage of the full
-            richness of the complete TEI Guidelines, while still
+            richness of the complete TEI Guidelines (P5), while still
             acknowledging the impact of library-specific practices on
             encoded text that is created under the auspices of a
             library.</p>
           </div>
           <div type="====">
             <head>Element Recommendations and Examples</head>
-            <p>Because of the vast range of possibilities for Level-5
+            <p>Because of the vast range of possibilities for Level 5
             encoding, these <title>Best Practices</title> have chosen
             to provide neither a list of recommended elements nor any
             specific examples for encoding a transcription of a source
@@ -1260,7 +1258,8 @@
         <item>Peter Gorman, University of Wisconsin (version 4.0.0)</item>
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
-        <item>Chris Powell, University of Michigan (version 3.0)</item>
+        <item>Elli Mylonas, Brown University (version 4.0.0)</item>
+	<item>Chris Powell, University of Michigan (version 3.0)</item>
         <item>Paul Schaffner, University of Michigan (version 4.0.0)</item>
         <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
         <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>
@@ -1502,8 +1501,8 @@
      basis for advocating for the needs of libraries in future TEI
      releases.</p>
      <p>The SIG decided to undertake a revision to this document at 
-     its meeting in November 2015 in Lyon.  A workgroup met monthly 
-     from early 2016 to ____ to undertake the work.</p>
+     its meeting in November 2015 in Lyon.  A workgroup met approximately monthly 
+     from early 2016 to 2018 to undertake the work.</p>
    </div>
  </body>
 </text>
