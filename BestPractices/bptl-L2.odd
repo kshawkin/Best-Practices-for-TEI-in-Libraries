@@ -114,7 +114,7 @@
           <p>Note that this is a <soCalled>syntactically
           conformant</soCalled> customization, in that documents that
           are valid against this scheme will also be valid against the
-          <name>TEI_all</name> schema. However, it is unkown whether or
+          <name>TEI_all</name> schema. However, it is unknown whether or
           not it is truly <soCalled>TEI conformant</soCalled>, as the
           <title>TEI Guidelines</title> do not make clear whether or not
           encoding of individual paragraphs is mandatory.</p>
@@ -123,8 +123,8 @@
           <head>Purpose</head>
           <p>To create electronic text for full-text searching, linking
           to page images, and identifying simple structural hierarchy to
-          improve navigation. (For example, you can create a table of
-          contents from such encoding.)</p>
+          improve navigation. (For example, you can generate a table of
+          contents automatically from such encoding.)</p>
         </div>
         <div type="rationale">
           <head>Rationale</head>
@@ -140,7 +140,7 @@
           using Level 2 is to avoid expensive analysis of textual elements
           and/or the expense of accurate text conversion, e.g.,
           double-keying or detailed proofreading of automatic OCR.</p>
-          <p>For the most part, Level 2 texts are <emph>not</emph>
+          <p>For the most part, though, Level 2 texts are <emph>not</emph>
           intended to be displayed separately from their page images.
           Level 2 encoding of sections and headings provides greater
           navigational possibilities than Level 1 encoding, and enables
@@ -148,20 +148,20 @@
           (for example, searching for two phrases within the same
           chapter).</p>
           <list>
-            <head>Level 2 is most suitable for projects in which</head>
-            <item>a large volume of material is to be made available
-            online quickly</item>
-            <item>a digital image of each page is desired</item>
-            <item>the material is of interest to a large community of
+            <head>Level 2 is most suitable for projects with the following characteristics:</head>
+            <item>A large volume of material is to be made available
+            online quickly.</item>
+            <item>A digital image of each page is desired.</item>
+            <item>The material is of interest to a large community of
             users who wish to read texts that allow keyword
-            searching</item>
-            <item>rudimentary search and display capabilities based on
-            the large structures of the text are desired</item>
-            <item>each text is checked to ensure that textual divisions
-            and headers are properly identified</item>
-            <item>extensibility is desired; that is, one desires to keep
+            searching.</item>
+            <item>Rudimentary search and display capabilities based on
+            the large structures of the text are desired.</item>
+            <item>Each text is checked to ensure that textual divisions
+            and headers are properly identified.</item>
+            <item>Extensibility is desired; that is, one desires to keep
             open the option for a higher level of encoding to be added
-            at a later date</item>
+            at a later date.</item>
           </list>
         </div>
         <div type="workflow">
@@ -172,7 +172,7 @@
           images. The textual division metadata might contain the page
           number on which the division begins and a transcription of
           that division's heading. This metadata is inserted into the
-          raw OCR at the appropriate points, forming a valid XML
+          OCR at the appropriate points, forming a valid XML
           document. Level 2 texts do not require any special knowledge
           or manual intervention below the section level.</p>
         </div>
@@ -201,6 +201,10 @@
                     <cell>[recommended] Use if headings are present. As in the TEI Guidelines, this element must appear before the <gi>ab</gi> for that division.</cell>
                </row>
                <row>
+                    <cell><gi>ab</gi></cell>
+                    <cell>[recommended] There should be only one child of the <gi>div</gi> (or <gi>div1</gi>): a single <gi>ab</gi> wrapping all of the OCR text. If the TEI document is ever <soCalled>upgraded</soCalled> to Level 3 or higher, the <gi>ab</gi> element will be replaced by structural elements like <gi>p</gi> and <gi>table</gi>.</cell>
+               </row>
+               <row>
                     <cell><gi>lb</gi></cell>
                     <cell>[optional] Indicates the beginning of a new line.</cell>
                </row>
@@ -213,10 +217,6 @@
         </div>
         <div type="examples">
           <head>Level 2 Examples</head>
-          <p>Note that for technical reasons the namespace is not shown
-          in these examples, but it should always be supplied on the root
-          <gi>TEI</gi> element, e.g.: <tag>TEI
-          xmlns="http://www.tei-c.org/ns/1.0"</tag>.</p>
           <div type="example">
             <head>Level 2 Basic Structure</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
