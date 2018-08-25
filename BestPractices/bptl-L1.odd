@@ -143,20 +143,20 @@
           <title>Best Practices</title>.</p>
           <list>
             <head>Level 1 is most suitable for projects with the
-            following characteristics</head>
-            <item>a large volume of material is to be made available
-            online quickly</item>
-            <item>a digital image of each page is desired</item>
-            <item>no manual intervention will be performed in the text
-            creation process</item>
-            <item>the material is of interest to a large community of
-            users who wish to read texts that allow keyword
-            searching</item>
-            <item>sophisticated search and display capabilities based on
-            the structure of the text are not necessary</item>
-            <item>extensibility is desired; that is, one desires to keep
+            following characteristics:</head>
+            <item>A large volume of material is to be made available
+            online quickly.</item>
+            <item>A digital image of each page can be displayed to the user.</item>
+            <item>No manual intervention will be performed in the text
+            creation process.</item>
+            <item>The material is of interest to a large community of
+            users who wish to explore texts using keyword
+            searching.</item>
+            <item>Sophisticated search and display capabilities based on
+            the structure of the text are not necessary.</item>
+            <item>Extensibility is desired; that is, one desires to keep
             open the option for a higher level of encoding to be added at
-            a later date</item>
+            a later date.</item>
           </list>
         </div>
         <div type="workflow">
