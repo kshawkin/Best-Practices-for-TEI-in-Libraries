@@ -122,7 +122,7 @@
             Linking, Segmentation, and Alignment, P5 Guidelines</ref> (for handling notes) </item>
           </list>
           <p>Note that this is intended to be a <soCalled>TEI conformant</soCalled> customization, per
-          <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5
+          <ref target="file:///Users/syd/Documents/P5/Guidelines-web/en/html/USE.html#CF">P5,
           section 23.3</ref>.</p>
         </div>
         <div type="purpose">
@@ -139,9 +139,9 @@
           are determined by the logical structure and appearance of
           the text and not specialized content analysis.</p>
           <p>Level 3 texts identify front and back matter, textual
-          divisions, and all paragraph breaks. Floating texts, or
-          sub-texts like a poem or letter embedded in the greater
-          text, are supported in this level. The finer granularity of
+          divisions, and all paragraph breaks. Floating texts (sub-texts 
+          like a poem or letter embedded in the greater
+          text) are supported in this level. The finer granularity of
           encoding these features, as well as figures, notes, and all
           changes of typography, allows a range of options for
           display, delivery, and searching. For example, one has the
@@ -149,22 +149,22 @@
           characteristics of different typographic styles, and
           regularizing the display and placement of note text.</p>
           <p>Level 3 texts can stand alone as text without page
-          images, and therefore can be uploaded, downloaded, and
-          delivered quickly, and require less storage space than
+          images and therefore can be uploaded, downloaded, and
+          delivered to users quickly. In addition, they require less storage space than
           digital collections with page images. However, the simple
           level of structural analysis and absence of specialized
           content analysis reflected in Level 3 encoding may make it
           desirable for some, depending on project priorities, to
           include page images in order to provide users with a fuller
-          set of resources.</p>
+          set of resources on the source document.</p>
           <list>
-            <head>Level 3 is most suitable for projects with the following characteristics</head>
-            <item>the material is of interest to a large community of users who wish to read texts that allow for keyword searching</item>
-            <item>some sophistication of display, delivery, and searching based on structure of the text is desired</item>
-            <item>each text will undergo quality control to ensure that encoding decisions have been made appropriately</item>
-            <item>the users of the texts may have limited storage or display capabilities</item>
-            <item>the creator of the texts has limited or no ability to provide content expertise to analyze, tag, or review texts</item>
-            <item>extensibility is desired; that is, one desires to keep open the option for a higher level of encoding to be added at a later date</item>
+            <head>Level 3 is most suitable for projects with the following characteristics:</head>
+            <item>The material is of interest to a large community of users who wish to read texts that allow for keyword searching.</item>
+            <item>Some sophistication of display, delivery, and searching based on structure of the text is desired.</item>
+            <item>Each text will undergo quality control to ensure that encoding decisions have been made appropriately.</item>
+            <item>The users of the texts may have limited storage or display capabilities.</item>
+            <item>The creator of the texts has limited or no ability to provide content expertise to analyze, tag, or review texts.</item>
+            <item>Extensibility is desired; that is, one desires to keep open the option for a higher level of encoding to be added at a later date.</item>
           </list>
         </div>
         <div type="workflow">
@@ -180,7 +180,7 @@
         </div>
         <div type="elrecs">
           <head>Element Recommendations for Level 3</head>
-          <p>Use all elements specified in Levels 1 and 2 <emph>except <gi>ab</gi>, plus the
+          <p>Use all elements specified in Level 2 <emph>except <gi>ab</gi>, plus the
           following</emph>:
           <table rend="table">
             <row>
@@ -247,38 +247,40 @@
           <head>General Level 3 Recommendations</head>
           <div type="grec">
             <head>Forme Work</head>
-            <p>Running heads, catch words, page numbers, signatures, and other artifacts derived from printing should not be included in Level 3, with the exception of page numbers, which are recorded using the <att>n</att> attribute on <gi>pb</gi>.  If upgrading a text from Level 1 or Level 2 that was generated using OCR, discard the forme work information.</p>
+            <p>Running heads, catch words, page numbers, signatures, and other artifacts derived from printing should not be included in Level 3, with the exception of page numbers, which are recorded using the <att>n</att> attribute on <gi>pb</gi>.  If upgrading a text from Level 1 or Level 2 that was generated using OCR, discard any forme work text.</p>
           </div>
           <div>
             <head>Level 3 Figures</head>
             <p><gi>figure</gi> groups elements representing or
             containing graphic information such as an illustration or
-            figure; in this context <gi>figure</gi> contains the
+            figure. A <gi>figure</gi> should contain the
             following elements:
             <list>
               <label><gi>head</gi></label>
-              <item>for a caption label (e.g., <quote>Figure 1</quote>)
-              and/or a literal transcription of a caption. Use when this
+              <item>for a caption label (e.g., <quote>Figure 1</quote>) or, 
+              when no caption label is present, a literal transcription of a caption. Use when this
               feature is present in the source document.</item>
               <label><gi>p</gi></label>
-              <item>for a literal transcription of a caption (could be
+              <item>When a caption label is present and encoded 
+              using <gi>head></gi>, use <gi>p</gi> for a literal 
+              transcription of a caption (could be
               used in conjunction with the <gi>head</gi> tag if a
               caption label is present). Use when this feature is
               present in the source document.</item>
               <label><gi>figDesc</gi></label>
-              <item>for free text description of the image for use when
-              documenting an image without displaying it. This is
-              <emph>mandatory</emph> in order to create digital texts
+              <item>for a description of the image to serve as an 
+              alternative to viewing the image. This is
+              <emph>recommended</emph> in order to create digital texts
               that will be accessible to the visually impaired.</item>
               <label><gi>graphic</gi></label>
               <item>for pointing to the URI of the image itself using a
               <att>url</att> attribute and containing other presentation
               instructions such as dimension at which the graphic should
-              be displayed, etc. This is <emph>mandatory</emph> in order
+              be displayed, etc. This is <emph>recommended</emph> in order
               to point to the corresponding image file.</item>
             </list>
             </p>
-            <p>An example of frontispiece encoding: 
+            <p>Here is an example of the encoding of a frontispiece using <gi>figure</gi>: 
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-NoST">
               <front>
                 <div type="frontispiece">
@@ -311,13 +313,13 @@
                      >Chapter 4.5, Front Matter</ref>
               </item>
             </list>
-            <p>You may wish not to include front matter content such as table of contents or lists of illustrations, especially if you plan to automatically generate the contents or lists of illustrations.  If you do, however, plan to manually encode the table of contents (or lists of illustrations and similar content), use a <gi>div</gi> (or <gi>div1</gi>) element with an appropriate <att>type</att> attribute (e.g., <tag>div type="contents"</tag>). Within this division, use the <gi>list</gi> element to mark up the table of contents, list of illustrations, etc. Each list item should have a <gi>ptr</gi> or <gi>ref</gi> element with a <att>target</att> attribute referencing an <att>xml:id</att> attribute on the <gi>pb</gi> or on the <gi>div</gi> (or <gi>div1</gi>) of the referenced page or section. Use <gi>ref</gi> if you wish to transcribe page numbers in the table of contents; use <gi>ptr</gi> if you do not.</p>
+            <p>You may wish not to include in your TEI document front matter such as a table of contents or a list of illustrations, especially if you plan to automatically generate these from the encoded text.  If you do, however, plan to manually encode such textual features, use a <gi>div</gi> (or <gi>div1</gi>) element with an appropriate <att>type</att> attribute (e.g., <tag>div type="contents"</tag>) to surround the encoding of the feature. Within this division, use the <gi>list</gi> element to mark up the table of contents, list of illustrations, etc. Each list item should have a <gi>ptr</gi> or <gi>ref</gi> element with a <att>target</att> attribute referencing an <att>xml:id</att> attribute on the <gi>pb</gi> or on the <gi>div</gi> (or <gi>div1</gi>) of the referenced page or section. Use <gi>ref</gi> if you wish to transcribe page numbers in the table of contents; use <gi>ptr</gi> if you do not.</p>
           </div>
           <div type="grec">
             <head>Notes</head>
             <p>Use the <gi>note</gi> element to encode the text of a margin note, 
               footnote, endnote, or other note found in the source document. If a
-              point of attachment is marked with a siglumn (such as an asterisk 
+              point of attachment is marked with a siglum (such as an asterisk 
               or superscript number), encode the siglum with a <gi>ref</gi> 
               element. Alternatively, if there is no marked point of attachment, 
               insert a <gi>ptr</gi> at the most likely implied point of attachment
@@ -388,9 +390,6 @@
         </div>
         <div type="examples">
           <head>Level 3 Examples</head>
-          <p>Note that for technical reasons the namespace is not shown in these examples, but it
-          should always be supplied on the root <gi>TEI</gi> element, e.g.: <tag>TEI
-          xmlns="http://www.tei-c.org/ns/1.0" xml:id="MBFG0236"</tag>.</p>
           <div type="example">
             <head>Level 3 Basic Structure: Prose</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
