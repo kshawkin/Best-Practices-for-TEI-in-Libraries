@@ -119,7 +119,7 @@
           <p>As with any descriptive metadata, the metadata in the TEI
           header can serve multiple audiences. In the local context, a
           TEI header provides metadata about the TEI document, its
-          source, and its provenance. The TEI header may be used for
+          source, and its provenance. The TEI header may be used to enable
           metadata exchange, to automatically create indexes (author
           lists, title lists) for a collection of TEI documents, and
           to aid in browsing heterogeneous TEI documents. TEI headers
@@ -173,16 +173,16 @@
           target="./edmcook-original_mets_xmp.xml">example METS
           record</ref> for <title>The “Sure to Rise” Cookery
           Book</title>. We are unaware of any METS implementations
-          which provide significant support for TEI Headers
+          which provide significant support for TEI headers
           out-of-the-box.</p>
        </div>
         <div xml:id="frbr" type="section">
         <head>The TEI Header and FRBR</head>
         <p><title><choice><expan>Functional Requirements for Bibliographic
-                        Records</expan><abbr>FRBR</abbr></choice></title><ptr
+                        Records</expan><abbr>FRBR</abbr></choice></title><note><ptr
                 target="https://www.ifla.org/publications/functional-requirements-for-bibliographic-records"
-            /> is a conceptual model developed by <choice><expan>the International
-                    Federation of Library Associations</expan><abbr>IFLA</abbr></choice><ptr target="https://www.ifla.org/"/>
+		/></note> is a conceptual model developed by <choice><expan>the International
+                    Federation of Library Associations</expan><abbr>IFLA</abbr></choice><note><ptr target="https://www.ifla.org/"/></note>
             <cit><quote>for relating the data that are stored in bibliographic records to the needs
                     of the users of those records</quote> <bibl>(<title>Functional Requirements for
                         Bibliographic Records: Final Report</title>, <date>February
@@ -220,7 +220,7 @@
                 </listRelation>
             </egXML></p>
             <p>Note that a TEI document itself, like any other XML
-            document, occupied an ambiguous territory between a FRBR
+            document, occupies an ambiguous territory between a FRBR
             expression and a FRBR
             manifestation.<note>
             <bibl>
@@ -1499,6 +1499,7 @@
                 <item>whether line breaks, column breaks, page breaks,
                 or a combination are encoded</item>
                 <item>any other editorial decisions made during encoding</item>
+		<item>an explanation of any tag URI schemes used in the TEI document</item>
               </list>
               </cell>
               <cell>
@@ -2097,7 +2098,7 @@
                   <elementRef key="normalization" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="punctuation"   minOccurs="0" maxOccurs="1"/>
                   <elementRef key="quotation"     minOccurs="0" maxOccurs="1"/>
-                  <classRef key="model.pLike"     minOccurs="0" maxOccurs="6"/>
+                  <classRef key="model.pLike"     minOccurs="0" maxOccurs="7"/>
                 </sequence>
               </content>
               <exemplum xml:lang="en">
