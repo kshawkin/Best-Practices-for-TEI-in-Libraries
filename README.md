@@ -93,7 +93,9 @@ help, and the `-d` switch will generate lots of debugging code.
 
 ### other methods
 
-There are a variety of other ways to to generate schemas from the ODD
+#### schemas
+
+There are a variety of other ways to generate schemas from the ODD
 which may work for you. (And remember to generate both ISO Schematron
 and RELAX NG; or, if for some reason you can’t use RELAX NG you can
 also generate DTDs or W3C XML Schema).
@@ -102,10 +104,12 @@ also generate DTDs or W3C XML Schema).
 1. Install `roma`[1] on your machine[2] issue something like `roma2 --patternprefix=lib3_ --noxsd --dochtml --nodtd --isoschematron lib3.odd .`
 1. In oXygen, use the TEI ODD transformation scenarios.
 
+#### HTML documentation
+
 To generate the main HTML documentation for the entire system, use something like
 ```
-$ xmllint --xinclude main-driver.odd > /tmp/main-driver.odd
-$ ~/Documents/Stylesheets/teitohtml /tmp/main-driver.odd
+ xmllint --xinclude main-driver.odd > /tmp/main-driver.odd
+ ~/Documents/Stylesheets/teitohtml /tmp/main-driver.odd
 ```
 If `teitohtml` does not run on your system, you could submit the /tmp/main-driver.odd file to [OxGarage](http://www.tei-c.org/oxgarage/) instead.
 
