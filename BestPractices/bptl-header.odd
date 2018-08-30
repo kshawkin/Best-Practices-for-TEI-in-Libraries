@@ -35,7 +35,7 @@
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
                 bptl-header.odd, too! -->
-        <p>Version 4.0.0a (<date when="2018-05-29">Tue, 29 May 18</date>)</p>
+        <p>Version 4.0.0b (<date when="2018-08-30">Thu, 30 Aug 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -64,6 +64,10 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change who="#sbauman.emt" when="2018-08-30">
+	Per Elli &amp; Kevin on today's conference call, remove <gi>relatedItem</gi> from
+	content model of <gi>notesStmt</gi>.
+      </change>
       <change who="#sbauman.emt" when="2018-04-15">
         Beginning to address ticket #27: use <gi>sourceDoc</gi> for
         encoding of OCR text. Also update base version of TEI from
@@ -1372,11 +1376,11 @@
 		<att>url</att> attribute for the value that indicates
 		the encoding level:
                 <list>
-                  <item> Level 1: <val>bptl:L1-v4.0.0a</val></item>
-                  <item> Level 2: <val>bptl:L2-v4.0.0a</val></item>
-                  <item> Level 3: <val>bptl:L3-v4.0.0a</val></item>
-                  <item> Level 4: <val>bptl:L4-v4.0.0a</val></item>
-                  <item> Level 5: <val>bptl:L5-v4.0.0a</val></item>
+                  <item> Level 1: <val>bptl:L1-v4.0.0b</val></item>
+                  <item> Level 2: <val>bptl:L2-v4.0.0b</val></item>
+                  <item> Level 3: <val>bptl:L3-v4.0.0b</val></item>
+                  <item> Level 4: <val>bptl:L4-v4.0.0b</val></item>
+                  <item> Level 5: <val>bptl:L5-v4.0.0b</val></item>
                 </list>
                 </p>
               </cell>
@@ -2031,20 +2035,20 @@
                        in the <editionStmt>s in each of the .odd
                        files, too! -->
                   <valList type="semi" mode="add">
-                    <valItem ident="bptl:L1-v4.0.0a">
-                      <gloss>Best Practices for TEI in Libraries level 1, version 4.0.0a</gloss>
+                    <valItem ident="bptl:L1-v4.0.0b">
+                      <gloss>Best Practices for TEI in Libraries level 1, version 4.0.0b</gloss>
                     </valItem>
-                    <valItem ident="bptl:L2-v4.0.0a">
-                      <gloss>Best Practices for TEI in Libraries level 2, version 4.0.0a</gloss>
+                    <valItem ident="bptl:L2-v4.0.0b">
+                      <gloss>Best Practices for TEI in Libraries level 2, version 4.0.0b</gloss>
                     </valItem>
-                    <valItem ident="bptl:L3-v4.0.0a">
-                      <gloss>Best Practices for TEI in Libraries level 3, version 4.0.0a</gloss>
+                    <valItem ident="bptl:L3-v4.0.0b">
+                      <gloss>Best Practices for TEI in Libraries level 3, version 4.0.0b</gloss>
                     </valItem>
-                    <valItem ident="bptl:L4-v4.0.0a">
-                      <gloss>Best Practices for TEI in Libraries level 4, version 4.0.0a</gloss>
+                    <valItem ident="bptl:L4-v4.0.0b">
+                      <gloss>Best Practices for TEI in Libraries level 4, version 4.0.0b</gloss>
                     </valItem>
-                    <valItem ident="bptl:L5-v4.0.0a">
-                      <gloss>Best Practices for TEI in Libraries level 5, version 4.0.0a</gloss>
+                    <valItem ident="bptl:L5-v4.0.0b">
+                      <gloss>Best Practices for TEI in Libraries level 5, version 4.0.0b</gloss>
                     </valItem>
                   </valList>
                 </attDef>
@@ -2374,7 +2378,13 @@
               <attDef mode="change" ident="xml:lang" usage="req"/>
               <attDef mode="delete" ident="type"/>
             </attList>
-          </elementSpec>
+	  </elementSpec>
+	  <elementSpec module="header" ident="notesStmt" mode="change">
+	    <content>
+	      <!-- Same as P5 except we removed <relatedItem> -->
+	      <classRef minOccurs="1" maxOccurs="unbounded" key="model.noteLike"/>
+	    </content>
+	  </elementSpec>
           <elementSpec module="core" ident="title" mode="change">
             <attList>
               <attDef ident="level" usage="opt" mode="replace">
