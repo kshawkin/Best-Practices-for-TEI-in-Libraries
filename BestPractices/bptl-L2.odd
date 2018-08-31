@@ -115,8 +115,7 @@
           conformant</soCalled> customization, in that documents that
           are valid against this scheme will also be valid against the
           <name>TEI_all</name> schema. However, it is unknown whether or
-          not it is truly <soCalled>TEI conformant</soCalled>, as the
-          <title>TEI Guidelines</title> do not make clear whether or not
+          not it is truly <soCalled>TEI conformant</soCalled>, as P5 does not make clear whether or not
           encoding of individual paragraphs is mandatory.</p>
         </div>
         <div type="purpose">
@@ -198,7 +197,7 @@
                </row>
                <row>
                     <cell><gi>head</gi> </cell>
-                    <cell>[recommended] Use if headings are present. As in the TEI Guidelines, this element must appear before the <gi>ab</gi> for that division.</cell>
+                    <cell>[recommended] Use if headings are present. As in P5, this element must appear before the <gi>ab</gi> for that division.</cell>
                </row>
                <row>
                     <cell><gi>ab</gi></cell>
