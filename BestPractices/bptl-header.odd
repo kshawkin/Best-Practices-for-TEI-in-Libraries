@@ -712,38 +712,14 @@
               <cell>└</cell>
               <cell cols="5">
                 <gi>notesStmt</gi>
-              </cell>
-              <cell>[optional]</cell>
-              <cell>n/a</cell>
-              <cell>n/a</cell>
-            </row>
-
-            <row>
-              <cell>│</cell>
-              <cell/>
-              <cell>├</cell>
-              <cell cols="4">
-                <gi>note</gi>
+		      <gi>note</gi>
               </cell>
               <cell>[optional] Use one <gi>note</gi> element for each note about the TEI document that does not have an appropriate location elsewhere in the header.</cell>
               <cell>5xx</cell>
               <cell>5xx</cell>
             </row>
-		  
-            <row>
-              <cell>│</cell>
-              <cell>│</cell>
-              <cell>└</cell>
-              <cell cols="4">
-                <gi>relatedItem</gi>
-		<gi>biblStruct</gi>
-              </cell>
-	      <cell>[optional] Use one or more <gi>relatedItem</gi> elements to describe a work related to the TEI document but not described elsewhere in the header. Following the guidelines for the components of the <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
-              <cell>???</cell>
-              <cell>???</cell>
-            </row>
 
-		  <row>
+       	    <row>
               <cell>│</cell>
               <cell>└</cell>
               <cell cols="5">
@@ -1617,7 +1593,7 @@
               </cell>
               <cell>[optional] Used to record a prose description of
               the rationale and methods used in selecting texts, or
-              parts of text, for inclusion</cell>
+              parts of text, for inclusion.</cell>
               <cell>500</cell>
               <cell>n/a</cell>
 	    </row>
