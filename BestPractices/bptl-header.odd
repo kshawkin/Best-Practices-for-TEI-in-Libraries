@@ -174,7 +174,7 @@
           specifies an <att>MDTYPE</att> of <val>TEIHDR</val> to
           indicate a TEI Header. For an example of how this might be
           done, see this <ref
-          target="./edmcook-original_mets_xmp.xml">example METS
+          target="./edmcook-original_mets_xmp.xml">sample METS
           record</ref> for <title>The “Sure to Rise” Cookery
           Book</title>. We are unaware of any METS implementations
           which provide significant support for TEI headers
@@ -302,7 +302,7 @@
           </list>
           </p>
         </div>
-        <div type="elrecs">
+        <div type="elrecs" xml:id="headertable">
           <head>Element and Attribute Recommendations for the TEI Header</head>
           <p>Below is documentation on use of elements and attributes
           within the <gi>teiHeader</gi> element. These recommendations
@@ -512,7 +512,7 @@
                 <gi>persName</gi> or <gi>orgName</gi> when applicable.
                 Whenever possible, establish or use the authorized
                 form of the name from a name authority file.</p>
-                <p>Unlike in the TEI Guidelines, do not use this
+                <p>Unlike in P5, do not use this
                 element for translators, illustrators, compilers, or
                 other roles not generally considered an editor.
                 Therefore, do not use the <att>role</att>
@@ -697,8 +697,7 @@
               <att>type</att> attribute is optional, but if it is
               used, it should follow <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">the
-              instructions for use of this element in the full TEI
-              Guidelines</ref>.</cell>
+              instructions for use of this element in P5</ref>.</cell>
               <cell>
                 <list>
                   <item>490</item>
@@ -915,9 +914,8 @@
                 item. Transcribe the title according to the
                 descriptive cataloging standard used.</p>
                 <p>Use of the <att>level</att> attribute is optional.
-                If used, it should be used as in <ref
-                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">the
-                main TEI Guidelines</ref>.</p>
+                If used, it should be used <ref
+                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as in P5</ref>.</p>
                 <p>Use of the <att>type</att> attribute is
                 recommended. It should have one of the following
                 values as suitable in local practice:
@@ -1198,9 +1196,8 @@
               <list>
                 <item> <val>LCCN</val> (for a Library of Congress control number) </item>
                 <item> <val>LC_call_number</val> </item>
-                <item> Those listed in the <ref
-                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-idno.html">TEI
-              Guidelines</ref></item>
+                <item> Those listed in <ref
+                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-idno.html">P5</ref></item>
               </list>
               </cell>
               <cell>534 $z for ISBN</cell>
@@ -1252,8 +1249,7 @@
               <att>type</att> attribute is optional, but if it is
               used, it should follow <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">the
-              instructions for use of this element in the full TEI
-              Guidelines</ref>.</cell>
+              instructions for use of this element in P5</ref>.</cell>
               <cell>534 $f</cell>
               <cell>
                 <list>
@@ -1338,7 +1334,7 @@
         </cell>
         <cell>[optional] Use <gi>listRelation</gi> with <gi>relation</gi> child elements to express any FRBR
             entities and relationships relating to the TEI document (see <ref target="#frbr"
-                >discussion above</ref>).</cell>
+                >section 4.1.5, The TEI Header and FRBR</ref>, above).</cell>
         <cell>n/a</cell>
         <cell>n/a</cell>
     </row>
@@ -1694,7 +1690,7 @@
               indicate language(s) used in the source document. Use of
               the <att>ident</att> attribute is required <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-language.html">as
-              in the full TEI guidelines</ref>. Since the value of
+              in P5</ref>. Since the value of
               this attribute is usually sufficient to indicate the
               language, the <gi>language</gi> element should normally
               have no content. In the unusual case where
