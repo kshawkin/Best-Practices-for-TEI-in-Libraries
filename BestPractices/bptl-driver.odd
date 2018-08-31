@@ -133,7 +133,7 @@
         </row>
         <row>
 	  <cell><ref target="#level-5-content">Level 5</ref></cell>
-          <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images, as in Level 4.  In addition, the tagging requires substantial human intervention by encoders with subject knowledge.</cell>
+          <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images, as in Level 4.  In addition, the text includes semantic, linguistic, prosodic, or other types of tagging created through substantial human intervention by encoders with subject knowledge.</cell>
           <cell>(none)</cell>
           <cell><ref target="http://webapp1.dlib.indiana.edu/newton/mss/dipl/ALCH00006/">example</ref></cell>
         </row>
@@ -162,13 +162,14 @@
       <p>These <title>Best Practices</title> specify a recommended
       archival storage format. Local system needs may require
       transformation of documents in this archival format to another
-      XML format for use by a local indexing or delivery software.</p>
+      XML format (another TEI customization or another type of XML) 
+      for use by a local indexing or delivery software.</p>
     </div>
     <div type="==">
       <head>Relation to other TEI customizations</head>
       <div type="===">
         <head>TEI Tite</head>
-      <p>The TEI Tite <ref target="http://www.tei-c.org/Guidelines/Customization/">customization</ref> of the TEI Guidelines was
+      <p>The TEI Tite <ref target="http://www.tei-c.org/Guidelines/Customization/">customization</ref> of P5 was
       developed as a subset of the TEI to be used as a vendor
       specification for outsourced encoding of the type often
       initiated by libraries, archives and other cultural heritage
@@ -188,7 +189,7 @@
       or for upgrading Level 1 or Level 2 texts, with less human
       intervention than would be required by TEI Tite.)</p>
       <p>These <title>Best Practices</title> are meant to complement
-      the TEI Tite customization of the TEI Guidelines. Whereas TEI
+      the TEI Tite customization of P5. Whereas TEI
       Tite is meant for vendors who need exact specifications for
       encoding, these <title>Best Practices</title> document how a
       large-scale encoding project, whether based in a library or not, might create
@@ -208,7 +209,7 @@
       </div>
       <div type="===">
         <head>TEI simplePrint</head>
-        <p>TEI simplePrint is a <ref target="http://www.tei-c.org/Guidelines/Customization/">customization</ref> of the TEI Guidelines 
+        <p>TEI simplePrint is a <ref target="http://www.tei-c.org/Guidelines/Customization/">customization</ref> of P5 
         designed to be an entry point for a wide variety of encoding 
         projects, especially those dealing with Western European early 
         modern printed material. An implicit aim of the creators of 
@@ -322,7 +323,7 @@
           place where a hyphen <emph>might occur</emph>. Furthermore,
           it includes a <name>non-breaking hyphen</name>, used in
           cases like <soCalled>re-creation</soCalled> (meaning
-          <gloss>to create again</gloss>, as opposed to recreation,
+	  <gloss>to create again</gloss>, as opposed to <soCalled>recreation</soCalled>,
           meaning <gloss>relaxation</gloss>), in addition to a regular
           hyphen, which would normally count as a word boundary. In
           short, Unicode is oriented toward electronic text that may
@@ -456,17 +457,7 @@
         <head>Filenames</head>
         <p>A filename scheme that is internally consistent should be
         established for any encoding project.</p>
-        <p>If it is likely that the files will need to be used on more
-        primitive devices (MS-DOS computers or unextended ISO 9660
-        CDs) it may be useful to limit names to 8 characters (limited
-        to the 26 lower case letters of ASCII, digits, hyphens, and
-        underscore), a dot, and an extension of 3 alphanumeric
-        characters. Likewise, if you will access files using a version
-        of Apple Filing Protocol (AFP) before 3.0, filenames longer
-        than 31 bytes are likely to be corrupted, so you may wish to
-        limit filenames to 31 single-byte (e.g., ASCII)
-        characters.</p>
-        <p>Otherwise, consider the following best practices when
+        <p>Consider the following best practices when
         determining the file name scheme for your project:
         <list>
           <item>Each filename should contain an identifier that
@@ -492,7 +483,7 @@
         </list>
         </p>
       </div>
-      <div type="===">
+      <div type="===" xml:id="uris">
         <head>URIs</head>
         <p>A number of attributes take a <ref
         target="http://tools.ietf.org/html/rfc3986">URI</ref> (Uniform
@@ -518,7 +509,7 @@
         within a document will need to account for this.</p>
         <p>The choice of numbered or unnumbered divisions should be
         documented with the <gi>tagUsage</gi> element in the header.
-        See <ref><?tei winita: fix ref?>section 4.6, Element Recommendations
+        See <ref target="#headertable">section 4.1.8, Element and Attribute Recommendations
         for the TEI Header</ref>, below.</p>
         <p>Whether numbered or unnumbered divisions are used, the
         <att>type</att> attribute of the division element is not
@@ -529,8 +520,8 @@
         divisions), and is strongly recommended at Levels 4 and 5 (for
         full analysis of the text structure). Recommended values for
         the <att>type</att> attribute are listed below. Other values
-        may be used if these are not applicable. See section 3.91, on
-        the <att>type</att> attribute, below for a disussion of adding customized
+        may be used if these are not applicable. See <ref target="#type=attribute">section 3.9.1, on
+	the <att>type</att> attribute</target>, below for a discussion of adding customized
         values to the project ODD.</p>
         <!-- When changing values for the @type attribute on the <div>
              element, remember to make the parallel adjustments to the
@@ -886,7 +877,7 @@
         of the attributes below are commonly used on various elements,
         but not every element requires or even allows these
         attributes.)</p>
-        <div type="====">
+        <div type="====" xml:id="type=attribute">
           <head><att>type</att></head>
           <p>Constructing a list of acceptable attribute values for
           the <att>type</att> attribute for each element, on which
@@ -913,7 +904,7 @@
           in the source document, such as page numbers or footnote
           numbers. Example: <tag>pb n="456"/</tag></p>
         </div>
-<div type="====">
+	<div type="====" xml:id="ref-tag-uris">
           <head><att>ref</att> and tag URIs</head>
           <p>The <att>ref</att> attribute is available on a variety of elements, including <gi>persName</gi>, <gi>orgName</gi>
           <gi>author</gi>, and <gi>title</gi>. Its value is a URI that identifies external metadata about the content of the
@@ -932,7 +923,7 @@
           </egXML>
 
           <p>Still, there are times when an outside URI for disambiguation is not available. An encoding project could use URI 
-          fragment identifiers (see above) to point to an authority record (identified with <att>xml:id</att>) within the same 
+	  fragment identifiers (see <ref target="#uris">above</ref>) to point to an authority record (identified with <att>xml:id</att>) within the same 
           TEI document. For example, in the transcription of the text, you can use
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <placeName ref="#geo_0034">Texas</placeName>
@@ -966,7 +957,7 @@
             <persName ref="tag:nabokovpapers.org,2016:B_V001">Blavdak Vinomori</persName>
           </egXML>
           If desired, such tag URIs could be shortened by creating a private URI scheme 
-          <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">as described in the TEI Guidelines</ref>.</p>
+          <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">as described in section 16.2.3 of P5</ref>.</p>
         </div>
         <div type="====">
           <head><att>style</att>, <att>rendition</att>, and <att>rend</att></head>
@@ -1026,7 +1017,8 @@
           typos being introduced in the encoding.</p>
           <p>If there are formatting features in the source that cannot be
           expressed with CSS syntax, the <att>rend</att> attribute may be
-          used instead of <att>style</att> or <att>rendition</att>.</p>
+          used instead of <att>style</att> or <att>rendition</att> to supply a 
+     	  rendering using a locally defined style language.</p>
         </div>
         <div type="====">
           <head><att>xml:lang</att></head>
@@ -1036,7 +1028,7 @@
           Level 2, but is common at Level 3 and above. See the
           documentation of the <ref
           target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-teidata.language.html">teidata.language
-          datatype</ref> in the TEI Guidelines for information on the
+          datatype</ref> in P5 for information on the
           values of <att>xml:lang</att>.</p>
         </div>
       </div>
@@ -1065,7 +1057,7 @@
         <row>
           <cell>├</cell>
           <cell><gi>facsimile</gi></cell>
-          <cell>[optional] Defines sets of images that correspond with the text. Should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#txtimglnk">Linking between encoded text and images of source documents</ref>.</cell>
+          <cell>[optional] Defines sets of images that correspond with the text. Should only be used if page images are included and if this particular mechanism for linking page images is chosen. See <ref target="#txtimglnk">section 3.8, Linking Between Encoded Text and Images of Source Documents</ref>.</cell>
         </row>
         <row>
           <cell>└</cell>
