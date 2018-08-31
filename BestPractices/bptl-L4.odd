@@ -288,7 +288,7 @@
               typographically distinct. Optionally use the <att>type</att>
               attribute with a value <ref
               target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">as
-              given in the full TEI guidelines</ref> except for main
+              given in P5</ref> except for main
               titles. (The <val>main</val> value should be used, when
               appropriate, for <gi>title</gi>s within a TEI header, but
               is not needed for <gi>title</gi>s elsewhere in a
@@ -525,7 +525,7 @@
             attribute containing an appropriate value, such as <val>event</val>
             for the name of an event.</p>
             <p>For all of these elements, use the <att>ref</att> attribute 
-            (see discussion above) to provide a reference to a <gi>person</gi>, 
+	    (see <ref target="#ref-tag-uris">section 3.9.3</ref> above) to provide a reference to a <gi>person</gi>, 
             <gi>place</gi>, <gi>org</gi>, <gi>event</gi>, or other element in 
             an external file or database for managing name normalization and 
             compilation of additional information such as biographical or 
