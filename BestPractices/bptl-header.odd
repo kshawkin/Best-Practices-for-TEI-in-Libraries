@@ -789,7 +789,7 @@
               <cell/>
               <cell/>
               <cell>│</cell>
-              <cell>└</cell>
+              <cell>├</cell>
               <cell cols="2">
                 <tag>title level="a" type="___"</tag>
               </cell>
@@ -830,6 +830,22 @@
             </row>
 
             <row>
+              <cell>│</cell>
+              <cell/>
+              <cell/>
+              <cell>│</cell>
+              <cell>└</cell>
+              <cell cols="2">
+                <tag>ptr target="___"</tag>
+              </cell>
+              <cell>
+		      [optional] In the value of <att>target</att>, provide a URI for the object of encoding that is part of a larger work. For example, this could be link to a facsimile of that object that is different from the TEI document.
+              </cell>
+              <cell>n/a</cell>
+              <cell>n/a</cell>
+            </row>
+
+	    <row>
               <cell>│</cell>
               <cell/>
               <cell/>
@@ -1116,7 +1132,7 @@
               <cell/>
               <cell/>
               <cell>│</cell>
-              <cell>│</cell>
+              <cell>├</cell>
               <cell cols="2">
                 <gi>extent</gi>
               </cell>
@@ -1139,7 +1155,7 @@
               <cell/>
               <cell/>
               <cell>│</cell>
-              <cell>│</cell>
+              <cell>├</cell>
               <cell cols="2">
                 <gi>note</gi>
               </cell>
@@ -1155,7 +1171,7 @@
               <cell/>
               <cell/>
               <cell>│</cell>
-              <cell>└</cell>
+              <cell>├</cell>
               <cell cols="2">
                 <gi>idno</gi>
               </cell>
@@ -1195,6 +1211,21 @@
             </row>
 
             <row>
+              <cell>│</cell>
+              <cell/>
+              <cell/>
+              <cell>│</cell>
+              <cell>└</cell>
+              <cell cols="2">
+                <tag>ptr target="___"</tag>
+              </cell>
+              <cell>[optional] In the value of <att>target</att>, provide a URI for the source document. For example, this could be link to a facsimile of the source document.
+              </cell>
+              <cell>856 $u when 2nd indicator = 2 and $3 = “Source”</cell>
+              <cell>n/a</cell>
+            </row>
+
+	    <row>
               <cell>│</cell>
               <cell/>
               <cell/>
@@ -1260,7 +1291,7 @@
               <cell/>
               <cell/>
               <cell>│</cell>
-              <cell>└</cell>
+              <cell>├</cell>
               <cell cols="2">
                 <tag>idno type="ISSN"</tag>
               </cell>
@@ -1270,6 +1301,20 @@
             </row>
 
             <row>
+              <cell>│</cell>
+              <cell/>
+              <cell/>
+              <cell>│</cell>
+              <cell>└</cell>
+              <cell cols="2">
+                <tag>ptr target="___"</tag>
+              </cell>
+              <cell>[optional] In the value of <att>target</att>, provide a URI for a catalog record for the source document.</cell>
+              <cell/>
+              <cell/>
+            </row>
+		  
+	    <row>
               <cell>│</cell>
               <cell/>
               <cell/>
