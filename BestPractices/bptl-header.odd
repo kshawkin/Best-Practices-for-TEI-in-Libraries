@@ -158,8 +158,7 @@
           header and the MARC bibliographic record.</p>
           <p>In order to allow automatic generation of TEI headers
           from MARC bibliographic records and MARC bibliographic
-          records from TEI headers, some elements (like
-          <gi>author</gi>) in these <title>Best Practices</title>
+          records from TEI headers, according to these <title>Best Practices</title>, some elements should 
           contain content not typical for TEI practice but necessary
           due to a lack of granularity in the MARC format.</p>
         </div>
@@ -199,9 +198,11 @@
                 <term>exemplified by</term> one or more items. Since the publication of
                 <title>FRBR</title> in 2008, the library metadata community has collaborated to
             develop more precise entity-relationship models relating to bibliographic
-            metadata—notably <title>FRBRoo</title><ptr target="http://www.cidoc-crm.org/frbroo/"/>
-            and BIBFRAME<ptr target="https://www.loc.gov/bibframe/"/>, each with different
+            metadata—notably <title>FRBRoo</title><note><ptr target="http://www.cidoc-crm.org/frbroo/"/></note>
+		and BIBFRAME<note><ptr target="https://www.loc.gov/bibframe/"/></note>, each with different
             configurations of bibliographic entities than the four primary entities in FRBR.</p>
+		<p>It is important to note that these <title>Best Practices</title>, like P5 as a whole, does not distinguish betwen <term>work</term>,
+                <term>expression</term>, <term>manifestation</term>, and <term>item</term> according to their definitions in FRBR.</p>
         <p>Due to sustained interest in the original FRBR model from within the TEI community, these
                 <title>Best Practices</title> describe how an encoder might identify bibliographic
             entities relating to a TEI document and express relationships between them. For example,
@@ -470,6 +471,7 @@
                     <eg>&lt;author&gt;&lt;persName&gt;Joannes, Actuarius, 13th/14th cent.&lt;/persName&gt;&lt;/author&gt;</eg>
                   </item>
                 </list>
+		      Optionally use the <att>ref</att> attribute on <gi>persName<gi> and <gi>orgName</gi> to supply a URI for a record in an authority file (see <ref target="#name-tagging">section 4.2.5.6.2</ref>).
               </cell>
               <cell>
                 <list>
@@ -758,7 +760,7 @@
               </cell>
               <cell>[recommended] Use this element and its children only if the object of encoding is part of a larger 
               work—for example, an article in a journal issue, a chapter in a book, or a poem in a
-              collection.</cell>
+              collection. Below the object of encoding that is part of a larger work is referred to as the <term>analytic item</term>.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -775,8 +777,7 @@
               <cell>[recommended] One or more <gi>author</gi> elements (one name per
               element) are used to encode the name for the personal
               author or corporate body responsible for the creation of
-              the intellectual or artistic content of the object of
-              encoding that is part of a larger work. Use
+              the intellectual or artistic content of the analytic item. Use
               <gi>persName</gi> or <gi>orgName</gi> when applicable.
               Whenever possible, establish or use the authorized form
               of the name from a name authority file.</cell>
@@ -795,8 +796,7 @@
               </cell>
               <cell>
                 <p>[recommended] At least one <gi>title</gi> element is required for
-                the title of the object of encoding that is part of a
-                larger work. Transcribe the title according to the the
+                the title of the analytic item. Transcribe the title according to the the
                 descriptive cataloging standard used.</p>
                 <p>Use of the <att>type</att> attribute is
                 recommended. It should have one of the following
@@ -839,7 +839,7 @@
                 <tag>ptr target="___"</tag>
               </cell>
               <cell>
-		      [optional] In the value of <att>target</att>, provide a URI for the object of encoding that is part of a larger work. For example, this could be link to a facsimile of that object that is different from the TEI document.
+		      [optional] In the value of <att>target</att>, provide a URI for analytic item. For example, this could be link to a facsimile of the analytic item that is different from the TEI document.
               </cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
@@ -1491,7 +1491,7 @@
               <cell>[optional] A specialization of the <gi>punctuation</gi>
               element, the <gi>quotation</gi> element may be provided
               to explicitly declare whether quotation marks have been
-              retained as content or not.</cell>
+	      retained as content or not. Optionally use the <gi>marks</gi> attribute.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1555,9 +1555,9 @@
               indicate the default renditions of various elements in
               the source document. Use the <att>selector</att>
               attribute to indicate to which elements this rendition
-              should be applied. (Alternatively, use an
+              should be applied. Alternatively, use an
               <att>xml:id</att> attribute and point to it from a
-              <att>rendition</att> attribute.)</cell>
+              <att>rendition</att> attribute.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
