@@ -1457,7 +1457,7 @@
      <p>In April 2009, a year after the revision work began, the
      significantly revamped <title>Best Practices</title>, soon to be
      known as <title>Best Practices for TEI in Libraries</title>
-     (version 3), were disseminated for public comment. At the DLF Spring Forum in Raleigh, a <ref
+     (version 3.0), were disseminated for public comment. At the DLF Spring Forum in Raleigh, a <ref
      target="http://www.diglib.org/forums/spring2009/2009springprogram.htm">Birds-of-a-Feather
      session entitled <title>TEI Text Encoding in
      Libraries</title></ref> was held to gather in-person public
@@ -1472,7 +1472,7 @@
      an ODD document (containing both schema constraints and prose) for levels 1-4, further ensuring
      interoperability of texts encoded according to these <title>Best
      Practices</title>.</p>
-     <p>The revised <title>Best Practices</title> contained updated
+     <p><ref target="http://www.tei-c.org/SIG/Libraries/teiinlibraries/3.0/main-driver.html">Version 3.0</ref> contained updated
      versions of the widely adopted encoding
      <soCalled>levels</soCalled> &#x2014; from fully automated conversion to
      content analysis and scholarly encoding. They also contained a
@@ -1491,9 +1491,13 @@
      closer work with the TEI Consortium as a whole and a stronger
      basis for advocating for the needs of libraries in future TEI
      releases.</p>
-     <p>The SIG decided to undertake a revision to this document at 
-     its meeting in November 2015 in Lyon.  A workgroup met approximately monthly 
-     from early 2016 to 2018 to undertake the work.</p>
+     <p>At its meeting in November 2015, the SIG decided to undertake 
+     a revision to these <title>Best Practices</title>.  A <ref 
+     target="http://wiki.tei-c.org/index.php/Workgroup_to_revise_the_Best_Practices_for_TEI_in_Libraries">workgroup</ref> 
+     met approximately monthly from early 2016 to 2018 to carry out 
+     this work, releasing version <ref 
+     target="http://www.tei-c.org/SIG/Libraries/teiinlibraries/3.1.0a/">3.1.0a</ref> 
+     in November 2017 and version 4.0.0 in September 2018.</p>
    </div>
  </body>
 </text>
