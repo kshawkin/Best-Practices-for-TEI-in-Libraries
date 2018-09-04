@@ -513,7 +513,7 @@
             </list>
             </p>
           </div>
-          <div type="subsection">
+          <div type="subsection" xml:id="name-tagging">
             <head>Level 4 Name Tagging</head>
             <list>
               <item><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDATTSnr">Chapter 13.1.1, Linking Names and Their Referents</ref></item>
@@ -532,8 +532,8 @@
             geospatial information. An external TEI file may contain
             an entry for each name, grouped accordingly under
             <gi>listPerson</gi>, <gi>listPlace</gi>,
-            <gi>listOrg</gi>, or <gi>listEvent</gi> which is uniquely identified
-            with an <att>xml:id</att> attribute. The value of the
+            <gi>listOrg</gi>, or <gi>listEvent</gi>, with each name uniquely identified
+            with an <att>xml:id</att> attribute. In this case the value of the
             <att>ref</att> attribute in the main TEI document (the
             transcription of the source document) references the value
             of the <att>xml:id</att> attribute in the external file. (In
