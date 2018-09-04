@@ -784,7 +784,7 @@
         <head>Page Breaks</head>
         <p>Page breaks should be encoded using the <gi>pb</gi>
         element, with the value of the <att>n</att> attribute denoting
-        the number of the page whose text <emph>follows</emph> this
+        the number of the page whose content <emph>follows</emph> this
         element. The <gi>pb</gi> element should always be contained
         within a text division for ease of retrieval with indexing
         software. For example, a page break that occurs between
@@ -887,7 +887,7 @@
           target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#IM">ODD</ref>
           file and that this list be made available to people using
           the texts. It is worth noting that, at present, <ref
-          target="http://www.tei-c.org/Roma/">Roma</ref>, the web
+          target="http://roma.tei-c.org/">Roma</ref>, the web
           front-end editor for ODD files, does not have a mechanism
           for providing this documentation; instead, this information should be added to the
           ODD file manually. For a list of standard names and
@@ -908,7 +908,7 @@
           <head><att>ref</att> and tag URIs</head>
           <p>The <att>ref</att> attribute is available on a variety of elements, including <gi>persName</gi>, <gi>orgName</gi>
           <gi>author</gi>, and <gi>title</gi>. Its value is a URI that identifies external metadata about the content of the
-          element. Since Linked Data applications in libraries make many authority records being made accessible through URIs, 
+          element. Since Linked Data applications in libraries make many authority records accessible through URIs, 
           this attribute can be used for disambiguation (authority control). For example:
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1065,8 +1065,7 @@
           <cell>[recommended at Levels 2–5] Contains the encoded transcription of the source document. The <att>xml:lang</att> attribute is recommended; it indicates the primary language of the source document.</cell>
         </row>
       </table>
-      <p>The child elements of the <gi>teiHeader</gi> and
-      <gi>text</gi> elements are described below.</p>
+      <p>The child elements of these top-level elements are described below.</p>
 
       <!-- START included ./bptl-header.odd#header-content  -->
       <xi:include href="./bptl-header.odd" xpointer="element(header-content)">
