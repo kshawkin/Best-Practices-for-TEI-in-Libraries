@@ -33,7 +33,7 @@
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
                 bptl-header.odd, too! -->
-        <p>Version 4.0.0b (<date when="2018-08-30">Thu, 30 Aug 18</date>)</p>
+        <p>Version 4.0.0b (<date when="2018-09-04">Tue, 04 Sep 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
