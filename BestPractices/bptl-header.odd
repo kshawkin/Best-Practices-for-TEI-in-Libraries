@@ -471,7 +471,7 @@
                     <eg>&lt;author&gt;&lt;persName&gt;Joannes, Actuarius, 13th/14th cent.&lt;/persName&gt;&lt;/author&gt;</eg>
                   </item>
                 </list>
-		      Optionally use the <att>ref</att> attribute on <gi>persName<gi> and <gi>orgName</gi> to supply a URI for a record in an authority file (see <ref target="#name-tagging">section 4.2.5.6.2</ref>).
+		      Optionally use the <att>ref</att> attribute on <gi>persName</gi>gi> and <gi>orgName</gi> to supply a URI for a record in an authority file (see <ref target="#name-tagging">section 4.2.5.6.2</ref>).
               </cell>
               <cell>
                 <list>

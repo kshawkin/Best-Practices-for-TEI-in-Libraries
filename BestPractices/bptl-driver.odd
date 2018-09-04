@@ -520,8 +520,8 @@
         divisions), and is strongly recommended at Levels 4 and 5 (for
         full analysis of the text structure). Recommended values for
         the <att>type</att> attribute are listed below. Other values
-        may be used if these are not applicable. See <ref target="#type=attribute">section 3.9.1, on
-	the <att>type</att> attribute</target>, below for a discussion of adding customized
+        may be used if these are not applicable. See <ref target="#type">section 3.9.1, on
+	the <att>type</att> attribute</ref>, below for a discussion of adding customized
         values to the project ODD.</p>
         <!-- When changing values for the @type attribute on the <div>
              element, remember to make the parallel adjustments to the
@@ -877,7 +877,7 @@
         of the attributes below are commonly used on various elements,
         but not every element requires or even allows these
         attributes.)</p>
-        <div type="====" xml:id="type=attribute">
+        <div type="====" xml:id="type">
           <head><att>type</att></head>
           <p>Constructing a list of acceptable attribute values for
           the <att>type</att> attribute for each element, on which
