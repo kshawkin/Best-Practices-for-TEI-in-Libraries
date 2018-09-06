@@ -133,8 +133,8 @@
         <div type="rationale">
           <head>Rationale</head>
           <p>The text is subordinate to the page image, and is not
-          intended to stand alone as an electronic text (without page
-          images). Level 1 texts are not intended to be adequate for
+          intended to stand alone as an electronic text without accompanying page
+          images. Level 1 texts are not intended to be adequate for
           textual analysis; they are more likely to be suited to the
           goals of a preservation unit or mass digitization
           initiative. These texts are meant to be a faithful representation 
@@ -185,7 +185,7 @@
               two-dimensional coordinate space. There should be one
               <gi>surface</gi> for each encoded page, whether it is
               represented via a facsimile image file, a transcription,
-              or most likely a textual representation obtained from
+              or, most likely, a textual representation obtained from
               OCR.</cell>
             </row>
             <row>
