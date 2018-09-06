@@ -114,7 +114,7 @@
           <p>Note that this is a <soCalled>syntactically
           conformant</soCalled> customization, in that documents that
           are valid against this scheme will also be valid against the
-          <name>TEI_all</name> schema. However, it is unknown whether or
+          <name>TEI_all</name> schema. However, it is unclear whether or
           not it is truly <soCalled>TEI conformant</soCalled>, as P5 does not make clear whether or not
           encoding of individual paragraphs is mandatory.</p>
         </div>
