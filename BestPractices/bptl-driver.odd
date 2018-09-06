@@ -862,7 +862,7 @@
       <div type="===">
         <head>General Guidelines for Attribute Usage</head>
         <p>These <title>Best Practices</title> provide recommended usage of <ref
-        target="#Element_and_Attributes_Recommendations_for_the_TEI_Header">attributes
+        target="#headertable">attributes
         as used in the TEI header</ref> and within the body of the TEI
         document (within the <gi>text</gi> element), as evidenced by
         attributes used in encoding example snippets and the prose
