@@ -158,7 +158,7 @@
           appearance.</p>
           <p>Finally, functionally accurate encoding in Level 4 texts
           allows them to be searched or displayed in sophisticated ways.
-          For example, a searcher could limit his or her search in a
+          For example, perhaps a searcher could limit their search in a
           dramatic text to stage directions or in a verse text to only
           first lines. Alternatively, in a political tract published by subscription, a
           search could be confined to names that appear in lists, thus
@@ -197,7 +197,7 @@
         <div type="elrecs">
           <head>Element Recommendations for Level 4</head>
           <p>Use all elements specified in Levels 2 and 3
-          <emph>except <gi>ab</gi>,</emph> plus elements in the following
+          <emph>except <gi>ab</gi> as defined for Level 2,</emph> plus elements in the following
           table. Note that some of these elements are defined in
           Level 3 as well, but their use in Level 4 is more strict.</p>
           <table rend="table">
@@ -345,10 +345,14 @@
               indicate the date or place of birth of the person being
               documented.</cell>
             </row>
-      <row>
-         <cell><gi>bibl</gi></cell>
-        <cell>[optional] Contains a single bibliographic entry. Use of at least one <gi>author</gi> or <gi>editor</gi> child element is recommended. Other valid child elements given in P5 may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
-       </row>
+      	    <row>
+              <cell><gi>bibl</gi></cell>
+              <cell>[optional] Contains a single bibliographic entry. Use of at least one <gi>author</gi> or <gi>editor</gi> child element is recommended. Other valid child elements given in P5 may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
+            </row>
+	    <row>
+	      <cell><tag>ab type="typography"</tag></cell>
+	      <cell>[recommended] Use to mark typographical elements that indicate a structural break or boundary.</cell>
+	    </row>
             
           </table>
         </div>
@@ -721,15 +725,15 @@
             </p>
           </div>
           <div type="subsection">
-            <head>Level 4 Oral History</head>
-	    <p>The list of participants in an oral history may be encoded in the 
+            <head>Level 4 Transcription of Oral History</head>
+	    <p>The list of participants in the transcription of an oral history may be encoded in the 
             body of the TEI document using the structured <gi>listPerson</gi> 
 	    element containing <gi>person</gi> elements for each participant. 
 	    Alternatively, the list of participants may be encoded as a free-form
 	    <gi>list</gi> in the body. The latter approach is especially useful 
             when the list is included in the source document in an unstructured 
 	    form.</p>
-            <p>If a oral history document has no title of its own, the speakers 
+            <p>If an oral history document has no title of its own, the speakers 
 	    in oral history interviews, i.e., interviewee(s) and interviewer(s), 
 	    may also be identified in
             the <gi>teiHeader</gi> as a list of <gi>author</gi>
