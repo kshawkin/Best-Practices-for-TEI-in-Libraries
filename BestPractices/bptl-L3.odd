@@ -169,10 +169,10 @@
         </div>
         <div type="workflow">
           <head>Workflow</head>
-          <p>Level 3 texts can be created by conversion from an
+          <p>Level 3 texts can be created by semi-automated conversion from an
           electronic source such as an HTML file or word-processor
           document or from a print source, either through OCR or
-          keyboarding. They can be generated trivially by converting
+          keyboarding; some human intervention is likely necessary. Level 3 texts can also be generated trivially by converting
           from outsourced double-keyboarded texts
           conforming to <ref
           target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_tite.doc.html">TEI
@@ -180,8 +180,8 @@
         </div>
         <div type="elrecs">
           <head>Element Recommendations for Level 3</head>
-          <p>Use all elements specified in Level 2 <emph>except <gi>ab</gi>, plus the
-          following</emph>:
+             <p>Use all elements specified in Level 2 <emph>except <gi>ab</gi> as defined for that level</emph>, plus the
+          following:
           <table rend="table">
             <row>
               <cell><gi>front</gi>, <gi>back</gi></cell>
@@ -190,7 +190,7 @@
             <row>
               <cell><gi>div</gi> or <gi>div1</gi></cell>
               <cell>[recommended] At least one <gi>div</gi> or <gi>div1</gi> is recommended within each of <gi>front</gi>, <gi>body</gi>, and <gi>back</gi>; <att>type</att> attribute is recommended. If a bibliography is included in the document, 
-                +                it is recommended that it be encoded within a <gi>div</gi> whose <att>type</att> attribute has the value <val>bibliography</val>.</cell>
+                it is recommended that it be encoded within a <gi>div</gi> whose <att>type</att> attribute has the value <val>bibliography</val>.</cell>
             </row>
             <row>
               <cell><gi>p</gi></cell>
