@@ -39,7 +39,7 @@
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
                 bptl-header.odd, too! -->
-        <p>Version 4.0.0b (<date when="2018-09-04">Tue, 04 Sep 18</date>)</p>
+        <p>Version 4.0.0 (<date when="2018-09-08">Sat, 08 Sep 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -108,31 +108,31 @@
           <cell>Display example</cell>
         </row>
         <row>
-	  <cell><ref target="#level-1-content">Level 1</ref></cell>
+          <cell><ref target="#level-1-content">Level 1</ref></cell>
           <cell>The text is generated through OCR, is subordinate to the page image, and is not intended to stand alone as an electronic text (without page images).</cell>
           <cell><ref target="#L1AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://name.umdl.umich.edu/AGB8710.0001.001">example</ref></cell>
         </row>
         <row>
-	  <cell><ref target="#level-2-content">Level 2</ref></cell>
+          <cell><ref target="#level-2-content">Level 2</ref></cell>
           <cell>The text is generated through OCR and is mainly subordinate to the page image, though navigational markers (suchg as textual divisions and headings) are captured.</cell>
           <cell><ref target="#L2AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://hdl.handle.net/2027/spo.5099288.0001.001">example</ref></cell>
         </row>
         <row>
-	  <cell><ref target="#level-3-content">Level 3</ref></cell>
+          <cell><ref target="#level-3-content">Level 3</ref></cell>
           <cell>The text is created by conversion, either by way of OCR or keyboarding. Some structural elements of the text are encoded. The text may be used with or without page images.</cell>
           <cell><ref target="#L3AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://name.umdl.umich.edu/abu0246.0001.001">example</ref></cell>
         </row>
         <row>
-	  <cell><ref target="#level-4-content">Level 4</ref></cell>
+          <cell><ref target="#level-4-content">Level 4</ref></cell>
           <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images in order for them to be read by students, scholars, and general readers.</cell>
           <cell><ref target="#L4AHex">Alger Hiss document</ref></cell>
           <cell><ref target="http://webapp1.dlib.indiana.edu/vwwp/view?docId=VAB7020.xml">example</ref></cell>
         </row>
         <row>
-	  <cell><ref target="#level-5-content">Level 5</ref></cell>
+          <cell><ref target="#level-5-content">Level 5</ref></cell>
           <cell>The text is generated either through corrected OCR or keyboarding and is able to stand alone without page images, as in Level 4.  In addition, the text includes semantic, linguistic, prosodic, or other types of tagging created through substantial human intervention by encoders with subject knowledge.</cell>
           <cell>(none)</cell>
           <cell><ref target="http://webapp1.dlib.indiana.edu/newton/mss/dipl/ALCH00006/">example</ref></cell>
@@ -261,7 +261,7 @@
         features of the text, such as publisher’s advertisements or
         indexes. Any systematic omissions of material found in the 
         original work should be noted in the <gi>samplingDecl</gi> in
-	the TEI header. Non-systematic omissions should be indicated in the
+        the TEI header. Non-systematic omissions should be indicated in the
         <gi>notesStmt</gi> of the <gi>teiHeader</gi>. At Level 4 and
         above, the transcription should be complete.</p>
         <p>When encoding composite documents (an issue of a journal, a
@@ -279,8 +279,8 @@
         <div type="====">
           <head>Punctuation</head>
           <p>While the TEI gives the option of removing from the 
-	  transcribed text punctuation marks, such as quotation marks or 
-	  end-of-life hyphones, that could be encoded using XML tags, it 
+          transcribed text punctuation marks, such as quotation marks or 
+          end-of-life hyphones, that could be encoded using XML tags, it 
           is recommended to leave these as XML character data
           in order to simplify rendering of the encoded text as it
           appears in the source document. For example:
@@ -323,7 +323,7 @@
           place where a hyphen <emph>might occur</emph>. Furthermore,
           it includes a <name>non-breaking hyphen</name>, used in
           cases like <soCalled>re-creation</soCalled> (meaning
-	  <gloss>to create again</gloss>, as opposed to <soCalled>recreation</soCalled>,
+          <gloss>to create again</gloss>, as opposed to <soCalled>recreation</soCalled>,
           meaning <gloss>relaxation</gloss>), in addition to a regular
           hyphen, which would normally count as a word boundary. In
           short, Unicode is oriented toward electronic text that may
@@ -495,8 +495,8 @@
       </div>
       <div type="===">
         <head>Textual Divisions</head>
-	<p>At Levels 2 and higher, when <gi>text</gi> is used, an 
- 	encoding project should use only numbered divisions
+        <p>At Levels 2 and higher, when <gi>text</gi> is used, an 
+        encoding project should use only numbered divisions
         (i.e., <gi>div1</gi>, <gi>div2</gi>, etc.) or unnumbered
         divisions (i.e., <gi>div</gi>) but not both. This applies both
         within a TEI document (i.e., within <gi>front</gi>,
@@ -521,263 +521,263 @@
         full analysis of the text structure). Recommended values for
         the <att>type</att> attribute are listed below. Other values
         may be used if these are not applicable. See <ref target="#type">section 3.9.1, on
-	the <att>type</att> attribute</ref>, below for a discussion of adding customized
+        the <att>type</att> attribute</ref>, below for a discussion of adding customized
         values to the project ODD.</p>
         <!-- When changing values for the @type attribute on the <div>
              element, remember to make the parallel adjustments to the
-	     list that appears in the prose of the BPTL and to the
-	     attDef for the @type attribute, so that the values remain
-	     in sync -->
-	<div type="====">
-	  <head>Front Matter</head>
-	  <table rend="table">
-	    <row role="label">
-	      <cell>Attribute Value</cell>
-	      <cell>Description</cell>
-	    </row>
-	    <row>
-	      <cell>abstract</cell>
-	      <cell>Usually appears in front matter.</cell>
-	    </row>
-	    <row>
-	      <cell>acknowledgement</cell>
-	      <cell>Usually appears in front matter.</cell>
-	    </row>
-	    <row>
-	      <cell>contents</cell>
-	      <cell>A table of contents. Usually appears in front matter.</cell>
-	    </row>
-	    <row>
-	      <cell>dedication</cell>
-	      <cell>A dedication. Usually appears in front matter.</cell>
-	    </row>
-	    <row>
-	      <cell>docAuthorization</cell>
-	      <cell>A statement indicating that the document's printing was officially authorized.</cell>
-	    </row>
-	    <row>
-	      <cell>foreword</cell>
-	      <cell>Usually appears in front matter.</cell>
-	    </row>
-	    <row>
-	      <cell>frontispiece</cell>
-	      <cell>A portrait or other image (usually of the author, usually full page) printed at the
-	      front of a document. Usually appears in front matter.</cell>
-	    </row>
-	    <row>
-	      <cell>imprimatur</cell>
-	      <cell>A formal indication (usually on the title page or in the front matter) that the
-	      document has received official license to be printed.</cell>
-	    </row>
-	    <row>
-	      <cell>preface</cell>
-	      <cell>A section of the front matter that does not carry a more specific designation. Usually
-	      appears in front matter.</cell>
-	    </row>
-	  </table>
-	</div>
-	<div type="====">
-	  <head>Body</head>
-	  <table rend="table">
-	    <row role="label">
-	      <cell>Attribute Value</cell>
-	      <cell>Description</cell>
-	    </row>
-	    <row>
-	      <cell>book</cell>
-	      <cell>A major structural component of a long work,
-	      identified explicitly in the text as a “book”</cell>
-	    </row>
-	    <row>
-	      <cell>chapter</cell>
-	      <cell>A chapter, typically in a prose document.</cell>
-	    </row>
-	    <row>
-	      <cell>part</cell>
-	      <cell>A major component of a work, containing further subdivisions.</cell>
-	    </row>
-	    <row>
-	      <cell>section</cell>
-	      <cell>A generic section of a larger work.</cell>
-	    </row>
-	    <row>
-	      <cell>subsection</cell>
-	      <cell>A generic subdivision of a section.</cell>
-	    </row>
-	    <row>
-	      <cell>volume</cell>
-	      <cell>A single printed volume in a multi-volume work.</cell>
-	    </row>
-	    <row>
-	      <cell>drama</cell>
-	      <cell>A dramatic text.</cell>
-	    </row>
-	    <row>
-	      <cell>dramaPart</cell>
-	      <cell>A portion of a drama other than a prologue, act, scene, or epilogue.</cell>
-	    </row>
-	    <row>
-	      <cell>act</cell>
-	      <cell>An act in a dramatic text.</cell>
-	    </row>
-	    <row>
-	      <cell>scene</cell>
-	      <cell>A scene in a dramatic text.</cell>
-	    </row>
-	    <row>
-	      <cell>castlist</cell>
-	      <cell>A list of characters in a dramatic text.</cell>
-	    </row>
-	    <row>
-	      <cell>poem</cell>
-	      <cell>A poem.</cell>
-	    </row>
-	    <row>
-	      <cell>poemGroup</cell>
-	      <cell>A group of two or more poems under a common heading.</cell>
-	    </row>
-	    <row>
-	      <cell>argument</cell>
-	      <cell>A short passage at the start of a document or
-	      section giving a prose description of its
-	      contents.</cell>
-	    </row>
-	    <row>
-	      <cell>corrigenda</cell>
-	      <cell>A section describing corrections to be made to the document.</cell>
-	    </row>
-	    <row>
-	      <cell>entry</cell>
-	      <cell>An entry in a document that is organized as a log
-	      or diary with dated entries.</cell>
-	    </row>	      
-	    <row>
-	      <cell>epigraph</cell>
-	      <cell>A short quotation at the start of a document or
-	      section, often accompanied by an attribution.</cell>
-	    </row>
-	    <row>
-	      <cell>epilogue</cell>
-	      <cell>A short concluding section, usually of a dramatic
-	      or fictional work. </cell>
-	    </row>
-	    <row>
-	      <cell>prologue</cell>
-	      <cell>An opening section of a literary work (typically drama or poetry).</cell>
-	    </row>
-	    <row>
-	      <cell>narrative</cell>
-	      <cell>An embedded narrative.</cell>
-	    </row>
-	    <row>
-	      <cell>nonfictionProse</cell>
-	      <cell>A text intended to be nonfiction consisting primarily of prose.</cell>
-	    </row>
-	    <row>
-	      <cell>novelPart</cell>
-	      <cell>A portion of a novel.</cell>
-	    </row>
-	    <row>
-	      <cell>advert</cell>
-	      <cell>An advertisement for a printed work or other product.</cell>
-	    </row>
-	    <row>
-	      <cell>calendar</cell>
-	      <cell>A formal calendar; a document or document section identifying itself as a
-	      calendar.</cell>
-	    </row>
-	    <row>
-	      <cell>essay</cell>
-	      <cell>A short prose non-fiction document.</cell>
-	    </row>
-	    <row>
-	      <cell>examination</cell>
-	      <cell>A section that is identified explicitly as an
-	      <soCalled>examination</soCalled> in a text that uses
-	      this as a main structural division.</cell>
-	    </row>
-	    <row>
-	      <cell>letter</cell>
-	      <cell>Any document in epistolary form, i.e. addressed by
-	      a sender to a recipient.</cell>
-	    </row>
-	    <row>
-	      <cell>prayer</cell>
-	      <cell>A prayer.</cell>
-	    </row>
-	    <row>
-	      <cell>recipe</cell>
-	      <cell>A recipe in a cookbook.</cell>
-	    </row>
-	    <row>
-	      <cell>speech</cell>
-	      <cell>A section described as a speech or public lecture,
-	      in a document that uses this as a main structural
-	      division.</cell>
-	    </row>
-	    <row>
-	      <cell>timeline</cell>
-	      <cell>A timeline.</cell>
-	    </row>
-	    <row>
-	      <cell>tract</cell>
-	      <cell>A short treatise in pamphlet form often on a religious subject.</cell>
-	    </row>
-	  </table>
-	</div>
-	<div type="=====">
-	  <head>Back Matter</head>
-	  <table rend="table">
-	    <row role="label">
-	      <cell>Attribute Value</cell>
-	      <cell>Description</cell>
-	    </row>
-	    <row>
-	      <cell>addendum</cell>
-	      <cell>Additional material, typically omissions, added at
-	      the end of a publication.</cell>
-	    </row>
-	    <row>
-	      <cell>appendix</cell>
-	      <cell>Usually appears in back matter.</cell>
-	    </row>
-	    <row>
-	      <cell>bibliography</cell>
-	      <cell>Usually appears in back matter.</cell>
-	    </row>
-	    <row>
-	      <cell>colophon</cell>
-	      <cell>A short inscription, typically at the end of a
-	      book or manuscript, containing the title, printer, date
-	      and place of printing, etc. Usually appears in back
-	      matter.</cell>
-	    </row>
-	    <row>
-	      <cell>concluding</cell>
-	      <cell>Any section of the back matter that does not carry
-	      a more specific designation; includes afterwords,
-	      epilogues, codas, etc.</cell>
-	    </row>
-	    <row>
-	      <cell>endnotes</cell>
-	      <cell>A section containing endnotes for the document.</cell>
-	    </row>
-	    <row>
-	      <cell>glossary</cell>
-	      <cell>Usually appears in back matter.</cell>
-	    </row>
-	    <row>
-	      <cell>index</cell>
-	      <cell>An alphabetical listing of the topics in a
-	      document, usually with accompanying page references.
-	      Usually appears in back matter.</cell>
-	    </row>
-	    <row>
-	      <cell>notes</cell>
-	      <cell>Usually appears in back matter.</cell>
-	    </row>
-	  </table>
-	</div>
+             list that appears in the prose of the BPTL and to the
+             attDef for the @type attribute, so that the values remain
+             in sync -->
+        <div type="====">
+          <head>Front Matter</head>
+          <table rend="table">
+            <row role="label">
+              <cell>Attribute Value</cell>
+              <cell>Description</cell>
+            </row>
+            <row>
+              <cell>abstract</cell>
+              <cell>Usually appears in front matter.</cell>
+            </row>
+            <row>
+              <cell>acknowledgement</cell>
+              <cell>Usually appears in front matter.</cell>
+            </row>
+            <row>
+              <cell>contents</cell>
+              <cell>A table of contents. Usually appears in front matter.</cell>
+            </row>
+            <row>
+              <cell>dedication</cell>
+              <cell>A dedication. Usually appears in front matter.</cell>
+            </row>
+            <row>
+              <cell>docAuthorization</cell>
+              <cell>A statement indicating that the document's printing was officially authorized.</cell>
+            </row>
+            <row>
+              <cell>foreword</cell>
+              <cell>Usually appears in front matter.</cell>
+            </row>
+            <row>
+              <cell>frontispiece</cell>
+              <cell>A portrait or other image (usually of the author, usually full page) printed at the
+              front of a document. Usually appears in front matter.</cell>
+            </row>
+            <row>
+              <cell>imprimatur</cell>
+              <cell>A formal indication (usually on the title page or in the front matter) that the
+              document has received official license to be printed.</cell>
+            </row>
+            <row>
+              <cell>preface</cell>
+              <cell>A section of the front matter that does not carry a more specific designation. Usually
+              appears in front matter.</cell>
+            </row>
+          </table>
+        </div>
+        <div type="====">
+          <head>Body</head>
+          <table rend="table">
+            <row role="label">
+              <cell>Attribute Value</cell>
+              <cell>Description</cell>
+            </row>
+            <row>
+              <cell>book</cell>
+              <cell>A major structural component of a long work,
+              identified explicitly in the text as a “book”</cell>
+            </row>
+            <row>
+              <cell>chapter</cell>
+              <cell>A chapter, typically in a prose document.</cell>
+            </row>
+            <row>
+              <cell>part</cell>
+              <cell>A major component of a work, containing further subdivisions.</cell>
+            </row>
+            <row>
+              <cell>section</cell>
+              <cell>A generic section of a larger work.</cell>
+            </row>
+            <row>
+              <cell>subsection</cell>
+              <cell>A generic subdivision of a section.</cell>
+            </row>
+            <row>
+              <cell>volume</cell>
+              <cell>A single printed volume in a multi-volume work.</cell>
+            </row>
+            <row>
+              <cell>drama</cell>
+              <cell>A dramatic text.</cell>
+            </row>
+            <row>
+              <cell>dramaPart</cell>
+              <cell>A portion of a drama other than a prologue, act, scene, or epilogue.</cell>
+            </row>
+            <row>
+              <cell>act</cell>
+              <cell>An act in a dramatic text.</cell>
+            </row>
+            <row>
+              <cell>scene</cell>
+              <cell>A scene in a dramatic text.</cell>
+            </row>
+            <row>
+              <cell>castlist</cell>
+              <cell>A list of characters in a dramatic text.</cell>
+            </row>
+            <row>
+              <cell>poem</cell>
+              <cell>A poem.</cell>
+            </row>
+            <row>
+              <cell>poemGroup</cell>
+              <cell>A group of two or more poems under a common heading.</cell>
+            </row>
+            <row>
+              <cell>argument</cell>
+              <cell>A short passage at the start of a document or
+              section giving a prose description of its
+              contents.</cell>
+            </row>
+            <row>
+              <cell>corrigenda</cell>
+              <cell>A section describing corrections to be made to the document.</cell>
+            </row>
+            <row>
+              <cell>entry</cell>
+              <cell>An entry in a document that is organized as a log
+              or diary with dated entries.</cell>
+            </row>            
+            <row>
+              <cell>epigraph</cell>
+              <cell>A short quotation at the start of a document or
+              section, often accompanied by an attribution.</cell>
+            </row>
+            <row>
+              <cell>epilogue</cell>
+              <cell>A short concluding section, usually of a dramatic
+              or fictional work. </cell>
+            </row>
+            <row>
+              <cell>prologue</cell>
+              <cell>An opening section of a literary work (typically drama or poetry).</cell>
+            </row>
+            <row>
+              <cell>narrative</cell>
+              <cell>An embedded narrative.</cell>
+            </row>
+            <row>
+              <cell>nonfictionProse</cell>
+              <cell>A text intended to be nonfiction consisting primarily of prose.</cell>
+            </row>
+            <row>
+              <cell>novelPart</cell>
+              <cell>A portion of a novel.</cell>
+            </row>
+            <row>
+              <cell>advert</cell>
+              <cell>An advertisement for a printed work or other product.</cell>
+            </row>
+            <row>
+              <cell>calendar</cell>
+              <cell>A formal calendar; a document or document section identifying itself as a
+              calendar.</cell>
+            </row>
+            <row>
+              <cell>essay</cell>
+              <cell>A short prose non-fiction document.</cell>
+            </row>
+            <row>
+              <cell>examination</cell>
+              <cell>A section that is identified explicitly as an
+              <soCalled>examination</soCalled> in a text that uses
+              this as a main structural division.</cell>
+            </row>
+            <row>
+              <cell>letter</cell>
+              <cell>Any document in epistolary form, i.e. addressed by
+              a sender to a recipient.</cell>
+            </row>
+            <row>
+              <cell>prayer</cell>
+              <cell>A prayer.</cell>
+            </row>
+            <row>
+              <cell>recipe</cell>
+              <cell>A recipe in a cookbook.</cell>
+            </row>
+            <row>
+              <cell>speech</cell>
+              <cell>A section described as a speech or public lecture,
+              in a document that uses this as a main structural
+              division.</cell>
+            </row>
+            <row>
+              <cell>timeline</cell>
+              <cell>A timeline.</cell>
+            </row>
+            <row>
+              <cell>tract</cell>
+              <cell>A short treatise in pamphlet form often on a religious subject.</cell>
+            </row>
+          </table>
+        </div>
+        <div type="=====">
+          <head>Back Matter</head>
+          <table rend="table">
+            <row role="label">
+              <cell>Attribute Value</cell>
+              <cell>Description</cell>
+            </row>
+            <row>
+              <cell>addendum</cell>
+              <cell>Additional material, typically omissions, added at
+              the end of a publication.</cell>
+            </row>
+            <row>
+              <cell>appendix</cell>
+              <cell>Usually appears in back matter.</cell>
+            </row>
+            <row>
+              <cell>bibliography</cell>
+              <cell>Usually appears in back matter.</cell>
+            </row>
+            <row>
+              <cell>colophon</cell>
+              <cell>A short inscription, typically at the end of a
+              book or manuscript, containing the title, printer, date
+              and place of printing, etc. Usually appears in back
+              matter.</cell>
+            </row>
+            <row>
+              <cell>concluding</cell>
+              <cell>Any section of the back matter that does not carry
+              a more specific designation; includes afterwords,
+              epilogues, codas, etc.</cell>
+            </row>
+            <row>
+              <cell>endnotes</cell>
+              <cell>A section containing endnotes for the document.</cell>
+            </row>
+            <row>
+              <cell>glossary</cell>
+              <cell>Usually appears in back matter.</cell>
+            </row>
+            <row>
+              <cell>index</cell>
+              <cell>An alphabetical listing of the topics in a
+              document, usually with accompanying page references.
+              Usually appears in back matter.</cell>
+            </row>
+            <row>
+              <cell>notes</cell>
+              <cell>Usually appears in back matter.</cell>
+            </row>
+          </table>
+        </div>
         
       </div>
       <div type="===">
@@ -904,7 +904,7 @@
           in the source document, such as page numbers or footnote
           numbers. Example: <tag>pb n="456"/</tag></p>
         </div>
-	<div type="====" xml:id="ref-tag-uris">
+        <div type="====" xml:id="ref-tag-uris">
           <head><att>ref</att> and tag URIs</head>
           <p>The <att>ref</att> attribute is available on a variety of elements, including <gi>persName</gi>, <gi>orgName</gi>
           <gi>author</gi>, and <gi>title</gi>. Its value is a URI that identifies external metadata about the content of the
@@ -923,7 +923,7 @@
           </egXML>
 
           <p>Still, there are times when an outside URI for disambiguation is not available. An encoding project could use URI 
-	  fragment identifiers (see <ref target="#uris">above</ref>) to point to an authority record (identified with <att>xml:id</att>) within the same 
+          fragment identifiers (see <ref target="#uris">above</ref>) to point to an authority record (identified with <att>xml:id</att>) within the same 
           TEI document. For example, in the transcription of the text, you can use
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <placeName ref="#geo_0034">Texas</placeName>
@@ -982,27 +982,27 @@
           text or on all elements whose rendering does not follow the
           default stylesheet.</p>
 
-	  <p>For the value of the <att>style</att> attribute, use only
+          <p>For the value of the <att>style</att> attribute, use only
           valid CSS properties and values as in a CSS declaration-block
           but without curly braces. For example:
           <eg>&lt;foreign style="font-style: italic"></eg>
           <eg>&lt;title style="text-decoration: underline; font-size: x-large"></eg></p>
 
-	  <p>Default descriptions of source document renditions can be
-	  established using the <gi>rendition</gi> element in the
-	  <gi>teiHeader</gi>. Specify the desired rendition (as CSS)
-	  in the content of the <gi>rendition</gi>, and to which
-	  elements it applies (using CSS selector syntax) in the
-	  <att>selector</att> attribute. For example:
-	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	    <rendition selector="div[type='chap']>head" scheme="css">font-style: italic; font-weight: bold</rendition>
-	    <rendition selector="div[type='sect']>head" scheme="css">font-style: italic</rendition>
-	  </egXML>
-	    This example indicates that headings of chapters in
-	    the source document were in bold italics, whereas headings
-	    of sections were in italics, but not boldface.</p>
+          <p>Default descriptions of source document renditions can be
+          established using the <gi>rendition</gi> element in the
+          <gi>teiHeader</gi>. Specify the desired rendition (as CSS)
+          in the content of the <gi>rendition</gi>, and to which
+          elements it applies (using CSS selector syntax) in the
+          <att>selector</att> attribute. For example:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <rendition selector="div[type='chap']>head" scheme="css">font-style: italic; font-weight: bold</rendition>
+            <rendition selector="div[type='sect']>head" scheme="css">font-style: italic</rendition>
+          </egXML>
+            This example indicates that headings of chapters in
+            the source document were in bold italics, whereas headings
+            of sections were in italics, but not boldface.</p>
 
-	    <p>Alternatively, use the <att>rendition</att> <emph
+            <p>Alternatively, use the <att>rendition</att> <emph
           rend="font-weight: bold;">attribute</emph> to give an
           internal scheme:
           <eg>&lt;foreign rendition="#i"></eg>
@@ -1018,7 +1018,7 @@
           <p>If there are formatting features in the source that cannot be
           expressed with CSS syntax, the <att>rend</att> attribute may be
           used instead of <att>style</att> or <att>rendition</att> to supply a 
-     	  rendering using a locally defined style language.</p>
+          rendering using a locally defined style language.</p>
         </div>
         <div type="====">
           <head><att>xml:lang</att></head>
@@ -1094,7 +1094,7 @@
             <eg><![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0">]]></eg></p>
           </div>
 
-	  <!-- START included ./bptl-L1.odd#header-content  -->
+          <!-- START included ./bptl-L1.odd#header-content  -->
         <xi:include href="./bptl-L1.odd" xpointer="element(level-1-content)">
           <xi:fallback>
             <div>
@@ -1103,9 +1103,9 @@
             </div>
           </xi:fallback>
         </xi:include>
-	  <!-- END included ./bptl-L1.odd#header-content  -->
+          <!-- END included ./bptl-L1.odd#header-content  -->
 
-	  <!-- START included ./bptl-L2.odd#header-content  -->
+          <!-- START included ./bptl-L2.odd#header-content  -->
         <xi:include href="./bptl-L2.odd" xpointer="element(level-2-content)">
           <xi:fallback>
             <div>
@@ -1114,9 +1114,9 @@
             </div>
           </xi:fallback>
         </xi:include>
-	  <!-- END included ./bptl-L2.odd#header-content  -->
+          <!-- END included ./bptl-L2.odd#header-content  -->
 
-	  <!-- START included ./bptl-L3.odd#header-content  -->
+          <!-- START included ./bptl-L3.odd#header-content  -->
         <xi:include href="./bptl-L3.odd" xpointer="element(level-3-content)">
           <xi:fallback>
             <div>
@@ -1125,9 +1125,9 @@
             </div>
           </xi:fallback>
         </xi:include>
-	  <!-- END included ./bptl-L3.odd#header-content  -->
+          <!-- END included ./bptl-L3.odd#header-content  -->
 
-	  <!-- START included ./bptl-L4.odd#header-content  -->
+          <!-- START included ./bptl-L4.odd#header-content  -->
         <xi:include href="./bptl-L4.odd" xpointer="element(level-4-content)">
           <xi:fallback>
             <div>
@@ -1136,7 +1136,7 @@
             </div>
           </xi:fallback>
         </xi:include>
-	  <!-- END included ./bptl-L4.odd#header-content  -->
+          <!-- END included ./bptl-L4.odd#header-content  -->
 
         <div xml:id="level-5-content" type="==">
           <head>Level 5: Scholarly Encoding Projects</head>
@@ -1250,7 +1250,7 @@
         <item>Kevin Hawkins, University of Michigan / University of North Texas (versions 3.0 &amp; 4.0.0)</item>
         <item>Lisa McAulay, University of California, Los Angeles (version 3.0)</item>
         <item>Elli Mylonas, Brown University (version 4.0.0)</item>
-	<item>Chris Powell, University of Michigan (version 3.0)</item>
+        <item>Chris Powell, University of Michigan (version 3.0)</item>
         <item>Paul Schaffner, University of Michigan (version 4.0.0)</item>
         <item>Melanie Schlosser, Ohio State University (version 3.0)</item>
         <item>Natasha Smith, University of North Carolina, Chapel Hill (version 3.0)</item>

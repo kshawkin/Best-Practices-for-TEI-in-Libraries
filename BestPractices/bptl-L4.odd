@@ -33,7 +33,7 @@
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
                 bptl-header.odd, too! -->
-        <p>Version 4.0.0b (<date when="2018-09-04">Tue, 04 Sep 18</date>)</p>
+        <p>Version 4.0.0 (<date when="2018-09-08">Sat, 08 Sep 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -259,9 +259,9 @@
             <row>
               <cell><tag>quote rend="___"</tag></cell>
               <cell>[recommended] Use for encoding blockquotes that appear
-	      outside the flow of a paragraph. Use <att>style</att>, 
-	      <att>rendition</att>, or <att>rend</att> to describe the 
-	      appearance (such as <tag>style="padding-left: 0.5in;"</tag>)</cell>
+              outside the flow of a paragraph. Use <att>style</att>, 
+              <att>rendition</att>, or <att>rend</att> to describe the 
+              appearance (such as <tag>style="padding-left: 0.5in;"</tag>)</cell>
             </row>
             <row>        
               <cell><gi>argument</gi></cell>
@@ -345,14 +345,14 @@
               indicate the date or place of birth of the person being
               documented.</cell>
             </row>
-      	    <row>
+            <row>
               <cell><gi>bibl</gi></cell>
               <cell>[optional] Contains a single bibliographic entry. Use of at least one <gi>author</gi> or <gi>editor</gi> child element is recommended. Other valid child elements given in P5 may also be used to encode a bibliographic citation, such as <gi>title</gi>, <gi>publisher</gi> and, <gi>biblScope</gi>. It is recommended that the <gi>date</gi> always appear with a <att>when</att> attribute in order to provide a canonical form of the date.</cell>
             </row>
-	    <row>
-	      <cell><tag>ab type="typography"</tag></cell>
-	      <cell>[recommended] Use to mark typographical elements that indicate a structural break or boundary.</cell>
-	    </row>
+            <row>
+              <cell><tag>ab type="typography"</tag></cell>
+              <cell>[recommended] Use to mark typographical elements that indicate a structural break or boundary.</cell>
+            </row>
             
           </table>
         </div>
@@ -367,7 +367,7 @@
           optional elements that are appropriate for your users'
           needs and your encoding budget.</p>
           <list>
-	    <head>Below are notes on usage of specific elements:</head>
+            <head>Below are notes on usage of specific elements:</head>
             <item>The use of <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html"><gi>group</gi></ref> is recommended when you need to encode a body of distinct texts that are grouped together and are regarded as a unit. Most typical examples of such composite texts would be anthologies, collected works of an author, etc. Section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1 Grouped Texts</ref> states, <quote>The presence of common front matter referring to the whole collection, possibly in addition to front matter relating to each individual text, is a good indication that a given text might usefully be encoded in this way.</quote></item>
             <item>Use <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-argument.html"><gi>argument</gi></ref> to encode a prefatory list or prose description of the topics usually discovered at the beginning of a chapter. The content within the <gi>argument</gi> element can be presented as a list or as a paragraph: 
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-OVRAHoB">
@@ -529,7 +529,7 @@
             attribute containing an appropriate value, such as <val>event</val>
             for the name of an event.</p>
             <p>For all of these elements, use the <att>ref</att> attribute 
-	    (see <ref target="#ref-tag-uris">section 3.9.3</ref> above) to provide a reference to a <gi>person</gi>, 
+            (see <ref target="#ref-tag-uris">section 3.9.3</ref> above) to provide a reference to a <gi>person</gi>, 
             <gi>place</gi>, <gi>org</gi>, <gi>event</gi>, or other element in 
             an external file or database for managing name normalization and 
             compilation of additional information such as biographical or 
@@ -688,7 +688,7 @@
               particular edition of the text or <gi>lg</gi> and
               <gi>l</gi> to describe dramatic verse structures).</item>
               <item>If it is desired to tie the speaker(s) of a speech to 
-	      a particular persona in the cast list, the <att>who</att> attribute of <gi>sp</gi> may
+              a particular persona in the cast list, the <att>who</att> attribute of <gi>sp</gi> may
               be used to refer to the <gi>castItem</gi> of the speaker.
               When <att>who</att> is used, <gi>speaker</gi> is
               optional.
@@ -726,16 +726,16 @@
           </div>
           <div type="subsection">
             <head>Level 4 Transcription of Oral History</head>
-	    <p>The list of participants in the transcription of an oral history may be encoded in the 
+            <p>The list of participants in the transcription of an oral history may be encoded in the 
             body of the TEI document using the structured <gi>listPerson</gi> 
-	    element containing <gi>person</gi> elements for each participant. 
-	    Alternatively, the list of participants may be encoded as a free-form
-	    <gi>list</gi> in the body. The latter approach is especially useful 
+            element containing <gi>person</gi> elements for each participant. 
+            Alternatively, the list of participants may be encoded as a free-form
+            <gi>list</gi> in the body. The latter approach is especially useful 
             when the list is included in the source document in an unstructured 
-	    form.</p>
+            form.</p>
             <p>If an oral history document has no title of its own, the speakers 
-	    in oral history interviews, i.e., interviewee(s) and interviewer(s), 
-	    may also be identified in
+            in oral history interviews, i.e., interviewee(s) and interviewer(s), 
+            may also be identified in
             the <gi>teiHeader</gi> as a list of <gi>author</gi>
             elements (typically each with its own <gi>persName</gi>)
             within <ref
@@ -745,10 +745,10 @@
             </p>
             <p>Regardless, use an <att>xml:id</att> on the
             <gi>persName</gi> element to uniquely identify the individual
-	    participant.</p>
+            participant.</p>
             <p>Questions and answers from interviewees and
             interviewers are encoded as <gi>sp</gi>, with each
-	    speaker identified either:
+            speaker identified either:
             <list>
                 <item>within <gi>speaker</gi> elements, which are the
                 first child of <gi>sp</gi>, or</item>
@@ -798,7 +798,7 @@
           <div type="subsection">
             <head>Level 4 Verse</head>
             <p>Use <gi>lg</gi> and <gi>l</gi> as in Level 3. In
-	    addition, use the <att>style</att>, <att>rendition</att>, or <att>rend</att> attribute to indicate
+            addition, use the <att>style</att>, <att>rendition</att>, or <att>rend</att> attribute to indicate
             lines that are indented.</p>
             <p>For example,
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#BIB-LCHoS">
@@ -926,7 +926,7 @@
       <!-- ********************************************* -->
       <div type="specification">
         <head>Specification</head>
-	<schemaSpec ident="bptl-L4" docLang="en" xml:lang="en" prefix="L4_" source="tei:3.3.0">
+        <schemaSpec ident="bptl-L4" docLang="en" xml:lang="en" prefix="L4_" source="tei:3.3.0">
           <!-- The @source on <elementSpec>, above, is the version
                number against which our ODD files are built. -->
           <moduleRef key="core"/>

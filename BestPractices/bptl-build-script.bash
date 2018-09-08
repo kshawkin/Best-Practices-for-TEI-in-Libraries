@@ -43,18 +43,18 @@ DEBUG=false
 PRINTPATHS=false
 while getopts "dphH" opt; do
     case $opt in
-	d ) DEBUG=true
-	    ;;
-	p ) PRINTPATHS=true
-	    ;;
-	h ) printf "usage: $0 [-dphH]\nshould be issued from the working directory that contains the source BPTL ODD files; use the -H switch for more detailed help info\n"
-	    exit 1
-	    ;;
-	H ) printf "$help"
-	    exit 1
-	    ;;
-	* ) printf "usage: $0 [-dphH]\nshould be issued from the working directory that contains the source BPTL ODD files; use the -H switch for more detailed help info\n"
-	    exit 1
+        d ) DEBUG=true
+            ;;
+        p ) PRINTPATHS=true
+            ;;
+        h ) printf "usage: $0 [-dphH]\nshould be issued from the working directory that contains the source BPTL ODD files; use the -H switch for more detailed help info\n"
+            exit 1
+            ;;
+        H ) printf "$help"
+            exit 1
+            ;;
+        * ) printf "usage: $0 [-dphH]\nshould be issued from the working directory that contains the source BPTL ODD files; use the -H switch for more detailed help info\n"
+            exit 1
     esac
 done
 shift $((OPTIND - 1))
@@ -72,7 +72,7 @@ if [ -e /Library/PreferencePanes/ ] ; then
     # on a Mac OS X system. Hope it is Syd's, as these paths are where he stores stuff.
     XSLDIR=${XSLDIR:-~/Documents/Stylesheets}
     P5SRC=${P5SRC:-~/Documents/TEI-GitHub/P5/p5subset.xml}
-    RELAX=${RELAX:--c /usr/local/share/emacs/23.2/etc/schema/relaxng.rnc}
+    RELAX=${RELAX:--c /Applications/Emacs.app/Contents/Resources/etc/schema/relaxng.rnc}
     JING=${JING:-/Applications/oxygen/lib/jing.jar}
 elif [ ${HOSTNAME} = albus ] || [ ${HOSTNAME} = aberforth ] || [ ${HOSTNAME} = paramedic ] || [ ${HOSTNAME} = Nimbus2016 ]; then
     # on one of Syd's GNU/Linux systems, use whatever his symlinks point to
@@ -115,35 +115,35 @@ for BASE in bptl-L1 bptl-L2 bptl-L3 bptl-L4 ; do
 
     echo "------ teitorelaxng --odd $INNAME"
     if ${XSLDIR}/bin/teitorelaxng --odd --localsource=${P5SRC} $INNAME ; then
-	mv $INNAME.relaxng $BASE.rng
-	jing ${RELAX} ${BASE}.rng
+        mv $INNAME.relaxng $BASE.rng
+        jing ${RELAX} ${BASE}.rng
     else
-	echo "Error generating RELAX NG (XML syntax) and Schematron from $INNAME"
+        echo "Error generating RELAX NG (XML syntax) and Schematron from $INNAME"
     fi
-	 
+         
     echo "------ teitornc --odd $INNAME"
     if ${XSLDIR}/bin/teitornc --odd --localsource=${P5SRC} $INNAME ; then
-	if ~/bin/fix_rnc_whitespace.perl --patternprefix=${PREFIX} < $INNAME.rnc > $BASE.rnc ; then
-	    rm $INNAME.rnc
-	else
-	    echo "Error fixing whitespace in $INNAME.rnc"
-	fi
+        if ~/bin/fix_rnc_whitespace.perl --patternprefix=${PREFIX} < $INNAME.rnc > $BASE.rnc ; then
+            rm $INNAME.rnc
+        else
+            echo "Error fixing whitespace in $INNAME.rnc"
+        fi
     else
-	echo "Error generating RELAX NG (compact syntax) from $INNAME"
+        echo "Error generating RELAX NG (compact syntax) from $INNAME"
     fi
 
     echo "------ teitoschematron --odd $INNAME"
     if ${XSLDIR}/bin/teitoschematron --odd --localsource=${P5SRC} $INNAME ; then
-	mv $INNAME.schematron $BASE.sch
+        mv $INNAME.schematron $BASE.sch
     else
-	echo "Error extracting Schematron from $INNAME"
+        echo "Error extracting Schematron from $INNAME"
     fi
 
     echo "------ teitohtml --odd [NOT --summaryDoc] $INNAME"
     if ${XSLDIR}/bin/teitohtml --odd --localsource=${P5SRC} $INNAME ; then
-	mv $INNAME.html $BASE.html
+        mv $INNAME.html $BASE.html
     else
-	echo "Error generating HTML from $INNAME"
+        echo "Error generating HTML from $INNAME"
     fi
 
 done

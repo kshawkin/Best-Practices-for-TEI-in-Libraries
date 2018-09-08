@@ -35,7 +35,7 @@
              a) in the <editionStmt>s of the other .odd files, and
              b) in the semi-closed list of values of @url of <schemaRef> in
                 bptl-header.odd, too! -->
-        <p>Version 4.0.0b (<date when="2018-09-04">Tue, 04 Sep 18</date>)</p>
+        <p>Version 4.0.0 (<date when="2018-09-08">Sat, 08 Sep 18</date>)</p>
       </editionStmt>
       <publicationStmt>
         <authority>TEI SIG on Libraries</authority>
@@ -65,8 +65,8 @@
     </fileDesc>
     <revisionDesc>
       <change who="#sbauman.emt" when="2018-08-30">
-	Per Elli &amp; Kevin on today's conference call, remove <gi>relatedItem</gi> from
-	content model of <gi>notesStmt</gi>.
+        Per Elli &amp; Kevin on today's conference call, remove <gi>relatedItem</gi> from
+        content model of <gi>notesStmt</gi>.
       </change>
       <change who="#sbauman.emt" when="2018-04-15">
         Beginning to address ticket #27: use <gi>sourceDoc</gi> for
@@ -184,7 +184,7 @@
         <p><title><choice><expan>Functional Requirements for Bibliographic
                         Records</expan><abbr>FRBR</abbr></choice></title><note><ptr
                 target="https://www.ifla.org/publications/functional-requirements-for-bibliographic-records"
-		/></note> is a conceptual model developed by <choice><expan>the International
+                /></note> is a conceptual model developed by <choice><expan>the International
                     Federation of Library Associations</expan><abbr>IFLA</abbr></choice><note><ptr target="https://www.ifla.org/"/></note>
             <cit><quote>for relating the data that are stored in bibliographic records to the needs
                     of the users of those records</quote> <bibl>(<title>Functional Requirements for
@@ -199,9 +199,9 @@
                 <title>FRBR</title> in 2008, the library metadata community has collaborated to
             develop more precise entity-relationship models relating to bibliographic
             metadata—notably <title>FRBRoo</title><note><ptr target="http://www.cidoc-crm.org/frbroo/"/></note>
-		and BIBFRAME<note><ptr target="https://www.loc.gov/bibframe/"/></note>, each with different
+                and BIBFRAME<note><ptr target="https://www.loc.gov/bibframe/"/></note>, each with different
             configurations of bibliographic entities than the four primary entities in FRBR.</p>
-		<p>It is important to note that these <title>Best Practices</title>, like P5 as a whole, does not distinguish betwen <term>work</term>,
+                <p>It is important to note that these <title>Best Practices</title>, like P5 as a whole, does not distinguish betwen <term>work</term>,
                 <term>expression</term>, <term>manifestation</term>, and <term>item</term> according to their definitions in FRBR.</p>
         <p>Due to sustained interest in the original FRBR model from within the TEI community, these
                 <title>Best Practices</title> describe how an encoder might identify bibliographic
@@ -346,7 +346,7 @@
               <cell cols="5">
                 <gi>titleStmt</gi>
               </cell>
-	      <cell>[required]</cell>
+              <cell>[required]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -471,7 +471,7 @@
                     <eg>&lt;author&gt;&lt;persName&gt;Joannes, Actuarius, 13th/14th cent.&lt;/persName&gt;&lt;/author&gt;</eg>
                   </item>
                 </list>
-		      Optionally use the <att>ref</att> attribute on <gi>persName</gi>gi> and <gi>orgName</gi> to supply a URI for a record in an authority file (see <ref target="#name-tagging">section 4.2.5.6.2</ref>).
+                      Optionally use the <att>ref</att> attribute on <gi>persName</gi>gi> and <gi>orgName</gi> to supply a URI for a record in an authority file (see <ref target="#name-tagging">section 4.2.5.6.2</ref>).
               </cell>
               <cell>
                 <list>
@@ -579,7 +579,7 @@
               <cell>├</cell>
               <cell cols="5">
                 <gi>editionStmt</gi>
-		<gi>p</gi>
+                <gi>p</gi>
               </cell>
               <cell>[recommended] Include a statement about the edition of the TEI document produced, not the source document.</cell>
               <cell>250</cell>
@@ -714,14 +714,14 @@
               <cell>└</cell>
               <cell cols="5">
                 <gi>notesStmt</gi>
-		      <gi>note</gi>
+                      <gi>note</gi>
               </cell>
               <cell>[optional] Use one <gi>note</gi> element for each note about the TEI document that does not have an appropriate location elsewhere in the header.</cell>
               <cell>5xx</cell>
               <cell>5xx</cell>
             </row>
 
-       	    <row>
+            <row>
               <cell>│</cell>
               <cell>└</cell>
               <cell cols="5">
@@ -839,13 +839,13 @@
                 <tag>ptr target="___"</tag>
               </cell>
               <cell>
-		      [optional] In the value of <att>target</att>, provide a URI for analytic item. For example, this could be link to a facsimile of the analytic item that is different from the TEI document.
+                      [optional] In the value of <att>target</att>, provide a URI for analytic item. For example, this could be link to a facsimile of the analytic item that is different from the TEI document.
               </cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
 
-	    <row>
+            <row>
               <cell>│</cell>
               <cell/>
               <cell/>
@@ -1001,7 +1001,7 @@
               <cell cols="2">
                 <gi>imprint</gi>
               </cell>
-	      <cell>[required]</cell>
+              <cell>[required]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1225,7 +1225,7 @@
               <cell>n/a</cell>
             </row>
 
-	    <row>
+            <row>
               <cell>│</cell>
               <cell/>
               <cell/>
@@ -1313,39 +1313,39 @@
               <cell/>
               <cell/>
             </row>
-		  
-	    <row>
+                  
+            <row>
               <cell>│</cell>
               <cell/>
               <cell/>
               <cell>└</cell>
               <cell cols="3">
                 <gi>relatedItem</gi>
-		<gi>biblStruct</gi>
+                <gi>biblStruct</gi>
               </cell>
               <cell>[recommended] If applicable, describe a work related to the source 
               document, following the guidelines for the components of the 
-		      <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
+                      <gi>biblStruct</gi> that is a child of <gi>sourceDesc</gi>.</cell>
               <cell>
-	        <list>
+                <list>
                   <item>700 $t</item>
                   <item>710 $t</item>
                   <item>711 $t</item>
                   <item>730</item>
                   <item>740</item>
                 </list>
-	      </cell>
+              </cell>
               <cell>
-		<list>
+                <list>
                   <item>700 $t</item>
                   <item>710 $t</item>
                   <item>711 $t</item>
                   <item>730</item>
                   <item>740</item>
                 </list>
-	      </cell>
+              </cell>
             </row>
-		  
+                  
      <row>
         <cell>│</cell>
         <cell/>
@@ -1365,7 +1365,7 @@
               <cell cols="6">
                 <gi>encodingDesc</gi>
               </cell>
-	      <cell>[recommended]</cell>
+              <cell>[recommended]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1389,15 +1389,15 @@
                 <tag>schemaRef url="___"</tag>
               </cell>
               <cell>
-		  <p>[recommended] Documents the encoding level according to these <title>Best Practices</title>. Use the
-		<att>url</att> attribute for the value that indicates
-		the encoding level:
+                  <p>[recommended] Documents the encoding level according to these <title>Best Practices</title>. Use the
+                <att>url</att> attribute for the value that indicates
+                the encoding level:
                 <list>
-                  <item> Level 1: <val>bptl:L1-v4.0.0b</val></item>
-                  <item> Level 2: <val>bptl:L2-v4.0.0b</val></item>
-                  <item> Level 3: <val>bptl:L3-v4.0.0b</val></item>
-                  <item> Level 4: <val>bptl:L4-v4.0.0b</val></item>
-                  <item> Level 5: <val>bptl:L5-v4.0.0b</val></item>
+                  <item> Level 1: <val>bptl:L1-v4.0.0</val></item>
+                  <item> Level 2: <val>bptl:L2-v4.0.0</val></item>
+                  <item> Level 3: <val>bptl:L3-v4.0.0</val></item>
+                  <item> Level 4: <val>bptl:L4-v4.0.0</val></item>
+                  <item> Level 5: <val>bptl:L5-v4.0.0</val></item>
                 </list>
                 </p>
               </cell>
@@ -1491,7 +1491,7 @@
               <cell>[optional] A specialization of the <gi>punctuation</gi>
               element, the <gi>quotation</gi> element may be provided
               to explicitly declare whether quotation marks have been
-	      retained as content or not. Optionally use the <gi>marks</gi> attribute.</cell>
+              retained as content or not. Optionally use the <gi>marks</gi> attribute.</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1520,7 +1520,7 @@
                 <item>whether line breaks, column breaks, page breaks,
                 or a combination are encoded</item>
                 <item>any other editorial decisions made during encoding</item>
-		<item>an explanation of any tag URI schemes used in the TEI document</item>
+                <item>an explanation of any tag URI schemes used in the TEI document</item>
               </list>
               </cell>
               <cell>
@@ -1539,7 +1539,7 @@
               <cell cols="5">
                 <gi>tagsDecl</gi>
               </cell>
-	      <cell>[recommended]</cell>
+              <cell>[recommended]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1571,10 +1571,10 @@
                 <gi>tagUsage</gi>
               </cell>
               <cell>
-		[recommended] This element should have one and only one
-		child <gi>tagUsage</gi> element for describing the
-		encoding of logical divisions, which should be one of
-		the following:
+                [recommended] This element should have one and only one
+                child <gi>tagUsage</gi> element for describing the
+                encoding of logical divisions, which should be one of
+                the following:
                 <list>
                   <item>
                     <eg>&lt;tagUsage gi="div1"&gt;Numbered divs used.&lt;/tagUsage&gt;</eg>
@@ -1641,9 +1641,9 @@
               parts of text, for inclusion.</cell>
               <cell>500</cell>
               <cell>n/a</cell>
-	    </row>
+            </row>
 
-	    <row>
+            <row>
               <cell>│</cell>
               <cell>├</cell>
               <cell cols="5">
@@ -1655,9 +1655,9 @@
               made to the file.</cell>
               <cell/>
               <cell/>
-	    </row>
+            </row>
 
-	    <row>
+            <row>
               <cell>│</cell>
               <cell>├</cell>
               <cell cols="5">
@@ -1668,17 +1668,17 @@
               <cell>[recommended] Defines the “bptl:” prefix used on the
               value of the <att>url</att> attribute of the
               <gi>schemaRef</gi> element. Additional <gi>prefixDef</gi> elements
-	      may be specified if other private URI schemes are to be used.</cell>
+              may be specified if other private URI schemes are to be used.</cell>
               <cell/>
               <cell/>
-	    </row>
+            </row>
 
             <row>
               <cell>├</cell>
               <cell cols="6">
                 <gi>profileDesc</gi>
               </cell>
-	      <cell>[optional]</cell>
+              <cell>[optional]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1740,7 +1740,7 @@
               <cell cols="5">
                 <gi>textClass</gi>
               </cell>
-	      <cell>[optional]</cell>
+              <cell>[optional]</cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -1808,10 +1808,10 @@
               <cell>└</cell>
               <cell cols="6">
                 <gi>revisionDesc</gi>
-		<tag>change when="YYYY-MM-DD" who="[URI]"</tag>
+                <tag>change when="YYYY-MM-DD" who="[URI]"</tag>
               </cell>
               <cell>
-		<p>[optional] Create a <gi>change</gi> element to record each
+                <p>[optional] Create a <gi>change</gi> element to record each
                 significant change to the TEI document, in reverse
                 chronological order (i.e., most recent first). A prose
                 description of the change is recorded as the content
@@ -1836,7 +1836,7 @@
                 example, the document might simply give
                 <code>who="#Jane_Smith"</code>, relying on human
                 readers to understand this reference.</p>
-	      </cell>
+              </cell>
               <cell>n/a</cell>
               <cell>n/a</cell>
             </row>
@@ -2015,12 +2015,12 @@
                 <memberOf key="att.typed"/>
               </classes>
               <content>
-		<elementRef key="biblStruct"/>
+                <elementRef key="biblStruct"/>
               </content>
-	      <constraintSpec ident="targetorcontent1" mode="delete" scheme="schematron"/>
-	      <attList>
-		<attDef ident="target" mode="delete"/>
-	      </attList>
+              <constraintSpec ident="targetorcontent1" mode="delete" scheme="schematron"/>
+              <attList>
+                <attDef ident="target" mode="delete"/>
+              </attList>
             </elementSpec>
             <elementSpec module="core" ident="respStmt" mode="change">
               <content>
@@ -2052,20 +2052,20 @@
                        in the <editionStmt>s in each of the .odd
                        files, too! -->
                   <valList type="semi" mode="add">
-                    <valItem ident="bptl:L1-v4.0.0b">
-                      <gloss>Best Practices for TEI in Libraries level 1, version 4.0.0b</gloss>
+                    <valItem ident="bptl:L1-v4.0.0">
+                      <gloss>Best Practices for TEI in Libraries level 1, version 4.0.0</gloss>
                     </valItem>
-                    <valItem ident="bptl:L2-v4.0.0b">
-                      <gloss>Best Practices for TEI in Libraries level 2, version 4.0.0b</gloss>
+                    <valItem ident="bptl:L2-v4.0.0">
+                      <gloss>Best Practices for TEI in Libraries level 2, version 4.0.0</gloss>
                     </valItem>
-                    <valItem ident="bptl:L3-v4.0.0b">
-                      <gloss>Best Practices for TEI in Libraries level 3, version 4.0.0b</gloss>
+                    <valItem ident="bptl:L3-v4.0.0">
+                      <gloss>Best Practices for TEI in Libraries level 3, version 4.0.0</gloss>
                     </valItem>
-                    <valItem ident="bptl:L4-v4.0.0b">
-                      <gloss>Best Practices for TEI in Libraries level 4, version 4.0.0b</gloss>
+                    <valItem ident="bptl:L4-v4.0.0">
+                      <gloss>Best Practices for TEI in Libraries level 4, version 4.0.0</gloss>
                     </valItem>
-                    <valItem ident="bptl:L5-v4.0.0b">
-                      <gloss>Best Practices for TEI in Libraries level 5, version 4.0.0b</gloss>
+                    <valItem ident="bptl:L5-v4.0.0">
+                      <gloss>Best Practices for TEI in Libraries level 5, version 4.0.0</gloss>
                     </valItem>
                   </valList>
                 </attDef>
@@ -2157,9 +2157,9 @@
                 <elementRef key="editorialDecl" minOccurs="0" maxOccurs="1"/>
                 <elementRef key="tagsDecl"      minOccurs="1" maxOccurs="1"/>
                 <elementRef key="classDecl"     minOccurs="0" maxOccurs="1"/>
-		<elementRef key="samplingDecl"  minOccurs="0" maxOccurs="1"/>
+                <elementRef key="samplingDecl"  minOccurs="0" maxOccurs="1"/>
                 <elementRef key="appInfo"       minOccurs="0" maxOccurs="unbounded"/>
-		<elementRef key="listPrefixDef" minOccurs="1" maxOccurs="unbounded"/>
+                <elementRef key="listPrefixDef" minOccurs="1" maxOccurs="unbounded"/>
               </sequence>
             </content>
           </elementSpec>
@@ -2177,40 +2177,40 @@
               </attDef>
             </attList>
           </elementSpec>
-	  <elementSpec ident="BPTL.required.prefixDef" mode="add">
-	    <altIdent>prefixDef</altIdent>
-	    <attList>
-	      <attDef ident="ident" usage="req">
-		<valList type="closed">
-		  <valItem ident="bptl">
-		    <gloss>Best Practices for TEI in Libraries</gloss>
-		  </valItem>
-		</valList>
-	      </attDef>
-	      <attDef ident="matchPattern" usage="req">
-		<valList type="closed">
-		  <valItem ident="L([1-5])-v(\d+\.\d+\.\d+[aαβb]?)">
-		    <desc>This regular expression matches BPTL version
-		    numbers like <q>L1-v1.0.2a</q>.</desc>
-		  </valItem>
-		</valList>
-	      </attDef>
-	      <attDef ident="replacementPattern" usage="req">
-		<valList type="semi">
-		  <valItem ident="http://www.tei-c.org/SIG/Libraries/teiinlibraries/$2/"/>
-		</valList>
-	      </attDef>
-	    </attList>
-	  </elementSpec>	      
-	  <elementSpec module="header" ident="listPrefixDef" mode="change">
-	    <content>
-	      <elementRef key="BPTL.required.prefixDef"/>
-	      <alternate minOccurs="0" maxOccurs="unbounded">
-		<elementRef key="prefixDef"/>
-		<elementRef key="listPrefixDef"/>
-	      </alternate>
-	    </content>
-	  </elementSpec>
+          <elementSpec ident="BPTL.required.prefixDef" mode="add">
+            <altIdent>prefixDef</altIdent>
+            <attList>
+              <attDef ident="ident" usage="req">
+                <valList type="closed">
+                  <valItem ident="bptl">
+                    <gloss>Best Practices for TEI in Libraries</gloss>
+                  </valItem>
+                </valList>
+              </attDef>
+              <attDef ident="matchPattern" usage="req">
+                <valList type="closed">
+                  <valItem ident="L([1-5])-v(\d+\.\d+\.\d+[aαβb]?)">
+                    <desc>This regular expression matches BPTL version
+                    numbers like <q>L1-v1.0.2a</q>.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+              <attDef ident="replacementPattern" usage="req">
+                <valList type="semi">
+                  <valItem ident="http://www.tei-c.org/SIG/Libraries/teiinlibraries/$2/"/>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>              
+          <elementSpec module="header" ident="listPrefixDef" mode="change">
+            <content>
+              <elementRef key="BPTL.required.prefixDef"/>
+              <alternate minOccurs="0" maxOccurs="unbounded">
+                <elementRef key="prefixDef"/>
+                <elementRef key="listPrefixDef"/>
+              </alternate>
+            </content>
+          </elementSpec>
           <elementSpec module="header" ident="namespace" mode="change">
             <content>
               <elementRef key="tagUsage"/>
@@ -2395,13 +2395,13 @@
               <attDef mode="change" ident="xml:lang" usage="req"/>
               <attDef mode="delete" ident="type"/>
             </attList>
-	  </elementSpec>
-	  <elementSpec module="header" ident="notesStmt" mode="change">
-	    <content>
-	      <!-- Same as P5 except we removed <relatedItem> -->
-	      <classRef minOccurs="1" maxOccurs="unbounded" key="model.noteLike"/>
-	    </content>
-	  </elementSpec>
+          </elementSpec>
+          <elementSpec module="header" ident="notesStmt" mode="change">
+            <content>
+              <!-- Same as P5 except we removed <relatedItem> -->
+              <classRef minOccurs="1" maxOccurs="unbounded" key="model.noteLike"/>
+            </content>
+          </elementSpec>
           <elementSpec module="core" ident="title" mode="change">
             <attList>
               <attDef ident="level" usage="opt" mode="replace">
