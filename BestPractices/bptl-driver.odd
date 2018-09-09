@@ -1295,9 +1295,7 @@
         potential for interoperability and long-term preservation of
         digital collections facilitated by their wide adoption.</p>
         <p>In 1998, the Digital Library Federation (DLF) sponsored the
-        <ref
-        target="http://www.lib.umich.edu/lit/dlps/history/teidlf/index.html">TEI
-        and XML in Digital Libraries Workshop</ref> at the Library of
+        TEI and XML in Digital Libraries Workshop at the Library of
         Congress to discuss the use of the <title>TEI Guidelines</title> in
         libraries for electronic text, and to create a set of best
         practices for librarians implementing them. From this
@@ -1339,7 +1337,7 @@
         and presented at the joint annual meeting of the Association
         of Computers and the Humanities and Association of Literary
         and Linguistic Computing in June 1999. <ref
-        target="http://www.diglib.org/standards/tei-old.htm">Version
+        target="http://www.tei-c.org/SIG/Libraries/teiinlibraries/1.0/tei-old.htm">Version
         1.0</ref> was circulated for comments in August 1999. These
         guidelines were endorsed by the DLF, and have been used by
         many digital libraries, including those of the task force
@@ -1409,7 +1407,7 @@
        examples.</item>
      </list></p>
      <p>After producing <ref
-     target="http://www.diglib.org/standards/tei2/tei20.htm">Version
+     target="http://www.tei-c.org/SIG/Libraries/teiinlibraries/2.0/tei20.htm">Version
      2.0</ref> of the Guidelines, this group (with some changes in
      membership) met again at the Cosmos Club on February 13-14, 2006.
      Those in attendance were:
@@ -1424,7 +1422,7 @@
        <item>Perry Willett, University of Michigan</item>
      </list></p>
      <p>The group then released <ref
-     target="http://www.diglib.org/standards/tei.htm">Version
+     target="http://www.tei-c.org/SIG/Libraries/teiinlibraries/2.1/tei.htm">Version
      2.1</ref> in March 2006.</p>
      <p>In April 2008, select members from the TEI Consortium
      Libraries Special Interest Group (SIG) and the DLF-sponsored TEI
